@@ -22,6 +22,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-12 | [Claude Code 創作者 Boris：軟體的未來與 AI 民主化](技術講座/20260512_Boris_Claude_Code創作者訪談.md) | Boris (Anthropic) | 25 分鐘 |
 | 2026-05-13 | [OpenClaw 多代理架構與商業應用實戰](技術講座/20260513_OpenClaw_Multi_Agent商業應用.md) | OpenClaw 生態系 | 20 分鐘 |
 | 2026-05-13 | [意圖工程：從靜態基準到自癒代理](技術講座/20260513_Intent_Engineering_意圖工程.md) | AI 評估領域 | 15 分鐘 |
+| 2026-05-13 | [免費 AI 網頁爬蟲實戰：DeepSeek + Grok](技術講座/20260513_AI_Web_Scraper_免費爬蟲實戰.md) | AI 開發教學 | 23 分鐘 |
 
 ### 逐字稿
 
@@ -34,6 +35,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-12 | Boris (Claude Code) 訪談逐字稿 | [txt](transcripts/20260512_Boris_逐字稿.txt) |
 | 2026-05-13 | OpenClaw 多代理架構演講逐字稿 | [txt](transcripts/20260513_OpenClaw_逐字稿.txt) |
 | 2026-05-13 | 意圖工程演講逐字稿 | [txt](transcripts/20260513_Intent_Engineering_逐字稿.txt) |
+| 2026-05-13 | AI 網頁爬蟲教學逐字稿 | [txt](transcripts/20260513_AI_Web_Scraper_逐字稿.txt) |
 
 ---
 
