@@ -19,6 +19,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 日期 | 標題 | 講者 | 時長 |
 |------|------|------|------|
 | 2026-05-12 | [AI 編碼工作坊：用 AI 實際開發功能的完整流程與哲學](技術講座/20260512_Matt_Pocock_AI編碼工作坊.md) | Matt Pocock | 1 小時 36 分 |
+| 2026-05-12 | [Claude Code 創作者 Boris：軟體的未來與 AI 民主化](技術講座/20260512_Boris_Claude_Code創作者訪談.md) | Boris (Anthropic) | 25 分鐘 |
 
 ### 逐字稿
 
@@ -28,6 +29,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-12 | 蔡康永對談逐字稿 | [txt](transcripts/20260512_蔡康永_逐字稿.txt) |
 | 2026-05-12 | Anne Applebaum 訪談逐字稿 | [txt](transcripts/20260512_Anne_Applebaum_逐字稿.txt) |
 | 2026-05-12 | Matt Pocock 工作坊逐字稿 | [txt](transcripts/20260512_Matt_Pocock_逐字稿.txt) |
+| 2026-05-12 | Boris (Claude Code) 訪談逐字稿 | [txt](transcripts/20260512_Boris_逐字稿.txt) |
 
 ---
 
