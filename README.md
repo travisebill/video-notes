@@ -24,9 +24,9 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 ### 技術講座
 
 | 日期 | 標題 | 講者 | 時長 |
-| 2026-04-12 | [Harness Engineering：語言模型的駕馭工程](技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md) | 李宏毅 | 92 分鐘 |
-| 2026-05-07 | [DeepSeek V4 槓桿機會與 Token Efficiency 實踐](技術講座/20260507_小天fotos_DeepSeekV4槓桿與TokenEfficiency.md) | 小天 fotos | 19 分鐘 |
 |------|------|------|------|
+| 2026-05-07 | [DeepSeek V4 槓桿機會與 Token Efficiency 實踐](技術講座/20260507_小天fotos_DeepSeekV4槓桿與TokenEfficiency.md) | 小天 fotos | 19 分鐘 |
+| 2026-04-12 | [Harness Engineering：語言模型的駕馭工程](技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md) | 李宏毅 | 92 分鐘 |
 | 2026-05-12 | [AI 編碼工作坊：用 AI 實際開發功能的完整流程與哲學](技術講座/20260512_Matt_Pocock_AI編碼工作坊.md) | Matt Pocock | 1 小時 36 分 |
 | 2026-05-12 | [Claude Code 創作者 Boris：軟體的未來與 AI 民主化](技術講座/20260512_Boris_Claude_Code創作者訪談.md) | Boris (Anthropic) | 25 分鐘 |
 | 2026-05-13 | [OpenClaw 多代理架構與商業應用實戰](技術講座/20260513_OpenClaw_Multi_Agent商業應用.md) | OpenClaw 生態系 | 20 分鐘 |
