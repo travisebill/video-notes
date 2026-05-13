@@ -27,6 +27,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 |------|------|------|------|
 | 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) | 李宏毅 | 1 小時 3 分 |
 | 2026-05-07 | [DeepSeek V4 槓桿機會與 Token Efficiency 實踐](技術講座/20260507_小天fotos_DeepSeekV4槓桿與TokenEfficiency.md) | 小天 fotos | 19 分鐘 |
+| 2026-04-25 | [AI 能自我修正嗎？Decoding 到 Reasoning 技術整理](技術講座/20260425_李宏毅_AI自我修正Decoding到Reasoning.md) | 李宏毅 | 1 小時 28 分 |
 | 2026-04-12 | [Harness Engineering：語言模型的駕馭工程](技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md) | 李宏毅 | 1 小時 32 分 |
 | 2026-05-12 | [AI 編碼工作坊：用 AI 實際開發功能的完整流程與哲學](技術講座/20260512_Matt_Pocock_AI編碼工作坊.md) | Matt Pocock | 1 小時 36 分 |
 | 2026-05-12 | [Claude Code 創作者 Boris：軟體的未來與 AI 民主化](技術講座/20260512_Boris_Claude_Code創作者訪談.md) | Boris (Anthropic) | 25 分鐘 |
@@ -47,6 +48,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-13 | 意圖工程演講逐字稿 | [txt](transcripts/20260513_Intent_Engineering_逐字稿.txt) |
 | 2026-05-13 | AI 網頁爬蟲教學逐字稿 | [txt](transcripts/20260513_AI_Web_Scraper_逐字稿.txt) |
 | 2026-05-10 | 陳文茜財經周報（石油人民幣）逐字稿 | [txt](transcripts/20260510_陳文茜_伊朗戰爭石油人民幣_逐字稿.txt) |
+| 2026-04-25 | 李宏毅 AI 自我修正逐字稿 | [txt](transcripts/20260425_李宏毅_AI自我修正_逐字稿.txt) |
 | 2026-04-12 | 李宏毅 Harness Engineering 逐字稿 | [txt](transcripts/20260412_李宏毅_HarnessEngineering_逐字稿.txt) |
 | 2026-05-07 | 小天 fotos DeepSeek V4 逐字稿 | [txt](transcripts/20260507_小天fotos_DeepSeekV4_逐字稿.txt) |
 | 2026-05-10 | 李宏毅 AI 自我成長逐字稿 | [txt](transcripts/20260510_李宏毅_AI盧比孔河自我成長_逐字稿.txt) |
