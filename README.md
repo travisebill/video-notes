@@ -34,6 +34,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-13 | [OpenClaw 多代理架構與商業應用實戰](技術講座/20260513_OpenClaw_Multi_Agent商業應用.md) | OpenClaw 生態系 | 20 分鐘 |
 | 2026-05-13 | [意圖工程：從靜態基準到自癒代理](技術講座/20260513_Intent_Engineering_意圖工程.md) | AI 評估領域 | 15 分鐘 |
 | 2026-05-13 | [免費 AI 網頁爬蟲實戰：DeepSeek + Grok](技術講座/20260513_AI_Web_Scraper_免費爬蟲實戰.md) | AI 開發教學 | 23 分鐘 |
+| 2026-05-14 | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) | Dex | 38 分鐘 |
 
 ### 逐字稿
 
@@ -53,7 +54,8 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-07 | 小天 fotos DeepSeek V4 逐字稿 | [txt](transcripts/20260507_小天fotos_DeepSeekV4_逐字稿.txt) |
 | 2026-05-10 | 李宏毅 AI 自我成長逐字稿 | [txt](transcripts/20260510_李宏毅_AI盧比孔河自我成長_逐字稿.txt) |
 | 2026-05-10 | 陳文茜財經周報（反腐清洗川習會）逐字稿 | [txt](transcripts/20260510_陳文茜_反腐清洗川習會_逐字稿.txt) |
+| 2026-05-14 | Dex 上下文工程演講逐字稿 | [txt](transcripts/202602_Dex_Context_Engineering_逐字稿.txt) |
 
 ---
 
-*最後更新：2026-05-13 | 由 [Ryo](https://github.com/travisebill) 自動維護*
+*最後更新：2026-05-14 | 由 [Ryo](https://github.com/travisebill) 自動維護*
