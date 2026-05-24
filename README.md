@@ -44,6 +44,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-13 | [免費 AI 網頁爬蟲實戰：DeepSeek + Grok](技術講座/20260513_AI_Web_Scraper_免費爬蟲實戰.md) | AI 開發教學 | 23 分鐘 |
 | 2026-05-14 | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) | Dex | 38 分鐘 |
 | 2026-05-22 | [AI Harnesses：如何建造可靠的 AI Agent](技術講座/20260522_Tejas_AI_Harness.md) | Tejas (IBM) | 18 分鐘 |
+| 2026-05-24 | [Kimi K2.5 技術解析：從 Token 效率到 Agent Swarm](技術講座/20260524_Moonshot_Kimi_K2_5_技術解析.md) | Moonshot AI | 39 分鐘 |
 | 2026-05-24 | [Agents That Remember：記憶庫與 Dreaming 機制解析](技術講座/20260524_Kevin_Agents_That_Remember.md) | Kevin (Anthropic) | 29 分鐘 |
 
 ### 逐字稿
@@ -69,6 +70,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-16 | 陳文茜習川會下集（伊朗共識）逐字稿 | [txt](transcripts/20260516_陳文茜_習川會伊朗共識_逐字稿.txt) |
 | 2026-05-16 | 陳文茜習川會下集（台灣問題）逐字稿 | [txt](transcripts/20260516_陳文茜_習川會兩大強權過招_逐字稿.txt) |
 | 2026-05-22 | Tejas AI Harness 演講逐字稿 | [txt](transcripts/20260522_Tejas_AI_Harness_逐字稿.txt) |
+| 2026-05-24 | Kimi K2.5 技術解析：從 Token 效率到 Agent Swarm | [txt](transcripts/20260524_Moonshot_Kimi_K2_5_技術解析_逐字稿.txt) |
 | 2026-05-24 | Kevin Agents That Remember 演講逐字稿 | [txt](transcripts/20260524_Kevin_Agents_That_Remember_逐字稿.txt) |
 
 ---
