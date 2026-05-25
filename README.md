@@ -47,7 +47,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-24 | [Kimi K2.5 技術解析：從 Token 效率到 Agent Swarm](技術講座/20260524_Moonshot_Kimi_K2_5_技術解析.md) | Moonshot AI | 39 分鐘 |
 | 2026-05-25 | [AI 編碼的未來與人類技能框架](技術講座/20260525_Andrew_Ng_AI編碼未來.md) | Andrew Ng (DeepLearning.AI) | 19 分鐘 |
 | 2026-05-25 | [從零到數百個 AI Agent：Datadog 的規模化經驗](技術講座/20260525_Datadog_從零到數百Agent規模化.md) | Datadog AI 團隊 | 26 分鐘 |
-| 2026-05-24 | [Agents That Remember：記憶庫與 Dreaming 機制解析](技術講座/20260524_Kevin_Agents_That_Remember.md) | Kevin (Anthropic) | 29 分鐘 |
+| 2026-05-26 | [AI Agent 開發實踐：Spec-Driven、Guard Rails 與軟體品質](技術講座/20260526_開發者對談_AI代理Spec-Driven與GuardRails.md) | 開發者對談 | 39 分鐘 |
 
 ### 逐字稿
 
@@ -76,7 +76,8 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-25 | Datadog 從零到數百 Agent 規模化演講逐字稿 | [txt](transcripts/20260525_Datadog_從零到數百Agent規模化_逐字稿.txt) |
 | 2026-05-25 | Andrew Ng AI 編碼未來演講逐字稿 | [txt](transcripts/20260525_Andrew_Ng_AI編碼未來_逐字稿.txt) |
 | 2026-05-24 | Kevin Agents That Remember 演講逐字稿 | [txt](transcripts/20260524_Kevin_Agents_That_Remember_逐字稿.txt) |
+| 2026-05-26 | AI Agent 開發實踐：Spec-Driven、Guard Rails 與軟體品質 | [txt](transcripts/20260526_開發者對談_逐字稿.txt) |
 
 ---
 
-*最後更新：2026-05-24 | 由 [Ryo](https://github.com/travisebill) 自動維護*
+*最後更新：2026-05-26 | 由 [Ryo](https://github.com/travisebill) 自動維護*
