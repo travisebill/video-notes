@@ -48,6 +48,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-25 | [AI 編碼的未來與人類技能框架](技術講座/20260525_Andrew_Ng_AI編碼未來.md) | Andrew Ng (DeepLearning.AI) | 19 分鐘 |
 | 2026-05-25 | [從零到數百個 AI Agent：Datadog 的規模化經驗](技術講座/20260525_Datadog_從零到數百Agent規模化.md) | Datadog AI 團隊 | 26 分鐘 |
 | 2026-05-28 | [Claude Code Routines：將 AI 從被動工具變主動隊友](技術講座/20260528_Maya_Claude_Code_Routines_主動代理工作流.md) | Maya (Anthropic) | 22 分鐘 |
+| 2026-05-28 | [Software Ecology：軟體生態學視角透視 AI 開發者生態系統](技術講座/20260528_Adam_Bender_Software_Ecology_軟體生態學.md) | Adam Bender (Google) | 25 分鐘 |
 | 2026-05-26 | [AI Agent 開發實踐：Spec-Driven、Guard Rails 與軟體品質](技術講座/20260526_開發者對談_AI代理Spec-Driven與GuardRails.md) | 開發者對談 | 39 分鐘 |
 
 ### 逐字稿
@@ -78,6 +79,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-25 | Andrew Ng AI 編碼未來演講逐字稿 | [txt](transcripts/20260525_Andrew_Ng_AI編碼未來_逐字稿.txt) |
 | 2026-05-24 | Kevin Agents That Remember 演講逐字稿 | [txt](transcripts/20260524_Kevin_Agents_That_Remember_逐字稿.txt) |
 | 2026-05-28 | Maya (Anthropic) Claude Code Routines 主動代理工作流逐字稿 | [txt](transcripts/20260528_Maya_Claude_Code_Routines_主動代理工作流_逐字稿.txt) |
+| 2026-05-28 | Adam Bender (Google) Software Ecology 軟體生態學逐字稿 | [txt](transcripts/20260528_Adam_Bender_Software_Ecology_軟體生態學_逐字稿.txt) |
 | 2026-05-26 | AI Agent 開發實踐：Spec-Driven、Guard Rails 與軟體品質 | [txt](transcripts/20260526_開發者對談_逐字稿.txt) |
 
 ---
