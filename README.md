@@ -33,6 +33,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 
 | 日期 | 標題 | 講者 | 時長 |
 |------|------|------|------|
+| 2026-05-31 | [No Vibes Allowed: 在複雜 Codebase 中解決困難問題](技術講座/20260531_Dex_12FactorAgents_NoVibesAllowed.md) | Dex (HumanLayer) | 20 分鐘 |
 | 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) | 李宏毅 | 1 小時 3 分 |
 | 2026-05-07 | [DeepSeek V4 槓桿機會與 Token Efficiency 實踐](技術講座/20260507_小天fotos_DeepSeekV4槓桿與TokenEfficiency.md) | 小天 fotos | 19 分鐘 |
 | 2026-04-25 | [AI 能自我修正嗎？Decoding 到 Reasoning 技術整理](技術講座/20260425_李宏毅_AI自我修正Decoding到Reasoning.md) | 李宏毅 | 1 小時 28 分 |
@@ -82,8 +83,9 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-28 | Maya (Anthropic) Claude Code Routines 主動代理工作流逐字稿 | [txt](transcripts/20260528_Maya_Claude_Code_Routines_主動代理工作流_逐字稿.txt) |
 | 2026-05-28 | Claude Code Workflow 自動生成 Harness 與 AI Agent 角色轉變逐字稿 | [txt](transcripts/20260528_Claude_Code_Workflow_自動生成Harness_逐字稿.txt) |
 | 2026-05-28 | Adam Bender (Google) Software Ecology 軟體生態學逐字稿 | [txt](transcripts/20260528_Adam_Bender_Software_Ecology_軟體生態學_逐字稿.txt) |
+| 2026-05-31 | Dex (HumanLayer) No Vibes Allowed 演講逐字稿 | [txt](transcripts/20260531_Dex_12FactorAgents_逐字稿.txt) |
 | 2026-05-26 | AI Agent 開發實踐：Spec-Driven、Guard Rails 與軟體品質 | [txt](transcripts/20260526_開發者對談_逐字稿.txt) |
 
 ---
 
-*最後更新：2026-05-28 | 由 [Ryo](https://github.com/travisebill) 自動維護*
+*最後更新：2026-05-31 | 由 [Ryo](https://github.com/travisebill) 自動維護*
