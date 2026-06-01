@@ -13,6 +13,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-12 | [被嚴重低估的王維，與唐代貴族的文化高度](人物訪談/20260512_歐麗娟_王維與唐代貴族.md) | 歐麗娟 | 53 分鐘 |
 | 2026-05-12 | [蔡康永：關於衰老、死亡、AI 與人生的終極提問](人物訪談/20260512_蔡康永_衰老死亡與AI.md) | 蔡康永 × 羅永浩 | 3 小時 36 分 |
 | 2026-05-12 | [民主如何消亡——以及我們如何阻止它發生](人物訪談/20260512_Anne_Applebaum_民主如何消亡.md) | Anne Applebaum | 1 小時 48 分 |
+| 2026-06-02 | [Mo Gawdat 談 AI 倫理與人類未來](人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md) | Mo Gawdat × Steven Bartlett | 約 2 小時 |
 
 ### 國際局勢
 
@@ -85,7 +86,8 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-28 | Adam Bender (Google) Software Ecology 軟體生態學逐字稿 | [txt](transcripts/20260528_Adam_Bender_Software_Ecology_軟體生態學_逐字稿.txt) |
 | 2026-05-31 | Dex (HumanLayer) No Vibes Allowed 演講逐字稿 | [txt](transcripts/20260531_Dex_12FactorAgents_逐字稿.txt) |
 | 2026-05-26 | AI Agent 開發實踐：Spec-Driven、Guard Rails 與軟體品質 | [txt](transcripts/20260526_開發者對談_逐字稿.txt) |
+| 2026-06-02 | Mo Gawdat 談 AI 倫理與人類未來 | [txt](transcripts/20260602_Mo_Gawdat_逐字稿.txt) |
 
 ---
 
-*最後更新：2026-05-31 | 由 [Ryo](https://github.com/travisebill) 自動維護*
+*最後更新：2026-06-02 | 由 [Ryo](https://github.com/travisebill) 自動維護*
