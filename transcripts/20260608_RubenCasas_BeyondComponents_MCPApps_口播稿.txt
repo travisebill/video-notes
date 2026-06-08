@@ -1,145 +1,145 @@
 (clears throat)
 
-大家好，今天要跟大家聊一個我最近非常關心的題目。
+大家好，今天要跟大家聊一个我最近非常关心的题目。
 
-它叫做，Generative UI，也就是生成式使用者介面。
+它叫做，Generative UI，也就是生成式用户接口。
 
-先講結論，AI 寫前端 code 的能力，已經比大多數工程師強了。但是，我們今天看到的 UI，還是停留在二十年來那個 static 的範式裡。
+先讲结论，AI 写前端 code 的能力，已经比大多数工程师强了。但是，我们今天看到的 UI，还是停留在二十年来那个 static 的范式里。
 
 (sighs)
 
-這中間有什麼落差？今天我想把這條故事線，講清楚。
+这中间有什么落差？今天我想把这条故事线，讲清楚。
 
-讓我們先回頭看 2022 年 11 月，那時候 ChatGPT 剛出來。
+让我们先回头看 2022 年 11 月，那时候 ChatGPT 刚出来。
 
-大家怎麼用？你打開 ChatGPT，請它幫你寫一個 component，然後它吐出一段 code block，你再把那段 code 複製貼上到你的編輯器。
+大家怎么用？你打开 ChatGPT，请它帮你写一个 component，然后它吐出一段 code block，你再把那段 code 拷贝粘贴到你的编辑器。
 
-然後呢？它跑不起來。你再貼錯誤訊息回去，它再給你一段 code。你再貼回去。
+然后呢？它跑不起来。你再贴错误消息回去，它再给你一段 code。你再贴回去。
 
 (laughs)
 
-我以前把這種工作模式，叫作窮人的 vibe coding。它能用，但是非常痛苦。
+我以前把这种工作模式，叫作穷人的 vibe coding。它能用，但是非常痛苦。
 
-三年過去了。到了 2025 年底，發生了兩個非常重要的 model release。一個是 GPT 5.2，一個是 Opus 4.5。
+三年过去了。到了 2025 年底，发生了两个非常重要的 model release。一个是 GPT 5.2，一个是 Opus 4.5。
 
-這兩個 model 的能力，跟三年前相比，是一個 inflect point，是一個轉捩點。
+这两个 model 的能力，跟三年前相比，是一个 inflect point，是一个转捩点。
 
-它們不只是能寫 code，它們能寫很長、很多步驟的任務。它們能寫出 production 等級的 React、JavaScript、CSS。
+它们不只是能写 code，它们能写很长、很多步骤的任务。它们能写出 production 等级的 React、JavaScript、CSS。
 
-我親身做過一個實驗。我跟它說，請幫我改寫我的 blog。就一句 prompt。
+我亲身做过一个实验。我跟它说，请帮我改写我的 blog。就一句 prompt。
 
-結果它給我的，不只是一個改寫後的版面。它給我一個有 search box 的版本，有 blur 動畫，accessibility 都做好了。
+结果它给我的，不只是一个改写后的版面。它给我一个有 search box 的版本，有 blur 动画，accessibility 都做好了。
 
-我完全沒有要求這些。它自己加的。
-
-(sighs)
-
-這時候我才意識到，三年內，我們從「請 AI 寫幾行 code」走到「AI 寫得比前端工程師還好」。
-
-那問題就來了。既然 AI 都寫得比人好了，為什麼我們今天看到的 UI，還是停留在那種，static、宣告式、幾乎沒什麼互動的範式裡？
-
-那個我們一直在期待的 Jarvis，在哪裡？為什麼我的 floating UI window，沒有自動浮現、自動消失？
-
-關於未來的 UI 介面，最近大家吵得很凶。
-
-有人說，未來是 chat everywhere，每個 app 都加一個 chat box 進去。
-
-也有人說，未來是一個 super app，你只要打開 ChatGPT 或 Claude 或 Gemini，其他所有東西都在裡面跑。
-
-這兩個路徑，其實是兩個不同的問題。第一個問題是，UI 在哪裡跑。在第三方 app 裡？還是在 super app 裡？還是在每個 chat 視窗裡？
-
-但更有趣的問題是第二個。也就是，model 到底在生什麼？
-
-今天我看了三種不同的 UI 生成方式。我想把這三種，講清楚。
-
-第一種，是 static components。
-
-Agent 是一個 orchestrator。它透過 MCP apps 或直接的 tool call，呼叫後端。後端把一些參數和 data，傳給一個，事先由 developer 寫好的 React component。
-
-然後那個 component 就 render 出來了。
-
-舉例來說。AGUI protocol 提供一個 SDK，你可以 register 一個 client tool，把那個 tool 對應到一個 React component。Tool call 會拿到一些 props，那些 props 就會被 mapping 到一個預先寫好的 component，然後 render 出來。
-
-另一個例子是 Goose。Goose 是一個 MCP client，它有一個功能叫 Goose Auto Visualizer。你丟任何資料進去，Goose 會試著 match 那個 data，組織一下，然後丟給 Goose team 預先寫好的一組 component。
-
-這就是 static 的方式。這也是今天最常見的方式。
-
-它很安全，因為 component 是 developer 自己寫的。它很 predictable，因為 component 的樣子，是固定的。
-
-但它沒有個人化。每一個人看到的東西，都長一樣。
-
-第二種，是 declarative UI。
-
-它比 static 多走了一步。我們還是有預先寫好的 component，我們還是有 design system。但是，agent 不是直接給 props 給 component。
-
-Agent 給的是一個 descriptor。這個 descriptor 可能是 JSON，可能是 YAML。也有人用 Python。
-
-舉例來說，Vercel 的 JSON Render，就是這種模式。你用 JSON 或 YAML 來描述你想要的 UI，runtime 有一個 translation engine，把那個描述翻成最終的 component。
-
-這跟 Netflix 的 server-driven UI 很像。當你打開 Netflix 首頁，你看到的 UI，是根據你的偏好，動態組裝出來的。但那些組件本身，都是 Netflix 工程師寫好的。
-
-Declarative UI 的好處是，它更動態、更有個人化。但是 component 還是 static 的。LLM 不是在生 component，LLM 是在生那個 descriptor。
-
-我覺得，在這個時間點，declarative UI 是個很棒的平衡點。你還是有 design system 的一致性，你還是有 component 的可預測性，它跑起來也比較快、比較便宜，因為你不用花一堆 token 去生完整的 HTML。
-
-第三種，是 generative components。
-
-走到這一步，我們就完全放手了。Agent 一次 tool call，自己生出 HTML、CSS、JavaScript。然後那段 code 直接傳給 client，client 把它 render 出來。
-
-我在 Postman 做了一個實驗。一個 weather agent，它去呼叫天氣 API，然後生一個笑話，然後在同一個 tool call 裡，把整個 UI 的 HTML、CSS、JavaScript，全部生出來。
-
-結果呢？你會看到一個，agent 自己想像出來的 UI。非常 random，但是非常 imaginative。
-
-沒有 component，沒有 translation layer，沒有什麼 descriptor。就是一段 code。
-
-當然，這個方法有非常明顯的問題。
-
-如果我們不信任第三方寫的 code，那我們也不應該信任 LLM 生出來的 code，然後直接 render 給使用者看。
-
-Generative UI 走到這一步，需要一個 distribution model。這個 distribution model，需要 boundary，需要 containment，需要 sandbox。
-
-這就是 MCP apps 重要的地方。
-
-MCP apps 提供了一個，現成的 delivery mechanism。Authentication、tool calling、agent 跟 UI 之間的 message passing，這些都內建了。
-
-更重要的，是它的 sandbox。MCP apps 預設就是用 double iFrame 做隔離的。這對於配送 third-party UI 來說，是今天最安全、最成熟的選項。
-
-有一個非常有意思的戰略訊號。Anthropic 自己，他們做 first-party UI 的時候，例如 Visualizer feature，他們也選擇走 MCP apps。
-
-他們其實可以自己刻一套 rendering 機制，自己架一套在 cloud 上的 delivery system。但是他們沒有。他們選了 MCP apps。
-
-這代表什麼？代表 MCP apps 提供了一個，open、standardized、可以重複使用的 protocol。Anthropic 願意把自己的 first-party UI 也放進去，代表他們相信，這個 protocol 會是未來的方向。
-
-如果 Anthropic 自己的 first-party UI 都可以走 MCP apps，那為什麼其他人不可以？
+我完全没有要求这些。它自己加的。
 
 (sighs)
 
-講到這裡，我要提一個，我自己很喜歡的類比。
+这时候我才意识到，三年内，我们从「请 AI 写几行 code」走到「AI 写得比前端工程师还好」。
 
-電視剛出來的時候，前幾年所有的電視節目，都是把廣播節目加上 camera。因為那時候的人，沒辦法想像，電視這個新媒介，到底能拿來做什麼。
+那问题就来了。既然 AI 都写得比人好了，为什么我们今天看到的 UI，还是停留在那种，static、声明式、几乎没什么交互的范式里？
 
-今天我們對 Generative UI 的想像，也是這樣。我們一直在想的，還是那種 floating window、那種 Jarvis 風格的介面。
+那个我们一直在期待的 Jarvis，在哪里？为什么我的 floating UI window，没有自动浮现、自动消失？
 
-但是，會不會真正的未來，跟我們現在想的完全不一樣？
+关于未来的 UI 接口，最近大家吵得很凶。
 
-有一個 MCP app，我非常推薦大家去看，叫做 Excalidraw。
+有人说，未来是 chat everywhere，每个 app 都加一个 chat box 进去。
 
-Excalidraw 這個 MCP app，不是只能讓 agent 畫圖。它創造了一個，shared artifact，一個 canvas。在這個 canvas 上，人跟 agent 可以一起協作。
+也有人说，未来是一个 super app，你只要打开 ChatGPT 或 Claude 或 Gemini，其他所有东西都在里面跑。
 
-你可以請 agent 改一個地方。你也可以自己用滑鼠點，直接改那個圖。
+这两个路径，其实是两个不同的问题。第一个问题是，UI 在哪里跑。在第三方 app 里？还是在 super app 里？还是在每个 chat 窗口里？
 
-這就變成了一個，新的互動方式。人跟 agent 不再是「你講一句、我做一句」這種輪流對話，而是真的在共享的工作空間裡，一起把東西做出來。
+但更有趣的问题是第二个。也就是，model 到底在生什么？
 
-所以我覺得，下一個階段的 UI，不會只是更多的 component。
+今天我看了三种不同的 UI 生成方式。我想把这三种，讲清楚。
 
-下一個階段的 UI，會是一個 collaboration 的 experience。Generative UI 會是 super personalized，而且會是 collaborative。
+第一种，是 static components。
+
+Agent 是一个 orchestrator。它通过 MCP apps 或直接的 tool call，调用后端。后端把一些参数和 data，传给一个，事先由 developer 写好的 React component。
+
+然后那个 component 就 render 出来了。
+
+举例来说。AGUI protocol 提供一个 SDK，你可以 register 一个 client tool，把那个 tool 对应到一个 React component。Tool call 会拿到一些 props，那些 props 就会被 mapping 到一个预先写好的 component，然后 render 出来。
+
+另一个例子是 Goose。Goose 是一个 MCP client，它有一个功能叫 Goose Auto Visualizer。你丢任何数据进去，Goose 会试着 match 那个 data，组织一下，然后丢给 Goose team 预先写好的一组 component。
+
+这就是 static 的方式。这也是今天最常见的方式。
+
+它很安全，因为 component 是 developer 自己写的。它很 predictable，因为 component 的样子，是固定的。
+
+但它没有个人化。每一个人看到的东西，都长一样。
+
+第二种，是 declarative UI。
+
+它比 static 多走了一步。我们还是有预先写好的 component，我们还是有 design system。但是，agent 不是直接给 props 给 component。
+
+Agent 给的是一个 descriptor。这个 descriptor 可能是 JSON，可能是 YAML。也有人用 Python。
+
+举例来说，Vercel 的 JSON Render，就是这种模式。你用 JSON 或 YAML 来描述你想要的 UI，runtime 有一个 translation engine，把那个描述翻成最终的 component。
+
+这跟 Netflix 的 server-driven UI 很像。当你打开 Netflix 首页，你看到的 UI，是根据你的偏好，动态组装出来的。但那些组件本身，都是 Netflix 工程师写好的。
+
+Declarative UI 的好处是，它更动态、更有个人化。但是 component 还是 static 的。LLM 不是在生 component，LLM 是在生那个 descriptor。
+
+我觉得，在这个时间点，declarative UI 是个很棒的平衡点。你还是有 design system 的一致性，你还是有 component 的可预测性，它跑起来也比较快、比较便宜，因为你不用花一堆 token 去生完整的 HTML。
+
+第三种，是 generative components。
+
+走到这一步，我们就完全放手了。Agent 一次 tool call，自己生出 HTML、CSS、JavaScript。然后那段 code 直接传给 client，client 把它 render 出来。
+
+我在 Postman 做了一个实验。一个 weather agent，它去调用天气 API，然后生一个笑话，然后在同一个 tool call 里，把整个 UI 的 HTML、CSS、JavaScript，全部生出来。
+
+结果呢？你会看到一个，agent 自己想像出来的 UI。非常 random，但是非常 imaginative。
+
+没有 component，没有 translation layer，没有什么 descriptor。就是一段 code。
+
+当然，这个方法有非常明显的问题。
+
+如果我们不信任第三方写的 code，那我们也不应该信任 LLM 生出来的 code，然后直接 render 给用户看。
+
+Generative UI 走到这一步，需要一个 distribution model。这个 distribution model，需要 boundary，需要 containment，需要 sandbox。
+
+这就是 MCP apps 重要的地方。
+
+MCP apps 提供了一个，现成的 delivery mechanism。Authentication、tool calling、agent 跟 UI 之间的 message passing，这些都内置了。
+
+更重要的，是它的 sandbox。MCP apps 缺省就是用 double iFrame 做隔离的。这对于配送 third-party UI 来说，是今天最安全、最成熟的选项。
+
+有一个非常有意思的战略信号。Anthropic 自己，他们做 first-party UI 的时候，例如 Visualizer feature，他们也选择走 MCP apps。
+
+他们其实可以自己刻一套 rendering 机制，自己架一套在 cloud 上的 delivery system。但是他们没有。他们选了 MCP apps。
+
+这代表什么？代表 MCP apps 提供了一个，open、standardized、可以重复使用的 protocol。Anthropic 愿意把自己的 first-party UI 也放进去，代表他们相信，这个 protocol 会是未来的方向。
+
+如果 Anthropic 自己的 first-party UI 都可以走 MCP apps，那为什么其他人不可以？
 
 (sighs)
 
-我們今天還在很早期。我們不知道 UI 的最終形態長什麼樣。
+讲到这里，我要提一个，我自己很喜欢的模拟。
 
-但是有一件事是確定的。
+电视刚出来的时候，前几年所有的电视节目，都是把广播节目加上 camera。因为那时候的人，没办法想像，电视这个新媒介，到底能拿来做什么。
 
-我們有機會，去塑造這個未來。我們有機會，去打造這個新的電腦。
+今天我们对 Generative UI 的想像，也是这样。我们一直在想的，还是那种 floating window、那种 Jarvis 风格的接口。
 
-謝謝大家。
+但是，会不会真正的未来，跟我们现在想的完全不一样？
+
+有一个 MCP app，我非常推荐大家去看，叫做 Excalidraw。
+
+Excalidraw 这个 MCP app，不是只能让 agent 画图。它创造了一个，shared artifact，一个 canvas。在这个 canvas 上，人跟 agent 可以一起协作。
+
+你可以请 agent 改一个地方。你也可以自己用鼠标点，直接改那个图。
+
+这就变成了一个，新的交互方式。人跟 agent 不再是「你讲一句、我做一句」这种轮流对话，而是真的在共享的工作空间里，一起把东西做出来。
+
+所以我觉得，下一个阶段的 UI，不会只是更多的 component。
+
+下一个阶段的 UI，会是一个 collaboration 的 experience。Generative UI 会是 super personalized，而且会是 collaborative。
+
+(sighs)
+
+我们今天还在很早期。我们不知道 UI 的最终形态长什么样。
+
+但是有一件事是确定的。
+
+我们有机会，去塑造这个未来。我们有机会，去打造这个新的电脑。
+
+谢谢大家。
