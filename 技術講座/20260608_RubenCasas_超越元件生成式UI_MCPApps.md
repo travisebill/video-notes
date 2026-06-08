@@ -1,216 +1,118 @@
-# 【超越元件：為 MCP Apps 設計生成式 UI】
-**Ruben Casas（Postman）｜2026-06-08｜MCP Developer Summit 2025**
+# Generative UI 與 MCP Apps：Ruben Casas @ Postman
 
-> **影片來源**：<https://youtu.be/hCMrEfPG2Yg>
-> **講者**：Ruben Casas, Postman Staff Engineer（過去一年專注 UI 與生成式 UI，並實際投入 MCP Apps 開發）
-> **時長**：約 17 分鐘
-
----
-
-## 一、主題與背景
-
-Ruben 的核心論點是：**我們正處於「LLM 作業系統」的 1970 年代**——超級智慧已經存在，但成熟的 GUI 介面語言尚未被發明。今天的 UI 主流仍是「靜態元件（Static Components）」，無法善用現代模型的程式碼生成能力。**MCP Apps 是生成式 UI 目前最務實的傳遞機制（delivery mechanism）**，因為它原生提供認證、tool calling、沙箱（double iframe）三大基礎設施。
-
-> 引用 Karpathy：「與新電腦互動就像在跟終端機對話——你有作業系統的直接存取權，但 GUI 還沒被發明出來。」
-
-**未來 12-24 個月 UI 的演進路線：**
-靜態元件（Static）→ 宣告式生成 UI（Declarative）→ 生成式元件（Generative Components）→ 協作式物件（Collaborative Artifacts）
+> **講者**：Ruben Casas（Postman Staff Engineer）
+> **連結**：<https://youtu.be/hCMrEfPG2Yg>
+> **整理日期**：2026-06-08
+> **Owner**：Ryo 🐱
+> **影片長度**：~16 分鐘
 
 ---
 
-## 二、章節脈絡
+## 1. 核心命題（一句話）
 
-### Section 1｜時代背景：為什麼是「現在」？（00:00 ~ 03:00）
+**「新電腦的 GUI 還沒被發明 — 我們還在 radio era，目前的 static / declarative UI 只是過渡形態；真正的 Generative UI 必須靠 sandboxed distribution（MCP apps）+ 人機協作（shared canvas）才能落地。」**
 
-**重點摘要：** 2025 年底兩個模型（GPT-5.2 + Claude Opus 4.5）讓 UI 能力產生質變
-
-**內容：**
-- 2022 末 ChatGPT 時代：「poor man's vibe coding」— 貼 prompt → 收 code → 改 code → 再問
-- 2025 年底兩大突破：
-  - **GPT-5.2**：長時程任務能力
-  - **Claude Opus 4.5**：高擬真 UI 生成
-- 講者親身實驗：丟一句「幫我重寫部落格」，模型主動加了搜尋框 + blur 動畫 + a11y 支援
-- 關鍵現實：**「AI 寫前端比大多數前端工程師還好」**（講者原話，沒有 ego）
-
-### Section 2｜「新電腦」比喻 — 介面語言才是瓶頸（03:00 ~ 05:00）
-
-**重點摘要：** 模型能力不是瓶頸，介面語言才是
-
-**內容：**
-- 引用 Andrej Karpathy 的「terminal 比喻」：我們有超級智慧，但沒有成熟 GUI
-- 終端機 → CLI → 現在的 chat 介面
-- 但成熟 GUI 還沒出現
-- **介面語言（interface language）是當前最大的設計瓶頸**
-
-### Section 3｜UI 生成的四大象限（Ruben 的分類法）（05:00 ~ 11:00）
-
-**重點摘要：** 兩條軸（Where / What）交叉出四個象限，成熟度由低到高
-
-**內容：**
-
-```
-軸 1：Where（UI 在哪裡跑）
-  ├─ 第三方程式碼 / 第三方 UI
-  └─ 終端內超級 App（ChatGPT / Claude / Gemini）
-
-軸 2：What（模型生成什麼）
-  ├─ 靜態資料 → 預定義元件
-  └─ 完整 HTML / CSS / JS
-```
-
-**象限 1：靜態元件（Static Components）— 主流**
-- 流程：Agent 編排 → tool call → 預定義 React 元件 → 渲染
-- 代表：AGUI Protocol、Goose Auto Visualizer
-- 缺點：和過去 20 年沒什麼差別
-
-**象限 2：宣告式 UI（Declarative UI）— 當前甜蜜點** ⭐
-- 流程：Agent → JSON / YAML / Python descriptor → 轉譯引擎 → 預定義元件
-- 代表：Vercel JSON Render、Fast MCPs
-- 為什麼是甜蜜點：
-  - 保留 design system 一致性
-  - 速度快、token 成本低
-  - 可預測性高
-  - 比純靜態更個人化
-
-**象限 3：生成式元件（Generative Components）— Next**
-- 流程：Agent → tool call → 反向取樣 / 另一個 model → runtime 生成完整 HTML/CSS/JS
-- Postman 內部實驗：weather agent 一次 tool call 內生成完整天氣頁面（含笑話）
-- 最大風險：**信任問題** + 需要發布機制（distribution model，內含 boundary + containment + sandbox）
-
-**象限 4：協作式物件（Collaborative Artifacts）— 未來**
-- Human ⇄ Agent 共享 canvas / artifact，持續可修改
-- 代表：**Excalidraw MCP App**
-  - 建立共享 artifact：人類和 agent 在同一個 canvas 來回協作
-  - 人可以點擊、修改、拖拉 UI 物件
-  - Agent 可以重畫整個畫面
-  - 「新型態的互動體驗」
-
-### Section 4｜為什麼 MCP Apps 是生成式 UI 的最佳載體？（11:00 ~ 13:30）
-
-**重點摘要：** MCP Apps 解決生成式 UI 的三大基礎設施問題
-
-**內容：**
-
-| 基礎設施需求 | MCP App 怎麼解決 |
-|--------------|------------------|
-| **認證（Auth）** | 內建 OAuth / token 傳遞 |
-| **Tool Calling** | Agent ⇄ UI 的雙向訊息傳遞 |
-| **Sandbox** | 預設 **double iframe** 隔離 |
-
-**關鍵戰略觀察：**
-> Anthropic 完全可以自己搞 first-party 渲染機制（像 Cloud 那種），但他們選擇用 MCP Apps 來做自己的 first-party UI。**這是強烈的訊號** — 連平台方都相信 MCP Apps 是最乾淨的傳遞機制。
-
-Ruben 反問：**如果 Anthropic 對自己 first-party UI 都用 MCP Apps，那第三方憑什麼不用？**
-
-### Section 5｜「Radio 時代」比喻 — 我們缺的不是技術，是想像力（13:30 ~ 17:00）
-
-**重點摘要：** LLM 介面還在「電台節目加攝影機」階段
-
-**內容：**
-- 媒體史類比：
-  - 1930 年代電視剛出現時，節目就是「電台節目加一台攝影機」
-  - 當時的人**想像不到**電視能幹嘛
-- 對應到現在：
-  - 電視 = LLM OS
-  - 電台節目 = Chat 介面
-  - 攝影機 = 我們塞到每個 SaaS 的 chat box
-
-> 「我們沒有足夠的想像力。我們還在 radio 時代。」
-
-**Excalidraw MCP App 為什麼重要：**
-- 不只是輸出圖表
-- 建立**共享 artifact**：人機在同個 canvas 來回協作
-- 預示「協作式物件」是下一個殺手級介面的開端
+支撐這個命題的 3 個支柱：
+1. **模型能力已到位** — GPT 5.2 / Opus 4.5 寫前端比人好（3 年內從 copy-paste 到 production-grade）
+2. **分發機制還沒到位** — 生成式 UI 需要 boundary / containment / sandbox，否則是 security hole
+3. **互動範式還沒到位** — 從「components」走向「collaboration」，人 + agent 共用 canvas
 
 ---
 
-## 三、核心模型圖
+## 2. 章節脈絡
+
+### Ch.1｜開場：3 年的 vibe coding 演進
+- **2022 Nov**：copy-paste ChatGPT 產出 code block → 「poor man's vibe coding」
+- **2025 Q4**：GPT 5.2 / Opus 4.5 兩個 release 是 inflect point
+  - 長時程任務（long horizon）OK
+  - 高 fidelity UI 生成 OK
+  - 速度快
+- 講者親身實驗：single prompt「rewrite my blog」→ LLM 給出 search box + blur animation + a11y
+- **轉折**：模型寫前端 code 已比人強，那為什麼 UI 還停在 static？
+
+### Ch.2｜提問：Jarvis 在哪？
+- 為什麼沒有 floating UI windows 自動出現 / 消失？
+- 為什麼 SaaS 還在「把 chat 塞進首頁」？
+
+### Ch.3｜兩個未來路徑（開放式）
+- **A. Chat everywhere**：每個 app 都加 chat（短期現象）
+- **B. Super app**：ChatGPT / Claude / Gemini 一個入口跑完所有 MCP apps
+- 講者不下定論，但指出**真正重要的問題不是「UI 在哪跑」，而是「model 在生什麼」**
+
+### Ch.4｜3 種 UI 生成層級（核心）
+
+| 層級 | 誰生 UI | 範例 | 優點 | 缺點 |
+|---|---|---|---|---|
+| **Static components** | Developer 預寫 React component，agent 只傳 props | AGUI SDK、Goose Auto Visualizer | 安全、predictable、快、便宜 | 沒個人化 |
+| **Declarative UI** | Agent 生成 JSON/YAML descriptor，runtime 翻成 component | Vercel JSON Render、FastMCP Python descriptor | 個人化 + 仍守 design system | 仍受限於 static components |
+| **Generative components** | Agent 一次 tool call 生 HTML/CSS/JS | Postman weather agent（講者親做實驗） | 完全自由、即時、imaginative | 信任問題、無 boundary |
+
+**講者判斷**：**Declarative UI 是當下的最佳平衡點**（flexibility ↔ consistency）
+
+### Ch.5｜Generative UI 的關鍵風險
+- 第三方程式碼不可信 → LLM 生成的也同樣不可信
+- 必須有 **distribution model**：
+  - Boundary
+  - Containment
+  - Sandbox
+- → **MCP apps 是當下最好的 delivery mechanism**（auth + tool call + message passing + 預設 sandbox（double iFrame））
+
+### Ch.6｜MCP apps 的戰略訊號
+- Anthropic 自己的 first-party UI 也走 MCP apps（Visualizer feature）
+- 為什麼？因為 MCP apps 內建上述 features，不用 Anthropic 從頭刻
+- 暗示：**MCP apps 有可能成為 third-party UI 配送的標準協議**
+- 開放問題：MCP apps 會不會變成 web standard（像 HTTP / OAuth）？
+
+### Ch.7｜結論：從 components 走向 collaboration
+- 還有更明顯的 future？講者引用：「where is my Jarvis?」
+- **「Radio era」類比**：電視剛發明時，前 10 年節目都是「radio + camera」，因為人們想像不到新介面能做什麼
+- 我們現在對 Generative UI 的想像，還卡在「floating windows」這種 web-era 延伸
+- **真正的未來**：人 + agent 共享 canvas，**協作**
+  - 範例：Excalidraw MCP app — 共享 artifact，人可以 click 改、agent 可以 propose
+- 結語：「We are still early」「But we can shape that future, and create this new computer」
+
+---
+
+## 3. 開放問題
+
+1. **MCP apps 真的會標準化嗎？** Anthropic 推，OpenAI / Google 跟不跟？這是 web 級別的 protocol 博弈
+2. **Declarative UI 的 descriptor schema 誰定？** Vercel JSON Render 是事實標準還是過渡？
+3. **Sandbox 的合規性** — 醫療 / 金融 generative UI 能不能用 double iFrame？需要更強的 isolation 嗎？
+4. **協作 canvas 的 UX 範式** — Excalidraw MCP app 只是起點，email / spreadsheet / video editor 什麼時候會有 MCP app 版？
+5. **「radio era」是真的還是講者過度類比？** — 我們可能其實已經看到正確的未來，只是還沒規模化
+
+---
+
+## 4. 時間軸
 
 ```
-成熟度由低到高 ─────────────────────────────────────►
-
-靜態元件       宣告式 UI        生成式元件        協作式物件
-(現在主流)    (現在甜蜜點)     (Next 12 月)      (Next 24 月)
-   ↓              ↓                ↓                 ↓
-AGUI          Vercel           Postman           Excalidraw
-Goose         JSON Render      weather agent     共享 canvas
+00:00 ┃ 開場：lunch 前的 talk
+00:30 ┃ 2022 copy-paste ChatGPT → 2025 GPT 5.2 / Opus 4.5
+03:00 ┃ 自己 blog 改寫實驗：a11y + 動畫自動生成
+04:30 ┃ 提問：Jarvis 在哪？floating windows 在哪？
+05:30 ┃ 自我介紹 + Andrej Karpathy「terminal 比喻」
+06:30 ┃ 兩個路徑：chat everywhere vs MCP super app
+07:30 ┃ 重點：真正問題是「model 在生什麼」，不是「UI 在哪跑」
+08:00 ┃ Static components（AGUI、Goose）
+09:30 ┃ Declarative UI（JSON Render、FastMCP）
+11:00 ┃ Generative components（Postman weather agent）
+12:30 ┃ 風險：third-party code 不可信 → 需要 distribution model
+13:00 ┃ MCP apps 是最佳 delivery（auth + sandbox + message passing）
+14:00 ┃ Anthropic first-party UI 也走 MCP apps → 戰略訊號
+14:30 ┃ Radio era 類比：我們想像力還不夠
+15:00 ┃ 結論：從 components 走向 collaboration
+15:30 ┃ Excalidraw MCP app 範例
+16:00 ┃ 「We are still early」「shape that future」
 ```
 
 ---
 
-## 四、技術決策建議
+## 5. 重點引言
 
-### 短期（3-6 個月）
-- 採用 **Declarative UI** 模式：JSON / YAML descriptor + 預定義元件庫
-- 參考 Vercel JSON Render 的 schema
-- MCP Apps 作為**第三方 / 內部工具的統一入口**
+> "We have a new computer, but the GUI has not been invented yet."
 
-### 中期（6-12 個月）
-- 導入 **Generative Components** 的實驗性功能
-- 確保有 **double-iframe sandbox** 機制
-- 開始設計 **artifact persistence**（協作物件需要持久化狀態）
+> "Today, we are still in the radio era. The first TV shows were radio shows with cameras."
 
-### 長期（12-24 個月）
-- 設計**人機協作的 UI 物件模型**
-- 思考**設計系統 vs 生成自由度的平衡**
-- 投資**安全審查 pipeline**（LLM 生成的 code 必須經過審查才能進 production）
+> "Beyond components, it will be a collaborative experience."
 
----
-
-## 五、開放問題
-
-Ruben 坦承**今天沒有答案**的問題：
-
-1. **Chat 是最終介面嗎？** — 大部分 SaaS 在首頁塞 chat box，這是過渡還是終局？
-2. **MCP Apps 是終局嗎？** — 它是目前最務實的傳遞機制，但不是唯一選項
-3. **超級 App 會統一所有 UI 嗎？** — 還是每個 app 還是要有自己的 chat 入口？
-4. **UI 應該生成到什麼程度？** — 完全生成（model 寫 HTML）vs 宣告式（JSON descriptor）
-5. **人機協作的 artifact 形式？** — Excalidraw 是開始，不是結束
-
----
-
-## 六、關鍵詞彙表
-
-| 術語 | 說明 |
-|------|------|
-| **Generative UI** | 由 LLM 動態生成 UI 而非預定義 |
-| **MCP Apps** | Model Context Protocol 的 App 規格，含 iframe 沙箱 |
-| **Declarative UI** | 用 JSON / YAML / Python 描述 UI 結構，runtime 渲染 |
-| **Generative Components** | LLM 即時生成 HTML / CSS / JS 元件 |
-| **Collaborative Artifact** | 人機共享的可修改物件（Excalidraw 模式） |
-| **Distribution Model** | 生成式 UI 的發布與沙箱模型 |
-| **Radio Era** | 講者的比喻：LLM 介面還在「把 radio 內容搬上電視」階段 |
-| **AGUI Protocol** | 把 client tool 映射到 React 元件的 SDK |
-| **Goose Auto Visualizer** | MCP client 內建的自動資料視覺化功能 |
-| **JSON Render (Vercel)** | Vercel 推出的 JSON → 元件渲染器 |
-| **Excalidraw MCP App** | 強調人機共享 canvas 的 MCP App 範例 |
-
----
-
-## 七、參考資源
-
-- **演講者**：Ruben Casas（Postman）
-- **引用文獻**：
-  - Karpathy 的「terminal 比喻」
-  - 1930 年代電視 vs 收音機的媒體史
-- **相關專案**：
-  - Vercel JSON Render
-  - Anthropic MCP Apps spec
-  - AGUI Protocol
-  - Goose（MCP client）Auto Visualizer
-  - Excalidraw MCP App
-- **演講原始連結**：<https://youtu.be/hCMrEfPG2Yg>
-
----
-
-## 八、給團隊的提醒
-
-- **Ruka（前端）**：宣告式 UI 是當前甜蜜點，建議研究 Vercel JSON Render 的 schema，後端會盡量吐一致的 JSON descriptor
-- **Moka（UI/UX）**：design system 不會被取代，反而更重要 — 生成式 UI 需要在「品牌一致性」和「個人化」間拿捏
-- **Sora（PM）**：short-term 不要追求「完全生成 UI」，token 成本 + 安全性 + 設計一致性都不划算；先做 Declarative，再實驗 Generative
-- **Mame（QA）**：生成式 UI 的 testing 是新戰場，需要 deterministic snapshot + LLM 行為驗證雙軌
-- **Nigo / Founder**：可考慮將 Excalidraw MCP App 模式納入產品 roadmap 參考
-
----
-
-*本筆記由 yt-dlp 抓字幕 + Ryo 🐱 整理為繁體中文技術架構文件*
+> "We are still early. We don't have the answer. But we can shape that future."
