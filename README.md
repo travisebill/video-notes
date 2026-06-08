@@ -92,14 +92,16 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-02-05 | 黃仁勳最新訪談逐字稿 | [txt](transcripts/20260205_JensenHuang_逐字稿.txt) |
 | 2026-06-08 | Ruben Casas (Postman) Beyond Components MCP Apps 演講逐字稿 | [txt](transcripts/20260608_RubenCasas_BeyondComponents_MCPApps_逐字稿.txt) |
 | 2026-06-08 | Ruben Casas (Postman) 口播稿（TTS 輸入稿）| [txt](transcripts/20260608_RubenCasas_BeyondComponents_MCPApps_口播稿.txt) |
+| 2026-05-12 | 歐麗娟「王維」訪談口播稿（TTS 輸入稿）| [txt](transcripts/20260512_歐麗娟_王維與唐代貴族_口播稿.txt) |
 
 ### 🎙️ 影片音檔
 
 | 日期 | 講者 | 音檔 |
 |------|------|------|
 | 2026-06-08 | Ruben Casas (Postman) | [opus 3.2MB](audio/spoken_text.opus) · [m4a 4.4MB](audio/spoken_text.m4a) · [mp3 6.4MB](audio/spoken_text.mp3) |
+| 2026-05-12 | 歐麗娟「王維與唐代貴族」 | [opus 1.9MB](audio/20260512_歐麗娟_王維與唐代貴族.opus) · [m4a 2.6MB](audio/20260512_歐麗娟_王維與唐代貴族.m4a) · [mp3 3.7MB](audio/20260512_歐麗娟_王維與唐代貴族.mp3) |
 
-音檔生成流程：技術講座影片 → yt-dlp 抓字幕 → 寫口播稿（簡體中文，speech-2.8-hd 處理效果最佳）→ MiniMax TTS voice clone 合成（cloud, ~30s 推論, speech-2.8-hd 支援 interjection emotion tags）。
+音檔生成流程：影片 → 抓字幕 / 讀架構文件 → 寫口播稿（簡體中文，speech-2.8-hd 處理效果最佳）→ MiniMax TTS voice clone 合成（cloud, ~30s 推論, speech-2.8-hd 支援 interjection emotion tags）。每篇架構文件底部都有「🎙️ 音檔導覽」section 連結到音檔。
 
 ---
 
