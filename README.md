@@ -54,6 +54,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-28 | [Software Ecology：軟體生態學視角透視 AI 開發者生態系統](技術講座/20260528_Adam_Bender_Software_Ecology_軟體生態學.md) | Adam Bender (Google) | 25 分鐘 |
 | 2026-02-05 | [黃仁勳：你不會輸給 AI，但你會輸給會用 AI 的人](技術講座/20260205_JensenHuang_不輸給AI_輸給會用AI的人.md) | Jensen Huang (NVIDIA) × Chuck Robbins (Cisco) | 44 分鐘 |
 | 2026-05-26 | [AI Agent 開發實踐：Spec-Driven、Guard Rails 與軟體品質](技術講座/20260526_開發者對談_AI代理Spec-Driven與GuardRails.md) | 開發者對談 | 39 分鐘 |
+| 2026-06-08 | [超越元件：為 MCP Apps 設計生成式 UI](技術講座/20260608_RubenCasas_超越元件生成式UI_MCPApps.md) | Ruben Casas (Postman) | 17 分鐘 |
 
 ### 逐字稿
 
@@ -89,7 +90,8 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-26 | AI Agent 開發實踐：Spec-Driven、Guard Rails 與軟體品質 | [txt](transcripts/20260526_開發者對談_逐字稿.txt) |
 | 2026-06-02 | Mo Gawdat 談 AI 倫理與人類未來 | [txt](transcripts/20260602_Mo_Gawdat_逐字稿.txt) |
 | 2026-02-05 | 黃仁勳最新訪談逐字稿 | [txt](transcripts/20260205_JensenHuang_逐字稿.txt) |
+| 2026-06-08 | Ruben Casas (Postman) Beyond Components MCP Apps 演講逐字稿 | [txt](transcripts/20260608_RubenCasas_BeyondComponents_MCPApps_逐字稿.txt) |
 
 ---
 
-*最後更新：2026-06-04 | 由 [Ryo](https://github.com/travisebill) 自動維護*
+*最後更新：2026-06-08 | 由 [Ryo](https://github.com/travisebill) 自動維護*

@@ -1,0 +1,840 @@
+[music]
+&gt;&gt; Hello<00:00:16.320> everybody.<00:00:16.720> So,<00:00:17.040> I<00:00:17.120> know<00:00:17.320> I<00:00:17.400> am<00:00:17.560> the
+&gt;&gt; Hello everybody. So, I know I am the
+person<00:00:18.120> standing<00:00:18.520> between<00:00:18.840> you<00:00:19.000> and<00:00:19.120> your
+person standing between you and your
+lunch.<00:00:20.080> And<00:00:20.800> but<00:00:21.200> this<00:00:21.440> is<00:00:21.560> going<00:00:21.720> to<00:00:21.800> be<00:00:22.120> a
+lunch. And but this is going to be a
+very<00:00:22.480> interesting<00:00:22.840> talk<00:00:23.080> that<00:00:23.280> combines<00:00:23.720> the
+very interesting talk that combines the
+the<00:00:24.280> previous<00:00:24.680> two<00:00:24.840> talks<00:00:25.600> into<00:00:26.200> the<00:00:26.360> future.
+the previous two talks into the future.
+And<00:00:27.400> that's<00:00:27.560> what<00:00:27.640> I<00:00:27.680> want<00:00:27.840> to<00:00:27.920> talk<00:00:28.080> about
+And that's what I want to talk about
+today.
+So,<00:00:29.600> back<00:00:30.000> in<00:00:30.360> November<00:00:30.800> 2022,<00:00:31.720> what<00:00:31.840> we<00:00:31.920> used
+So, back in November 2022, what we used
+to<00:00:32.240> do<00:00:32.599> was<00:00:32.880> we<00:00:32.960> used<00:00:33.200> to<00:00:33.440> go<00:00:33.560> to<00:00:33.680> ChatGPT<00:00:34.480> and
+to do was we used to go to ChatGPT and
+ask<00:00:35.000> ChatGPT<00:00:35.600> to
+ask ChatGPT to
+create<00:00:37.040> a<00:00:37.080> component.<00:00:38.240> And<00:00:38.440> we<00:00:38.560> would<00:00:38.720> just
+create a component. And we would just
+copy
+paste.<00:00:41.160> You<00:00:41.240> have<00:00:41.360> to<00:00:41.480> ask<00:00:41.800> reply<00:00:42.120> in<00:00:42.200> code
+paste. You have to ask reply in code
+blocks.<00:00:43.200> Then,<00:00:43.880> you<00:00:43.960> know,<00:00:44.120> again,<00:00:44.760> fix<00:00:45.040> it,
+blocks. Then, you know, again, fix it,
+repeat.<00:00:46.280> And<00:00:46.480> this<00:00:46.600> is<00:00:46.680> what<00:00:46.840> I<00:00:46.920> call<00:00:47.600> the<00:00:48.120> poor
+repeat. And this is what I call the poor
+man's<00:00:49.240> by<00:00:49.480> coding.
+man's by coding.
+And<00:00:50.880> we<00:00:51.000> have<00:00:51.160> come<00:00:51.480> a<00:00:51.560> long<00:00:52.040> way.
+And we have come a long way.
+It<00:00:54.080> kind<00:00:54.400> of<00:00:54.520> worked.<00:00:55.560> It<00:00:56.120> was<00:00:56.440> very<00:00:56.720> exciting.
+It kind of worked. It was very exciting.
+You<00:00:57.360> could<00:00:57.560> get<00:00:58.440> models<00:00:58.840> to<00:00:59.080> could<00:00:59.360> actually
+You could get models to could actually
+build<00:01:00.280> some<00:01:00.520> UI<00:01:00.800> for<00:01:01.000> you.
+build some UI for you.
+And<00:01:03.080> I'm<00:01:03.200> sure<00:01:03.360> that<00:01:03.680> was<00:01:03.880> not<00:01:04.040> going<00:01:04.160> to
+And I'm sure that was not going to
+write<00:01:05.280> better<00:01:05.480> code<00:01:05.680> than<00:01:05.760> me,<00:01:05.880> right?
+write better code than me, right?
+And<00:01:07.240> then<00:01:07.360> things<00:01:07.600> improved<00:01:08.040> very<00:01:08.320> very
+And then things improved very very
+rapidly,<00:01:10.240> very<00:01:10.480> very<00:01:10.720> fast.
+rapidly, very very fast.
+What<00:01:12.680> happened<00:01:13.160> last<00:01:13.520> year,<00:01:13.880> and<00:01:13.960> if<00:01:14.120> you<00:01:14.560> are
+What happened last year, and if you are
+aware<00:01:14.840> of<00:01:14.920> what<00:01:15.040> happened<00:01:15.320> in<00:01:15.440> the<00:01:15.920> the<00:01:16.120> the
+aware of what happened in the the the
+last<00:01:16.560> months<00:01:16.800> of<00:01:16.960> 2025<00:01:18.360> was<00:01:18.560> this
+last months of 2025 was this
+acceleration,<00:01:20.320> an<00:01:20.480> incredible<00:01:21.160> inflection
+acceleration, an incredible inflection
+point<00:01:22.840> where<00:01:23.280> things<00:01:23.680> changed.<00:01:24.800> And<00:01:24.920> it<00:01:25.000> will
+point where things changed. And it will
+go<00:01:25.200> down<00:01:25.480> in<00:01:25.560> the<00:01:25.680> history<00:01:25.960> books<00:01:26.280> as
+go down in the history books as
+things<00:01:27.760> changed<00:01:28.120> very<00:01:28.400> fast<00:01:28.840> all<00:01:29.040> at<00:01:29.160> once.
+things changed very fast all at once.
+And<00:01:30.120> this<00:01:30.240> is<00:01:30.360> in<00:01:30.520> part<00:01:30.920> because<00:01:31.600> of<00:01:32.000> the
+And this is in part because of the
+release<00:01:32.600> of<00:01:33.200> two<00:01:33.480> very<00:01:33.920> important<00:01:34.440> models,
+release of two very important models,
+which<00:01:35.360> were
+which were
+5.2<00:01:36.840> ChatGPT,<00:01:37.400> sorry.<00:01:37.920> It<00:01:38.040> was<00:01:38.360> yeah,<00:01:39.080> a<00:01:39.160> GPT
+5.2 ChatGPT, sorry. It was yeah, a GPT
+5.2<00:01:40.120> and<00:01:40.280> Opus<00:01:40.560> 4.5.
+5.2 and Opus 4.5.
+And<00:01:42.480> they<00:01:42.600> were<00:01:42.680> not<00:01:42.880> just<00:01:43.080> very<00:01:43.360> good<00:01:43.760> at<00:01:44.600> uh
+And they were not just very good at uh
+most<00:01:45.880> of<00:01:45.960> the<00:01:46.080> task,<00:01:47.240> long<00:01:47.560> horizon<00:01:48.040> tasks.
+most of the task, long horizon tasks.
+They<00:01:49.040> were<00:01:49.160> also<00:01:49.480> very<00:01:49.720> good<00:01:50.120> at<00:01:50.440> high
+They were also very good at high
+fidelity<00:01:51.520> UI<00:01:51.880> generation.
+fidelity UI generation.
+And<00:01:54.400> they<00:01:54.520> were<00:01:54.840> producing<00:01:55.480> very<00:01:55.760> good
+And they were producing very good
+working<00:01:56.480> UI.
+working UI.
+Sometimes<00:01:58.400> thoughtful,<00:01:59.160> sometimes<00:02:00.040> really
+Sometimes thoughtful, sometimes really
+really<00:02:00.560> good.<00:02:01.440> And<00:02:02.240> also<00:02:02.680> very<00:02:03.000> fast.
+really good. And also very fast.
+Now,<00:02:06.080> I<00:02:06.200> experienced<00:02:06.640> this<00:02:06.920> when<00:02:07.680> I<00:02:07.760> tried<00:02:08.080> one
+Now, I experienced this when I tried one
+of<00:02:08.280> these<00:02:08.479> models,<00:02:09.240> tried<00:02:09.440> to<00:02:09.560> rewrite<00:02:09.920> my<00:02:10.119> my
+of these models, tried to rewrite my my
+blog.<00:02:10.640> I<00:02:10.720> know<00:02:10.880> people<00:02:11.200> have<00:02:11.560> used<00:02:11.840> this<00:02:12.080> in<00:02:12.240> a
+blog. I know people have used this in a
+more<00:02:12.640> creative<00:02:13.080> ways,<00:02:13.320> but<00:02:13.440> I<00:02:13.480> just<00:02:13.640> tried,
+more creative ways, but I just tried,
+you<00:02:14.040> know,<00:02:14.160> a<00:02:14.240> single<00:02:14.640> prompt,<00:02:15.320> rewrite<00:02:15.640> my
+you know, a single prompt, rewrite my
+blog.<00:02:16.720> And<00:02:16.840> then<00:02:17.080> it<00:02:17.200> did<00:02:17.520> this,<00:02:18.000> which<00:02:18.200> I
+blog. And then it did this, which I
+didn't<00:02:18.560> ask<00:02:18.800> for.
+didn't ask for.
+It<00:02:19.720> created<00:02:20.240> a<00:02:20.320> nice<00:02:20.840> nice<00:02:21.480> search<00:02:21.840> box
+It created a nice nice search box
+with<00:02:23.400> a<00:02:23.520> blur<00:02:24.040> animation,<00:02:24.960> with
+with a blur animation, with
+accessibility<00:02:26.120> out<00:02:26.280> of<00:02:26.360> the<00:02:26.440> box.
+accessibility out of the box.
+And<00:02:27.800> then<00:02:28.200> that's<00:02:28.440> when<00:02:28.600> I<00:02:28.680> realized<00:02:29.480> that<00:02:30.120> in
+And then that's when I realized that in
+the<00:02:30.360> space<00:02:30.920> of<00:02:31.240> of<00:02:31.360> 3<00:02:31.600> years<00:02:32.400> from<00:02:32.600> when
+the space of of 3 years from when
+ChatGPT<00:02:33.240> was<00:02:33.400> released<00:02:33.800> to<00:02:34.040> today,
+ChatGPT was released to today,
+we<00:02:35.440> went<00:02:35.680> from
+we went from
+you<00:02:37.400> know,<00:02:37.680> few<00:02:37.920> lines<00:02:38.160> of<00:02:38.320> code<00:02:39.040> is<00:02:39.200> great.
+you know, few lines of code is great.
+It<00:02:40.680> can<00:02:41.360> it<00:02:41.560> runs.<00:02:42.600> Oh.
+It can it runs. Oh.
+And<00:02:44.120> now<00:02:44.240> it<00:02:44.320> can<00:02:44.520> write
+And now it can write
+better<00:02:46.280> front-end<00:02:46.800> code<00:02:47.040> than<00:02:47.240> me.
+better front-end code than me.
+And<00:02:49.280> you<00:02:49.360> know,<00:02:49.800> I<00:02:50.320> I<00:02:50.400> don't<00:02:50.560> mind.<00:02:51.280> No<00:02:51.600> no<00:02:51.840> ego.
+And you know, I I don't mind. No no ego.
+Uh
+It's<00:02:54.160> just<00:02:54.360> reality.<00:02:55.480> So,<00:02:55.960> here's<00:02:56.160> the
+It's just reality. So, here's the
+question.<00:02:56.760> If<00:02:57.200> these<00:02:57.440> models<00:02:57.880> are<00:02:58.080> so<00:02:58.440> good<00:02:58.720> at
+question. If these models are so good at
+writing<00:02:59.480> UI<00:03:00.000> code,
+writing UI code,
+why<00:03:01.760> are<00:03:01.880> we<00:03:02.000> still<00:03:02.320> stuck<00:03:02.600> in<00:03:02.720> this<00:03:03.360> mainly
+why are we still stuck in this mainly
+old
+paradigm<00:03:05.680> of<00:03:06.040> mostly<00:03:06.480> static<00:03:07.040> UI?
+paradigm of mostly static UI?
+And<00:03:09.360> where<00:03:09.800> is<00:03:09.960> where<00:03:10.080> is<00:03:10.160> that<00:03:10.360> Jarvis<00:03:10.760> moment
+And where is where is that Jarvis moment
+that<00:03:11.160> we've<00:03:11.280> been<00:03:11.440> talking<00:03:11.720> about<00:03:12.520> earlier?
+that we've been talking about earlier?
+Where<00:03:13.680> are<00:03:13.760> my<00:03:13.920> floating<00:03:14.480> UI<00:03:14.800> windows<00:03:15.240> that
+Where are my floating UI windows that
+appear<00:03:15.880> and<00:03:15.960> disappear?<00:03:17.000> And<00:03:17.160> why<00:03:17.360> we<00:03:17.520> not
+appear and disappear? And why we not
+there<00:03:17.880> yet?
+there yet?
+So,<00:03:19.280> my<00:03:19.360> name<00:03:19.480> is<00:03:19.600> Ruben<00:03:19.840> Casas.<00:03:20.440> I<00:03:20.640> am<00:03:20.880> a<00:03:21.160> staff
+So, my name is Ruben Casas. I am a staff
+engineer<00:03:21.720> at<00:03:21.840> Postman.<00:03:22.760> And<00:03:22.960> I've<00:03:23.080> been
+engineer at Postman. And I've been
+looking<00:03:23.480> at<00:03:24.000> UI<00:03:24.440> and<00:03:24.600> generative<00:03:25.000> UI<00:03:25.200> for<00:03:25.320> the
+looking at UI and generative UI for the
+past<00:03:25.760> year,<00:03:26.160> and<00:03:26.320> I've<00:03:26.360> been<00:03:26.480> working<00:03:26.760> with
+past year, and I've been working with
+MCP<00:03:27.360> apps<00:03:27.560> as<00:03:27.680> well.
+MCP apps as well.
+And<00:03:28.760> today<00:03:29.160> I<00:03:29.280> want<00:03:29.480> to<00:03:29.560> show<00:03:29.720> you<00:03:29.840> what<00:03:30.000> we're
+And today I want to show you what we're
+doing<00:03:30.360> today<00:03:30.680> and<00:03:30.840> where<00:03:30.960> we're<00:03:31.040> going<00:03:31.280> in<00:03:31.360> the
+doing today and where we're going in the
+future.
+So,<00:03:33.320> the<00:03:33.400> news<00:03:33.680> are<00:03:34.400> we<00:03:34.560> have<00:03:35.000> a<00:03:35.160> new<00:03:35.480> computer.
+So, the news are we have a new computer.
+And<00:03:37.160> as<00:03:37.600> Andrej<00:03:37.880> Karpathy<00:03:38.320> put<00:03:38.520> it,
+And as Andrej Karpathy put it,
+interacting<00:03:39.720> with<00:03:39.840> this<00:03:40.000> new<00:03:40.160> computer<00:03:40.720> is
+interacting with this new computer is
+like<00:03:41.520> talking<00:03:41.960> to<00:03:42.240> the<00:03:42.360> terminal.<00:03:43.120> You<00:03:43.320> have
+like talking to the terminal. You have
+direct<00:03:44.280> access<00:03:44.640> to<00:03:44.800> this<00:03:45.080> operating<00:03:45.520> system.
+direct access to this operating system.
+And<00:03:47.120> the<00:03:47.240> GUI<00:03:47.560> has<00:03:47.760> not<00:03:47.960> been<00:03:48.120> invented<00:03:48.520> yet.
+And the GUI has not been invented yet.
+It's<00:03:48.800> like<00:03:49.000> we<00:03:49.120> are<00:03:49.200> in<00:03:49.320> the<00:03:49.400> '70s,<00:03:50.120> where
+It's like we are in the '70s, where
+everything<00:03:50.720> was<00:03:50.920> just<00:03:51.160> text.
+everything was just text.
+And<00:03:52.400> we<00:03:52.520> have<00:03:52.640> a<00:03:52.720> super<00:03:53.080> intelligence,<00:03:53.920> but<00:03:54.080> we
+And we have a super intelligence, but we
+don't<00:03:54.400> have<00:03:54.520> a<00:03:54.600> mature<00:03:55.040> interface<00:03:55.520> language.
+don't have a mature interface language.
+And<00:03:57.280> today<00:03:58.040> we<00:03:58.200> are<00:03:58.320> still<00:03:58.840> trying<00:03:59.160> to<00:03:59.280> figure
+And today we are still trying to figure
+out<00:04:00.480> what<00:04:00.960> is<00:04:01.720> this<00:04:01.960> new<00:04:02.200> interface<00:04:03.360> for<00:04:03.720> for
+out what is this new interface for for
+this<00:04:04.040> computer.
+this computer.
+And<00:04:05.400> people<00:04:05.640> ask,<00:04:05.880> is<00:04:06.000> it<00:04:06.160> chat?
+And people ask, is it chat?
+I'll<00:04:07.560> show<00:04:07.680> you<00:04:07.760> what<00:04:07.920> we're<00:04:08.040> what<00:04:08.200> we're
+I'll show you what we're what we're
+doing<00:04:08.520> today.<00:04:08.760> And<00:04:08.880> actually<00:04:09.160> this<00:04:09.360> was<00:04:09.720> a
+doing today. And actually this was a
+very<00:04:10.000> recent<00:04:10.800> tweet<00:04:11.120> last<00:04:11.360> week,<00:04:11.960> where
+very recent tweet last week, where
+people<00:04:12.640> were<00:04:12.720> complaining<00:04:13.280> that<00:04:13.520> most<00:04:13.920> SaaS
+people were complaining that most SaaS
+companies<00:04:15.120> have<00:04:15.280> been<00:04:15.440> adding
+companies have been adding
+chat<00:04:17.320> to<00:04:17.440> their<00:04:17.799> their<00:04:17.959> homepages,<00:04:18.880> and
+chat to their their homepages, and
+everybody's<00:04:19.480> just<00:04:19.680> putting<00:04:19.920> chat
+everybody's just putting chat
+everywhere.
+And<00:04:21.680> and<00:04:21.799> that's<00:04:22.320> that's<00:04:22.520> fine.<00:04:22.720> I<00:04:22.760> don't<00:04:23.000> have
+And and that's that's fine. I don't have
+a<00:04:23.200> problem<00:04:23.520> with<00:04:23.640> chat.<00:04:24.520> It's<00:04:25.520> not<00:04:25.760> the<00:04:25.880> final
+a problem with chat. It's not the final
+UI.<00:04:27.080> It's<00:04:27.320> okay<00:04:27.680> for<00:04:27.840> now.
+UI. It's okay for now.
+But<00:04:29.680> the<00:04:29.760> question<00:04:30.040> is,<00:04:30.280> if<00:04:30.480> it's<00:04:30.640> not<00:04:30.840> chat,
+But the question is, if it's not chat,
+then<00:04:31.880> then<00:04:32.080> what<00:04:32.280> is<00:04:32.400> the<00:04:32.520> interface
+then then what is the interface
+for<00:04:33.920> this<00:04:34.160> computer?
+for this computer?
+On<00:04:35.680> the<00:04:35.800> other<00:04:36.000> hand,<00:04:36.320> as<00:04:36.480> we<00:04:36.600> have<00:04:36.760> seen<00:04:37.320> with
+On the other hand, as we have seen with
+MCP<00:04:39.680> apps,
+MCP apps,
+is<00:04:40.880> there<00:04:40.998> [clears throat]<00:04:41.000> is<00:04:41.080> another
+is there [clears throat] is another
+thought,<00:04:42.840> which<00:04:43.080> is<00:04:43.640> we<00:04:43.800> will<00:04:43.960> have<00:04:44.280> one<00:04:44.560> app
+thought, which is we will have one app
+or<00:04:45.200> super<00:04:45.680> app<00:04:46.120> to<00:04:46.240> rule<00:04:46.440> them<00:04:46.640> all.<00:04:47.000> And<00:04:47.120> this
+or super app to rule them all. And this
+is<00:04:47.360> where<00:04:47.840> MCP<00:04:48.320> apps<00:04:49.080> comes<00:04:49.360> in,<00:04:49.680> where
+is where MCP apps comes in, where
+instead<00:04:50.400> of<00:04:50.800> putting<00:04:51.080> all<00:04:51.280> of<00:04:51.360> these<00:04:51.600> chat
+instead of putting all of these chat
+windows<00:04:52.360> into<00:04:52.760> your<00:04:53.000> homepages<00:04:53.640> and<00:04:53.960> and<00:04:54.120> to
+windows into your homepages and and to
+every<00:04:55.000> single<00:04:55.320> app<00:04:55.480> that<00:04:55.640> you<00:04:55.720> use,<00:04:56.440> we<00:04:56.560> will
+every single app that you use, we will
+have<00:04:56.960> a<00:04:57.080> super<00:04:57.440> app<00:04:57.640> like<00:04:57.880> ChatGPT<00:04:58.520> or<00:04:58.640> Claude
+have a super app like ChatGPT or Claude
+or<00:04:58.960> Gemini,<00:04:59.560> where<00:04:59.800> you<00:04:59.920> will<00:05:00.040> be<00:05:00.160> interfacing
+or Gemini, where you will be interfacing
+with<00:05:01.160> most<00:05:01.560> of<00:05:01.720> the<00:05:02.120> the<00:05:02.240> UI<00:05:02.720> and<00:05:02.880> the<00:05:02.960> websites
+with most of the the UI and the websites
+that<00:05:03.560> we<00:05:03.680> have<00:05:03.880> today.
+that we have today.
+And<00:05:05.640> this<00:05:05.760> is<00:05:05.880> good.<00:05:06.400> This<00:05:06.560> is<00:05:06.640> the<00:05:06.760> way<00:05:06.960> we
+And this is good. This is the way we
+using<00:05:08.000> MCP<00:05:08.440> apps<00:05:08.600> today<00:05:08.880> to<00:05:09.160> to<00:05:09.320> render
+using MCP apps today to to render
+third-party<00:05:10.200> UI<00:05:10.640> inside<00:05:11.240> one<00:05:11.560> agent
+third-party UI inside one agent
+environment.
+Now,<00:05:13.920> these<00:05:14.480> two<00:05:14.960> options<00:05:15.880> both<00:05:16.120> could<00:05:16.240> be
+Now, these two options both could be
+valid.<00:05:17.400> And<00:05:17.760> and<00:05:17.840> I<00:05:17.920> believe<00:05:18.320> these<00:05:18.520> are<00:05:18.720> part
+valid. And and I believe these are part
+of<00:05:19.480> the<00:05:19.680> evolution<00:05:20.880> towards<00:05:21.360> finding<00:05:21.880> out
+of the evolution towards finding out
+what<00:05:22.360> is<00:05:22.560> that<00:05:22.840> new<00:05:23.080> interface<00:05:24.320> for<00:05:24.880> that
+what is that new interface for that
+computer.<00:05:26.040> And<00:05:26.160> to<00:05:26.240> be<00:05:26.320> honest,<00:05:26.600> I<00:05:26.640> don't<00:05:26.800> know
+computer. And to be honest, I don't know
+which<00:05:27.160> one<00:05:27.400> is<00:05:27.560> going<00:05:27.680> to<00:05:28.080> be<00:05:28.560> the<00:05:28.720> the<00:05:28.840> final
+which one is going to be the the final
+one.<00:05:29.960> Consumers<00:05:30.400> will<00:05:30.560> tell<00:05:30.800> us.
+one. Consumers will tell us.
+But<00:05:32.200> one<00:05:32.360> thing<00:05:32.560> is<00:05:32.760> that<00:05:32.880> these<00:05:33.040> are<00:05:33.160> two
+But one thing is that these are two
+different<00:05:33.680> questions.
+different questions.
+The<00:05:35.280> question<00:05:35.720> is<00:05:36.360> where<00:05:36.560> does<00:05:36.800> the
+The question is where does the
+UI<00:05:38.440> runs?<00:05:39.040> In<00:05:39.160> this<00:05:39.360> case,<00:05:39.600> is<00:05:39.720> it<00:05:39.840> third-party
+UI runs? In this case, is it third-party
+UI,<00:05:40.640> a<00:05:40.680> super<00:05:41.040> app,<00:05:41.280> or<00:05:41.520> in<00:05:41.720> this<00:05:41.880> case,<00:05:42.240> chat
+UI, a super app, or in this case, chat
+everywhere?
+But<00:05:44.320> most<00:05:44.560> interesting<00:05:45.040> is<00:05:45.320> what<00:05:45.560> is<00:05:45.720> the
+But most interesting is what is the
+model<00:05:46.320> generating.<00:05:46.920> And<00:05:47.040> this<00:05:47.160> is<00:05:47.240> what<00:05:47.360> I
+model generating. And this is what I
+want<00:05:47.640> to<00:05:47.720> talk<00:05:47.920> about<00:05:48.160> today<00:05:48.480> in<00:05:48.600> terms<00:05:48.840> of<00:05:49.360> how
+want to talk about today in terms of how
+are<00:05:49.680> we<00:05:49.800> generating<00:05:50.880> this<00:05:51.120> UI?<00:05:51.520> And<00:05:51.600> we<00:05:51.680> have
+are we generating this UI? And we have
+seen<00:05:52.040> this.<00:05:52.280> We<00:05:52.400> have<00:05:52.920> mostly<00:05:53.440> static,
+seen this. We have mostly static,
+declarative,<00:05:54.640> and<00:05:55.240> generative<00:05:56.080> UI.
+declarative, and generative UI.
+And<00:05:57.920> I'm<00:05:58.000> going<00:05:58.120> to<00:05:58.200> describe<00:05:59.200> briefly<00:05:59.960> this
+And I'm going to describe briefly this
+one.<00:06:00.400> So,<00:06:00.560> we<00:06:00.720> have<00:06:01.120> um
+one. So, we have um
+to<00:06:02.360> start<00:06:02.640> with<00:06:02.880> the<00:06:03.080> the<00:06:03.200> static<00:06:03.640> components
+to start with the the static components
+way<00:06:04.760> of<00:06:05.040> running<00:06:05.400> running<00:06:05.720> UI,<00:06:06.040> which<00:06:06.280> is<00:06:06.720> what
+way of running running UI, which is what
+most<00:06:07.400> agents<00:06:08.240> do<00:06:08.440> today.
+most agents do today.
+The<00:06:09.880> agent<00:06:10.200> is<00:06:10.320> just<00:06:10.520> an<00:06:10.640> orchestrator.<00:06:11.640> The
+The agent is just an orchestrator. The
+agent<00:06:12.400> makes<00:06:12.640> a<00:06:12.720> tool<00:06:12.960> call<00:06:13.680> via<00:06:13.960> MCP<00:06:14.360> apps<00:06:14.560> or
+agent makes a tool call via MCP apps or
+direct<00:06:16.120> agent<00:06:16.480> tool<00:06:16.680> call.<00:06:17.400> Then<00:06:17.760> we<00:06:17.880> will
+direct agent tool call. Then we will
+have<00:06:18.360> some<00:06:18.640> parameters
+have some parameters
+and<00:06:20.360> data<00:06:20.760> passed<00:06:21.160> to<00:06:21.760> predefined<00:06:22.640> static
+and data passed to predefined static
+components<00:06:24.600> that
+components that
+have<00:06:25.880> been<00:06:26.040> created<00:06:26.480> by<00:06:26.600> developers.<00:06:27.160> And
+have been created by developers. And
+this<00:06:27.440> is<00:06:27.560> very<00:06:27.760> similar<00:06:28.080> to<00:06:28.200> what<00:06:28.480> what<00:06:28.640> we
+this is very similar to what what we
+have<00:06:28.880> been<00:06:29.040> doing
+have been doing
+for<00:06:30.200> the<00:06:30.320> past<00:06:30.560> 20<00:06:30.840> years<00:06:31.240> with<00:06:31.480> with<00:06:31.640> UI.<00:06:32.600> And
+for the past 20 years with with UI. And
+then<00:06:33.200> the<00:06:33.320> client<00:06:33.720> renders<00:06:34.000> the<00:06:34.080> component.
+then the client renders the component.
+And<00:06:34.640> if<00:06:34.760> you<00:06:34.840> see<00:06:35.080> here,<00:06:35.440> it's<00:06:35.560> very<00:06:35.760> similar
+And if you see here, it's very similar
+to<00:06:36.400> just<00:06:36.640> getting<00:06:36.920> a<00:06:36.960> server<00:06:37.760> to<00:06:37.880> send<00:06:38.160> some
+to just getting a server to send some
+data,<00:06:38.840> and<00:06:39.000> then<00:06:39.360> the<00:06:39.520> UI<00:06:39.720> will<00:06:39.840> be<00:06:39.960> rendered
+data, and then the UI will be rendered
+by<00:06:40.320> the<00:06:40.440> client.<00:06:41.320> But<00:06:41.440> in<00:06:41.520> this<00:06:41.680> case,<00:06:41.920> the
+by the client. But in this case, the
+agent<00:06:42.440> will<00:06:42.560> be<00:06:43.320> generating<00:06:43.920> that<00:06:44.160> data<00:06:44.600> and
+agent will be generating that data and
+the<00:06:44.840> props<00:06:45.720> to<00:06:46.360> to<00:06:46.480> do<00:06:46.640> this.<00:06:47.000> And<00:06:47.200> some
+the props to to do this. And some
+examples<00:06:48.320> that<00:06:48.440> we<00:06:48.560> have<00:06:48.680> today<00:06:49.080> are<00:06:49.600> the<00:06:49.720> AGUI
+examples that we have today are the AGUI
+protocol.<00:06:51.440> They<00:06:51.520> have<00:06:51.680> an<00:06:51.760> SDK<00:06:52.240> when<00:06:52.440> you<00:06:52.520> can
+protocol. They have an SDK when you can
+register<00:06:53.400> a<00:06:54.160> client<00:06:54.560> tool<00:06:55.200> that<00:06:56.040> maps<00:06:56.440> to<00:06:56.600> a
+register a client tool that maps to a
+React<00:06:57.080> component.<00:06:58.240> The<00:06:58.640> tool<00:06:58.880> call<00:06:59.040> will
+React component. The tool call will
+receive<00:06:59.440> some<00:06:59.640> props.<00:07:00.480> Those<00:07:00.720> props<00:07:00.960> will<00:07:01.120> be
+receive some props. Those props will be
+mapped<00:07:02.080> to<00:07:02.360> a<00:07:02.560> static<00:07:02.960> component<00:07:03.600> that<00:07:03.800> then
+mapped to a static component that then
+will<00:07:04.240> be<00:07:04.360> rendered<00:07:04.960> to<00:07:05.160> to<00:07:05.280> the<00:07:05.400> user.
+will be rendered to to the user.
+Another<00:07:07.040> example<00:07:07.640> is<00:07:08.520> Goose.
+Another example is Goose.
+Goose<00:07:09.760> is<00:07:09.920> a
+Goose is a
+an<00:07:10.680> MCP<00:07:11.040> client<00:07:11.400> where<00:07:11.480> you<00:07:11.560> can<00:07:12.120> try<00:07:12.280> most<00:07:12.520> of
+an MCP client where you can try most of
+the<00:07:12.680> MCP<00:07:13.040> features.<00:07:13.720> And<00:07:13.840> Goose<00:07:14.080> has<00:07:14.280> this
+the MCP features. And Goose has this
+really<00:07:14.680> interesting<00:07:15.120> feature<00:07:15.400> called<00:07:15.720> Goose
+really interesting feature called Goose
+Auto<00:07:16.240> Visualizer,<00:07:17.360> where<00:07:17.920> you<00:07:18.080> can<00:07:18.240> just<00:07:18.440> pass
+Auto Visualizer, where you can just pass
+any<00:07:19.280> type<00:07:19.560> of<00:07:19.680> data<00:07:20.400> to<00:07:20.560> Goose,<00:07:21.480> and<00:07:21.680> Goose
+any type of data to Goose, and Goose
+will<00:07:22.160> try<00:07:22.400> to<00:07:22.640> match<00:07:23.000> that<00:07:23.160> data,<00:07:23.520> organize
+will try to match that data, organize
+it,<00:07:24.600> and<00:07:24.720> then<00:07:24.920> pass<00:07:25.200> it<00:07:25.440> to<00:07:25.760> a<00:07:25.880> set<00:07:26.120> of
+it, and then pass it to a set of
+predefined<00:07:26.800> components<00:07:27.640> that<00:07:27.960> the<00:07:28.160> Goose
+predefined components that the Goose
+team<00:07:28.560> have<00:07:28.760> created.<00:07:29.200> In<00:07:29.280> this<00:07:29.440> case,<00:07:29.640> we<00:07:29.720> have
+team have created. In this case, we have
+a<00:07:30.320> few<00:07:31.000> interesting<00:07:31.400> components<00:07:31.760> that<00:07:31.880> you
+a few interesting components that you
+can
+use<00:07:33.200> to<00:07:33.320> visualize<00:07:33.800> your<00:07:33.920> data.
+use to visualize your data.
+So,<00:07:35.760> that's<00:07:36.120> the<00:07:36.280> static<00:07:36.800> way.<00:07:37.320> That's<00:07:37.560> the
+So, that's the static way. That's the
+most<00:07:38.640> common<00:07:38.880> way<00:07:39.080> of<00:07:39.400> generating<00:07:39.920> UI<00:07:40.400> today.
+most common way of generating UI today.
+But<00:07:41.520> I<00:07:41.560> have<00:07:41.720> seen<00:07:41.960> an<00:07:42.080> evolution<00:07:42.600> recently
+But I have seen an evolution recently
+where<00:07:44.080> we<00:07:44.240> call<00:07:44.440> now<00:07:44.840> declarative<00:07:45.680> UI.
+where we call now declarative UI.
+And<00:07:47.240> declarative<00:07:47.800> UI<00:07:48.800> takes<00:07:49.000> it<00:07:49.080> to<00:07:49.920> the<00:07:50.040> next
+And declarative UI takes it to the next
+level.<00:07:50.960> So,<00:07:51.120> we<00:07:51.280> will<00:07:51.440> still<00:07:51.720> have<00:07:51.960> some
+level. So, we will still have some
+predefined<00:07:52.880> static<00:07:53.280> components<00:07:54.240> that
+predefined static components that
+developers<00:07:55.040> build,<00:07:55.560> and<00:07:56.280> it<00:07:56.320> contains<00:07:56.760> your
+developers build, and it contains your
+design<00:07:57.200> system<00:07:57.640> and<00:07:57.760> all<00:07:57.880> these
+design system and all these
+components<00:07:59.200> that<00:07:59.320> you<00:07:59.440> have.
+components that you have.
+But<00:08:00.520> instead<00:08:00.880> of<00:08:00.960> the<00:08:01.080> agent<00:08:01.440> just<00:08:01.640> passing
+But instead of the agent just passing
+the<00:08:02.320> props<00:08:02.760> and<00:08:02.920> the<00:08:03.000> data,<00:08:03.400> the<00:08:03.520> agent<00:08:03.840> uses
+the props and the data, the agent uses
+a<00:08:05.640> descriptor<00:08:06.560> that<00:08:06.760> could<00:08:06.920> be<00:08:07.120> either<00:08:07.360> JSON
+a descriptor that could be either JSON
+or<00:08:08.120> YAML.<00:08:08.760> Or<00:08:09.200> I've<00:08:09.360> seen<00:08:09.680> Python<00:08:10.080> as<00:08:10.240> well
+or YAML. Or I've seen Python as well
+with<00:08:10.640> with<00:08:10.880> fast<00:08:11.360> MCPs,<00:08:11.800> where<00:08:12.040> they<00:08:12.160> have<00:08:12.400> a<00:08:12.800> a
+with with fast MCPs, where they have a a
+descriptor<00:08:13.360> in<00:08:13.880> Python<00:08:14.600> that<00:08:14.880> maps<00:08:15.160> to<00:08:15.280> these
+descriptor in Python that maps to these
+predefined<00:08:16.160> static<00:08:16.520> components.
+predefined static components.
+And<00:08:17.760> then<00:08:17.880> you<00:08:18.000> have<00:08:18.160> this<00:08:18.680> translation
+And then you have this translation
+rendering<00:08:20.640> engine<00:08:21.320> that<00:08:21.560> takes<00:08:21.880> those
+rendering engine that takes those
+descriptors<00:08:23.160> and<00:08:23.400> converts<00:08:23.760> them<00:08:23.960> into<00:08:24.280> the
+descriptors and converts them into the
+final<00:08:25.000> UI.
+final UI.
+How<00:08:26.280> is<00:08:26.400> this<00:08:26.560> different?<00:08:27.000> Well,<00:08:27.320> in<00:08:27.440> this
+How is this different? Well, in this
+case,
+it<00:08:29.440> is<00:08:29.680> more<00:08:30.440> dynamic.<00:08:31.560> They<00:08:31.760> are<00:08:31.880> still
+it is more dynamic. They are still
+static<00:08:32.479> components,<00:08:33.520> but<00:08:33.680> it's<00:08:33.840> more
+static components, but it's more
+personalized.
+And<00:08:35.800> you<00:08:36.240> if<00:08:36.400> you<00:08:36.479> look<00:08:36.680> at<00:08:36.760> this<00:08:36.919> and<00:08:37.039> you
+And you if you look at this and you
+think<00:08:37.360> that<00:08:37.520> this<00:08:37.680> might<00:08:37.840> look<00:08:38.039> familiar<00:08:38.400> as
+think that this might look familiar as
+well,<00:08:38.760> it's<00:08:38.880> because<00:08:39.280> it<00:08:39.440> is<00:08:39.800> not<00:08:40.200> new.
+well, it's because it is not new.
+Netflix<00:08:41.880> has<00:08:42.039> been<00:08:42.240> doing<00:08:42.520> this<00:08:42.760> for<00:08:43.039> a<00:08:43.120> long
+Netflix has been doing this for a long
+time<00:08:44.320> since<00:08:44.640> the<00:08:44.920> the<00:08:45.040> personalization<00:08:45.840> and
+time since the the personalization and
+server<00:08:46.320> during<00:08:46.600> UI<00:08:47.240> era,<00:08:47.600> where<00:08:48.520> when<00:08:48.640> you<00:08:48.720> go
+server during UI era, where when you go
+to<00:08:48.920> the<00:08:49.000> Netflix<00:08:49.480> homepage,<00:08:50.360> you<00:08:50.440> will<00:08:50.560> get<00:08:51.280> a
+to the Netflix homepage, you will get a
+UI<00:08:51.800> that<00:08:51.920> is<00:08:52.000> completely<00:08:52.440> personalized<00:08:53.600> to
+UI that is completely personalized to
+you.<00:08:54.160> But<00:08:54.320> that's<00:08:54.560> still<00:08:54.840> mapped<00:08:55.160> to<00:08:55.280> the
+you. But that's still mapped to the
+Netflix<00:08:56.520> components<00:08:57.240> and<00:08:57.600> UI<00:08:58.000> elements.
+Netflix components and UI elements.
+Another<00:09:00.040> very
+Another very
+good<00:09:02.040> um
+good um
+tool<00:09:02.960> that<00:09:03.080> I've<00:09:03.240> seen<00:09:03.520> recently<00:09:03.960> is<00:09:04.440> JSON
+tool that I've seen recently is JSON
+Render.<00:09:05.720> JSON<00:09:06.040> Render<00:09:06.320> is<00:09:06.680> being<00:09:06.800> built<00:09:07.040> by
+Render. JSON Render is being built by
+Vercel.<00:09:08.200> And<00:09:09.000> it<00:09:09.160> is<00:09:09.480> a<00:09:09.640> way<00:09:09.960> to<00:09:10.440> map<00:09:10.960> your
+Vercel. And it is a way to map your
+components<00:09:11.800> using<00:09:12.160> JSON<00:09:12.640> and<00:09:12.800> also<00:09:13.000> YAML.
+components using JSON and also YAML.
+They<00:09:13.440> released<00:09:13.760> the<00:09:13.800> YAML<00:09:14.080> support<00:09:14.480> recently.
+They released the YAML support recently.
+And<00:09:15.760> create<00:09:16.160> all<00:09:16.280> of<00:09:16.400> these<00:09:16.720> very<00:09:17.080> dynamic,
+And create all of these very dynamic,
+very<00:09:18.480> good<00:09:19.080> UI<00:09:19.600> interactions<00:09:20.880> that<00:09:21.560> you<00:09:21.680> can
+very good UI interactions that you can
+use<00:09:22.040> today.
+use today.
+But<00:09:23.200> now<00:09:23.920> JSON<00:09:24.280> Render<00:09:25.200> still,<00:09:26.080> they<00:09:26.240> say,<00:09:26.640> is
+But now JSON Render still, they say, is
+constrained<00:09:29.040> to<00:09:29.240> your<00:09:30.120> static<00:09:30.920> components.
+constrained to your static components.
+And<00:09:32.880> yes,<00:09:33.360> they're<00:09:33.520> still<00:09:33.880> static
+And yes, they're still static
+components.<00:09:35.160> The<00:09:36.000> LLM<00:09:36.520> is<00:09:36.680> not<00:09:36.840> generating
+components. The LLM is not generating
+these<00:09:37.760> components.<00:09:38.160> The<00:09:38.200> LLM<00:09:38.480> is<00:09:38.600> generating
+these components. The LLM is generating
+the<00:09:39.160> JSON.
+the JSON.
+However,<00:09:40.800> I<00:09:40.880> think<00:09:41.520> in<00:09:41.880> at<00:09:42.000> this<00:09:42.200> point<00:09:42.400> in
+However, I think in at this point in
+time,<00:09:43.520> declarative<00:09:44.360> generative<00:09:44.880> UI<00:09:45.360> is
+time, declarative generative UI is
+probably<00:09:45.840> the<00:09:46.000> perfect<00:09:46.440> balance<00:09:46.920> today<00:09:47.760> in
+probably the perfect balance today in
+terms<00:09:48.240> of<00:09:48.960> flexibility<00:09:50.120> and<00:09:50.320> consistency.
+terms of flexibility and consistency.
+Because<00:09:51.960> you<00:09:52.120> would<00:09:52.240> still<00:09:52.480> want<00:09:52.640> your<00:09:52.760> design
+Because you would still want your design
+system.<00:09:53.640> You<00:09:53.760> still<00:09:54.000> want<00:09:54.320> to<00:09:54.520> have<00:09:55.000> uh,
+system. You still want to have uh,
+predictability<00:09:55.960> of<00:09:56.120> what<00:09:56.320> the<00:09:56.440> UI<00:09:56.720> is<00:09:56.880> going
+predictability of what the UI is going
+to<00:09:57.040> be<00:09:57.160> generated,<00:09:58.080> also<00:09:58.480> faster<00:09:59.160> and<00:09:59.280> also
+to be generated, also faster and also
+potentially<00:10:00.160> cheaper<00:10:00.520> at<00:10:00.600> this<00:10:00.760> point.<00:10:01.320> Uh,
+potentially cheaper at this point. Uh,
+so<00:10:01.960> you<00:10:02.040> don't<00:10:02.400> create<00:10:02.840> and<00:10:03.440> use<00:10:03.640> a<00:10:03.680> lot<00:10:03.800> of
+so you don't create and use a lot of
+tokens<00:10:04.360> to<00:10:04.480> create<00:10:04.760> the<00:10:04.840> UI.
+tokens to create the UI.
+But<00:10:06.240> as<00:10:06.360> I<00:10:06.400> mentioned<00:10:06.680> at<00:10:06.760> the<00:10:06.800> beginning,<00:10:07.240> why
+But as I mentioned at the beginning, why
+why<00:10:08.040> are<00:10:08.120> we<00:10:08.200> still<00:10:08.440> stuck<00:10:08.680> here?
+why are we still stuck here?
+And<00:10:09.800> what's<00:10:09.960> the<00:10:10.040> next<00:10:10.320> level?<00:10:10.880> I<00:10:10.920> think<00:10:11.120> the
+And what's the next level? I think the
+next<00:10:11.440> level<00:10:11.760> will<00:10:11.880> be<00:10:12.760> uh,<00:10:12.840> generative
+next level will be uh, generative
+components.
+And<00:10:14.880> generative<00:10:15.320> components
+And generative components
+uh,
+goes<00:10:18.080> into<00:10:18.280> like<00:10:18.480> the<00:10:18.560> the<00:10:18.720> premise<00:10:19.040> I<00:10:19.280> I<00:10:19.360> put
+goes into like the the premise I I put
+at<00:10:19.560> the<00:10:19.640> beginning<00:10:19.960> where<00:10:20.200> the<00:10:20.360> models<00:10:20.640> are
+at the beginning where the models are
+good<00:10:21.000> at<00:10:21.120> writing<00:10:21.520> front-end<00:10:22.000> code.<00:10:22.200> They<00:10:22.400> are
+good at writing front-end code. They are
+good<00:10:22.720> at<00:10:22.840> writing<00:10:23.160> React.<00:10:23.520> They're<00:10:23.680> good<00:10:23.840> at
+good at writing React. They're good at
+React<00:10:24.520> creating<00:10:25.000> in<00:10:25.080> JavaScript,<00:10:25.640> CSS.
+React creating in JavaScript, CSS.
+And<00:10:28.120> the<00:10:28.200> question<00:10:28.480> is<00:10:28.600> why<00:10:28.800> we<00:10:28.960> don't<00:10:29.160> let
+And the question is why we don't let
+them<00:10:29.760> just<00:10:30.360> write<00:10:31.320> that
+them just write that
+on<00:10:32.440> demand<00:10:33.200> at<00:10:33.320> runtime.
+on demand at runtime.
+What<00:10:34.920> could<00:10:35.160> possibly<00:10:35.520> go<00:10:35.680> wrong<00:10:35.880> with<00:10:36.000> that,
+What could possibly go wrong with that,
+right?
+This<00:10:38.200> model<00:10:39.040> um,<00:10:39.480> of<00:10:39.800> generating<00:10:40.320> the<00:10:40.400> UI<00:10:41.000> uses
+This model um, of generating the UI uses
+the<00:10:41.720> agent<00:10:42.040> capabilities.<00:10:43.080> And<00:10:43.200> in<00:10:43.280> this
+the agent capabilities. And in this
+case,<00:10:43.680> you<00:10:43.760> can<00:10:43.920> also<00:10:44.160> use<00:10:44.280> a<00:10:44.360> tool<00:10:44.600> call,<00:10:45.280> but
+case, you can also use a tool call, but
+instead<00:10:45.880> of<00:10:46.040> calling<00:10:46.600> this<00:10:47.360> uh,<00:10:47.600> layout
+instead of calling this uh, layout
+rendering<00:10:48.480> engine,<00:10:49.320> you<00:10:49.440> can<00:10:49.600> call<00:10:49.800> the<00:10:49.880> same
+rendering engine, you can call the same
+model<00:10:50.400> with<00:10:50.520> reverse<00:10:50.760> sampling<00:10:51.320> or<00:10:51.440> you<00:10:51.520> can
+model with reverse sampling or you can
+call<00:10:51.960> another<00:10:52.280> model<00:10:53.120> that<00:10:53.280> will<00:10:53.480> generate
+call another model that will generate
+the<00:10:54.440> HTML,<00:10:55.080> CSS,<00:10:55.880> JavaScript
+the HTML, CSS, JavaScript
+on<00:10:57.400> demand<00:10:57.880> and<00:10:58.000> then<00:10:58.160> it<00:10:58.200> will<00:10:58.320> be<00:10:58.520> passed<00:10:58.920> to
+on demand and then it will be passed to
+the<00:10:59.200> client.
+the client.
+I<00:11:00.480> did<00:11:00.640> this<00:11:00.800> experiment<00:11:01.760> um,<00:11:01.839> I<00:11:01.920> work<00:11:02.120> at
+I did this experiment um, I work at
+Postman<00:11:02.520> on<00:11:02.600> this<00:11:02.760> experiment<00:11:03.280> where<00:11:03.560> I
+Postman on this experiment where I
+created<00:11:04.640> uh,<00:11:04.680> this<00:11:04.920> weather<00:11:05.240> agent<00:11:05.720> that<00:11:05.920> goes
+created uh, this weather agent that goes
+to<00:11:06.320> the<00:11:06.760> API,<00:11:07.240> the<00:11:07.360> weather<00:11:07.560> API.<00:11:08.400> It<00:11:08.520> creates
+to the API, the weather API. It creates
+a<00:11:08.880> joke.<00:11:09.480> It<00:11:09.600> creates<00:11:09.920> the<00:11:09.960> HTML,<00:11:10.520> CSS,
+a joke. It creates the HTML, CSS,
+JavaScript,<00:11:11.839> all<00:11:12.040> in<00:11:12.160> one<00:11:12.480> tool<00:11:12.720> call.
+JavaScript, all in one tool call.
+And<00:11:13.800> you<00:11:13.920> get<00:11:14.200> presented<00:11:14.760> with<00:11:14.960> this<00:11:15.800> random
+And you get presented with this random
+but<00:11:17.200> very<00:11:18.080> uh,<00:11:18.160> imaginative<00:11:19.440> UI<00:11:20.120> where
+but very uh, imaginative UI where
+everything<00:11:20.960> is<00:11:21.120> created<00:11:21.560> by<00:11:21.680> the<00:11:21.839> agent.
+everything is created by the agent.
+There<00:11:22.440> is<00:11:22.560> no<00:11:22.720> component.<00:11:23.560> There<00:11:23.720> is<00:11:23.839> no
+There is no component. There is no
+translation.
+So<00:11:25.960> there<00:11:26.120> is<00:11:26.240> of<00:11:26.360> course<00:11:26.560> a<00:11:26.640> problem<00:11:26.880> with
+So there is of course a problem with
+this<00:11:27.120> approach.<00:11:28.000> Uh,<00:11:28.160> and<00:11:28.280> the<00:11:28.360> problem<00:11:28.600> with
+this approach. Uh, and the problem with
+this<00:11:28.800> approach<00:11:29.200> is<00:11:30.040> uh,<00:11:30.160> if<00:11:30.360> we
+this approach is uh, if we
+don't<00:11:31.560> trust<00:11:32.280> third-party<00:11:32.800> code,
+don't trust third-party code,
+well,<00:11:34.440> we<00:11:34.600> should<00:11:34.760> not<00:11:34.960> trust<00:11:35.960> um,
+well, we should not trust um,
+code<00:11:36.920> that<00:11:37.040> has<00:11:37.120> been<00:11:37.280> generated<00:11:37.880> by<00:11:38.040> LLMs<00:11:38.720> and
+code that has been generated by LLMs and
+then<00:11:38.960> just<00:11:39.600> present<00:11:39.920> it<00:11:40.080> to<00:11:40.160> the<00:11:40.280> user.
+then just present it to the user.
+Uh,<00:11:41.520> generative<00:11:42.080> UI<00:11:43.120> and<00:11:43.280> and<00:11:43.360> this<00:11:43.600> level<00:11:43.880> of
+Uh, generative UI and and this level of
+generative<00:11:44.480> UI<00:11:44.920> needs<00:11:45.360> a<00:11:45.480> distribution
+generative UI needs a distribution
+model.
+And<00:11:47.680> this<00:11:47.839> distribution<00:11:48.360> model<00:11:48.640> requires<00:11:49.120> a
+And this distribution model requires a
+boundary,<00:11:49.760> requires<00:11:50.200> containment<00:11:50.920> and
+boundary, requires containment and
+requires<00:11:51.839> a<00:11:52.080> sandbox,<00:11:52.880> which<00:11:53.040> is<00:11:53.160> what<00:11:53.280> we
+requires a sandbox, which is what we
+were<00:11:53.760> talking<00:11:54.000> about<00:11:54.280> earlier.
+were talking about earlier.
+This<00:11:55.680> is<00:11:55.800> what<00:11:55.920> I<00:11:56.000> think<00:11:56.320> MCP<00:11:56.839> apps<00:11:57.760> matter<00:11:58.400> a
+This is what I think MCP apps matter a
+lot<00:11:59.040> because<00:11:59.440> MCP<00:11:59.960> apps<00:12:00.280> are<00:12:00.480> the<00:12:00.680> best<00:12:01.760> uh,
+lot because MCP apps are the best uh,
+delivery<00:12:02.320> mechanism<00:12:03.440> uh,<00:12:03.560> for
+delivery mechanism uh, for
+generative<00:12:05.080> UI.
+generative UI.
+We<00:12:06.520> have<00:12:07.040> the<00:12:07.280> features<00:12:07.839> provided<00:12:08.240> by<00:12:08.400> MCP,
+We have the features provided by MCP,
+including<00:12:09.600> authentication<00:12:10.360> and<00:12:10.480> tool
+including authentication and tool
+calling<00:12:11.400> and<00:12:11.560> message<00:12:11.880> passing<00:12:12.200> between<00:12:12.480> the
+calling and message passing between the
+UI<00:12:12.920> and<00:12:13.040> the<00:12:13.160> agent.<00:12:14.000> Uh,<00:12:14.200> it's<00:12:14.320> sandboxed<00:12:14.839> by
+UI and the agent. Uh, it's sandboxed by
+default<00:12:15.400> with<00:12:15.520> that<00:12:15.720> double<00:12:15.960> iFrame.<00:12:17.120> Is<00:12:17.320> the
+default with that double iFrame. Is the
+default<00:12:17.920> for<00:12:18.400> third-party<00:12:19.080> UI<00:12:19.360> delivery
+default for third-party UI delivery
+today.<00:12:20.360> Does<00:12:20.560> this<00:12:20.839> become<00:12:21.200> the<00:12:21.280> standard?
+today. Does this become the standard?
+And<00:12:22.760> one<00:12:22.920> interesting<00:12:23.280> thing<00:12:23.480> is<00:12:23.839> it's<00:12:24.000> not
+And one interesting thing is it's not
+just<00:12:24.520> for
+just for
+for<00:12:25.680> third-party<00:12:26.240> UI.<00:12:27.240> It<00:12:27.400> can<00:12:27.640> also<00:12:27.960> be<00:12:28.120> used
+for third-party UI. It can also be used
+for<00:12:29.560> first-party<00:12:30.280> UI.
+for first-party UI.
+And<00:12:31.800> this<00:12:31.920> is<00:12:32.040> why<00:12:32.200> I<00:12:32.240> think<00:12:32.680> what<00:12:32.800> Anthropic
+And this is why I think what Anthropic
+is<00:12:33.480> doing<00:12:33.960> with<00:12:34.440> the<00:12:34.880> the<00:12:35.000> visualizer<00:12:35.680> feature
+is doing with the the visualizer feature
+is<00:12:36.880> very<00:12:37.160> interesting<00:12:38.000> strategically
+is very interesting strategically
+speaking<00:12:39.200> because
+speaking because
+they<00:12:40.640> could<00:12:40.800> have<00:12:40.960> just<00:12:41.440> created<00:12:42.560> their<00:12:42.800> own
+they could have just created their own
+rendering
+um,<00:12:44.760> and<00:12:45.080> an<00:12:45.200> architecture<00:12:46.080> mechanism<00:12:46.680> for
+um, and an architecture mechanism for
+delivering<00:12:47.360> this<00:12:47.600> in<00:12:48.240> interaction<00:12:48.800> in<00:12:49.040> in
+delivering this in interaction in in
+cloud,
+but<00:12:50.440> they<00:12:50.560> decided<00:12:51.080> to<00:12:51.160> go<00:12:51.320> with<00:12:51.520> MCP<00:12:52.040> apps
+but they decided to go with MCP apps
+because<00:12:52.920> MCP<00:12:53.320> apps<00:12:53.520> provide<00:12:54.360> most<00:12:54.720> of<00:12:54.800> those
+because MCP apps provide most of those
+um,<00:12:55.839> features<00:12:56.160> that<00:12:56.280> I<00:12:56.320> mentioned<00:12:56.720> earlier
+um, features that I mentioned earlier
+uh,<00:12:57.880> out<00:12:58.000> of<00:12:58.080> the<00:12:58.160> box.
+uh, out of the box.
+So<00:12:59.440> if<00:12:59.560> Anthropic<00:13:00.000> decided<00:13:00.480> to<00:13:00.640> use<00:13:00.839> MCP<00:13:01.200> apps
+So if Anthropic decided to use MCP apps
+for<00:13:01.560> their<00:13:01.680> first-party<00:13:02.280> UI,<00:13:03.320> uh,<00:13:03.360> you<00:13:03.440> can
+for their first-party UI, uh, you can
+ask<00:13:03.760> yourselves<00:13:04.600> why<00:13:04.800> cannot<00:13:05.120> we<00:13:05.320> do<00:13:05.520> the
+ask yourselves why cannot we do the
+same?<00:13:06.120> It<00:13:06.280> is
+same? It is
+um,<00:13:07.160> a<00:13:07.200> very<00:13:07.440> very<00:13:07.640> strong<00:13:07.920> protocol.<00:13:09.000> And
+um, a very very strong protocol. And
+especially<00:13:09.560> when<00:13:09.720> the<00:13:10.160> UI<00:13:10.480> is<00:13:10.560> being
+especially when the UI is being
+generated<00:13:11.400> on<00:13:11.520> the<00:13:11.600> fly<00:13:11.960> by<00:13:12.240> the<00:13:12.760> agents,<00:13:13.200> by
+generated on the fly by the agents, by
+the<00:13:13.720> the<00:13:13.839> code<00:13:14.560> uh,<00:13:14.640> coding<00:13:14.920> models,
+the the code uh, coding models,
+then<00:13:16.080> is<00:13:16.200> the<00:13:16.320> best<00:13:17.000> um,
+then is the best um,
+mechanism<00:13:18.920> for<00:13:19.040> delivery.
+mechanism for delivery.
+Now,
+today<00:13:23.440> is<00:13:23.640> probably<00:13:24.600> not<00:13:24.880> the<00:13:25.000> final<00:13:25.360> form.
+today is probably not the final form.
+And<00:13:26.880> people<00:13:27.160> keep<00:13:27.360> saying
+And people keep saying
+is<00:13:28.760> chat<00:13:29.000> the<00:13:29.120> final<00:13:29.440> form?<00:13:30.360> Is<00:13:30.680> MCP<00:13:31.320> apps<00:13:31.839> the
+is chat the final form? Is MCP apps the
+final<00:13:32.280> form?
+final form?
+We're<00:13:33.520> still<00:13:33.839> we're<00:13:33.960> still<00:13:34.200> trying<00:13:34.440> to<00:13:34.520> figure
+We're still we're still trying to figure
+this<00:13:35.000> out.
+this out.
+And<00:13:37.200> the<00:13:37.360> obvious<00:13:37.720> future
+And the obvious future
+is<00:13:39.280> probably<00:13:40.040> too<00:13:40.280> obvious.
+is probably too obvious.
+And<00:13:41.520> we<00:13:41.960> said<00:13:42.160> about<00:13:43.240> where<00:13:43.440> is<00:13:43.560> my<00:13:43.800> Jarvis?
+And we said about where is my Jarvis?
+Where<00:13:44.839> is<00:13:45.000> my
+Where is my
+floating<00:13:46.360> windows?
+floating windows?
+And<00:13:47.720> if<00:13:47.800> you<00:13:47.880> think<00:13:48.080> about<00:13:48.320> it,<00:13:49.040> that's<00:13:49.960> the
+And if you think about it, that's the
+obvious<00:13:50.400> things<00:13:50.760> thing<00:13:51.000> that<00:13:51.120> people<00:13:51.400> would
+obvious things thing that people would
+think<00:13:51.880> how<00:13:52.040> we<00:13:52.160> would<00:13:52.320> look<00:13:52.560> like<00:13:53.360> if<00:13:53.480> we<00:13:53.600> were
+think how we would look like if we were
+generating<00:13:54.440> or<00:13:54.600> creating<00:13:55.120> a<00:13:55.160> new<00:13:56.000> uh,<00:13:56.080> user
+generating or creating a new uh, user
+interaction.
+But<00:13:58.320> what<00:13:58.440> I<00:13:58.520> think<00:13:58.800> is
+But what I think is
+we<00:14:00.200> don't<00:14:00.440> have<00:14:00.760> enough<00:14:01.040> imagination<00:14:01.880> yet.
+we don't have enough imagination yet.
+And<00:14:03.040> and<00:14:03.240> this<00:14:03.480> analogy<00:14:04.400> I<00:14:04.480> heard<00:14:04.760> recently<00:14:05.240> is
+And and this analogy I heard recently is
+very<00:14:05.560> interesting<00:14:06.040> when<00:14:06.640> when<00:14:07.200> uh,<00:14:07.280> radio
+very interesting when when uh, radio
+came<00:14:08.560> out<00:14:08.839> in<00:14:09.000> the<00:14:09.120> 30s,
+came out in the 30s,
+um,<00:14:11.480> the<00:14:11.600> the<00:14:11.800> the<00:14:11.920> first<00:14:12.480> um,<00:14:13.000> sorry,<00:14:13.240> the<00:14:13.400> the
+um, the the the first um, sorry, the the
+TV<00:14:13.920> came<00:14:14.120> out,<00:14:14.280> the<00:14:14.400> first
+TV came out, the first
+uh,<00:14:15.720> TV<00:14:16.040> shows<00:14:16.800> were<00:14:17.079> radio<00:14:17.440> shows
+uh, TV shows were radio shows
+with<00:14:19.000> cameras
+with cameras
+because<00:14:20.720> they<00:14:20.839> could<00:14:21.000> not<00:14:21.200> imagine<00:14:21.800> what<00:14:22.079> you
+because they could not imagine what you
+could<00:14:22.400> do<00:14:22.520> with<00:14:22.680> this<00:14:22.839> new<00:14:23.040> technology.<00:14:24.040> So
+could do with this new technology. So
+this<00:14:24.400> new<00:14:24.560> technology<00:14:25.520> that<00:14:25.680> we<00:14:25.800> have<00:14:26.000> today
+this new technology that we have today
+is<00:14:26.640> very<00:14:26.839> similar<00:14:27.200> when<00:14:27.400> television<00:14:27.839> came<00:14:28.079> out
+is very similar when television came out
+and<00:14:28.959> we<00:14:29.079> are<00:14:29.160> still<00:14:29.600> in<00:14:29.760> the<00:14:30.240> radio<00:14:31.079> era<00:14:31.959> where
+and we are still in the radio era where
+we<00:14:33.000> don't<00:14:33.200> know<00:14:33.920> all<00:14:34.079> the<00:14:34.160> amazing<00:14:34.600> things
+we don't know all the amazing things
+that<00:14:34.920> we<00:14:35.040> will<00:14:35.160> do<00:14:35.280> in<00:14:35.360> the<00:14:35.440> future<00:14:36.040> with<00:14:36.240> this
+that we will do in the future with this
+new<00:14:36.600> media,<00:14:37.079> with<00:14:37.200> this<00:14:37.400> new<00:14:37.760> power<00:14:38.200> that<00:14:38.360> we
+new media, with this new power that we
+have<00:14:38.720> with<00:14:38.880> the<00:14:39.200> with<00:14:39.320> the<00:14:39.400> new<00:14:39.560> computer.
+have with the with the new computer.
+And<00:14:41.440> we<00:14:41.600> can<00:14:41.800> see<00:14:42.160> that<00:14:42.959> we<00:14:43.120> cannot<00:14:43.400> even
+And we can see that we cannot even
+imagine<00:14:44.000> what<00:14:44.120> it's<00:14:44.240> going<00:14:44.360> to<00:14:44.480> look<00:14:44.720> like.
+imagine what it's going to look like.
+Uh,<00:14:46.160> of<00:14:46.320> course<00:14:46.480> this<00:14:46.640> is<00:14:46.720> a<00:14:46.760> speculative,<00:14:47.440> but
+Uh, of course this is a speculative, but
+what<00:14:48.000> do<00:14:48.160> I<00:14:48.240> think<00:14:48.839> is<00:14:49.120> actually<00:14:49.520> going<00:14:49.680> to
+what do I think is actually going to
+happen
+is<00:14:51.280> we<00:14:51.400> are<00:14:51.480> going<00:14:51.600> to<00:14:51.680> be<00:14:51.880> moving<00:14:52.800> uh,<00:14:52.880> beyond
+is we are going to be moving uh, beyond
+components<00:14:54.000> and<00:14:54.400> more<00:14:54.640> towards<00:14:55.200> a
+components and more towards a
+collaboration<00:14:56.880> uh,<00:14:56.959> through<00:14:57.360> human<00:14:57.800> agent
+collaboration uh, through human agent
+collaboration.
+If<00:14:59.640> you<00:14:59.680> haven't<00:14:59.920> heard<00:15:00.120> about<00:15:00.440> the
+If you haven't heard about the
+Excalidraw<00:15:01.640> MCP<00:15:02.079> app,<00:15:02.720> uh,<00:15:02.800> definitely<00:15:03.120> check
+Excalidraw MCP app, uh, definitely check
+it<00:15:03.480> out<00:15:03.640> because
+it out because
+the<00:15:05.040> Excalidraw<00:15:05.520> MCP<00:15:05.959> app
+the Excalidraw MCP app
+is<00:15:07.079> not<00:15:07.280> just<00:15:07.520> for<00:15:08.120> um,<00:15:08.640> output<00:15:09.079> and
+is not just for um, output and
+visualization<00:15:09.959> of<00:15:10.200> diagrams.
+visualization of diagrams.
+The<00:15:12.360> Excalidraw<00:15:12.760> MCP<00:15:13.120> app<00:15:13.280> does<00:15:13.440> something
+The Excalidraw MCP app does something
+very<00:15:13.959> interesting,<00:15:14.560> which<00:15:15.280> it<00:15:15.440> creates<00:15:16.000> a<00:15:16.360> a
+very interesting, which it creates a a
+shared<00:15:17.040> artifact.
+shared artifact.
+It<00:15:18.520> creates<00:15:19.000> a<00:15:19.160> canvas<00:15:20.200> where<00:15:20.720> a<00:15:20.880> human<00:15:21.680> and<00:15:21.920> an
+It creates a canvas where a human and an
+agent<00:15:22.680> can<00:15:22.880> collaborate<00:15:23.440> together<00:15:24.160> into<00:15:24.959> a
+agent can collaborate together into a
+shared<00:15:25.680> space<00:15:26.680> where<00:15:26.800> you<00:15:26.880> can<00:15:27.040> go<00:15:27.200> back<00:15:27.440> and
+shared space where you can go back and
+forth<00:15:27.760> with<00:15:27.880> the<00:15:27.959> agent<00:15:28.440> and<00:15:28.600> ask,<00:15:28.920> you<00:15:29.000> know,
+forth with the agent and ask, you know,
+change<00:15:30.079> this,<00:15:30.480> but<00:15:30.640> you<00:15:30.760> can<00:15:30.880> also<00:15:31.200> click
+change this, but you can also click
+around,<00:15:32.120> modify<00:15:32.480> the<00:15:32.640> UI<00:15:33.079> the<00:15:33.240> way<00:15:33.440> that<00:15:33.600> you
+around, modify the UI the way that you
+are<00:15:33.839> used<00:15:34.160> to.<00:15:34.880> And<00:15:35.040> that<00:15:35.160> becomes<00:15:36.040> the<00:15:36.240> new
+are used to. And that becomes the new
+way<00:15:37.320> of<00:15:37.680> interacting,<00:15:38.880> the<00:15:39.000> new<00:15:39.240> way<00:15:39.600> of
+way of interacting, the new way of
+experiencing<00:15:40.959> the<00:15:41.320> the<00:15:41.440> agent<00:15:42.160> um,
+experiencing the the agent um,
+powers.
+And<00:15:44.600> and<00:15:44.720> at<00:15:44.800> the<00:15:44.880> moment<00:15:45.360> again,<00:15:45.640> we<00:15:45.800> are<00:15:46.120> very
+And and at the moment again, we are very
+constrained<00:15:47.079> to<00:15:47.360> our<00:15:47.520> imagination.<00:15:48.440> And<00:15:48.720> and
+constrained to our imagination. And and
+I<00:15:48.959> believe<00:15:49.280> these<00:15:49.440> agents<00:15:49.800> are<00:15:49.959> very<00:15:50.400> very
+I believe these agents are very very
+powerful<00:15:51.680> for<00:15:51.880> just<00:15:52.640> to<00:15:52.760> just<00:15:53.000> use<00:15:53.200> them<00:15:53.520> as<00:15:53.839> a
+powerful for just to just use them as a
+orchestrator<00:15:55.200> and<00:15:55.360> a<00:15:55.400> delivery<00:15:55.760> mechanism<00:15:56.360> to
+orchestrator and a delivery mechanism to
+show<00:15:56.680> me<00:15:57.040> some<00:15:57.200> visualizations.
+show me some visualizations.
+So<00:15:58.920> I<00:15:59.000> believe<00:15:59.640> beyond<00:15:59.920> components,
+So I believe beyond components,
+it<00:16:01.760> will<00:16:01.880> be<00:16:02.680> the<00:16:02.800> future<00:16:03.240> of<00:16:03.360> generative<00:16:03.800> UI
+it will be the future of generative UI
+will<00:16:04.160> be<00:16:04.320> more<00:16:04.600> a<00:16:04.680> collaborative<00:16:05.600> experience
+will be more a collaborative experience
+where<00:16:07.400> yes,<00:16:08.040> we<00:16:08.200> will<00:16:08.320> have<00:16:08.480> some<00:16:08.680> generative
+where yes, we will have some generative
+UI,<00:16:10.000> but<00:16:10.200> that<00:16:10.440> UI<00:16:10.800> is<00:16:10.920> going<00:16:11.040> to<00:16:11.120> be<00:16:11.680> super
+UI, but that UI is going to be super
+personalized<00:16:13.079> and<00:16:13.200> it's<00:16:13.320> going<00:16:13.440> to<00:16:13.520> be
+personalized and it's going to be
+collaborative.
+So<00:16:16.760> we<00:16:17.320> we<00:16:17.480> are<00:16:17.560> still<00:16:17.839> early.
+So we we are still early.
+Um,
+we<00:16:21.000> don't<00:16:21.200> have<00:16:21.320> the<00:16:21.400> answer.<00:16:21.959> People<00:16:22.280> say,
+we don't have the answer. People say,
+you<00:16:22.600> know,<00:16:23.360> what<00:16:23.560> is<00:16:23.800> what<00:16:23.959> is<00:16:24.079> the<00:16:24.680> future<00:16:25.000> of
+you know, what is what is the future of
+the<00:16:25.560> user<00:16:25.760> interaction,<00:16:26.240> the<00:16:26.320> user
+the user interaction, the user
+interfaces?<00:16:27.480> We<00:16:27.600> don't<00:16:27.760> know<00:16:27.880> yet.
+interfaces? We don't know yet.
+But<00:16:29.320> we<00:16:29.480> can<00:16:29.680> shape<00:16:29.959> that<00:16:30.160> future<00:16:31.160> uh,<00:16:31.440> and
+But we can shape that future uh, and
+create<00:16:31.920> this<00:16:32.560> uh,<00:16:32.640> new<00:16:32.760> computer.
+create this uh, new computer.
+And<00:16:34.120> that's<00:16:34.320> me.<00:16:34.560> Thank<00:16:34.760> you<00:16:34.839> so<00:16:34.959> much<00:16:35.880> uh,<00:16:35.959> for
+And that's me. Thank you so much uh, for
+listening<00:16:36.440> to<00:16:36.560> this.
+listening to this.
+&gt;&gt; [applause]
+&gt;&gt; You<00:16:37.800> can<00:16:38.000> find<00:16:38.240> me
+&gt;&gt; You can find me
+and<00:16:39.240> ask<00:16:39.400> any<00:16:39.560> questions.
+and ask any questions.
+Thank<00:16:42.200> you.
