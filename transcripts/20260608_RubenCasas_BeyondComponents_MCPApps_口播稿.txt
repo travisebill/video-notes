@@ -1,12 +1,14 @@
-
-
 開場
+
+(clears throat)
 
 大家好，今天要跟大家聊一個我最近非常關心的題目。
 
 它叫做，Generative UI，也就是生成式使用者介面。
 
 先講結論，AI 寫前端 code 的能力，已經比大多數工程師強了。但是，我們今天看到的 UI，還是停留在二十年來那個 static 的範式裡。
+
+(sighs)
 
 這中間有什麼落差？今天我想把這條故事線，講清楚。
 
@@ -17,6 +19,8 @@
 大家怎麼用？你打開 ChatGPT，請它幫你寫一個 component，然後它吐出一段 code block，你再把那段 code 複製貼上到你的編輯器。
 
 然後呢？它跑不起來。你再貼錯誤訊息回去，它再給你一段 code。你再貼回去。
+
+(laughs)
 
 我以前把這種工作模式，叫作窮人的 vibe coding。它能用，但是非常痛苦。
 
@@ -31,6 +35,8 @@
 結果它給我的，不只是一個改寫後的版面。它給我一個有 search box 的版本，有 blur 動畫，accessibility 都做好了。
 
 我完全沒有要求這些。它自己加的。
+
+(sighs)
 
 這時候我才意識到，三年內，我們從「請 AI 寫幾行 code」走到「AI 寫得比前端工程師還好」。
 
@@ -122,6 +128,8 @@ MCP apps 提供了一個，現成的 delivery mechanism。Authentication、tool 
 
 第七段：我們還在 Radio Era
 
+(sighs)
+
 講到這裡，我要提一個，我自己很喜歡的類比。
 
 電視剛出來的時候，前幾年所有的電視節目，都是把廣播節目加上 camera。因為那時候的人，沒辦法想像，電視這個新媒介，到底能拿來做什麼。
@@ -143,6 +151,8 @@ Excalidraw 這個 MCP app，不是只能讓 agent 畫圖。它創造了一個，
 所以我覺得，下一個階段的 UI，不會只是更多的 component。
 
 下一個階段的 UI，會是一個 collaboration 的 experience。Generative UI 會是 super personalized，而且會是 collaborative。
+
+(sighs)
 
 我們今天還在很早期。我們不知道 UI 的最終形態長什麼樣。
 

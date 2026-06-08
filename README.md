@@ -97,9 +97,9 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 
 | 日期 | 講者 | 音檔 |
 |------|------|------|
-| 2026-06-08 | Ruben Casas (Postman) | [opus 3.8MB](audio/spoken_text.opus) · [m4a 5.2MB](audio/spoken_text.m4a) · [mp3 7.5MB](audio/spoken_text.mp3) |
+| 2026-06-08 | Ruben Casas (Postman) | [opus 3.4MB](audio/spoken_text.opus) · [m4a 4.9MB](audio/spoken_text.m4a) · [mp3 6.8MB](audio/spoken_text.mp3) |
 
-音檔生成流程：技術講座影片 → yt-dlp 抓字幕 → 寫口播稿 → MiniMax TTS voice clone 合成（cloud, ~30s 推論）。
+音檔生成流程：技術講座影片 → yt-dlp 抓字幕 → 寫口播稿 → MiniMax TTS voice clone 合成（cloud, ~30s 推論, speech-2.8-hd 支援 interjection emotion tags）。
 
 ---
 
