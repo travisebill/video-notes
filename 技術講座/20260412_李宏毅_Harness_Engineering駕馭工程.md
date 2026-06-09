@@ -269,3 +269,17 @@
 - 部分技術術語辨識有些微誤差（Reef Loop 應為 "Reef Loop" 但 Whisper 正確捕捉發音）
 - 課程內容提及的英文論文名稱、公司名（Entropic/Anthropic 混用、Gamma/Gemma 混用）為 Whisper 對發音的合理誤判
 - 結尾處有部分重複段落為講者課堂口誤或強調所致
+---
+
+## 🎙️ 音檔導覽（語音版）
+
+由 MiniMax TTS 語音合成，xiaotian 參考聲 + 簡體中文（speech-2.8-hd 對簡體效果最佳）+ 單字 interjection emotion tags。
+
+| 項目 | 連結 |
+|------|------|
+| **音檔** | [opus 1.9MB](../audio/20260412_李宏毅_Harness_Engineering駕馭工程.opus) · [m4a 2.5MB](../audio/20260412_李宏毅_Harness_Engineering駕馭工程.m4a) · [mp3 3.7MB](../audio/20260412_李宏毅_Harness_Engineering駕馭工程.mp3) |
+| **口播稿（給 TTS 用的簡體純文字）** | [txt](../transcripts/20260412_李宏毅_Harness_Engineering駕馭工程_口播稿.txt) |
+| **人看版口播稿（含 section 標題）** | 請見 Ryo output dir |
+| **音檔長度** | 5 分 21 秒（321 秒） |
+| **推論技術** | MiniMax T2A v2 + speech-2.8-hd + emotion（單字標記（sighs ×5, laughs ×1））|
+| **整理者** | Ryo 🐱 |

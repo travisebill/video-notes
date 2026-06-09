@@ -116,3 +116,17 @@
 > "Beyond components, it will be a collaborative experience."
 
 > "We are still early. We don't have the answer. But we can shape that future."
+---
+
+## 🎙️ 音檔導覽（語音版）
+
+由 MiniMax TTS 語音合成，xiaotian 參考聲 + 簡體中文（speech-2.8-hd 對簡體效果最佳）+ 單字 interjection emotion tags。
+
+| 項目 | 連結 |
+|------|------|
+| **音檔** | [opus 3.2MB](../audio/spoken_text.opus) · [m4a 4.4MB](../audio/spoken_text.m4a) · [mp3 6.4MB](../audio/spoken_text.mp3) |
+| **口播稿（給 TTS 用的簡體純文字）** | [txt](../transcripts/20260608_RubenCasas_BeyondComponents_MCPApps_口播稿.txt) |
+| **人看版口播稿（含 section 標題）** | 請見 Ryo output dir |
+| **音檔長度** | ~17 分鐘（原始 TTS 音檔） |
+| **推論技術** | MiniMax T2A v2 + speech-2.8-hd + emotion（單字標記（clears throat/sighs/laughs 多處））|
+| **整理者** | Ryo 🐱 |

@@ -365,3 +365,17 @@
 14:30 - 15:00  Golden Gate 雙關、HomePod 缺席、摺疊機暗示
 15:00 - 16:28  Ridge 父親節贊助 + 結尾
 ```
+---
+
+## 🎙️ 音檔導覽（語音版）
+
+由 MiniMax TTS 語音合成，xiaotian 參考聲 + 簡體中文（speech-2.8-hd 對簡體效果最佳）+ 單字 interjection emotion tags。
+
+| 項目 | 連結 |
+|------|------|
+| **音檔** | [opus 2.1MB](../audio/20260609_MKBHD_WWDC2026.opus) · [m4a 2.9MB](../audio/20260609_MKBHD_WWDC2026.m4a) · [mp3 4.2MB](../audio/20260609_MKBHD_WWDC2026.mp3) |
+| **口播稿（給 TTS 用的簡體純文字）** | [txt](../transcripts/20260609_MKBHD_WWDC2026_口播稿.txt) |
+| **人看版口播稿（含 section 標題）** | 請見 Ryo output dir |
+| **音檔長度** | 6 分 02 秒（362 秒） |
+| **推論技術** | MiniMax T2A v2 + speech-2.8-hd + emotion（單字標記（sighs ×4, laughs ×2））|
+| **整理者** | Ryo 🐱 |
