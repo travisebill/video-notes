@@ -191,3 +191,17 @@
 - 自動字幕品質良好，全中文課程
 - 字幕轉錄字數 32,781 字
 - 未使用 Whisper 轉錄
+---
+
+## 🎙️ 音檔導覽（語音版）
+
+由 MiniMax TTS 語音合成，xiaotian 參考聲 + 簡體中文（speech-2.8-hd 對簡體效果最佳）+ 單字 interjection emotion tags。
+
+| 項目 | 連結 |
+|------|------|
+| **音檔** | [opus 1.5MB](../audio/20260425_李宏毅_AI自我修正Decoding到Reasoning.opus) · [m4a 2.0MB](../audio/20260425_李宏毅_AI自我修正Decoding到Reasoning.m4a) · [mp3 2.9MB](../audio/20260425_李宏毅_AI自我修正Decoding到Reasoning.mp3) |
+| **口播稿（給 TTS 用的簡體純文字）** | [txt](../transcripts/20260425_李宏毅_AI自我修正Decoding到Reasoning_口播稿.txt) |
+| **人看版口播稿（含 section 標題）** | 請見 Ryo output dir |
+| **音檔長度** | 4 分 17 秒（257 秒）|
+| **推論技術** | MiniMax T2A v2 + speech-2.8-hd + emotion（單字標記 sighs ×6）|
+| **整理者** | Ryo 🐱 |

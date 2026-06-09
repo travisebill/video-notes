@@ -95,6 +95,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-06-08 | Ruben Casas (Postman) 口播稿（TTS 輸入稿）| [txt](transcripts/20260608_RubenCasas_BeyondComponents_MCPApps_口播稿.txt) |
 | 2026-06-09 | MKBHD WWDC 2026 口播稿（TTS 輸入稿，簡體版）| [txt](transcripts/20260609_MKBHD_WWDC2026_口播稿.txt) |
 | 2026-04-12 | 李宏毅 Harness Engineering 口播稿（TTS 輸入稿，簡體版）| [txt](transcripts/20260412_李宏毅_Harness_Engineering駕馭工程_口播稿.txt) |
+| 2026-04-25 | 李宏毅 AI 自我修正 口播稿（TTS 輸入稿，簡體版）| [txt](transcripts/20260425_李宏毅_AI自我修正Decoding到Reasoning_口播稿.txt) |
 | 2026-06-09 | MKBHD WWDC 2026 第一印象演講逐字稿 | [txt](transcripts/20260609_MKBHD_WWDC2026_逐字稿.txt) |
 | 2026-05-12 | 歐麗娟「王維」訪談口播稿（TTS 輸入稿）| [txt](transcripts/20260512_歐麗娟_王維與唐代貴族_口播稿.txt) |
 | 2026-06-02 | Mo Gawdat「AI 倫理」訪談口播稿（TTS 輸入稿）| [txt](transcripts/20260602_Mo_Gawdat_AI倫理與人類未來_口播稿.txt) |
@@ -106,6 +107,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-06-08 | Ruben Casas (Postman) | [opus 3.2MB](audio/spoken_text.opus) · [m4a 4.4MB](audio/spoken_text.m4a) · [mp3 6.4MB](audio/spoken_text.mp3) |
 | 2026-06-09 | MKBHD WWDC 2026 第一印象 | [opus 2.1MB](audio/20260609_MKBHD_WWDC2026.opus) · [m4a 2.9MB](audio/20260609_MKBHD_WWDC2026.m4a) · [mp3 4.2MB](audio/20260609_MKBHD_WWDC2026.mp3) |
 | 2026-04-12 | 李宏毅「Harness Engineering」 | [opus 1.9MB](audio/20260412_李宏毅_Harness_Engineering駕馭工程.opus) · [m4a 2.5MB](audio/20260412_李宏毅_Harness_Engineering駕馭工程.m4a) · [mp3 3.7MB](audio/20260412_李宏毅_Harness_Engineering駕馭工程.mp3) |
+| 2026-04-25 | 李宏毅「AI 能自我修正嗎？」 | [opus 1.5MB](audio/20260425_李宏毅_AI自我修正Decoding到Reasoning.opus) · [m4a 2.0MB](audio/20260425_李宏毅_AI自我修正Decoding到Reasoning.m4a) · [mp3 2.9MB](audio/20260425_李宏毅_AI自我修正Decoding到Reasoning.mp3) |
 | 2026-05-12 | 歐麗娟「王維與唐代貴族」 | [opus 1.9MB](audio/20260512_歐麗娟_王維與唐代貴族.opus) · [m4a 2.6MB](audio/20260512_歐麗娟_王維與唐代貴族.m4a) · [mp3 3.7MB](audio/20260512_歐麗娟_王維與唐代貴族.mp3) |
 | 2026-06-02 | Mo Gawdat × Steven Bartlett「AI 倫理與人類未來」 | [opus 1.8MB](audio/20260602_Mo_Gawdat_AI倫理與人類未來.opus) · [m4a 2.5MB](audio/20260602_Mo_Gawdat_AI倫理與人類未來.m4a) · [mp3 3.6MB](audio/20260602_Mo_Gawdat_AI倫理與人類未來.mp3) |
 
