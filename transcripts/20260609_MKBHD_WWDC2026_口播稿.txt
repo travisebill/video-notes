@@ -1,0 +1,37 @@
+今天要跟大家聊的，是 Marques Brownlee 也就是 MKBHD，在 Apple WWDC 2026 keynote 结束当天，马上录的一段十六分钟的即时评论。视频标题下得很直白，「Yeah, That's About Right」。差不多就是那样，差不多就是大家预期的。
+
+(sighs)
+
+先讲结论。Apple 这次没有给出惊喜，也没有让人失望。Siri 跟 Apple Intelligence 走的是最不犯错的中间路线。他们把 iPhone 上那些不出手机的个资，变成对抗 ChatGPT、Gemini、Claude 的护城河。
+
+WWDC 一开场，MKBHD 对五大操作系统的快览给了正面评价。iOS 27、iPadOS 27、watchOS、tvOS、还有新版 macOS 命名叫做 Golden Gate，金门大桥的意思。表面上接口看起来差不多，但骨子里做了大量优化。动画更滑顺、App 打开更快、Spotlight 索引更完整、Airdrop 速度提升百分之八十。他个人最爱的一个小改动，是 AirPods 终于加上自订 EQ，他说这是世界最受欢迎的蓝牙耳机终于跟上其他品牌。
+
+(sighs)
+
+然后 keynote 进入中段，讲的是儿童信任与安全。MKBHD 给了两面解读。表面上是 Apple 提供专属儿童帐号、更细致的屏幕时间控制、家长可限制 App 下载与网站访问。但他自己也吐槽说，最讽刺的解读其实是「Get your kid an iPhone」。让孩子越早开始用 iPhone，成年后继续用的几率就越高。Apple 在美国年轻族群的 iPhone 渗透率本就极高，这其实是 walled garden 的最低公倍数版本。
+
+接下来就是大家最期待的新 Siri。MKBHD 的评价是 exactly what we were expected。完全在预期内，没有戏剧性的惊喜，也没有让人失望的功能。触发方式可以从 Dynamic Island 下滑，也可以按住电源键。新的动画、新的 look、表现力更强的新语音。接着它会把你带进一个对话式的聊天窗口，串接 Apple 自己的世界知识库，会引用来源，你可以点进去看。对话纪录存在新的 Siri app，跨 Mac、iPad、iPhone 同步。
+
+(laughs)
+
+MKBHD 对 Apple 切入 AI 的角度，给了一个很精准的比喻。他说 Apple 每次跳进一个新产品类别，做法都一样：把跟 iPhone 集成做到最好的那个。ChatGPT、Gemini、Claude 都很强，但它们读不到你的 iMessage、看不到你的 Apple 行事历、不知道你照片里有什么。只有 Siri 可以。这就是 Apple 真正的护城河。
+
+Apple 这次也做了一大堆 live demo，明显在回应外界对 Siri 之前 delay 翻车的质疑。但 MKBHD 注意到一个关键差异，Apple 没有像 Google IO 展示 Gemini 那样，做到「拍演唱会海报就自动买票」这种疯狂的 agentic 等级。Apple 选择停在「安全地帮你加进行事历就好」。他对那种 agentic 模式其实有疑虑。让 AI 自动买票，它会买对吗？会花太多钱吗？会挑错位子或日期吗？会不会 hallucinate？Apple 显然也在回避这些风险。
+
+不过 MKBHD 也提到整场最让他失望的一张投视频，是设备支持列表。只有 iPhone Air 跟 iPhone 17 Pro 跑得动最强的 on-device 模型，因为这两台才有 12GB 的 RAM。iPhone 16 当初就是为 Apple Intelligence 量身打造的，结果最强模型出来时它就过时了。Vision Pro 上的 Siri 是个小巧思，它是一个飘在空间中的 orb，看着它就能启动，因为有眼动追踪。MKBHD 认为这类似 Galaxy XR 上的 Circle to Search，你可以指着实体空间中的任何东西让 AI 查。
+
+(sighs)
+
+其他值得提的还有，Safari 可以用自然语言描述需求，AI 直接帮你生成扩展。Shortcuts 也是一样，描述给 AI 听，它就帮你建好，事后还能用完整编辑器修改。Apple Home 终于把一连串通知集成成一个持续更新的通知。照片编辑现在可以向外延伸画面最多百分之二十五，还有空间重构，用深度 AI 推算新背景的透视。Passwords app 还能 agentic 地自动登录弱密码网站，帮你换成强密码并保存。MKBHD 说这是「最 Apple 的一件事」，但代价是你会被锁进 Apple 生态更深一点。
+
+(sighs)
+
+整场 keynote 还有几个有趣的彩蛋。新版 macOS 命名 Golden Gate，围墙花园的墙如果是金色大门，住进去好像也没那么糟。HomePod 整场完全没被提到，MKBHD 直接吐槽那个有漂亮喇叭的小 Siri 盒子到底怎么了。最后还有一张投视频提到新的开发者工具可以让 App 动态适配不同长宽比。MKBHD 说，这是哪种设备需要 App 支持多种长宽比？对，折叠机。嘴上说没有，身体倒是很诚实。
+
+(laughs)
+
+总结一下。Apple 这次用一场没有惊喜的 keynote，示范了他们的新策略。在 OpenAI、Google、Anthropic 已经把通用 AI 助理做到极致的情况下，Apple 不跟他们比模型的聪明程度，而是比 iPhone 的集成深度。每一个小功能，从儿童控制、密码管理、照片生成，都在把用户再往 walled garden 拉深一点。
+
+MKBHD 预告之后会出 iOS 27 跟 Apple Intelligence 的完整评测，包含他自己下载 beta 实测。要记得订阅他的频道。
+
+今天就这样，谢谢大家，下次见。
