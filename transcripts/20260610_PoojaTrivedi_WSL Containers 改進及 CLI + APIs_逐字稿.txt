@@ -1,0 +1,319 @@
+# 逐字稿（繁體中文）｜WSL Containers 改進及 CLI + APIs #DEM346
+
+> **影片**：WSL 的改進以及新的 Containers CLI 與 APIs #DEM346 // MS Build 2026
+> **講者**：Pooja Trivedi（Microsoft Architect）／Craig（Microsoft PM）
+> **原始語言**：英文（自動中文翻譯 + 人工潤稿）
+> **中文化**：Will 保哥（影片中文字幕）
+> **YouTube ID**：`4QQ7yn37Ipk`
+> **時長**：23 分 14 秒
+> **整理日期**：2026-06-10
+> **格式**：依章節分段翻譯，非逐字稿（已精煉為可閱讀版本）
+
+---
+
+## 00:00:00 — 開場自我介紹
+
+Pooja Trivedi：
+> 各位好，我是 Pooja Trivedi，負責 Linux on Windows 上 AI 開發者體驗的架構師。今天與我同台的還有…
+
+Craig：
+> 大家好，我是 Craig，我是負責 Windows Subsystem for Linux 以及其他 Windows 上超棒 AI 工具的 PM。我們今天要談的是 WSL Containers 這個新功能。
+
+---
+
+## 00:00:12 — 三大重點
+
+> 整個演講濃縮成三個重點，也是你今天唯一需要帶走的東西。
+
+**1.** 你將能夠在 Windows 本機執行 Linux 容器，包含直接以命令列執行，或作為 API 內嵌到 Windows 應用程式內執行。
+
+**2.** 這會是 WSL 內建的一部分 — 你直接從 WSL update 就會拿到這個新功能，無需安裝額外東西。
+
+**3.** 我們要把這件事做到企業就緒。這意味著你現在用的業界標準工具（像 Intune、MDE 等）都能直接用於 WSL Containers，讓你在企業環境用起來安心又安全。
+
+> 接下來最好玩的部分是：我們脫離投影片，直接進行 CLI 的 live demo。
+
+---
+
+## 00:01:13 — 進入 CLI 展示
+
+> 切到另一台機器看一下。
+
+Pooja：
+> 就像 Craig 說的，這個功能釋出後，WSL Containers 的完整能力會透過一次 WSL update 就送達。你不用下載任何第三方工具，無需啟動任何 daemon，也不用簽什麼賣身契。
+
+---
+
+## 00:01:35 — WSLC 工具介紹
+
+> 內建附帶的命令列工具叫做…（鏡頭卡住，講者開玩笑「Can't switch? 噢，換過去了，太好了」）
+
+Pooja：
+> 它叫做 `wslc`。我先展示這個工具的 command reference 給你們看。
+>
+> 看下去你會發現，如果你用過任何業界標準的 Linux container 工具，會非常熟悉。所有子命令、選項、switch 都高度對齊。
+>
+> 我們內部也把 `container` 設為 alias，所以如果你比較熟 `container`，也可以用那個 binary。
+
+---
+
+## 00:02:39 — Demo 1：建立 Debian 容器
+
+> 我先展示一個最簡單的流程：在 Windows 上建立一個 Debian Linux 容器。
+
+Pooja：
+> 如果你還不熟，`-it` 這個 switch 是告訴 `wslc` 給我一個 Debian 容器的互動 shell。
+>
+> 正常情況下，它會從 public registry 幫我下載映像。我們這邊網路有點問題，所以先預下載好。
+>
+> 進到 Debian 容器內部了。我可以用標準的 `Ctrl-P, Ctrl-Q` 卸離。
+>
+> 現在用 `wslc ps -a` 或 `wslc container list`（如果你比較熟後者），可以看到這個 Debian 容器約 40 秒前啟動。
+>
+> 用 `wslc attach` 加 container ID 或名稱重新掛回去…好，現在我又回到 Debian 裡了。
+>
+> 我離開並終止這個容器。`wslc ps -a` 會顯示 Debian 容器約 4 秒前 exit。這就是最基本的流程。
+
+---
+
+## 00:04:02 — Demo 2：用 WSLC 建立自訂映像
+
+> 下一個我想展示的是怎麼用 WSLC 建立自訂映像。
+
+Pooja：
+> 你會想用這個場景，是當你希望把雲端或 production 的工作負載直接搬到 Windows 開發主機上，在本地做迭代、測試、debug。
+>
+> 因為它打包成容器，你本機上拿到的環境跟 production 一模一樣 — 不會有「dev 可以跑，prod 不能跑」這種坑。
+
+> 我先看一個 Containerfile。如果你不熟這個檔案，它包含所有建置映像所需的「食材和食譜」：你的環境、相依套件、應用邏輯、啟動指令，整個打包成一個檔案。
+
+> 對我來說，這是一個我閒暇時寫的小 Linux 工具，丟任何檔案進去就能跑我最愛的 Linux inspection 指令。
+
+> 第一行是說：我的容器環境從 Python 3.12 這個輕量映像開始。
+> 接下來幾行是安裝容器跟我的應用邏輯需要的所有相依套件。
+> 這裡把我的應用邏輯（聽 port 5000 的 web server）複製進容器。
+> 我把 port 從容器內 expose 出來。
+> 最後一行是這個應用程式在這個環境內該怎麼啟動的指令。
+
+> 現在用 `wslc build` 建這個映像。我叫它 `mylinuxpy`。
+
+---
+
+## 00:06:18 — 啟動容器 + Port Mapping
+
+Pooja：
+> 建好了。現在用 `wslc images` 看一下。
+>
+> 對，你可以在 PowerShell 裡用 `grep` 喔 — 這邊要工商一下另一位朋友：我們已經把 168 個 Core Utils 全部移植到 Windows 並完全整合了。
+>
+> 這就是剛才建好的映像。它寫 9 hours ago 是因為 base layer 有 cache 被用過了。
+>
+> 我現在用這個映像啟動容器，搭配 port mapping。我容器內的 web server 聽 port 5000，我用 `-p` 把它對應到 Windows 主機。
+>
+> 容器啟動了。我在 `127.0.0.1`（localhost）打上去，可以跟我的 Linux 工具互動。Linux 功能都跑起來了。
+
+---
+
+## 00:07:09 — Demo 3：GPU 加速 AI 容器
+
+> 現在你已經看到怎麼把 Linux 容器內的服務 expose 到 Windows 主機。我想展示更有趣的事：這些容器能怎麼用上 Windows 主機上的 GPU，無論是 AI 場景或圖形應用都行。
+
+Pooja：
+> 我已經把容器 build 好並預熱了，所以它已經在跑（為了省時間）。
+>
+> 它是 Jupyter Notebook web server，一樣聽 port 8888 並用 port mapping expose 出來。
+>
+> 我開始跑這些 cell，同時跟你說這個酷 AI 容器做什麼事：
+> 它會拉下 GPT-2 模型，然後在 Windows 主機的 GPU 上 fine-tune，然後做 torch compile 產生 **fused Triton 核心**。這些 Triton 核心是最佳化過的，讓模型在 GPU 上跑超快。
+>
+> 接下來跑個 demo：compiled 模型 vs uncompiled（eager mode）對比。你可以看到 compiled 模式快非常多。
+>
+> 這一切發生時，Windows 主機的 GPU 已經被借用，在 Linux 容器內完成所有運算。
+
+> 交回給 Craig 之前，讓我快速秀一下我啟動這個 AI 容器的指令：
+
+> `wslc run -it -p 8888:8888 -v /host/hf:/container/hf --gpus all myai:latest`
+>
+> - `-it`：互動模式
+> - `-p 8888:8888`：port mapping
+> - `-v`：掛載 Hugging Face cache 從 Windows 主機到容器內
+> - `--gpus all`：讓容器用 Windows 主機的 GPU
+
+---
+
+## 00:09:03 — CLI vs API 雙路徑
+
+Craig：
+> 回到投影片，可以看到下一步。這個 demo 的重點是：你有兩種方式跟 WSL Container 互動。
+>
+> 一種是 CLI，Pooja 剛剛展示過，是跟容器直接互動的絕佳方式。
+> 另一種是 API。CLI 適合直接存取、直接建置、直接執行；API 是一個 NuGet 套件，你可以在應用程式中執行。
+>
+> 兩者是同一個引擎的兩個門。底層都跑同一個 WSL VM — 跟 WSL distributions 用的是同一顆。
+
+---
+
+## 00:09:44 — 為誰而做？三大客群
+
+> 「為什麼我們要做這個？這是為誰做的？Microsoft 對這項技術的目標是什麼？」這分成三種客戶輪廓。
+
+### 1. Container Developers
+> 如果你是個容器開發者，這就是為你而做。如果你想 build 容器，我們想讓「上手使用」更簡單，並且整個體驗在 Windows 上流暢跑起來。
+>
+> 我們也想對自己的方向有意見：我們自己做了 API 跟 CLI，所以會做更自訂的指令把它們綁在一起。這就是為什麼我們 build 自己的 Linux container CLI，而不是用 Docker / Podman / Rancher Desktop 這些標準工具。
+>
+> 不過這些工具也都很好用，如果它們解決你的問題，你應該用。它只是另一種方法。這個 work 本身是 fully open source，VM 底層的改進也會回流到其他 container 技術。例如我們改進 cross-OS 檔案效能，Docker Desktop / Rancher Desktop / Podman Desktop 都會享受到。
+
+### 2. App Builders / ISVs
+> 我們也想為 App Builders 跟 ISV 做這件事。如果你在雲端或本地有一堆很棒的 Linux code，你想直接放在 Windows 應用程式內跑，我們想讓你用強大且標準的 API 在 Windows 應用裡做到這件事。
+
+### 3. Enterprise IT Admins
+> 最後，我們也為企業 IT 管理員做這件事。有些人想：在我的企業內跑 OpenClaw，想用 Linux container 化的方式跑，但要用我熟悉的 Windows 工具（像 Intune、MDE）管理它。
+>
+> 我們 build 這件事正是為這種場景。我想用這些強大的工具跟應用，並在 Windows 上跑 Linux，又不用擔心組織內有個看不見的 VM。
+>
+> 我想確保你拿到強大的隔離，又不用擔心你的資安工具打不穿這條界線。
+
+---
+
+## 00:12:01 — Demo 4：Moonray 渲染引擎
+
+> 這帶到我們想為一位合作夥伴做的 demo。我們跟 Moonray 團隊合作很多。Moonray 是個超強的渲染引擎，用來渲染《壞蛋聯盟 2》、《荒野機器人》這些動畫電影（我個人是粉絲）。這個渲染引擎完全 build 在 Linux 上。
+>
+> 所以我們跟 Moonray 團隊一起合作：「怎麼讓 Moonray 這個 open source app 更容易上手，並在 Windows 上使用？」
+
+> 帶到我們第二個 demo：跑 WSL Containers 的 API 端。
+
+Craig：
+> 我這邊切過來。你可以看到我在這個專案裡。我要跑 `moonray.exe` — 這是我做的 build。整個是 Linux-based 渲染引擎，但我在系統上有個 .exe。
+>
+> 我給它一些檔案。當然路徑是反斜線（Windows）。我給它輸入的 RDB 檔案（render input files），然後說：請輸出 JPEG。
+>
+> 我開啟 Task Manager，看看跑起來發生什麼事。
+>
+> 我跑的時候留了一些 debug 訊息。它幫我啟動一個 session — 這就是它啟動容器的速度。然後它開始跑完整的 render。
+>
+> 看 CPU：所有 render 都跑在我的 CPU 上，直接在 Moonray VM 裡。Render 跑完後，Moonray VM 就關閉，資源全部釋回 Windows。
+>
+> 完全無感。如果我把 debug 訊息拿掉，它就是個 Windows app，我根本不會知道背後跑的是 Linux。
+>
+> 看到輸出：那個 JPEG 已經產出。是一個超美的橘色咖啡機，展現光線追蹤的酷炫效果。
+
+> 這個 VM 在背景建立、執行，整個對 API 的使用者完全透明。你只要透過 API 建立跟管理容器。
+
+Pooja：
+> 對，開發者完全可以控制：「我想要這個 Linux code，但我的使用者不用煩惱到底跑的是 Linux 還是 Windows。」一切就是無縫接軌。
+
+---
+
+## 00:14:15 — Demo 5：範例專案整合
+
+Craig：
+> 我們看一個相關的範例專案，看在程式碼層面長什麼樣。我加了一些 NuGet 套件。我加了 containers 套件，然後定義了 item group：請幫我建這個容器。Containerfile 在這邊，output 到這裡。
+>
+> 看左邊導覽列，那個 Containerfile 跟我 App 的所有 source code 放在一起。它 build 進我的應用程式裡。
+>
+> 這都包含在 .csproj 檔案裡。
+
+> 當我 build 跟 run 的時候，它會自動幫我 build 容器。一個 F5 體驗。
+
+> 跑我的 sample app。這個 app 是我做的、有點異想天開的 app。我做了一個 AI 代理人幫我跑股票交易 — 它會買賣一些假股票。
+
+> 這就是容器啟動中。它在背景啟動一堆 process 跟 service。
+
+> 我的 AI 代理人 Herbert 開始跑股票交易。我給了這個 container 自己的 desktop，並有視覺化讓我們看發生什麼事。
+
+> AI 代理人進去買賣一些假股票，但 Herbert 有個壞習慣：吃檔案。
+>
+> 我故意把 Herbert 設計成隨機刪除我系統上的檔案。當它刪除檔案時，Windows 上真的刪除了。剛剛那個檔案就是被它刪掉的。
+>
+> 我們想強調的是：container 跟 Windows 之間有高層次的整合。你可以指定：「我要這些 port 開著」（就是這樣我才能看 desktop），你也可以指定：「我只要它能存取 Windows 上這些檔案。」我把爆炸範圍縮到最小。
+>
+> 雖然它真的在亂刪除東西，但在 demo 機上沒關係 — 它在 Windows 上不能亂刪所有檔案。它只能刪 `C:\temp\herbert` 底下的檔案。
+
+> 這就是 API 方向的快速總覽。
+
+---
+
+## 00:16:42 — 架構說明
+
+Pooja：
+> 我相信你接下來最燒腦的問題是「這到底是怎麼運作的？」讓我解釋一下架構。
+
+> 工作原理是：每個想要建立 Linux 容器的 Windows 應用程式，都會在背景被指派一個專屬的輕量 utility VM。所有該應用程式的 Linux 容器都共置在這個 VM 上。每個應用程式以及 CLI 流程都會拿到獨立的 VM。
+
+> 這給我們：**hypervisor boundary per app**，加上資源隔離，避免衝突。應用程式的容器名稱、volume 名稱、網路都按 VM 做隔離，不會有衝突。
+
+> 更細一點：左邊是 Windows OS，右邊是那個 VM（由 Windows app 透過 WSL Containers API 或 CLI 流程建立）。
+
+> 進入 WSL Containers 世界的兩個入口：
+> 1. **API**：透過 `wslcsdk` 這個 library（NuGet 套件）發布
+> 2. **CLI**：`wslc` 或 `container` 執行檔
+
+> 這兩個都透過 IPC 跟 WSL service 通訊。如果你用過 WSL，WSL service 已經存在於今天的世界。它的 job 是管理 WSL 跑的 distros、WSL VM 的 lifecycle、VM 跟 host 的通訊。
+>
+> 我們擴充了同樣的 service，現在也管理 VM 內跑的容器，也管理容器跟 Windows 主機上使用者之間的雙向資訊轉發。
+
+> 在 Linux VM 內部，我們跑一個 **container runtime**。今天用的是 **Moby** — 也就是 Docker 用的開源引擎。
+>
+> WSL service 用 **HV socket** 跟 container runtime 通訊：開啟一條 HV socket 進到 Linux VM。它不是 network socket，是個專門的 socket，專門用於 VM 跟 hypervisor 之間的通訊。它是 Winsock API 的特殊延伸。
+>
+> 每個 VM 有點像一條點對點的專屬通道到 hypervisor — 每個 VM 都有獨立的通訊 channel。
+
+> 一旦使用者發出 container 建立的命令，container runtime 就建立那些容器，WSL service 負責雙向轉發資訊。
+
+---
+
+## 00:19:47 — 儲存管理
+
+> 接下來想快速講一下 storage。
+
+Pooja：
+> 每個 VM 內的 container runtime 用一個中央目錄存 container 相關資訊 — metadata、scratch space 等。通常是 `/var/lib` 跟 container storage 位置。
+>
+> 我們現在把這個位置 map 到 Windows 主機上一個虛擬磁碟（VHD）。
+>
+> **每個應用程式都拿到自己的 VHD**。CLI 流程也拿到自己的 VHD。
+>
+> 所以在 storage 層面，每個應用程式也是完全隔離的。
+
+> 最後快速展示一下，當上面那個 `wslc run -it` 指令跑起來時，底下發生什麼事：
+>
+> - Volume mount：我要把 Windows 上 `C:\data` map 到 Linux 容器內的 `/data`
+> - 我要建立 `debian:latest` 容器
+>
+> 這個指令發出去時，container runtime 建立 `debian:latest` 容器，並掛載 `/data` volume。
+>
+> 然後在底層，我們把 `/data` folder（或 volume）map 到 Windows 的 `C:\data` folder，用的是 **VirtIO FS**。
+>
+> VirtIO FS 是個相對新的 file sharing protocol，用於 VM 跟 hypervisor 之間的檔案分享。對我們來說，這裡有額外的複雜度：要翻譯兩種完全不同的 OS 之間的 file system 語意。
+>
+> 如果你用過 WSL，它今天用的是 **Plan 9**。VirtIO FS 在這個環境下大約快 2 倍。我們會持續投資這個領域，看各種替代方案讓它更快。
+
+---
+
+## 00:21:47 — 其他 WSL 新功能
+
+> 在 WSL Containers 收尾前，我想快速繞一下，講一下 WSL 還有什麼新東西。
+
+Pooja：
+> **Microsoft 的 Linux distro：Azure Linux 4.0** 現在 GA 了。同一個 distro，AKS 跑的就是這個。這是 Azure 用的，所以如果你用這個，會得到一致、經實戰驗證的環境。Microsoft 提供整個 Linux stack — 從 build 到 deployment 都有單一 vendor full supply chain attestation，你知道有問題要找誰。
+>
+> VM 已經可用了，你可以試。WSL distro 變體也即將推出。一旦推出，希望你把它當 WSL distro 之一試用。它是 container-optimized、輕量的。請試用並給我們 feedback。
+
+> WSL Containers 講完了。我們會在 CLI blog 發文通知。請用你的真實情境試用並告訴我們你的感受、給我們 feedback 讓我們改進。
+>
+> 我們計劃 **2026 年 6 月底**進入 public preview，到時你就能試用。我們 open source，進度公開在 `github.com/microsoft/wsl`。
+>
+> 我們會在這裡回答問題，Moonray 的 dev lead 也會在這裡。
+>
+> 謝謝大家。
+
+---
+
+## 譯註
+
+- 翻譯原則：保留技術術語原文（WSL、Moby、VirtIO FS、Plan 9、HV socket 等），輔以中文解釋
+- 講者口語化的「um」「you know」「right」等虛詞已略
+- Demo 過程中的「好」「nice」「right」等語助詞保留以維持語感
+- 章節時間碼來自影片原始章節標記（YouTube description）

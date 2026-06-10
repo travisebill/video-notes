@@ -56,6 +56,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-26 | [AI Agent 開發實踐：Spec-Driven、Guard Rails 與軟體品質](技術講座/20260526_開發者對談_AI代理Spec-Driven與GuardRails.md) | 開發者對談 | 39 分鐘 |
 | 2026-06-08 | [超越元件：為 MCP Apps 設計生成式 UI](技術講座/20260608_RubenCasas_超越元件生成式UI_MCPApps.md) | Ruben Casas (Postman) | 17 分鐘 |
 | 2026-06-09 | [WWDC 2026 第一印象：Yeah, That's About Right](技術講座/20260609_MKBHD_WWDC2026_YeahThatsAboutRight.md) | Marques Brownlee (MKBHD) | 16 分鐘 |
+| 2026-06-10 | [WSL Containers 改進及 CLI + APIs #DEM346](技術講座/20260610_PoojaTrivedi_WSL Containers 改進及 CLI + APIs.md) | Pooja Trivedi (Microsoft) × Craig (Microsoft) | 23 分鐘 |
 
 ### 逐字稿
 
@@ -99,6 +100,8 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-06-09 | MKBHD WWDC 2026 第一印象演講逐字稿 | [txt](transcripts/20260609_MKBHD_WWDC2026_逐字稿.txt) |
 | 2026-05-12 | 歐麗娟「王維」訪談口播稿（TTS 輸入稿）| [txt](transcripts/20260512_歐麗娟_王維與唐代貴族_口播稿.txt) |
 | 2026-06-02 | Mo Gawdat「AI 倫理」訪談口播稿（TTS 輸入稿）| [txt](transcripts/20260602_Mo_Gawdat_AI倫理與人類未來_口播稿.txt) |
+| 2026-06-10 | Pooja Trivedi (Microsoft) × Craig (Microsoft)「WSL Containers 改進及 CLI + APIs」演講逐字稿 | [txt](transcripts/20260610_PoojaTrivedi_WSL Containers 改進及 CLI + APIs_逐字稿.txt) |
+| 2026-06-10 | Pooja Trivedi (Microsoft) × Craig (Microsoft)「WSL Containers 改進及 CLI + APIs」口播稿（TTS 輸入稿，簡體版）| [txt](transcripts/20260610_PoojaTrivedi_WSL Containers 改進及 CLI + APIs_口播稿.txt) |
 
 ### 🎙️ 影片音檔
 
@@ -110,6 +113,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-04-25 | 李宏毅「AI 能自我修正嗎？」 | [opus 1.5MB](audio/20260425_李宏毅_AI自我修正Decoding到Reasoning.opus) · [m4a 2.0MB](audio/20260425_李宏毅_AI自我修正Decoding到Reasoning.m4a) · [mp3 2.9MB](audio/20260425_李宏毅_AI自我修正Decoding到Reasoning.mp3) |
 | 2026-05-12 | 歐麗娟「王維與唐代貴族」 | [opus 1.9MB](audio/20260512_歐麗娟_王維與唐代貴族.opus) · [m4a 2.6MB](audio/20260512_歐麗娟_王維與唐代貴族.m4a) · [mp3 3.7MB](audio/20260512_歐麗娟_王維與唐代貴族.mp3) |
 | 2026-06-02 | Mo Gawdat × Steven Bartlett「AI 倫理與人類未來」 | [opus 1.8MB](audio/20260602_Mo_Gawdat_AI倫理與人類未來.opus) · [m4a 2.5MB](audio/20260602_Mo_Gawdat_AI倫理與人類未來.m4a) · [mp3 3.6MB](audio/20260602_Mo_Gawdat_AI倫理與人類未來.mp3) |
+| 2026-06-10 | Pooja Trivedi × Craig「WSL Containers 改進及 CLI + APIs」 | [opus 1.6MB](audio/20260610_PoojaTrivedi_WSL Containers 改進及 CLI + APIs.opus) · [m4a 2.2MB](audio/20260610_PoojaTrivedi_WSL Containers 改進及 CLI + APIs.m4a) · [mp3 3.3MB](audio/20260610_PoojaTrivedi_WSL Containers 改進及 CLI + APIs.mp3) |
 
 音檔生成流程：影片 → 抓字幕 / 讀架構文件 → 寫口播稿（簡體中文，speech-2.8-hd 處理效果最佳）→ MiniMax TTS voice clone 合成（cloud, ~30s 推論, speech-2.8-hd 支援 interjection emotion tags）。每篇架構文件底部都有「🎙️ 音檔導覽」section 連結到音檔。
 

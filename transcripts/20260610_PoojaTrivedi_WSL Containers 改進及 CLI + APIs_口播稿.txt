@@ -1,0 +1,13 @@
+各位，这段口说稿整理自 Microsoft Build 二零二六 DEM三四六：WSL 的改进以及新的 Containers CLI 与 APIs，由 Pooja Trivedi 与 Craig 两位微软讲者亲自分享。
+
+整场演讲浓缩成三个重点。第一，现在可以在 Windows 本机直接运行 Linux 容器，无论是命令行直接操作，或通过 API 内嵌到 Windows 应用程序里。第二，这是 WSL 内置功能，随着 WSL 更新就会送达，无需安装 Docker Desktop、无需启动任何守护进程。第三，企业级工具直接可用，包括 Intune 与 Microsoft Defender for Endpoint，组织不再需要担心黑箱虚拟机无法管理。
+
+接着看 CLI 展示。新的命令行工具叫做 wslc，同时 alias 为 container。命令结构与业界标准对齐，Docker 或 Podman 用户几乎零学习成本。第一个展示是用 wslc dash it debian:latest 启动 Debian 容器的交互 shell，Ctrl P 加上 Ctrl Q 卸离，wslc ps dash a 查看状态，整个流程干净俐落。第二个展示是用 Containerfile 自订映像，打造一个名为 linuxpy 的小型 Python 工具，用 dash p 将容器内的 5000 port 对应到 Windows 主机的本机端，浏览器打开 localhost 就能访问。过程中讲者特别展示了一个彩蛋：微软已把大约一百六十八个 Core Utils 全部移植到 Windows 上，所以在 PowerShell 里直接 grep 没有问题。第三个展示是 GPU 加速，讲者跑 GPT-2 的 fine tuning 并用 torch compile 产生 Triton 内核，再做 compiled 与 eager mode 的速度对比。重点是 GPU 从 Windows 主机透通到 Linux 容器，性能毫无落差。
+
+接下来是 API 展示。讲者用 wslc SDK 的 NuGet 套件，把 Linux 容器功能嵌进 Windows 应用程序里。现场示范了两个案例。第一个是 Moonray 渲染引擎，这是 DreamWorks 动画用来制作《坏蛋联盟二》与《荒野机器人》的开源 Linux 工具，讲者直接运行 moonray.exe，背后是完整的 Linux 容器在工作，但对用户而言，看起来就是普通的 Windows 应用程序。第二个是 Herbert 股票代理人，这是一个故意设计成会乱删除文件的 AI 代理人，用来展示 blast radius control 的设计。虽然 Herbert 确实删除了 Windows 文件，但因为路径被严格限制在 C 槽 temp 文件夹底下，爆炸范围可控。这正是企业最在意的特性。
+
+现在讲到架构内核。每个 Windows 应用程序，无论是通过 API 或 CLI 启动，都会获得一个专属的轻量型 utility VM。应用程序之间彼此隔离，容器名称冲突、port 冲突、保存冲突都不可能发生。架构分为三层。应用层是 Windows 应用程序，通过 IPC 与 WSL service 通信。WSL service 是中枢，既管理既有的 WSL distro 生命周期，也添加容器管理能力。VM 层内部跑 Moby，也就是 Docker 的开源上游容器引擎。WSL service 通过 HV socket 与 Moby 通信，HV socket 是每个 VM 与 Hypervisor 之间一对一的专属信道，不是网络 socket。保存方面，每个应用程序都有一个独立的 VHD 虚拟硬盘，CLI 流程也独立。文件分享使用 VirtIO FS，这是相对新的 protocol，取代 WSL 既有的 Plan 9，速度大约是两倍。
+
+最后是时程。WSL Containers 将于二零二六年六月底进入公开预览。Azure Linux 四点零正式发布，WSL distro 变体即将推出。整个项目完全开源，进度公开于 github.com/microsoft/wsl。讲者在最后呼吁，欢迎用真实世界的情境试用并回馈，微软会持续改进。
+
+以上就是这场二十三分钟演讲的架构摘要。整个设计思路很清楚：把 Linux 容器收进 WSL 内置、用企业熟悉的 Windows 工具管理、开发者用 CLI 写、ISV 用 SDK 内嵌，底层共用同一个轻量 utility VM。六月底公开预览，开发者值得密切关注。
