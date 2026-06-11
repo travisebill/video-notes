@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **36 支影片** · 8 個音檔 · 36 個逐字稿 · 9 個口播稿
+> **36 支影片** · 9 個音檔 · 36 個逐字稿 · 10 個口播稿
 > 最後更新：2026-06-11
 
 ---
@@ -38,7 +38,7 @@
 | 2026-06-09 | [WWDC 2026 Impressions: Yeah, That's About Right](技術講座/20260609_MKBHD_WWDC2026_YeahThatsAboutRight.md) | ? | 16:28 | [📄 note](技術講座/20260609_MKBHD_WWDC2026_YeahThatsAboutRight.md) · [📝 逐字稿](transcripts/20260609_MKBHD_WWDC2026_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260609_MKBHD_WWDC2026_口播稿.txt) · [🔊 opus](audio/20260609_MKBHD_WWDC2026.opus) · [🔊 m4a](audio/20260609_MKBHD_WWDC2026.m4a) · [🔊 mp3](audio/20260609_MKBHD_WWDC2026.mp3) |
 | 2026-06-08 | [Nick Hanauer × Daniel Priestley：中產階級之死、AI 對工作衝擊，與資本主義能否自我修正](人物訪談/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.md) | Nick Hanauer | 2 小時 32 分 26 秒 | [📄 note](人物訪談/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.md) · [📝 逐字稿](transcripts/20260608_NickHanauer_DanielPriestley_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊_口播稿.txt) · [🔊 opus](audio/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.opus) · [🔊 m4a](audio/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.m4a) · [🔊 mp3](audio/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.mp3) |
 | 2026-06-08 | [Generative UI 與 MCP Apps：Ruben Casas @ Postman](技術講座/20260608_RubenCasas_超越元件生成式UI_MCPApps.md) | Generative UI 與 MCP Apps | ? | [📄 note](技術講座/20260608_RubenCasas_超越元件生成式UI_MCPApps.md) · [📝 逐字稿](transcripts/20260608_RubenCasas_BeyondComponents_MCPApps_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260608_RubenCasas_BeyondComponents_MCPApps_口播稿.txt) |
-| 2026-06-08 | [Matt Pocock：Learn anything with the /teach skill](技術講座/20260608_MattPocock_teach_skill_個人化學習.md) | Matt Pocock | 13 分 04 秒 | [📄 note](技術講座/20260608_MattPocock_teach_skill_個人化學習.md) · [📝 逐字稿](transcripts/20260608_MattPocock_teach_skill_逐字稿.txt) |
+| 2026-06-08 | [Matt Pocock：Learn anything with the /teach skill](技術講座/20260608_MattPocock_teach_skill_個人化學習.md) | Matt Pocock | 13 分 04 秒 | [📄 note](技術講座/20260608_MattPocock_teach_skill_個人化學習.md) · [📝 逐字稿](transcripts/20260608_MattPocock_teach_skill_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260608_MattPocock_teach_skill_個人化學習_口播稿.txt) · [🔊 opus](audio/20260608_MattPocock_teach_skill_個人化學習.opus) · [🔊 m4a](audio/20260608_MattPocock_teach_skill_個人化學習.m4a) · [🔊 mp3](audio/20260608_MattPocock_teach_skill_個人化學習.mp3) |
 | 2026-06-02 | [Mo Gawdat 談 AI 倫理與人類未來 — 結構化筆記](人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md) | ? | ? | [📄 note](人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md) · [📝 逐字稿](transcripts/20260602_Mo_Gawdat_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260602_Mo_Gawdat_AI倫理與人類未來_口播稿.txt) · [🔊 opus](audio/20260602_Mo_Gawdat_AI倫理與人類未來.opus) · [🔊 m4a](audio/20260602_Mo_Gawdat_AI倫理與人類未來.m4a) · [🔊 mp3](audio/20260602_Mo_Gawdat_AI倫理與人類未來.mp3) |
 | 2026-05-31 | [No Vibes Allowed: Solving Hard Problems in Complex Codebases](技術講座/20260531_Dex_12FactorAgents_NoVibesAllowed.md) | ? | ? | [📄 note](技術講座/20260531_Dex_12FactorAgents_NoVibesAllowed.md) · [📝 逐字稿](transcripts/20260531_Dex_12FactorAgents_逐字稿.txt) |
 | 2026-05-28 | [Building Proactive Agent Workflows with Claude Code](技術講座/20260528_Maya_Claude_Code_Routines_主動代理工作流.md) | ? | ? | [📄 note](技術講座/20260528_Maya_Claude_Code_Routines_主動代理工作流.md) · [📝 逐字稿](transcripts/20260528_Maya_Claude_Code_Routines_主動代理工作流_逐字稿.txt) |

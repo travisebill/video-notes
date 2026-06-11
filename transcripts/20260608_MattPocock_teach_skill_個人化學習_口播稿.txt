@@ -1,0 +1,63 @@
+TypeScript 教育者 Matt Pocock 在 2026 年 6 月发布的一段 13 分钟教学影片，示范了一个他自己设计、却在影片中亲自拿来当学生的工具。它叫做 /teach，是 Claude Code 上的一个 skill。Matt 在影片里用 /teach 学「解魔术方块」 — 一个他一直想学、但始终抽不出时间做的事。影片的核心张力在于：教了 10 年 dev 的人，把自己最擅长的「教」这件事，封装成了可被任何 coding agent 调用的可重复流程。
+
+(sighs)
+
+这个 skill 之所以值得关注，是因为它做了一件教育界长期想做、却始终做不好的事 — 把个人化教学的成本降到接近零。Matt 把 /teach 的工作流拆成 5 个可程序化的步骤：Mission、Resources、Lessons、Quizzes、Records。任何学生只要在这 5 个步骤里依序推进，就会得到一个「记住你进度、调整后续课程、用 ZPD 难度教学」的个人化老师。影片里 Matt 反复强调，这个 skill 的设计不是工程美学，是教育心理学的具体实践。
+
+Matt 在影片开头先解释了一个关键的设计决策：skill 必须有 stateful 与 stateless 之分。他用自己之前做的两个 skill 做对比。Grill with Docs 是 stateful 的，它会把新的问答累积到 repo 里，越用越好。Grill me 是 stateless 的，每次执行都从零开始。Matt 说，两种各有适用场景，但 /teach 必须是 stateful — 因为学习是一个连续过程，必须记得学生已经会什么、不会什么。
+
+从工具设计的角度，stateful 与 stateless 的取舍不是品味问题，是 product 决策。一个 stateless 的教学工具，每次都从「你应该先学 X」开始，违反「教学是连续过程」的基本事实。一个 stateful 的教学工具，必须解决三个工程问题：状态存哪里、如何读回、如何防止状态腐败。Matt 的选择是用档案系统（lessons、learning_records 资料夹）作为状态的载体，不用资料库 — 这样状态本身可读、可版控、可被学生自己检视。
+
+(sighs)
+
+Matt 启动 /teach 后，做的第一件事是建立 Mission。这不是技术细节，是教育心理学。Matt 引用了 Self-Determination Theory（自我决定理论）：一个老师要有效，必须理解学生为什么学这件事。如果学生不知道为什么，「学」就变成被动接收、效果低落。所以 /teach 强制在第一步骤问 mission。
+
+影片里 Matt 的 mission 范例是这样的：「Matt wants to be able to take a scrambled 3x3 Rubik's Cube and solve it unaided at least once. The goal is the achievement itself, not speed, not theory.」 — 重点不是「成为魔术方块高手」，是「我只要能完成一次」。mission 决定了整个课程的方向。
+
+从学习动机的角度，这个设计回应了教育心理学一个被反复验证的发现：内在动机（我想要）比外在动机（我应该）产生更持久的学习效果。Matt 写的 mission 把目标收窄到「一次就好」 — 这恰恰是设计上的精准，避免学生一开始就因为「魔术方块好难」而放弃。
+
+(sighs)
+
+Mission 完成后，/teach 会自动去搜寻 Resources — primary source、high trust 的学习素材。这件事只在第一次执行时完整跑，后续根据学生进度做增量更新。影片里 Matt 提到，他的魔术方块 resources 包含解法教学、notation 规范、cubing 社群等。
+
+从资讯素养（Information Literacy）的角度，这个步骤是 /teach 价值密度最高的一环。一个好的老师会帮学生过滤掉网路上 90% 的低品质内容，直接指向 primary source。/teach 用 AI agent 自动化了这个过滤，让学生在第一步骤就获得一个 high trust 的学习素材库。这个设计也呼应了 Bloom's 2 Sigma Problem 的研究：Bloom 在 1984 年的实验中证明，1 对 1 教学加 mastery learning 可让学生的表现比传统团班高 2 个标准差 — 关键就在于「即时诊断 + 个人化调整 + 反馈循环」。
+
+接下来是 Lessons。Matt 解释了一个看似工程、实则教学的关键选择：每个 lesson 存成独立的 HTML 档案，不是 Markdown。原因是 HTML 比 Markdown 丰富太多 — 允许互动元素、视觉化、自订 CSS、quiz widgets。
+
+从教学工程化的角度，这个选择背后的逻辑是「教」不只是「给文字」。一个好的 lesson 应该让学生能「做点什么」 — 拖曳方块、即时输入答案、看到视觉化的概念图。Markdown 是文字排版工具，无法承载这种「设计体验」的需求。Matt 用 HTML 优先，等于把教学设计拉到 web design 的层级。
+
+(sighs)
+
+每个 lesson 都有 quiz。Matt 在影片里说：「Quizzes are okay at this — they're basically good if you can't find any richer feedback loop.」 — 这句话是工程师的务实，也是教育心理学的精准。教 → 测 → 调整的闭环（feedback loop）是 Bloom 2 Sigma Problem 的关键变量之一。没有 quiz，学生不知道自己会不会，老师也不知道下一步该教什么。
+
+但 Matt 也承认，quiz 是退而求其次。理想是让学生在「真实情境中实作」 — 例如真的试着解魔术方块，看看是不是真的能完成。quiz 在无法获得这种 rich feedback 时的替代品 — 它能用，但不该是终点。
+
+Learning Records 是 /teach 的个人化机制。当学生回报「我学会了 white cross」，skill 会把这个状态存到 learning_records 资料夹，下次教新内容时自动跳过已会的部分。Matt 在影片里说：「Just like a real teacher, then tailor the next lesson to what I need.」
+
+从适应性学习（Adaptive Learning）的角度，learning records 是 /teach 整个工作流的核心。没有 records，每次 /teach 都从「你应该先学 X」开始 — 等于 stateless skill 的退化。Records 让 skill 记得学生的历史，从而在 ZPD 的范围内动态调整。
+
+Glossary 是 /teach 额外建立的术语表。Matt 自己学魔术方块时发现这个工具特别需要 — 魔术方块有 F2L、OLL、PLL 等缩写，学生没学过这些术语，连教学都看不懂。好的教学不只教 skill，也教 vocabulary — 让学生能进入那个领域的对话。
+
+(sighs)
+
+影片的中段，Matt 解释了 /teach 核心教学法：Vygotsky 的「最近发展区」（Zone of Proximal Development, ZPD）。这个概念 1978 年提出，认为学生有一个「已有的能力」下限、一个「完全超出」的上限，中间有一块「在协助下能完成」的区间 — 那就是 ZPD。太简单会无聊，太难会挫折，刚好才会学习。
+
+/teach 把 ZPD 变成可执行的程序代码。从 mission 知道学生起点，从 learning records 知道学生已会什么，design lesson 刚好在「差一就会」的难度区间，用 quiz 确认学生真的懂了才前进。这是 ZPD 概念第一次真正大规模可执行 — 因为 1978 年提出时，「找到学生差一就会的难度」需要老师即时诊断，难以规模化。/teach 用 AI 把这个诊断自动化。
+
+从教育史的角度，/teach 实际上是 Vygotsky 1978 → Bloom 1984 → 2026 AI agent 这条个人化教学路线的最新一站。每一个阶段都解决前一阶段无法规模化的瓶颈。Vygotsky 提出概念但难执行，Bloom 用 mastery learning 部分执行但成本高，Matt 用 AI agent 把成本降到接近零。
+
+(sighs)
+
+影片后半段，Matt 列了 /teach 的几个 use case：onboarding 新工程师、学新技术栈、培养 debug 思维、纯兴趣学习。每一个都有具体的应用场景：onboarding 用 /teach 教新人该团队的技术栈约定，比文件好（互动 + 个人化）；学新技术例如 Rust、Kubernetes、新 framework，/teach 自动找 primary source 整理成课程；培养 debug 思维这种 meta skill，/teach 可以教「如何系统性地找 bug」；纯兴趣就像 Matt 自己用 /teach 学魔术方块。
+
+从产品定位的角度，这些 use case 揭示了 /teach 的真正野心：不是「AI 教学产品」，是「让学习任何东西都变得跟看教学影片一样容易」。这把个人化学习的门槛，从「请得起家教」降到「会打字就行」。
+
+Matt 在影片最后说了一句值得深思的话：「Developers are going to be the first movers in the AI revolution.」 — 开发者是 AI 时代的第一批先行者。表面上是行销话术，实际有深意。开发者懂组装（不是用 AI 工具就好，是把 AI 工具 + 其他工具组成 workflow）、懂迭代（不追求一次到位，release early, iterate often）、懂自动化（把重复的「教学」这类任务程序化）、懂个人化（每个人有自己的需求、自己的 stack、自己的学习曲线）。
+
+/teach skill 本身就是这个论点的证明。Matt 没有等「完美的 AI 教学产品」出现，他自己用 13 分钟的影片 + 一个 skill 就把它做出来了。从开发者文化的角度，这是一种自给自足的精神：先有需求，先自己组一个工具，跑起来再迭代。这跟传统的「等大公司开发产品」逻辑相反。
+
+(sighs)
+
+影片最后一个建议是 connect to community。Matt 推荐他的 newsletter、skills repo、Total TypeScript 社群。他强调一句：「The only way you're going to develop wisdom about the thing is actually interacting with a community, testing your ideas out in the real world.」 — 知识、技能、智慧是三个层次。AI 工具能教你知识、辅助你练习技能，但智慧需要社群互动、真实世界碰撞。/teach 是「知识 → 技能」的最强辅助，但不是「技能 → 智慧」的替代品。
+
+这个限制反而是 /teach 的优点。它没有假装能取代社群、取代真实世界、取代老师。它把 AI 该做的事做到极致，把 AI 做不到的事（社群互动、即时人性反馈、长期信任）留给人类。这种边界意识，是 2026 年 AI 工具最成熟的设计哲学。
