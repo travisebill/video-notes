@@ -14,6 +14,7 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-12 | [蔡康永：關於衰老、死亡、AI 與人生的終極提問](人物訪談/20260512_蔡康永_衰老死亡與AI.md) | 蔡康永 × 羅永浩 | 3 小時 36 分 |
 | 2026-05-12 | [民主如何消亡——以及我們如何阻止它發生](人物訪談/20260512_Anne_Applebaum_民主如何消亡.md) | Anne Applebaum | 1 小時 48 分 |
 | 2026-06-02 | [Mo Gawdat 談 AI 倫理與人類未來](人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md) | Mo Gawdat × Steven Bartlett | 約 2 小時 |
+| 2026-06-11 | [Graham Hancock：失落古文明、12,800 年前的人類浩劫，與南極被發現的真相](人物訪談/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.md) | Graham Hancock × Steven Bartlett | 1 小時 56 分 |
 
 ### 國際局勢
 
@@ -101,7 +102,9 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-12 | 歐麗娟「王維」訪談口播稿（TTS 輸入稿）| [txt](transcripts/20260512_歐麗娟_王維與唐代貴族_口播稿.txt) |
 | 2026-06-02 | Mo Gawdat「AI 倫理」訪談口播稿（TTS 輸入稿）| [txt](transcripts/20260602_Mo_Gawdat_AI倫理與人類未來_口播稿.txt) |
 | 2026-06-10 | Pooja Trivedi (Microsoft) × Craig (Microsoft)「WSL Containers 改進及 CLI 與 APIs」演講逐字稿 | [txt](transcripts/20260610_PoojaTrivedi_WSL Containers 改進及 CLI 與 APIs_逐字稿.txt) |
+| 2026-06-11 | Graham Hancock「失落古文明」訪談逐字稿 | [txt](transcripts/20260611_Graham_Hancock_逐字稿.txt) |
 | 2026-06-10 | Pooja Trivedi (Microsoft) × Craig (Microsoft)「WSL Containers 改進及 CLI 與 APIs」口播稿（TTS 輸入稿，簡體版）| [txt](transcripts/20260610_PoojaTrivedi_WSL Containers 改進及 CLI 與 APIs_口播稿.txt) |
+| 2026-06-11 | Graham Hancock「失落古文明」訪談口播稿（TTS 輸入稿，簡體版）| [txt](transcripts/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫_口播稿.txt) |
 
 ### 🎙️ 影片音檔
 
@@ -114,9 +117,10 @@ YouTube 影片逐字稿與結構化筆記。由 Ryo 🐱 自動整理。
 | 2026-05-12 | 歐麗娟「王維與唐代貴族」 | [opus 1.9MB](audio/20260512_歐麗娟_王維與唐代貴族.opus) · [m4a 2.6MB](audio/20260512_歐麗娟_王維與唐代貴族.m4a) · [mp3 3.7MB](audio/20260512_歐麗娟_王維與唐代貴族.mp3) |
 | 2026-06-02 | Mo Gawdat × Steven Bartlett「AI 倫理與人類未來」 | [opus 1.8MB](audio/20260602_Mo_Gawdat_AI倫理與人類未來.opus) · [m4a 2.5MB](audio/20260602_Mo_Gawdat_AI倫理與人類未來.m4a) · [mp3 3.6MB](audio/20260602_Mo_Gawdat_AI倫理與人類未來.mp3) |
 | 2026-06-10 | Pooja Trivedi × Craig「WSL Containers 改進及 CLI 與 APIs」 | [opus 1.6MB](audio/20260610_PoojaTrivedi_WSL Containers 改進及 CLI 與 APIs.opus) · [m4a 2.2MB](audio/20260610_PoojaTrivedi_WSL Containers 改進及 CLI 與 APIs.m4a) · [mp3 3.3MB](audio/20260610_PoojaTrivedi_WSL Containers 改進及 CLI 與 APIs.mp3) |
+| 2026-06-11 | Graham Hancock「失落古文明與 12,800 年前的人類浩劫」 | [opus 2.1MB](audio/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.opus) · [m4a 2.8MB](audio/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.m4a) · [mp3 4.1MB](audio/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.mp3) |
 
 音檔生成流程：影片 → 抓字幕 / 讀架構文件 → 寫口播稿（簡體中文，speech-2.8-hd 處理效果最佳）→ MiniMax TTS voice clone 合成（cloud, ~30s 推論, speech-2.8-hd 支援 interjection emotion tags）。每篇架構文件底部都有「🎙️ 音檔導覽」section 連結到音檔。
 
 ---
 
-*最後更新：2026-06-09 | 由 [Ryo](https://github.com/travisebill) 自動維護*
+*最後更新：2026-06-11 | 由 [Ryo](https://github.com/travisebill) 自動維護*
