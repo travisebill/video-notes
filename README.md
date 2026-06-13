@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **36 支影片** · 9 個音檔 · 36 個逐字稿 · 10 個口播稿
-> 最後更新：2026-06-11
+> **37 支影片** · 12 個音檔 · 37 個逐字稿 · 11 個口播稿
+> 最後更新：2026-06-13
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-06-13** | Smitha（Google Cloud Tech）| [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) · 8 分 29 秒
 - **?** | 進階上下文工程 | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · ?
 - **2026-06-11** | Graham Hancock × Steven Bartlett | [Graham Hancock：失落古文明、12,800 年前的人類浩劫，與南極被發現的真相](人物訪談/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.md) · 1 小時 56 分 40 秒
 - **2026-06-10** | ? | [WSL Containers — 架構摘要筆記](技術講座/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.md) · ?
@@ -32,6 +33,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-13 | [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) | Smitha（Google Cloud Tech）| 8 分 29 秒 | [📄 note](技術講座/20260613_Smitha_AI_agents_explained.md) · [📝 逐字稿](transcripts/20260613_Smitha_AI_agents_explained_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260613_Smitha_AI_agents_explained_口播稿.txt) · [🔊 opus](audio/20260613_Smitha_AI_agents_explained.opus) · [🔊 m4a](audio/20260613_Smitha_AI_agents_explained.m4a) · [🔊 mp3](audio/20260613_Smitha_AI_agents_explained.mp3) |
 | ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) | 進階上下文工程 | ? | [📄 note](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · [📝 逐字稿](transcripts/202602_Dex_Context_Engineering_逐字稿.txt) |
 | 2026-06-11 | [Graham Hancock：失落古文明、12,800 年前的人類浩劫，與南極被發現的真相](人物訪談/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.md) | Graham Hancock × Steven Bartlett | 1 小時 56 分 40 秒 | [📄 note](人物訪談/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.md) · [📝 逐字稿](transcripts/20260611_Graham_Hancock_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫_口播稿.txt) · [🔊 opus](audio/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.opus) · [🔊 m4a](audio/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.m4a) · [🔊 mp3](audio/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.mp3) |
 | 2026-06-10 | [WSL Containers — 架構摘要筆記](技術講座/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.md) | ? | ? | [📄 note](技術講座/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.md) · [📝 逐字稿](transcripts/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs_口播稿.txt) · [🔊 opus](audio/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.opus) · [🔊 m4a](audio/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.m4a) · [🔊 mp3](audio/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.mp3) |
@@ -97,8 +99,9 @@
 - 2026-04-25 | [AI 能自我修正嗎？從 Decoding、Workflow 到 Reasoning 的技術發展整理](技術講座/20260425_李宏毅_AI自我修正Decoding到Reasoning.md) · ? · 88 分鐘
 - 2026-04-12 | [Harness Engineering：有時候語言模型不是不夠聰明，只是沒有人類好好引導](技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md) · Harness Engineering · 92 分鐘
 
-### 🛠️ **編碼工具 / Agent 工程實踐**（7 支）
+### 🛠️ **編碼工具 / Agent 工程實踐**（8 支）
 
+- 2026-06-13 | [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) · Smitha（Google Cloud Tech）· 8 分 29 秒
 - 2026-06-10 | [WSL Containers — 架構摘要筆記](技術講座/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.md) · ? · ?
 - 2026-06-08 | [Generative UI 與 MCP Apps：Ruben Casas @ Postman](技術講座/20260608_RubenCasas_超越元件生成式UI_MCPApps.md) · Generative UI 與 MCP Apps · ?
 - 2026-05-25 | [從零到數百個 AI Agent：Datadog 的規模化經驗](技術講座/20260525_Datadog_從零到數百Agent規模化.md) · Datadog AI 團隊 · 26 分 23 秒
@@ -142,6 +145,7 @@
 <a id="by-speaker"></a>
 ## 👥 按講者
 
+- **Smitha（Google Cloud Tech）** · 2026-06-13 | [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) · 8 分 29 秒
 - **進階上下文工程** · ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · ?
 - **Graham Hancock × Steven Bartlett** · 2026-06-11 | [Graham Hancock：失落古文明、12,800 年前的人類浩劫，與南極被發現的真相](人物訪談/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.md) · 1 小時 56 分 40 秒
 - **Nick Hanauer** · 2026-06-08 | [Nick Hanauer × Daniel Priestley：中產階級之死、AI 對工作衝擊，與資本主義能否自我修正](人物訪談/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.md) · 2 小時 32 分 26 秒
@@ -169,8 +173,8 @@
 - 🎙️ **人物訪談**（6 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（3 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（2 支）→ [完整列表](財經分析/README.md)
-- 🛠️ **技術講座**（25 支）→ [完整列表](技術講座/README.md)
+- 🛠️ **技術講座**（26 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-06-11 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 36 支影片*
+*最後更新：2026-06-13 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 37 支影片*

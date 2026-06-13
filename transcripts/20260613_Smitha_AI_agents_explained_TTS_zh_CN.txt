@@ -1,0 +1,13 @@
+这支影片是 Google Cloud Tech 出品的，标题是 AI agents explained，讲者 Smitha 用八分钟把 AI Agent 从观念讲到实作。我把重点整理给你。
+
+第一个重点，Agent 跟 Chatbot 到底差在哪。Chatbot 是你问一句它答一句，一次性的回应就结束。Agent 不一样，它会先拆解问题，想好步骤，然后呼叫 API、执行程式码、查资料，看结果对不对，最后再决定下一步该怎么走。学术上最经典的解释来自 ReAct 这篇论文，全名是 Synergizing Reasoning and Acting in Language Models，核心概念就是一个循环：思考、行动、观察、调整。这个循环就是现代 AI Agent 的地基。
+
+第二个重点，三种常见的 Agent 设计模式。第一种叫 Sequential，循序型，像生产线一样一步一步跑，优点是稳定可预测，缺点是太僵硬。第二种叫 Reactive，反应式，根据当下状态决定下一步，很灵活但不会事先规划。第三种叫 Deliberate 或 Planning agent，会先拟定计划再执行，适合多步骤且有前后相依性的任务，例如订机票和饭店。实务上要选哪一种，看的是问题的复杂度，简单固定就用循序，动态环境用反应式，多步骤有依赖就用规划型。
+
+第三个重点，实作。影片用 Google 的 Agent Development Kit，简称 ADK，示范怎么打造一个部落格写手 Agent。给它一个主题，它会先规划大纲，再写成完整文章，最后再产出三个备选标题和两条 tweet 长度的 hook。整个系统由四个子 Agent、两个验证 Checker、跟一个 Root Agent 组成。Root Agent 叫做 blogger，它只对外暴露两个工具：规划器和写手。内部则是用 Loop Agent 把规划器和它的 Checker 包在一起，写手和它的 Checker 也一样包起来。Checker 的设计很关键，规划 Checker 检查大纲有没有标题、有没有引言、有没有四到六个章节、有没有结论，缺什么就要回答 retry 并说明缺什么，齐全才回答 okay。Loop Agent 收到 retry 就重跑，最多三次，这就是 LLM 偶尔会漏东西时候的安全网。这个 Loop 加 Validation 的 pattern 在生产等级的 Agent 系统里非常常见，概念上就像 unit test 的 retry 机制。
+
+最后一个重点，Root Agent 的设计哲学。Root Agent 只暴露两个工具给使用者，它不直接管内部的 Loop 细节，对它来说工作流程就是先 plan 再 write，越简洁越好预测。影片最后在 ADK 的 web UI 跑了一个 demo，下指令写一篇 top 10 use cases for AI agents 的部落格，可以看到子 Agent 怎么协作完成任务。
+
+这支影片的价值在于，从观念到程式码一次走完，而且展示的设计模式，不管是 Loop 搭配 Validation 还是 Root 编排 Sub Agent，在其他框架像 LangGraph 或 CrewAI 也都适用，观念是相通的。Google ADK 跟其他家比较不一样的地方，在于它整合了 Vertex AI 跟 Gemini，整个 Google 生态的支援比较完整。
+
+如果你想真的动手做，影片说明栏有 codelab 连结跟 GitHub repo 还有 ADK 的官方网站，我都会附在笔记里。摘要到这边，谢谢。

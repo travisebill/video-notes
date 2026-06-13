@@ -1,10 +1,11 @@
 # 技術講座 — Video Notes
 
-> **25 支影片**
+> **26 支影片**
 > [← 回到主 README](../../README.md)
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-13 | [AI Agents 入門：8 分鐘打造你的第一個 Agent](20260613_Smitha_AI_agents_explained.md) | Smitha（Google Cloud Tech）| 8 分 29 秒 | [📄 note](20260613_Smitha_AI_agents_explained.md) · [📝 逐字稿](../transcripts/20260613_Smitha_AI_agents_explained_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20260613_Smitha_AI_agents_explained_口播稿.txt) · [🔊 opus](../audio/20260613_Smitha_AI_agents_explained.opus) · [🔊 m4a](../audio/20260613_Smitha_AI_agents_explained.m4a) · [🔊 mp3](../audio/20260613_Smitha_AI_agents_explained.mp3) |
 | ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) | 進階上下文工程 | ? | [📄 note](../技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · [📝 逐字稿](../transcripts/202602_Dex_Context_Engineering_逐字稿.txt) |
 | 2026-06-10 | [WSL Containers — 架構摘要筆記](技術講座/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.md) | ? | ? | [📄 note](../技術講座/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.md) · [📝 逐字稿](../transcripts/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs_口播稿.txt) · [🔊 opus](../audio/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.opus) · [🔊 m4a](../audio/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.m4a) · [🔊 mp3](../audio/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.mp3) |
 | 2026-06-09 | [WWDC 2026 Impressions: Yeah, That's About Right](技術講座/20260609_MKBHD_WWDC2026_YeahThatsAboutRight.md) | ? | 16:28 | [📄 note](../技術講座/20260609_MKBHD_WWDC2026_YeahThatsAboutRight.md) · [📝 逐字稿](../transcripts/20260609_MKBHD_WWDC2026_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20260609_MKBHD_WWDC2026_口播稿.txt) · [🔊 opus](../audio/20260609_MKBHD_WWDC2026.opus) · [🔊 m4a](../audio/20260609_MKBHD_WWDC2026.m4a) · [🔊 mp3](../audio/20260609_MKBHD_WWDC2026.mp3) |
