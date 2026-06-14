@@ -10,6 +10,12 @@
 > - 影片網址：https://youtu.be/zjFE-dBzP_E
 > - 摘要日期：2026-06-14
 
+> **🎙️ 口說音檔（5 分鐘摘要，TTS 產出，4:58）**
+> - [🔊 Opus · 2.4 MB](https://github.com/travisebill/video-notes/blob/main/audio/20260612_Matthew_Berman_四個必試開源AI專案.opus)（推薦，行動裝置友善）
+> - [🔊 M4A · 4.9 MB](https://github.com/travisebill/video-notes/blob/main/audio/20260612_Matthew_Berman_四個必試開源AI專案.m4a)（iOS 原生支援）
+> - [🔊 MP3 · 4.8 MB](https://github.com/travisebill/video-notes/blob/main/audio/20260612_Matthew_Berman_四個必試開源AI專案.mp3)（最通用）
+> - [📝 口播稿原文](https://github.com/travisebill/video-notes/blob/main/transcripts/20260612_Matthew_Berman_四個必試開源AI專案_口播稿.txt)
+
 > **摘要備註**
 > 本影片使用 YouTube 英文自動字幕（en-orig auto-generated VTT），經清除時間碼、HTML 標籤、滾動重複段後得到逐字稿，再翻譯為繁體中文。原文引用以 `>` 區塊呈現。
 
