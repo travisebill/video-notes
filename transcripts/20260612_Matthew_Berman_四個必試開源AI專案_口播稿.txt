@@ -1,0 +1,18 @@
+嗨，我是 Ryo。今天幫你拆解一支 Matthew Berman 六月十二號剛發的影片，他一口氣介紹了四個你很可能沒聽過、但實戰上超級有用的開源 AI 專案。我把整部影片看完了，這篇口播會幫你把四個專案的來龍去脈、最重要的數字、和怎麼用一次講清楚。
+
+先講第一個，叫 Last 30 Days。這是 Lyft 共同創辦人 Matt Van Horn 寫的搜尋引擎 skill，目前在 GitHub 已經有四萬多顆星。它跟 Google 搜尋最大的差別是，它不是用演算法排名，而是去抓 Reddit 的 upvote、Hacker News、Polymarket 的下注、X 的按讚、YouTube 的留言——基本上就是「人類用真金白銀和注意力投票」的資料。V3 引擎還會先解析你的主題，例如你打 openclaw，它會自動對應到 Peter Steinberger 的 Twitter handle 和相關的 subreddit，再決定要去哪裡挖。你只要在 Claude Code 或 Cursor 裡打 /last-30-days，問它「最近在紅什麼」，它會給你一份簡報，連來源都附上。Matthew 現場 demo 查「loop engineering」——一個才誕生一週的新術語——它真的撈到了。
+
+第二個專案是 Open Notebook，是 Google NotebookLM 的開源本地版，約三萬顆星。你可以餵 PDF、貼文章連結，它幫你做摘要、回答問題，最特別的是它能生成 podcast 對談，而且是本地的。Matthew 現場把一篇《Long Humans》文章餵進去，跑了二十三分鐘的 podcast 出來，連「Transformations」功能都齊全：萃取 key insights、做 dense summary、產生反思問題、生成目錄。模型可以選雲端的 GPT-5.5，也可以完全離線用 Ollama，語音還可以接 11 Labs——就是這部影片的贊助商。
+
+第三個是 Agent Skills，作者是 Google Chrome 團隊的 Addy Osmani，已經有五萬六千多顆星。它給你七個 slash command，對應工程的七個階段：spec、plan、build、test、review、simplify、ship。最大特色是第一個指令 /interview-me，它會用訪談方式幫你釐清需求，然後直接生成 markdown 規格。Matthew 說這跟 Gary Tan 的 GStack 很像，但 GStack 是「幫你開公司」，Agent Skills 專注在工程流程本身。
+
+最後一個，也是我覺得最殺的，叫 Headroom，目前兩萬四千多顆星，正在起飛中。它做一件事：在 context 進到 LLM 之前，把它壓縮。壓縮對象包含 tool output、log、RAG chunk、檔案、對話歷史。實測數字很驚人：程式碼搜尋從一萬七千個 token 壓到一千四，省了九成二；事件除錯從六萬五千壓到五千，也是九成二；GitHub issue 追蹤省七成三；程式碼庫探索省四成七。品質還能維持——他們在 GSM8K、TruthfulQA、SQuAD、BFCL 四個 benchmark 測下來幾乎滿分。對我們這種 Claude Code quota 動不動就燒光的人來說，這是救星。
+
+Headroom 還有一個殺手級功能叫 headroom learn：它會去挖你失敗的 session，自動把修正寫進 CLAUDE.md 或 AGENTS.md，等於你每次踩雷，它都幫你寫進 agent 的長期記憶。安裝的時候有兩個小眉角：它預設會裝一個叫 serena 的外掛，跟它本體沒關係，加 --no-sa 跳過；telemetry 預設開啟，自己記得關。
+
+總結一下這四個專案的定位：Last 30 Days 解決「資訊過濾」問題，Open Notebook 解決「知識工作本地化」問題，Agent Skills 給你「工程流程紀律」，Headroom 解決「成本控制」問題。四個加起來，差不多就是一個 AI 時代工程師的整套生存配備。
+
+好，我是 Ryo，咱們下次見。
+
+> 註：本文為 Matthew Berman 影片之口播摘要，影片網址 https://youtu.be/zjFE-dBzP_E
+> ⚠️ 送 TTS 前須以 OpenCC t2s 預轉為簡體中文（G2P 相容性）

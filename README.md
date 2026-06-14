@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **38 支影片** · 15 個音檔 · 38 個逐字稿 · 12 個口播稿
-> 最後更新：2026-06-13
+> **39 支影片** · 16 個音檔 · 39 個逐字稿 · 13 個口播稿
+> 最後更新：2026-06-14
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-06-12** | Matthew Berman | [你必須立刻試試的 4 個開源 AI 專案：Last30Days、Open Notebook、Agent Skills、Headroom](技術講座/20260612_Matthew_Berman_四個必試開源AI專案.md) · 15 分 53 秒
 - **2026-06-13** | 自說自話的總裁 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) · 28 分 50 秒
 - **2026-06-13** | Smitha（Google Cloud Tech）| [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) · 8 分 29 秒
 - **?** | 進階上下文工程 | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · ?
@@ -34,6 +35,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-12 | [你必須立刻試試的 4 個開源 AI 專案：Last30Days、Open Notebook、Agent Skills、Headroom](技術講座/20260612_Matthew_Berman_四個必試開源AI專案.md) | Matthew Berman | 15 分 53 秒 | [📄 note](技術講座/20260612_Matthew_Berman_四個必試開源AI專案.md) · [📝 逐字稿](transcripts/20260612_Matthew_Berman_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260612_Matthew_Berman_四個必試開源AI專案_口播稿.txt) · [🔊 opus](audio/20260612_Matthew_Berman_四個必試開源AI專案.opus) · [🔊 m4a](audio/20260612_Matthew_Berman_四個必試開源AI專案.m4a) · [🔊 mp3](audio/20260612_Matthew_Berman_四個必試開源AI專案.mp3) |
 | 2026-06-13 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) | 自說自話的總裁 | 28 分 50 秒 | [📄 note](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) · [📝 逐字稿](transcripts/20260613_自說自話的總裁_上古中國的魔法時代_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260613_自說自話的總裁_上古中國的魔法時代_口播稿.txt) · [🔊 opus](audio/20260613_自說自話的總裁_上古中國的魔法時代.opus) · [🔊 m4a](audio/20260613_自說自話的總裁_上古中國的魔法時代.m4a) · [🔊 mp3](audio/20260613_自說自話的總裁_上古中國的魔法時代.mp3) |
 | 2026-06-13 | [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) | Smitha（Google Cloud Tech）| 8 分 29 秒 | [📄 note](技術講座/20260613_Smitha_AI_agents_explained.md) · [📝 逐字稿](transcripts/20260613_Smitha_AI_agents_explained_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260613_Smitha_AI_agents_explained_口播稿.txt) · [🔊 opus](audio/20260613_Smitha_AI_agents_explained.opus) · [🔊 m4a](audio/20260613_Smitha_AI_agents_explained.m4a) · [🔊 mp3](audio/20260613_Smitha_AI_agents_explained.mp3) |
 | ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) | 進階上下文工程 | ? | [📄 note](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · [📝 逐字稿](transcripts/202602_Dex_Context_Engineering_逐字稿.txt) |
