@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **39 支影片** · 16 個音檔 · 39 個逐字稿 · 13 個口播稿
-> 最後更新：2026-06-14
+> **40 支影片** · 17 個音檔 · 40 個逐字稿 · 14 個口播稿
+> 最後更新：2026-06-15
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-06-14** | 陳文茜 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒
 - **2026-06-12** | Matthew Berman | [你必須立刻試試的 4 個開源 AI 專案：Last30Days、Open Notebook、Agent Skills、Headroom](技術講座/20260612_Matthew_Berman_四個必試開源AI專案.md) · 15 分 53 秒
 - **2026-06-13** | 自說自話的總裁 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) · 28 分 50 秒
 - **2026-06-13** | Smitha（Google Cloud Tech）| [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) · 8 分 29 秒
@@ -35,6 +36,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) | 陳文茜 | 48 分 19 秒 | [📄 note](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · [📝 逐字稿](transcripts/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速_口播稿.txt) · [🔊 opus](audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.opus) · [🔊 m4a](audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.m4a) · [🔊 mp3](audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.mp3) |
 | 2026-06-12 | [你必須立刻試試的 4 個開源 AI 專案：Last30Days、Open Notebook、Agent Skills、Headroom](技術講座/20260612_Matthew_Berman_四個必試開源AI專案.md) | Matthew Berman | 15 分 53 秒 | [📄 note](技術講座/20260612_Matthew_Berman_四個必試開源AI專案.md) · [📝 逐字稿](transcripts/20260612_Matthew_Berman_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260612_Matthew_Berman_四個必試開源AI專案_口播稿.txt) · [🔊 opus](audio/20260612_Matthew_Berman_四個必試開源AI專案.opus) · [🔊 m4a](audio/20260612_Matthew_Berman_四個必試開源AI專案.m4a) · [🔊 mp3](audio/20260612_Matthew_Berman_四個必試開源AI專案.mp3) |
 | 2026-06-13 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) | 自說自話的總裁 | 28 分 50 秒 | [📄 note](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) · [📝 逐字稿](transcripts/20260613_自說自話的總裁_上古中國的魔法時代_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260613_自說自話的總裁_上古中國的魔法時代_口播稿.txt) · [🔊 opus](audio/20260613_自說自話的總裁_上古中國的魔法時代.opus) · [🔊 m4a](audio/20260613_自說自話的總裁_上古中國的魔法時代.m4a) · [🔊 mp3](audio/20260613_自說自話的總裁_上古中國的魔法時代.mp3) |
 | 2026-06-13 | [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) | Smitha（Google Cloud Tech）| 8 分 29 秒 | [📄 note](技術講座/20260613_Smitha_AI_agents_explained.md) · [📝 逐字稿](transcripts/20260613_Smitha_AI_agents_explained_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260613_Smitha_AI_agents_explained_口播稿.txt) · [🔊 opus](audio/20260613_Smitha_AI_agents_explained.opus) · [🔊 m4a](audio/20260613_Smitha_AI_agents_explained.m4a) · [🔊 mp3](audio/20260613_Smitha_AI_agents_explained.mp3) |
@@ -121,8 +123,9 @@
 - 2026-05-16 | [【完整版下集 20260516】兩大國際強權領袖過招 習贏得川口中最偉大的領袖 — TVBS 文茜的世界周報](國際局勢/20260516_陳文茜_習川會兩大強權過招.md) · ? · ?
 - 2026-05-12 | [民主如何消亡——以及我們如何阻止它發生](人物訪談/20260512_Anne_Applebaum_民主如何消亡.md) · Anne Applebaum，普立茲獎得主、歷史學家、《大西洋月刊》撰稿人。專研蘇聯史與專制主義，著有《古拉格：一部歷史》《紅色饑荒》《民主的暮光》等。丈夫為波蘭外交部長 · 1:48:14
 
-### 💰 **財經 / 經濟**（2 支）
+### 💰 **財經 / 經濟**（3 支）
 
+- 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 陳文茜 · 48 分 19 秒
 - 2026-05-10 | [反腐清洗無盡頭、川習會前的大國博弈｜文茜財經周報 20260510](財經分析/20260510_陳文茜_反腐清洗與川習會前大國博弈.md) · ? · ?
 - 2026-05-10 | [伊朗戰爭成「石油人民幣」契機｜文茜財經周報 20260510](財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md) · ? · ?
 
@@ -150,6 +153,7 @@
 <a id="by-speaker"></a>
 ## 👥 按講者
 
+- **陳文茜** · 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒
 - **自說自話的總裁** · 2026-06-13 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) · 28 分 50 秒
 - **Smitha（Google Cloud Tech）** · 2026-06-13 | [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) · 8 分 29 秒
 - **進階上下文工程** · ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · ?
@@ -178,9 +182,9 @@
 
 - 🎙️ **人物訪談**（7 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（3 支）→ [完整列表](國際局勢/README.md)
-- 💰 **財經分析**（2 支）→ [完整列表](財經分析/README.md)
+- 💰 **財經分析**（3 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（26 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-06-13 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 38 支影片*
+*最後更新：2026-06-15 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 40 支影片*
