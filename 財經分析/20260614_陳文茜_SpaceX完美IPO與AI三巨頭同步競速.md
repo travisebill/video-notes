@@ -280,11 +280,11 @@
 
 ## 🎙️ 音檔導覽（語音版）
 
-由 MiniMax TTS 語音合成，female-shaonv 參考聲 + 簡體中文（speech-2.8-hd 對簡體效果最佳）。
+由 MiniMax TTS 語音合成，**xiaotian_clone_v1** 參考聲 + 簡體中文（speech-2.8-hd 對簡體效果最佳）。
 
-> 音檔長度：5 分 32 秒（332s）· 靜音比例 9.99% · 推論：MiniMax T2A v2 + speech-2.8-hd + speed=1.0 + emotion=neutral
+> 音檔長度：5 分 36 秒（336s）· 靜音比例 9.21% · 推論：MiniMax T2A v2 + speech-2.8-hd + speed=1.0 + emotion=neutral
 
-- [opus 4.3MB](../audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.opus)（Telegram 友善）
-- [m4a 4.7MB](../audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.m4a)（iOS 友善）
+- [opus 4.0MB](../audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.opus)（Telegram 友善）
+- [m4a 5.3MB](../audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.m4a)（iOS 友善）
 - [mp3 5.1MB](../audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.mp3)（通用格式）
 - [口播稿原文](../transcripts/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速_口播稿.txt)（繁中）
