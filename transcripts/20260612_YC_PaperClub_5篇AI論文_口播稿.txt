@@ -1,0 +1,18 @@
+> 註：本文為「全知分析者視角」口播稿，第三人稱敘事、學術智識語氣。
+> 送 TTS 前會 OpenCC t2s 預轉（speech-2.8-hd 對簡中 G2P 效果最佳）。
+
+本集是 Y Combinator 在 Mountain View 總部每兩週舉行的 Paper Club session，由 Francois Chaubard 主持，於 2026 年 6 月 12 日釋出。影片時長 1 小時 17 分，涵蓋 5 篇 AI 論文與開場結尾，橫跨 5 個截然不同的領域。節目揭示了一個核心 META 趨勢，也就是 AI 正在從「被動的語言模型」全面轉變為「主動的代理」，而 5 篇論文剛好是這個轉變的 5 條平行路徑。
+
+(sighs) 第一條路徑是生物領域。Yasa Baig 來自 Caltech 與 Biohub 合作團隊，介紹 ESMC 也就是 Evolutionary Scale Modeling 的最新論文，標題是「The Bitter Lesson Comes from Biology」。他援引 Richard Sutton 的 bitter lesson 框架，問了一個關鍵問題：語言模型的 log-linear scaling law 能否在蛋白質領域重現？蛋白質是 20-letter alphabet 的字串，決定唯一 3D 結構與功能。Yasa 從三個 vignette 檢驗 scaling 在蛋白質上是否成立，結論悲觀中帶樂觀：可以成立，但需要小心處理生物的 distributional domain 差異。這條路徑的代理化角度是「可被設計的世界模型」。
+
+第二條路徑是 LLM 的強化學習。Luke Bailey 來自 Tatsu Lab 與 Harvard CS，把 AlphaZero 的 self-play 機制擴展到語言模型，引入 self-guidance 避免 self-play collapse。這條辯論的背景是 Noam Brown 的 F-H 假說，Francois 站在 AlphaZero 這一邊，主張「無 human data bias 才是通往 AGI 的路」。Luke 同時對 F-H 假說抱持部分認同，懷疑 pure H 是否能 sample 到 F minus H。這條路徑的代理化角度是「可自對弈的語言模型」。
+
+(sighs) 第三條路徑是即時語音代理。Arnab Maiti 是 Giga 的研究員，UW PhD bandit learning 出身，介紹 Stream RAG 也就是串流式 Retrieval-Augmented Generation。核心問題是 real-time voice agents 如何在使用者邊說的同時呼叫工具，這是從 batch 到 streaming 的典範轉移。他的關鍵 takeaway 是「cracking the small problems 會帶來 production 巨大收益」。這條路徑的代理化角度是「可即時呼叫工具的語音代理」。
+
+第四條路徑是形式化數學。Robert George 是 Caltech 三年級 PhD，介紹 Lean theorem prover 如何開啟 verified intelligence 新時代。他盤點了 AI 數學突破大事記，從 2024 OpenAI 與 DeepMind 拿 IMO 金牌，到最近 Erdos 問題連續突破，共同特徵都是使用 formal verification in the loop。Lean 的設計語言讓每步證明可被 checker 自動驗證，你無法欺騙 theorem prover。這條路徑的代理化角度是「可形式化驗證的證明代理」。
+
+(sighs) 第五條路徑是開發者工具。Lukens Orthwein 是 Channel 公司創辦人，從 founder AI hacks 視角出發，宣告「Programming is an RTS game now」。founder 從 coder 變成 commander，要同時管理 macro 策略與 micro 戰術，包括 cursor 位置、context window、parallel agents 等細節。AI 時代的 PR 流程從逐個 review 變成 sampling-based acceptance，看測試、看輸出、整體判斷。這條路徑的代理化角度是「可被即時戰略指揮的程式代理」。
+
+從研究方法論角度，這 5 條路徑其實在回答同一個根本問題：scaling law 能否跨域成立？self-play 與 human feedback 哪個能 scale？formal verification 的表達力瓶頸如何突破？RTS-style founder 技能如何培養？這 4 個問題將決定 2026 到 2030 年 AI 從 LLM 走向 AGI 的具體路徑。
+
+這場 YC Paper Club 的真正遺產，是它把「AI 代理化」這個抽象命題拆解成了 5 個可獨立攻克的子問題，每個子問題都有頂尖團隊在投入。下一個十年的 AI 不再是文字接龍的延伸，而是設計蛋白質、自對弈、即時語音、形式化證明、戰略編碼的主動代理網絡。

@@ -1,0 +1,1220 @@
+[00:00] Thank you guys so much for coming.
+[00:10] This one will have a much more applied bent based on the feedback.
+[00:13] We have a bunch of really cool people that I'll introduce in a second, but we're covering
+[00:16] AI for biology by one of my favorite co-researchers, Jas Beg.
+[00:23] We have Luke at Aptatsu's lab talking about self-play, AlphaZero-style self-play for LLMs.
+[00:29] Super excited about that.
+[00:30] Arnav will be presenting his research at Giga on the stream RAG.
+[00:36] Super different application for thinking about real-time voice agents.
+[00:42] Robert George working on Lean for science.
+[00:44] Super exciting.
+[00:45] And then the AI token maxer himself, Luke Horthwine.
+[00:49] Cool.
+[00:51] So I want to introduce some call for presentations, maybe inspire some of my interests and maybe
+[00:56] inspire some of you guys to jump up and ask for a presentation on this stuff.
+[01:00] I think memory has been the hot topic for at least the last year and a half.
+[01:04] There's been so many papers from MemZero to recursive language models, cartridges out
+[01:08] of our lab, HNET, dynamic chunking stuff.
+[01:12] There's so many different ideas.
+[01:13] And so I'm definitely interested in that area if you guys want to present on that.
+[01:16] I did this Noam Brown podcast, I think a couple of weeks ago, launched and he's still of the
+[01:23] human generated subspace H is still, if we train it on that, we can test time compute
+[01:30] our way out of it and recursive self-improve out of it all the way to get to this F minus
+[01:35] H. And I just like really struggle with this.
+[01:38] And I really, really don't see how it's probable.
+[01:41] Not that it's not possible, but it's just not probable that we'll sample all of that.
+[01:45] So I'm really interested in that.
+[01:46] And that's definitely in Luke's, we were talking about that a bunch.
+[01:49] And I think that basically the left side is AlphaGo, the right side is AlphaZero.
+[01:53] And I think that AlphaZero unbiased by humans meandering is the way we'll get to much more
+[02:01] intelligent systems, maybe even dare say AGI.
+[02:04] And the right way to say this would be, I want to be very careful.
+[02:08] If the full solution space F is F, training on known human solutions will limit you to
+[02:13] to some typical set H, despite any feasible amount of test time compute or recursive self-improvement.
+[02:20] You won't feasibly sample F minus H and especially all of it.
+[02:26] If it's infinite, recursive self-improvement, infinite test time compute, maybe, but we
+[02:30] don't have infinite.
+[02:31] So life's a POMDP and we're a finite horizon MDP.
+[02:36] So intelligence per sample, I think this is like the two major problems left in my opinion
+[02:41] are intelligence per sample, intelligence per watt.
+[02:42] And intelligence per sample, I always think about this like, as I get one new sample,
+[02:47] I do this continuous learning.
+[02:48] What is the right thing to do if I'm trying, my goal is to maximize performance conditioned
+[02:52] upon that M.
+[02:55] Most people's answer to this right now in practice is ICL.
+[02:58] And I actually played with this.
+[03:00] As you increase the number of samples in ICL, it is not monotonically improving in performance.
+[03:05] And so it actually starts to bob and weave, it gets worse, it gets better sometimes.
+[03:10] And then it hits a cliff, which is the context length, how nice length that the model was
+[03:15] trained on.
+[03:16] And it literally just stops.
+[03:17] So it clearly can't go on forever.
+[03:19] It doesn't monotonically improve.
+[03:21] And I started playing around with Laura.
+[03:23] I think Laura at lower ranks for lower amounts of sample size actually does impressively
+[03:29] well.
+[03:30] And then it has this kind of arc.
+[03:31] They both peter out pretty quickly as you increase the number of samples all the way
+[03:34] until you do SFT group O all day at the end.
+[03:38] And if you look at this, it's kind of weird that you have this like ICL is the optimal
+[03:42] thing to do in the beginning and then training the whole thing.
+[03:45] If I get one new sample, I want to retrain with Laura at some rank on N plus one samples
+[03:51] just to get that little bump in performance.
+[03:53] And there's a different optimal thing to do all along the way as I stream and I get more
+[03:58] and more samples.
+[04:00] And that's just not how we are.
+[04:01] So we're kind of like monotonically improving.
+[04:05] And the more chess games that Magnus Carlsen plays, he just keeps getting better.
+[04:09] The 10,000 hour rule, et cetera, et cetera.
+[04:12] We just keep getting better.
+[04:13] And it's the same algo.
+[04:14] And so I think there's just something really different happening in us.
+[04:17] And so there must exist some learning procedure that has a much higher intelligence per sample.
+[04:22] And then intelligence per watt, out of my lab, Avonika and John, who will hopefully
+[04:25] come to the next one and give a talk on this.
+[04:28] And I just think it's the right way to think about it, arguing that having smaller models
+[04:32] are sometimes actually better from intelligence per watt perspective.
+[04:36] Alternatives to backprop for those that know me, I'm very hot on this back to the brain
+[04:40] and how we learn.
+[04:41] There's very little evidence that the brain is taking the transpose of the weight matrix
+[04:46] and there must exist some other learning procedure.
+[04:48] I'm highly interested in SPSA.
+[04:49] But if there's alternatives that I'm not aware of, please recommend them.
+[04:54] And I'm really interested in novel breakthroughs.
+[04:55] Yasa is one of my favorite AI researchers, but he's mostly focused on bio and he always
+[05:01] sends me bio papers and it's super interesting whether it's about how birds navigate the
+[05:06] world via iron in their liver, apparently.
+[05:09] That's how they actually navigate.
+[05:12] Crazy.
+[05:13] Robotics, speech, other things like that as well.
+[05:16] And then, of course, unhinged founder hacks.
+[05:19] Very interested in that as well.
+[05:21] Call for ideas and ways to make the club better.
+[05:24] So better ways to meet youths, to lightning rounds if it's not.
+[05:28] Some people talked about some AI benchmarks that we could actually launch together.
+[05:31] That'd be kind of fun.
+[05:32] Club challenges to challenge each other.
+[05:34] And then any open source ideas that you want to hack on together for this club or something
+[05:38] or otherwise.
+[05:39] It'd be very interesting.
+[05:40] All right.
+[05:41] That's all I got.
+[05:42] Thank you so much.
+[05:43] Hi.
+[05:44] Yeah.
+[05:45] Thanks, Francois, for that introduction.
+[05:50] We've been lab mates now for like two years, something like that.
+[05:53] Yeah.
+[05:54] Francois is a great example of someone who brings very creative and very out of distribution
+[05:58] ideas to our group all the time.
+[06:00] Even if I sometimes have no idea where he gets them from.
+[06:06] But that being said, he asked me to give a talk on some bio AI things and I thought,
+[06:10] why not?
+[06:11] So I'll be presenting on this paper that came out just last week from Biohub folks here
+[06:15] in California.
+[06:16] Not too far actually in the Bay Area.
+[06:17] I think they just moved to the city actually.
+[06:20] So I am a second year PhD student with Francois, but I'm also co-advised by Steve Quake over
+[06:24] at Stanford.
+[06:25] Anyone in biology probably will know Steve at least tangentially done a lot of work in
+[06:30] bioengineering and all kinds of applications.
+[06:31] He was director of the Biohub where this work came out just until recently.
+[06:35] So a lot of overlap.
+[06:38] But the high level pitch for this work is that I know most of this audience is probably
+[06:41] more like AI, ML types.
+[06:43] I want to talk a little bit about how a lot of these ideas from motivating a lot of progress
+[06:48] in language modeling and AI very broadly have been recently been translating into biology
+[06:52] with a focus on this recent paper because I think it really does a really excellent
+[06:54] job of interrogating how scale, which at some level has been the fundamental primitive in
+[06:59] terms of assumptions that we as a community have in terms of how to make things better,
+[07:03] has actually been playing out for a lot of these biological problems, particularly protein
+[07:06] biology.
+[07:07] So there won't be much bio in this talk.
+[07:10] I'll try to focus more on the ML, but feel free to ask questions.
+[07:13] So yeah, I called this talk the Bitter Lesson Comes from Biology.
+[07:17] The actual paper title is right below that.
+[07:20] But just a quick refresher.
+[07:21] I'm sure everyone in this specific audience probably read Richard Sutton's famous article.
+[07:26] Basic premise here is that across the past 70 years of AI, methods that win are methods
+[07:31] that are general, that exploit fundamentals of scaling compute and data as opposed to
+[07:37] methods that hand engineer human domain knowledge.
+[07:40] And Sutton always cites his work and a lot of the work that was early in the field, so
+[07:45] AlphaGo, AlphaGo Zero, that inordinately scaled compute.
+[07:49] And then for a long time, they were far worse than expert systems until they eventually
+[07:52] overtook and then exponentially improved past them.
+[07:56] Knowledge systems win at first, but then eventually these big, large, dumber models win in the
+[08:02] long run.
+[08:03] This is a new goal in biology is to what extent can we study.
+[08:07] This is actually also true for a lot of these biological AI problems.
+[08:10] The bet behind this paper and they don't really go out of exploring is, well, the same pattern
+[08:16] also saw protein biology.
+[08:19] Can we take a lot of these ideas in scaling law analysis, here is from the famous neural
+[08:25] scaling laws paper, and then translate them for all these problems that we care about
+[08:28] for say designing a drug or trying to understand how a cell works.
+[08:32] So on the left is something that we trust.
+[08:34] It's like a language model.
+[08:35] We have this nice, smooth, log linear scaling laws that we see at most predictably falls
+[08:39] as a function of compute and data.
+[08:41] The question on the right is whether this same curve will exist for bio more generally
+[08:46] but protein specifically in this paper.
+[08:48] Does our LLM recipe transfer or does biology really add a distributional domain relative
+[08:52] to language break it?
+[08:54] That's the bet.
+[08:55] In this talk, I'll basically chat about three vignettes from this paper that interrogate
+[08:59] to what extent this is true.
+[09:03] So the slide is all the biology you'll ever need.
+[09:05] It's only about a quarter of the slide, at least for this presentation.
+[09:09] Let's talk about proteins.
+[09:10] So in your body, there's like broadly three major classes of macromolecules.
+[09:14] There's lipids, carbohydrates, and proteins.
+[09:17] A protein is just a string of amino acids, a special type of biomolecule.
+[09:20] There's 20 varieties of amino acids.
+[09:22] If you put them together into a sequence, you can have like a virtually infinite number
+[09:25] of possible molecules that then fold into.
+[09:28] So you can think about it largely as just every single protein is this 20 letter alphabet.
+[09:32] And that string specifically determines a unique 3D shape.
+[09:35] And by virtue of the shape of that protein, what job it does in your cell, like presents,
+[09:39] catalyzes the reaction, keeps pathogens out, et cetera.
+[09:43] The work done in this paper is that their goal is to train ESMC, sort of their like
+[09:48] third major or fourth major iteration in a long series of models of the evolutionary
+[09:52] scale group originally at Meta, then their own company at Biohub, have been training
+[09:56] for a few years now.
+[09:58] Where the cell is very similar to language, where let's just take hundreds of millions
+[10:02] of years of sort of evolved sequences that we've sort of gone out and found across biology,
+[10:07] both in humans, but also across bacteria and in our environment, and just go train
+[10:11] a big mass language model on them.
+[10:14] So I mean, nowadays we mostly train NTP models, but the pitch here is that if I take some
+[10:19] protein represented as like, you know, these strings of 20 tokens, like hide a few, and
+[10:23] then kind of train a really big BERT style transformer to predict mass positions as a
+[10:28] function of the other ones nearby.
+[10:30] And the crucial part is that we never tell it anything about the protein beyond just
+[10:33] the sequence.
+[10:34] So all this guy's got accents to is just the string, and is being asked to basically
+[10:39] learn things about the grammar of that protein as a function of which protein other amino
+[10:43] acids to co-occur with, right?
+[10:45] So like, I think there's like this old saying in natural language processing, it's like,
+[10:48] you'll know a word by the company that it keeps.
+[10:50] And here the idea is that you'll know a protein by the sort of amino acids it keeps.
+[10:54] And the bet is that if we do this at scale, just on the simple sequence task, we will
+[10:57] eventually get all these sort of other properties of a protein, say like structure that we do
+[11:01] care about sort of for free.
+[11:05] Like I said before, there's been a lot of prior work on this, like largely from evolutionary
+[11:09] scale by a few other sort of groups working largely on this bet.
+[11:13] This table will be a map for the rest of the talk.
+[11:15] So like every row is a concept you probably already know from natural language and then
+[11:19] analog onto the protein context.
+[11:20] So tokens become amino acids, the internet becomes sort of all of evolution's sequence
+[11:24] databases, all the proteins we can actually measure.
+[11:27] Mass token prediction stays as mass token prediction.
+[11:30] And sort of emergent capabilities, we talk about language model having like become emergent
+[11:33] structure and function within like basically understanding of a protein.
+[11:37] And then there's also sort of like this really fun stuff at the bottom.
+[11:40] So like recently there's been a lot of advancements since for these interpretability toolkits
+[11:43] from the NeckEye folks, you know, things like Sparse Autoencoders, some of the earliest
+[11:46] work basically in really trying to interrogate using the sort of toolkit the language modeling
+[11:51] community has built to understand language models now in approaching language model setting.
+[11:55] So I'm going to fill in the right hand column for the rest of this talk with sort of evidence
+[11:58] and three questions, which is that do these models learn with scale?
+[12:02] Can they basically substitute for a lot of these hand-built features?
+[12:05] Sort of, those are the bitter lesson to hold.
+[12:07] And like what do these representations actually encode interpretably?
+[12:10] So question one is do scaling laws even hold in the protein context and the way that we
+[12:13] see them in the language context?
+[12:14] First, let me just try to talk a little bit what we measure when we're talking about sort
+[12:17] of emergent properties, sort of how do we actually like study the model, see if it's
+[12:21] learning anything, right?
+[12:22] We need a proxy for does the model understand approaching structure, for instance, right?
+[12:27] The one the authors use in this paper is that they look at the internal or they basically
+[12:31] take the model representations during training and they use this to predict long distance
+[12:35] protein contacts.
+[12:36] So the idea here is that proteins have a one dimensional sequence, but they fold into complex
+[12:40] three dimensional shapes.
+[12:42] And if the model is sort of understood something complex about the protein structure or something
+[12:45] emergent with the protein structure, it should be able to predict contacts that occur over
+[12:49] long distances, sort of nearby contact are rather kind of obvious.
+[12:53] And this is like a really challenging object for it to get just sort of de novo purely
+[12:57] from sequences alone.
+[12:58] They call this P at L, right?
+[13:01] Long contact precision at some given length.
+[13:03] And it's just a clean unsupervised readout of structural knowledge inbuilt in the model
+[13:07] that's learned during this language modeling objective.
+[13:10] On the right, I plot the performance of this or the authors plot the performance of this,
+[13:13] I should say, against training compute for basically this new model family the authors
+[13:17] have built recently called ESM Cranberry at 300 million, 600 million, 6 billion parameter
+[13:21] scales.
+[13:22] Interestingly, and they have this fit line, which is basically this predict optimality
+[13:26] curve, which they estimated just from sort of low end training runs.
+[13:30] So relatively low computational budget, and they find that actually extrapolates very
+[13:34] cleanly to real model training runs.
+[13:36] Meaning so the answer is like, do these models learn with scale and less data at least suggests
+[13:39] the answer is like, yes, right?
+[13:40] Like you do see this nice log linear curve, right?
+[13:43] If you keep investing more and more compute, you're training more and more protein data
+[13:46] with larger and larger models.
+[13:48] You see the same exact same broad qualitative shapes the LM scaling or LM setting.
+[13:54] And a rest retransfers cleanly, meaning that without any kind of like predisposed part
+[13:58] of the model that we've talked to look at protein structure, even getting any protein
+[14:01] structures does a good job of picking these out just from sequence co-occurrence patterns.
+[14:07] There's like one interesting twist, though, is that I said before, there's been a lot
+[14:10] of prior work from this group as well as others and trying to answer these scale questions.
+[14:13] So not the first ones to look at this.
+[14:15] But previous models, so the sort of prior generation ESM 2 models shown in purple here
+[14:21] had actually not shown the same behavior that sort of hit this wall where they kept adding
+[14:24] more parameters and they got diminishing returns, near the sort of flattening out the scaling
+[14:27] curve.
+[14:28] This ESMC or ESM Cambrian model, sort of the green line keeps climbing with no plateau.
+[14:33] And their fix for this wasn't really like they come up with like a really clever inductive
+[14:35] bias in the architecture, not to say there isn't a lot of excellent engineering work
+[14:38] in this paper, but really it was just data scaling.
+[14:40] They had about 50 million training samples in their original ESM 2 paper and here they've
+[14:44] just pushed that to 2.8 billion by pulling largely in metagenomic data.
+[14:48] So essentially amino acids or protein sequences that have been found from sequencing DNA actually
+[14:54] in oceans and like human guts from like organisms that nobody has like really ever cultured
+[14:59] or even has really, really elucidated.
+[15:01] And their conclusion is that more data ends up being really important and keep getting
+[15:05] sort of basically justifying the cost for increasing compute.
+[15:09] So it's like the protein version of LM data wall conversation, right?
+[15:13] Except here in biology, evolution has been generating this training data for four billion
+[15:16] years and not humans like the past 30 or so.
+[15:19] Compared to tokens in natural language, like, I mean, we've only sampled like less than
+[15:23] 1% of all known protein sequence diversity and that's like only currently at this moment
+[15:27] in time, let alone like all of the sequence diversity evolution is sampled since the beginning
+[15:30] of life on earth.
+[15:31] Sort of question two in this paper I think is interesting is that it's sort of the most
+[15:37] bitter lesson part and they really try to evaluate to what extent their paper can do
+[15:41] or how well their model trained purely on mass language modeling objectives can compete
+[15:45] against a structure-based model with sort of hand-tuned inductive components.
+[15:48] So I'm sure you're all familiar with AlphaFold, won the Nobel Prize a few years ago, was sort
+[15:51] of a landmark moment in bio-AI, really showed that these computational tools could have
+[15:55] a lot of value in the biology sphere.
+[15:57] AlphaFold is brilliant, but its power comes from basically building hand-built inputs
+[16:02] sort of a manual feature curation called a multiple sequence alignment or an MSA.
+[16:06] So to fold a protein, it goes and finds hundreds of evolutionary cousins of that protein and
+[16:10] stacks them up.
+[16:12] These patterns of sort of covariation across a family are essentially, encode the statistical
+[16:17] information needs to be able to get structure.
+[16:18] This is like a beautiful domain engineering application and it's the sort of like really
+[16:22] good human craft and objective bias that the bitter lessons, at least claims, should eventually
+[16:26] lose, right?
+[16:27] Think like hog features in CD.
+[16:30] And compared to sort of things we used to do before, this is actually like far more
+[16:32] bitter lesson than like say building a whole physics simulator for a protein.
+[16:36] But it's also really slow to do this, right?
+[16:37] We need to build this huge database, the sequence alignment takes time, right?
+[16:41] And it's absent precisely where you often want it, for instance, that the antibody design
+[16:44] tasks come back to at the end.
+[16:46] ESN fold just throw this away.
+[16:48] All it says is it just takes an input sequence instead of an alignment and just feeds in
+[16:52] the models representations as the input to their structure predictor.
+[16:55] And these are just like per residue embedding.
+[16:57] So take your input sequence, you get a set of like per amino acid, just like some numerical
+[17:00] representation and we just train the specialized module to do breaking the large jiggle protein
+[17:06] structure, right?
+[17:07] So this folding network, sorry, like a projection into three corded space.
+[17:11] So same target, same output, no hand-built features.
+[17:14] And the question becomes, can this general model representation like match the sort of
+[17:17] specialist model in getting that MSA value?
+[17:21] One interesting architectural note though, for sort of the more ML folks in the crowd,
+[17:24] the one there in their projection networks or the part that converts representation
+[17:28] to structure, there is actually one really interesting feature that actually builds off
+[17:30] some of the work from our lab alum, Dan Fu.
+[17:34] And they have a actually a looped model, right?
+[17:36] I mean, there's a lot of excitement about these recently for parameter sharing, and
+[17:38] I just think they're cool algorithmically for a number of reasons.
+[17:42] And this is basically a level by which they can scale inference time compute, right?
+[17:46] So essentially they have a model that predicts structures and they have a procedure by which
+[17:49] representations can be fed through a series of layers and sort of refine their structure
+[17:53] predictions without necessarily retraining or any kind of fine-tuning.
+[17:57] This is like our test time compute access and some of the diffusion steps could be or
+[18:00] like test time sampling from LL lab.
+[18:03] Keep this in mind just for later results.
+[18:05] And the sort of like headline figure I would say pointing out here is that they basically
+[18:10] show that, yeah, their technique works really well.
+[18:13] Just a quick definitions on the left, we have this thing called docu pass rate.
+[18:16] This is just a metric for how good your structure prediction was essentially.
+[18:19] It's a measure of the fraction of test cases where the predicted shape of two proteins
+[18:23] that stick close together is close enough to be like really useful to realistic settings.
+[18:27] And there are two groups in each panel.
+[18:28] One is for single sequence with no MSA and the other is a single sequence plus an optional
+[18:34] MSA.
+[18:35] You can also feed to the model or is required for a competitor model.
+[18:37] When we look at the sort of outcomes from this, what we see is that for general approaching
+[18:41] approaching complexes, ESM fold two, their sort of new projection model from a single
+[18:44] sequence with no MSA lands within about three points of alpha fold three, which does take
+[18:48] these handcrafted features.
+[18:49] So we get near parity without the crutch.
+[18:53] But if we look at the antibody applications, which is on the right hand, on the left hand
+[18:55] side here, the modality is essentially behind all modern or MAB based drugs or monoclonal
+[19:02] antibodies, tons and tons of applications in biology and biotech.
+[19:06] We are actually winning or comparably winning or the authors are comparably winning.
+[19:09] So broadly like single sequence ESM fold two does actually build alpha fold three sort
+[19:13] of 50 versus 47 on this really specific design task that people really do care about.
+[19:17] And biologically this makes a lot of sense compared to say like other classes of proteins,
+[19:22] the amount of sort of sequence variation that's been sampled in the space of all known antibodies
+[19:25] relative to structure is considerably smaller considering their enormous diversity.
+[19:29] So the headline isn't that MSAs are dead yet, right?
+[19:32] It's that handled features only help where it's abundant.
+[19:35] Basically where drug designers really need it often it does go away.
+[19:38] And this general method still basically to save a lot from pre-treating across all of
+[19:42] known revolutionary contacts.
+[19:45] So we're not quite there yet.
+[19:47] And one other thing that we're flagging is that a second point says given MSA we can
+[19:51] also scale the amount of test time compute.
+[19:53] So how many loops we run in this recursive model and towards proof performance.
+[19:55] And we do see basically returns on this, meaning that like the better, less and least of inference
+[19:59] time also seems to broadly hold.
+[20:03] And it's not just accurate just as an aside.
+[20:04] This is just quick.
+[20:05] It's also just much faster.
+[20:06] MSA construction just takes a lot of classical computational biology time.
+[20:09] So at least if throughput is your concern or latency is your concern, you can with this
+[20:12] sort of single representation like get quicker results.
+[20:15] Though the wall clock times here are like, you know, well within like I would consider
+[20:18] to be pretty good to start off with.
+[20:21] And the last bit I'll get to this a little bit quicker is just they did a really interesting
+[20:24] analysis of like sort of mechanistic interpretability.
+[20:26] Like what are these models actually learning and sort of can we find features that are
+[20:29] interpretable as humans in the same way that sort of language modeling folks in the mech
+[20:32] community have found in language models like Anthropic has.
+[20:37] Here they sort of just apply the same tool or they borrow a lot of the tools for like
+[20:41] sparse coding analysis here where they look at activations from these models and try to
+[20:45] see if they can decouple them, find these like monosemantic activating directions inside
+[20:49] their feature spaces.
+[20:51] And they ask, is this also going to be a property in protein models?
+[20:54] And their answer is largely yes.
+[20:56] Right.
+[20:57] So from like pure fill in the blank pre-training, the model's latent space decomposes into
+[21:00] clean features that correspond to real biological concepts.
+[21:03] Here these concepts have been annotated by LLM agents and they're organized actually
+[21:07] quite interestingly in a nice hierarchy.
+[21:09] So you have like features that correspond to say individual amino acids at the bottom,
+[21:13] then like structural motifs, then like whole protein domains.
+[21:16] Right.
+[21:17] So you can look at longer or larger portions of the individual protein molecule up to like
+[21:19] functional sites and whole protein roles.
+[21:21] Right.
+[21:22] And none of this was supervised.
+[21:23] Right.
+[21:24] The model like learned to organize its latent space purely just through MLM, which is like
+[21:26] crazy.
+[21:27] I'll just with one example, maybe to close things out before I finish everything.
+[21:33] I think I'm actually one more slide after this.
+[21:36] This is a instance of a feature activation that corresponds to a really specific, well-known
+[21:41] protein motif called a nucleophilic elbow.
+[21:43] This is a type of catalytic domain that's used in a lot of enzyme catalysis.
+[21:46] It's really interesting because it's evolved multiple times in multiple different proteins
+[21:49] unrelated to each other.
+[21:50] So it's a motif biology keeps coming back to.
+[21:53] And the model has basically learned to identify it in the four quite structurally diverse proteins
+[21:57] from like evolutionary distance as well as the rest of the protein.
+[22:00] So it's like found a consistently occurring motif in very different backgrounds.
+[22:03] So it's like, it's basically learned to look at the right thing, not just sort of memorizing
+[22:07] like broad similarly comparable sequences.
+[22:10] It's like a deeper level of intuition.
+[22:13] And if you look at the sort of the whole SAE activation space, you can find like nice structures
+[22:17] that sort of correspond to like various known aspects of biology.
+[22:20] This organization isn't just local at scales to all of life.
+[22:23] Right.
+[22:24] Ended up building an actually huge Atlas of their approach with their model afterwards,
+[22:28] sort of just folding and analyzing millions of, or up to I think 7 billion proteins.
+[22:32] This is the largest Atlas I think out there now for protein structure databases, more
+[22:36] than alpha folds even.
+[22:38] And they've predicted like, you know, over a billion of these, as I mentioned before,
+[22:41] and laid them out here by the representations in SAE space.
+[22:44] And you get like a really nice, interesting like protein space family map, right?
+[22:48] You can find that there's clear families that'll cross clear here or like for instance CRISPR
+[22:52] Cas9 enzymes, which if you're not a biologist, maybe you still probably have heard of and
+[22:55] really important for a lot of biotechnology applications.
+[22:57] It's kind of like a Google Maps from proteins, and it's produced all as a byproduct of a
+[23:01] model, right?
+[23:02] Like just naturally, it's like picked up evolutionary relationships as well as functional ones just
+[23:06] de novo for free, which I think is like, I don't know, if you're maybe not a protein
+[23:10] nerd like me, I just think this is like utterly crazy, right?
+[23:14] So like, just to finish, like does the bitter lesson scale to biology?
+[23:17] Not perfectly yet.
+[23:18] I mean, some of this analysis still requires a lot of handcrafted features and it's not
+[23:21] fully competitive, but we're getting very close.
+[23:24] But even if we just don't care about one specific downstream, the model just from a relatively
+[23:27] quite small amount of data or like a relatively quite simple pre-training objective and a
+[23:31] lot of data has like learned enormous amount of bio that we can reverse interrogate after
+[23:34] the fact.
+[23:36] And just for the record, like they found that data scaling does keep improving.
+[23:41] I would like to just point out, you know, partially as a process, I taste like, or partially
+[23:45] just like try to convert a lot of smart people like we have in the audience.
+[23:47] There's lots of folks work on ML for a lot of applications software.
+[23:50] So these are great place to work in ML because the models are still really young.
+[23:54] And the other thing is that the data is increasing exponentially per year and that rate of increase
+[23:57] is also going up, meaning that like we're not data limited.
+[24:00] It's a great time to work in this space and we need a lot of these tools and the audience
+[24:05] members watching this on YouTube, similar pitch.
+[24:08] Just as one last thing, I didn't get to talk into detail about the one application they
+[24:11] use for their models for inverse design.
+[24:13] So they actually develop a lot of potential protein drugs and they validate a lot of use,
+[24:18] wet lab settings to show that these are potential like proteins that you can design using this
+[24:21] model purely in sequence space for the most part, by the way, with exception of like one
+[24:26] structure head at the end that bind various like known molecules that have therapeutic
+[24:31] effect.
+[24:32] Right.
+[24:33] So for instance, this PDL one binder is basically the most or is like basically a medication
+[24:37] that is now the sort of big success of immunotherapy.
+[24:39] It's helped plenty of patients with cancers in ways that historically have never been
+[24:42] able to tackle before.
+[24:43] Right.
+[24:44] So developing medications that are targeted at this protein was immensely challenging
+[24:47] and like if we can basically reduce the costs for developing such future drugs for future
+[24:51] targets, it would have enormous human impact.
+[24:53] So like even if the data scale doesn't sell you, then maybe some of the human impact will.
+[24:57] But broadly speaking, it's a really exciting time and it's wonderful to see that a lot
+[25:00] of these lessons are at least translating and people really making steady progress.
+[25:05] Okay.
+[25:07] Next we have Luke.
+[25:10] PhD out of Tatsu and Tang Yu's lab, fresh from the UK.
+[25:16] Then he went to Harvard CS, worked on adversarial robustness and now post-training self-play
+[25:22] and is directly in the spirit of this AlphaZero kind of mindset.
+[25:29] And so we've been chatting with that about that a lot.
+[25:32] All right.
+[25:33] Please welcome Luke.
+[25:34] Okay.
+[25:35] Hi, everyone.
+[25:37] Yeah, I'm Luke.
+[25:42] I guess I'll be presenting on this paper we put out a few months ago called scaling self-play
+[25:47] with self-guidance.
+[25:48] I guess more generally, I'll be talking about self-play for LMS.
+[25:52] This work was with some great co-authors, Kiyua, Kerfine and my two advisors, Tatsu
+[25:57] and Tang Yu.
+[25:59] Okay.
+[26:00] So what is the current training stack look like for big LMS?
+[26:06] Two simple parts basically, we pre-train the model on WebText and then we post-train it.
+[26:11] And interestingly, recently, the post-training, we've ended up spending a huge amount of
+[26:17] compute on doing large scale, long reinforcement learning runs.
+[26:20] And what does that reinforcement learning look like?
+[26:23] You collect a huge number of tasks, coding tasks, maths tasks, tasks interacting with
+[26:28] bits of software, and you just have the agent take a bunch of actions in those environments.
+[26:34] You get some reward back and we train the model on that data, up-weighting the good
+[26:38] rollouts down-weighting the bad rollouts.
+[26:41] And like I said, the interesting train that's happened is we're now approaching the amount
+[26:44] or even surpassing that we're spending on pre-training actually on this very long running
+[26:49] RL post-training.
+[26:50] And I've swept some things under the rug that we do at post-training as well, like a bit
+[26:54] of instruction tuning and alignment.
+[26:57] But really most of the compute is spent on these long RL runs.
+[27:01] Okay, so we also know that as we increase the number of RL tasks during post-training
+[27:07] and we increase the amount of compute, we have better downstream performance.
+[27:11] And I think this is best illustrated by this really beautiful plot from the Composer 2
+[27:15] Tactical Report from Cursor, where what they're basically showing is they have loads of RL
+[27:21] tasks such that the model only ever sees each task once.
+[27:25] And so on the x-axis, scaling training set to basically each training step, I'm putting
+[27:29] in some compute and a new RL task.
+[27:32] And what they show is a nice smooth line.
+[27:34] As you increase the amount of tasks and compute you put in, you get this reliable improvement.
+[27:39] And I guess they have this nice eval set on the left, but they also have a downstream
+[27:43] benchmark on actual coding on the right, and that's also like increasing reliably in a
+[27:46] really nice way.
+[27:47] This recipe tells us great, just collect more and more RL tasks, put them in a loop, and
+[27:51] the model can keep getting better and better.
+[27:54] Generally, we have to collect these RL tasks by hand, which might be a problem if you want
+[27:58] to keep on feeding, you'll notice log scale on the x-axis there.
+[28:02] And I guess there's another problem where you might think that eventually we'd like
+[28:06] the model to surpass any of the problems we can give it.
+[28:10] So I guess the question that SelfPlay asks is how can we automatically generate new RL
+[28:14] tasks to the model, train on those, and repeat?
+[28:17] Okay, so like I said, in traditional RL we'll have a predefined task and we train the model
+[28:22] on that predefined environment and task.
+[28:26] But in SelfPlay we do something slightly different, where the model does two things.
+[28:29] It's going to generate RL tasks and it's going to attempt to solve those tasks.
+[28:34] And crucially, we train it to be better at both of these things.
+[28:36] So we train it to be better at, in inverted commas, we'll go through what it means to
+[28:39] be better to generate tasks, and then also to get high reward in those tasks.
+[28:46] So how do we fit, I guess, some papers we've likely seen from the past into this description
+[28:51] of SelfPlay, because you might be thinking this doesn't look exactly like what I thought
+[28:54] of when I read the AlphaGo or AlphaZero paper.
+[28:57] So those traditional works we'd call symmetric SelfPlay.
+[29:00] And in this case, let's say in AlphaGo, how you train the model is you have the Go agent,
+[29:06] and then you have the rules of Go and you have the Go board.
+[29:08] That's great, but that's not an RL environment I can interact with, like I need an opponent
+[29:12] to play against.
+[29:13] And so this generate RL task part, they have an older version of the agent take the role
+[29:18] of the opponent.
+[29:20] So in this case, generating the task, because I just put an older version of myself in there,
+[29:24] and now I have a nice RL task.
+[29:25] It's a Go board with an opponent.
+[29:28] So this would traditionally be called symmetric SelfPlay because the model is taking on the
+[29:31] same role twice, a Go player.
+[29:34] More recently, however, in the LM space, there's been the rise of asymmetric SelfPlay.
+[29:39] This actually hails from a lot of older work on control problems and things like this.
+[29:43] But in asymmetric SelfPlay, we instead more generally have a model that I will call in
+[29:48] this talk of conjecture that will just generate entire RL tasks for the solver to then operate
+[29:53] in the solver is the equivalent of the agent here.
+[29:57] So the conjecture might come up with a coding problem and then come up with a bunch of unit
+[30:00] tests and then it'll go into that environment to do a bunch of rollouts, get reward and
+[30:05] train on that.
+[30:07] Great.
+[30:08] So why am I excited about SelfPlay?
+[30:12] Why do I think you should be excited about SelfPlay?
+[30:15] So I guess this first point is that the first one has to go in some depth.
+[30:20] So in principle, nothing bounds learning.
+[30:21] What do I mean by that?
+[30:22] So if I take a bunch of demonstrations from humans and I train them all on that, I think
+[30:26] it's clear that the model will never get better than those demonstrations.
+[30:29] So the next step is, okay, I'm going to create a bunch of environments, have the model learn
+[30:33] those environments.
+[30:34] That's regular RL.
+[30:36] We have two problems there.
+[30:37] One, if you ace all of the environments, you'll never get any better.
+[30:41] Or the second problem is if I can't even get any reward in those environments, I will also
+[30:44] never get any better.
+[30:46] So SelfPlay on the other hand is going to say, I'm going to keep on generating new learning
+[30:49] signal with new tasks, learn that and just keep on improving, hopefully forever.
+[30:54] And indeed we saw this was the case with two player games like Go.
+[30:57] It just kept on getting better and better beyond human performance and kept improving.
+[31:02] So the promise for LMs is I can take some, I can train on a bunch of human data, I get
+[31:05] like human level, and then I can run loads of SelfPlay and go far beyond that and hopefully
+[31:11] interesting problems with our models.
+[31:14] But unfortunately this is not how it works.
+[31:17] So in practice, if I run, which we'll get into this talk, if I run SelfPlay for a long
+[31:21] time, it plateaus either the model stops improving at some point, which is the exact same thing
+[31:25] that happens when you run RL.
+[31:26] Like as much as I'm trying to tell you there's a bunch of secret sauce going on, like it
+[31:30] doesn't actually play out.
+[31:33] So basically this paper we try to figure out like why is this happening and then like do
+[31:38] one step to solving the problem, but by no means completely solve it.
+[31:42] Okay, so to begin with, we need to understand like the baseline LM SelfPlay algorithm.
+[31:47] Pretty simple.
+[31:49] We are going to sample synthetic tasks from the conjecturer, which is just our model,
+[31:53] conjecture and solver, same model, just giving it two different names.
+[31:56] The model will then, the solver then attempts them and we verify the correctness using some
+[32:01] reward signal somehow, like perhaps the conjecture wrote unit tests for us to check.
+[32:06] And then we're going to update the solver just on all the correct rollouts.
+[32:10] And then this is the key part.
+[32:11] The conjecturer gets updated on this reward, which is zero if the solver could not solve
+[32:18] the problem and one minus the solver right otherwise.
+[32:20] Okay, what is that actually doing?
+[32:23] That is basically saying all the conjecture must do is produce problems that are hard
+[32:27] for the solver model.
+[32:28] And I think in principle that makes a lot of sense.
+[32:30] The idea is if the conjecture can ace this, I will keep on giving you problems at the
+[32:35] front two of your capability.
+[32:36] You will be able to solve them and learn from them and we'll just keep on expanding and
+[32:39] expanding and expanding and get better and better and better.
+[32:42] Okay, so let's see how this recipe does.
+[32:47] So we take in our paper like 3000 formal math problems.
+[32:51] So this is just in Lean 4, you can write out the problem statement in this coding language
+[32:55] in math.
+[32:56] So you write out a math problem in this coding language, you can write the proof in the coding
+[33:00] language and then you can automatically verify if it's correct.
+[33:03] So we take 3000 problems and we run like our best RL baseline on it.
+[33:07] And this is the amount of compute we put in here.
+[33:09] And on the y-axis we have how many problems you solve.
+[33:12] And you can see it plateaus out and we fit a law and it asymptotes it like 60%.
+[33:17] And if we on the right hand side, we're gonna say how much synthetic new tasks did we generate?
+[33:21] RL generates no synthetic tasks.
+[33:23] So by construction, this stays at zero.
+[33:26] Now I'm going to fill in the vanilla self-play with that solver reward and I'm not going
+[33:29] to show the left for now.
+[33:31] We see as time goes on, the conjecture gets better and better at its job.
+[33:35] It keeps on generating more and more tasks on the frontier of the solvers capabilities,
+[33:38] which seems really good.
+[33:40] And yet these tasks are completely useless.
+[33:42] The self-play does no better than regular RL.
+[33:46] So this is not very promising.
+[33:47] So now we need to understand why.
+[33:49] And here what I'm visualizing or I'm literally showing you is one of the problems the conjecture
+[33:52] generates late on in training.
+[33:56] And we already understand this.
+[33:58] I've highlighted in blue the conclusion to the statement in Lean.
+[34:01] And if anyone's using that, this is horrific.
+[34:02] This is an incredibly complicated, overly complex disaster of a statement.
+[34:07] And so what is basically happening is we reward the conjecture for producing tricky problems.
+[34:11] But the easiest way to use tricky problems is produce these basically messy, artificially
+[34:16] complex and analogous problems.
+[34:18] It is the exact equivalent if I wanted you to get like 50% solver at a problem, I could
+[34:22] just give you like a three page long high school calculus problem and you would make
+[34:26] some little mistake somewhere.
+[34:27] But that was a completely useless synthetic problem for like other tasks we care about
+[34:32] in maths, for example.
+[34:34] Great.
+[34:34] So how do we fix this in a minute?
+[34:38] Cause I've been talking too slowly.
+[34:40] So we've diagnosed this problem.
+[34:42] Here is like roughly at a high level, how we try attempt to solve it.
+[34:46] So there are two parts of our algorithm, SGS, self-guided self-play.
+[34:51] We're going to take the set of problems we cannot solve, the 3000 problems.
+[34:54] And we did two things.
+[34:55] One, for each of those problems we cannot solve, we're going to get the conjecture
+[34:58] to produce a related problem to it.
+[35:00] So once you prompt it to produce a synthetic problem that is related.
+[35:03] So that this way we're trying to ground the synthetic data distribution in a distribution
+[35:07] of problems that we think is good at least.
+[35:08] And next, if you still just trained on the solver rate reward, you would eventually ignore
+[35:12] this prior and still produce that junk.
+[35:15] So we're going to introduce a new reward signal, which is the model takes on a third
+[35:18] role and it will literally judge.
+[35:19] It looks at the synthetic problem and the target problem it came from and decide if
+[35:23] these two things are actually related and not overly complex.
+[35:28] So we call this third component a guide.
+[35:31] Okay.
+[35:32] So the algorithm looks like this.
+[35:34] It's very similar.
+[35:35] We, for every target problem we haven't solved, we'll sample a conjecture from the
+[35:40] conjecture that is related to it.
+[35:42] We then will attempt to solve them.
+[35:43] And then what changed here is when we update the conjecture, we now have this dual
+[35:47] reward, one, we still want the problem to be tricky.
+[35:49] That is important so we can get our L signal on it for the solver and we'll multiply
+[35:53] it by this guide score.
+[35:54] Great.
+[35:54] Okay.
+[35:54] There's a bunch of kind of subtleties we cover in the paper that I will skip over
+[35:57] because we don't have loads of time.
+[35:59] If you want to talk about, I'm going to say large-ish scale RL infra, the academic
+[36:05] size, that's what I spent most of my time doing.
+[36:07] So I would like to talk about that, but there is not time.
+[36:11] So let's just look at the headline results here.
+[36:15] Here is basically the same type of plot.
+[36:17] I've put the RL baseline on here.
+[36:18] Recall that like standard self-play is exactly in line with that.
+[36:22] We also put parallel sampling down here just to show you that indeed RL
+[36:25] at least gives you a boost.
+[36:27] And I guess I wouldn't be here unless our method works better.
+[36:30] So the method indeed does work better.
+[36:32] It's like ground how much better it's doing.
+[36:34] We were using a 7 billion parameter model here and this is it's like 670B, like big
+[36:40] brother, and we spend eight times as much compute doing the self-play.
+[36:46] If you, yeah, we do eight times as much compute the self-play, but we get like to
+[36:50] the ability of that larger model, at least it's pass up for ability.
+[36:53] So you spend a lot more compute, but we are able to get this like little 7B guy
+[36:56] to do as well as the bigger model.
+[36:59] But very sadly, you will notice like this is not at a hundred percent.
+[37:02] So like the work is by far not done.
+[37:04] The problem is the self-play is like you would just ate all the problems here.
+[37:07] And so there's a bunch of, well, there's lots of future work, but
+[37:10] luckily a PhD is very long, so I'll be able to work on that.
+[37:15] But yeah, that's the summary.
+[37:21] Awesome.
+[37:21] Thank you so much, Luke Bailey.
+[37:24] Okay.
+[37:25] Next one, we have Arnab Meti, is that the right way to say it?
+[37:27] Meti, who is a researcher currently at Giga, one of YC's fastest growing companies.
+[37:33] I think market cap is like 400 million, 300 million something like that now.
+[37:37] So really fast growing YC company, PhD, University of Washington,
+[37:42] focused on bandit learning.
+[37:44] Yeah, please let's tell us about StreamRag.
+[37:50] So, there's a paper by the group at Meta, and I kind of chose this paper to kind of
+[37:59] maybe highlight some of the new emerging challenges that are coming up,
+[38:04] especially in a voice AI kind of setup.
+[38:09] My goal with this talk is not more like about talking specific details about
+[38:15] this paper, but more like to highlight the good problems that they have identified.
+[38:22] And I feel like there's a lot of research that needs to be done here.
+[38:26] And it also kind of closely mirrors what, at least I do in my production setup.
+[38:32] Like I look at these kinds of problems, I do the research, and then I try to come up
+[38:37] with a method that will work probably in production.
+[38:41] So yeah, let's get started.
+[38:43] This is a very classical setup where you probably ask an input question to an algorithm
+[38:49] and it gives an output.
+[38:50] And if you remember maybe from 2023, maybe there was a lot of hallucinations,
+[38:56] but especially like say around citations and all, but over time, maybe the
+[39:00] hallucinations went down and a big role was rag.
+[39:07] Like you kind of give the input query to a rag system.
+[39:11] It kind of goes and figures out relevant information that needs to be provided to
+[39:16] an LLM and then the LLM probably gives you an output, which is hopefully not
+[39:21] hallucinated.
+[39:25] Now a lot of voice AI startups are also coming up and a natural expectation with
+[39:34] voice AI is that, okay, you're having like a conversation, like, oh, you can ask,
+[39:38] oh, what's the weather like?
+[39:40] And the agent would reply like, hey, the weather currently is like 22 degrees
+[39:44] Celsius and so on.
+[39:45] And maybe you can ask a follow-up question.
+[39:47] So it's more like conversational in nature.
+[39:50] And so even here as well, you would like the output to be like, there shouldn't
+[39:55] be any hallucination, especially in voice.
+[39:58] We care about this even more because from a human perspective, it's difficult to
+[40:04] kind of actively catch hallucinations when you're listening to it compared to
+[40:08] like when you're reading it over text.
+[40:12] So one might ask, okay, what's the issue with just using rag here?
+[40:16] Like, can't you just take the input query, apply rag, give the relevant
+[40:22] information to the voice agent and get the output.
+[40:26] The issue is that rag would add a lot of latency.
+[40:31] Like for example, if I ask a voice agent some question and the voice agent takes
+[40:36] 10 seconds to reply, that's not at all natural, especially if you want to have
+[40:40] some sort of natural conversation.
+[40:42] So that's where this paper kind of looks at a very clever idea, I would say, which
+[40:49] is like, instead of like waiting for the question to end and then activate your
+[40:56] rag pipeline, you kind of start analyzing the words that have been spoken by the
+[41:03] user and somehow figure out a way to run the rag system while the question is
+[41:11] being spoken.
+[41:12] Like for example, like you might ask like, Hey, what's the weather today?
+[41:17] Like, I want to decide based on that, whether I want to go out or not.
+[41:22] The main question is in the first part.
+[41:24] So the second part of the question might be irrelevant.
+[41:27] So we want some sort of mechanism via which we can figure out, okay, when to
+[41:36] call this rag system and appropriately get the right information.
+[41:43] So this particular paper focuses on two approaches.
+[41:47] The first one is fairly simple.
+[41:50] So it's called fixed rag, fixed interval streaming rag.
+[41:54] So the idea is like, you divide the audio into certain blocks and after each block
+[42:04] arrives, you can like run rag on every block.
+[42:08] So, so after, when the block B arrives, you run a rag, get the results for the
+[42:15] rag RB and you keep on doing till this, till the end, probably.
+[42:20] Now the question, the main question here is like, which block to consider, because
+[42:27] you ideally cannot like wait, the entire goal was you cannot wait till the end
+[42:32] and then run the rag.
+[42:34] So what do you do?
+[42:34] So the main, maybe idea here is that the rag pipeline has a lot of mini components.
+[42:43] So maybe some of the components are like easy to run or like more faster to run.
+[42:49] So for example, you can kind of get some documents very quickly and you can say,
+[42:56] okay, for the entire query, what were the top documents and for the intermediate
+[43:01] query, what were the top documents and are they matching or not?
+[43:03] This is just one of the ideas we just want the paper.
+[43:07] And then based on that, you can decide, okay, should I go ahead with the
+[43:10] intermediate query and just do the entire rag pipeline on that.
+[43:16] So the thing I want to stress is not the method per se, but the point that, okay,
+[43:22] when you are getting this input in chunks, at what point can you stop and say that,
+[43:31] okay, like this chunk is like super relevant for me?
+[43:35] So this is like an active question.
+[43:37] I would say like, how would you do that?
+[43:39] This paper does it in a very simple manner, which is just to maybe look at the initial
+[43:44] part of the rag pipeline and if they kind of match, like if the end part matches the
+[43:49] intermediate part, then you go ahead with the intermediate and let the full rag
+[43:53] pipeline complete.
+[43:54] Another approach could be like you can probably fine tune a model to kind of trigger
+[44:01] on its own, like when to call the rag, because in the previous approach you were
+[44:05] calling rag on every single chunk.
+[44:08] So maybe that's computationally wasteful.
+[44:11] So what you can probably do is when a particular chunk arrives, you can maybe
+[44:19] fine tune some model and ask it to decide whether this chunk is like in critical new
+[44:29] information and you should generate the new query or the query that you generated
+[44:34] based on the past chunks are good enough for you to just answer the question.
+[44:40] And based on that, you can generate the final audio.
+[44:44] Yeah.
+[44:44] So in the paper, they kind of describe a post training pipeline.
+[44:48] What they do is like they kind of for the partial spoken question, they kind of
+[44:55] generate some pseudo queries using some LLM and then they run a rag on that and they
+[45:01] look at the retrieved documents and based on the retrieved documents, they kind of
+[45:07] decide, okay, is this partial query like something new or is it already like we
+[45:16] already have the useful material?
+[45:18] So in this, okay, in this paper, essentially they're kind of basing their
+[45:24] decision based on the retrieval quality of the partial question so far.
+[45:30] That would be my takeaway, but maybe there are different ways in which you can do this
+[45:34] assessment.
+[45:35] Maybe you can look into the semantic of the question so far.
+[45:38] Like is the partial question so far good enough for me to answer this question just
+[45:42] by looking at the question?
+[45:43] No, no need to do this entire rag pipeline.
+[45:46] So there are, my point is like you need not, this need not be the only way.
+[45:51] There might be so many different ways and that's where the research maybe is required.
+[45:58] Like while a user is picking their question, how do we like on like why instead of waiting
+[46:06] till the end, how do we like figure out, okay, this part of that question is good enough
+[46:11] for us to go and do the retrieval.
+[46:13] Yeah, so that's what they do.
+[46:15] Probably I'll just quickly give a glimpse of the results from the paper.
+[46:21] This paper is a year old, so they were like, yeah, looking at some smaller open source
+[46:26] models.
+[46:28] So they kind of considered the rag benchmark converted into audio and showed that the
+[46:35] latency kind of decreases for the synthetic datasets by 0.5 seconds and for human
+[46:41] datasets, like human spoken datasets by almost like 1.5 seconds.
+[46:46] And the accuracy of comparison, like if there was rag after the final query and the streaming
+[46:56] rag, it kind of remains the same.
+[46:58] Like, yeah, so yeah, so that's what the paper is about.
+[47:03] So like the key takeaway is like there are some interesting small problems here, like,
+[47:08] but if you can crack the small problems, it can lead to huge gains in the production.
+[47:13] Yeah.
+[47:14] Thank you.
+[47:16] Okay.
+[47:25] Next up we have Robert George.
+[47:28] Come on up.
+[47:29] Third year PhD at Caltech.
+[47:31] Okay.
+[47:32] My brother got his PhD at Caltech.
+[47:34] And you work on AI for math and science.
+[47:38] Yeah.
+[47:38] And what are you going to tell us about?
+[47:40] I'm going to tell us about Lean basically.
+[47:43] Luke already told a little bit, but I want to go more in depth.
+[47:48] So I'm going to be talking about Lean and what I think is this new era of verified
+[47:53] intelligence.
+[47:55] So let's get into it.
+[47:56] So again, there's a bunch of breakthroughs in the past, like couple of weeks itself.
+[48:01] Like first I want to go back like two years before, you know, like Wei said that IMO,
+[48:07] OpenAI and even DeepMind actually at the 2024 IMO got the gold medal.
+[48:12] Then, you know, there's this very famous Erdos problem list, which is very famous
+[48:18] right now where people are trying to kind of solve new open unsolved Erdos problems.
+[48:22] And, you know, you can see that it's keep on, keep on increasing with the new models
+[48:27] from like OpenAI, DeepMind and all.
+[48:30] Just two weeks ago, OpenAI claimed to solve another big breakthrough Erdos problems.
+[48:35] You know, Terry Towers has this promotional video at OpenAI, which he showed really well
+[48:40] about these kinds of things.
+[48:41] And then last week, DeepMind released something also solving a bunch of new, not only Erdos
+[48:46] problems, but problems in like other different fields, right?
+[48:49] But this paper is cool because they also use some kind of formal verification in the loop.
+[48:53] So I want to say that, you know, we all took like high school calculus, we took undergrad
+[48:58] college math courses and all this, you know, informal math is very, very flexible, right?
+[49:03] Your professor says sometimes, you know, proof by QED, like, you know, sometimes it's like
+[49:09] proof by intimidation or something like that, right?
+[49:11] There's many other steps and not fully written down.
+[49:13] But this is where I believe that, you know, formal world is like, you have to be fully
+[49:18] explicit, right? And I'll talk and introduce the language Lean.
+[49:21] Again, before Lean passed a couple of hundred years, you know, people have been doing formal
+[49:27] math a lot, but, you know, Lean has this kind of this really good design language just kind
+[49:32] of taken off, right? So again, first thing is it's very easy to check if a proof is
+[49:38] correct or not. You cannot fool this theorem prover.
+[49:41] Secondly, it's scalable.
+[49:44] Again, there's a bunch of issues over there, but I can talk more about that soon.
+[49:47] So before that, I just want to give you like a precursor.
+[49:51] So people do know about like there was a thing previously, like in the 1990s, even
+[49:57] right now, actually 2020s and all this is there's this thing called automatic theorem
+[50:00] provers, which are basically like SMT solvers.
+[50:03] They are basically minimal effort from humans, you know, but they're very limited
+[50:09] expressivity in what type of mathematics they can encode in some sense, right?
+[50:13] And on the far right hand side, you can see interactive theorem provers like Lean,
+[50:17] Roke, Isabelle, which are very have a much more stricter like expressive logic system.
+[50:23] So it's based, at least some of them are based on independent type theory, but much
+[50:27] more effort from humans to kind of write down these provers, right?
+[50:30] Like if you're talking about like 10 years, people have been contributing to this very
+[50:33] famous library called Mathlib and Lean.
+[50:36] There's a lot of human effort to kind of pick premises and all this.
+[50:39] And again, we all know how good LLMs are right now at kind of combining with these
+[50:45] kind of theorem provers to kind of do proof checking for like research level math, right?
+[50:49] And it's so much news that I, you know, if I go on Twitter right now, I can open up a
+[50:55] bunch of posts saying how much progress, past couple of hours probably in some sense,
+[50:59] right?
+[50:59] So first thing is I want to introduce why Lean, you know, Luke mentioned this formal
+[51:04] very messy language, but I actually think it's a very beautiful language.
+[51:07] Again, one can argue no, but it's a very fast language.
+[51:11] Again, it's also people think of it as only a theorem prover, but it's actually also a
+[51:16] functional programming language, right?
+[51:18] You can use it as a programming language itself.
+[51:20] So it's compiled checking.
+[51:22] It's very good unified.
+[51:24] So this is what like the proofs and programs you can do like meta programming.
+[51:28] You can do macros, custom automation.
+[51:30] You know, I've seen people trying to even create like games on with using Lean, right?
+[51:35] It's actually super cool.
+[51:36] So Lean has something called a foreign interface where you can do like external
+[51:40] library binds, like you can do on the CUDA or something like that.
+[51:44] I want to point out the math library.
+[51:46] I think that is the coolest, biggest, formless math library out there.
+[51:51] I forgot how many number of lines, probably at least in a million or so, but all of these
+[51:55] are really high quality math, right?
+[51:57] From like say topology to algebra, geometry and all this.
+[52:00] And again, it's an interactive theorem prover.
+[52:02] So you always have to, you know, the human can sometimes be in a loop, but it is also
+[52:07] a very scalable language because, you know, not only frontier labs are pushing a lot of
+[52:11] money into it and also the world is, but there's more data being generated either through
+[52:17] synthetic or like a lot of people.
+[52:19] Like in myself, I do manual formalizations.
+[52:22] So just very short.
+[52:23] I don't want to take time, but this is how a simple
+[52:25] lean code looks like.
+[52:26] Like in VS code, you have like an info goal view, which shows like what are the current
+[52:30] kind of sub goals.
+[52:31] Our goal is basically like, what are you trying to prove at this step?
+[52:35] So the first theorem is like, you're basically showing associativity of addition of like
+[52:39] national numbers, right?
+[52:39] Like A plus B plus C is equal to A plus C plus B.
+[52:43] And each line of proof is usually called like a tactic.
+[52:46] So usually when people talk about like proof search, they mean like, you know, you can
+[52:50] search over this kind of tactic space.
+[52:52] There are methods where you do full proof generation, but you know, these are the two
+[52:56] different access.
+[52:57] So this is how lean code looks.
+[52:58] It's not as bad as it seems.
+[52:59] It's a steep learning curve.
+[53:01] I think it's much better than even C plus plus in some sense, like learning.
+[53:04] But you at least get really, at least for me, I get very happy when I see, oh, I've
+[53:10] fully proven this theorem, right?
+[53:11] There's no assumptions.
+[53:12] Like I cannot like hand wave or fool the lean kernel, basically.
+[53:16] You have to be fully 100% sure.
+[53:19] Now I want to talk about the formalization breakthroughs.
+[53:21] I talked about informal.
+[53:22] But actually the first book was actually in 2020, Ilya and Stan was from OpenEI.
+[53:27] They released something called GPTS.
+[53:30] This was the first generative language model for automatic theorem proving.
+[53:34] Mini F2F is just like a Olympia level kind of competition, but you see the amount of
+[53:38] progress, like it's kind of exponential, like from open source models, big players
+[53:42] in China, in the US, Canada, like across the entire world.
+[53:46] Last year's IMO, you know, again, DeepMind claimed to not have used lean.
+[53:51] If you see the OpenAI solutions, some kind of BSL of lean kind of stuff in the solutions.
+[53:57] But even Cprover from China also got the IMO goal.
+[53:59] And then obviously there's a bunch of like Axiom Prover, there's Harmonic AI, like
+[54:03] they got recently in the plactum, they got all the 12 problems solved.
+[54:08] Most of the Odash problems now when people are saying they kind of claim to have a
+[54:13] solution using AI, they also prove it using like say Aristotle from Harmonic.
+[54:19] And then another amazing work was kind of this Fields Metal work from Math Inc.
+[54:23] And obviously the Google DeepMind stuff in some sense, right?
+[54:27] And again, I love the fact that, you know, everyone is talking about math and all, but
+[54:31] you know, for me personally, there's also these two other bubbles, right?
+[54:34] Like there's also code.
+[54:36] Now one can argue what is program verification as well.
+[54:38] You know, bugs are really expensive.
+[54:40] It's like a huge billion dollar industry.
+[54:43] Vibe coding is all of a sudden really great.
+[54:45] Like everyone is generating, but I want code that needs guarantees, right?
+[54:48] I think that's like something which I'm very interested in.
+[54:51] And also AI for science matters, like there's reproducibility and all this kind of stuff.
+[54:58] So I want to go through this really fast, but LLMs can write code, but can they prove it's correct?
+[55:05] You know, there's scale of generated code, there's that of bugs.
+[55:09] How can you kind of capture human intent and the verification language?
+[55:12] And again, in short, I want to talk about like program verification is like,
+[55:16] there's these three concepts where humans actually always have some kind of like specification about
+[55:21] like what they want their code to do.
+[55:23] So a proof is basically seeing that the code kind of satisfies that specification.
+[55:27] There's this work which I introduced called Bridge where you can use this lean as a
+[55:31] functional to your programming language to kind of elicited the LLMs to kind of
+[55:36] prove this kind of code better.
+[55:38] So I like this code from MaxTug, but MIT where they say that we should shift from actually
+[55:42] wide coding to like very coding, right?
+[55:46] Verifiable coding will be like definitely, I think, a much more better way.
+[55:50] And you should contribute with CSLab.
+[55:52] This is started from Clark Barrett's group at Stanford.
+[55:54] There's a bunch of from DeepMind and all, but if you want to contribute with CS concepts and all,
+[55:57] you should definitely contribute with CSLab.
+[56:00] I want to go through quickly just about one last work about
+[56:03] TorchLeam which I recently introduced.
+[56:05] This is the first unified framework for actually writing down neural networks in lean.
+[56:10] So you have this kind of full like PyTorch style like tensor system.
+[56:14] Everything combines down to a shared intermediate representation.
+[56:17] You can kind of prove properties of specs.
+[56:18] Like I can show you some examples.
+[56:20] You have like verified floating arithmetic.
+[56:23] You can kind of do even like neural network verification, like certified robustness kind
+[56:27] of stuff, right?
+[56:27] And again, there's a bunch of applications which I show, but I think one cool thing that I'll show
+[56:32] this and the next slide is that, you know,
+[56:34] you can show that the flash attention is equal to like at least in the spec level is equal to the
+[56:39] normal standard attention, right?
+[56:41] Again, we don't worry about like IO and all this processing.
+[56:44] Also, you can a very standard factors like the attention mechanism is permutation invariant
+[56:48] if you don't have positional accordance.
+[56:49] So I actually kind of trained a GPR2 style like Karpathis thing in torsion itself,
+[56:54] fully natively in lean, right?
+[56:56] And you can kind of prove properties about it and all this.
+[56:59] One thing I think I can end with this slide is that
+[57:01] Thinking Machine Lab last year released something about this kind of non-determinism.
+[57:06] Even when you have like temperature zero, when you put it into your LM inference, I actually kind of
+[57:12] formalize this whole system in torch lean, all the way down to like almost a GPU kind of like small
+[57:18] CUDA level kernel verification, because the whole goal in this blog was saying that the tiny
+[57:24] floating point arithmetics can flip the final argmax in the kind of the batch thing.
+[57:28] There's a blog, you can check it out on my website, but I was very, very cool that you can kind of do
+[57:33] real life software verification in some sense.
+[57:37] And again, there's a bunch of different slides I have, but I kind of want to end on this note
+[57:41] just for the sake of time.
+[57:42] But I see a future where signs like even code can be formally verified through a lot of building
+[57:50] blocks, which people are putting a lot of effort in.
+[57:52] And this is one of the examples that I think is like my field of metal analysis.
+[57:55] This is one of the examples that I think is like my field of metal like kind of contribution to
+[57:59] the ML world in some sense.
+[58:05] All right, great job.
+[58:07] Okay.
+[58:09] For our last presentation, it's going to be the antithesis of lean and token maxing to the max.
+[58:19] Very excited to introduce Luke Orthwine, his close friend.
+[58:26] We're friends in Woodside together.
+[58:31] And did his CS degree at Harvard, then ran growth at WeChat from 2012 to 2015,
+[58:39] which is why we call him the lion of Hong Kong.
+[58:44] And now has been running his startup, Channel AI, and is probably the most unhinged technical
+[58:49] CEO that I know.
+[58:52] Thank you, Francois.
+[58:57] Yeah, so the idea behind this talk is sort of what we at Channel have done to try to take the best
+[59:07] advantage of rethinking how you should do software engineering in this world of agentic
+[59:14] programming assistance, quad codecs, etc.
+[59:17] And really, you know, the ways in which I think many assumptions about what good programming is
+[59:25] are now sort of the opposite of what you should be doing.
+[59:27] These are sort of what we have worked through ourselves and found very useful and wanted to
+[59:32] share with all you guys to give some context.
+[59:35] Channel AI, we're a consumer entertainment AI business.
+[59:39] And we're really focused on the problem of automating as much as possible of not just
+[59:45] software development, but content development.
+[59:47] How do you really create like an end-to-end system that is pure AI that gets people to
+[59:53] pay you money and stay engaged, etc.
+[59:57] We've had pretty solid success with that so far.
+[01:00:01] And it's inspired us to think in our own workflows, how can we just sort of max this and be as far
+[01:00:07] ahead of the curve as possible.
+[01:00:09] And it just is an imperfect analogy to what programming used to be like.
+[01:00:12] But I think the ways that it is useful is like, maybe programming before you wanted to be very
+[01:00:19] linear, you wanted to predict the future, you wanted to design very thoughtfully systems that
+[01:00:23] would be robust and work well and be correct.
+[01:00:28] And even if you're trying to do something sloppily, it's still like a single threaded
+[01:00:32] process where you only are worrying at a given moment about what's in front of you.
+[01:00:36] And to me, I'm a big fan of real-time strategy games.
+[01:00:40] Using agentic systems feels exactly like playing real-time strategy games to me.
+[01:00:46] And there are a lot of properties of those games that are very different from chess.
+[01:00:50] One thing, and especially if you look at like high level play, there is no single aspect that you can
+[01:00:56] do perfectly and like succeed.
+[01:00:58] You have to be balancing many different things at once.
+[01:01:00] You have to always have your economy running, your production running, your unit that's
+[01:01:05] doing something productive, you need to be engaging.
+[01:01:08] And so this notion of like, how do you maximally parallelize both what your systems are doing,
+[01:01:13] but also your attention so that you are adding the corrective feedback that's necessary as you
+[01:01:19] learn new things, as the map is exposed, all this kind of stuff.
+[01:01:23] Anyway, this to me feels like exactly what like coding with agents is like.
+[01:01:28] And this is what we'll talk about.
+[01:01:30] So in terms of like tools we've built just to like ground this in a very simple thing,
+[01:01:37] this is the LW stuff is just like our linear work trees.
+[01:01:41] A lot of people early on started using realizing how useful get work trees are
+[01:01:45] when you do coding development, having separate.
+[01:01:49] I assume everybody kind of knows where they are, but in case not, like,
+[01:01:52] you know, it was fine to have one repo on your machine when you were the only one doing
+[01:01:56] development. Now you need to have like lots and lots of repos on your machine,
+[01:02:00] all doing development in parallel, all compiling separately and like not stepping on each other's
+[01:02:05] toes. And so the combination of like using work trees, using task management software,
+[01:02:13] having the actual work itself be portable, which is what the TMUX bit comes in.
+[01:02:19] And then like sticking in autonomous agents, one or many different ones on a given workflow.
+[01:02:25] The way that we basically ship stuff, the way I ship stuff,
+[01:02:29] is I have an orchestrator agent that's run by Claude usually, but it could be Codex 2.
+[01:02:35] I try to have as minimal a number of keystrokes as possible to go from like,
+[01:02:40] here's an idea of something that needs to be fixed to work being started on it.
+[01:02:44] And because I can course correct that work later, think like grabbing a unit and just like clicking
+[01:02:49] across the map and you'll come back later to like make it work effectively.
+[01:02:54] Status tracking, watching your mini maps, the RTS equivalent from the orchestrator of all the
+[01:03:00] different spawned workers that you have working. And then all those workers being instructed
+[01:03:06] basically to try to go as far as they can, really put like a really low premium on their time and
+[01:03:12] effort and a high premium on yours. So even if they're going to be wrong, even if they're going
+[01:03:17] to need to be corrected later, it's better for them to push as far as they can before they ask
+[01:03:21] for feedback so that you can just have a lot of them running in parallel. Even if it's wasteful
+[01:03:27] from like a per token standpoint, it's like saving you a lot of time or letting you do more things
+[01:03:33] at once. Anyway, so they try and take everything all the way to a PR, not just a PR, but also like
+[01:03:39] a summary that's well, I'll get into that later anyway. So, and then like, how do you take each
+[01:03:45] the results of every worker who completes something and like feed it back into the system
+[01:03:49] so that the system learns and becomes better again, like without the human having to type
+[01:03:52] a lot of things or doing minimal work so they can do a lot of these things at once. And then
+[01:03:57] other pieces like how do you tag in other teammates? We'll also get into. Anyway, this is very much like
+[01:04:02] in RTS where you're like producing units, trying to move them around, trying to constantly adapt
+[01:04:07] to stuff, but also with really high visibility, not just like spawning 20 agents and like hoping
+[01:04:12] that you'll, you know, solve this problem for me, make no mistakes, and it'll just work in the end
+[01:04:16] because that doesn't actually happen in production. So like some general guidelines or practices
+[01:04:26] that we use, that I use at least, but that we've spread through our team is like trying to run
+[01:04:35] almost everything, including scripts that you run, because sometimes scripts are a lot better
+[01:04:39] and save on context space than just like doing everything by the LLM, obviously,
+[01:04:44] but running everything from the CLAWD instances always like never typing anything outside of it
+[01:04:48] if you can avoid it. Having this portability, because a lot of times you start work on a ticket,
+[01:04:53] you start work on something and actually the reason you're stuck on it is because someone else on your
+[01:04:57] team or even maybe another machine, maybe you're running it locally on your computer and then you're
+[01:05:01] like, oh shit, like I gotta go home now, but I want this to run overnight. And I make it really easy
+[01:05:05] to move it elsewhere and let other people pick it up. Maybe it needs more compute to do something,
+[01:05:10] whatever, it needs more memory. And then also just like always running in dangerously skip
+[01:05:16] permissions mode, like whenever possible. If you can't be running in dangerously skip permissions
+[01:05:21] mode, do what you need to do to like make a sandbox so you can, but if you're having to give
+[01:05:25] feedback at any regular pace, like you're going to go really slow. And then like, so what do the
+[01:05:31] workers do? As I mentioned before, they're always trying to go to PR. They are not rigorously
+[01:05:38] adhering to like the given spec you do. They're trying to learn and adapt to it as they go,
+[01:05:41] because your specs will be wrong. And it's okay for them to make assumptions because you can correct
+[01:05:46] them as you catch them. And then, you know, for like, for example, front end development,
+[01:05:53] doing every, everything is like pre-baked into the worker spawn. So boot the local dev server,
+[01:05:58] run tests yourself on it, have it ready and waiting so that the human can just come and open a browser
+[01:06:03] tab pointing to the right port and they can just test the thing as quickly as possible,
+[01:06:07] minimizing the number of human steps that need to be taken and like the clicks to just move
+[01:06:12] something forward to the next step. And also just like lots of things baked in that are like,
+[01:06:19] what are things that we know really reliably? The agent's going to be bad about how do we learn
+[01:06:24] about those things, bake them in, put them in to not just like the Claude MD file, but also like
+[01:06:30] broader reaching graphs that you have of MD files, which I'll get to later to make those things
+[01:06:38] less of a problem. So for example, one of like the really obvious things that Claude is super bad at
+[01:06:42] today is predicting how long it'll take to do something. If you ask it like, how long is it
+[01:06:46] going to take to solve this problem? Be like, oh, maybe like two weeks of like, you know, one
+[01:06:50] engineer's work. And in practice, it takes like one prompt and it can do it in 20 minutes because
+[01:06:55] it's trained on what it would have taken human to do those things. That's all of it's like basis for
+[01:06:59] training data. These systems haven't been around long enough for that to be updated. And I think
+[01:07:03] they'll like always be behind. Anyway, so you can take all these things and be like, no, no,
+[01:07:07] no, never trust yourself in these ways. And then also like, you know, people think a lot and a lot
+[01:07:14] of times it's kind of true that like the code is the source of truth, but the code is often like a
+[01:07:19] really expensive source of truth for the agents to pull context out of. And it's actually really
+[01:07:24] cheap, especially when you have all the context loaded in memory to like aggressively document
+[01:07:29] things in a way that benefit future agents. So not just like writing comments in the code,
+[01:07:35] but also structured linked sort of Wiki style knowledge, knowledge based files that will
+[01:07:43] make you future agents have an easy time, basically take advantage of the context as much as you can.
+[01:07:49] And also helps the visibility of humans and audit ability of what you do. So macro by default,
+[01:07:56] micro when it counts as another RTS principle, like you can't win a game of RTS, RTS game.
+[01:08:02] Usually if you're just really good at moving your individual units, because if you didn't make any
+[01:08:07] units, you're just going to lose. So yes, it's important to like deep dive and tunnel vision
+[01:08:13] into certain things that are really critical. Some tickets for sure take a long time, but anytime
+[01:08:17] you're like tunnel visioned into something, you should always be thinking how do I spawn as many
+[01:08:22] other little things that don't take my cognitive bandwidth as much and just like move those things
+[01:08:27] forward. So that always you're basically like maxing out your cognitive capacity. And again,
+[01:08:34] like things can wait, you can come back to them like three days later. It's not that expensive.
+[01:08:37] And you can just ask Claude like, remind me what the hell I was doing with this thing. All this
+[01:08:41] stuff is really cheap. What's expensive, but doesn't feel expensive is like not doing these
+[01:08:45] things at the same time. Anyway, so macro necessary, micro useful, but you can win
+[01:08:53] honestly in RTS games. And I think in a lot of things, including in programming,
+[01:08:57] if you just macro enough, if you just do enough things, you'll kind of stupidly adjust your
+[01:09:04] weights or something that's good. If you just always really quickly identifying problems and
+[01:09:07] solving them. And yeah, this gets back to like the high visibility thing. So one of the things that
+[01:09:13] I really like about, you know, like how I set things up is it's not like a lot of agents that
+[01:09:19] are kind of tucked away and that you have to like dig in hard to actually read what their ongoing
+[01:09:25] stream is and what they're actually doing. Like in an RTS game, like you click buttons to immediately
+[01:09:31] jump to different key points in the map. So you can always be auditing stuff and always like catch
+[01:09:35] it and correct it quickly. If it's a critical thing, that too I find is like super useful
+[01:09:41] in programming because again, like they're going to make mistakes all the time. They're going to
+[01:09:45] like go in wrong directions and you definitely save time and value. If you catch them early,
+[01:09:49] fix them, course correct. So you should be kind of like looking around between your different agents,
+[01:09:54] monitoring them while you are also trying to have as many as you can.
+[01:09:59] Another thing to this point that I personally like a lot and it's like a big thing in RTS games is
+[01:10:04] audio. So like the only way that you can manage a big army across the whole map is to have lots of
+[01:10:09] audio cues where it's like your base is under attack or you know this guy's moving or whatever
+[01:10:15] thing is happening. You don't have to be looking at, you can hear and it's like okay, shit I need
+[01:10:20] to put my attention to this thing. And you know based on like a lot of variety of these audio cues
+[01:10:24] that you can learn and they're good like pneumatic devices, what's important? What do I need to act
+[01:10:29] on right away? What don't I? So like the way I run my personal setup is I actually have all of my
+[01:10:36] individual agent like team accessions mapped to different Warcraft and Starcraft units
+[01:10:43] that are color coded and themed based on the type of ticket it is and then they play the actual sound
+[01:10:48] effects from Warcraft and Starcraft units. So I immediately know and like visually identify,
+[01:10:53] I don't even have to read like this tab needs my attention, this thing's going on. Anyway like to
+[01:10:58] me it just seems like a natural way of like take advantage of these and again like Claude just made
+[01:11:02] these things for me really quickly as like a side ticket that I was working on over time while I
+[01:11:07] worked on eight other things. So it's like why not do these things and these devices, pneumatic devices
+[01:11:13] or whatever like cues for people are really optimized in gaming and they like know what
+[01:11:18] good sound design is to like be memorable and otherwise catch your attention in different ways.
+[01:11:24] Yeah and like cult use of color, icons, anything that's just like quicker to read and process
+[01:11:29] because I actually do think like these things matter a lot especially if you're trying to
+[01:11:35] really aggressively get a lot of stuff done and this guy is kind of the limit in how you can do
+[01:11:39] that stuff. Another thing we built internally is like an APM tracker and I'll just show quickly here.
+[01:11:53] So and this is Warcraft 3 which is like one of the lower APM requiring professional RTS games
+[01:11:58] but this is what it looks like to actually play this game well at the at the top level and one
+[01:12:04] of the things that you'll notice is like no APM is not the thing that like if you max it you're the
+[01:12:12] best player in the world but nobody is good who doesn't have high APM and so you can just kind of
+[01:12:18] take that as a mental rubric like shit if I'm like thinking and like typing slowly and like
+[01:12:24] am I if this was a competition would I really be the best like do I really need to take that
+[01:12:29] much time in everything I'm doing and how much can I just take like lots of little micro decisions
+[01:12:34] and you know fall toward the right the right goal or toward making things better.
+[01:12:40] Anyway so this is just something like we you know each of us run like personally on our computers
+[01:12:46] and keep an eye on and it's just like just keep track of like are things moving and this this APM
+[01:12:52] is not like clicks you have because I don't think that's like a great tracker for for for agent use
+[01:12:57] we use tool you tool calls it's like how many tool calls are your agents doing per minute
+[01:13:04] this minute this five minutes this hour this day the seven days like how do you max all those things
+[01:13:10] and have high numbers and again it's like it's one metric among many but it's how are you actually
+[01:13:16] being really productive or are you really doing the most you could be doing if you have a low APM
+[01:13:21] probably not so otherwise like things probably a lot of people know easy way to to use tokens more
+[01:13:28] effectively is just like do a lot of things in parallel do different things with the same agent
+[01:13:33] do different agents in parallel it will invariably like four complex tasks usually give you a better
+[01:13:40] outcome than if you did it by yourself and just like in an RTS like you should be spending your
+[01:13:43] resources you should never have your clawed tokens like sitting unused that's really inefficient
+[01:13:48] economy like use them all every hour period that you can knowledge base this is like a really big
+[01:13:55] thing that for us i think it's still like somewhat early on but uh this whole presentation i made and
+[01:14:01] started the exact same way that i'm just describing how i do tickets which is i went to clawed i took
+[01:14:08] what francois asked me to talk about i pasted it in i said look at our knowledge base and how we do
+[01:14:12] stuff and put together powerpoint presentation based on the philosophies embedded in there and
+[01:14:17] like what i've told you before and it didn't like one shot it but it's like i maybe did like 15
+[01:14:23] edits to it you know and got to this presentation uh and then i refed it all back into the knowledge
+[01:14:28] base and said like learn everything that i've said and all the the the advice i've given and
+[01:14:33] corrections i've given and like make those better instilled in the knowledge base and this knowledge
+[01:14:37] base is basically just because like linked docs are much faster diverse by LLMs and so uh and you
+[01:14:44] can encode everything including business knowledge and indeed like clawed and codec's really good at
+[01:14:48] coming up with features and stuff if they have enough knowledge about your business
+[01:14:51] so trying to build this up in an automated way super useful people come up with their own tickets
+[01:14:56] because if you have something you could do everybody you should just like do it everybody
+[01:15:00] should be full stack all the time be reactive and even if agent does it way worse than you or slower
+[01:15:09] than you it's still better to have it do it and it's easy to change things when they're screwed up
+[01:15:14] Satisficing is the word from economics is like do things satisfy like enough but not perfect
+[01:15:20] uh really really key principle for like everything uh mixed different ticket sizes at the same time
+[01:15:26] uh you know in like we we've three and a half x our output uh pr's per engineer per month uh
+[01:15:34] both because LLMs have made ourselves better but like when we like really adopted this stuff
+[01:15:38] broadly with everyone on the team this last month we grew another 60 percent in our pr's per engineer
+[01:15:43] per month so like you're not going to get a lot smarter but the thing you can train on yourself
+[01:15:48] is like how do i act like people who are good at doing these kinds of things really well like rts
+[01:15:53] pro players what does it look like to be like optimal in this and how can i learn the methods
+[01:15:58] of doing it just like program like an rts pro thank you okay i think that's all we have um now
+[01:16:10] i think vika we have cookies ice cream and popsicles and mochi donuts okay what is a mochi
+[01:16:18] donut it's delicious okay um yeah so thank you guys so much for coming it was a lot of fun
+[01:16:25] uh i will send out a feedback form please review it and give me back your thoughts um think about
+[01:16:31] those uh call for presentations and calls for ideas if you guys have ideas let's let's definitely
+[01:16:36] hear them um and uh looking for more papers coming up probably in in two weeks i think we're
+[01:16:42] already fully slated um and then basically the first one in july uh we know we're looking to
+[01:16:47] fill out as well so if you wanted to present please let me know that's all i got thank you everyone
