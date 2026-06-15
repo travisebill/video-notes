@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **42 支影片** · 19 個音檔 · 42 個逐字稿 · 16 個口播稿
+> **43 支影片** · 20 個音檔 · 43 個逐字稿 · 17 個口播稿
 > 最後更新：2026-06-15
 
 ---
@@ -20,6 +20,7 @@
 - **2026-06-14** | 陳文茜 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 48 分 36 秒
 - **2026-06-14** | 陳文茜 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒
 - **2026-06-12** | Y Combinator | [5 篇 AI 論文告訴我們研究正往哪裡走 — YC Paper Club 全景](技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md) · 1 小時 16 分 55 秒
+- **2026** | Yann LeCun | [World Models 將開啟下一場 AI 革命 — 從 LLMs 的死路到 AMILabs](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) · 58 分 54 秒
 - **2026-06-12** | Matthew Berman | [你必須立刻試試的 4 個開源 AI 專案：Last30Days、Open Notebook、Agent Skills、Headroom](技術講座/20260612_Matthew_Berman_四個必試開源AI專案.md) · 15 分 53 秒
 - **2026-06-13** | 自說自話的總裁 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) · 28 分 50 秒
 - **2026-06-13** | Smitha（Google Cloud Tech）| [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) · 8 分 29 秒
@@ -40,6 +41,7 @@
 |------|------|------|------|-----------|
 | 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) | 陳文茜 | 48 分 36 秒 | [📄 note](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · [📝 逐字稿](transcripts/20260614_陳文茜_AI畢業生與文明重組_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260614_陳文茜_AI畢業生與文明重組_口播稿.txt) · [🔊 opus](audio/20260612_YC_PaperClub_5篇AI論文.opus) · [🔊 m4a](audio/20260612_YC_PaperClub_5篇AI論文.m4a) · [🔊 mp3](audio/20260612_YC_PaperClub_5篇AI論文.mp3) |
 | 2026-06-12 | [5 篇 AI 論文告訴我們研究正往哪裡走 — YC Paper Club 全景](技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md) | Y Combinator Paper Club | 1 小時 16 分 55 秒 | [📄 note](技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md) · [📝 逐字稿](transcripts/20260612_YC_PaperClub_5篇AI論文_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260612_YC_PaperClub_5篇AI論文_口播稿.txt) · [🔊 opus](audio/20260612_YC_PaperClub_5篇AI論文.opus) · [🔊 m4a](audio/20260612_YC_PaperClub_5篇AI論文.m4a) · [🔊 mp3](audio/20260612_YC_PaperClub_5篇AI論文.mp3) |
+| 2026 | [World Models 將開啟下一場 AI 革命 — 從 LLMs 的死路到 AMILabs](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) | Yann LeCun (NYU, ex-Meta, AMILabs 創辦人) | 58 分 54 秒 | [📄 note](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) · [📝 逐字稿](transcripts/20260615_YannLeCun_WorldModels_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260615_YannLeCun_WorldModels_口播稿.txt) · [🔊 opus](audio/20260615_YannLeCun_WorldModels與AMILabs.opus) · [🔊 m4a](audio/20260615_YannLeCun_WorldModels與AMILabs.m4a) · [🔊 mp3](audio/20260615_YannLeCun_WorldModels與AMILabs.mp3) |
 | 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) | 陳文茜 | 48 分 19 秒 | [📄 note](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · [📝 逐字稿](transcripts/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速_口播稿.txt) · [🔊 opus](audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.opus) · [🔊 m4a](audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.m4a) · [🔊 mp3](audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.mp3) |
 | 2026-06-12 | [你必須立刻試試的 4 個開源 AI 專案：Last30Days、Open Notebook、Agent Skills、Headroom](技術講座/20260612_Matthew_Berman_四個必試開源AI專案.md) | Matthew Berman | 15 分 53 秒 | [📄 note](技術講座/20260612_Matthew_Berman_四個必試開源AI專案.md) · [📝 逐字稿](transcripts/20260612_Matthew_Berman_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260612_Matthew_Berman_四個必試開源AI專案_口播稿.txt) · [🔊 opus](audio/20260612_Matthew_Berman_四個必試開源AI專案.opus) · [🔊 m4a](audio/20260612_Matthew_Berman_四個必試開源AI專案.m4a) · [🔊 mp3](audio/20260612_Matthew_Berman_四個必試開源AI專案.mp3) |
 | 2026-06-13 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) | 自說自話的總裁 | 28 分 50 秒 | [📄 note](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) · [📝 逐字稿](transcripts/20260613_自說自話的總裁_上古中國的魔法時代_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260613_自說自話的總裁_上古中國的魔法時代_口播稿.txt) · [🔊 opus](audio/20260613_自說自話的總裁_上古中國的魔法時代.opus) · [🔊 m4a](audio/20260613_自說自話的總裁_上古中國的魔法時代.m4a) · [🔊 mp3](audio/20260613_自說自話的總裁_上古中國的魔法時代.mp3) |
@@ -161,6 +163,7 @@
 - **陳文茜** · 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 48 分 36 秒
 - **陳文茜** · 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒
 - **Y Combinator Paper Club** · 2026-06-12 | [5 篇 AI 論文告訴我們研究正往哪裡走 — YC Paper Club 全景](技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md) · 1 小時 16 分 55 秒
+- **Yann LeCun** · 2026 | [World Models 將開啟下一場 AI 革命 — 從 LLMs 的死路到 AMILabs](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) · 58 分 54 秒
 - **自說自話的總裁** · 2026-06-13 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) · 28 分 50 秒
 - **Smitha（Google Cloud Tech）** · 2026-06-13 | [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) · 8 分 29 秒
 - **進階上下文工程** · ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · ?
@@ -194,4 +197,4 @@
 
 ---
 
-*最後更新：2026-06-15 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 42 支影片*
+*最後更新：2026-06-15 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 43 支影片*
