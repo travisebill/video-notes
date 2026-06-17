@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **43 支影片** · 20 個音檔 · 43 個逐字稿 · 17 個口播稿
-> 最後更新：2026-06-15
+> **44 支影片** · 21 個音檔 · 44 個逐字稿 · 18 個口播稿
+> 最後更新：2026-06-17
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-04-17** | Ryan Lopopolo（OpenAI）| [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · 46 分 20 秒
 - **2026-06-14** | 陳文茜 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 48 分 36 秒
 - **2026-06-14** | 陳文茜 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒
 - **2026-06-12** | Y Combinator | [5 篇 AI 論文告訴我們研究正往哪裡走 — YC Paper Club 全景](技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md) · 1 小時 16 分 55 秒
@@ -39,6 +40,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) | Ryan Lopopolo（OpenAI Member of Technical Staff）| 46 分 20 秒 | [📄 note](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · [📝 逐字稿](transcripts/20260617_RyanLopopolo_HarnessEngineering_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260617_RyanLopopolo_HarnessEngineering_口播稿.txt) · [🔊 opus](audio/20260617_RyanLopopolo_HarnessEngineering.opus) · [🔊 m4a](audio/20260617_RyanLopopolo_HarnessEngineering.m4a) · [🔊 mp3](audio/20260617_RyanLopopolo_HarnessEngineering.mp3) |
 | 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) | 陳文茜 | 48 分 36 秒 | [📄 note](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · [📝 逐字稿](transcripts/20260614_陳文茜_AI畢業生與文明重組_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260614_陳文茜_AI畢業生與文明重組_口播稿.txt) · [🔊 opus](audio/20260612_YC_PaperClub_5篇AI論文.opus) · [🔊 m4a](audio/20260612_YC_PaperClub_5篇AI論文.m4a) · [🔊 mp3](audio/20260612_YC_PaperClub_5篇AI論文.mp3) |
 | 2026-06-12 | [5 篇 AI 論文告訴我們研究正往哪裡走 — YC Paper Club 全景](技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md) | Y Combinator Paper Club | 1 小時 16 分 55 秒 | [📄 note](技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md) · [📝 逐字稿](transcripts/20260612_YC_PaperClub_5篇AI論文_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260612_YC_PaperClub_5篇AI論文_口播稿.txt) · [🔊 opus](audio/20260612_YC_PaperClub_5篇AI論文.opus) · [🔊 m4a](audio/20260612_YC_PaperClub_5篇AI論文.m4a) · [🔊 mp3](audio/20260612_YC_PaperClub_5篇AI論文.mp3) |
 | 2026 | [World Models 將開啟下一場 AI 革命 — 從 LLMs 的死路到 AMILabs](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) | Yann LeCun (NYU, ex-Meta, AMILabs 創辦人) | 58 分 54 秒 | [📄 note](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) · [📝 逐字稿](transcripts/20260615_YannLeCun_WorldModels_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260615_YannLeCun_WorldModels_口播稿.txt) · [🔊 opus](audio/20260615_YannLeCun_WorldModels與AMILabs.opus) · [🔊 m4a](audio/20260615_YannLeCun_WorldModels與AMILabs.m4a) · [🔊 mp3](audio/20260615_YannLeCun_WorldModels與AMILabs.mp3) |
@@ -94,9 +96,10 @@
 - 2026-05-12 | [蔡康永深度對談：關於衰老、死亡、AI 與人生的終極提問](人物訪談/20260512_蔡康永_衰老死亡與AI.md) · 蔡康永（作家/主持人） × 羅永浩（訪談主持人）｜「十字路口」播客 · 3:36:18
 - 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
 
-### 🧠 **AI / LLM 學術與方法論**（14 支）
+### 🧠 **AI / LLM 學術與方法論**（15 支）
 
 - ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · 進階上下文工程 · ?
+- 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · Ryan Lopopolo（OpenAI Member of Technical Staff）· 46 分 20 秒
 - 2026-06-08 | [Nick Hanauer × Daniel Priestley：中產階級之死、AI 對工作衝擊，與資本主義能否自我修正](人物訪談/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.md) · Nick Hanauer · 2 小時 32 分 26 秒
 - 2026-05-31 | [No Vibes Allowed: Solving Hard Problems in Complex Codebases](技術講座/20260531_Dex_12FactorAgents_NoVibesAllowed.md) · ? · ?
 - 2026-05-28 | [Building Proactive Agent Workflows with Claude Code](技術講座/20260528_Maya_Claude_Code_Routines_主動代理工作流.md) · ? · ?
@@ -183,6 +186,7 @@
 - **Boris，Claude Code 的創作者** · 2026-05-12 | [Claude Code 創作者 Boris：軟體的未來、AI 民主化與 SaaS 末日](技術講座/20260512_Boris_Claude_Code創作者訪談.md) · 24:35
 - **Matt Pocock，知名 TypeScript 教育者轉向 AI 編碼工具開發。從「教人類寫 TypeScript」轉為「教開發者如何與 AI 協作寫程式」。創建了 AI Hero 課程平台及 Sandcastle 多代理編碼框架** · 2026-05-12 | [AI 編碼工作坊：用 AI 實際開發功能的完整流程與哲學](技術講座/20260512_Matt_Pocock_AI編碼工作坊.md) · 1:36:29
 - **Harness Engineering** · 2026-04-12 | [Harness Engineering：有時候語言模型不是不夠聰明，只是沒有人類好好引導](技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md) · 92 分鐘
+- **Ryan Lopopolo（OpenAI Member of Technical Staff）** · 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · 46 分 20 秒
 - **Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長** · 2026-02-05 | [黃仁勳最新訪談：你不會輸給 AI，但你會輸給會用 AI 的人](技術講座/20260205_JensenHuang_不輸給AI_輸給會用AI的人.md) · 44 分鐘
 
 ---
@@ -193,8 +197,8 @@
 - 🎙️ **人物訪談**（7 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（3 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（4 支）→ [完整列表](財經分析/README.md)
-- 🛠️ **技術講座**（26 支）→ [完整列表](技術講座/README.md)
+- 🛠️ **技術講座**（27 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-06-15 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 43 支影片*
+*最後更新：2026-06-17 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 44 支影片*
