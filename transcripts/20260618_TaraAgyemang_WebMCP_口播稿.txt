@@ -1,0 +1,20 @@
+> 註：本檔為繁中口播稿，送 TTS 前會用 OpenCC t2s 預轉為簡中（見 MEMORY_TTS_SOP.md）
+> 字數約 1800 字
+
+Google Chrome 團隊的 Developer Relations 工程師 Tara Agyemang，在 6 月 11 號的一場技術演講中，正式介紹了 WebMCP（Web Model Context Protocol），一個 Chrome 正在推進的 web 標準提案。這部演講的核心張力，在於 AI agent 在真實網站上完成任務的「成本結構」長期被低估 — 從工程師角度，一個看似簡單的「買兩張演唱會票」動作，背後其實要付出掃描整個 DOM、解析 accessibility tree、擷取 screenshot、做 pixel coordinate 數學計算、然後點擊時還可能因為廣告載入而 miss 的代價。
+
+從人機互動設計角度，WebMCP 的本質是一個典範轉移：過去幾十年 web 是為人類動作和人類眼睛設計的，現在 AI agent 也代表人在用 web，但 agent 缺乏人類的視覺直覺，只能用暴力法解析。WebMCP 的解方是讓網站主動向 agent 公開一組「具名、具型別、具描述」的工具選單，agent 拿到這個選單後就能直接呼叫，不再需要猜測。Tara 引用 Google 內部實測，WebMCP 顯著提升了 agent 在網站上的 performance 與 reliability。
+
+從分散式系統架構角度，WebMCP 與既有的 MCP 形成有趣的分工。MCP 處理 server-side 應用與 agent 的標準化介接，企業需要自架 service 才能讓 agent 存取；WebMCP 則是 MCP 的 client-side 工具實作，專注瀏覽器內功能。Tara 用「JavaScript 啟發自 Java」的比喻來說明兩者關係 — 名字相似但應用場景不同。這條分工呼應了 Tim Berners-Lee 早年在 web 架構中區分 client 與 server 的設計哲學，只是這次 client-side 的「智慧」已經從人類轉移到 agent。
+
+Tara 在演講中展示兩條實作路徑。Declarative API 適用於標準 HTML form 場景：工程師只要在 form 加幾個 attributes（包括 tool name 和 tool description），瀏覽器就會自動生成 JSON schema，form fields 直接成為 tool 的 parameters。這個路徑還包含一個有趣的設計 — `agent-invoked` Boolean 屬性，網站可以區分「這個表單是 agent 還是真人填的」，對未來 a/b testing 跟 fraud detection 都有價值。Imperative API 則處理複雜多步驟 UI flow：工程師在 JavaScript 中用 `registerTool` 註冊自訂工具、手寫 schema、在 execute 區塊內跑一般 DOM 操作並回傳狀態給 agent。Tara 坦言實務上 Imperative API 用得最多，因為真實世界的 UI 流程往往比單純 form 複雜得多。
+
+從經濟學角度，Tara 演講中展示的演唱會購票 demo 點出一個關鍵觀察：3 個 tool call 就能完成原本需要數十次 DOM 互動的購票流程，這意味著轉換率與完成率都會顯著提升。她在結尾引用一個口號：「把每個網站變成 agent 的 high-performance API」。這背後的商業邏輯是：當 agent 成為新的流量入口（如同 SEO 之於搜尋引擎），網站的 agent-readiness 會直接影響營收。Chrome 團隊的戰略意圖很明確 — 他們不想讓 web 被 screen-scraping 的 brittle 流程殖民，而是建立一個由 Google 主導的標準。
+
+不過 Tara 的解方仍有兩個值得深思的盲點。第一，她對 WebMCP 與現有 screen-reader、accessibility API 的關係著墨甚少。WebMCP 的 declarative form 跟 ARIA attributes 高度重疊 — 為什麼不直接擴展 ARIA 而要新建一個標準？這個問題她沒有正面回答。第二，她強調「checkout 步驟應讓使用者手動確認花錢」，這暴露了 WebMCP 在信任邊界上的模糊地帶：誰來決定哪些 action 可以由 agent 自動完成、哪些必須人類介入？這個治理問題如果沒有清楚規範，未來會出現「agent 替使用者亂買東西」的爭議。
+
+從比較觀點看，WebMCP 跟 Marie Haynes 在 OKF 影片中提到的 web MCP 概念相互呼應。OKF 讓企業以概念為單位組織知識給 agent 讀；WebMCP 則讓網站以工具為單位開放動作給 agent 呼叫。兩條路線共同指向一個更大的願景：未來的 web 不再只服務人類，也直接服務代表人類的 AI agent。
+
+影片最後的關鍵 takeaway 是：Chrome 146 已經原生支援 WebMCP，雖然仍在 early preview、API 會持續變動，但 Google 已經把 Model Context Tool Inspector extension 跟 eval CLI 工具開源出來，邀請開發者試用並回饋。這是 web 從「人類可讀」走向「agent 可呼叫」的明確訊號。懂 WebMCP 的人，未來幾年會跟懂 SEO 一樣搶手。
+
+這場 WebMCP 推出演講的真正遺產，不在 Chrome 146 這個版本號，而在它把 agent-readable web 從概念變成可實作的標準。Tara Agyemang 這場演講最鮮明的訊息是：別再讓 agent 猜你的網站，主動給它工具；別再滿足於 brittle 的 screen-scraping，現在有 deterministic 的 tool call 路徑可走。
