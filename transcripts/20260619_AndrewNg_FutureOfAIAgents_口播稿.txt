@@ -1,0 +1,27 @@
+本場 LangChain Interrupt 26 邀請 Andrew Ng 回來進行第二年的 fireside chat,主持人是 LangChain CEO Harrison Chase。Andrew 是 Landing AI、DeepLearning.AI、AI Fund 以及與商界夥伴 Christy Tan 共同創辦的 AI 顧問公司 AI Aspire 的創辦人。本場對談的核心張力在於:當 AI agent 能力快速躍進時,企業真正的挑戰不在 model 競賽,而在組織形態、資料架構、商業策略與生態系治理的全面重塑。
+
+開場 Andrew 點出 hype 與 doomsaying 都比預期更猛,但 coding agent 是真的超出預期。Andrew 自己一年前幾乎只用 Claude Code,如今混用 OpenAI Codex、Gemini CLI 與 OpenCode,並開始在手機上寫 code,搭配 Mac mini 等 host 環境。Agentic workflows 開始進入企業,但仍在早期。
+
+一年前 Andrew 提出 product management bottleneck——當寫 code 變快,決定做什麼變慢。一年後他發現這個 bottleneck 不只升級,還**全面擴散**。當 build 從三個月變一天,等法律一週簽核就成了法律瓶頸;當 feature 數量爆炸,marketing 變瓶頸;當 UI 多樣化,design 變瓶頸。Andrew 的解方是建立 1 到 10 人的 small pod,成員是高 context、highly empowered 的 generalists。套用 pigeonhole principle,若兩個人要 cover 五個職能,每個人必跨多 role。AI 讓工程師 slightly less bad 當 marketer——不是變好,但從不可用變勉強可用,這就夠了。
+
+從組織形態延伸到技術基礎,Andrew 提出 LEGO 比喻。Building blocks 包括 RAG、agentic frameworks、evals、guardrails、UI 元件、identity、資料庫等;agentic coding 讓越來越多 open source 與 proprietary API 型 building blocks 湧現。就像只有白色樂高積木只能蓋簡單東西,加入黑黃棕綠與異形件,可組合的可能性指數級成長。真正的挑戰是用 coding agent 把這些積木組裝起來。
+
+面對新工具的 knowledge cutoff 問題,Andrew 與 Rohit Prasad 共同推出 Context Hub,定位為給 AI agent 用的 Stack Overflow,讓 agent 取得最新 API 與 SDK 文件、對文件給 feedback。Andrew 自己用 Context Hub load 討人厭的 API syntax,讓 coding agent 自動 make 正確 calls。
+
+教育領域方面,DeepLearning.AI 推出 LearnDream.ai 與 codedream.ai 實驗——不是線上課程,而是模擬 video call,使用者在「Andrew 的 AI 講課」過程中可中斷、問問題。最大創新是把影片區從靜態影片換成 JavaScript 視窗,使用者可在影片中輸入自己的 prompt 試。Andrew 自承教育轉型被過度 hype——目前還沒有根本性地比十年前好的東西,但互動性已大幅增加。
+
+從企業採納角度看,Andrew 從 AI Aspire 與 Fortune 500 的合作中看見一致 pattern。Bottom-up 的「let a thousand flowers bloom」策略大多產生 point solutions 與增量效率,但不是 transformation。CEO 與董事會都在問 ROI 在哪。Andrew 的解方是 bottom-up 必須搭配 top-down 重設計整個 workflow。他舉銀行貸款流程為例:五步流程中只自動化中間一步只是小幅效率;若重設計整個流程,變成「十分鐘 AI 自動核貸」產品,需要 marketing、data infra、AI decision、final diligence 一起改——這需要 someone with broadest scope 來推動,正是 top-down 的價值。
+
+Andrew 提出整場最重要的商業主張:**drive growth, not cost savings**。你只能省這麼多錢,但 growth 幾乎沒有 ceiling。客服中心從 cost savings 變「faster delightful customer experience」、drive-thru AI 點餐提升體驗——這些都 drive growth,而非只省成本。
+
+談到 ROI 量測,Andrew 提出一個反直覺觀察:**要求 2% 增量改善比要求 50% transformative growth 更難**。原因:2% 改善只要每個人多努力,50% 成長必須想 creative solutions。Big bets 不該 single wild swing,而是 portfolio of handful of thoughtful bets;若任何一個 pay off 就有意義。
+
+談到 FTE（Forward-Deployed Engineer）熱潮,Andrew 認為這是好主意,但 vendor lock-in 是大風險。預測多數企業會採「少量 FTE 加上大量 in-house AI engineer」的組合。FTE 工作的價值在懂業務、customer-facing、evals 與 change management。但 vendor-neutral FTE 很難找,因為領先 AI model 一年內可能換家。Andrew 分享個人習慣:**幾乎不簽超過一年合約**,即使廠商提供 20% 到 30% discount。理由是 optionality 比折扣更有價值。
+
+Andrew 對開源模型與政策環境也提出警告。Open weight 模型持續落後 frontier 六到九個月,但 frontier 太貴,很多 use case 用 open weight。他對白宮審查模型釋出的政策感到擔憂——他已向幾位政府友人表達意見,並直言「a war on open source open weight models is being waged」,有時以美中競爭為名,有時以其他論點包裝。Andrew 呼籲大家保護開源,既讓世界更豐富,也保 optionality。
+
+最後談到資料架構重設計,Andrew 認為這是未來五年最大工程市場。過去十到二十年企業把結構化資料整理得很好,但現在 AI 能處理 unstructured data——text、images、PDF、audio、video——這些資料的組織突然變更重要而非更不重要。Andrew 觀察市場上沒有 single good solution 處理 unstructured data,AI Fund 內部正在實驗自己的 rearchitecture。他預測未來幾年企業將花數千萬到數億美元重做資料架構,讓資料 AI ready 或 agent ready。現有架構的問題包括 fragmentation、governance、permissions 設計給人類而非 agent——「agent 是否繼承我的權限」是治理核心問題。Andrew 個人偏好 MongoDB 做 AI prototyping,因為 schema-less 不需要 refactor,降低 AI 偶爾「聰明地刪掉整個 DB」的風險。
+
+收尾呼應開場。整場 podcast 最鮮明的口號是 Andrew 對企業 AI 策略的核心主張——**drive growth, not cost savings**。在 AI agent 能力爆發的 2026 年,企業若只在 bottom-up 做 point solutions 與 2% 增量效率,將錯過 AI 真正的 transformation 紅利。真正的贏家會是那些敢做 top-down workflow redesign、把資料架構當作未來五年最大投資,並且保護 vendor optionality 與開源生態系的組織。
+
+影片最後 Harrison 感謝 Andrew 兩年的分享,並指出 LangChain Interrupt 議程將由 MongoDB 的 CJ 接續——巧妙呼應 Andrew 在分享中對 MongoDB 的推薦。
