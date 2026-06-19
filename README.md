@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **49 支影片** · 26 個音檔 · 49 個逐字稿 · 23 個口播稿
+> **50 支影片** · 27 個音檔 · 50 個逐字稿 · 24 個口播稿
 > 最後更新：2026-06-19
 
 ---
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-06-19** | Dr. Darren Candow（University of Regina 老化肌骨研究室主任）| [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · 75 分 32 秒
 - **2026-06-19** | Andrew Ng（Landing AI / DeepLearning.AI 創辦人）| [The Future of AI Agents — Andrew Ng × Harrison Chase @ LangChain Interrupt](技術講座/20260619_AndrewNg_FutureOfAIAgents.md) · 31 分 39 秒
 - **2026-06-19** | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者）| [Agentic Engineering Workflow — Harness First, Model Second](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) · 62 分 24 秒
 - **2026-06-19** | AWS Show & Tell — Mark Roy / Isan (EK) Koshik / Evandro Wendro（Amazon Bedrock AgentCore） | [AI-Powered SDLC with Claude Code / Codex / Kiro on Amazon Bedrock AgentCore](技術講座/20260619_AWSShowAndTell_AIPoweredSDLC.md) · 59 分 14 秒
@@ -45,6 +46,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) | Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）| 75 分 32 秒 | [📄 note](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · [📝 逐字稿](transcripts/20260619_DrDarrenCandow_CreatineForAntiAging_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260619_DrDarrenCandow_CreatineForAntiAging_口播稿.txt) · [🔊 opus](audio/20260619_DrDarrenCandow_CreatineForAntiAging.opus) · [🔊 m4a](audio/20260619_DrDarrenCandow_CreatineForAntiAging.m4a) · [🔊 mp3](audio/20260619_DrDarrenCandow_CreatineForAntiAging.mp3) |
 | 2026-06-19 | [The Future of AI Agents — Andrew Ng × Harrison Chase @ LangChain Interrupt](技術講座/20260619_AndrewNg_FutureOfAIAgents.md) | Andrew Ng（Landing AI / DeepLearning.AI 創辦人）| 31 分 39 秒 | [📄 note](技術講座/20260619_AndrewNg_FutureOfAIAgents.md) · [📝 逐字稿](transcripts/20260619_AndrewNg_FutureOfAIAgents_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260619_AndrewNg_FutureOfAIAgents_口播稿.txt) · [🔊 opus](audio/20260619_AndrewNg_FutureOfAIAgents.opus) · [🔊 m4a](audio/20260619_AndrewNg_FutureOfAIAgents.m4a) · [🔊 mp3](audio/20260619_AndrewNg_FutureOfAIAgents.mp3) |
 | 2026-06-19 | [Agentic Engineering Workflow — Harness First, Model Second](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者） | 62 分 24 秒 | [📄 note](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) · [📝 逐字稿](transcripts/20260619_MattPocock_AgenticEngineeringWorkflow_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260619_MattPocock_AgenticEngineeringWorkflow_口播稿.txt) · [🔊 opus](audio/20260619_MattPocock_AgenticEngineeringWorkflow.opus) · [🔊 m4a](audio/20260619_MattPocock_AgenticEngineeringWorkflow.m4a) · [🔊 mp3](audio/20260619_MattPocock_AgenticEngineeringWorkflow.mp3) |
 | 2026-06-19 | [AI-Powered SDLC with Claude Code / Codex / Kiro on Amazon Bedrock AgentCore](技術講座/20260619_AWSShowAndTell_AIPoweredSDLC.md) | Mark Roy / Isan (EK) Koshik / Evandro Wendro（Amazon Bedrock AgentCore, AWS Show & Tell） | 59 分 14 秒 | [📄 note](技術講座/20260619_AWSShowAndTell_AIPoweredSDLC.md) · [📝 逐字稿](transcripts/20260619_AWSShowAndTell_AIPoweredSDLC_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260619_AWSShowAndTell_AIPoweredSDLC_口播稿.txt) · [🔊 opus](audio/20260619_AWSShowAndTell_AIPoweredSDLC.opus) · [🔊 m4a](audio/20260619_AWSShowAndTell_AIPoweredSDLC.m4a) · [🔊 mp3](audio/20260619_AWSShowAndTell_AIPoweredSDLC.mp3) |
@@ -147,6 +149,10 @@
 - 2026-05-16 | [【完整版下集 20260516】兩大國際強權領袖過招 習贏得川口中最偉大的領袖 — TVBS 文茜的世界周報](國際局勢/20260516_陳文茜_習川會兩大強權過招.md) · ? · ?
 - 2026-05-12 | [民主如何消亡——以及我們如何阻止它發生](人物訪談/20260512_Anne_Applebaum_民主如何消亡.md) · Anne Applebaum，普立茲獎得主、歷史學家、《大西洋月刊》撰稿人。專研蘇聯史與專制主義，著有《古拉格：一部歷史》《紅色饑荒》《民主的暮光》等。丈夫為波蘭外交部長 · 1:48:14
 
+### 🏃 **健康 / 營養 / 抗老**（1 支）
+
+- 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）· 75 分 32 秒
+
 ### 💰 **財經 / 經濟**（4 支）
 
 - 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 陳文茜 · 48 分 36 秒
@@ -205,6 +211,7 @@
 - **Mark Roy / Isan (EK) Koshik / Evandro Wendro（Amazon Bedrock AgentCore, AWS Show & Tell）** · 2026-06-19 | [AI-Powered SDLC with Claude Code / Codex / Kiro on Amazon Bedrock AgentCore](技術講座/20260619_AWSShowAndTell_AIPoweredSDLC.md) · 59 分 14 秒
 - **Matt Pocock（AI Hero 創辦人 / Sandcastle 作者）** · 2026-06-19 | [Agentic Engineering Workflow — Harness First, Model Second](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) · 62 分 24 秒
 - **Andrew Ng（Landing AI / DeepLearning.AI 創辦人）** · 2026-06-19 | [The Future of AI Agents — Andrew Ng × Harrison Chase @ LangChain Interrupt](技術講座/20260619_AndrewNg_FutureOfAIAgents.md) · 31 分 39 秒
+- **Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）** · 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · 75 分 32 秒
 - **Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長** · 2026-02-05 | [黃仁勳最新訪談：你不會輸給 AI，但你會輸給會用 AI 的人](技術講座/20260205_JensenHuang_不輸給AI_輸給會用AI的人.md) · 44 分鐘
 
 ---
@@ -212,11 +219,11 @@
 <a id="by-type"></a>
 ## 📂 按分類
 
-- 🎙️ **人物訪談**（7 支）→ [完整列表](人物訪談/README.md)
+- 🎙️ **人物訪談**（8 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（3 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（4 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（32 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-06-19 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 49 支影片*
+*最後更新：2026-06-19 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 50 支影片*
