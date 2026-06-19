@@ -1,0 +1,1330 @@
+Hey, hey, hey.
+Hello all, welcome to another episode of
+AWS show and tell. I'm your host Anil
+Nadmini joining from New Jersey today
+and uh we have an amazing uh team
+joining us to present and demo how you
+can build your coding agents and you
+know bring them u you know perhaps I
+should say differently right how you can
+actually bring your AI assisted SDLC
+with cloud codeex
+hero and uh run them in the cloud right
+so but before we go into the details
+let's go through the introductions Mark.
+&gt;&gt; Hey, uh Mark Roy here coming from uh New
+Hampshire today. Uh good to be here. Uh
+I've been a builder for a few decades
+now. I've seen some massive technology
+changes, but the world of agents is uh
+is the greatest by far the most exciting
+and gamechanging here. Uh EK Evandra.
+&gt;&gt; Yeah, I can I can go first. Uh hi
+everyone. I'm Isan Koshik or EK. Uh I'm
+I've I'm I'm going to be de demoing
+today the SCLC pipeline. Really excited
+to be here. I'm joining from uh LA. I'm
+here for the LA Summit. So really
+exciting stuff. Uh Evandro.
+&gt;&gt; Hey folks. Good good morning, afternoon,
+evening depend on time you're watching
+live or later. Uh thank you for joining.
+Uh I'm Wendro here. Uh excited for this
+uh coding agent night demo. uh going to
+show you how to you know host your code
+agents inside agent core runtime.
+&gt;&gt; Cool.
+&gt;&gt; Yeah, we already see folks are joining
+from everywhere, right? AWS show and
+tell uh this particular time slot you
+know is uh you know when we stream
+episodes on u various content related to
+AI agents it's watched from everywhere
+in the world. So let us know in the chat
+where you're joining from and keep the
+conversation going. Right. So and with
+that said uh this particular uh you know
+Mark uh Ivandro and uh Isan we joined in
+a prior session and we we shared with
+you how to build and bring your PC's
+into production using agent core right
+but today's session is a little bit
+different uh we've all uh you know been
+in the world of uh using our coding
+assistants and we love using them but uh
+again when we walk away from our laptops
+or when we close our lids or when we are
+in the flight at 30,000 ft, we want our
+coding agents to be running and uh
+building software, right? So, we're
+going to take a a look at that. Uh we're
+going to have an amazing set of demos
+that our team is going to show you
+today. With that said, Mark, take it
+away.
+&gt;&gt; Cool. Yeah, thanks Anil. Uh it's been uh
+it's been a whirlwind year. Uh it's hard
+to believe, but it's uh almost a full
+year since we launched Agent Core, and
+uh it's been amazing. I get to lead a
+team of SAS and data scientists. We
+focus on agents and we work really
+closely with the agent core team and
+we've been listening uh pretty hard to
+all the feedback cranking out releases
+week after week. Uh check out our
+release notes page to see what's been
+going on there. But yeah, it's been a
+quite a whirlwind. Uh but you know, I
+want to point out we're seeing a pretty
+huge shift in workload maturity. You
+know, I'm sure EK and Avandro could
+weigh in here as well, but as as we look
+back to 2025,
+it was all about prototypes, PC's,
+pilots, maybe a few production workloads
+here and there. It it's really taken
+off. 2026, we're seeing lots of
+production workloads. Uh reinventing
+customer experience with chat agents. We
+get event-driven process automation. uh
+a lot of customers putting out uh agent
+platforms as well to kind of speed up
+the development process. Uh but today we
+get to dive in on coding agents uh which
+pretty much showing up in every customer
+conversation these days. And it's not
+that coding agents are really new, but
+they're wanting to use them in a new
+way. You know, uh big focus on security
+and scale and moving beyond doing it on
+laptops. And so let's share my screen
+here. I'll I'll give a quick
+introduction to um uh you know lay some
+groundwork here and then I'll hand it
+over to Avandro and EK to show you how
+it all works and give you some real live
+demos here. It's going to be pretty
+pretty amazing show. Uh so yeah, this is
+uh EK about six months ago uh riding
+through New York City trying to get his
+job done here, building new demos. Uh
+but crazy thing is he he keeps that
+laptop, keeps it wide open. uh and you
+know customers uh are trying to avoid
+doing this. You know it's not a very
+good safety look here. Um so what are
+the real problems uh that customers are
+seeing? Uh yes coding agents are
+amazing. It's helping us move a lot
+faster to build software and build
+agents even but limited parallelism. Uh
+you've got to keep your laptop open
+which can be a problem overnight. uh
+doing uh real longunning workloads, you
+know, refactoring your your code, uh
+building some great new feature. Uh also
+no isolation and that goes kind of
+handin-hand with the parallelism aspect.
+Uh you want to be able to do a lot of
+things at once. You want to keep uh keep
+agents away from things that they're not
+supposed to be uh getting access to. Uh
+likewise, limiting the blast radius. You
+know, bad things happen. Uh so you want
+to make sure that when they do uh the
+damage is not very great. And then
+lastly, hey there's a lot of uh
+credentials lying around on your laptop.
+Uh and the more access you give to those
+agents to to different tools, different
+environments, uh the more damage can be
+done as well. So while we love coding
+agents, there's a big push to try to get
+all of these things under control. uh
+some of the some of the downside of the
+way uh the world works today. You know,
+you end up with a lot of uh wasted time.
+You end up with drift across different
+teams. Uh and then you've got this risk
+of uh you know, agents doing bad things.
+So, what are developers looking for?
+They want to continue to be able to work
+as if it's like their laptop. Uh but
+they want to do more. you know, they
+don't want to be constrained by how much
+can be done on the laptop. Run a bunch
+of agents at once. You'll see a demo
+from a vander later that really shows
+you uh you know, the power of doing
+that. Uh making sure you can live beyond
+reboots and crashes on your laptop. And
+then, you know, I'm sure you have a
+favorite coding agent out there. Maybe
+you can put it in the chat. Uh but you
+don't want to be constrained as well. Uh
+you don't want uh AWS telling you which
+one you want to use. is you want the
+flexibility. This goes back to the same
+tenant that we've had for agent core for
+over a year now. It's basically any
+model, any agent framework. We're
+extending that here to say any coding
+agent, bring your favorite. Uh with that
+said, administrators
+uh have a different set of goals. They
+want to limit the blast radius. You want
+to make sure you're using VPCs, using
+your, you know, your identity provider.
+You want to be able to see what's
+happened end to end, full access to the
+traces, all the actions that were taken
+and so forth. And you want to make sure
+that you don't be uh exposing uh
+credentials.
+So, uh today we're talking about agent
+core and how you can uh get beyond all
+of these limitations. So any coding
+assistant again any model you want to
+use. Uh you'll see cloud code today.
+You'll see curo codeex. Uh you can bring
+pretty much any anything you'd like. Uh
+built-in session management, built-in
+session isolation. No infrastructure
+management on your part uh required. Uh
+and no more riding down New York streets
+uh on your bike with your laptop open.
+Uh close that lid. uh let agent core
+keep the work going and then uh most
+recently we added a terminal UI to the
+environment as well. So now uh not only
+can you kick off you know jobs to do
+your work uh you can actually connect
+directly to them and interact as if it's
+really running right there on your
+laptop.
+&gt;&gt; Sorry saying Mark that uh Isan is going
+to be happy going back again without uh
+keeping his lid open and scrambling all
+the way. No more trips to the ER. Uh
+you'll hear some good quotes from him
+about how he doesn't write code anymore.
+Uh which is something we can all uh
+learn from.
+&gt;&gt; Uh use cases. So yeah, we're talking
+about coding of course, but a lot of
+different flavors of it. Um you know,
+longunning tasks where you want to do
+some massive migration overnight or some
+big refactoring, maybe huge test suites.
+uh you still might want to connect and
+see what's going on. Uh use your
+terminal UI. Uh maybe send some commands
+that don't have to go through an LLM.
+You know, you're basically just looking
+at files, poking around, managing the
+environment a little bit, whatever you
+need. Uh and then parallel agents. Uh
+you you'll see an exciting demo in a few
+minutes here on on showing that off.
+But, you know, picture a really
+complicated job. you could just uh have
+a bunch of these coding agents running
+at once doing parts of that job. Cool.
+Collaborating with each other. Uh all
+kinds of options and opportunities
+there. And then lastly, just overall
+AIdriven development. This one is
+probably the most exciting here. Uh I I
+really love seeing what customers are
+trying to do here. you know, you've got
+hundreds of developers, maybe thousands
+of developers, and you want to unleash
+all the productivity of coding agents,
+but you want to keep it under control.
+You want to put the security controls,
+you want to put the governance in place.
+Uh we're trying to help you get the best
+of both worlds there. Uh we'll let EK
+and Avandra show you some uh some more
+details here, but this is an example of
+doing uh async longunning coding agents.
+Maybe your project manager persona,
+maybe your developer persona, uh working
+on a particular project, kicking off a
+coding agent, whatever your favorite is
+using whatever model you'd like, hosting
+that in in agent core runtime on the
+cloud, and then having that secure
+access to whatever MCPs you need,
+whatever tools you need to get your job
+done. And we'll get into a little bit
+more uh various flavors of getting
+attached storage
+you need for your session or maybe
+attached storage across sessions like
+for skills and so forth. And then on the
+parallel agent front, maybe uh working
+on multiple different projects at once
+or different parts of the same tasks
+that you're trying to get done uh all uh
+in parallel with the full scalability
+and security of the cloud and and all
+using uh unified endpoints like uh agent
+core gateway. And then uh one of our
+favorites here is just a fully lights
+out operation here where new new
+features get uh um requested or new
+issues come in on your repo and then the
+coding just begins. Uh it happens. Uh
+maybe a human gets in the loop once in a
+while to check things out, but for the
+most part you're good to go.
+So let me just spend uh two or three
+more minutes here on the core
+capabilities that Agent Core brings to
+the table.
+uh any I mentioned any coding assistant
+any model so you know pick your favorite
+cloud codeex curo whatever you need uh
+you can bring your own container uh very
+easy to set up you'll see how that's
+done today uh and then on the model
+front we love it when you pick Bedrock
+which has hundreds of different models
+all the top models uh in the world uh
+but we're also happy uh to let you just
+plug into your own LLM gateway or or any
+open- source models or or even directly
+go to uh some other provider uh with
+with your coding.
+Uh I mentioned persistent storage. Uh
+we've been adding this uh at a at a a
+pretty amazing pace uh as of late. Uh
+two big flavors to think about. One is
+on a per session basis everything you
+need to make sure that when things might
+crash, when things might go wrong,
+you've got consistent access to all the
+data and assets that you need for that
+session. On the right, we've got bring
+your own storage where you know the
+classic use case here is maybe you have
+a set of skills you want to give to
+every one of your developers. put those
+in S3 or EFS, mount that in uh to every
+coding agent use case and uh you're good
+to go. Your coding a agent has direct
+access to that. Uh but whatever it is
+you need to share, you know, dependency
+caches, other artifacts, uh all good to
+go. Uh so these on the left is fully
+managed. These on the right here, you
+get to manage that and just provide the
+resource uh to those agents.
+uh you'll see examples of uh using the
+terminal UI that was just launched. Uh
+very easy to get at from the agent core
+CLI. Uh so I won't uh bore you with the
+details here. You'll see it live. Um
+uh there's a lot of times where you just
+want to send individual commands into
+your agent, not letting the agent have
+to worry about it. you just want to list
+files maybe you know copy a file uh do
+some uh whatever examination you want of
+what's going on uh in that agent you can
+just send commands directly to there
+the you know I mentioned administrators
+earlier we don't want to focus only on
+developers getting their job done a big
+part of the storyline here is that these
+customers that are wanting all this
+productivity benefit they also are not
+willing to do this at all without the
+right controls in place. So we give you
+agent core gateway where the you can
+lock down exactly what you're allowed to
+access which tools uh which VPCs uh you
+can enforce all of this um uh you can
+also have image policies. Yes, you can
+download your container but which ones?
+Uh you can manage what packages are
+allowed to be there and and where those
+packages come from. Uh you can manage
+the attached storage. We have got agent
+core identity as well where you plug in
+your own identity provider, your pings,
+your entras, your octa and so forth. Uh
+you get to control all of the uh all of
+the way that that access works. And then
+very importantly observability. You want
+to give developers all this ability, but
+you want to be able to track what's
+going on and uh troubleshoot and audit
+uh all of that.
+Um,
+you know, no matter if you're using
+coding agents or if you're building chat
+agents or, you know, automating some
+process unrelated to coding, agent core
+gives you this built-in session
+isolation. So, you're making sure that
+nothing bleeds from one session into
+another. We use firecracker microVMs
+under the hood. Uh, you can take
+advantage of agent core memory as well
+for short-term and long-term uh, memory.
+uh you know automatically figure out you
+know preferences uh what your agents
+been up to to take advantage of that in
+the subsequent sessions. All of that's
+uh available as well. And then the last
+piece is we've got a massive focus on
+endtoend security and privacy, right? So
+private link keeping keeping things off
+of the public internet uh making sure
+that you have full control over what
+resources these coding agents have
+access to.
+So with that, I'm going to hand it over
+to Aendro to show us uh some demos.
+&gt;&gt; Thank you, Mark. Let's get started.
+Uh there we go.
+&gt;&gt; I thought
+&gt;&gt; so while while pulling this up, Mark,
+you mentioned we can bring any model,
+any uh agent, right, to be able to do
+this, right? Sometimes developers say
+hey I want this particular model to do
+my coding and this model to my my
+planning and another model to do my
+reviews. So can we do all of that uh
+with what we're showing today?
+&gt;&gt; Good question. I guess a lot of that
+depends on the flexibility of the coding
+agent that you're choosing but maybe EK
+or
+&gt;&gt; so uh in the demo that I will showcase
+uh in just a few minutes I'm essentially
+using Opus model for my orchestrator. Uh
+I have a test agent which runs my test
+use cases and critiques it and that's
+going to be using Haiku because it's
+faster and that's what I want for it. Uh
+I'm using sonnet to actually implement
+stuff. So yes, you can definitely use
+different models inside the same runtime
+for your sub aents for your subtask for
+your uh different skills that you might
+use. Yeah, definitely.
+&gt;&gt; And we all love open source, right? So u
+how about open source models? Can we use
+that? I saw the open code in there as
+well.
+&gt;&gt; Yeah, of course. It's like with the if
+if you use a open- source sort of coding
+assistant and you have the ability to
+plug in different models maybe
+self-hosted or across different
+providers inside runtime all you need is
+a path to reach that particular
+inference endpoint and yeah you're good
+to go.
+&gt;&gt; Yeah. And if you remember our previous
+live stream we talked about harness and
+harness also give you the flexibility to
+change the model during execution time.
+So you can just start a session and
+invoke using let's say cloud model like
+uh haiku and then you can invoke again
+the same agent and changing the model
+for sunet. So yeah totally possible not
+our our focus today but yeah it's
+possible. Uh let's let's get started by
+the uh new features. Let me showcase you
+a little bit. I I promise I'll be quick
+on the features just showing you like
+the uh terminal feature the SC3 feature
+and then I will show the Asians in
+parallel competing. I'm not say
+competing but uh no hard feelings here.
+No no prefer no preferences. Uh I will
+let you guys take your own opinion. Uh
+but yeah, I'm going to show uh a few
+Asians doing the same thing together uh
+in different runtimes. So you guys, I I
+think you folks know Asian core CLI uh
+is our you know uh it's a very quick
+start for all Asian core stuff. So you
+can get very easy over you know new
+features and so on. It's pretty easy to
+install just npm install. We have talked
+about the preview version before for
+harness for example. Uh let me show in
+pract uh the
+I have here set it. So I already have
+the Asian core
+CLI seted here. I'm going to just show
+my version. Uh I already have my demo
+project but it's very easy like let's
+say I can just create a new one like
+Asian core create and then start a new
+uh
+my oh wow my new code Asian
+I will add an Asian and then my code
+Asian I will create a new Asian will be
+Python direct code deploy ATP is
+transient
+bedrock no memory. That's it. There you
+go. It's going to create my local setup
+and then I can just hit Asian core
+deploy to push my Asian to my AWS
+account to have it, you know, to to host
+it and to run all my stuff inside it. I
+already have one provision. Uh I'll just
+wait for this one to finish very quickly
+and then I'll show uh the terminal
+feature and I can just SSH inside it. So
+I just created this
+new one but I have this demo terminal.
+Let me just this one is provision. I can
+show you later uh or now in my AWS
+console here I have here my demo
+terminal agent. So let me let me get
+back to my bash screen and agent core
+let's say exac this is the common to in
+the CLI to run bash comments inside my
+microVM but this is kind of you send a
+command it executes and give you a
+response let's say
+OS
+that's it
+&gt;&gt; so this is an addition wow That was
+fast.
+&gt;&gt; Yeah, this execute the command and give
+me a reply. But I I'm not inside the
+microVM. If I want to get inside,
+&gt;&gt; we have this new feature which is very
+complex like you will see now. I just
+need to if you are familiar with Docker,
+you probably know this option. So, and
+there you go. I'm inside my microVM. I
+have, you know, all my stuff here.
+Oh, I don't have
+&gt;&gt; At this point, the microVM is running in
+the cloud.
+&gt;&gt; Yes, it's inside my microVM on AWS. Let
+me quit this. Uh, this is my, you know,
+terminal UI new feature. Let me show
+another new feature we have which is
+attach our S3 files on it. For this one,
+I already have uh a sample running here.
+I have this fancy UI screen that I've
+built to, you know, use the terminal UI
+feature and get inside my microVM.
+So here I'm already executing cloud
+code. I'm going to quit the cloud code.
+I'm going to list for you like my MT,
+Mnt, S3 files. I have MCP others and the
+skill. If I go here, my S3, MC3, MCP,
+others and skills. Let me just play very
+quickly so you trust me that it's inside
+my S3 file. So,
+uh, I have this file here. Let's see
+what I have inside it.
+Hello all. So, let's get this
+fun. How we're doing now?
+Asian core with coaching agents are
+awesome.
+Let's save this.
+Let's
+put here in my bucket.
+&gt;&gt; Drum roll, please.
+&gt;&gt; And
+upload it. And let's see
+again. And work it. So
+&gt;&gt; nice. We are we are we have this
+connected with our S3 files. So I can in
+this case I can show you like our
+uh
+let me show the skills here.
+For example, I have this skill
+with the instructions for my coding
+agents to use our MCP server to interact
+with a GitHub project that I have here.
+Uh let's get back to the sample. This is
+the sample. Uh it's in our public. We
+are going to share with you um the links
+uh I guess over the chat. We are going
+to share the blog post with the link for
+the two samples my sample ek sample but
+this is a end to end solution. I have
+this folder to deploy a gateway with a
+GitHub MCP which you access a project in
+GitHub. I also have a fake project
+inside here with a lot of bugs I have
+deployed into my account private
+otherwise your guys are going to start
+to create issues for me. So I just
+create a lot of issues here. Uh so I can
+put my agents to you know take a look or
+fix the issues. They are very simple but
+I have this uh this in the gateway the
+sample the deployment and then I have
+the skill here to you know uh upload to
+SC3 file and here I have all the coding
+agents. So you can deploy we have the
+infrastructure which you basically
+deploy VPC S3 files uh and then we have
+all the six we have six uh there are lot
+there are many more we pick six code as
+open code heras front end oh front end
+is not cursor kro uh codeex and I have
+this fancy front end which is the this
+one that you folks are seeing here. So
+with all set let me get the
+&gt;&gt; as we get started uh uh Ivandro just a
+question right so as we are showing the
+setup so are you know whenever we know
+that these are microVMs are running in
+the cloud are we saying that uh let's
+say the VM is shut down for whatever
+reason right because we know that the
+VMs are available and running for x
+amount of time
+&gt;&gt; yes
+&gt;&gt; by using the bring your own file system
+concept or being able to use S3 are we
+saying that the skills the outputs can
+all be uh written to this external file
+system and then you could always uh
+bring this back up when we start a new
+agent. Is that
+&gt;&gt; perfect? Yeah, perfect. Uh we have two
+ways of of doing that. We have the
+manage uh storage right which will
+allocate uh which is like the name
+manage. So you just when you create your
+runtime you just add a new app a
+parameter with the mount point let's say
+mnt uh slash
+uh my session data this is session is
+strict so sessions cannot access other
+session data
+&gt;&gt; in the manage uh uh storage and it can
+be running for 14 days. So you can
+persist let's say your information there
+or you can persist in memory another
+component of uh agent core so you can
+have it for much more time and we also
+have the SC3 option so let's say we have
+you have a autonomous agent building a
+report for your team so the agent can
+started by let's say a chrome a step
+function event bridge uh will invoke the
+agent agent will build a synchronous the
+report and then we'll flush the report
+to a S3 file and then can notify you
+will just go S3 or generate you a you
+know assign a URL and you just download
+the report from S3 so it's a very
+powerful capability that gives you a lot
+of possib excited exciting possibilities
+so yeah uh I take so long to answer but
+the short answer is just yes.
+&gt;&gt; Yeah.
+&gt;&gt; So yeah, let's let me get back into my
+simple GitHub. Uh EK will have a much
+more fun much more fun with his uh
+GitHub demo with doing a lot of stuff in
+the software life cycle. Uh I'm not
+going to give spoilers, okay? You will
+give your own spoilers after me. But uh
+I have a very simple bug here. I have
+this issue. Let's see the code. Right.
+So, let me just open the code here.
+It's on create task.
+So, let me get my back end my app.py.
+Let's get our create.
+I I was fair. I gave a note that there
+is a bug here, but we need to, you know,
+fix this. So, let's get started. Instead
+of one, let's play with four Asians at
+the same time. I will pick cloud code
+for the first one. Codeex here. Let's
+put ko and cursor or open code.
+Let's open code and see what happens. So
+let me connect in all of them.
+&gt;&gt; So do you tell all of them to
+fix this bug or you're just doing the
+connection first?
+&gt;&gt; Yeah, I would just connect
+just to avoid all of them making PRs at
+the same time. I can also do that will
+be fun.
+&gt;&gt; So I see that when when the terminals
+were coming up, they were trying to
+connect to the MCP servers, right? So
+are we going to uh talk about that now
+or?
+&gt;&gt; Yeah, I have here the MCP gateway here
+uh already connected. So it is the uh
+the permissions
+load MCP also here.
+Let me Oh, sorry. Let me get back.
+Skip.
+Same here. I hope same here. Let's see
+if the MCP is available here. Yes, it's
+running. Here it's running.
+So I have in the four agents the MCP
+running. I'm in the four of them uh into
+a terminal UI. Remember you can do this
+a synchronous like autonomous. I'm just
+doing like this to showcase the
+advantage for you. So I already have my
+prompty here which is
+using your SQL read the issue one in the
+ho think about a solution but don't make
+a PR showcase the problem and also how
+long you take to write
+the code to fix it. Let me give all of
+them the same question
+and let's see them work. So as as this
+is uh building the code or or the
+planning process right whatever is
+involved here the MCPS that you
+connected are they where are the MCPS
+are they local to the cloud environment
+are they remote
+&gt;&gt; they are remote we are hosting then
+Asian core gateway
+&gt;&gt; so a so uh can we mark can we give uh
+you know some idea about you know how we
+are connecting those MCP servers via the
+gateway because that's maybe like a
+common uh theme that our developers or
+builders
+Yes. Yes. I can give uh briefly
+overview. I think EK also can give but
+basically uh I build a let's say I build
+a runtime with access to my GitHub
+private hippo. I create a let's say an
+API behind it. We can MCPify APIs with
+gateway. So I create a gateway uh with
+IM permission and then I give my
+runtimes IM permission to invoke that
+gateway. So it's not an open gateway.
+By the way, if you want to create like
+an open MCP, you can, but I didn't. And
+I created this and I'm hosting this on
+AWS site. So
+&gt;&gt; yep.
+So I already have a few answers here.
+I already have cloud answer. So cloud
+give me
+the proposed fix here. Very very tough.
+Exactly in the in the block of the code
+the problem what's happening. Uh how
+long it takes to fix.
+Uh the others others two are asking me
+for permissions to run. That's why
+taking a little bit more but hero also
+give me the the code the solution here
+and the estimates to fix also open code.
+Give me
+30 seconds. He's the he he's promising
+me he's faster but he is he's saying
+that not me. Uh also
+he gave me the fix here in the code and
+codeex is asking me for permissions to
+run. Uh I forgot to allow all but
+probably will give me soon the yeah he
+gave me also the
+around five minutes. There you go. We
+have here the proposed fix and we have
+here the explanation. So I I built this
+fancy. I can disconnect all of them at
+the same time. I can ask them to you
+know uh fix and send the PR to fix my
+code. So this is uh what I want to show.
+Let me just get back to the GitHub and
+show to you and you and folks like in
+this
+folder here we have a subfolder gateway
+MCP with all explanation how you create
+your you know GitHub access project how
+to host your uh agent that we will
+access that and how to integrate with
+gate and use IM to control the access uh
+for this MCP and then I expose this MCP
+for all agents so they can use this an
+MCP tool and this is how you can
+integrate many you know agent core
+pieces to build your solutions. So at
+this point I wonder so let's say we walk
+away from the laptop and and we close
+our lid or we close the browser window
+what's what's going to happen right so
+you kicked off a task the agent is
+running
+&gt;&gt; yeah exactly uh AK is going to show
+right now I'm not not going to give you
+spoilers I make this interactive so
+people can see how how to do how to have
+the same local experience but branding
+at AWS but think that think about you
+can do everything that I just did
+automatically like autonomous. You can
+trigger the code cloud code the codeex
+the curo execution send inputs to the
+code harness to you know run stuff
+code the code agent can have permission
+to use MCPS to work let's say with your
+GitHub with your local APIs do stuff and
+then you just see the responses that's
+it so let me handle so EK can showcase
+is a very very very
+exciting demo on doing that.
+&gt;&gt; Awesome. Yeah. Um so let me quickly
+start sharing my screen. All right. So
+uh yeah before we get started I I would
+just like to point out like almost a
+year ago when uh we were building agent
+core and we were uh releasing agent core
+features this is the kind of automation
+that we had envisioned and then it's
+really exciting to see all of it coming
+together. Uh so this is the SDLC
+pipeline that we will be showing you
+today. Now what's the idea behind this
+STLC pipeline? Again this is a GitHub
+repository. It's publicly available but
+the idea is very simple. So you have
+your project managers, you have your
+developers, they interact with uh they
+they might create issues like on GitHub
+or Jira any project management platform.
+Now
+when they create an issue they describe
+hey what the issue is what this new
+feature might look like and they just
+want to trigger a pipeline uh trigger a
+STLC pipeline what that's going to do is
+using step functions and lambda
+functions and we'll see how all of that
+comes together it's going to execute
+either cloud codeex ko and all the
+different choices that you have inside
+runtime it will have access to your git
+repository where all your code lives and
+using that description of the issue the
+new feature it's going to build out and
+finally create a pull request.
+So that's the main idea here. So let's
+let's see how that looks like. So
+whenever I put a label on my GitHub, I'm
+going to execute using GitHub actions.
+I'm going to execute the step function.
+This step function essentially has two
+lambda functions. One is to set up the
+workplace and second is to execute the
+agent core runtime. The setup workplace
+actually does quite a few things. The
+first thing it does is it git clones
+your GitHub repository. It has access to
+that GitHub repository because either
+Jira is connected through it or your
+GitHub project is connected through it.
+Now once it get clones it into this
+mount workspace.
+This is actually the manage session
+storage that we have been talking about.
+So each issue that you trigger gets its
+own storage gets its own clone a local
+clone of the git repository. The second
+thing it's going to do is from Amazon S3
+files which is shared across microVMs.
+It's going to copy this plug-in that I
+have created inside my workspace so that
+cloud codec can effectively use it.
+Inside this plugins I have quite a few
+things. First is a connection to the MCP
+server which is agent core gateway. Uh I
+have hooks and skills and uh I'll talk
+about that more but before we get
+started actually sorry folks I'm I'm
+actually working on quite a lot of
+things. So, let me do this. I'm just
+going to start my pipeline. Uh, I'm
+sorry, I'm just crunched on time. So,
+I'm just going to start my pipeline
+right here. Uh, I want this out before
+our session ends. So, what's that going
+to do is it's going to start this GitHub
+uh action. This action is essentially
+just invoking my step functions. Now,
+let's go into my step function.
+These are my step functions. So, it
+already has that. Okay, this STLC
+pipeline was just executed on my issue
+94. That's perfect. Now the two lambda
+function set up the task, set up the
+workspace. It's going to copy all the
+relevant things. Uh it's going to make
+sure the local branch is updated with
+the main branch as well because I want
+to be working on the latest changes when
+I actually open this. Then it's going to
+execute the clot code. Uh it's going to
+give issues along with all the comments
+along with any other information that I
+have and it's going to execute clot code
+and it's going to run. So the pipeline
+is running and we'll see how that works.
+Okay. So let's go back here. Now I want
+to talk about everything on the right.
+So here I have MCPJ JSON which I again
+copy into my uh workspace. Inside this
+MCPJ JSON I'm connecting to this agent
+core gateway. Now this agent core
+gateway has quite a lot of things
+attached to it. First there are the
+developer MCP servers I like to call
+them. M
+&gt;&gt; these are essentially MCP servers that
+give cloud code access to your internal
+documentation. The good part is it's all
+within your VPC. So it's can it can be
+private. In this scenario, I'm actually
+using AWS documentation MCP server and
+AWS uh cloudformation and API MCP server
+to get the most upto-date information
+about these things. You can also attach
+context 7 MCP server all behind a single
+gateway. So in this MCPJ JSON file, I
+actually have one MCP server which gives
+it access to all these developer MCP
+servers. Now I have two other MCP
+servers. First is the project management
+platform. So that during this
+exploration, implementation, critique
+stage that this STLC pipeline goes
+through, it's actually able to comment
+back into my issue. It's going to give
+me, hey, this is the things I explored.
+This is a bit ambiguous. And sometimes
+they gave me like a very uh opinionated
+answer that this is actually not a
+feature good feature to add because it's
+going to break a few other things. And
+the source control is when I'm happy
+when it's happy that hey these things
+are good to go. I'm going to push
+changes into my uh branch that I create
+and um run the CIS make sure those CIS
+are correct so there are no errors no
+testing errors etc. So that's everything
+on the right. One thing that I missed
+was agent core policy. And let me tell
+you, this was a game changer. The main
+issue with this SDLC pipeline when I was
+building it was it was actually pushing
+to my main branch, which I don't want.
+Now, from a good developer practice
+perspective, I can just disable that on
+GitHub. That's that's a no-brainer. But
+then you're at the mercy of your
+developer who's actually maintaining the
+GitHub repository to enable this
+feature. So what I did was I added a
+policy to my gateway and said do not
+allow any pushes to the main branch.
+That's it. And now when my cloud code or
+anyone inside this runtime using the MCP
+server tries to push code, it
+automatically gets blocked. It never
+goes to my uh source controller project
+management MCP server which is great.
+All right. So uh this was this was
+everything about the gateway side of
+things. Now let's come back to the left.
+We had a developer started now
+like you could do this like on GitHub
+actions you can run this what is the
+main advantage here it's the interactive
+terminal session in my opinion so I have
+this SDLC inspector it's a local host UI
+element that I've added and you can go
+and see here so I can already see that
+on my 94th issue uh my clot code has
+already started let's go and see my step
+functions okay it's already running Now
+what I can do is I can say check clot
+code. So this check clot code actually
+sent a shell command. So it was just one
+shell command that Evandro uh showcased
+and it's actually reporting back that
+okay it's running with P 106. So it's
+doing something in the background and
+let me tell you it's getting all the
+issue elements exploring the code stage
+and then it will create a PR. I can also
+check the runtime life cycle. So my
+runtime has been up for 4 minutes 29
+seconds and the main advantage again is
+stop session. Let's say this agent has
+been running for 30 minutes. I have I
+don't have a PR. I don't have I can see
+that it's going in the wrong direction.
+I can just say stop session and my clock
+code would just stop there and I can use
+my TUI commands to go into it and store
+it in the right direction. So, uh
+actually let's let's go ahead and do
+that. Uh but well, let me try it for
+something else. I don't want to uh mess
+this one up. So, let's try this one. So,
+I can just copy this DUI command. Uh and
+again as Evandra mentioned you need to
+have agent core CLI you need to have
+proper permissions because well it's
+least privileged so make sure you have
+proper permissions. So TI command copied
+I'm going to go here
+&gt;&gt; and just adding EK if you go to your
+runtime console you also have the TUI
+option like the shell option inside it
+inside the console you can specify your
+session there
+&gt;&gt; and just get access into your AWS
+console. Oh, that's perfect.
+&gt;&gt; Yeah. And also this I think this also
+explain all your questions on gate,
+right? And this is very cool. The policy
+is amazing. Right.
+&gt;&gt; Exactly. Right. So, and I see that here
+in the line it says d- session ID,
+right? So, you're passing the this TI
+command is generating the session ID.
+So, what is the significance of that EK?
+&gt;&gt; Right. So, it's actually not generating
+the session ID. There are two session
+IDs that I want to point out. The first
+is a session ID that my SDLC pipeline
+was started on. So this is what attaches
+me to that microVM to that manage
+session storage. So it's it cannot bleed
+into another microVM or its session
+storage. So that's the uh agent core
+session ID. Then inside the agent core
+when clot code start it has its own
+session ID which is going to be this
+one.
+&gt;&gt; So I can go in right now and you'll see
+and I can just continue where the SDLC
+pipeline uh SDLC pipeline stopped. So
+yeah. So let's go ahead and do that
+first. I'm going to go into it.
+um connecting to agent VM.
+All right, the good part is my setup
+lambda function already worked on it. So
+I have everything already set up. So let
+me do ls. Uh let's do cd mount which is
+going to be my mount uh where do I mount
+my different parts. The first is the
+workplace which is going to be isolated
+per WM per issue and the plugins where I
+distribute my plugins. So uh let's go
+into workspace
+and here inside git project. So that's
+my git project. But before that let me
+also show you the clot data. So that's
+where my clot session lives a clot
+session which is inside this microVM. So
+let me go again projects and this
+particular project. And you can see here
+I already have a few files. And if I go
+back BC12551
+uh I think it's this one. All right. So
+what I'm going to do is quickly cat.
+There you go. So this is what my SDLC
+pipeline did. Like you can see all the
+logs whatever it did inside my code. Uh
+but the good part is and let me set this
+up too. I go I'm going to go inside my
+git project again. My entire GitHub uh
+project is inside it. So now let me
+quickly export a few things
+and this is going to let my claude know
+that hey I'm going to be using bedrock
+this is your config etc all the good
+stuff and I'm going to do claude resume
+and uh where is my
+&gt;&gt; it's in the TUI console as well right
+the
+&gt;&gt; yeah true but I want to copy this on.
+Let's get this one.
+Uh there you go.
+Let me go back. Resume.
+And yeah, so this is the entire SLC.
+Like there's you'll see there's no human
+interaction here. This is the entire
+STLC pipeline. There are skills running.
+There's sub agents running. And I have I
+have access to it. And I can just ask it
+to make a few changes and make a new PR
+uh if I want to. But yeah, so this was
+the TOI side of things that I quickly
+wanted to showcase. Now, let me go back
+to all the list of issues that I have.
+And let me tell you, I've I've actually
+since I've made this public, um I've I'm
+essentially just this project manager
+writing the all of these awesome issues.
+And this SDLC pipeline is essentially
+building itself. It was funny enough uh
+one of my mentors mentioned that almost
+20 years ago git there was the first day
+when git tracked itself and now we have
+a code SDLC coding engine pipeline which
+is now building itself which is pretty
+cool but I wanted to show you a few
+things uh which essentially show that
+okay this it's it's able to comment
+back. So this was actually a feature
+that I'll I'll make sure it goes out
+today. Okay, this was something I was
+working on uh which is observability end
+toend observability for my all agent
+core components. I described hey these
+are the things I want to enable when
+logs and well I knew how to do it but I
+did not give it any hints. I just gave
+it the MCP server the AWS docs and I
+wanted to I wanted it to figure it out
+on on its own. So I just did agent start
+and he said and you can see it's
+yesterday.
+It explored first. The agent removed my
+tag and said explore. It went to the
+explore stage. The explore stage you
+have uh all the exploration like what
+all it explored inside the coding
+project. And I can see this which is
+good. Then it actually came back with a
+few clarifi clarifying questions like
+hey you never told me what the retention
+day should be. Uh I can see that runtime
+has this ARN uh gateway has a different
+ID. Is that what you mean? And I'm like
+yeah this is exactly what I mean and I
+it actually told me this by first
+commenting on it and then it was like
+agent needs clarification. So I can see
+that it needs my clarification now. I
+provided all the clarification things. I
+put the agent start again and this was
+actually after after almost uh 8 hours.
+So microVM has already died down but
+because of my session storage it picked
+up from where it left off. I just did
+agent start it explored implemented it
+critiqued its own work. So it critique
+that hey it looks good to me. uh it
+actually sometimes critiques it very
+harshly like hey you don't have these
+things mentioned uh and this critique is
+a haiku agent that I'm running inside uh
+this clot code and it provided that hey
+make sure the npm pass make sure the
+synth passes etc and finally it actually
+uh created the PR and it's PR completed
+and let me tell you it actually did an
+amazing job it's pretty much good to go
+without my intervention I I can
+confidently go here and merge the PR and
+you can already see all the CIS already
+succeeding. All right, so that that was
+great. Now, let me go back here quickly.
+Um, one thing that I want to mention,
+how do I orchestrate this explore
+implement critique loop is using my
+skills and my agents. Uh, it's
+essentially part of my plug-in. So, let
+me go over to my terminal UI first. I'm
+going to show you plugins. So you can
+use the plugins which are available uh
+throughout the industry or you can use
+your own plugins and you can see this is
+my gateway uh MCP server. I also have my
+own plugins attached here. Uh let me go
+one level back and if I go /mcp and yeah
+you can see all of my MCP servers 47
+tools attached to it which is uh which
+is great. Now it has access to all the
+things that it would need me to do. Uh
+context I just want to look at what
+context it has. Uh I like to do this
+frequently just to make sure I'm doing
+proper context management. You can see
+uh it actually used what would you say
+10% of its context window to implement
+this feature and rest everything is just
+like scales memory files etc. Okay. So
+we talked about all these great things.
+Well, I tell all of my customers, if you
+don't have observability from day one on
+your coding agents, you're already going
+towards uh a a future where you don't
+know what your agents are doing. They
+might be executing one thing or the
+other. Uh well, it's a total mess. So,
+agent core observability is an essential
+component here. All the hotel that are
+that my cloud code uh exports, I put
+them in my agent core observability
+dashboard. And let's go and see how that
+looks like. So I'm going to open one of
+the traces. Uh so you can go and see
+okay what tools were executed.
+Uh what were the LLM requests like and
+you can see readr actually because it's
+doing a lot of caching. So it's using uh
+uh some prompt caching on bedrock models
+to optimize all of this which is great.
+So everything looks good here. I can see
+what tools were invoked. And funny
+enough, what I noticed in one of the
+previous observability
+uh traces that I had, my agent was
+actually trying to make edits to my S3
+files which was shared and I don't want
+that because I don't want it to update
+its own scales or hooks or MCJSON. It's
+going to break things across. So what I
+did was I added a hook and in that hook
+I was able to say that if the path is
+mount plug-in deny any any other like
+deny both read and write because I'm
+going to copy this uh insert into your
+workspace which is going to be your
+private workspace. So it's only because
+of that observability in place I was
+able to identify that it's actually
+writing things into this plug-in which
+is shared and you saw Iandra's demo as
+long as uh as soon as you commit
+something it just shows up across your
+platform. So adding hooks was a game
+changer there in that uh in that
+particular scenario. All right so I know
+we're almost time but let's go back and
+see what my uh issue has done. Oh okay
+it's PR completed. Okay. So, uh it was
+actually a very easy PR. It made sure so
+as a good program manager that I am, I
+was like, "Hey, these are the acceptance
+criteria, but you can add your own use
+cases here based on different
+stakeholders, different personas, and
+it's like, hey, I made sure all of these
+are correct. Uh the PR is ready for you
+to go and well, I can I can confidently
+say here uh it actually has the it can
+read the CI scans as well. So, it has
+all of that access as well. So I can
+just simply go and confirm squash merge,
+right? That's that's perfect. Everything
+works and this is the SLC pipeline demo.
+&gt;&gt; Amazing. So u what you just showed us is
+that you know again everything is
+running autonomously in the cloud using
+uh S3 files, right? So being able to
+store your sessions outside of your
+workspace even the workspace is remote
+being able to invoke any coding
+assistant I mean agent I would say uh
+bring your own models uh tag them right
+so uh can you also explain uh why you
+chose to um the step functions and
+lambda functions right so why why did
+you use that? Oh, essentially um I I I
+see a future of this demo where I can
+essentially uh I'm able to check claude
+right now and it's not running correctly
+because we just saw that uh the STLC
+pipeline complete. So cloud is not
+running. So Lambda has like a timeout of
+15 minutes. But this SDLC pipeline takes
+more time than that to complete. So I
+see a future where I can use step
+function to continuously execute this
+command. And the steps function only
+succeeds when my clot code has
+succeeded. So essentially we'll see more
+steps here like a if else statement with
+a wait loop essentially just executing
+is it completed? No. Okay. Sleep for 15
+seconds. And this step function only
+completes when my claude has done the
+work. So that was my uh only uh reason
+of using step functions along with
+lambdas. But if you're confident that
+you don't need this particular feature,
+only Lambda functions work like you just
+set up your workspace, execute the
+pipeline and forget about it.
+&gt;&gt; Well folks, uh you saw an end to end
+demo of uh how uh EK was able to tag a
+particular issue on GitHub and the whole
+pipeline executed end to end.
+&gt;&gt; Amazing stuff. any any last words on how
+folks can uh best get started? So, did
+we I think we showed the blog post. Um
+we've got a couple of different repos
+you can you can build uh you can try out
+on your own. Uh any any other thoughts
+on uh folks getting into this?
+&gt;&gt; Yeah, I mean um so this particular
+sample it's it's ready for you to use.
+You can go and see what different
+plugins I have. I have Kira Codex as
+well. I'm slowly going to add Asana and
+Jira so that you can manage your issues
+there instead of GitHub if that's your
+preference. For source control we using
+GitHub but it can be GitLab. It can be
+own your internal running versions of
+GitLab because in AWS we have that. So
+we want to make sure everything is
+inside the VPC. That's perfect. if it
+ever needs to traverse the public
+internet just add firewalls on your NAT
+gateways and just say that hey don't
+access GitHub don't access these uh all
+of these websites which are not allowed
+but like if you go through this end to
+end you will have this STLC pipeline
+running in no more than 20 minutes on
+any GitHub repository today so yeah I
+think that's the easiest way to get
+started
+&gt;&gt; at that point all you need is uh tokens
+right so
+&gt;&gt; all you need to Yes.
+So folks, uh I I I guess you've seen an
+amazing demo today, right? So uh do come
+back to this uh series again for next
+week's uh live stream on uh another
+topic. But uh thanks uh team for joining
+us and sharing how how we can build and
+run the AI SDLC in agent core. Right, it
+was a great demo. Thanks for uh sharing
+uh you know with our viewers here today.
+Mark, EK and Ivando, thanks for joining
+us and to all our viewers come back
+again next week.
+&gt;&gt; Thank you.
+&gt;&gt; Thank you. Thank you all.
+&gt;&gt; Bye.

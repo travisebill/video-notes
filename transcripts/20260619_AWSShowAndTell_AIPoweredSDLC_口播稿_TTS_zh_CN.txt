@@ -1,0 +1,23 @@
+本场《AWS Show & Tell》直播邀请 AgentCore 团队三位核心成员,主持人 Anil Nadmini 在开场便揭示核心张力:过去一年 coding agent 多被工程师困在 laptop 上,离开键盘、阖上笔电、进入三万呎高空就停摆 — 但企业要的 SDLC 不应该如此脆弱。Amazon Bedrock AgentCore 团队把 Claude Code、Codex、Kiro、Cursor、OpenCode 等多种 coding agent 从本机搬到云端 microVM,并透过 GitHub Actions、Step Functions、Lambda 串成一条「从 issue 到 pull request 全自动」的 SDLC pipeline,让 agent 真正成为可托管的云端劳动力。
+
+讲者 Mark Roy 带领 AgentCore 的 SAS 与 data science 团队,负责开场背景与痛点解说。Mark 指出,2025 年的主旋律是 prototype、POC、pilot — 2026 年则转入 production workload,无论是聊天型 agent、event-driven process automation,还是企业级 agent platform,都进入规模化阶段。coding agent 是其中最热门的子题,但客户使用方式出现明显转变:焦点从「能不能用」转向「能不能在云端用」。
+
+从企业治理角度,Mark 列举 laptop-only 模式的四大死罪。第一是 limited parallelism — 同时间只能跑一个 agent,laptop 关闭就停摆。第二是 no isolation — agent 彼此之间容易互相干扰,也容易存取不该存取的资源。第三是 blast radius — 坏事一旦发生,影响半径难以控制;agent 拿到越多 tool credentials,出事时的爆炸范围越大。第四是 credentials 风险 — 大量金钥散落于笔电,只要 agent 一个误动作,泄漏面难以收拾。
+
+从开发者体验角度,工程师要的是平行跑多个 agent、laptop crash 后仍能继续、不被 AWS 绑定特定 coding agent。从系统管理员角度,则要限制 blast radius、用 VPC 与自家 identity provider、end-to-end observability、不暴露 credentials。Mark 指出,AgentCore 的解法是同一套基础设施同时满足两端:任何 coding assistant 与任何模型都支援,内建 session management 与 session isolation,零基础设施管理,并且近期新增 Terminal UI,让开发者可以 SSH 进 microVM 直接互动,「像本机开发体验」但实际运行在云端。
+
+讲者 Evandro Wendro 接力展示两段 live demo。第一段展示 AgentCore CLI 的极简部署流程 — `agentcore create` 建立新 agent,`agentcore deploy` 推到 AWS account,`agentcore exec` 在 microVM 跑单次命令。Evandro 现场展示 TUI 新功能,用类似 `docker exec -it` 的指令直接 SSH 进 microVM,并演示 S3 挂载 — 一个 session 上传文字档,另一个 session 立刻可见。第二段 demo 更具戏剧性:Evandro 同时把 Claude Code、Codex、Kiro、OpenCode 四个 coding agent 连到同一个 GitHub issue,四者平行执行、共享同一个 AgentCore Gateway 下的 GitHub MCP,结果 Claude Code 最快给出 fix、Kiro 稍慢、OpenCode 号称 30 秒、Codex 因为忘了给 permissions 殿后。重点不是比较速度,而是展示「不同 coding agent 可以在同一个 runtime 同时跑、共享同一个 MCP」的可能性。
+
+讲者 Isan — 圈内称 EK — Koshik 带来压轴 demo:production-grade SDLC pipeline。流程从 GitHub issue 加 label 开始,GitHub Actions 触发 Step Function,Step Function 内含两个 Lambda。第一个 Lambda 做 setup workspace:git clone repo,从 S3 复制 plugin(MCP config、skills、hooks)到 managed session storage,并 sync 与 main branch。第二个 Lambda execute agent core runtime,把 issue 描述与所有 comments 喂给 Claude Code。
+
+从软体工程方法论角度,EK 的设计借鉴 Andrej Karpathy 提出的 LLM Wiki pattern,以及 OpenAI 内部 Ryan Lopopolo 在 harness engineering keynote 中强调的「breadcrumbs」概念。Agent 的工作被切成 explore、implement、critique 三阶段。Explore 阶段,Claude Code 先读 repo、列问题、必要时对 issue 留言询问 clarifying questions。Implement 阶段,拿到回答后写 code。Critique 阶段,内部 Haiku sub-agent 检查自己的程式:npm pass、synth pass、CI pass。通过后,Source control MCP 开 PR、CIS 跑完、通知 reviewer。
+
+EK 在 demo 中展示一个关键发现:SDLC pipeline 最初会把 code push 到 main branch,这违反基本开发守则。从企业治理角度,EK 的解法不是去训练 agent 「不要 push main」,而是在 AgentCore Gateway 加一条 policy — 「do not allow any pushes to the main branch」。即使 agent 想做,policy 直接挡下,从源头消除 architectural 风险。另一个观察来自 AgentCore Observability Dashboard 的 trace:EK 发现某次 agent 尝试编辑 `/mount/plugin` 目录 — 那是 S3 shared file,跨所有 session 共享的 skills 存放处。EK 加 hook 阻挡 mount/plugin 路径的读写,避免 agent 污染自己的扩充套件。
+
+从云端架构角度,Lambda 的 15 分钟 timeout 对 SDLC 不够,完整 pipeline 可能跑数小时。EK 解释用 Step Functions 包 wait loop:「Is it completed? No → sleep 15 seconds → check again」。Step Function 只在 Claude Code 真的成功时才结束,适合长时任务编排;若确定不需要此特性,纯 Lambda 也可运作。
+
+收尾呼应开场的张力。AWS 部落格文章的标题 — 「It's safe to close your laptop now」 — 点出核心承诺。EK 在 demo 中说了一句被 mentor 提醒的话:「almost 20 years ago git there was the first day when git tracked itself, and now we have a SDLC coding engine pipeline which is now building itself」。
+
+这场直播最鲜明的口号是:当 coding agent 从 laptop 走进云端 microVM,并透过 AgentCore Gateway 受企业治理,SDLC 可以从一个 GitHub label 开始、由 agent 全自动跑完 explore → implement → critique 并送出 PR — 同时保有 any coding assistant 的弹性,以及 VPC、identity、image policy 等企业级安全控制。
+
+影片中提供的 resources 包括:AWS 部落格「It's safe to close your laptop now」、AgentCore runtime 范例 repo、sample-agent-assisted-sdlc repo,以及 AgentCore 产品页。EK 在结尾告诉观众:「You will have this SDLC pipeline running in no more than 20 minutes on any GitHub repository today」 — 从今天起,工程师不必再为了写 code 而骑车穿越纽约街头。
