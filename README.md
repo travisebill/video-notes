@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **47 支影片** · 24 個音檔 · 47 個逐字稿 · 21 個口播稿
+> **48 支影片** · 25 個音檔 · 48 個逐字稿 · 22 個口播稿
 > 最後更新：2026-06-19
 
 ---
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-06-19** | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者）| [Agentic Engineering Workflow — Harness First, Model Second](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) · 62 分 24 秒
 - **2026-06-19** | AWS Show & Tell — Mark Roy / Isan (EK) Koshik / Evandro Wendro（Amazon Bedrock AgentCore） | [AI-Powered SDLC with Claude Code / Codex / Kiro on Amazon Bedrock AgentCore](技術講座/20260619_AWSShowAndTell_AIPoweredSDLC.md) · 59 分 14 秒
 - **2026-06-18** | Tara Agyemang（Google Chrome DevRel, AI Engineer） | [The agent-ready web: Simplify user actions with WebMCP](技術講座/20260618_TaraAgyemang_WebMCP.md) · 21 分 36 秒
 - **2026-06-18** | Marie Haynes（SEO 顧問，Marie Haynes Consulting） | [Google 推出 Open Knowledge Format — 結構化你的知識給 AI Agent](技術講座/20260618_MarieHaynes_OKF.md) · 18 分鐘
@@ -43,6 +44,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-19 | [Agentic Engineering Workflow — Harness First, Model Second](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者） | 62 分 24 秒 | [📄 note](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) · [📝 逐字稿](transcripts/20260619_MattPocock_AgenticEngineeringWorkflow_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260619_MattPocock_AgenticEngineeringWorkflow_口播稿.txt) · [🔊 opus](audio/20260619_MattPocock_AgenticEngineeringWorkflow.opus) · [🔊 m4a](audio/20260619_MattPocock_AgenticEngineeringWorkflow.m4a) · [🔊 mp3](audio/20260619_MattPocock_AgenticEngineeringWorkflow.mp3) |
 | 2026-06-19 | [AI-Powered SDLC with Claude Code / Codex / Kiro on Amazon Bedrock AgentCore](技術講座/20260619_AWSShowAndTell_AIPoweredSDLC.md) | Mark Roy / Isan (EK) Koshik / Evandro Wendro（Amazon Bedrock AgentCore, AWS Show & Tell） | 59 分 14 秒 | [📄 note](技術講座/20260619_AWSShowAndTell_AIPoweredSDLC.md) · [📝 逐字稿](transcripts/20260619_AWSShowAndTell_AIPoweredSDLC_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260619_AWSShowAndTell_AIPoweredSDLC_口播稿.txt) · [🔊 opus](audio/20260619_AWSShowAndTell_AIPoweredSDLC.opus) · [🔊 m4a](audio/20260619_AWSShowAndTell_AIPoweredSDLC.m4a) · [🔊 mp3](audio/20260619_AWSShowAndTell_AIPoweredSDLC.mp3) |
 | 2026-06-18 | [The agent-ready web: Simplify user actions with WebMCP](技術講座/20260618_TaraAgyemang_WebMCP.md) | Tara Agyemang（Google Chrome DevRel, AI Engineer） | 21 分 36 秒 | [📄 note](技術講座/20260618_TaraAgyemang_WebMCP.md) · [📝 逐字稿](transcripts/20260618_TaraAgyemang_WebMCP_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260618_TaraAgyemang_WebMCP_口播稿.txt) · [🔊 opus](audio/20260618_TaraAgyemang_WebMCP.opus) · [🔊 m4a](audio/20260618_TaraAgyemang_WebMCP.m4a) · [🔊 mp3](audio/20260618_TaraAgyemang_WebMCP.mp3) |
 | 2026-06-18 | [Google 推出 Open Knowledge Format — 結構化你的知識給 AI Agent](技術講座/20260618_MarieHaynes_OKF.md) | Marie Haynes（SEO 顧問，Marie Haynes Consulting） | 18 分鐘 | [📄 note](技術講座/20260618_MarieHaynes_OKF.md) · [📝 逐字稿](transcripts/20260618_MarieHaynes_OKF_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260618_MarieHaynes_OKF_口播稿.txt) · [🔊 opus](audio/20260618_MarieHaynes_OKF.opus) · [🔊 m4a](audio/20260618_MarieHaynes_OKF.m4a) · [🔊 mp3](audio/20260618_MarieHaynes_OKF.mp3) |
@@ -120,8 +122,9 @@
 - 2026-04-25 | [AI 能自我修正嗎？從 Decoding、Workflow 到 Reasoning 的技術發展整理](技術講座/20260425_李宏毅_AI自我修正Decoding到Reasoning.md) · ? · 88 分鐘
 - 2026-04-12 | [Harness Engineering：有時候語言模型不是不夠聰明，只是沒有人類好好引導](技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md) · Harness Engineering · 92 分鐘
 
-### 🛠️ **編碼工具 / Agent 工程實踐**（11 支）
+### 🛠️ **編碼工具 / Agent 工程實踐**（12 支）
 
+- 2026-06-19 | [Agentic Engineering Workflow — Harness First, Model Second](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) · Matt Pocock（AI Hero 創辦人 / Sandcastle 作者） · 62 分 24 秒
 - 2026-06-19 | [AI-Powered SDLC with Claude Code / Codex / Kiro on Amazon Bedrock AgentCore](技術講座/20260619_AWSShowAndTell_AIPoweredSDLC.md) · Mark Roy / Isan (EK) Koshik / Evandro Wendro（Amazon Bedrock AgentCore, AWS Show & Tell） · 59 分 14 秒
 - 2026-06-18 | [The agent-ready web: Simplify user actions with WebMCP](技術講座/20260618_TaraAgyemang_WebMCP.md) · Tara Agyemang（Google Chrome DevRel, AI Engineer） · 21 分 36 秒
 - 2026-06-18 | [Google 推出 Open Knowledge Format — 結構化你的知識給 AI Agent](技術講座/20260618_MarieHaynes_OKF.md) · Marie Haynes（SEO 顧問，Marie Haynes Consulting） · 18 分鐘
@@ -197,6 +200,7 @@
 - **Harness Engineering** · 2026-04-12 | [Harness Engineering：有時候語言模型不是不夠聰明，只是沒有人類好好引導](技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md) · 92 分鐘
 - **Ryan Lopopolo（OpenAI Member of Technical Staff）** · 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · 46 分 20 秒
 - **Mark Roy / Isan (EK) Koshik / Evandro Wendro（Amazon Bedrock AgentCore, AWS Show & Tell）** · 2026-06-19 | [AI-Powered SDLC with Claude Code / Codex / Kiro on Amazon Bedrock AgentCore](技術講座/20260619_AWSShowAndTell_AIPoweredSDLC.md) · 59 分 14 秒
+- **Matt Pocock（AI Hero 創辦人 / Sandcastle 作者）** · 2026-06-19 | [Agentic Engineering Workflow — Harness First, Model Second](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) · 62 分 24 秒
 - **Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長** · 2026-02-05 | [黃仁勳最新訪談：你不會輸給 AI，但你會輸給會用 AI 的人](技術講座/20260205_JensenHuang_不輸給AI_輸給會用AI的人.md) · 44 分鐘
 
 ---
@@ -207,8 +211,8 @@
 - 🎙️ **人物訪談**（7 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（3 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（4 支）→ [完整列表](財經分析/README.md)
-- 🛠️ **技術講座**（30 支）→ [完整列表](技術講座/README.md)
+- 🛠️ **技術講座**（31 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-06-19 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 47 支影片*
+*最後更新：2026-06-19 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 48 支影片*
