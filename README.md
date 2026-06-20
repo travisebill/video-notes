@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **52 支影片** · 78 個音檔 · 52 個逐字稿 · 26 個口播稿
+> **53 支影片** · 81 個音檔 · 53 個逐字稿 · 27 個口播稿
 > 最後更新：2026-06-20
 
 ---
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-06-20** | Smitha Ken + Anant Nawalgaria + Alan + Julia + Hmi + Gabriella + Devanch + Paulong（Google Cloud × Kaggle）| [DAY 3 Livestream — 5-Days of AI Agents: Intensive Vibe Coding Course With Google（Agent Skills / File Bus / DAG Orchestration）](技術講座/20260620_Kaggle_5DayAIAgents_Day3.md) · 57 分 29 秒
 - **2026-06-20** | Smitha Ken + Anant Nawalgaria + Mike + Alan + Kanchana + Pierre + Fran（Google Cloud × Kaggle）| [DAY 2 Livestream — 5-Days of AI Agents: Intensive Vibe Coding Course With Google（A2A / MCP / UCP / AP2 / A2UI / Agentic Data Cloud）](技術講座/20260620_Kaggle_5DayAIAgents_Day2.md) · 52 分 35 秒
 - **2026-06-20** | Smitha Ken + Anand Navalgaria（Google Cloud × Kaggle）| [DAY 1 Livestream — 5-Day AI Agents Intensive Vibe Coding Course With Google](技術講座/20260620_Kaggle_5DayAIAgents_Day1.md) · 51 分 31 秒
 - **2026-06-19** | Dr. Darren Candow（University of Regina 老化肌骨研究室主任）| [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · 75 分 32 秒
@@ -48,6 +49,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-20 | [DAY 3 Livestream — 5-Days of AI Agents: Intensive Vibe Coding Course With Google](技術講座/20260620_Kaggle_5DayAIAgents_Day3.md) | Smitha Ken + Anant Nawalgaria + Alan + Julia + Hmi + Gabriella + Devanch + Paulong（Google Cloud × Kaggle）| 57 分 29 秒 | [📄 note](技術講座/20260620_Kaggle_5DayAIAgents_Day3.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayAIAgents_Day3_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayAIAgents_Day3_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayAIAgents_Day3.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayAIAgents_Day3.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayAIAgents_Day3.mp3) |
 | 2026-06-20 | [DAY 2 Livestream — 5-Days of AI Agents: Intensive Vibe Coding Course With Google](技術講座/20260620_Kaggle_5DayAIAgents_Day2.md) | Smitha Ken + Anant Nawalgaria + Mike + Alan + Kanchana + Pierre + Fran（Google Cloud × Kaggle）| 52 分 35 秒 | [📄 note](技術講座/20260620_Kaggle_5DayAIAgents_Day2.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayAIAgents_Day2_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayAIAgents_Day2_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayAIAgents_Day2.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayAIAgents_Day2.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayAIAgents_Day2.mp3) |
 | 2026-06-20 | [DAY 1 Livestream — 5-Day AI Agents Intensive Vibe Coding Course With Google](技術講座/20260620_Kaggle_5DayAIAgents_Day1.md) | Smitha Ken + Anand Navalgaria（Google Cloud × Kaggle）| 51 分 31 秒 | [📄 note](技術講座/20260620_Kaggle_5DayAIAgents_Day1.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayAIAgents_Day1_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayAIAgents_Day1_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayAIAgents_Day1.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayAIAgents_Day1.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayAIAgents_Day1.mp3) |
 | 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) | Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）| 75 分 32 秒 | [📄 note](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · [📝 逐字稿](transcripts/20260619_DrDarrenCandow_CreatineForAntiAging_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260619_DrDarrenCandow_CreatineForAntiAging_口播稿.txt) · [🔊 opus](audio/20260619_DrDarrenCandow_CreatineForAntiAging.opus) · [🔊 m4a](audio/20260619_DrDarrenCandow_CreatineForAntiAging.m4a) · [🔊 mp3](audio/20260619_DrDarrenCandow_CreatineForAntiAging.mp3) |

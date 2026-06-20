@@ -1,0 +1,31 @@
+本集影片是 Kaggle 与 Google 共同举办的「五天 AI Agent 密集课程」第三天的直播内容。 主讲者 Smitha Ken 与共同主持人 Anant Nawalgaria 邀请多位业界专家， 聚焦探讨 Agent Skills——这是 Day 2 protocol 主题之后的下一块基石。 整场直播的核心张力在于：当 agent 透过 MCP 学会用手， 它还需要一套战术手册来处理复杂任务。
+
+从 MCP 到 Agent Skills
+
+白皮书引入 Agent Skills 的概念。 如果 MCP 是 agent 的双手， Agent Skills 就是 playbook——告诉 agent 在特定场景下该用什么工具、 按什么顺序执行。 从软体工程角度， 这呼应了 procedure library 与 design pattern 的精神——把反复出现的任务模式抽象为可重用的单元。
+
+Safety 不能只靠 model
+
+来宾 Alan 与 Julia 讨论 agentic safety。 核心论点：不要让 safety 完全依赖 model 或 skill 集合本身。 从 security 角度， 这呼应了 defense-in-depth 原则——多层防御比单一防御更可靠。
+
+File bus 取代 context window 作为 message bus
+
+讨论中最具技术深度的议题：传统做法是把状态塞进 model 的 context window， 但这会造成 context 膨胀。 反直觉的解法是用 file bus 来传递 pointers（不是 data）， 让 model 只看到必要的 reference。 从分散式系统角度， 这正是 Unix philosophy 的延伸——资料与 metadata 分离， 用 file descriptor 传 reference。
+
+Single action 原则
+
+针对 tool 设计， Julia 提出 single action per tool 的原则——一个 tool 只做一件事。 这呼应了 Unix philosophy 的 do one thing well 与 single responsibility principle。 从 tool design 角度， 这降低了 cognitive load 与 error surface。
+
+DAG orchestration vs reconciliation
+
+最后一个关键议题是 state 管理。 来宾 Devanch 指出， 把多个 agent skill 串起来做 reconciliation 是 architectural anti-pattern——容易累积 hallucination 与 rot。 反之， DAG orchestration 透过 file message bus 传递 structured schema references， 每个 node 有明确的 skill、 tool、 boundary。 从软体架构角度， 这代表著 declarative orchestration over imperative coordination。
+
+程式码实作与随堂测验
+
+第三天的程式码实作由 Paulong 带领， 主题是在 Antigravity 中设定 Agent Skills。 随堂测验则聚焦在 Agent Skills 的 manifest 结构， 正确答案是 skills. md。
+
+明日主题预告
+
+明日主题将进入 Quality 与 Evaluation——如何评估 agent 的品质与可靠性。
+
+这场直播最鲜明的讯息是：Agent Skills 是把一次性 prompt engineering 转化为可重用 playbook 库的关键设计。
