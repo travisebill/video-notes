@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **50 支影片** · 27 個音檔 · 50 個逐字稿 · 24 個口播稿
-> 最後更新：2026-06-19
+> **51 支影片** · 75 個音檔 · 51 個逐字稿 · 25 個口播稿
+> 最後更新：2026-06-20
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-06-20** | Smitha Ken + Anand Navalgaria（Google Cloud × Kaggle）| [DAY 1 Livestream — 5-Day AI Agents Intensive Vibe Coding Course With Google](技術講座/20260620_Kaggle_5DayAIAgents_Day1.md) · 51 分 31 秒
 - **2026-06-19** | Dr. Darren Candow（University of Regina 老化肌骨研究室主任）| [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · 75 分 32 秒
 - **2026-06-19** | Andrew Ng（Landing AI / DeepLearning.AI 創辦人）| [The Future of AI Agents — Andrew Ng × Harrison Chase @ LangChain Interrupt](技術講座/20260619_AndrewNg_FutureOfAIAgents.md) · 31 分 39 秒
 - **2026-06-19** | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者）| [Agentic Engineering Workflow — Harness First, Model Second](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) · 62 分 24 秒
@@ -46,6 +47,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-20 | [DAY 1 Livestream — 5-Day AI Agents Intensive Vibe Coding Course With Google](技術講座/20260620_Kaggle_5DayAIAgents_Day1.md) | Smitha Ken + Anand Navalgaria（Google Cloud × Kaggle）| 51 分 31 秒 | [📄 note](技術講座/20260620_Kaggle_5DayAIAgents_Day1.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayAIAgents_Day1_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayAIAgents_Day1_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayAIAgents_Day1.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayAIAgents_Day1.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayAIAgents_Day1.mp3) |
 | 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) | Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）| 75 分 32 秒 | [📄 note](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · [📝 逐字稿](transcripts/20260619_DrDarrenCandow_CreatineForAntiAging_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260619_DrDarrenCandow_CreatineForAntiAging_口播稿.txt) · [🔊 opus](audio/20260619_DrDarrenCandow_CreatineForAntiAging.opus) · [🔊 m4a](audio/20260619_DrDarrenCandow_CreatineForAntiAging.m4a) · [🔊 mp3](audio/20260619_DrDarrenCandow_CreatineForAntiAging.mp3) |
 | 2026-06-19 | [The Future of AI Agents — Andrew Ng × Harrison Chase @ LangChain Interrupt](技術講座/20260619_AndrewNg_FutureOfAIAgents.md) | Andrew Ng（Landing AI / DeepLearning.AI 創辦人）| 31 分 39 秒 | [📄 note](技術講座/20260619_AndrewNg_FutureOfAIAgents.md) · [📝 逐字稿](transcripts/20260619_AndrewNg_FutureOfAIAgents_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260619_AndrewNg_FutureOfAIAgents_口播稿.txt) · [🔊 opus](audio/20260619_AndrewNg_FutureOfAIAgents.opus) · [🔊 m4a](audio/20260619_AndrewNg_FutureOfAIAgents.m4a) · [🔊 mp3](audio/20260619_AndrewNg_FutureOfAIAgents.mp3) |
 | 2026-06-19 | [Agentic Engineering Workflow — Harness First, Model Second](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者） | 62 分 24 秒 | [📄 note](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) · [📝 逐字稿](transcripts/20260619_MattPocock_AgenticEngineeringWorkflow_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260619_MattPocock_AgenticEngineeringWorkflow_口播稿.txt) · [🔊 opus](audio/20260619_MattPocock_AgenticEngineeringWorkflow.opus) · [🔊 m4a](audio/20260619_MattPocock_AgenticEngineeringWorkflow.m4a) · [🔊 mp3](audio/20260619_MattPocock_AgenticEngineeringWorkflow.mp3) |
