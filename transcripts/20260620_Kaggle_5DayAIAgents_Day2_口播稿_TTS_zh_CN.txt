@@ -1,0 +1,19 @@
+本集影片是 Kaggle 与 Google 共同举办的「五天 AI Agent 密集课程」第二天的直播内容。 主讲者 Smitha Ken 与共同主持人 Anant Nawalgaria 邀请多位业界专家， 共同探讨 AI Agent 如何彼此对话与协作。 整场直播的核心张力在于：当 AI Agent 从单独运作走向群体协作， protocol 将成为新一代的基础建设。
+
+Day 1 建立的是 AI Agent 的个体基础——如何建构、 评估、 部署单一 agent。 Day 2 则把视角拉到群体层次：agent 如何与其他 agent 对话（A2A）、 与工具对话（MCP）、 与商业系统对话（UCP、 AP2）。 从分散式系统角度， 这正是 RPC 与 message queue 精神在 AI 时代的延伸。
+
+白皮书引入两个关键概念：A2A（Agent-to-Agent）protocol 与 Agent Card。 A2A 规范 agent 之间的通讯格式； Agent Card 则是 agent 的自我介绍——让其他 agent 知道它能做什么、 需要什么 input。 从 protocol 工程角度， 这呼应了 WSDL 与 OpenAPI 的精神——以机器可读的格式描述服务能力。
+
+来宾 Alan 与 Pierre 深入讨论两个新兴协议：UCP 与 AP2。 UCP（Universal Commerce Protocol）聚焦于 agent 之间的商业交易标准化； AP2 处理支付端。 两位来宾强调， 这些协议的目标是让 agent 能像人类一样进行交易， 但保留可审计性与安全性。 从电子商务角度， 这等于为机器买家建立的第一批基础设施。
+
+来宾 Mike 提出 Agentic Data Cloud 的概念——专门为 agent 设计的资料层。 传统资料库（Spanner、 SQL、 NoSQL）假设人类是主要消费者， 但 agent 作为主要使用者时存取模式完全不同。 从资料工程角度， 这代表著 schema 设计需要从人类可读转向 agent 可解析， 并引入 agent-specific 的 RBAC 机制。
+
+长跑 agent 的成本控制是讨论中最实务的问题之一。 与会者指出， agent 在长时运行时容易陷入无穷回圈并快速消耗 token 预算。 从 FinOps 角度， 这需要新的 observability 工具——能即时侦测成本 skew、 自动触发 kill switch。 Pierre 笑称， 也许未来 model 会学会用 bullet points 讲话来省 token。
+
+第二天的程式码实作由 Fran 带领， 主题是 MCP（Model Context Protocol）的设定。 学员将在 Antigravity CLI 中设定 MCP server， 让 agent 能直接从 terminal 呼叫外部工具与文件。 从 DevOps 角度， 这正是 agent 版的 shell——把 LLM 的规划与工具呼叫能力延伸到命令列环境。
+
+随堂测验聚焦在 MCP 的数学意义：当有 N 个 model 与 M 个工具时， 传统整合需要 N 乘以 M 次的开发工作。 MCP 把这个复杂度降到线性甚至常数， 因为每个 model 与每个 tool 只需要跟 MCP 对接一次。 从软体架构角度， 这正是 abstraction layer 的力量——一个共通介面取代 N 乘以 M 个客制化连接。
+
+明日主题将聚焦于 Agentic Skills——让 agent 能呼叫特定领域技能， 而不是把所有能力塞进单一 prompt。
+
+这场直播最鲜明的讯息是：AI Agent 的下一步， 不是更聪明的单一模型， 而是更完善的 protocol 基础建设。
