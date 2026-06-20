@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **53 支影片** · 81 個音檔 · 53 個逐字稿 · 27 個口播稿
+> **54 支影片** · 84 個音檔 · 54 個逐字稿 · 28 個口播稿
 > 最後更新：2026-06-20
 
 ---
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-06-20** | Paige Bailey + Chris + Antonio + Scott + Christopher + Umesh（Google Research / Google Cloud）| [DAY 4 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey）— Healthcare (Med-PaLM) + Security (Sec-PaLM) + Grounding + Prompt Injection](技術講座/20260620_Kaggle_5DayGenAI_Day4.md) · 62 分 46 秒
 - **2026-06-20** | Smitha Ken + Anant Nawalgaria + Alan + Julia + Hmi + Gabriella + Devanch + Paulong（Google Cloud × Kaggle）| [DAY 3 Livestream — 5-Days of AI Agents: Intensive Vibe Coding Course With Google（Agent Skills / File Bus / DAG Orchestration）](技術講座/20260620_Kaggle_5DayAIAgents_Day3.md) · 57 分 29 秒
 - **2026-06-20** | Smitha Ken + Anant Nawalgaria + Mike + Alan + Kanchana + Pierre + Fran（Google Cloud × Kaggle）| [DAY 2 Livestream — 5-Days of AI Agents: Intensive Vibe Coding Course With Google（A2A / MCP / UCP / AP2 / A2UI / Agentic Data Cloud）](技術講座/20260620_Kaggle_5DayAIAgents_Day2.md) · 52 分 35 秒
 - **2026-06-20** | Smitha Ken + Anand Navalgaria（Google Cloud × Kaggle）| [DAY 1 Livestream — 5-Day AI Agents Intensive Vibe Coding Course With Google](技術講座/20260620_Kaggle_5DayAIAgents_Day1.md) · 51 分 31 秒
@@ -49,6 +50,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-20 | [DAY 4 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey）](技術講座/20260620_Kaggle_5DayGenAI_Day4.md) | Paige Bailey + Chris + Antonio + Scott + Christopher + Umesh（Google Research / Google Cloud）| 62 分 46 秒 | [📄 note](技術講座/20260620_Kaggle_5DayGenAI_Day4.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayGenAI_Day4_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayGenAI_Day4_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayGenAI_Day4.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayGenAI_Day4.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayGenAI_Day4.mp3) |
 | 2026-06-20 | [DAY 3 Livestream — 5-Days of AI Agents: Intensive Vibe Coding Course With Google](技術講座/20260620_Kaggle_5DayAIAgents_Day3.md) | Smitha Ken + Anant Nawalgaria + Alan + Julia + Hmi + Gabriella + Devanch + Paulong（Google Cloud × Kaggle）| 57 分 29 秒 | [📄 note](技術講座/20260620_Kaggle_5DayAIAgents_Day3.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayAIAgents_Day3_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayAIAgents_Day3_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayAIAgents_Day3.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayAIAgents_Day3.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayAIAgents_Day3.mp3) |
 | 2026-06-20 | [DAY 2 Livestream — 5-Days of AI Agents: Intensive Vibe Coding Course With Google](技術講座/20260620_Kaggle_5DayAIAgents_Day2.md) | Smitha Ken + Anant Nawalgaria + Mike + Alan + Kanchana + Pierre + Fran（Google Cloud × Kaggle）| 52 分 35 秒 | [📄 note](技術講座/20260620_Kaggle_5DayAIAgents_Day2.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayAIAgents_Day2_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayAIAgents_Day2_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayAIAgents_Day2.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayAIAgents_Day2.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayAIAgents_Day2.mp3) |
 | 2026-06-20 | [DAY 1 Livestream — 5-Day AI Agents Intensive Vibe Coding Course With Google](技術講座/20260620_Kaggle_5DayAIAgents_Day1.md) | Smitha Ken + Anand Navalgaria（Google Cloud × Kaggle）| 51 分 31 秒 | [📄 note](技術講座/20260620_Kaggle_5DayAIAgents_Day1.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayAIAgents_Day1_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayAIAgents_Day1_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayAIAgents_Day1.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayAIAgents_Day1.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayAIAgents_Day1.mp3) |

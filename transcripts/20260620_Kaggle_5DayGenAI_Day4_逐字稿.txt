@@ -1,0 +1,391 @@
+歡迎來到 Kaggle 與 Google 共同舉辦的「五天 Gen AI 密集課程」第四天。 我是 Paige Bailey，今天帶大家看 code 走一遍。
+
+先快速回顧今天要涵蓋的內容。
+
+今天主題是 LLM 無法獨立完成的任務——透過 tool use 與 grounding 來達成。
+
+codelab 會涵蓋這些內容。
+
+特別是 medical 領域——真實的病患情境，而不是機器化的機械回應。
+
+對 medical 專業人員來說，沒有這些工具，基本上就是 burnout 與脆弱的配方。
+
+讓 medical 專業人員能專注在更策略性、更重要的任務上。
+
+還有 Med-PaLM 與 Sec-PaLM 為什麼這麼有效，以及它們如何理解 domain 的細微差異。
+
+把複雜任務拆解成人類專家也會做的 manageable steps。
+
+看到整體如何契合。
+
+希望大家都看得到螢幕。
+
+更多內容會在白皮書中介紹。
+
+匯入必要的 libraries。 然後進入有趣的部分。
+
+這跟我們前幾天看到的 standard models 不一樣。
+
+可以歸因於哪個 search results。
+
+昨天討論過的 agent 章節，你可能還記得。
+
+能給出更精準的答案。
+
+可以歸因於答案的哪個部分。
+
+根據信心程度決定是否使用 search service。
+
+降低 hallucination 並提升結果品質。
+
+你可以在應用中使用 grounding。
+
+幫助 model 在沒見過的任務上表現更好。
+
+探索各種可用的 model。
+
+news post 保持相關性。
+
+保留部分 row 訓練，部分 testing。
+
+建議保留部分 testing。
+
+更多 prompt engineering 讓它更具體。
+
+精確匹配 model 已見過的內容。
+
+prompt engineering 也能提升 performance，如 Day 1 所示。
+
+建議大家玩玩看，稍後可以驗證。
+
+input 與 generated output 結構化。
+
+以上就是全部。請收回螢幕分享。
+
+搭配 Gemini 取得最新資訊。
+
+非常酷。 大家今天可以在 AI Studio 測試。
+
+security。 它們是什麼，為什麼有用。
+
+LLM 將被應用的業務領域。
+
+更 devops 風格的網路管理。
+
+公開資料，如同其他 LLM 案例。
+
+組織通常視為高度敏感。
+
+涵蓋你可能有的所有 customer 需求。
+
+真正理解 alert 中發生什麼。
+
+不同於 security operations analyst。
+
+比專門 model 的正確率更高。
+
+很多人把 LLM 視為 memorization machine。
+
+實際上反過來。
+
+每天給它最新的威脅資訊。
+
+明顯不可行。
+
+人們環境中有的東西。
+
+轉到 healthcare 領域。
+
+像 MedQA 的 benchmark，何時達到 100%。
+
+謝 Paige。 嗨，我是 Chris，在 Google Research 做 health AI。
+
+醫學生執照考試的問題。
+
+選項數 3-5 個，看哪個是正確答案。
+
+數百題後得到整體 benchmark。
+
+10%、20% 正確率逐步提升。
+
+包括 Gemini 已達到 90% 區間。
+
+主要缺點是有些人工化情境。
+
+多年完整病歷、影像、檢驗值。
+
+真實案例中沒有 multiple choice。
+
+benchmark 像 MedQA 會達到 100% 嗎。 可能吧，有人會到。
+
+更深入推理、理解的問題。
+
+模型能否做這類任務。
+
+轉向更複雜的 benchmark。
+
+不再視為重要里程碑。
+
+這些高度專業的 expert task。
+
+比 multiple-choice Q&A 更複雜。
+
+下一題給 Antonio。
+
+Google Cloud Office of the CTO 主管。
+
+知識都 baked into base model 嗎。
+
+在 Office of the CTO 工作，Cloud 中的組織。
+
+做 AI。 之前做 Search，那是 27 年前。
+
+model 數量與大小持續增加。
+
+高效 model。
+
+從 latency、cost 角度的 trade-off。
+
+在這些 model 中的權衡。
+
+不同維度的 trade-off。
+
+答案的品質、serving 成本、speed/latency。
+
+特定領域的專精。
+
+例子很多。
+
+廣泛的工具可以使用。
+
+早期、今天、前幾天討論過的。
+
+把 model 鎖定特定領域，提供該領域的 example。
+
+該時點情況的 snapshot。 某些時候很有效。
+
+需要動態資訊的情境。
+
+retrieval augmentation 或 search-based 大有幫助。
+
+caching 技術提升效率、降低成本。
+
+多種最佳化選項。
+
+取決於特定 use case。
+
+這些不同維度越來越多。
+
+透過 Google Cloud 與 Unsloth 等開源框架。
+
+希望未來能解決。
+
+對 LLM 與 Gen AI 都是雄心勃勃的目標。
+
+clinical studies 兩百年前不存在。
+
+現代 health care 不存在於過去，必須被發明。
+
+用這個讓醫生更快回覆病患。
+
+讓病患更好地自我教育。
+
+用於 medical imaging 等任務。
+
+Gemini、Med Gemini、Med-PaLM 等 model。
+
+期待很多創新與發明。
+
+這些是我們需要更多探索的。
+
+health care 領域的 AI，以及其他專業領域。
+
+真的很期待未來幾年的發展。
+
+下一題，另一個 security 問題。
+
+本質上是 adversarial 領域。
+
+security 應用與如何隨時間演變。
+
+Scott 從幾十年前開始做這。
+
+LLM 推論如何隨時間改變。
+
+好問題。
+
+如何整合進 tool chain。
+
+補充 Scott 說的。
+
+建任何應用程式都必須考慮 security。
+
+可能被 compromise 或 malicious。
+
+必須 sanitize input 並謹慎使用。
+
+得到想要的結果。
+
+確保準確性、安全性等。
+
+runtime 部分也存在。
+
+偏離 application author 想要的。
+
+類比到 LLM 世界就是 prompt injection。
+
+考慮 user input 但不應錯誤處理。
+
+只到其中一個 subcomponent。
+
+malicious。 0 到 1。 舉例。
+
+數字仍正確，但最糟是錯誤的數字。
+
+整體 plan 與實際執行的 instruction。
+
+prompt injection 能做到的事。
+
+active research 領域。
+
+LLM 這個新世界。
+
+下一題給 Christopher。
+
+training 與 deployment 時如何維持 privacy 與 data security。
+
+醫院場景。 如何思考。
+
+data 作為 prompt 的一部分等。
+
+training 時用 de-identified 或 synthetic data。
+
+無姓名、date shifting 等。
+
+隨機異常值降低 model 性能。
+
+關鍵是確保個資不洩漏進 model。
+
+傳輸加密等。 很好。
+
+為什麼 LLM 對 security 問題有效。
+
+最喜歡的 security AI use case。
+
+我先開始，Scott 接。
+
+model 可能有的 factual knowledge。
+
+你認為 LLM 有的知識。
+
+直接在 prompt 講以達高信心。
+
+不是依賴 hallucinated 資訊。
+
+對任何 factual 內容採取強 grounding。
+
+系統能做到。 可能做到 70%。
+
+能做大部分，但有部分做不到。
+
+可以做出判斷的程度。
+
+這些 capability 很難用一般 code 寫。
+
+很大進步。
+
+潛在 malicious 行為。 已證明有效。
+
+cloud deployment，over permissioned 帳號。
+
+直接幫客戶修正。
+
+customer 環境中的東西。
+
+具有特定影響的 contextual change。
+
+整體中讓 end-to-end 成為可能的部分。
+
+security 中多樣的系統。
+
+與 data silo 合併。 LLM 擅長的。
+
+Umesh 講的，先前經驗。
+
+對最終判斷的意義。
+
+Google Cloud 客戶代表整個組織、公司。
+
+為每個公司做 dedicated heuristics 與 rules。
+
+想聽你的明確觀點。
+
+本質上對一切持懷疑態度。
+
+思考方式。 在我看来 partway。
+
+confidence score。 很多人想到 log likelihoods。
+
+對客戶與使用者有巨大價值。
+
+capabilities 方面的答案。
+
+解決 security 問題的關鍵。
+
+hand tuning 才能有效使用工具。
+
+API 服務很廣。
+
+成千欄位，每個有語意。
+
+string 參數，回傳簡單答案。
+
+不需要為每個 hand crafting 的方式。
+
+會是 game changing。
+
+可靠使用工具並知道何時用哪個。
+
+尤其是 composite tools 與 function calling。
+
+兩個都很期待。 最後一題給 Christopher 談 Med-PaLM。
+
+診斷。 表現尚可，現在應該更好。
+
+擴展到更難的任務。
+
+尚未達標，但比一兩年前好很多。
+
+結合 life situation 等。
+
+下結論，也是 chat partner。
+
+真實病患的正向 effect。
+
+仍在早期。
+
+很期待。 迫不及待看下一步。
+
+感謝所有嘉賓。
+
+能 100% 正確回答任何醫療問題的通用 AI 系統。
+
+提供給 medical 專業人員的技術。
+
+Med-PaLM V2 的 ensemble refinement（ER）重要性。
+
+白皮書專門講 Med-PaLM。
+
+Scott 與大家記下答案。
+
+取得 security use case 最佳結果的 framework。
+
+security domain specific 大型語言模型。
+
+Kaggle Gen AI 課程第四天結束。
+
+明天學 evals 與 MLOps for generative model。
+
+很期待。
+
+所有影片連結。 謝謝，祝有美好的一天。
