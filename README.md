@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **56 支內容** · 90 個音檔 · 56 個逐字稿 · 30 個口播稿
-> 最後更新：2026-06-26
+> **57 支內容** · 93 個音檔 · 57 個逐字稿 · 31 個口播稿
+> 最後更新：2026-06-27
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-06-27** | Angelos（Apple MLX team 工程師）| [Run local agentic AI on the Mac using MLX — WWDC26 Session 232（HTML-Video-Page 路徑）](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · 13 分 26 秒（HTML-Video-Page）
 - **2026-06-26** | Martin Fowler（martinfowler.com 軟體工程思想家）+ 中文摘要 doggy8088（Will 保哥）| [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) · 技術文章
 - **2026-06-20** | Paige Bailey + Ilya + Long + Kaz + Mark + Eric + Irwin + Miles + Guillaume + Olivia（DeepMind）（Google Research / Google Cloud / DeepMind）| [DAY 5 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey）— MLOps for Generative AI（Vertex AI / Starter Pack / Multimodal Eval / Drift Detection）](技術講座/20260620_Kaggle_5DayGenAI_Day5.md) · 60 分 28 秒
 - **2026-06-20** | Paige Bailey + Chris + Antonio + Scott + Christopher + Umesh（Google Research / Google Cloud）| [DAY 4 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey）— Healthcare (Med-PaLM) + Security (Sec-PaLM) + Grounding + Prompt Injection](技術講座/20260620_Kaggle_5DayGenAI_Day4.md) · 62 分 46 秒
@@ -52,6 +53,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) | Angelos（Apple MLX team 工程師）| 13 分 26 秒（HTML-Video-Page，口播稿 4:40）| [📄 note](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · [📝 逐字稿](transcripts/20260627_Angelos_WWDC26_LocalAgenticAI_MLX_逐字稿.txt) · [📂 章節+程式碼](transcripts/20260627_Angelos_WWDC26_LocalAgenticAI_MLX_章節摘要_程式碼.md) · [🎙️ 口播稿](transcripts/20260627_Angelos_WWDC26_LocalAgenticAI_MLX_口播稿.txt) · [🔊 opus](audio/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.opus) · [🔊 m4a](audio/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.m4a) · [🔊 mp3](audio/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.mp3) |
 | 2026-06-26 | [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) | Martin Fowler（martinfowler.com 軟體工程思想家）+ 中文摘要 doggy8088（Will 保哥）| 技術文章（口播稿 3:43）| [📄 note](技術講座/20260626_MartinFowler_HarnessEngineering.md) · [📝 逐字稿](transcripts/20260626_MartinFowler_HarnessEngineering_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260626_MartinFowler_HarnessEngineering_口播稿.txt) · [🔊 opus](audio/20260626_MartinFowler_HarnessEngineering.opus) · [🔊 m4a](audio/20260626_MartinFowler_HarnessEngineering.m4a) · [🔊 mp3](audio/20260626_MartinFowler_HarnessEngineering.mp3) |
 | 2026-06-20 | [DAY 5 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey）](技術講座/20260620_Kaggle_5DayGenAI_Day5.md) | Paige Bailey + Ilya + Long + Kaz + Mark + Eric + Irwin + Miles + Guillaume + Olivia（DeepMind）（Google Research / Google Cloud / DeepMind）| 60 分 28 秒 | [📄 note](技術講座/20260620_Kaggle_5DayGenAI_Day5.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayGenAI_Day5_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayGenAI_Day5_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayGenAI_Day5.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayGenAI_Day5.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayGenAI_Day5.mp3) |
 | 2026-06-20 | [DAY 4 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey）](技術講座/20260620_Kaggle_5DayGenAI_Day4.md) | Paige Bailey + Chris + Antonio + Scott + Christopher + Umesh（Google Research / Google Cloud）| 62 分 46 秒 | [📄 note](技術講座/20260620_Kaggle_5DayGenAI_Day4.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayGenAI_Day4_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayGenAI_Day4_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayGenAI_Day4.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayGenAI_Day4.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayGenAI_Day4.mp3) |
@@ -138,8 +140,9 @@
 - 2026-04-25 | [AI 能自我修正嗎？從 Decoding、Workflow 到 Reasoning 的技術發展整理](技術講座/20260425_李宏毅_AI自我修正Decoding到Reasoning.md) · ? · 88 分鐘
 - 2026-04-12 | [Harness Engineering：有時候語言模型不是不夠聰明，只是沒有人類好好引導](技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md) · Harness Engineering · 92 分鐘
 
-### 🛠️ **編碼工具 / Agent 工程實踐**（13 支）
+### 🛠️ **編碼工具 / Agent 工程實踐**（14 支）
 
+- 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · Angelos（Apple MLX team 工程師）· 13 分 26 秒（HTML-Video-Page 路徑）
 - 2026-06-26 | [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) · Martin Fowler（martinfowler.com）+ 中文摘要 doggy8088（Will 保哥）· 技術文章
 - 2026-06-19 | [The Future of AI Agents — Andrew Ng × Harrison Chase @ LangChain Interrupt](技術講座/20260619_AndrewNg_FutureOfAIAgents.md) · Andrew Ng（Landing AI / DeepLearning.AI 創辦人）· 31 分 39 秒
 - 2026-06-19 | [Agentic Engineering Workflow — Harness First, Model Second](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) · Matt Pocock（AI Hero 創辦人 / Sandcastle 作者） · 62 分 24 秒
@@ -199,6 +202,7 @@
 
 - **陳文茜** · 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 48 分 36 秒
 - **陳文茜** · 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒
+- **Angelos（Apple MLX team 工程師）** · 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · 13 分 26 秒（HTML-Video-Page）
 - **Y Combinator Paper Club** · 2026-06-12 | [5 篇 AI 論文告訴我們研究正往哪裡走 — YC Paper Club 全景](技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md) · 1 小時 16 分 55 秒
 - **Yann LeCun** · 2026 | [World Models 將開啟下一場 AI 革命 — 從 LLMs 的死路到 AMILabs](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) · 58 分 54 秒
 - **自說自話的總裁** · 2026-06-13 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) · 28 分 50 秒
@@ -236,8 +240,8 @@
 - 🎙️ **人物訪談**（8 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（3 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（4 支）→ [完整列表](財經分析/README.md)
-- 🛠️ **技術講座**（32 支）→ [完整列表](技術講座/README.md)
+- 🛠️ **技術講座**（33 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-06-26 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 56 支內容*
+*最後更新：2026-06-27 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 57 支內容*
