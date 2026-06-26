@@ -1,0 +1,11 @@
+本文要討論的是 Delightex 教育團隊在 2025 年 8 月發布的《Getting Started Kit 2.5》PDF 入門手冊。這份手冊的核心目標，是協助老師在簡單的三步流程內，把 3D、VR 與 AR 帶進教室。
+
+Delightex Edu 是一個免費的教育工具平台，支援 Web 與 Mobile 兩種環境。網頁版可在任何電腦（含 Chromebook）使用，建議搭配最新版 Chrome、Firefox 或 Safari；行動版則支援 iOS、Android 與 Microsoft 三系統。整份手冊圍繞三個主步驟展開：Sign up（註冊帳號）、Create（建立 Project）、Explore（探索作品）。
+
+Sign up 階段，老師前往 delightex.com/edu 點擊 Sign up，建立教師帳號並選擇登入方式。Create 階段，進入 Projects 頁面，可以先探索 welcome Project 熟悉介面，再點 Create Project 建立第一個專案。第一個場景可以選擇 3D 環境、360 度圖片，或搭配 MERGE Cube 實體方塊 add-on；接著從 Library 拖放 3D 物件到場景中，或在 Building 用 building blocks 自建，最後透過 Upload 加入額外的 3D 模型、圖片、GIF、影片或聲音。Explore 階段，平台提供四種探索模式：Play mode 是標準模式，任何裝置都能用；Gyro mode 透過手機或平板的陀螺儀旋轉視角；VR mode 透過 ClassVR、Pico headset 或手機 VR 頭盔體驗；AR mode 則透過 AR 相容裝置把作品帶到真實世界。
+
+手冊也提供兩份 checklist。教師端分為 5 步：先用免費 Basic 帳號取得 30 個 seats，選擇性升級 Pro；接著建立第一個 class，取得 class code 分享給學生；最後在 class 內建立第一個 assignment。學生端則是 3 步：建立學生帳號並輸入老師提供的 class code，進入 class，打開老師指派的 assignment，記得先讀指示再開工。
+
+除了 checklist，手冊還列出 5 支官方 YouTube 教學影片，涵蓋 5 大典型應用：360 度導覽、虛擬展覽、互動故事、程式遊戲、3D 模擬。鍵盤快捷鍵 cheat sheet 則分為 Desktop 與 Mobile 兩種環境、Editor 與 Play mode 兩種模式，讓老師和學生能快速操作。最後，手冊還提供可列印的學生證書與免費範例課程計畫，作為課堂實施的延伸資源。
+
+最終，Delightex Edu 入門手冊的真正價值是：把 3D、VR 與 AR 創作的低技術門檻交到每一位老師手上——只要願意 Sign up，就能在教室裡開啟全新的沉浸式學習體驗。
