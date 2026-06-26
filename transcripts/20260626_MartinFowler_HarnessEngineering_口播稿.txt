@@ -1,0 +1,13 @@
+本文要討論的是 Martin Fowler 在 martinfowler.com 發表的 Harness Engineering 一文。這篇文章的核心主張是：要讓 Coding Agent 在較少人工監督下運作，關鍵不在模型本身，而在模型之外的那整套控制系統——也就是作者所定義的 Harness。
+
+Harness 一詞在 Fowler 的用法裡，指的是模型以外、讓 Agent 能運作與被引導的一切。在 Coding Agent 的情境中，這涵蓋了提示詞、規則、文件、工具、檢查機制、測試、靜態分析、審查流程與回饋迴圈。換言之，模型只是拼圖的一塊，決定 Agent 第一次就做對、且事後能自行修正的，是拼圖的其餘部分。
+
+文章進一步把 Harness 拆成兩個控制維度。第一個維度是時序：Feedforward 是事前引導，在 Agent 行動之前先給它規則、文件、約束、範例與操作指南，目標是提高 Agent 一開始就產出正確結果的機率。Feedback 則是事後感測，在 Agent 行動之後用測試、Lint、型別檢查、靜態分析、審查 Agent、瀏覽器結果、Log 等方式發現問題，並讓 Agent 根據這些訊號修正。第二個維度是執行型態：Computational 是確定性、快速、可重複的檢查，便宜可靠，應該靠近開發流程前段；Inferential 是語意判斷型工具，較昂貴且不確定，適合選擇性使用在需要語意判斷的地方。
+
+文章也依困難度提出三種 Harness 類型。最容易建構的是 Maintainability Harness，處理重複程式碼、圈複雜度、測試覆蓋、架構漂移與風格違規。中度困難的是 Architecture Fitness Harness，定義與檢查效能、可觀測性、Logging、模組邊界與依賴方向。最困難的是 Behaviour Harness，必須回答系統功能行為是否真的符合需求，目前常見做法是用規格作為 Feedforward，再用 AI 產生的測試、覆蓋率、Mutation Testing、人工測試作為 Feedback，但作者坦言這仍是尚未完全解決的問題。
+
+從軟體工程的角度，這套拆解呼應了持續整合與持續交付的核心思想——越早發現問題，修正成本越低。從組織管理的角度，Harness 的本質是把分散在資深工程師腦中的隱性知識外化成可執行的 Sensors 與 Guides。但這裡也藏著一個盲點：Harness 的維護本身需要成本，如果 Feedforward 規則越來越多但缺乏 Feedback 的驗證，Harness 就會變成負債；同樣地，如果只靠 Feedback 而沒有 Feedforward，Agent 會反覆犯同樣的錯。
+
+文章也把人類開發者重新定位為一種隱性 Harness——人類知道團隊慣例、組織目標、技術債哪些可以接受，知道某個技術選擇雖然正確但不符合團隊方向。Coding Agent 沒有這些上下文，所以 Harness 的目標不是完全消除人類，而是把人類注意力導向最重要的地方。
+
+最終，Harness Engineering 的真正遺產是：把 Agent 開發從每次手動修正結果，轉向持續改善讓 Agent 不再犯錯的環境。這不是一次性設定，而是一種逐漸成形的工程實務。

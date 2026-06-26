@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **55 支影片** · 87 個音檔 · 55 個逐字稿 · 29 個口播稿
-> 最後更新：2026-06-20
+> **56 支內容** · 90 個音檔 · 56 個逐字稿 · 30 個口播稿
+> 最後更新：2026-06-26
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-06-26** | Martin Fowler（martinfowler.com 軟體工程思想家）+ 中文摘要 doggy8088（Will 保哥）| [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) · 技術文章
 - **2026-06-20** | Paige Bailey + Ilya + Long + Kaz + Mark + Eric + Irwin + Miles + Guillaume + Olivia（DeepMind）（Google Research / Google Cloud / DeepMind）| [DAY 5 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey）— MLOps for Generative AI（Vertex AI / Starter Pack / Multimodal Eval / Drift Detection）](技術講座/20260620_Kaggle_5DayGenAI_Day5.md) · 60 分 28 秒
 - **2026-06-20** | Paige Bailey + Chris + Antonio + Scott + Christopher + Umesh（Google Research / Google Cloud）| [DAY 4 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey）— Healthcare (Med-PaLM) + Security (Sec-PaLM) + Grounding + Prompt Injection](技術講座/20260620_Kaggle_5DayGenAI_Day4.md) · 62 分 46 秒
 - **2026-06-20** | Smitha Ken + Anant Nawalgaria + Alan + Julia + Hmi + Gabriella + Devanch + Paulong（Google Cloud × Kaggle）| [DAY 3 Livestream — 5-Days of AI Agents: Intensive Vibe Coding Course With Google（Agent Skills / File Bus / DAG Orchestration）](技術講座/20260620_Kaggle_5DayAIAgents_Day3.md) · 57 分 29 秒
@@ -51,6 +52,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-26 | [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) | Martin Fowler（martinfowler.com 軟體工程思想家）+ 中文摘要 doggy8088（Will 保哥）| 技術文章（口播稿 3:43）| [📄 note](技術講座/20260626_MartinFowler_HarnessEngineering.md) · [📝 逐字稿](transcripts/20260626_MartinFowler_HarnessEngineering_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260626_MartinFowler_HarnessEngineering_口播稿.txt) · [🔊 opus](audio/20260626_MartinFowler_HarnessEngineering.opus) · [🔊 m4a](audio/20260626_MartinFowler_HarnessEngineering.m4a) · [🔊 mp3](audio/20260626_MartinFowler_HarnessEngineering.mp3) |
 | 2026-06-20 | [DAY 5 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey）](技術講座/20260620_Kaggle_5DayGenAI_Day5.md) | Paige Bailey + Ilya + Long + Kaz + Mark + Eric + Irwin + Miles + Guillaume + Olivia（DeepMind）（Google Research / Google Cloud / DeepMind）| 60 分 28 秒 | [📄 note](技術講座/20260620_Kaggle_5DayGenAI_Day5.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayGenAI_Day5_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayGenAI_Day5_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayGenAI_Day5.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayGenAI_Day5.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayGenAI_Day5.mp3) |
 | 2026-06-20 | [DAY 4 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey）](技術講座/20260620_Kaggle_5DayGenAI_Day4.md) | Paige Bailey + Chris + Antonio + Scott + Christopher + Umesh（Google Research / Google Cloud）| 62 分 46 秒 | [📄 note](技術講座/20260620_Kaggle_5DayGenAI_Day4.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayGenAI_Day4_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayGenAI_Day4_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayGenAI_Day4.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayGenAI_Day4.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayGenAI_Day4.mp3) |
 | 2026-06-20 | [DAY 3 Livestream — 5-Days of AI Agents: Intensive Vibe Coding Course With Google](技術講座/20260620_Kaggle_5DayAIAgents_Day3.md) | Smitha Ken + Anant Nawalgaria + Alan + Julia + Hmi + Gabriella + Devanch + Paulong（Google Cloud × Kaggle）| 57 分 29 秒 | [📄 note](技術講座/20260620_Kaggle_5DayAIAgents_Day3.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayAIAgents_Day3_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayAIAgents_Day3_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayAIAgents_Day3.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayAIAgents_Day3.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayAIAgents_Day3.mp3) |
@@ -136,8 +138,9 @@
 - 2026-04-25 | [AI 能自我修正嗎？從 Decoding、Workflow 到 Reasoning 的技術發展整理](技術講座/20260425_李宏毅_AI自我修正Decoding到Reasoning.md) · ? · 88 分鐘
 - 2026-04-12 | [Harness Engineering：有時候語言模型不是不夠聰明，只是沒有人類好好引導](技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md) · Harness Engineering · 92 分鐘
 
-### 🛠️ **編碼工具 / Agent 工程實踐**（12 支）
+### 🛠️ **編碼工具 / Agent 工程實踐**（13 支）
 
+- 2026-06-26 | [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) · Martin Fowler（martinfowler.com）+ 中文摘要 doggy8088（Will 保哥）· 技術文章
 - 2026-06-19 | [The Future of AI Agents — Andrew Ng × Harrison Chase @ LangChain Interrupt](技術講座/20260619_AndrewNg_FutureOfAIAgents.md) · Andrew Ng（Landing AI / DeepLearning.AI 創辦人）· 31 分 39 秒
 - 2026-06-19 | [Agentic Engineering Workflow — Harness First, Model Second](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) · Matt Pocock（AI Hero 創辦人 / Sandcastle 作者） · 62 分 24 秒
 - 2026-06-19 | [AI-Powered SDLC with Claude Code / Codex / Kiro on Amazon Bedrock AgentCore](技術講座/20260619_AWSShowAndTell_AIPoweredSDLC.md) · Mark Roy / Isan (EK) Koshik / Evandro Wendro（Amazon Bedrock AgentCore, AWS Show & Tell） · 59 分 14 秒
@@ -223,6 +226,7 @@
 - **Andrew Ng（Landing AI / DeepLearning.AI 創辦人）** · 2026-06-19 | [The Future of AI Agents — Andrew Ng × Harrison Chase @ LangChain Interrupt](技術講座/20260619_AndrewNg_FutureOfAIAgents.md) · 31 分 39 秒
 - **Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）** · 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · 75 分 32 秒
 - **Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長** · 2026-02-05 | [黃仁勳最新訪談：你不會輸給 AI，但你會輸給會用 AI 的人](技術講座/20260205_JensenHuang_不輸給AI_輸給會用AI的人.md) · 44 分鐘
+- **Martin Fowler（martinfowler.com 軟體工程思想家）+ 中文摘要 doggy8088（Will 保哥）** · 2026-06-26 | [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) · 技術文章
 
 ---
 
@@ -236,4 +240,4 @@
 
 ---
 
-*最後更新：2026-06-19 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 50 支影片*
+*最後更新：2026-06-26 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 56 支內容*
