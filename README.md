@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **57 支內容** · 93 個音檔 · 57 個逐字稿 · 31 個口播稿
-> 最後更新：2026-06-27
+> **58 支內容** · 96 個音檔 · 58 個逐字稿 · 32 個口播稿
+> 最後更新：2026-06-28
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-06-28** | 自說自話的總裁 | [煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明](人物訪談/20260627_自說自話的總裁_煤與Starship與2100年的地球.md) · 30 分 54 秒（YouTube 一般路徑，detect_source_type.py 自動分流驗證）
 - **2026-06-27** | Angelos（Apple MLX team 工程師）| [Run local agentic AI on the Mac using MLX — WWDC26 Session 232（HTML-Video-Page 路徑）](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · 13 分 26 秒（HTML-Video-Page）
 - **2026-06-26** | Martin Fowler（martinfowler.com 軟體工程思想家）+ 中文摘要 doggy8088（Will 保哥）| [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) · 技術文章
 - **2026-06-20** | Paige Bailey + Ilya + Long + Kaz + Mark + Eric + Irwin + Miles + Guillaume + Olivia（DeepMind）（Google Research / Google Cloud / DeepMind）| [DAY 5 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey）— MLOps for Generative AI（Vertex AI / Starter Pack / Multimodal Eval / Drift Detection）](技術講座/20260620_Kaggle_5DayGenAI_Day5.md) · 60 分 28 秒
@@ -53,6 +54,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-28 | [煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明](人物訪談/20260627_自說自話的總裁_煤與Starship與2100年的地球.md) | 自說自話的總裁 | 30 分 54 秒（口播稿 4:52）| [📄 note](人物訪談/20260627_自說自話的總裁_煤與Starship與2100年的地球.md) · [📝 逐字稿](transcripts/20260627_自說自話的總裁_煤與Starship與2100年的地球_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260627_自說自話的總裁_煤與Starship與2100年的地球_口播稿.txt) · [🔊 opus](audio/20260627_自說自話的總裁_煤與Starship與2100年的地球.opus) · [🔊 m4a](audio/20260627_自說自話的總裁_煤與Starship與2100年的地球.m4a) · [🔊 mp3](audio/20260627_自說自話的總裁_煤與Starship與2100年的地球.mp3) |
 | 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) | Angelos（Apple MLX team 工程師）| 13 分 26 秒（HTML-Video-Page，口播稿 4:40）| [📄 note](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · [📝 逐字稿](transcripts/20260627_Angelos_WWDC26_LocalAgenticAI_MLX_逐字稿.txt) · [📂 章節+程式碼](transcripts/20260627_Angelos_WWDC26_LocalAgenticAI_MLX_章節摘要_程式碼.md) · [🎙️ 口播稿](transcripts/20260627_Angelos_WWDC26_LocalAgenticAI_MLX_口播稿.txt) · [🔊 opus](audio/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.opus) · [🔊 m4a](audio/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.m4a) · [🔊 mp3](audio/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.mp3) |
 | 2026-06-26 | [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) | Martin Fowler（martinfowler.com 軟體工程思想家）+ 中文摘要 doggy8088（Will 保哥）| 技術文章（口播稿 3:43）| [📄 note](技術講座/20260626_MartinFowler_HarnessEngineering.md) · [📝 逐字稿](transcripts/20260626_MartinFowler_HarnessEngineering_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260626_MartinFowler_HarnessEngineering_口播稿.txt) · [🔊 opus](audio/20260626_MartinFowler_HarnessEngineering.opus) · [🔊 m4a](audio/20260626_MartinFowler_HarnessEngineering.m4a) · [🔊 mp3](audio/20260626_MartinFowler_HarnessEngineering.mp3) |
 | 2026-06-20 | [DAY 5 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey）](技術講座/20260620_Kaggle_5DayGenAI_Day5.md) | Paige Bailey + Ilya + Long + Kaz + Mark + Eric + Irwin + Miles + Guillaume + Olivia（DeepMind）（Google Research / Google Cloud / DeepMind）| 60 分 28 秒 | [📄 note](技術講座/20260620_Kaggle_5DayGenAI_Day5.md) · [📝 逐字稿](transcripts/20260620_Kaggle_5DayGenAI_Day5_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260620_Kaggle_5DayGenAI_Day5_口播稿.txt) · [🔊 opus](audio/20260620_Kaggle_5DayGenAI_Day5.opus) · [🔊 m4a](audio/20260620_Kaggle_5DayGenAI_Day5.m4a) · [🔊 mp3](audio/20260620_Kaggle_5DayGenAI_Day5.mp3) |
@@ -190,6 +192,10 @@
 - 2026-06-09 | [WWDC 2026 Impressions: Yeah, That's About Right](技術講座/20260609_MKBHD_WWDC2026_YeahThatsAboutRight.md) · ? · 16:28
 - 2026-02-05 | [黃仁勳最新訪談：你不會輸給 AI，但你會輸給會用 AI 的人](技術講座/20260205_JensenHuang_不輸給AI_輸給會用AI的人.md) · Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長 · 44 分鐘
 
+### 🌍 **地球科學 / 太空 / 科普**（1 支）
+
+- 2026-06-28 | [煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明](人物訪談/20260627_自說自話的總裁_煤與Starship與2100年的地球.md) · 自說自話的總裁 · 30 分 54 秒
+
 ### 📦 **其他**（2 支）
 
 - 2026-06-08 | [Matt Pocock：Learn anything with the /teach skill](技術講座/20260608_MattPocock_teach_skill_個人化學習.md) · Matt Pocock · 13 分 04 秒
@@ -205,6 +211,7 @@
 - **Angelos（Apple MLX team 工程師）** · 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · 13 分 26 秒（HTML-Video-Page）
 - **Y Combinator Paper Club** · 2026-06-12 | [5 篇 AI 論文告訴我們研究正往哪裡走 — YC Paper Club 全景](技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md) · 1 小時 16 分 55 秒
 - **Yann LeCun** · 2026 | [World Models 將開啟下一場 AI 革命 — 從 LLMs 的死路到 AMILabs](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) · 58 分 54 秒
+- **自說自話的總裁** · 2026-06-28 | [煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明](人物訪談/20260627_自說自話的總裁_煤與Starship與2100年的地球.md) · 30 分 54 秒
 - **自說自話的總裁** · 2026-06-13 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) · 28 分 50 秒
 - **Smitha（Google Cloud Tech）** · 2026-06-13 | [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) · 8 分 29 秒
 - **進階上下文工程** · ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · ?
@@ -237,11 +244,11 @@
 <a id="by-type"></a>
 ## 📂 按分類
 
-- 🎙️ **人物訪談**（8 支）→ [完整列表](人物訪談/README.md)
+- 🎙️ **人物訪談**（9 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（3 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（4 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（33 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-06-27 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 57 支內容*
+*最後更新：2026-06-28 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 58 支內容*

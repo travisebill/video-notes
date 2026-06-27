@@ -1,10 +1,11 @@
 # 人物訪談 — Video Notes
 
-> **7 支影片**
+> **8 支影片**
 > [← 回到主 README](../../README.md)
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-28 | [煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明](20260627_自說自話的總裁_煤與Starship與2100年的地球.md) | 自說自話的總裁 | 30 分 54 秒 | [📄 note](20260627_自說自話的總裁_煤與Starship與2100年的地球.md) · [📝 逐字稿](../transcripts/20260627_自說自話的總裁_煤與Starship與2100年的地球_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20260627_自說自話的總裁_煤與Starship與2100年的地球_口播稿.txt) · [🔊 opus](../audio/20260627_自說自話的總裁_煤與Starship與2100年的地球.opus) · [🔊 m4a](../audio/20260627_自說自話的總裁_煤與Starship與2100年的地球.m4a) · [🔊 mp3](../audio/20260627_自說自話的總裁_煤與Starship與2100年的地球.mp3) |
 | 2026-06-13 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](20260613_自說自話的總裁_上古中國的魔法時代.md) | 自說自話的總裁 | 28 分 50 秒 | [📄 note](20260613_自說自話的總裁_上古中國的魔法時代.md) · [📝 逐字稿](../transcripts/20260613_自說自話的總裁_上古中國的魔法時代_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20260613_自說自話的總裁_上古中國的魔法時代_口播稿.txt) · [🔊 opus](../audio/20260613_自說自話的總裁_上古中國的魔法時代.opus) · [🔊 m4a](../audio/20260613_自說自話的總裁_上古中國的魔法時代.m4a) · [🔊 mp3](../audio/20260613_自說自話的總裁_上古中國的魔法時代.mp3) |
 | 2026-06-11 | [Graham Hancock：失落古文明、12,800 年前的人類浩劫，與南極被發現的真相](人物訪談/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.md) | Graham Hancock × Steven Bartlett | 1 小時 56 分 40 秒 | [📄 note](../人物訪談/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.md) · [📝 逐字稿](../transcripts/20260611_Graham_Hancock_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫_口播稿.txt) · [🔊 opus](../audio/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.opus) · [🔊 m4a](../audio/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.m4a) · [🔊 mp3](../audio/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.mp3) |
 | 2026-06-08 | [Nick Hanauer × Daniel Priestley：中產階級之死、AI 對工作衝擊，與資本主義能否自我修正](人物訪談/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.md) | Nick Hanauer | 2 小時 32 分 26 秒 | [📄 note](../人物訪談/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.md) · [📝 逐字稿](../transcripts/20260608_NickHanauer_DanielPriestley_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊_口播稿.txt) · [🔊 opus](../audio/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.opus) · [🔊 m4a](../audio/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.m4a) · [🔊 mp3](../audio/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.mp3) |
