@@ -32,6 +32,7 @@ document.addEventListener('alpine:init', () => {
     contentCache: {},  // { 'videoId_type': raw text }
     renderedContent: {},  // { 'videoId_type': rendered HTML (for markdown) }
     loadingContent: {},  // { videoId: bool }
+    videoCollapsed: {},  // { videoId: bool } 影片收合狀態（桌面上讓右欄 notes 佔滿寬度）
 
     // ===== Computed =====
     get sortedSpeakers() {
@@ -53,6 +54,16 @@ document.addEventListener('alpine:init', () => {
           this.closeAllExpands();
         }
       });
+    },
+
+    // ===== Body scroll lock（fullscreen modal 開啟時鎖背景滾動）=====
+    setBodyOverflow(locked) {
+      // 用 class 控制，避免 inline style 在 SPA-like 操作時殘留
+      if (locked) {
+        document.body.classList.add('modal-open');
+      } else {
+        document.body.classList.remove('modal-open');
+      }
     },
 
     async loadData() {
@@ -196,16 +207,23 @@ document.addEventListener('alpine:init', () => {
     // ===== Inline Expand =====
     async toggleExpand(videoId) {
       if (this.expanded[videoId]) {
-        this.expanded[videoId] = false;
+        this.closeExpand(videoId);
         return;
       }
       this.expanded[videoId] = true;
+      // fullscreen modal 開啟時鎖背景滾動（避免主頁在背後滾動）
+      this.setBodyOverflow(true);
       // 預設顯示筆記 tab
       if (!this.activeTabs[videoId]) {
         this.activeTabs[videoId] = 'note';
       }
       // lazy load 該 tab 的內容
       await this.loadContent(videoId, this.activeTabs[videoId]);
+    },
+
+    // 收合 / 展開影片（左欄 → 右欄 notes 自動撐滿寬度）
+    toggleCollapse(videoId) {
+      this.videoCollapsed[videoId] = !this.videoCollapsed[videoId];
     },
 
     async switchTab(videoId, tabType) {
@@ -262,10 +280,16 @@ document.addEventListener('alpine:init', () => {
 
     closeExpand(videoId) {
       this.expanded[videoId] = false;
+      // 收合影片狀態也一併清掉（下次開啟是預設展開）
+      this.videoCollapsed[videoId] = false;
+      // 關閉 modal → 解除背景滾動鎖
+      this.setBodyOverflow(false);
     },
 
     closeAllExpands() {
       this.expanded = {};
+      this.videoCollapsed = {};
+      this.setBodyOverflow(false);
     },
 
     // YouTube embed URL 抽取

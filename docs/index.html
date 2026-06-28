@@ -156,17 +156,29 @@
             <a x-show="video.video_url" :href="video.video_url" target="_blank" role="button" class="secondary outline" style="padding:0.3rem 0.7rem; font-size:0.85rem;">▶️ YouTube</a>
           </footer>
 
-          <!-- Inline Expand Panel (mobile: inline, desktop: modal via CSS) -->
+          <!-- Inline Expand Panel (mobile: inline, tablet/desktop: fullscreen modal via CSS) -->
           <div x-show="expanded[video.id]" class="expand-panel" @click.self="closeExpand(video.id)">
-            <div class="expand-content">
-              <!-- Header with close button -->
-              <div class="expand-header">
-                <h3 x-text="video.title" style="margin:0; flex:1;"></h3>
+            <div class="expand-content" :class="videoCollapsed[video.id] ? 'video-collapsed' : ''">
+              <!-- Topbar (sticky on tablet/desktop) -->
+              <div class="expand-topbar">
                 <button @click="closeExpand(video.id)" class="close-btn" aria-label="關閉">✕</button>
+                <h3 class="expand-title" x-text="video.title"></h3>
+                <button x-show="getYouTubeEmbedUrl(video) && !videoCollapsed[video.id]"
+                        @click="toggleCollapse(video.id)"
+                        class="secondary outline collapse-btn"
+                        aria-label="收合影片"
+                        title="收合影片，騰出更多空間給筆記">📹 收合影片</button>
+                <button x-show="getYouTubeEmbedUrl(video) && videoCollapsed[video.id]"
+                        @click="toggleCollapse(video.id)"
+                        class="secondary outline collapse-btn"
+                        aria-label="展開影片"
+                        title="展開影片">📹 展開影片</button>
               </div>
 
-              <!-- YouTube embed (sticky) -->
-              <div x-show="getYouTubeEmbedUrl(video)" class="youtube-embed">
+              <!-- YouTube embed (左欄 / 平板 sticky top) -->
+              <div x-show="getYouTubeEmbedUrl(video)"
+                   class="youtube-embed"
+                   :class="videoCollapsed[video.id] ? 'collapsed' : ''">
                 <iframe :src="getYouTubeEmbedUrl(video)"
                         allowfullscreen
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -175,34 +187,37 @@
                 </iframe>
               </div>
 
-              <!-- Tabs -->
-              <div class="tabs">
-                <button @click="switchTab(video.id, 'note')" :class="getTabClass(video.id, 'note')" x-show="video.note_path">📄 結構化筆記</button>
-                <button @click="switchTab(video.id, 'transcript')" :class="getTabClass(video.id, 'transcript')" x-show="video.transcripts.transcript">📝 逐字稿</button>
-                <button @click="switchTab(video.id, 'spoken')" :class="getTabClass(video.id, 'spoken')" x-show="video.transcripts.spoken_script">🎙️ 口播稿</button>
-              </div>
+              <!-- Right pane (右欄 / 手機全寬) — 包住 tabs + content -->
+              <div class="right-pane">
+                <!-- Tabs -->
+                <div class="tabs">
+                  <button @click="switchTab(video.id, 'note')" :class="getTabClass(video.id, 'note')" x-show="video.note_path">📄 結構化筆記</button>
+                  <button @click="switchTab(video.id, 'transcript')" :class="getTabClass(video.id, 'transcript')" x-show="video.transcripts.transcript">📝 逐字稿</button>
+                  <button @click="switchTab(video.id, 'spoken')" :class="getTabClass(video.id, 'spoken')" x-show="video.transcripts.spoken_script">🎙️ 口播稿</button>
+                </div>
 
-              <!-- Loading -->
-              <div x-show="loadingContent[video.id]" style="padding:1rem; text-align:center;">
-                <small>⏳ 載入中...</small>
-              </div>
+                <!-- Loading -->
+                <div x-show="loadingContent[video.id]" style="padding:1rem; text-align:center;">
+                  <small>⏳ 載入中...</small>
+                </div>
 
-              <!-- Note content (markdown) -->
-              <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'note'" class="content-area markdown-body" x-html="renderedContent[video.id + '_note']"></div>
+                <!-- Note content (markdown) -->
+                <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'note'" class="content-area markdown-body" x-html="renderedContent[video.id + '_note']"></div>
 
-              <!-- Transcript content (plain text) -->
-              <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'transcript'" class="content-area transcript-body">
-                <pre x-text="contentCache[video.id + '_transcript']"></pre>
-              </div>
+                <!-- Transcript content (plain text) -->
+                <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'transcript'" class="content-area transcript-body">
+                  <pre x-text="contentCache[video.id + '_transcript']"></pre>
+                </div>
 
-              <!-- Spoken content (plain text) -->
-              <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'spoken'" class="content-area spoken-body">
-                <pre x-text="contentCache[video.id + '_spoken']"></pre>
-              </div>
+                <!-- Spoken content (plain text) -->
+                <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'spoken'" class="content-area spoken-body">
+                  <pre x-text="contentCache[video.id + '_spoken']"></pre>
+                </div>
 
-              <!-- Empty state -->
-              <div x-show="!loadingContent[video.id] && !hasContent(video.id, activeTabs[video.id])" style="padding:1rem; text-align:center; color:var(--pico-muted-color);">
-                <small>此類型沒有可用內容</small>
+                <!-- Empty state -->
+                <div x-show="!loadingContent[video.id] && !hasContent(video.id, activeTabs[video.id])" style="padding:1rem; text-align:center; color:var(--pico-muted-color);">
+                  <small>此類型沒有可用內容</small>
+                </div>
               </div>
             </div>
           </div>
