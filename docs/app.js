@@ -89,22 +89,19 @@ document.addEventListener('alpine:init', () => {
         extensions: [{
           name: 'chapterLink',
           level: 'inline',
-          // 找「字串開頭或非 : / 數字」+ MM:SS + word boundary
+          // 找 src 中「前一個字元不是 : / 數字 / 表格分隔」+ MM:SS + word boundary
           start(src) {
-            const m = src.match(/(^|[^:\/\d])\b(\d{1,2}):(\d{2})\b/);
+            const m = src.match(/(^|[^:\/\d|])\b(\d{1,2}):(\d{2})\b/);
             return m ? m.index + m[1].length : undefined;
           },
           tokenizer(src) {
-            // 注意：marked tokenizer 的 src 不是字串開頭，不能用 ^ 錨點
-            // 找 MM:SS，後面不能接數字或冒號（避免 1:23:45）
-            const m = /(\d{1,2}):(\d{2})(?!\d|:)/.exec(src);
+            // marked v12 inline tokenizer 的 src 是從 start() 回傳位置開始的子字串
+            // src[0] 應該是 MM:SS 的 M → 加 ^ 錨點避免 match 後面的 MM:SS
+            const m = /^(\d{1,2}):(\d{2})(?!\d|:)/.exec(src);
             if (!m) return undefined;
-            const idx = m.index;
-            // 前一個字元不能是 : / 數字（避免 URL、日期時間）
-            if (idx > 0 && /[:\/\d]/.test(src[idx - 1])) return undefined;
-            // 後一個字元不能是英文字母（避免匹配變數名）
-            const next = src[idx + m[0].length];
-            if (next && /[a-zA-Z]/.test(next)) return undefined;
+            // 後一個字元不能是英文字母或 | (markdown table cell)
+            const next = src[m[0].length];
+            if (next && /[a-zA-Z|]/.test(next)) return undefined;
             // 合理性檢查：分秒必須 < 60
             const minutes = parseInt(m[1], 10);
             const seconds = parseInt(m[2], 10);
