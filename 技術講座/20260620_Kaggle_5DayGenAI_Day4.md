@@ -1,5 +1,7 @@
 # DAY 4 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey × Google）
 
+> **主題**：🧠 AI / LLM 學術與方法論
+
 **Paige Bailey + Chris + Antonio + Scott + Christopher + Umesh（Google Research / Google Cloud）｜2026-06-20**
 
 > 影片連結：https://www.youtube.com/live/odvuLMJWUSU

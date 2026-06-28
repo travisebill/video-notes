@@ -1,5 +1,7 @@
 # DAY 1 Livestream — 5-Day AI Agents Intensive Vibe Coding Course With Google
 
+> **主題**：🛠️ 編碼工具 / Agent 工程實踐
+
 **Smitha Ken + Anand Navalgaria（Google Cloud × Kaggle）｜2026-06-20**
 
 > 影片連結：https://www.youtube.com/live/7iic3Zj427M

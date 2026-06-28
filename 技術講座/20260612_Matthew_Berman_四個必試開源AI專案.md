@@ -1,5 +1,7 @@
 # You NEED to try these open-source AI projects RIGHT NOW
 
+> **主題**：🛠️ 編碼工具 / Agent 工程實踐
+
 > **影片資訊**
 > - 講者：Matthew Berman
 > - 上傳日期：2026-06-12

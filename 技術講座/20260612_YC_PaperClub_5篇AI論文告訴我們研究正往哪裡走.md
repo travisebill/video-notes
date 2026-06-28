@@ -1,5 +1,7 @@
 # 【5 篇 AI 論文告訴我們研究正往哪裡走 — YC Paper Club 全景】
 
+> **主題**：🧠 AI / LLM 學術與方法論
+
 **主講｜Francois Chaubard（主持）/ Yasa Baig / Luke Bailey / Arnab Maiti / Robert George / Lukens Orthwein / Y Combinator Paper Club / 2026 年 6 月 12 日**
 
 > 本影片使用 Whisper **medium** 模型聽寫英文，language=en，1,220 segments、81,885 字。  

@@ -1,5 +1,7 @@
 # DAY 3 Livestream — 5-Days of AI Agents: Intensive Vibe Coding Course With Google
 
+> **主題**：🛠️ 編碼工具 / Agent 工程實踐
+
 **Smitha Ken + Anant Nawalgaria + Alan + Julia + Hmi + Gabriella + Devanch + Paulong（Google Cloud × Kaggle）｜2026-06-20**
 
 > 影片連結：https://www.youtube.com/live/1T2mxYZkqL0

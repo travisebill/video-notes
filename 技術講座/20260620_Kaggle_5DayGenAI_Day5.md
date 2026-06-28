@@ -1,5 +1,7 @@
 # DAY 5 Livestream — 5-Day Gen AI Intensive Course（Paige Bailey × Google）
 
+> **主題**：🧠 AI / LLM 學術與方法論
+
 **Paige Bailey + Ilya + Long + Kaz + Mark + Eric + Irwin + Miles + Guillaume + Olivia（DeepMind）（Google Research / Google Cloud / DeepMind）｜2026-06-20**
 
 > 影片連結：https://www.youtube.com/live/uCFW0i9xrBc

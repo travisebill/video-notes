@@ -109,6 +109,20 @@ def parse_md_frontmatter(content: str) -> dict:
     if m:
         md['speaker_full'] = m.group(1).strip()
 
+    # 主題（primary_topic）— 可選，override README 自動分類
+    # 格式: `> **主題**：🤖 AI 安全 / 末日論 / 政策` 或 `> 主題：xxx`
+    m = re.search(rf'\*\*主題\*\*\s*{SEP}\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'\*\*主題{SEP}\*\*\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> \*\*主題\*\*\s*{SEP}\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> \*\*主題{SEP}\*\*\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> 主題{SEP}\s*([^\n]+)', content)
+    if m:
+        md['topic'] = m.group(1).strip()
+
     # 標題（H1）
     m = re.search(r'^# (.+)$', content, re.MULTILINE)
     if m:
@@ -232,7 +246,7 @@ def main():
 
             base_name = md_path.stem
             note_rel_path = f'{category}/{md_path.name}'
-            primary_topic = topics_map.get(note_rel_path)
+            primary_topic = fm.get('topic') or topics_map.get(note_rel_path)
 
             video = {
                 'id': base_name,
