@@ -51,8 +51,9 @@ document.addEventListener('alpine:init', () => {
             { name: 'speaker', weight: 0.3 },
             { name: 'primary_topic', weight: 0.2 },
           ],
-          threshold: 0.4,  // 0 = 完全匹配, 1 = 任意匹配
+          threshold: 0.5,  // 0 = 完全匹配, 1 = 任意匹配（中文短查詢需要較高 threshold）
           ignoreLocation: true,
+          minMatchCharLength: 1,
         });
         console.log(`✅ 載入 ${this.videos.length} 支影片 metadata`);
       } catch (e) {
@@ -127,21 +128,38 @@ document.addEventListener('alpine:init', () => {
     },
 
     // ===== URL Helpers =====
+    // 對中文檔名做 URL 編碼（保留 / 不被編碼）
+    encodePath(p) {
+      return p.split('/').map(encodeURIComponent).join('/');
+    },
+
     getAudioUrl(video, format) {
       const path = video.audio[format];
       if (!path) return '';
       // 從 data/video-notes.json 的 audio 欄位（"audio/xxx.m4a"）轉 jsDelivr URL
-      return `${CDN_BASE}/${path}`;
+      return `${CDN_BASE}/${this.encodePath(path)}`;
     },
 
     getTranscriptUrl(video) {
       if (!video.transcripts.transcript) return '';
-      return `${CDN_BASE}/${video.transcripts.transcript}`;
+      return `${CDN_BASE}/${this.encodePath(video.transcripts.transcript)}`;
     },
 
     getSpokenScriptUrl(video) {
       if (!video.transcripts.spoken_script) return '';
-      return `${CDN_BASE}/${video.transcripts.spoken_script}`;
+      return `${CDN_BASE}/${this.encodePath(video.transcripts.spoken_script)}`;
+    },
+
+    // 主题樣式顯示（去除 emoji + ** 等標記）
+    cleanTopic(t) {
+      if (!t) return null;
+      return t.replace(/\*\*|\u200b/g, '').replace(/^\W+/, '').trim();
+    },
+
+    // 講者顯示（將 slug 中的底線轉空格）
+    formatSpeaker(slug, full) {
+      if (full && full.length < 60) return full;
+      return (slug || '').replace(/_/g, ' ');
     },
 
     // ===== Theme =====
