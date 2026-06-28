@@ -108,15 +108,22 @@
 
 /* YouTube embed — sticky 於內容上方 */
 .youtube-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   margin-bottom: 0.8rem;
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .youtube-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   border: 0;
-  border-radius: 6px;
-  background: #000;
 }
 
 .expand-header {
