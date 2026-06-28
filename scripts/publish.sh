@@ -24,15 +24,21 @@ echo "════════════════════════�
 echo ""
 
 # Step 1: 重新抽取 metadata
-echo "[1/4] 抽取 metadata → data/video-notes.json"
+echo "[1/5] 抽取 metadata → data/video-notes.json"
 python3 scripts/extract_metadata.py
 echo ""
 
+# Step 1b: 同步 data/video-notes.json 到 docs/data/（避免 raw GitHub / jsDelivr cache 延遲）
+echo "[1b/5] 同步 data/ → docs/data/（讓 GitHub Pages 直接 fetch 本地，避開 CDN cache）"
+mkdir -p docs/data
+cp data/video-notes.json docs/data/video-notes.json
+echo ""
+
 # Step 2: git add 所有新檔案
-echo "[2/4] git add (新 .md + transcripts + audio + data)"
+echo "[2/5] git add (新 .md + transcripts + audio + data + docs/data)"
 git add 人物訪談/ 國際局勢/ 財經分析/ 技術講座/
 git add transcripts/ audio/
-git add data/video-notes.json scripts/
+git add data/video-notes.json docs/data/video-notes.json scripts/
 
 # 顯示將要 commit 的檔案
 echo "--- 待 commit 檔案 ---"
@@ -40,13 +46,13 @@ git status -s
 echo ""
 
 # Step 3: commit + push 到 main
-echo "[3/4] git commit + push → main"
+echo "[3/5] git commit + push → main"
 git commit -m "$COMMIT_MSG"
 git push origin main
 echo ""
 
 # Step 4: subtree push 到 gh-pages（GitHub Pages 來源）
-echo "[4/4] git subtree push → gh-pages (GitHub Pages deploy)"
+echo "[4/5] git subtree push → gh-pages (GitHub Pages deploy)"
 git subtree push --prefix=docs origin gh-pages
 echo ""
 
@@ -54,5 +60,5 @@ echo "════════════════════════�
 echo "  ✅ Done!"
 echo "  - main:    https://github.com/travisebill/video-notes"
 echo "  - Pages:   https://travisebill.github.io/video-notes/"
-echo "  - 等 1-2 分鐘後 GitHub Pages 自動更新"
+echo "  - 1-2 分鐘後 GitHub Pages 自動更新（docs/data/ 優先，避免 raw GitHub cache）"
 echo "═══════════════════════════════════════"
