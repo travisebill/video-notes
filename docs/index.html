@@ -17,6 +17,12 @@
 
   <!-- Fuse.js fuzzy search -->
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+
+  <!-- marked.js markdown 渲染 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+
+  <!-- DOMPurify XSS 防護 -->
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.8/dist/purify.min.js"></script>
 </head>
 <body>
   <main class="container" x-data="videoApp" x-init="init()">
@@ -145,11 +151,43 @@
 
           <!-- Actions -->
           <footer>
-            <a :href="video.note_github_url" target="_blank" role="button" class="secondary outline" style="padding:0.3rem 0.7rem; font-size:0.85rem;">📄 結構化筆記</a>
-            <a x-show="video.transcripts.transcript" :href="getTranscriptUrl(video)" target="_blank" role="button" class="secondary outline" style="padding:0.3rem 0.7rem; font-size:0.85rem;">📝 逐字稿</a>
-            <a x-show="video.transcripts.spoken_script" :href="getSpokenScriptUrl(video)" target="_blank" role="button" class="secondary outline" style="padding:0.3rem 0.7rem; font-size:0.85rem;">🎙️ 口播稿</a>
+            <button @click="toggleExpand(video.id)" class="secondary outline" style="padding:0.3rem 0.7rem; font-size:0.85rem;" x-text="expanded[video.id] ? '🔼 收合內容' : '📖 展開內容'"></button>
+            <a :href="video.note_github_url" target="_blank" role="button" class="secondary outline" style="padding:0.3rem 0.7rem; font-size:0.85rem;" title="在 GitHub 開啟原始 markdown">🔗 GitHub</a>
             <a x-show="video.video_url" :href="video.video_url" target="_blank" role="button" class="secondary outline" style="padding:0.3rem 0.7rem; font-size:0.85rem;">▶️ YouTube</a>
           </footer>
+
+          <!-- Inline Expand Panel -->
+          <div x-show="expanded[video.id]" class="expand-panel">
+            <!-- Tabs -->
+            <div class="tabs">
+              <button @click="switchTab(video.id, 'note')" :class="getTabClass(video.id, 'note')" x-show="video.note_path">📄 結構化筆記</button>
+              <button @click="switchTab(video.id, 'transcript')" :class="getTabClass(video.id, 'transcript')" x-show="video.transcripts.transcript">📝 逐字稿</button>
+              <button @click="switchTab(video.id, 'spoken')" :class="getTabClass(video.id, 'spoken')" x-show="video.transcripts.spoken_script">🎙️ 口播稿</button>
+            </div>
+
+            <!-- Loading -->
+            <div x-show="loadingContent[video.id]" style="padding:1rem; text-align:center;">
+              <small>⏳ 載入中...</small>
+            </div>
+
+            <!-- Note content (markdown) -->
+            <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'note'" class="content-area markdown-body" x-html="renderedContent[video.id + '_note']"></div>
+
+            <!-- Transcript content (plain text) -->
+            <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'transcript'" class="content-area transcript-body">
+              <pre x-text="contentCache[video.id + '_transcript']"></pre>
+            </div>
+
+            <!-- Spoken content (plain text) -->
+            <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'spoken'" class="content-area spoken-body">
+              <pre x-text="contentCache[video.id + '_spoken']"></pre>
+            </div>
+
+            <!-- Empty state -->
+            <div x-show="!loadingContent[video.id] && !hasContent(video.id, activeTabs[video.id])" style="padding:1rem; text-align:center; color:var(--pico-muted-color);">
+              <small>此類型沒有可用內容</small>
+            </div>
+          </div>
         </article>
       </template>
     </div>

@@ -21,6 +21,12 @@ document.addEventListener('alpine:init', () => {
     sort: 'date_desc',
     theme: localStorage.getItem('theme') || 'auto',
     fuse: null,
+    // Inline expand state
+    expanded: {},  // { videoId: bool }
+    activeTabs: {},  // { videoId: 'note' | 'transcript' | 'spoken' }
+    contentCache: {},  // { 'videoId_type': raw text }
+    renderedContent: {},  // { 'videoId_type': rendered HTML (for markdown) }
+    loadingContent: {},  // { videoId: bool }
 
     // ===== Computed =====
     get sortedSpeakers() {
@@ -160,6 +166,73 @@ document.addEventListener('alpine:init', () => {
     formatSpeaker(slug, full) {
       if (full && full.length < 60) return full;
       return (slug || '').replace(/_/g, ' ');
+    },
+
+    // ===== Inline Expand =====
+    async toggleExpand(videoId) {
+      if (this.expanded[videoId]) {
+        this.expanded[videoId] = false;
+        return;
+      }
+      this.expanded[videoId] = true;
+      // 預設顯示筆記 tab
+      if (!this.activeTabs[videoId]) {
+        this.activeTabs[videoId] = 'note';
+      }
+      // lazy load 該 tab 的內容
+      await this.loadContent(videoId, this.activeTabs[videoId]);
+    },
+
+    async switchTab(videoId, tabType) {
+      this.activeTabs[videoId] = tabType;
+      await this.loadContent(videoId, tabType);
+    },
+
+    getTabClass(videoId, tabType) {
+      const active = this.activeTabs[videoId] === tabType;
+      const loaded = !!this.contentCache[`${videoId}_${tabType}`];
+      return active ? (loaded ? '' : 'secondary outline') : 'secondary outline';
+    },
+
+    hasContent(videoId, tabType) {
+      return !!this.contentCache[`${videoId}_${tabType}`];
+    },
+
+    async loadContent(videoId, type) {
+      const cacheKey = `${videoId}_${type}`;
+      if (this.contentCache[cacheKey]) return; // 已載入過
+
+      const video = this.videos.find(v => v.id === videoId);
+      if (!video) return;
+
+      let url = '';
+      if (type === 'note') url = video.note_path;
+      else if (type === 'transcript') url = video.transcripts.transcript;
+      else if (type === 'spoken') url = video.transcripts.spoken_script;
+
+      if (!url) return;
+
+      this.loadingContent[videoId] = true;
+      try {
+        const fullUrl = `${CDN_BASE}/${this.encodePath(url)}`;
+        const resp = await fetch(fullUrl);
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const text = await resp.text();
+
+        // raw text 存 cache
+        this.contentCache[cacheKey] = text;
+
+        // markdown 才 render
+        if (type === 'note') {
+          const html = window.marked.parse(text);
+          this.renderedContent[cacheKey] = window.DOMPurify.sanitize(html);
+        }
+      } catch (e) {
+        console.error(`Failed to load ${type} for ${videoId}:`, e);
+        this.contentCache[cacheKey] = `⚠️ 載入失敗：${e.message}`;
+      } finally {
+        this.loadingContent[videoId] = false;
+      }
     },
 
     // ===== Theme =====
