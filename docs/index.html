@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Notes — 影片摘要與口說音檔</title>
+  <meta name="description" content="58 支影片的結構化筆記 + TTS 口說音檔瀏覽器。支援按類別、講者、主題、日期篩選 + 全文搜尋 + inline audio player。">
+
+  <!-- Pico.css classless CSS（含 light/dark mode） -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+  <!-- 客製樣式 -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Alpine.js 響應式 + 篩選 -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+
+  <!-- Fuse.js fuzzy search -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+</head>
+<body>
+  <main class="container" x-data="videoApp" x-init="init()">
+    <!-- Header -->
+    <header>
+      <hgroup>
+        <h1>🎬 Video Notes</h1>
+        <p>
+          <small x-text="meta.total_videos + ' 支影片 · ' + meta.speakers_count + ' 位講者 · ' + meta.topics_count +' 個主題'"></small>
+          <small x-show="meta.last_updated">
+            ｜ 最後更新 <time x-text="meta.last_updated.substring(0, 10)"></time>
+          </small>
+        </p>
+      </hgroup>
+      <button @click="toggleTheme()" class="secondary outline" style="float:right; margin-top:-3rem;">
+        <span x-text="theme === 'dark' ? '☀️ Light' : '🌙 Dark'"></span>
+      </button>
+    </header>
+
+    <!-- Search Bar -->
+    <section>
+      <input type="search" placeholder="🔍 搜尋標題、講者、主題（支援 fuzzy search）..."
+             x-model="searchQuery" @input="applyFilters()">
+    </section>
+
+    <!-- Filter Grid -->
+    <section class="filter-grid">
+      <!-- Category -->
+      <label>
+        <small>類別</small>
+        <select x-model="filters.category" @change="applyFilters()">
+          <option value="">全部類別</option>
+          <template x-for="c in meta.categories" :key="c">
+            <option :value="c" x-text="c"></option>
+          </template>
+        </select>
+      </label>
+
+      <!-- Speaker -->
+      <label>
+        <small>講者</small>
+        <select x-model="filters.speaker" @change="applyFilters()">
+          <option value="">全部講者</option>
+          <template x-for="s in sortedSpeakers" :key="s">
+            <option :value="s" x-text="s"></option>
+          </template>
+        </select>
+      </label>
+
+      <!-- Topic -->
+      <label>
+        <small>主題</small>
+        <select x-model="filters.topic" @change="applyFilters()">
+          <option value="">全部主題</option>
+          <template x-for="t in sortedTopics" :key="t">
+            <option :value="t" x-text="t.replace(/\*\*|\u200b/g, '').replace(/^\W+/, '').trim()"></option>
+          </template>
+        </select>
+      </label>
+
+      <!-- Date Range -->
+      <label>
+        <small>日期範圍</small>
+        <select x-model="filters.dateRange" @change="applyFilters()">
+          <option value="all">全部時間</option>
+          <option value="30d">最近 30 天</option>
+          <option value="90d">最近 90 天</option>
+          <option value="6m">最近 6 個月</option>
+          <option value="1y">最近 1 年</option>
+        </select>
+      </label>
+    </section>
+
+    <!-- Stats Bar -->
+    <p>
+      <small>
+        <strong x-text="filteredVideos.length"></strong> / <span x-text="meta.total_videos"></span> 支影片
+        ｜ 排序：
+        <button @click="setSort('date_desc')" :class="sort === 'date_desc' ? '' : 'secondary outline'" style="padding:0.2rem 0.5rem; font-size:0.8rem;">最新優先</button>
+        <button @click="setSort('date_asc')" :class="sort === 'date_asc' ? '' : 'secondary outline'" style="padding:0.2rem 0.5rem; font-size:0.8rem;">最舊優先</button>
+        <button @click="setSort('duration_desc')" :class="sort === 'duration_desc' ? '' : 'secondary outline'" style="padding:0.2rem 0.5rem; font-size:0.8rem;">最長優先</button>
+        <button @click="setSort('duration_asc')" :class="sort === 'duration_asc' ? '' : 'secondary outline'" style="padding:0.2rem 0.5rem; font-size:0.8rem;">最短優先</button>
+      </small>
+    </p>
+
+    <!-- Video Grid -->
+    <div class="video-grid" x-show="filteredVideos.length > 0">
+      <template x-for="video in filteredVideos" :key="video.id">
+        <article class="video-card">
+          <!-- Header -->
+          <header>
+            <div style="display:flex; justify-content:space-between; align-items:start; gap:0.5rem;">
+              <h4 style="margin:0;" x-text="video.title"></h4>
+              <span class="duration-badge" x-text="video.duration_display || 'N/A'"></span>
+            </div>
+            <p>
+              <small>
+                🎤 <span x-text="video.speaker"></span>
+                ｜ 📅 <time x-text="video.date"></time>
+                ｜ 📂 <span x-text="video.category"></span>
+              </small>
+              <br>
+              <small x-show="video.primary_topic">
+                🏷️ <span x-text="video.primary_topic.replace(/\*\*|\u200b/g, '').replace(/^\W+/, '').trim()"></span>
+              </small>
+              <small x-show="!video.primary_topic" style="color:var(--pico-muted-color);">
+                🏷️ <em>未分類</em>
+              </small>
+            </p>
+          </header>
+
+          <!-- Audio Player -->
+          <div x-show="video.audio.m4a" class="audio-player">
+            <small>🎙️ 口說音檔（m4a）：</small>
+            <audio controls preload="none" :src="getAudioUrl(video, 'm4a')" style="width:100%;"></audio>
+            <small x-show="video.audio.opus || video.audio.mp3" style="display:block; margin-top:0.3rem;">
+              <span x-show="video.audio.opus">
+                <a :href="getAudioUrl(video, 'opus')" download>opus</a>
+              </span>
+              <span x-show="video.audio.m4a && video.audio.mp3">｜</span>
+              <span x-show="video.audio.mp3">
+                <a :href="getAudioUrl(video, 'mp3')" download>mp3</a>
+              </span>
+            </small>
+          </div>
+
+          <!-- Actions -->
+          <footer>
+            <a :href="video.note_github_url" target="_blank" role="button" class="secondary outline" style="padding:0.3rem 0.7rem; font-size:0.85rem;">📄 結構化筆記</a>
+            <a x-show="video.transcripts.transcript" :href="getTranscriptUrl(video)" target="_blank" role="button" class="secondary outline" style="padding:0.3rem 0.7rem; font-size:0.85rem;">📝 逐字稿</a>
+            <a x-show="video.transcripts.spoken_script" :href="getSpokenScriptUrl(video)" target="_blank" role="button" class="secondary outline" style="padding:0.3rem 0.7rem; font-size:0.85rem;">🎙️ 口播稿</a>
+            <a x-show="video.video_url" :href="video.video_url" target="_blank" role="button" class="secondary outline" style="padding:0.3rem 0.7rem; font-size:0.85rem;">▶️ YouTube</a>
+          </footer>
+        </article>
+      </template>
+    </div>
+
+    <!-- Empty State -->
+    <article x-show="filteredVideos.length === 0">
+      <p>🔍 沒有符合條件的影片。</p>
+      <button @click="resetFilters()" class="secondary outline">清除篩選</button>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+      <small>
+        由 Ryo 🐱 自動整理 · 共 <span x-text="meta.total_videos"></span> 支影片 ·
+        <a href="https://github.com/travisebill/video-notes" target="_blank">GitHub Repo</a>
+      </small>
+    </footer>
+  </main>
+
+  <!-- App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
