@@ -7,6 +7,8 @@ const CDN_BASE = 'https://cdn.jsdelivr.net/gh/travisebill/video-notes@main';
 const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main';
 const JSON_URL = `${CDN_BASE}/data/video-notes.json`;
 const RAW_JSON_URL = `${RAW_BASE}/data/video-notes.json`;
+// 本地 docs/data/ 優先，避免 raw GitHub 5min cache 延遲
+const LOCAL_JSON_URL = `./data/video-notes.json`;
 
 document.addEventListener('alpine:init', () => {
   Alpine.data('videoApp', () => ({
@@ -57,7 +59,7 @@ document.addEventListener('alpine:init', () => {
       // 優先 raw GitHub（永遠是最新），jsDelivr 為 fallback (避免 cache 延遲問題)
       let data = null;
       let lastErr = null;
-      for (const url of [RAW_JSON_URL, JSON_URL]) {
+      for (const url of [LOCAL_JSON_URL, RAW_JSON_URL, JSON_URL]) {
         try {
           const resp = await fetch(url, { cache: 'no-cache' });
           if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
@@ -177,10 +179,12 @@ document.addEventListener('alpine:init', () => {
       return `${CDN_BASE}/${this.encodePath(video.transcripts.spoken_script)}`;
     },
 
-    // 主题樣式顯示（去除 emoji + ** 等標記）
+    // 主题樣式顯示（去除 ** markdown 強調跟 zero-width space）
+    // 不去除 emoji：保留 🌍 🚀 🧠 等讓使用者一眼看出分類
+    // 不寫 ^\W+ 跟因為 JavaScript \w 不包含中文 / emoji，會把全部內容砍掉
     cleanTopic(t) {
       if (!t) return null;
-      return t.replace(/\*\*|\u200b/g, '').replace(/^\W+/, '').trim();
+      return t.replace(/\*\*|\u200b/g, '').trim();
     },
 
     // 講者顯示（將 slug 中的底線轉空格）
