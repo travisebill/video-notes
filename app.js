@@ -54,10 +54,10 @@ document.addEventListener('alpine:init', () => {
     },
 
     async loadData() {
-      // 優先 jsDelivr，有 cache 延遲問題則 fallback raw GitHub
+      // 優先 raw GitHub（永遠是最新），jsDelivr 為 fallback (避免 cache 延遲問題)
       let data = null;
       let lastErr = null;
-      for (const url of [JSON_URL, RAW_JSON_URL]) {
+      for (const url of [RAW_JSON_URL, JSON_URL]) {
         try {
           const resp = await fetch(url, { cache: 'no-cache' });
           if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
