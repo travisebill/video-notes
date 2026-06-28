@@ -44,22 +44,47 @@ def parse_filename(stem: str) -> dict:
 def parse_md_frontmatter(content: str) -> dict:
     """從 .md 內容抽出 metadata blockquote (兩種格式都支援)
 
-    格式 A（舊版）: > **講者**：xxx
-    格式 B（新版）: **講者｜xxx**（無 blockquote）
+    格式 A（舊版）: > **講者**：xxx     (全形冒號 U+FF1A)
+    格式 B（新版）: **講者｜xxx**     (FULLWIDTH VERTICAL BAR U+FF5C)
+    格式 C（混合）: **講者｜xxx**     (半形冒號 U+003A，罕見)
+    + `**key** ：value` ( ** 後有空格)
+
+    分隔符統一支援三種: [｜：:], 並允許 ** 後有空格
     """
     md = {}
 
-    # 影片連結
-    m = re.search(r'\*\*影片連結[｜:]\*\*\s*([^\n]+)', content)
+    # 分隔符統一三種: 全形垂直線｜、全形冒號：、半形冒號:
+    SEP = '[｜：:]'
+
+    # 影片連結（支援多種格式）
+    # - `> **影片連結**：xxx`（bold + 全形冒號）
+    # - `> **影片連結** ：xxx`（bold 後有空格）
+    # - `> **影片連結**｜xxx`（bold + vertical bar）
+    # - `> 影片連結：xxx`（無 bold）
+    m = re.search(rf'\*\*影片連結\*\*\s*{SEP}\s*([^\n]+)', content)
     if not m:
-        m = re.search(r'> \*\*影片連結[｜:]\*\*\s*([^\n]+)', content)
+        m = re.search(rf'\*\*影片連結{SEP}\*\*\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> \*\*影片連結\*\*\s*{SEP}\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> \*\*影片連結{SEP}\*\*\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> 影片連結{SEP}\s*([^\n]+)', content)
     if m:
         md['video_url'] = m.group(1).strip()
 
-    # 影片長度
-    m = re.search(r'\*\*影片長度[｜:]\*\*\s*([^\n]+)', content)
+    # 影片長度（支援多種格式）
+    m = re.search(rf'\*\*影片長度\*\*\s*{SEP}\s*([^\n]+)', content)
     if not m:
-        m = re.search(r'> \*\*影片長度[｜:]\*\*\s*([^\n]+)', content)
+        m = re.search(rf'\*\*影片長度{SEP}\*\*\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> \*\*影片長度\*\*\s*{SEP}\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> \*\*影片長度{SEP}\*\*\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> 影片長度{SEP}\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> 影片時長{SEP}\s*([^\n]+)', content)
     if m:
         s = m.group(1).strip()
         secs = parse_duration(s)
@@ -67,14 +92,20 @@ def parse_md_frontmatter(content: str) -> dict:
             md['duration_seconds'] = secs
 
     # 整理日期
-    m = re.search(r'\*\*整理日期[｜:]\*\*\s*(\d{4}-\d{2}-\d{2})', content)
+    m = re.search(rf'\*\*整理日期\*\*\s*{SEP}\s*(\d{{4}}-\d{{2}}-\d{{2}})', content)
+    if not m:
+        m = re.search(rf'\*\*整理日期{SEP}\*\*\s*(\d{{4}}-\d{{2}}-\d{{2}})', content)
     if m:
         md['note_date'] = m.group(1)
 
     # 講者（詳細版）
-    m = re.search(r'\*\*講者[｜:]\*\*\s*([^\n]+)', content)
+    m = re.search(rf'\*\*講者\*\*\s*{SEP}\s*([^\n]+)', content)
     if not m:
-        m = re.search(r'> \*\*講者[｜:]\*\*\s*([^\n]+)', content)
+        m = re.search(rf'\*\*講者{SEP}\*\*\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> \*\*講者\*\*\s*{SEP}\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> \*\*講者{SEP}\*\*\s*([^\n]+)', content)
     if m:
         md['speaker_full'] = m.group(1).strip()
 
@@ -82,9 +113,6 @@ def parse_md_frontmatter(content: str) -> dict:
     m = re.search(r'^# (.+)$', content, re.MULTILINE)
     if m:
         md['title'] = m.group(1).strip()
-
-    # 章節脈絡 第一個 section 標題（簡介）
-    # 不在這裡抽
 
     return md
 
