@@ -179,7 +179,8 @@
               <div x-show="getYouTubeEmbedUrl(video)"
                    class="youtube-embed"
                    :class="videoCollapsed[video.id] ? 'collapsed' : ''">
-                <iframe :src="getYouTubeEmbedUrl(video)"
+                <iframe :id="'youtube-iframe-' + video.id"
+                        :src="getYouTubeEmbedUrl(video)"
                         allowfullscreen
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         frameborder="0"
@@ -202,7 +203,7 @@
                 </div>
 
                 <!-- Note content (markdown) -->
-                <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'note'" class="content-area markdown-body" x-html="renderedContent[video.id + '_note']"></div>
+                <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'note'" class="content-area markdown-body" :data-video="video.id" x-html="renderedContent[video.id + '_note']"></div>
 
                 <!-- Transcript content (plain text) -->
                 <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'transcript'" class="content-area transcript-body">

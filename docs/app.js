@@ -44,6 +44,9 @@ document.addEventListener('alpine:init', () => {
 
     // ===== Init =====
     async init() {
+      // 註冊 marked 章節時間戳 extension（MM:SS → chapter-link）
+      this.registerChapterLinkExtension();
+
       this.applyTheme();
       await this.loadData();
       this.applyFilters();
@@ -53,6 +56,64 @@ document.addEventListener('alpine:init', () => {
         if (e.key === 'Escape') {
           this.closeAllExpands();
         }
+      });
+
+      // 章節時間戳點擊 → seek YouTube iframe
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('.chapter-link');
+        if (!link) return;
+        e.preventDefault();
+        const videoId = link.dataset.video;
+        const time = parseInt(link.dataset.time, 10);
+        if (videoId && !isNaN(time)) {
+          this.seekYouTube(videoId, time);
+        }
+      });
+    },
+
+    // ===== Marked extension: 章節時間戳 MM:SS → chapter-link =====
+    registerChapterLinkExtension() {
+      if (!window.marked) return;
+      // marked v12 沒有 getExtensions() API，用 flag 避免重複註冊
+      if (window._chapterLinkRegistered) return;
+      window._chapterLinkRegistered = true;
+
+      window.marked.use({
+        extensions: [{
+          name: 'chapterLink',
+          level: 'inline',
+          // 找「字串開頭或非 : / 數字」+ MM:SS + word boundary
+          start(src) {
+            const m = src.match(/(^|[^:\/\d])\b(\d{1,2}):(\d{2})\b/);
+            return m ? m.index + m[1].length : undefined;
+          },
+          tokenizer(src) {
+            // 注意：marked tokenizer 的 src 不是字串開頭，不能用 ^ 錨點
+            // 找 MM:SS，後面不能接數字或冒號（避免 1:23:45）
+            const m = /(\d{1,2}):(\d{2})(?!\d|:)/.exec(src);
+            if (!m) return undefined;
+            const idx = m.index;
+            // 前一個字元不能是 : / 數字（避免 URL、日期時間）
+            if (idx > 0 && /[:\/\d]/.test(src[idx - 1])) return undefined;
+            // 後一個字元不能是英文字母（避免匹配變數名）
+            const next = src[idx + m[0].length];
+            if (next && /[a-zA-Z]/.test(next)) return undefined;
+            // 合理性檢查：分秒必須 < 60
+            const minutes = parseInt(m[1], 10);
+            const seconds = parseInt(m[2], 10);
+            if (minutes > 59 || seconds > 59) return undefined;
+            return {
+              type: 'chapterLink',
+              raw: m[0],
+              minutes,
+              seconds,
+            };
+          },
+          renderer(token) {
+            const totalSeconds = token.minutes * 60 + token.seconds;
+            return `<a href="#" class="chapter-link" data-time="${totalSeconds}">${token.raw}</a>`;
+          },
+        }],
       });
     },
 
@@ -233,8 +294,7 @@ document.addEventListener('alpine:init', () => {
 
     getTabClass(videoId, tabType) {
       const active = this.activeTabs[videoId] === tabType;
-      const loaded = !!this.contentCache[`${videoId}_${tabType}`];
-      return active ? (loaded ? '' : 'secondary outline') : 'secondary outline';
+      return active ? 'active' : 'secondary outline';
     },
 
     hasContent(videoId, tabType) {
@@ -294,6 +354,7 @@ document.addEventListener('alpine:init', () => {
 
     // YouTube embed URL 抽取
     // 支援 youtu.be/xxx、youtube.com/watch?v=xxx、youtube.com/live/xxx
+    // 加 enablejsapi=1 啟用 IFrame Player API（章節時間戳跳轉用 seekTo）
     getYouTubeEmbedUrl(video) {
       if (!video || !video.video_url) return null;
       const url = video.video_url;
@@ -317,7 +378,22 @@ document.addEventListener('alpine:init', () => {
       }
 
       if (!videoId) return null;
-      return `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`;
+      return `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&enablejsapi=1`;
+    },
+
+    // 透過 YouTube IFrame Player API seek 跳到指定秒數
+    // 章節時間戳 link 點擊時呼叫
+    seekYouTube(videoId, seconds) {
+      const iframe = document.getElementById(`youtube-iframe-${videoId}`);
+      if (!iframe || !iframe.contentWindow) return;
+      try {
+        iframe.contentWindow.postMessage(
+          JSON.stringify({ event: 'command', func: 'seekTo', args: [seconds] }),
+          '*'
+        );
+      } catch (e) {
+        console.warn('YouTube seekTo failed:', e);
+      }
     },
 
     // ===== Theme =====
