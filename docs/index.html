@@ -72,7 +72,7 @@
         <select x-model="filters.topic" @change="applyFilters()">
           <option value="">全部主題</option>
           <template x-for="t in sortedTopics" :key="t">
-            <option :value="t" x-text="t.replace(/\*\*|\u200b/g, '').replace(/^\W+/, '').trim()"></option>
+            <option :value="t" x-text="cleanTopic(t)"></option>
           </template>
         </select>
       </label>
@@ -110,17 +110,17 @@
           <header>
             <div style="display:flex; justify-content:space-between; align-items:start; gap:0.5rem;">
               <h4 style="margin:0;" x-text="video.title"></h4>
-              <span class="duration-badge" x-text="video.duration_display || 'N/A'"></span>
+              <span class="duration-badge" x-show="video.duration_display" x-text="video.duration_display"></span>
             </div>
             <p>
               <small>
-                🎤 <span x-text="video.speaker"></span>
+                🎤 <span x-text="formatSpeaker(video.speaker_slug, video.speaker)"></span>
                 ｜ 📅 <time x-text="video.date"></time>
                 ｜ 📂 <span x-text="video.category"></span>
               </small>
               <br>
               <small x-show="video.primary_topic">
-                🏷️ <span x-text="video.primary_topic.replace(/\*\*|\u200b/g, '').replace(/^\W+/, '').trim()"></span>
+                🏷️ <span x-text="cleanTopic(video.primary_topic)"></span>
               </small>
               <small x-show="!video.primary_topic" style="color:var(--pico-muted-color);">
                 🏷️ <em>未分類</em>
