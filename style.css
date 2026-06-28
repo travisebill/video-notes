@@ -190,14 +190,28 @@ body.modal-open {
   flex-wrap: wrap;
 }
 
+.tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--pico-muted-border-color);
+}
+
 .tabs button {
   font-size: 0.78rem;
-  padding: 0.3rem 0.7rem;
+  padding: 0.4rem 0.8rem;
   margin: 0;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;  /* active 底線重疊 container border */
 }
 
 .tabs button.active {
-  /* Pico.css default styling (filled primary) */
+  background: var(--pico-primary-background);
+  color: var(--pico-primary-inverse);
+  border-bottom-color: var(--pico-primary);
+  font-weight: 600;
 }
 
 .content-area {
@@ -347,24 +361,46 @@ body.modal-open {
   }
 }
 
-/* close-btn 保留（topbar 內使用） */
+/* close-btn 加強視覺（v0.4 2026-06-29）*/
 .close-btn {
-  background: transparent;
-  border: 1px solid var(--pico-muted-border-color);
+  background: var(--pico-background-color);  /* 淺灰背景，跟 topbar 卡片白有對比 */
+  border: 1px solid var(--pico-color);  /* 深色邊框 */
   color: var(--pico-color);
-  width: 2rem;
-  height: 2rem;
-  border-radius: 4px;
+  width: 2.25rem;  /* 36px */
+  height: 2.25rem;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   line-height: 1;
   padding: 0;
   margin: 0;
   flex-shrink: 0;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark mode: 反相背景 */
+[data-theme="dark"] .close-btn {
+  background: var(--pico-card-background-color);
 }
 
 .close-btn:hover {
-  background: var(--pico-muted-background-color);
+  background: #c1272d;
+  border-color: #c1272d;
+  color: #fff;
+}
+
+[data-theme="dark"] .close-btn:hover {
+  background: #e85a5f;
+  border-color: #e85a5f;
+  color: #1a1a1a;
+}
+
+.close-btn:active {
+  transform: scale(0.95);
 }
 
 .content-area.transcript-body pre,
@@ -514,7 +550,76 @@ button.secondary.outline {
   margin: 0 0.1rem;
 }
 
-/* 響應式：手機 */
+/* ===== 手機 <768px：fullscreen modal（v0.4 2026-06-29） ===== */
+@media (max-width: 767.98px) {
+  .expand-panel {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--pico-card-background-color);
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+    border-top: none;
+  }
+
+  .expand-content {
+    height: 100vh;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem 1rem;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .expand-topbar {
+    flex-shrink: 0;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    margin: 0 -1rem 0.8rem;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+  }
+
+  .youtube-embed {
+    flex-shrink: 0;
+    aspect-ratio: 16 / 9;
+    position: sticky;
+    top: 56px;
+    z-index: 50;
+    margin-bottom: 1rem;
+  }
+
+  .youtube-embed.collapsed {
+    max-height: 0 !important;
+    opacity: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+
+  .right-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .expand-content .content-area {
+    flex: 1;
+    overflow-y: auto;
+    max-height: none;
+  }
+}
+
+/* 響應式：video grid + filter grid */
 @media (max-width: 768px) {
   .video-grid {
     grid-template-columns: 1fr;
@@ -529,6 +634,33 @@ button.secondary.outline {
   .filter-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* 章節時間戳跳轉 link（v0.4 2026-06-29）*/
+.chapter-link {
+  display: inline-block;
+  padding: 0.05rem 0.3rem;
+  margin: 0 0.05rem;
+  background: var(--pico-code-background-color);
+  color: var(--pico-primary);
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace;
+  font-size: 0.92em;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.chapter-link:hover {
+  background: var(--pico-primary);
+  color: var(--pico-primary-inverse);
+  border-color: var(--pico-primary);
+  text-decoration: none;
+}
+
+.chapter-link:active {
+  transform: scale(0.96);
 }
 
 /* Dark mode 強化 */
