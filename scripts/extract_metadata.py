@@ -176,6 +176,8 @@ def parse_readme_topics(readme: str) -> dict:
 
     嚴格限定在 <a id="by-topic"> 與 <a id="by-speaker"> 之間，
     避免「按日期」/「按講者」section 的 markdown links 混淆。
+
+    統一格式：去除 `**` markdown 強調標記，跟 .md frontmatter 抽出的格式一致。
     """
     topics = {}
     in_topic_section = False
@@ -194,7 +196,8 @@ def parse_readme_topics(readme: str) -> dict:
         # 主題標題
         m = re.match(r'### (.+?)（\d+ 支）', line)
         if m:
-            current_topic = m.group(1).strip()
+            # 去除 markdown ** 強調（與 .md frontmatter 抽出的格式一致）
+            current_topic = m.group(1).strip().replace('**', '')
             continue
         # 主題下的條目（包含 markdown link）
         if current_topic and '[' in line and '.md)' in line:
