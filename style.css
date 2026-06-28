@@ -1,5 +1,10 @@
 /* Video Notes GitHub Pages - 客製樣式 */
 
+/* Body scroll lock — fullscreen modal 開啟時鎖住背景滾動 */
+body.modal-open {
+  overflow: hidden;
+}
+
 /* Filter grid: 4 columns on desktop, 2 on tablet, 1 on mobile */
 .filter-grid {
   display: grid;
@@ -99,14 +104,47 @@
   color: var(--pico-muted-color);
 }
 
-/* Expand panel — 響應式：桌面 modal、手機 inline */
+/* ===== Expand panel — 響應式：手機 inline / 平板 fullscreen 單欄 / 桌面 fullscreen 雙欄 ===== */
+
+/* Mobile first: inline 展開（沿用 video card 寬度） */
 .expand-panel {
   margin-top: 0.5rem;
   border-top: 1px dashed var(--pico-muted-border-color);
   padding-top: 0.5rem;
 }
 
-/* YouTube embed — sticky 於內容上方 */
+/* Topbar — 桌面 sticky / 手機 normal flow */
+.expand-topbar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--pico-card-background-color);
+  border: 1px solid var(--pico-muted-border-color);
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.expand-title {
+  flex: 1;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;  /* 讓 ellipsis 在 flex item 生效 */
+}
+
+.collapse-btn {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* YouTube embed — 預設 16:9 撐滿寬度；collapsed 時 max-height 動畫 */
 .youtube-embed {
   position: relative;
   width: 100%;
@@ -115,6 +153,17 @@
   background: #000;
   border-radius: 6px;
   overflow: hidden;
+  max-height: 800px;
+  transition: max-height 0.25s ease, opacity 0.2s ease, margin 0.2s ease;
+}
+
+.youtube-embed.collapsed {
+  max-height: 0 !important;
+  opacity: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  pointer-events: none;
 }
 
 .youtube-embed iframe {
@@ -126,39 +175,12 @@
   border: 0;
 }
 
-.expand-header {
+/* Right pane（包住 tabs + content）— desktop flexbox column 內部滾動 */
+.right-pane {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--pico-muted-border-color);
-  margin-bottom: 0.8rem;
-}
-
-.expand-header h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.close-btn {
-  background: transparent;
-  border: 1px solid var(--pico-muted-border-color);
-  color: var(--pico-color);
-  width: 2rem;
-  height: 2rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1;
-  padding: 0;
-  margin: 0;
-  flex-shrink: 0;
-}
-
-.close-btn:hover {
-  background: var(--pico-muted-background-color);
+  flex-direction: column;
+  min-width: 0;  /* 防止 grid item 內容撐爆 */
+  min-height: 0;
 }
 
 .tabs {
@@ -189,58 +211,126 @@
   border: 1px solid var(--pico-muted-border-color);
 }
 
-/* 桌面版 (>= 768px)：全螢幕 modal，運用螢幕空間 */
+/* ===== 平板 ≥768px：fullscreen modal + 單欄 + 影片 sticky top mini ===== */
 @media (min-width: 768px) {
   .expand-panel {
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
-    display: block;
-    padding: 2rem;
-    overflow-y: auto;
-    border-top: none;
+    /* fullscreen：純色背景，無 backdrop-filter blur（省 GPU + 沉浸感） */
+    background: var(--pico-card-background-color);
+    padding: 0;
+    overflow: hidden;
     margin: 0;
+    border-top: none;
   }
 
   .expand-content {
+    height: 100vh;
     background: var(--pico-card-background-color);
-    border-radius: 12px;
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%;
-    margin: 0 auto;
-    padding: 2rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    margin: 0;
+    padding: 0 1.5rem 1.5rem;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
 
-  /* YouTube embed sticky 於 modal 頂部 */
-  .expand-content .youtube-embed {
+  .expand-topbar {
+    flex-shrink: 0;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    margin: 0 -1.5rem 1rem;
     position: sticky;
     top: 0;
-    z-index: 100;
-    background: var(--pico-card-background-color);
-    /* 抵消 modal padding 2rem，使 video 填滿 modal 寬度 */
-    margin: -2rem -2rem 1rem -2rem;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid var(--pico-muted-border-color);
-    /* 加入微陰影讓 sticky 元素與下方 scroll content 有層次 */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    z-index: 200;
   }
 
-  .expand-content .youtube-embed iframe {
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  .youtube-embed {
+    flex-shrink: 0;
+    aspect-ratio: 16 / 9;  /* 保留 16:9，max-height 會自動限縮寬度 */
+    max-height: 280px;
+    /* 平板上限制最大寬度為 498px（280h × 16/9），避免影片在寬 modal 內被拉太寬 */
+    max-width: 498px;
+    position: sticky;
+    top: 56px;  /* topbar 高（含 border） */
+    z-index: 50;
+    margin-bottom: 1rem;
   }
 
-  /* Modal 內 .content-area 拿掉 max-height 限制，顯示全高度 */
+  .right-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
   .expand-content .content-area {
-    max-height: calc(100vh - 30rem);
+    max-height: none;
+    flex: 1;
+    overflow-y: auto;
     padding: 1.5rem;
     font-size: 0.95rem;
   }
+}
 
-  /* Modal 內 markdown 加大可讀性 */
+/* ===== 桌面 ≥1100px：fullscreen 雙欄（左 42% 影片 / 右 58% 筆記） ===== */
+@media (min-width: 1100px) {
+  .expand-content {
+    display: grid;
+    grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
+    grid-template-rows: auto 1fr;
+    gap: 0 1.5rem;
+  }
+
+  /* 收合影片時左欄歸 0，右欄佔滿（必須在 @media 內才能贏過上面 .expand-content 規則） */
+  .expand-content.video-collapsed {
+    grid-template-columns: 0 1fr;
+  }
+
+  .expand-topbar {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .youtube-embed {
+    grid-column: 1;
+    grid-row: 2;
+    /* 桌面上方留 topbar ~56px + gap，下方不超過 viewport */
+    max-height: calc(100vh - 70px);
+    max-width: none;  /* 桌面覆蓋平板的 498px 限制，讓 grid 撐滿左欄 */
+    aspect-ratio: 16 / 9;
+    align-self: start;
+    position: sticky;
+    top: 70px;
+    z-index: 50;
+    margin-bottom: 0;
+  }
+
+  /* 桌面上收合時整個左欄隱藏（grid 0 寬度） */
+  .expand-content.video-collapsed .youtube-embed {
+    display: none;
+  }
+
+  /* 收合時的展開按鈕顯示，確保 topbar 仍能看見 */
+  .expand-content.video-collapsed .right-pane {
+    grid-column: 1 / -1;  /* 橫跨兩欄 */
+    max-width: 800px;  /* 中文最佳行寬 30-45 字，約 700-800px */
+    margin: 0 auto;     /* 置中 */
+    width: 100%;
+  }
+
+  .right-pane {
+    grid-column: 2;
+    grid-row: 2;
+    min-height: 0;
+  }
+
+  /* 桌面 markdown 加大可讀性 */
   .expand-content .markdown-body {
     font-size: 0.95rem;
     line-height: 1.7;
@@ -250,12 +340,31 @@
   .expand-content .markdown-body h2 { font-size: 1.4rem; }
   .expand-content .markdown-body h3 { font-size: 1.15rem; }
 
-  /* Modal 內 transcript / spoken 加大字體 */
   .expand-content .transcript-body pre,
   .expand-content .spoken-body pre {
     font-size: 0.9rem;
     line-height: 1.7;
   }
+}
+
+/* close-btn 保留（topbar 內使用） */
+.close-btn {
+  background: transparent;
+  border: 1px solid var(--pico-muted-border-color);
+  color: var(--pico-color);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.close-btn:hover {
+  background: var(--pico-muted-background-color);
 }
 
 .content-area.transcript-body pre,
