@@ -63,10 +63,17 @@ document.addEventListener('alpine:init', () => {
         const link = e.target.closest('.chapter-link');
         if (!link) return;
         e.preventDefault();
-        const videoId = link.dataset.video;
+        // chapter-link 沒 data-video，要從最近的 markdown-body 拿 videoId
+        let videoId = link.dataset.video;
+        if (!videoId) {
+          const body = link.closest('.markdown-body');
+          if (body) videoId = body.dataset.video;
+        }
         const time = parseInt(link.dataset.time, 10);
         if (videoId && !isNaN(time)) {
           this.seekYouTube(videoId, time);
+        } else {
+          console.warn('chapter-link click failed: videoId=', videoId, 'time=', time);
         }
       });
     },
