@@ -41,6 +41,13 @@ document.addEventListener('alpine:init', () => {
       this.applyTheme();
       await this.loadData();
       this.applyFilters();
+
+      // ESC 鍵關閉所有展開面板
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          this.closeAllExpands();
+        }
+      });
     },
 
     async loadData() {
@@ -233,6 +240,14 @@ document.addEventListener('alpine:init', () => {
       } finally {
         this.loadingContent[videoId] = false;
       }
+    },
+
+    closeExpand(videoId) {
+      this.expanded[videoId] = false;
+    },
+
+    closeAllExpands() {
+      this.expanded = {};
     },
 
     // ===== Theme =====
