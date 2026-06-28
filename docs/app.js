@@ -250,6 +250,34 @@ document.addEventListener('alpine:init', () => {
       this.expanded = {};
     },
 
+    // YouTube embed URL 抽取
+    // 支援 youtu.be/xxx、youtube.com/watch?v=xxx、youtube.com/live/xxx
+    getYouTubeEmbedUrl(video) {
+      if (!video || !video.video_url) return null;
+      const url = video.video_url;
+      let videoId = null;
+      let m;
+
+      // youtu.be/{id}
+      m = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+      if (m) videoId = m[1];
+
+      // youtube.com/watch?v={id}
+      if (!videoId) {
+        m = url.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/);
+        if (m) videoId = m[1];
+      }
+
+      // youtube.com/live/{id} (livestream)
+      if (!videoId) {
+        m = url.match(/youtube\.com\/live\/([a-zA-Z0-9_-]+)/);
+        if (m) videoId = m[1];
+      }
+
+      if (!videoId) return null;
+      return `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`;
+    },
+
     // ===== Theme =====
     applyTheme() {
       const html = document.documentElement;

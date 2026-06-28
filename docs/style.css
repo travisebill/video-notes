@@ -106,6 +106,19 @@
   padding-top: 0.5rem;
 }
 
+/* YouTube embed — sticky 於內容上方 */
+.youtube-embed {
+  margin-bottom: 0.8rem;
+}
+
+.youtube-embed iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 6px;
+  background: #000;
+}
+
 .expand-header {
   display: flex;
   align-items: center;
@@ -194,9 +207,28 @@
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   }
 
+  /* YouTube embed sticky 於 modal 頂部 */
+  .expand-content .youtube-embed {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--pico-card-background-color);
+    /* 抵消 modal padding 2rem，使 video 填滿 modal 寬度 */
+    margin: -2rem -2rem 1rem -2rem;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--pico-muted-border-color);
+    /* 加入微陰影讓 sticky 元素與下方 scroll content 有層次 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .expand-content .youtube-embed iframe {
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
   /* Modal 內 .content-area 拿掉 max-height 限制，顯示全高度 */
   .expand-content .content-area {
-    max-height: calc(100vh - 16rem);
+    max-height: calc(100vh - 30rem);
     padding: 1.5rem;
     font-size: 0.95rem;
   }
