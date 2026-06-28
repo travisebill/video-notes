@@ -1,0 +1,160 @@
+/* Video Notes GitHub Pages - 客製樣式 */
+
+/* Filter grid: 4 columns on desktop, 2 on tablet, 1 on mobile */
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.filter-grid label {
+  margin: 0;
+}
+
+.filter-grid select,
+.filter-grid input {
+  margin: 0.3rem 0 0 0;
+}
+
+/* Video grid: cards */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+/* Video card */
+.video-card {
+  margin: 0;
+  padding: 0.8rem;
+  border: 1px solid var(--pico-muted-border-color);
+  border-radius: 8px;
+  background: var(--pico-card-background-color);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.video-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.video-card header {
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.video-card header h4 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.video-card header p {
+  margin: 0;
+  color: var(--pico-muted-color);
+}
+
+.video-card audio {
+  margin: 0.5rem 0;
+  height: 32px;
+}
+
+.video-card footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.5rem 0 0 0;
+  border-top: 1px solid var(--pico-muted-border-color);
+  margin-top: 0.5rem;
+}
+
+.video-card footer a {
+  text-decoration: none;
+}
+
+/* Duration badge */
+.duration-badge {
+  background: var(--pico-primary-background);
+  color: var(--pico-primary-inverse);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Audio player section */
+.audio-player {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: var(--pico-background-color);
+  border-radius: 4px;
+}
+
+.audio-player small {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--pico-muted-color);
+}
+
+/* Search bar - 突出顯示 */
+input[type="search"] {
+  font-size: 1.1rem;
+  padding: 0.8rem;
+}
+
+/* Empty state */
+article:only-child {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Header hgroup 對齊 */
+hgroup {
+  margin-bottom: 1rem;
+}
+
+hgroup h1 {
+  margin-bottom: 0.2rem;
+}
+
+hgroup p {
+  margin: 0;
+  color: var(--pico-muted-color);
+}
+
+/* Sort buttons */
+button.secondary.outline {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  margin: 0 0.1rem;
+}
+
+/* 響應式：手機 */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark mode 強化 */
+[data-theme="dark"] .video-card {
+  border-color: var(--pico-muted-border-color);
+}
+
+[data-theme="dark"] .video-card:hover {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
