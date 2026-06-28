@@ -3,7 +3,10 @@
 // Created: 2026-06-28
 
 const CDN_BASE = 'https://cdn.jsdelivr.net/gh/travisebill/video-notes@main';
+// Raw GitHub 作為 fallback (jsDelivr 隱藏 cache 延遲 24h 問題)
+const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main';
 const JSON_URL = `${CDN_BASE}/data/video-notes.json`;
+const RAW_JSON_URL = `${RAW_BASE}/data/video-notes.json`;
 
 document.addEventListener('alpine:init', () => {
   Alpine.data('videoApp', () => ({
@@ -51,34 +54,45 @@ document.addEventListener('alpine:init', () => {
     },
 
     async loadData() {
-      try {
-        const resp = await fetch(JSON_URL);
-        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-        const data = await resp.json();
-        this.meta = data.meta;
-        this.videos = data.videos;
-        // 初始化 Fuse.js（fuzzy search）
-        this.fuse = new Fuse(this.videos, {
-          keys: [
-            { name: 'title', weight: 0.5 },
-            { name: 'speaker', weight: 0.3 },
-            { name: 'primary_topic', weight: 0.2 },
-          ],
-          threshold: 0.5,  // 0 = 完全匹配, 1 = 任意匹配（中文短查詢需要較高 threshold）
-          ignoreLocation: true,
-          minMatchCharLength: 1,
-        });
-        console.log(`✅ 載入 ${this.videos.length} 支影片 metadata`);
-      } catch (e) {
-        console.error('Failed to load video-notes.json:', e);
+      // 優先 jsDelivr，有 cache 延遲問題則 fallback raw GitHub
+      let data = null;
+      let lastErr = null;
+      for (const url of [JSON_URL, RAW_JSON_URL]) {
+        try {
+          const resp = await fetch(url, { cache: 'no-cache' });
+          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+          data = await resp.json();
+          console.log(`✅ Loaded from ${url}`);
+          break;
+        } catch (e) {
+          lastErr = e;
+          console.warn(`Failed ${url}: ${e.message}`);
+        }
+      }
+      if (!data) {
         document.querySelector('main').innerHTML = `
           <article>
             <h3>⚠️ 無法載入影片 metadata</h3>
-            <p>錯誤：${e.message}</p>
+            <p>錯誤：${lastErr?.message || 'unknown'}</p>
             <p>請確認 <a href="${JSON_URL}" target="_blank">${JSON_URL}</a> 可訪問</p>
           </article>
         `;
+        return;
       }
+      this.meta = data.meta;
+      this.videos = data.videos;
+      // 初始化 Fuse.js（fuzzy search）
+      this.fuse = new Fuse(this.videos, {
+        keys: [
+          { name: 'title', weight: 0.5 },
+          { name: 'speaker', weight: 0.3 },
+          { name: 'primary_topic', weight: 0.2 },
+        ],
+        threshold: 0.5,
+        ignoreLocation: true,
+        minMatchCharLength: 1,
+      });
+      console.log(`✅ 載入 ${this.videos.length} 支影片 metadata`);
     },
 
     // ===== Filters =====
