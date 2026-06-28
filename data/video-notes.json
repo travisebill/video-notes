@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_videos": 58,
-    "total_with_audio": 29,
-    "total_with_transcript": 30,
-    "total_with_spoken_script": 29,
+    "total_videos": 59,
+    "total_with_audio": 30,
+    "total_with_transcript": 31,
+    "total_with_spoken_script": 30,
     "speakers_count": 45,
     "categories_count": 4,
     "topics_count": 12,
-    "last_updated": "2026-06-28 23:15:15",
+    "last_updated": "2026-06-28 23:57:57",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -651,6 +651,31 @@
       },
       "note_path": "技術講座/20260620_Kaggle_5DayAIAgents_Day1.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260620_Kaggle_5DayAIAgents_Day1.md"
+    },
+    {
+      "id": "20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說",
+      "title": "AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說",
+      "speaker": "馬臉姐",
+      "speaker_slug": "馬臉姐",
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-06-19",
+      "note_date": "2026-06-28",
+      "duration_seconds": 1795,
+      "duration_display": "29:55",
+      "video_url": "https://youtu.be/AZ5jJSQ0pBI",
+      "audio": {
+        "opus": "audio/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.opus",
+        "m4a": "audio/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.m4a",
+        "mp3": "audio/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說_逐字稿.txt",
+        "spoken_script": "transcripts/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md"
     },
     {
       "id": "20260619_MattPocock_AgenticEngineeringWorkflow",
