@@ -165,6 +165,16 @@
                 <button @click="closeExpand(video.id)" class="close-btn" aria-label="關閉">✕</button>
               </div>
 
+              <!-- YouTube embed (sticky) -->
+              <div x-show="getYouTubeEmbedUrl(video)" class="youtube-embed">
+                <iframe :src="getYouTubeEmbedUrl(video)"
+                        allowfullscreen
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        frameborder="0"
+                        referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+              </div>
+
               <!-- Tabs -->
               <div class="tabs">
                 <button @click="switchTab(video.id, 'note')" :class="getTabClass(video.id, 'note')" x-show="video.note_path">📄 結構化筆記</button>
