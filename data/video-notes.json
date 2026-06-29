@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_videos": 60,
-    "total_with_audio": 31,
-    "total_with_transcript": 32,
-    "total_with_spoken_script": 31,
-    "speakers_count": 46,
+    "total_videos": 61,
+    "total_with_audio": 32,
+    "total_with_transcript": 33,
+    "total_with_spoken_script": 32,
+    "speakers_count": 47,
     "categories_count": 4,
     "topics_count": 12,
-    "last_updated": "2026-06-29 13:32:38",
+    "last_updated": "2026-06-29 22:10:48",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -54,6 +54,7 @@
       "自說自話的總裁",
       "蔡康永",
       "陳文茜",
+      "陳文茜（TVBS 文茜的世界周報主持人）",
       "馬臉姐"
     ],
     "categories": [
@@ -302,6 +303,31 @@
       },
       "note_path": "人物訪談/20260512_Anne_Applebaum_民主如何消亡.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260512_Anne_Applebaum_民主如何消亡.md"
+    },
+    {
+      "id": "20260627_TVBS_文茜_英國脫歐",
+      "title": "【完整版下集 20260627】英國脫歐公投十週年：脫歐後換七首相 — TVBS 文茜的世界周報（歐洲版）",
+      "speaker": "陳文茜（TVBS 文茜的世界周報主持人）",
+      "speaker_slug": "TVBS",
+      "category": "國際局勢",
+      "primary_topic": null,
+      "date": "2026-06-27",
+      "note_date": "2026-06-27",
+      "duration_seconds": 2891,
+      "duration_display": "48:11",
+      "video_url": "https://youtu.be/kC0QAejBsJo",
+      "audio": {
+        "opus": "audio/20260627_TVBS_文茜_英國脫歐.opus",
+        "m4a": "audio/20260627_TVBS_文茜_英國脫歐.m4a",
+        "mp3": "audio/20260627_TVBS_文茜_英國脫歐.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260627_TVBS_文茜_英國脫歐_逐字稿.txt",
+        "spoken_script": "transcripts/20260627_TVBS_文茜_英國脫歐_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260627_TVBS_文茜_英國脫歐_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "國際局勢/20260627_TVBS_文茜_英國脫歐.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260627_TVBS_文茜_英國脫歐.md"
     },
     {
       "id": "20260517_陳文茜_法英美日看待習川會",
