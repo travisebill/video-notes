@@ -56,22 +56,50 @@ def parse_md_frontmatter(content: str) -> dict:
     # 分隔符統一三種: 全形垂直線｜、全形冒號：、半形冒號:
     SEP = '[｜：:]'
 
-    # 影片連結（支援多種格式）
-    # - `> **影片連結**：xxx`（bold + 全形冒號）
-    # - `> **影片連結** ：xxx`（bold 後有空格）
-    # - `> **影片連結**｜xxx`（bold + vertical bar）
-    # - `> 影片連結：xxx`（無 bold）
-    m = re.search(rf'\*\*影片連結\*\*\s*{SEP}\s*([^\n]+)', content)
-    if not m:
-        m = re.search(rf'\*\*影片連結{SEP}\*\*\s*([^\n]+)', content)
-    if not m:
-        m = re.search(rf'> \*\*影片連結\*\*\s*{SEP}\s*([^\n]+)', content)
-    if not m:
-        m = re.search(rf'> \*\*影片連結{SEP}\*\*\s*([^\n]+)', content)
-    if not m:
-        m = re.search(rf'> 影片連結{SEP}\s*([^\n]+)', content)
-    if m:
-        md['video_url'] = m.group(1).strip()
+    # 影片連結（支援多種格式與 label）
+    # Markdown 重要特性：`**影片連結：** https://youtu.be/...` → 整個 `**影片連結：**` 是 bold
+    # 不是我們以為的 `**影片連結**` + SEP，所以 label regex 要允許 SEP 在 ** 內。
+    #
+    # 支援格式：
+    # - `> **影片連結：** https://youtu.be/...`（標準，SEP 在 ** 內）
+    # - `> **影片**: [title](url)` markdown link 格式（SEP 在 ** 外）
+    # - `**來源**: https://youtu.be/...`（Podcast/TBBS 格式，SEP 在 ** 外）
+    # - `**來源網址｜https://...**`（Apple Developer 格式，SEP 在 ** 內）
+    # - `**文章來源**：[title](url)` 雖然不是影片但可以連出去
+    #
+    # 策略：長 label 先試，每個 label 試多個 pattern
+    _VIDEO_URL_LABELS = ['影片連結', '影片來源', '文章來源', '來源網址', '影片 URL', '影片網址', '來源', '影片']
+    _URL_FROM_MD_LINK = re.compile(r'\[([^\]]+)\]\((https?://[^\s\)]+)\)')
+    _URL_RAW = re.compile(r'(https?://[^\s\)]+)')
+    for _label in _VIDEO_URL_LABELS:
+        # SEP 在 ** 內（label 與 SEP 一起 bold）→ `**label[SEP]**` 後接 url
+        # SEP 在 ** 外（label 單獨 bold）→ `**label**` + SEP + url
+        # **label[SEP]URL** （SEP + url 一起 bold，例如 Apple Developer 格式）
+        for _pattern in [
+            # 寬鬆匹配各種位置
+            rf'(?:>|[> ]?)[ ]?\*\*{re.escape(_label)}[：:|｜\*]*\*\*[ ]?([^\n*]+?)(?:\*\*|$)',
+            rf'(?:>|[> ]?)[ ]?\*\*{re.escape(_label)}\*\*[：:|｜][ ]?([^\n*]+?)(?:\*\*|$)',
+            rf'(?:>|[> ]?)[ ]?\*\*{re.escape(_label)}\*\*[ ]?([^\n*]+?)(?:\*\*|$)',
+            # **label[SEP]URL** （URL 也在 bold 內）
+            rf'\*\*{re.escape(_label)}[：:|｜]([^\n*]+?)\*\*',
+            # 裸文字 label（沒用 **）後接 SEP 跟 URL：'> 影片連結：URL' 或 '- 影片網址：URL'
+            rf'(?:>|^|\n)\s*[-*]?\s*{re.escape(_label)}\s*[：:|｜]\s*(https?://\S+)',
+        ]:
+            m = re.search(_pattern, content, re.MULTILINE)
+            if m:
+                text = m.group(1).strip().rstrip('*').strip()
+                # 優先抽 markdown link [text](url)
+                link_m = _URL_FROM_MD_LINK.search(text)
+                if link_m:
+                    md['video_url'] = link_m.group(2).rstrip(')')
+                    break
+                # fallback：抽第一個 raw URL
+                url_m = _URL_RAW.search(text)
+                if url_m:
+                    md['video_url'] = url_m.group(1).rstrip('*)')
+                    break
+        if 'video_url' in md:
+            break
 
     # 影片長度（支援多種格式）
     m = re.search(rf'\*\*影片長度\*\*\s*{SEP}\s*([^\n]+)', content)
