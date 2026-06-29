@@ -44,6 +44,9 @@ document.addEventListener('alpine:init', () => {
 
     // ===== Init =====
     async init() {
+      // 註冊 Service Worker（PWA 安裝 + 離線快取）
+      this.registerServiceWorker();
+
       // 註冊 marked 章節時間戳 extension（MM:SS → chapter-link）
       this.registerChapterLinkExtension();
 
@@ -80,6 +83,22 @@ document.addEventListener('alpine:init', () => {
 
       // ===== v0.5 章節 hover preview popup =====
       this.setupChapterPreview();
+    },
+
+    // ===== Service Worker 註冊（PWA 2026-06-29）=====
+    registerServiceWorker() {
+      if (!('serviceWorker' in navigator)) return;
+      // 只在 HTTPS 或 localhost 註冊（GitHub Pages 是 HTTPS）
+      if (location.protocol !== 'https:' && location.hostname !== 'localhost') return;
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then((reg) => {
+            console.log('✅ SW registered:', reg.scope);
+          })
+          .catch((err) => {
+            console.warn('SW registration failed:', err);
+          });
+      });
     },
 
     // ===== Marked extension: 章節時間戳 MM:SS → chapter-link =====
