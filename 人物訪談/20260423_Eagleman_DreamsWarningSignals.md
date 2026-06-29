@@ -4,7 +4,7 @@
 > **節目**：The Diary Of A CEO
 > **長度**：1:33:18（5598 秒）
 > **上傳**：2026-04-23
-> **連結**：https://youtu.be/m-nnyNZ0TQ0
+> **影片連結**：https://youtu.be/m-nnyNZ0TQ0
 
 ---
 

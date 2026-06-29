@@ -7,7 +7,7 @@
     "speakers_count": 49,
     "categories_count": 4,
     "topics_count": 12,
-    "last_updated": "2026-06-30 04:31:49",
+    "last_updated": "2026-06-30 04:47:54",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -317,7 +317,7 @@
       "note_date": "2026-04-23",
       "duration_seconds": null,
       "duration_display": null,
-      "video_url": null,
+      "video_url": "https://youtu.be/m-nnyNZ0TQ0",
       "audio": {
         "opus": "audio/20260423_Eagleman_DreamsWarningSignals.opus",
         "m4a": "audio/20260423_Eagleman_DreamsWarningSignals.m4a",
@@ -1092,7 +1092,7 @@
       "note_date": "2026-06-08",
       "duration_seconds": 960,
       "duration_display": "16:00",
-      "video_url": null,
+      "video_url": "https://youtu.be/hCMrEfPG2Yg>",
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1617,7 +1617,7 @@
       "note_date": "2026-06-04",
       "duration_seconds": null,
       "duration_display": null,
-      "video_url": null,
+      "video_url": "https://youtu.be/vqfMFavnvxU",
       "audio": {
         "opus": null,
         "m4a": null,

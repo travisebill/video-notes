@@ -68,7 +68,7 @@ def parse_md_frontmatter(content: str) -> dict:
     # - `**文章來源**：[title](url)` 雖然不是影片但可以連出去
     #
     # 策略：長 label 先試，每個 label 試多個 pattern
-    _VIDEO_URL_LABELS = ['影片連結', '影片來源', '文章來源', '來源網址', '影片 URL', '影片網址', '來源', '影片']
+    _VIDEO_URL_LABELS = ['影片連結', '連結', '影片來源', '文章來源', '來源網址', '影片 URL', '影片網址', 'YouTube', '來源', '影片']
     _URL_FROM_MD_LINK = re.compile(r'\[([^\]]+)\]\((https?://[^\s\)]+)\)')
     _URL_RAW = re.compile(r'(https?://[^\s\)]+)')
     for _label in _VIDEO_URL_LABELS:
