@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_videos": 62,
-    "total_with_audio": 33,
-    "total_with_transcript": 34,
-    "total_with_spoken_script": 33,
-    "speakers_count": 48,
+    "total_videos": 63,
+    "total_with_audio": 34,
+    "total_with_transcript": 35,
+    "total_with_spoken_script": 34,
+    "speakers_count": 49,
     "categories_count": 4,
     "topics_count": 12,
-    "last_updated": "2026-06-29 22:31:11",
+    "last_updated": "2026-06-30 04:30:23",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -22,6 +22,7 @@
       "Claude",
       "Datadog AI 團隊",
       "Dex",
+      "Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者）× Steven Bartlett（訪談主持人）",
       "DrDarrenCandow",
       "Graham Hancock × Steven Bartlett",
       "Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長",
@@ -304,6 +305,31 @@
       },
       "note_path": "人物訪談/20260512_Anne_Applebaum_民主如何消亡.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260512_Anne_Applebaum_民主如何消亡.md"
+    },
+    {
+      "id": "20260423_Eagleman_DreamsWarningSignals",
+      "title": "Stanford 神經科學家：記不住夢境可能是大腦在警告你！",
+      "speaker": "Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者）× Steven Bartlett（訪談主持人）",
+      "speaker_slug": "Eagleman",
+      "category": "人物訪談",
+      "primary_topic": null,
+      "date": "2026-04-23",
+      "note_date": "2026-04-23",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": null,
+      "audio": {
+        "opus": "audio/20260423_Eagleman_DreamsWarningSignals.opus",
+        "m4a": "audio/20260423_Eagleman_DreamsWarningSignals.m4a",
+        "mp3": "audio/20260423_Eagleman_DreamsWarningSignals.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260423_Eagleman_DreamsWarningSignals_逐字稿.txt",
+        "spoken_script": "transcripts/20260423_Eagleman_DreamsWarningSignals_口播稿.txt",
+        "spoken_script_tts": null
+      },
+      "note_path": "人物訪談/20260423_Eagleman_DreamsWarningSignals.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260423_Eagleman_DreamsWarningSignals.md"
     },
     {
       "id": "20260627_TVBS_文茜_英國脫歐",
