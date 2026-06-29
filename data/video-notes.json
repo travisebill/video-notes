@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_videos": 61,
-    "total_with_audio": 32,
-    "total_with_transcript": 33,
-    "total_with_spoken_script": 32,
-    "speakers_count": 47,
+    "total_videos": 62,
+    "total_with_audio": 33,
+    "total_with_transcript": 34,
+    "total_with_spoken_script": 33,
+    "speakers_count": 48,
     "categories_count": 4,
     "topics_count": 12,
-    "last_updated": "2026-06-29 22:10:48",
+    "last_updated": "2026-06-29 22:13:46",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -43,6 +43,7 @@
       "Ruben Casas（Postman Staff Engineer）",
       "RyanLopopolo",
       "Smitha（Google Cloud Tech）",
+      "TVBS",
       "TaraAgyemang",
       "Tejas",
       "YC",
@@ -328,6 +329,31 @@
       },
       "note_path": "國際局勢/20260627_TVBS_文茜_英國脫歐.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260627_TVBS_文茜_英國脫歐.md"
+    },
+    {
+      "id": "20260627_TVBS_文茜_美伊停火",
+      "title": "【完整版上集 20260627】一紙停火備忘錄 美伊各取所需 川普表示戰爭結束了",
+      "speaker": "TVBS",
+      "speaker_slug": "TVBS",
+      "category": "國際局勢",
+      "primary_topic": null,
+      "date": "2026-06-27",
+      "note_date": "2026-06-27",
+      "duration_seconds": 2897,
+      "duration_display": "48:17",
+      "video_url": "https://youtu.be/XZ0caf8AczQ",
+      "audio": {
+        "opus": "audio/20260627_TVBS_文茜_美伊停火.opus",
+        "m4a": "audio/20260627_TVBS_文茜_美伊停火.m4a",
+        "mp3": "audio/20260627_TVBS_文茜_美伊停火.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260627_TVBS_文茜_美伊停火_逐字稿.txt",
+        "spoken_script": "transcripts/20260627_TVBS_文茜_美伊停火_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260627_TVBS_文茜_美伊停火_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "國際局勢/20260627_TVBS_文茜_美伊停火.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260627_TVBS_文茜_美伊停火.md"
     },
     {
       "id": "20260517_陳文茜_法英美日看待習川會",
