@@ -72,10 +72,14 @@ document.addEventListener('alpine:init', () => {
         const time = parseInt(link.dataset.time, 10);
         if (videoId && !isNaN(time)) {
           this.seekYouTube(videoId, time);
+          this.hideChapterPreview();
         } else {
           console.warn('chapter-link click failed: videoId=', videoId, 'time=', time);
         }
       });
+
+      // ===== v0.5 章節 hover preview popup =====
+      this.setupChapterPreview();
     },
 
     // ===== Marked extension: 章節時間戳 MM:SS → chapter-link =====
@@ -158,7 +162,11 @@ document.addEventListener('alpine:init', () => {
         return;
       }
       this.meta = data.meta;
-      this.videos = data.videos;
+      // 為每個 video 預先抽出 YouTube ID（hover preview 縮圖 URL 用）
+      this.videos = data.videos.map(v => ({
+        ...v,
+        yt_id: this.extractYouTubeId(v.video_url),
+      }));
       // 初始化 Fuse.js（fuzzy search）
       this.fuse = new Fuse(this.videos, {
         keys: [
@@ -348,6 +356,8 @@ document.addEventListener('alpine:init', () => {
       this.videoCollapsed[videoId] = false;
       // 關閉 modal → 解除背景滾動鎖
       this.setBodyOverflow(false);
+      // 關閉 modal → 隱藏 hover preview popup
+      this.hideChapterPreview();
     },
 
     closeAllExpands() {
@@ -398,6 +408,101 @@ document.addEventListener('alpine:init', () => {
       } catch (e) {
         console.warn('YouTube seekTo failed:', e);
       }
+    },
+
+    // 從 video_url 抽出真實 YouTube video ID（給 hover preview 組縮圖 URL）
+    extractYouTubeId(url) {
+      if (!url) return null;
+      let m = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+      if (m) return m[1];
+      m = url.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/);
+      if (m) return m[1];
+      m = url.match(/youtube\.com\/live\/([a-zA-Z0-9_-]+)/);
+      if (m) return m[1];
+      return null;
+    },
+
+    // ===== 章節 hover preview popup（v0.5 2026-06-29）=====
+    _chapterPreviewEl: null,  // singleton popup element
+
+    setupChapterPreview() {
+      // 建立 popup element（一次性）
+      if (this._chapterPreviewEl) return;
+      const popup = document.createElement('div');
+      popup.className = 'chapter-preview-popup';
+      popup.innerHTML = '<img class="chapter-preview-img" alt="" referrerpolicy="no-referrer"><div class="chapter-preview-caption"></div>';
+      document.body.appendChild(popup);
+      this._chapterPreviewEl = popup;
+
+      // mouseover：顯示 popup
+      document.addEventListener('mouseover', (e) => {
+        const link = e.target.closest('.chapter-link');
+        if (!link) return;
+        this.showChapterPreview(link);
+      });
+
+      // mouseout：隱藏 popup
+      document.addEventListener('mouseout', (e) => {
+        const link = e.target.closest('.chapter-link');
+        if (!link) return;
+        // 檢查 relatedTarget（滑鼠移到的下一個元素）是否還在 chapter-link 內
+        const related = e.relatedTarget;
+        if (related && link.contains(related)) return;
+        this.hideChapterPreview();
+      });
+    },
+
+    showChapterPreview(link) {
+      const popup = this._chapterPreviewEl;
+      if (!popup) return;
+      // 從 markdown-body 拿真實 YouTube ID（hover preview 縮圖 URL 用）
+      const body = link.closest('.markdown-body');
+      const ytId = body?.dataset.ytId;
+      const time = parseInt(link.dataset.time, 10);
+      if (!ytId || isNaN(time)) return;
+
+      // 設 YouTube 縮圖（先試 maxres，失敗 fallback hqdefault）
+      const img = popup.querySelector('.chapter-preview-img');
+      const imgUrl = `https://i.ytimg.com/vi/${ytId}/maxresdefault.jpg`;
+      if (img.src !== imgUrl) {
+        img.onerror = () => {
+          img.onerror = null;
+          img.src = `https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`;
+        };
+        img.src = imgUrl;
+      }
+
+      // 設 caption
+      popup.querySelector('.chapter-preview-caption').textContent = `${this.formatTime(time)}`;
+
+      // 定位（hover 元素正上方）
+      const rect = link.getBoundingClientRect();
+      popup.style.display = 'block';
+      popup.style.left = `${rect.left + rect.width / 2}px`;
+      // popup 高度 = img 135 + caption ~38 + gap 8 = 181
+      popup.style.top = `${rect.top - 181}px`;
+
+      // 邊界檢查：popup 不能超出視窗頂部
+      const popupRect = popup.getBoundingClientRect();
+      if (popupRect.top < 8) {
+        // 改為顯示在 hover 元素下方
+        popup.style.top = `${rect.bottom + 8}px`;
+      }
+    },
+
+    hideChapterPreview() {
+      if (this._chapterPreviewEl) {
+        this._chapterPreviewEl.style.display = 'none';
+      }
+    },
+
+    // 秒數 → MM:SS 或 HH:MM:SS
+    formatTime(seconds) {
+      const h = Math.floor(seconds / 3600);
+      const m = Math.floor((seconds % 3600) / 60);
+      const s = seconds % 60;
+      if (h > 0) return `${h}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+      return `${m}:${s.toString().padStart(2, '0')}`;
     },
 
     // ===== Theme =====
