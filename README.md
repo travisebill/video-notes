@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **60 支內容** · 102 個音檔 · 60 個逐字稿 · 34 個口播稿
-> 最後更新：2026-06-29
+> **61 支內容** · 105 個音檔 · 61 個逐字稿 · 35 個口播稿
+> 最後更新：2026-06-30
 
 ---
 
@@ -21,6 +21,7 @@
 - **2026-06-27** | TVBS 文茜的世界周報（歐洲版）| [英國脫歐公投十週年：脫歐後換七首相](國際局勢/20260627_TVBS_文茜_英國脫歐.md) · 48 分 11 秒（YouTube 一般路徑，繁中 Whisper small CPU 聽寫 48 分鐘）
 - **2026-06-19** | 馬臉姐 | [AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說](技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md) · 29 分 55 秒（YouTube 一般路徑，中文 30 分鐘 base 模型）
 - **2025-10-31** | 馬臉姐 | [AI 2027 報告：兩種結局、6 段時間線，與台灣在 AI 晶片戰爭中的關鍵角色](技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md) · 39 分 18 秒（YouTube 一般路徑，中文 39 分鐘 base 模型）
+- **2026-06-30** | Dr. David Eagleman（Stanford neuroscientist）× Steven Bartlett | [Stanford 神經科學家：記不住夢境可能是大腦在警告你！](人物訪談/20260423_Eagleman_DreamsWarningSignals.md) · 1 小時 33 分 18 秒（YouTube 英文自動字幕 → 繁中翻譯）
 - **2026-06-28** | 自說自話的總裁 | [煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明](人物訪談/20260627_自說自話的總裁_煤與Starship與2100年的地球.md) · 30 分 54 秒（YouTube 一般路徑，detect_source_type.py 自動分流驗證）
 - **2026-06-27** | Angelos（Apple MLX team 工程師）| [Run local agentic AI on the Mac using MLX — WWDC26 Session 232（HTML-Video-Page 路徑）](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · 13 分 26 秒（HTML-Video-Page）
 - **2026-06-26** | Martin Fowler（martinfowler.com 軟體工程思想家）+ 中文摘要 doggy8088（Will 保哥）| [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) · 技術文章

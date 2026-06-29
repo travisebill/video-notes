@@ -1,0 +1,97 @@
+> **影片**：Stanford Neuroscientist: Can't Remember Your Dreams? Your Brain May Be Warning You!
+> **講者**：Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者）× Steven Bartlett（訪談主持人）
+> **頻道**：The Diary Of A CEO
+> **長度**：1:33:18（5598 秒）
+> **上傳**：2026-04-23
+> **語言**：英文 → 繁中翻譯版
+> **來源**：https://youtu.be/m-nnyNZ0TQ0
+> **字幕來源**：YouTube 英文自動字幕（en auto-generated VTT）
+
+---
+
+## Opening / Teaser
+
+After many many decades of people debating this, you might have figured out the reason why we dream. Yes. And it's a simple answer. So if you go blind, the visual cortex in the back of the brain gets taken over by hearing and by touch and by other things. In fact, our colleagues at Harvard did an experiment where they blindfolded normally sighted people. And you could start seeing that takeover happening after 60 minutes. And that's when we realized, wow, the purpose of dreaming is to defend the visual territory from takeover from the other senses. But what fascinates me about brain plasticity and what I've devoted my career to is figuring out the way that we can be the sculptors of our own brains and how it gives us an opportunity to become the kind of person we would like to be.
+
+---
+
+## 主題與背景
+
+Dr. David Eagleman 是 Stanford 大學神經科學家，專攻知覺、時間感、大腦可塑性，著有《Incognito: The Secret Lives of the Brain》（暢銷書，已翻譯成 30 種語言），並主持 PBS 節目《The Brain with David Eagleman》。本訪談是《The Diary Of A CEO》節目，時長 1 小時 33 分，覆蓋大腦可塑性、夢境功能、無意識决策、 Ulysses 合約（預先承諾策略）、AI 與教育等議題。
+
+---
+
+## 章節脈絡
+
+### Section 1｜為何研究大腦：大腦是世界的模型建構者（00:00 ~ 08:00）
+
+Eagleman 自述 8 歲時從正在建造的房屋屋頂跌落 12 英尺，鼻梁摔斷，但整個掉落過程似乎經歷了很長時間。他計算後發現實際只花了 0.6 秒。這讓他開始思考：為何主觀時間與客觀時間有如此大的鴻溝？這驅使他一生研究大腦如何建構現實模型。他指出，大腦重約三磅，封閉在顱骨內，卻能建構整個世界的模型，讓人類區分「真實」與「大腦的建構物」。Bartlett 提問：大多數人幾乎不知道自己有一顆大腦，這種無知如何影響生活品質？
+
+### Section 2｜大腦是「競爭者的團隊」：神經議會模型（08:00 ~ 20:00）
+
+Eagleman 提出核心比喻：人不是單一行動者，而是「競爭者的團隊」（team of rivals）。人類大腦有 860 億個神經元，這些細胞構成不同網絡，不同網絡在不同的時刻爭奪控制權。例如：面前出現巧克力餅乾時，大腦一部分說「吃吧，這是優質能量」；另一部分說「不行，會發胖」；還有一部分說「吃一塊，然後晚上去健身房」。人的行為取決於當下哪個神經網絡「投票獲勝」。Eagleman 將此比作議會：各政黨都愛國，只是路線不同。理解這一點，對自我認識極為關鍵——每個人在不同情境下會做出截然不同的行為，這不是人格分裂，而是正常的神經機制。Eagleman 進一步提出「Ulysses 合約」（Ulysses Contract）概念：人在清醒、冷靜時預先約束自己，以防止未來某個版本的自己在脆弱時刻做出後悔的行為。例如：參加匿名戒酒會的人，首先被要求清除家中所有酒精——即使此刻決心戒酒，未來某個孤獨的週六夜晚，可能會衝動開櫃。
+
+### Section 3｜大腦可塑性：關鍵期與語言學習（20:00 ~ 35:00）
+
+Eagleman 解釋「大腦可塑性」（brain plasticity）名稱由來：心理學家 William James 100 年前指出，若把大腦當成塑膠這種可任意塑形並保持形狀的材料，就能理解大腦如何運作——神經網絡會根據經驗改變並保持這些改變。人類嬰兒出生時神經元數量已與成人相當，此後是「連接->連接->連接」的過程，到約兩歲時達到「過度生長的花園」狀態，隨後開始「修剪」——強化有用的連接，移除無用的。這就是為何語言需要在生命最初幾年學習：若錯過關鍵期，大腦將永遠無法獲得「語言」這一概念（而非只是「外語」）。Eagleman 以羅馬尼亞孤兒院為例：1989 年齊奧塞斯庫政權倒台後，數萬名孤兒在缺乏語言刺激的環境下成長，導致嚴重認知缺陷。即使後來被收養，這些孩子在成年後仍面臨學習障礙。Eagleman 指出，人類與馬、狗等動物的腦結構基本相同，差異在於人類大腦皮層（cortex）——大腦外層皺褶部分——比例遠高於其他物種，且可塑性更強。這讓人類能在短短 20 年內吸收數萬年文明積累的知識，並在此基礎上繼續創新。
+
+### Section 4｜如何改變大腦：認知儲備與尋求挑戰（35:00 ~ 48:00）
+
+Eagleman 強調，大腦改變減少的原因不是可塑性消失，而是因為大腦已經「想通了」如何應對世界。但人在退休後若停止挑戰，大腦會快速退化。他引述「修女研究」（Religious Orders Study）：一群修女死後捐贈大腦供解剖，發現部分修女即使患有阿茲海默症（大腦組織已退化），生前的認知測驗卻完全正常。原因在於：修女們在修道院度過一生，始終有社交互動、爭吵、遊戲、家務——不斷有新挑戰，讓大腦持續建立新神經通路。相比之下，65 歲退休後在家看電視、社交圈萎縮的人，認知退化風險大幅上升。Eagleman 說：「對大腦而言，沒有什麼比與他人互動更困難的事了——因為你永遠無法預測對方會說什麼、做什麼、會有什麼情緒反應。」如何主動改變？關鍵在於「保持在舒適區邊緣」：任務要有點難度，但又可達成；不斷追求新事物，成為某領域的專家後，刻意放下，去做不擅長的事。這會迫使大腦建立新通路。他也提到疫情的意外好處：所有人被迫重新評估世界如何運作，挑戰了既有的內部世界模型——這正是大腦需要的刺激。
+
+### Section 5｜夢境的功能：睡覺時大腦在做什麼（40:00 ~ 52:00）
+
+回到開場 teaser 揭示的核心問題：人類為什麼做夢？Eagleman 指出，做夢不是無意義的随机活動，而是大腦的防御機制。每 90 分鐘，大腦會向視覺系統隨機發射神經活動——只針對視覺系統，很小範圍。其目的是：維護視覺皮層的領地，防止其他感官（如聽覺、觸覺）佔據這塊「領土」。這就是為何盲人（包括先天失明者）仍然做夢——夢境神經迴路太古老，所有動物都有，即使動物在進化中失去了視力，大腦仍保留了這套維護機制。Harvard 的實驗證實：讓視力正常的人蒙眼 60 分鐘，其視覺皮層就開始對聲音和觸覺產生反應——60 分鐘內就出現神經重組！Eagleman 形容：「大自然給了我們一台電視機，每晚當真實的電視關閉後，這台假電視就會打開，保持大腦視覺系統的活力，否則它會退化。」
+
+### Section 6｜APHANTASIA 與心智表徵的光譜（52:00 ~ 58:00）
+
+Eagleman 透露自己是「aphantasia」（心盲症）患者——完全無法在腦中形成視覺圖像。他說：「我腦中沒有任何視覺畫面。沒有。」（There's no. I don't see.）他的妻子問他：「你的意思是，當你想到海灘時，你看不到沙灘？」（When you think of a beach, you can't see the sand?）他回答：「對，完全看不到。我只知道自己喜歡海灘這個概念。」Bartlett 描述自己的畫面：「我看到一隻大黑螞蟻，旁邊是一罐溢出來的果凍罐，木蓋，螞蟻快到了。」Eagleman 確認：Bartlett 處於光譜的另一端「hyperphantasia」——具有極豐富視覺化能力的人。這種差異說明了人類心智表徵（mental representation）的多樣性：有些人用視覺思考，有些人用聽覺，有些人純概念性思考，沒有誰的方式更優越——只有不同。
+
+### Section 7｜AI 與大腦：對年輕人的樂觀主義（58:00 ~ 70:00）
+
+Eagleman 表明自己是「網路樂觀主義者」（cyber optimist）——他相信網路和社群媒體會讓年輕人比上一代更聰明，原因與大腦可塑性理論一致：接觸的資訊越多，環境越豐富，大腦建立的連接就越豐富。他強調 AI 是「超速學習機」——可以壓縮數十年學習曲線，讓年輕人以更快速度掌握各領域。但他也提出一個重要警示：AI 節省時間的代價是「良性摩擦」（virtuous friction）消失了。當你親自做艱難的事，大腦才能建立新的神經通路；把困難的事交給 AI，你的大腦就少了這個建立的機會。他用「啞鈴」比喻：啞鈴的阻力是健身的必要條件，沒有阻力就沒有肌肉生長。AI 的問題不在於用，而在於「完全依賴它而不動腦」。Bartlett 提到，他可以透過員工提交的商業計劃書幾乎精確判斷他們用了哪個 AI 模型——因為所有 AI 輸出都有相似的「平淡感」（blandness）。Eagleman 同意：真正頂尖的人類創作者（貝多芬、愛因斯坦）無法被 AI 取代，因為他們的作品來自於文化土壤與個人經歷的獨特混合——這是 AI 只能「混合重組」而無法真正創造的。
+
+### Section 8｜自由意志與無意識大腦：《INCOCONITO》核心論點（70:00 ~ 78:00）
+
+Eagleman 在其著作《Incognito》中提出的核心論點：我們的意識自我（conscious self）只是大腦活動的一小部分，其餘大部分在意識之下運作。他比喻：意識是海面上的浪花，而無意識是海面下巨大的冰山主體。Bartlett 問：「如果連我做的決定都是大腦預先計算好的，我真的有自由意志嗎？」Eagleman 回應：「自由意志的問題比大多數人想的更複雜。我們不是完全沒有選擇，也不是完全自由。大腦的不同網絡在競爭，意識給了我們『暫停』並介入的機會——這就是改變的可能所在。」他認為，意識最重要的功能不是控制，而是提供「選擇的空間」：在刺激與反應之間，有一個可以介入的縫隙。理解大腦的無意識機制，是為了更好地利用這個縫隙。
+
+### Section 9｜Ulysses 合約與 2027 新書（78:00 ~ 88:00）
+
+訪談尾聲，Bartlett 問及 Eagleman 即將在 2027 年出版的新書，主題正是「Ulysses 合約」——如何運用對大腦的認識，預先設計自己的生活環境與約束條件，讓「未來的自己」無法做出後悔的行為。Eagleman 說：「人在清醒、冷靜、有洞察力時所寫的合約，可以保護你在脆弱、疲憊或衝動時不受自己的傷害。」他舉例：健身房的會員費（即使很少去，每年仍在付款）是 Ulysses 合約的一種形式；刪除社群媒體 app 是另一種——在平靜的週日預先決定，不在孤獨的週六晚上刷手機。Eagleman 認為，理解大腦的「團隊競合」機制，是設計有效 Ulysses 合約的前提：你需要知道在什麼情境下，哪個版本的自己會獲勝，然後提前阻止那個情境。
+
+### Section 10｜大腦健康長壽與總結（88:00 ~ 93:18）
+
+訪談最後，Bartlett 問：「如果我想在 80 歲時還保持認知健康，有什麼建議？」Eagleman 的回答簡潔有力：「保持大腦活躍，直到死亡那天。主動尋求新的挑戰。一旦擅長某件事——比如數獨——就放棄它，去做你不擅長的事。」原因在於：大腦需要「被迫改變」才會建立新通路；當大腦認為自己「已經搞懂了世界」，就會停止重塑，這就是認知老化的開始。最後，Bartlett 總結：了解大腦如何運作，讓他對「成長型思維」（growth mindset）更有信念——如果現在不是某種人，不代表明天不能成為那種人。Eagleman 表示同意，並預告 2027 年新書將會是「每個人都需要的操作手冊」。
+
+---
+
+## 重點引述
+
+> Eagleman: "You are not one person. You are a team of rivals. The way that your ship of state moves depends on the vote of the neural parliament at any time."
+
+> Eagleman: "The purpose of dreaming is to defend the visual territory from takeover from the other senses."
+
+> Eagleman: "Nothing is as hard for the brain as other people, because you never know what the other person's going to say and do and how they'll react emotionally."
+
+> Eagleman: "The brain peaked at the age of two. At the beginning, you've got fluid intelligence — you could learn anything. But now that you have grown up in this world, you've got crystallized intelligence, meaning you know how to drive a car, operate a cell phone, run a business."
+
+> Bartlett: "If I'm not something now, it doesn't mean that I can't be tomorrow."
+
+---
+
+## 反思 / 啟發
+
+1. **自我認識不等於「認識一個單一的我」**：了解大腦的「團隊競合」機制，意味著承認自己有多個「版本」——在設計 Ulysses 合約時，必須為每個版本的自己做好預防。
+2. **挑戰是神經可塑性的燃料**：刻意維持在舒適區邊緣，主動追求不擅長的事，是對抗認知老化最有效的方法。
+3. **夢境是大腦的維護系統**：每晚睡眠時，大腦在執行類似「磁碟重組」的工作——這也許是為何睡眠剝奪會導致認知急劇下降的原因之一。
+4. **AI 的代價是「良性摩擦」消失**：Eagleman 的警示在 AI 加速滲透教育與工作的當下格外重要——省時的代價可能是大腦發育的損失。
+5. **aphantasia 不是缺陷，只是差異**：Eagleman 自己沒有視覺想象力，但仍是世界頂尖的神經科學家——心智表徵方式沒有優劣之分。
+6. **自由意志的可能：介入「刺激與反應之間」的縫隙**：意識不能控制所有大腦活動，但提供了「暫停並選擇」的可能性——這是神經可塑性的另一種應用。
+
+---
+
+## 相關資源
+
+- Eagleman 著《Incognito: The Secret Lives of the Brain》（中文版《潛意識：控制你行為的幕後黑手》）
+- Eagleman 主持 PBS 系列《The Brain with David Eagleman》
+- Eagleman 2027 年新書（主題：Ulysses Contract / 預先承諾策略）
