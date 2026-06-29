@@ -44,6 +44,55 @@ body.modal-open {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
+/* YouTube 縮圖（v0.5 2026-06-29）*/
+.video-thumbnail-link {
+  display: block;
+  position: relative;
+  margin: -0.8rem -0.8rem 0.6rem -0.8rem;  /* 抵消 card padding，縮圖貼齊邊緣 */
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  background: var(--pico-background-color);
+  line-height: 0;
+}
+
+.video-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.video-thumbnail-link:hover .video-thumbnail {
+  transform: scale(1.05);
+  filter: brightness(0.85);
+}
+
+.video-thumbnail-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding-left: 4px;  /* ▶ 視覺置中 */
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.video-thumbnail-link:hover .video-thumbnail-play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
 .video-card header {
   padding: 0;
   margin-bottom: 0.5rem;
