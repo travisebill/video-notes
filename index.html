@@ -203,7 +203,7 @@
                 </div>
 
                 <!-- Note content (markdown) -->
-                <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'note'" class="content-area markdown-body" :data-video="video.id" x-html="renderedContent[video.id + '_note']"></div>
+                <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'note'" class="content-area markdown-body" :data-video="video.id" :data-yt-id="video.yt_id" x-html="renderedContent[video.id + '_note']"></div>
 
                 <!-- Transcript content (plain text) -->
                 <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'transcript'" class="content-area transcript-body">
