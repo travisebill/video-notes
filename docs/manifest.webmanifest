@@ -1,0 +1,67 @@
+{
+  "name": "Video Notes — 影片摘要與口說音檔",
+  "short_name": "VideoNotes",
+  "description": "結構化影片筆記 + TTS 口說音檔瀏覽器。支援按類別、講者、主題、日期篩選 + 全文搜尋 + 章節時間戳跳 YouTube。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#1d3557",
+  "theme_color": "#1095c1",
+  "lang": "zh-TW",
+  "categories": ["productivity", "education", "books"],
+  "icons": [
+    {
+      "src": "./icons/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/favicon-64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/favicon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "技術講座",
+      "short_name": "技術",
+      "description": "瀏覽技術講座類影片摘要",
+      "url": "./index.html?category=技術講座",
+      "icons": [{"src": "./icons/icon-192.png", "sizes": "192x192"}]
+    },
+    {
+      "name": "財經分析",
+      "short_name": "財經",
+      "description": "瀏覽財經分析類影片摘要",
+      "url": "./index.html?category=財經分析",
+      "icons": [{"src": "./icons/icon-192.png", "sizes": "192x192"}]
+    }
+  ]
+}
