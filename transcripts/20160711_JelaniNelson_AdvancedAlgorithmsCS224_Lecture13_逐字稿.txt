@@ -1,0 +1,3121 @@
+Yeah,<00:00:01.200> so
+Yeah, so
+well,<00:00:02.600> thanks<00:00:02.840> for<00:00:03.000> coming.
+well, thanks for coming.
+So<00:00:04.320> my<00:00:04.480> name<00:00:04.760> is
+So my name is
+Runge.<00:00:06.520> I'm<00:00:06.760> a<00:00:06.840> postdoc<00:00:07.400> at<00:00:07.840> Microsoft
+Runge. I'm a postdoc at Microsoft
+Research<00:00:09.120> just<00:00:09.360> down<00:00:09.520> the<00:00:09.600> street.<00:00:10.520> So<00:00:11.640> Jelani
+Research just down the street. So Jelani
+is<00:00:12.240> not<00:00:12.440> here<00:00:12.640> today<00:00:12.920> and<00:00:13.160> I<00:00:13.280> will<00:00:13.440> be<00:00:14.040> giving<00:00:14.360> a
+is not here today and I will be giving a
+guest<00:00:15.200> lecture.
+guest lecture.
+So
+um
+Well,<00:00:27.920> so<00:00:28.160> today<00:00:28.480> I'm<00:00:28.600> going<00:00:28.800> to<00:00:28.920> talk<00:00:29.200> about
+Well, so today I'm going to talk about
+learning<00:00:30.400> topic<00:00:30.760> models<00:00:31.520> which<00:00:31.880> is
+learning topic models which is
+part<00:00:33.320> of<00:00:33.520> a<00:00:33.760> research<00:00:34.440> that<00:00:35.280> I've<00:00:35.440> been<00:00:35.640> doing
+part of a research that I've been doing
+where<00:00:36.600> we're<00:00:36.800> trying<00:00:37.120> to<00:00:37.280> apply<00:00:38.200> the
+where we're trying to apply the
+algorithm<00:00:38.760> design<00:00:39.120> techniques<00:00:39.640> in
+algorithm design techniques in
+theoretical<00:00:40.400> computer<00:00:40.720> science,
+theoretical computer science,
+the<00:00:41.880> stuff<00:00:42.160> that<00:00:42.400> you<00:00:42.520> have<00:00:42.720> been<00:00:42.920> learning
+the stuff that you have been learning
+through<00:00:43.960> this<00:00:44.160> course<00:00:45.080> to<00:00:45.480> machine<00:00:45.760> learning
+through this course to machine learning
+problems<00:00:46.680> and<00:00:47.000> to<00:00:47.120> get
+problems and to get
+algorithms<00:00:48.920> for
+algorithms for
+machine<00:00:50.200> learning<00:00:50.440> problems.
+machine learning problems.
+So<00:00:53.240> please<00:00:53.840> stop<00:00:54.120> me<00:00:54.320> anytime<00:00:54.760> if<00:00:54.920> you<00:00:55.040> have
+So please stop me anytime if you have
+any<00:00:55.680> questions<00:00:56.640> and<00:00:57.400> uh
+any questions and uh
+Jelani<00:00:58.640> told<00:00:58.960> me<00:00:59.280> that<00:01:00.120> someone<00:01:00.600> is<00:01:00.760> going<00:01:01.040> to
+Jelani told me that someone is going to
+scribe<00:01:01.920> the<00:01:02.320> oh<00:01:03.080> uh
+scribe the oh uh
+Thanks.
+So<00:01:05.120> if<00:01:05.280> you<00:01:05.640> need<00:01:05.920> anything
+So if you need anything
+you<00:01:07.120> can<00:01:07.480> send<00:01:07.720> me<00:01:07.840> an<00:01:08.000> email.
+Yeah,<00:01:11.880> so<00:01:12.760> um
+Yeah, so um
+So
+let<00:01:16.440> me<00:01:16.560> start<00:01:17.000> with<00:01:17.920> some<00:01:18.720> very<00:01:19.000> brief
+let me start with some very brief
+introduction<00:01:20.160> to
+introduction to
+what<00:01:21.400> are<00:01:22.000> the<00:01:22.120> machine<00:01:22.400> learning<00:01:22.640> problems
+what are the machine learning problems
+that<00:01:23.320> we<00:01:23.440> are<00:01:23.600> interested<00:01:24.120> in.
+that we are interested in.
+Of<00:01:25.240> course,<00:01:25.760> machine<00:01:26.040> learning<00:01:26.440> is<00:01:26.920> very
+Of course, machine learning is very
+broad<00:01:27.840> area.<00:01:28.760> Machine<00:01:29.040> learning<00:01:29.360> takes
+broad area. Machine learning takes
+several<00:01:30.800> courses<00:01:31.240> to<00:01:31.440> explain<00:01:31.960> so
+several courses to explain so
+I'm<00:01:33.440> going<00:01:33.640> to<00:01:33.720> explain
+I'm going to explain
+only<00:01:35.280> the<00:01:35.400> parts<00:01:35.720> that's<00:01:36.440> most<00:01:36.720> relevant<00:01:37.200> to
+only the parts that's most relevant to
+the<00:01:38.480> topic<00:01:38.800> models<00:01:39.280> that<00:01:39.480> we<00:01:39.600> are<00:01:39.720> going<00:01:39.920> to
+the topic models that we are going to
+talk<00:01:40.200> about<00:01:40.440> today.
+talk about today.
+So<00:01:42.200> in<00:01:42.320> general<00:01:42.680> there<00:01:42.880> are<00:01:43.040> many<00:01:43.320> kind<00:01:43.600> of
+So in general there are many kind of
+learning<00:01:44.320> problems.
+So<00:01:49.280> the<00:01:49.400> most<00:01:49.680> popular<00:01:50.640> machine<00:01:50.920> learning
+So the most popular machine learning
+problem<00:01:51.800> that<00:01:52.560> um
+problem that um
+people<00:01:53.760> most<00:01:54.200> often<00:01:54.600> try<00:01:54.800> to<00:01:54.960> solve<00:01:55.280> is<00:01:55.480> called
+people most often try to solve is called
+the<00:01:56.040> supervised<00:01:56.760> learning<00:01:56.880> problem.
+the supervised learning problem.
+Uh
+So,<00:02:03.760> in<00:02:03.880> supervised<00:02:04.479> learning<00:02:05.160> uh<00:02:05.200> it's<00:02:05.360> like
+So, in supervised learning uh it's like
+you<00:02:05.800> want<00:02:06.040> to<00:02:06.240> learn<00:02:06.960> uh<00:02:07.120> spam<00:02:07.520> filter.<00:02:08.479> Uh<00:02:08.720> you
+you want to learn uh spam filter. Uh you
+are<00:02:09.000> given<00:02:09.320> an<00:02:09.479> email,<00:02:10.080> or<00:02:10.280> you<00:02:10.440> are<00:02:10.720> actually
+are given an email, or you are actually
+given<00:02:11.320> a<00:02:11.360> lot<00:02:11.600> of<00:02:11.760> emails,<00:02:12.280> and<00:02:12.600> you<00:02:12.720> have
+given a lot of emails, and you have
+labels<00:02:13.480> whether<00:02:14.000> these<00:02:14.280> emails<00:02:14.720> are<00:02:14.880> spam<00:02:15.320> or
+labels whether these emails are spam or
+not.
+Uh<00:02:17.120> and<00:02:17.520> the<00:02:17.600> goal<00:02:17.800> is<00:02:17.959> to<00:02:18.120> learn<00:02:18.360> a<00:02:18.440> function
+Uh and the goal is to learn a function
+that<00:02:20.000> um
+Uh<00:02:23.240> the<00:02:23.320> goal<00:02:23.480> is<00:02:23.640> to<00:02:23.760> learn<00:02:24.000> a<00:02:24.040> function<00:02:24.600> that
+Uh the goal is to learn a function that
+uh<00:02:25.280> given<00:02:25.800> a<00:02:25.880> new<00:02:26.120> email,<00:02:27.000> you<00:02:27.120> want<00:02:27.320> to<00:02:27.440> know
+uh given a new email, you want to know
+whether<00:02:27.920> it's<00:02:28.120> spam<00:02:28.400> or<00:02:28.520> not.<00:02:28.880> And<00:02:29.160> that's
+whether it's spam or not. And that's
+called<00:02:29.640> supervised<00:02:30.200> learning.
+called supervised learning.
+In<00:02:31.360> supervised<00:02:31.920> learning,<00:02:32.280> we<00:02:32.400> are<00:02:32.560> given
+In supervised learning, we are given
+uh<00:02:33.560> both<00:02:33.959> data<00:02:34.280> points<00:02:35.040> and<00:02:35.520> uh<00:02:35.600> labels,<00:02:36.520> and
+uh both data points and uh labels, and
+the<00:02:36.760> goal<00:02:36.959> is<00:02:37.160> to<00:02:37.920> given<00:02:38.240> new<00:02:38.400> data<00:02:38.680> points,<00:02:39.120> we
+the goal is to given new data points, we
+want<00:02:39.480> to<00:02:39.600> predict<00:02:40.120> its<00:02:40.400> label.
+want to predict its label.
+Uh<00:02:42.520> but<00:02:42.680> that's<00:02:42.920> not<00:02:43.240> the<00:02:43.640> kind<00:02:43.880> of<00:02:44.560> uh
+Uh but that's not the kind of uh
+learning<00:02:45.160> that<00:02:45.360> we're<00:02:45.560> going<00:02:45.760> to<00:02:45.959> talk<00:02:46.160> about
+learning that we're going to talk about
+today.<00:02:46.680> So,<00:02:46.880> by<00:02:47.040> the<00:02:47.160> way,<00:02:47.360> supervised
+today. So, by the way, supervised
+learning<00:02:48.360> is<00:02:48.720> very<00:02:48.959> well<00:02:49.200> studied<00:02:49.959> uh<00:02:50.040> under
+learning is very well studied uh under
+the<00:02:50.480> name<00:02:50.800> computational<00:02:51.600> learning<00:02:51.920> theory
+the name computational learning theory
+uh
+for<00:02:53.800> many<00:02:54.080> decades,<00:02:54.680> and<00:02:54.959> there<00:02:55.120> has<00:02:55.360> been<00:02:55.680> a
+for many decades, and there has been a
+lot<00:02:56.040> of<00:02:56.280> beautiful<00:02:56.680> theory.
+lot of beautiful theory.
+Uh<00:02:57.920> but<00:02:58.120> again,<00:02:58.600> we<00:02:58.760> will<00:02:58.959> not<00:02:59.239> have<00:02:59.400> time<00:02:59.640> to
+Uh but again, we will not have time to
+uh<00:03:00.200> touch<00:03:00.480> any<00:03:00.640> of<00:03:00.760> those<00:03:01.400> uh<00:03:01.640> today.
+uh touch any of those uh today.
+Uh<00:03:02.959> the<00:03:03.080> problem<00:03:03.480> that<00:03:03.760> we<00:03:03.880> are<00:03:04.080> interested<00:03:04.640> in
+Uh the problem that we are interested in
+uh<00:03:05.320> is<00:03:05.959> uh<00:03:06.000> different<00:03:06.480> because<00:03:07.480> uh
+uh is uh different because uh
+Uh<00:03:08.880> they<00:03:09.040> are<00:03:09.160> called<00:03:09.440> unsupervised<00:03:10.120> learning
+Uh they are called unsupervised learning
+problems.
+In<00:03:14.160> unsupervised<00:03:14.840> learning<00:03:15.160> problem,<00:03:16.200> uh
+In unsupervised learning problem, uh
+the<00:03:17.200> idea<00:03:17.560> is<00:03:18.400> sometimes<00:03:18.920> it's<00:03:19.239> very<00:03:19.840> hard<00:03:20.280> or
+the idea is sometimes it's very hard or
+costly<00:03:20.959> to<00:03:21.160> get<00:03:21.360> the<00:03:21.480> labels.
+costly to get the labels.
+Uh<00:03:23.560> usually<00:03:24.120> to<00:03:24.280> get<00:03:24.440> the<00:03:24.519> labels,<00:03:24.959> we<00:03:25.000> will
+Uh usually to get the labels, we will
+need<00:03:25.440> to
+need to
+human<00:03:26.760> to<00:03:27.000> label<00:03:27.480> all<00:03:27.640> the<00:03:27.760> documents<00:03:28.400> or
+human to label all the documents or
+emails<00:03:29.440> or<00:03:29.600> whatever<00:03:30.280> you<00:03:30.400> want<00:03:30.600> to<00:03:30.720> classify.
+emails or whatever you want to classify.
+Uh<00:03:32.720> so,<00:03:32.920> the<00:03:33.080> idea<00:03:33.320> of<00:03:33.560> unsupervised<00:03:34.200> learning
+Uh so, the idea of unsupervised learning
+is<00:03:35.120> what<00:03:35.320> can<00:03:35.480> we<00:03:35.640> do<00:03:36.360> uh<00:03:36.440> without<00:03:36.800> labels?
+is what can we do uh without labels?
+So,<00:03:38.800> in<00:03:39.000> unsupervised<00:03:39.760> learning,<00:03:40.320> the<00:03:40.640> input
+So, in unsupervised learning, the input
+to<00:03:41.680> the<00:03:41.800> problem
+to the problem
+uh<00:03:43.239> will<00:03:43.519> just<00:03:43.760> be
+uh will just be
+uh<00:03:44.760> data<00:03:45.000> points
+uh data points
+uh
+uh<00:03:47.600> X<00:03:48.320> in<00:03:48.959> whatever<00:03:49.360> space<00:03:50.000> that
+uh X in whatever space that
+will<00:03:51.239> not<00:03:51.760> specify.
+will not specify.
+Uh<00:03:53.680> think<00:03:53.960> of<00:03:54.400> uh<00:03:54.520> example,<00:03:55.200> you<00:03:55.360> have<00:03:55.760> uh
+Uh think of uh example, you have uh
+uh<00:03:58.200> a<00:03:58.240> bunch<00:03:58.480> of<00:03:58.640> points<00:03:59.320> given<00:03:59.720> as<00:03:59.920> your<00:04:00.080> data
+uh a bunch of points given as your data
+for<00:04:01.320> the<00:04:01.520> unsupervised<00:04:02.160> learning<00:04:02.480> problem.
+And<00:04:06.280> uh<00:04:06.320> but<00:04:06.520> given<00:04:06.760> these<00:04:07.160> data<00:04:07.400> points
+And uh but given these data points
+without<00:04:08.120> any<00:04:08.320> labels,<00:04:08.840> what<00:04:09.040> can<00:04:09.200> we<00:04:09.360> hope<00:04:09.600> to
+without any labels, what can we hope to
+do?<00:04:10.480> Well,
+do? Well,
+one<00:04:11.480> thing<00:04:11.640> we<00:04:11.760> can<00:04:11.920> hope<00:04:12.160> to<00:04:12.360> do<00:04:12.640> is<00:04:12.959> to
+one thing we can hope to do is to
+uh
+to<00:04:15.200> learn<00:04:15.520> the<00:04:15.640> structure.
+Um
+uh<00:04:25.200> of<00:04:25.400> data.
+So,<00:04:29.600> one<00:04:29.800> thing<00:04:29.919> we<00:04:30.040> can<00:04:30.200> do<00:04:30.760> with<00:04:31.040> just<00:04:31.320> data
+So, one thing we can do with just data
+points<00:04:32.200> without<00:04:32.640> any<00:04:32.840> labels<00:04:33.720> is<00:04:34.160> we<00:04:34.280> can<00:04:34.480> say
+points without any labels is we can say
+maybe<00:04:35.200> this<00:04:35.600> data<00:04:36.000> has<00:04:36.200> some<00:04:36.440> pattern<00:04:36.880> or
+maybe this data has some pattern or
+structure
+that's<00:04:38.600> hiding<00:04:39.000> in<00:04:39.120> the<00:04:39.240> data<00:04:39.640> and<00:04:39.800> we<00:04:39.919> want<00:04:40.120> to
+that's hiding in the data and we want to
+find<00:04:40.919> that.
+find that.
+Uh<00:04:42.120> for<00:04:42.240> example,<00:04:42.600> in<00:04:42.720> this<00:04:42.919> example,<00:04:43.680> one
+Uh for example, in this example, one
+possible<00:04:44.400> structure<00:04:44.880> is<00:04:45.160> maybe<00:04:45.560> they<00:04:45.720> are<00:04:46.640> uh
+possible structure is maybe they are uh
+uh<00:04:47.560> these<00:04:47.880> three<00:04:48.200> clusters<00:04:49.320> and<00:04:50.080> um
+uh these three clusters and um
+maybe<00:04:51.880> these<00:04:52.160> clusters<00:04:52.680> have<00:04:52.960> some<00:04:53.200> meanings.
+maybe these clusters have some meanings.
+Um
+So,<00:04:55.960> uh<00:04:56.040> clustering<00:04:56.600> is<00:04:56.840> a<00:04:56.919> classical<00:04:57.440> example
+So, uh clustering is a classical example
+for<00:04:58.760> um
+for<00:05:01.919> unsupervised<00:05:02.560> learning.<00:05:02.919> In
+for unsupervised learning. In
+clustering,<00:05:03.600> you're<00:05:03.960> just<00:05:04.200> given<00:05:04.520> these
+clustering, you're just given these
+points
+and<00:05:06.040> the<00:05:06.160> goal<00:05:06.400> is<00:05:06.840> really<00:05:07.160> to<00:05:08.040> uh<00:05:08.120> find<00:05:09.160> uh<00:05:09.440> a
+and the goal is really to uh find uh a
+certain<00:05:09.840> number<00:05:10.120> of<00:05:10.280> clusters<00:05:10.919> so<00:05:11.080> that<00:05:11.640> uh
+certain number of clusters so that uh
+the<00:05:11.840> points
+the points
+within<00:05:13.200> the<00:05:13.320> same<00:05:13.560> cluster<00:05:14.160> are<00:05:14.440> similar
+within the same cluster are similar
+and<00:05:15.960> points<00:05:16.320> between<00:05:16.840> clusters<00:05:17.480> are
+and points between clusters are
+uh
+farther<00:05:19.600> away.
+So,
+um
+So,<00:05:27.600> that's<00:05:27.919> the<00:05:28.040> kind<00:05:28.240> of<00:05:28.400> problems<00:05:28.880> we<00:05:29.080> are
+So, that's the kind of problems we are
+interested<00:05:29.880> in<00:05:30.160> in<00:05:30.680> uh<00:05:30.720> unsupervised
+interested in in uh unsupervised
+learning.
+Um
+So,<00:05:36.680> one<00:05:36.880> of<00:05:37.000> the<00:05:37.240> important<00:05:37.720> problem<00:05:38.520> uh<00:05:38.600> in
+So, one of the important problem uh in
+unsupervised<00:05:39.520> learning<00:05:40.000> is
+unsupervised learning is
+uh
+So,<00:05:42.400> as<00:05:42.600> I<00:05:42.680> said,<00:05:43.040> our<00:05:43.240> goal<00:05:43.480> is<00:05:43.680> to<00:05:43.840> learn<00:05:44.400> the
+So, as I said, our goal is to learn the
+structure<00:05:44.919> in<00:05:45.040> the<00:05:45.160> data.
+structure in the data.
+Uh
+so<00:05:48.640> how<00:05:48.880> can<00:05:49.160> I<00:05:49.480> specify<00:05:50.280> what<00:05:50.640> is<00:05:50.760> the<00:05:50.880> kind<00:05:51.120> of
+so how can I specify what is the kind of
+structure<00:05:51.760> that<00:05:52.080> I<00:05:52.160> want<00:05:52.400> to<00:05:52.520> learn?<00:05:52.840> For
+structure that I want to learn? For
+example,<00:05:53.920> in<00:05:54.040> this<00:05:54.240> example,<00:05:54.720> I<00:05:54.800> want<00:05:55.000> to
+example, in this example, I want to
+learn<00:05:55.520> a<00:05:55.600> clustering,<00:05:56.800> but<00:05:57.040> what<00:05:57.240> other<00:05:57.480> kinds
+learn a clustering, but what other kinds
+of<00:05:58.320> structure<00:05:58.880> might<00:05:59.160> be<00:05:59.280> available<00:05:59.760> in<00:05:59.880> the
+of structure might be available in the
+data?
+Uh,<00:06:01.880> so<00:06:02.040> that's<00:06:02.680> not<00:06:02.960> always<00:06:03.320> very<00:06:03.640> easy<00:06:03.920> to
+Uh, so that's not always very easy to
+define.<00:06:04.920> And<00:06:05.840> um,
+define. And um,
+uh,<00:06:07.160> in<00:06:07.280> machine<00:06:07.520> learning<00:06:07.800> there's<00:06:08.440> actually
+uh, in machine learning there's actually
+a<00:06:08.840> very<00:06:09.080> popular<00:06:09.520> way<00:06:09.720> to<00:06:09.880> define<00:06:10.520> the
+a very popular way to define the
+structure.
+Uh,<00:06:14.160> so<00:06:14.400> defining
+uh,<00:06:18.680> structure.
+Uh,<00:06:22.880> so<00:06:23.960> the
+Uh, so the
+uh,<00:06:24.919> the<00:06:25.040> popular<00:06:25.520> way<00:06:26.040> of<00:06:26.280> defining
+uh, the popular way of defining
+structure<00:06:27.560> is
+structure is
+uh,<00:06:29.080> to<00:06:29.280> use<00:06:29.640> a<00:06:29.800> probabilistic<00:06:30.640> model.
+Um,<00:06:41.000> so<00:06:41.160> what<00:06:41.320> is<00:06:41.480> a<00:06:41.640> probabilistic<00:06:42.440> model?
+Um, so what is a probabilistic model?
+Well,<00:06:43.120> a<00:06:43.200> probabilistic<00:06:44.000> model,<00:06:45.040> uh,<00:06:45.760> well,
+Well, a probabilistic model, uh, well,
+first<00:06:46.240> it<00:06:46.400> takes<00:06:46.720> in<00:06:46.880> some<00:06:47.160> parameters<00:06:47.880> for
+first it takes in some parameters for
+the<00:06:48.120> model.
+the model.
+And<00:06:49.320> then<00:06:49.560> the<00:06:49.680> model<00:06:50.000> will<00:06:50.160> tell<00:06:50.440> you<00:06:50.680> how<00:06:51.080> to
+And then the model will tell you how to
+generate<00:06:52.600> a<00:06:52.720> set<00:06:52.919> of<00:06:53.080> points.
+generate a set of points.
+Uh,<00:06:56.440> and<00:06:56.600> the<00:06:56.680> parameters<00:06:57.480> will
+Uh, and the parameters will
+will<00:06:58.520> be
+will be
+um,
+the<00:07:01.000> kind<00:07:01.280> of<00:07:01.760> structure<00:07:02.720> we<00:07:02.880> are<00:07:03.160> looking
+the kind of structure we are looking
+for.
+So<00:07:04.520> this<00:07:04.760> might<00:07:04.960> be
+So this might be
+a<00:07:05.880> bit<00:07:06.120> abstract.
+a bit abstract.
+Well,<00:07:07.840> let<00:07:07.919> me<00:07:08.080> first<00:07:08.560> give<00:07:08.760> the<00:07:08.880> definition.
+Well, let me first give the definition.
+Uh,<00:07:10.800> a<00:07:10.880> probabilistic<00:07:11.680> model
+Uh,<00:07:16.560> by<00:07:16.680> the<00:07:16.800> way,<00:07:16.880> this<00:07:17.080> is<00:07:17.600> informal
+Uh, by the way, this is informal
+definition,<00:07:18.680> so
+uh,<00:07:22.800> is<00:07:23.040> a<00:07:23.120> function
+um,
+that<00:07:30.960> maps
+uh,<00:07:36.080> parameter<00:07:37.120> theta
+uh,<00:07:40.640> to
+uh, to
+uh<00:07:42.000> data<00:07:42.360> distribution.
+D<00:07:47.680> of<00:07:47.840> theta.
+Uh<00:07:53.800> so<00:07:54.000> then
+Uh so then
+um
+For<00:07:58.160> example,
+For example,
+uh
+one<00:08:00.400> of<00:08:00.520> the<00:08:00.720> simplest<00:08:01.480> uh<00:08:01.560> probabilistic
+one of the simplest uh probabilistic
+model<00:08:02.880> is<00:08:03.120> maybe<00:08:03.480> just<00:08:03.720> a<00:08:03.840> Gaussian<00:08:04.200> random
+model is maybe just a Gaussian random
+variable.
+For<00:08:06.040> a<00:08:06.080> Gaussian<00:08:06.440> random<00:08:06.720> variable,<00:08:07.560> we<00:08:07.680> can
+For a Gaussian random variable, we can
+specify<00:08:08.560> the<00:08:08.720> mean<00:08:09.080> and<00:08:09.280> variance<00:08:10.000> of<00:08:10.360> this
+specify the mean and variance of this
+Gaussian<00:08:10.920> variable.
+Gaussian variable.
+Uh<00:08:13.320> and
+Uh and
+uh<00:08:14.520> once<00:08:14.800> we<00:08:14.960> know<00:08:15.160> the<00:08:15.280> mean<00:08:15.520> and<00:08:15.760> the
+uh once we know the mean and the
+variance<00:08:16.240> of<00:08:16.400> the<00:08:16.480> Gaussian<00:08:16.800> variable,<00:08:17.240> of
+variance of the Gaussian variable, of
+course,<00:08:17.720> we<00:08:17.840> can<00:08:18.480> uh<00:08:18.560> sample<00:08:19.480> points<00:08:19.960> from
+course, we can uh sample points from
+this<00:08:20.440> Gaussian<00:08:20.800> distribution.
+this Gaussian distribution.
+Uh<00:08:22.680> and<00:08:22.840> that's<00:08:23.120> quite<00:08:23.440> easy.
+Uh and that's quite easy.
+Uh<00:08:25.240> then<00:08:25.520> the<00:08:25.640> learning<00:08:26.000> problem<00:08:26.480> will
+Uh then the learning problem will
+correspond<00:08:27.120> to<00:08:27.440> given<00:08:28.280> many<00:08:28.520> samples<00:08:29.080> from
+correspond to given many samples from
+this<00:08:29.640> Gaussian<00:08:30.000> distribution,<00:08:30.919> I<00:08:31.040> want<00:08:31.240> to
+this Gaussian distribution, I want to
+estimate<00:08:32.640> the<00:08:32.760> mean<00:08:33.039> and<00:08:33.159> the<00:08:33.240> variance<00:08:33.840> of
+estimate the mean and the variance of
+this<00:08:34.240> Gaussian.
+this Gaussian.
+Uh<00:08:37.039> so<00:08:37.159> the<00:08:37.280> learning<00:08:37.599> problem<00:08:38.200> is<00:08:38.520> really<00:08:38.840> the
+Uh so the learning problem is really the
+inverse<00:08:40.039> of<00:08:40.520> the<00:08:41.159> data-generating<00:08:42.320> process.
+inverse of the data-generating process.
+Uh<00:08:44.200> so<00:08:44.360> the<00:08:44.440> Gaussian<00:08:45.440> problem<00:08:45.960> might<00:08:46.240> be<00:08:46.920> uh<00:08:47.000> a
+Uh so the Gaussian problem might be uh a
+bit<00:08:47.280> too<00:08:47.800> simple,<00:08:48.280> so<00:08:48.520> let's<00:08:48.839> look<00:08:49.080> at<00:08:49.280> a
+bit too simple, so let's look at a
+uh<00:08:50.839> more<00:08:51.080> complicated<00:08:51.800> example.
+uh more complicated example.
+Uh<00:08:53.760> that's<00:08:54.000> called<00:08:54.320> a<00:08:54.440> mixture<00:08:54.800> of<00:08:54.960> Gaussians.
+Uh<00:09:05.640> mixture<00:09:05.960> of<00:09:06.080> Gaussians<00:09:06.560> model<00:09:07.280> looks<00:09:08.400> uh
+Uh mixture of Gaussians model looks uh
+well,<00:09:09.120> the<00:09:09.360> data<00:09:09.640> points<00:09:09.920> will<00:09:10.240> look<00:09:10.480> kind<00:09:10.720> of
+well, the data points will look kind of
+like<00:09:11.080> this.<00:09:11.880> Uh
+like this. Uh
+So<00:09:12.680> basically,<00:09:13.240> the<00:09:14.120> assumption<00:09:14.680> is<00:09:15.480> or<00:09:15.720> the
+So basically, the assumption is or the
+model<00:09:17.400> says<00:09:18.240> data<00:09:18.520> points<00:09:19.080> should<00:09:19.360> come<00:09:19.640> from
+model says data points should come from
+uh<00:09:20.839> one<00:09:21.040> of,<00:09:21.400> say,<00:09:21.680> K<00:09:21.920> Gaussians.<00:09:22.960> Uh<00:09:23.040> here,<00:09:23.320> K
+uh one of, say, K Gaussians. Uh here, K
+will<00:09:23.839> be<00:09:24.040> equal<00:09:24.280> to<00:09:24.440> three.
+will be equal to three.
+Uh<00:09:26.120> with<00:09:26.320> some<00:09:26.520> probability,<00:09:27.320> say<00:09:27.920> with<00:09:28.200> 0.4
+Uh with some probability, say with 0.4
+probability,
+uh<00:09:30.880> the<00:09:31.000> data<00:09:31.240> point<00:09:31.560> will<00:09:31.720> be<00:09:31.839> generated
+uh the data point will be generated
+according<00:09:32.880> to<00:09:33.040> this<00:09:33.280> Gaussian.
+according to this Gaussian.
+Uh<00:09:35.160> and<00:09:35.320> maybe<00:09:35.600> with<00:09:35.839> 0.3<00:09:36.440> probability,<00:09:37.600> uh
+Uh and maybe with 0.3 probability, uh
+the<00:09:37.800> data<00:09:38.040> point<00:09:38.320> will<00:09:38.440> be<00:09:38.560> generated<00:09:39.200> from
+the data point will be generated from
+this<00:09:39.640> Gaussian.<00:09:40.560> And<00:09:41.440> uh,<00:09:41.520> with<00:09:41.840> the<00:09:41.960> rest<00:09:42.360> 0.3
+this Gaussian. And uh, with the rest 0.3
+probability
+uh,<00:09:44.600> the<00:09:44.720> data<00:09:44.960> points<00:09:45.280> are<00:09:45.520> going<00:09:45.760> to<00:09:45.880> be
+uh, the data points are going to be
+generated<00:09:46.600> from<00:09:46.840> this<00:09:47.040> Gaussian.
+generated from this Gaussian.
+Um,
+so<00:09:50.960> in<00:09:51.120> order
+so in order
+if<00:09:52.280> I<00:09:52.520> know<00:09:52.800> all<00:09:52.960> the<00:09:53.080> parameters<00:09:53.840> of<00:09:54.040> the
+if I know all the parameters of the
+model
+in<00:09:55.360> order<00:09:55.760> to<00:09:56.440> generate<00:09:57.080> a<00:09:57.160> data<00:09:57.480> point
+in order to generate a data point
+so<00:09:58.800> what<00:09:59.040> I<00:09:59.200> do,<00:09:59.560> I<00:09:59.720> first<00:10:00.280> uh,<00:10:00.440> choose<00:10:00.920> which
+so what I do, I first uh, choose which
+Gaussian<00:10:02.040> the<00:10:02.200> data<00:10:02.440> point<00:10:02.720> should<00:10:02.960> come
+Gaussian the data point should come
+from.
+Uh,<00:10:04.840> maybe<00:10:05.160> this<00:10:05.400> one<00:10:05.960> and<00:10:06.080> then<00:10:06.400> I<00:10:06.520> will
+Uh, maybe this one and then I will
+sample<00:10:07.080> a<00:10:07.120> point<00:10:07.440> according<00:10:07.880> to<00:10:08.000> this
+sample a point according to this
+Gaussian<00:10:08.880> and<00:10:09.120> maybe<00:10:09.480> it<00:10:09.640> will<00:10:09.760> be<00:10:09.880> here.
+Gaussian and maybe it will be here.
+Uh,<00:10:11.640> but<00:10:11.800> what's<00:10:11.960> important<00:10:12.440> of<00:10:12.600> course<00:10:12.920> is
+Uh, but what's important of course is
+once<00:10:13.640> I<00:10:13.840> have<00:10:14.200> this<00:10:14.400> data<00:10:14.680> point<00:10:15.280> uh,<00:10:15.480> and<00:10:15.760> I
+once I have this data point uh, and I
+give<00:10:16.960> this<00:10:17.240> as<00:10:17.520> the<00:10:17.640> input<00:10:18.080> to<00:10:18.520> some
+give this as the input to some
+unsupervised<00:10:19.360> learning<00:10:19.680> algorithm
+unsupervised learning algorithm
+uh,<00:10:22.000> the<00:10:22.200> algorithm<00:10:22.680> does<00:10:22.880> not<00:10:23.120> know<00:10:23.360> that
+uh, the algorithm does not know that
+this<00:10:23.800> point<00:10:24.120> is<00:10:24.280> really<00:10:24.560> generated<00:10:25.160> from<00:10:26.000> this
+this point is really generated from this
+particular<00:10:26.840> Gaussian.
+particular Gaussian.
+Uh,<00:10:28.200> it<00:10:28.360> only<00:10:28.640> sees<00:10:28.920> all<00:10:29.080> these<00:10:29.280> points<00:10:29.680> and
+Uh, it only sees all these points and
+uh,<00:10:30.720> it<00:10:30.760> really<00:10:30.960> has<00:10:31.200> to<00:10:31.840> uh,<00:10:32.360> kind<00:10:32.600> of<00:10:32.720> figure
+uh, it really has to uh, kind of figure
+out
+uh,<00:10:34.440> which<00:10:35.080> uh,<00:10:35.280> Gaussian<00:10:35.640> it<00:10:35.800> came<00:10:36.040> from.
+uh, which uh, Gaussian it came from.
+And<00:10:37.200> that's<00:10:38.120> uh,
+And that's uh,
+the<00:10:39.160> hardness<00:10:39.720> of<00:10:40.080> this<00:10:40.280> kind<00:10:40.520> of<00:10:40.800> problems.
+the hardness of this kind of problems.
+Uh,<00:10:43.880> any<00:10:44.040> questions?
+Okay,<00:10:46.920> so<00:10:47.480> uh,<00:10:47.520> let's<00:10:47.760> first<00:10:48.720> uh,<00:10:48.800> summarize
+Okay, so uh, let's first uh, summarize
+what<00:10:49.680> are<00:10:49.880> the<00:10:50.160> parameters<00:10:50.920> of<00:10:51.200> the<00:10:51.440> mixture
+what are the parameters of the mixture
+of<00:10:51.960> Gaussians<00:10:52.440> model.
+of Gaussians model.
+Uh,<00:10:54.200> so<00:10:54.360> there's<00:10:55.160> a<00:10:55.200> number<00:10:55.560> K
+Uh, so there's a number K
+which<00:10:56.880> is<00:10:57.839> the<00:10:57.880> number<00:10:58.200> of<00:10:58.360> Gaussians.
+Uh,
+for<00:11:08.360> each<00:11:08.560> Gaussian<00:11:09.160> we<00:11:09.520> want<00:11:10.000> to<00:11:10.160> know<00:11:10.520> what
+for each Gaussian we want to know what
+is<00:11:11.400> uh,<00:11:11.520> it's<00:11:12.240> where<00:11:12.480> is<00:11:12.720> its<00:11:13.040> center,<00:11:13.400> where
+is uh, it's where is its center, where
+is<00:11:13.839> the<00:11:13.960> mean<00:11:14.200> of<00:11:14.360> the<00:11:14.480> Gaussian.
+is the mean of the Gaussian.
+So<00:11:15.760> we<00:11:15.880> have<00:11:16.160> the<00:11:16.400> vectors<00:11:17.480> uh,<00:11:17.560> mu<00:11:18.320> i.
+So we have the vectors uh, mu i.
+Uh,<00:11:20.000> I'll<00:11:20.160> put<00:11:20.400> the<00:11:20.480> vector<00:11:20.839> symbol<00:11:21.280> here.
+Uh, I'll put the vector symbol here.
+Uh,<00:11:22.520> so<00:11:22.880> I<00:11:23.120> is<00:11:23.360> from<00:11:23.720> one<00:11:23.920> to<00:11:24.040> K.
+Uh, so I is from one to K.
+So<00:11:26.480> when<00:11:26.680> I<00:11:26.800> write<00:11:27.200> this<00:11:27.520> I<00:11:27.680> mean<00:11:28.000> the<00:11:28.240> set<00:11:28.720> of
+So when I write this I mean the set of
+one<00:11:29.720> to<00:11:30.000> two<00:11:30.480> K.
+one to two K.
+Uh,
+so<00:11:33.000> these<00:11:33.360> are<00:11:33.640> the<00:11:33.800> means<00:11:34.080> of<00:11:34.200> the<00:11:34.320> Gaussians.
+Um,
+and
+uh,<00:11:47.720> for<00:11:47.880> simplicity<00:11:48.520> let's<00:11:48.760> assume<00:11:49.400> all<00:11:49.640> the
+uh, for simplicity let's assume all the
+Gaussians<00:11:50.320> are<00:11:50.720> spherical,<00:11:51.360> also<00:11:51.720> I<00:11:51.840> didn't
+Gaussians are spherical, also I didn't
+draw<00:11:52.440> it<00:11:52.560> this<00:11:52.760> way.<00:11:53.440> Uh,<00:11:53.520> so<00:11:53.680> all<00:11:53.840> the
+draw it this way. Uh, so all the
+Gaussians<00:11:54.360> are<00:11:54.520> spherical<00:11:55.160> and<00:11:55.560> they<00:11:55.760> have
+Gaussians are spherical and they have
+the<00:11:56.160> same<00:11:56.480> covariance<00:11:56.880> matrix<00:11:57.320> and<00:11:57.480> we<00:11:57.600> know
+the same covariance matrix and we know
+that.<00:11:58.320> So,<00:11:59.040> that's<00:11:59.280> not<00:11:59.480> a<00:11:59.560> part<00:11:59.800> of
+that. So, that's not a part of
+parameter.
+So,<00:12:01.560> what<00:12:01.760> else<00:12:02.480> uh,<00:12:02.560> is<00:12:02.760> there<00:12:02.960> in<00:12:03.080> the
+So, what else uh, is there in the
+parameters?
+Well,
+um,<00:12:06.200> in<00:12:06.360> order<00:12:06.600> to<00:12:06.880> generate<00:12:07.360> these<00:12:07.600> data
+um, in order to generate these data
+points,<00:12:08.400> uh,
+points, uh,
+something<00:12:09.560> that<00:12:09.720> we<00:12:09.840> also<00:12:10.160> need<00:12:10.480> are<00:12:10.960> also
+something that we also need are also
+these<00:12:11.560> weights<00:12:12.000> like,<00:12:12.680> um,
+these weights like, um,
+what<00:12:13.760> fraction<00:12:14.280> of<00:12:14.440> data<00:12:14.720> points<00:12:15.160> come<00:12:15.440> from
+what fraction of data points come from
+uh,<00:12:16.760> these<00:12:17.040> individual<00:12:17.520> Gaussians.
+Uh,<00:12:21.200> so<00:12:21.400> they<00:12:21.720> are<00:12:22.080> also<00:12:22.600> part<00:12:22.920> of<00:12:23.040> the
+Uh, so they are also part of the
+parameters.<00:12:24.120> Uh,<00:12:24.240> so<00:12:24.920> let's<00:12:25.120> call<00:12:25.280> them<00:12:25.560> WI.
+parameters. Uh, so let's call them WI.
+Uh,
+I<00:12:27.720> is<00:12:27.960> also<00:12:28.240> in<00:12:28.440> 1<00:12:28.680> to<00:12:28.800> K.
+I is also in 1 to K.
+Uh,
+these<00:12:31.040> are<00:12:31.200> the<00:12:31.480> weights
+uh,<00:12:36.920> of<00:12:37.120> the<00:12:37.200> Gaussians.
+So,<00:12:45.440> now<00:12:45.760> given<00:12:46.160> all<00:12:46.280> these<00:12:46.520> parameters<00:12:47.160> it's
+So, now given all these parameters it's
+clear<00:12:47.960> how<00:12:48.440> I<00:12:48.560> can<00:12:49.440> uh,
+clear how I can uh,
+define<00:12:50.800> a<00:12:50.839> distribution<00:12:51.680> on<00:12:52.000> the<00:12:52.120> points.
+define a distribution on the points.
+And<00:12:54.080> uh,
+And uh,
+if<00:12:55.040> I<00:12:55.280> really<00:12:55.600> know<00:12:55.839> all<00:12:56.000> these<00:12:56.240> parameters
+if I really know all these parameters
+it's<00:12:57.080> actually<00:12:57.520> simple<00:12:57.920> for<00:12:58.080> me<00:12:58.360> to<00:12:59.240> uh,
+it's actually simple for me to uh,
+sample<00:12:59.880> a<00:12:59.920> data<00:13:00.240> point<00:13:00.520> from<00:13:00.800> this
+sample a data point from this
+distribution,<00:13:01.720> right?
+Uh,
+but<00:13:06.360> then<00:13:06.640> the<00:13:06.760> corresponding<00:13:07.880> uh,<00:13:07.960> learning
+but then the corresponding uh, learning
+problem
+learning<00:13:13.520> a<00:13:14.040> probabilistic<00:13:14.839> model.
+So,<00:13:25.080> the<00:13:25.240> problem<00:13:25.720> is<00:13:26.320> then<00:13:26.840> given<00:13:27.440> samples
+So, the problem is then given samples
+given<00:13:30.440> maybe<00:13:30.800> polynomially<00:13:31.480> many<00:13:31.760> samples
+polynomially<00:13:36.000> number<00:13:36.360> of<00:13:36.560> samples
+uh<00:13:41.760> say<00:13:42.360> V1,<00:13:43.200> V2<00:13:44.320> uh<00:13:44.760> well,<00:13:45.280> let's<00:13:45.560> just<00:13:45.920> not
+uh say V1, V2 uh well, let's just not
+give<00:13:46.360> them<00:13:46.520> names.
+give them names.
+Gives<00:13:48.080> these<00:13:48.320> many<00:13:48.600> samples<00:13:49.200> from
+Gives these many samples from
+the<00:13:50.800> distribution<00:13:51.800> D<00:13:52.120> of<00:13:52.880> theta
+the distribution D of theta
+for
+uh<00:13:58.200> an<00:13:58.400> unknown<00:13:58.880> theta.
+Uh<00:14:05.880> given<00:14:06.160> all<00:14:06.280> these<00:14:06.520> samples,<00:14:07.120> our<00:14:07.400> goal<00:14:07.720> is
+Uh given all these samples, our goal is
+to<00:14:08.400> really
+to really
+find<00:14:09.880> this<00:14:10.160> unknown<00:14:10.520> parameter<00:14:11.360> theta.
+find this unknown parameter theta.
+Uh<00:14:13.120> yes.
+Uh yes.
+So,<00:14:13.920> when<00:14:14.080> you<00:14:14.200> say<00:14:14.480> polynomial<00:14:15.320> number<00:14:16.000> of
+So, when you say polynomial number of
+samples,<00:14:16.480> is<00:14:16.560> that<00:14:16.800> polynomial<00:14:17.520> in<00:14:18.040> K<00:14:18.560> or<00:14:18.760> in
+samples, is that polynomial in K or in
+Uh<00:14:19.760> right.<00:14:20.160> So,
+Uh right. So,
+um
+Actually,<00:14:23.960> I<00:14:24.040> mean,<00:14:24.400> you<00:14:24.600> are<00:14:25.520> in<00:14:25.640> the<00:14:25.720> problem
+Actually, I mean, you are in the problem
+you<00:14:26.160> are<00:14:26.280> given<00:14:26.560> an<00:14:26.800> oracle<00:14:27.320> access<00:14:27.840> to<00:14:28.880> an
+you are given an oracle access to an
+oracle<00:14:29.560> that<00:14:29.760> when<00:14:29.920> you<00:14:30.000> query<00:14:30.400> you<00:14:30.520> get<00:14:30.720> a
+oracle that when you query you get a
+sample<00:14:31.160> from<00:14:31.440> this<00:14:31.600> D<00:14:31.800> theta.
+sample from this D theta.
+Um
+if<00:14:34.680> your<00:14:35.120> algorithm<00:14:35.600> runs<00:14:35.880> in<00:14:36.080> polynomial
+if your algorithm runs in polynomial
+time,<00:14:37.440> it
+time, it
+uh<00:14:39.640> your<00:14:39.960> algorithm<00:14:40.400> is<00:14:40.800> allowed<00:14:41.240> to<00:14:41.400> depend
+uh your algorithm is allowed to depend
+on<00:14:41.960> anything.<00:14:42.600> It<00:14:42.920> doesn't<00:14:43.360> even<00:14:43.839> necessarily
+on anything. It doesn't even necessarily
+need<00:14:44.920> to<00:14:45.040> take<00:14:45.320> polynomial<00:14:45.800> number<00:14:46.040> of
+need to take polynomial number of
+samples.
+Uh
+it's<00:14:49.360> just<00:14:49.720> the<00:14:49.839> kind<00:14:50.080> of<00:14:50.200> theorem<00:14:50.600> you<00:14:50.760> write.
+it's just the kind of theorem you write.
+Um<00:14:51.880> it<00:14:52.040> can<00:14:52.200> be<00:14:52.360> a<00:14:52.440> very<00:14:52.760> strong<00:14:53.040> result<00:14:53.440> or<00:14:53.680> it
+Um it can be a very strong result or it
+can
+uh<00:14:55.120> be<00:14:55.360> a
+uh be a
+trivial<00:14:56.400> result.<00:14:56.760> For<00:14:56.880> example,
+trivial result. For example,
+maybe<00:14:58.520> we<00:14:58.640> can<00:14:58.839> learn<00:14:59.080> a<00:14:59.120> mixture<00:14:59.440> of<00:14:59.600> Gaussian
+maybe we can learn a mixture of Gaussian
+in<00:15:00.320> n<00:15:00.480> to<00:15:00.600> the<00:15:00.720> K<00:15:00.880> time,<00:15:01.720> where<00:15:02.080> n<00:15:02.280> is<00:15:02.480> the
+in n to the K time, where n is the
+number<00:15:02.920> of
+number of
+well,<00:15:04.360> in<00:15:05.120> uh<00:15:05.240> say<00:15:05.880> D<00:15:06.040> to<00:15:06.160> the<00:15:06.280> K<00:15:06.400> time,<00:15:06.680> where<00:15:06.839> D
+well, in uh say D to the K time, where D
+is<00:15:07.320> the<00:15:07.480> dimension.
+is the dimension.
+Even<00:15:09.280> that<00:15:09.520> is<00:15:10.080> not<00:15:10.360> so<00:15:10.520> simple.
+Even that is not so simple.
+Or<00:15:11.880> we<00:15:12.000> can<00:15:12.200> hope<00:15:12.560> to<00:15:12.760> learn<00:15:13.040> it<00:15:13.240> in
+Or we can hope to learn it in
+um
+poly<00:15:15.400> in<00:15:15.560> D<00:15:15.800> and<00:15:16.040> K<00:15:16.240> time.
+poly in D and K time.
+Uh<00:15:17.600> that's<00:15:17.880> even<00:15:18.080> harder.<00:15:18.800> So,<00:15:19.560> it<00:15:19.720> all
+Uh that's even harder. So, it all
+depends<00:15:20.280> on<00:15:20.640> what<00:15:20.839> you<00:15:20.960> want.<00:15:21.839> So,<00:15:22.080> this<00:15:22.320> is
+depends on what you want. So, this is
+that's<00:15:23.400> why<00:15:23.600> it's<00:15:23.760> in<00:15:23.880> bracket.<00:15:24.360> So,
+that's why it's in bracket. So,
+uh
+really<00:15:26.920> you<00:15:27.040> should<00:15:27.200> think<00:15:27.480> you<00:15:27.600> have<00:15:27.840> an
+really you should think you have an
+oracle<00:15:28.440> access<00:15:28.880> to<00:15:29.200> this<00:15:29.800> distribution.
+Uh
+so,<00:15:33.680> given<00:15:34.000> some<00:15:34.240> number<00:15:34.480> of<00:15:34.600> samples
+so, given some number of samples
+that<00:15:36.320> you<00:15:36.440> can
+that you can
+query<00:15:38.400> from<00:15:38.680> the<00:15:38.840> oracle.
+query from the oracle.
+Uh<00:15:40.400> the<00:15:40.480> goal<00:15:40.680> is<00:15:40.880> to<00:15:41.240> learn
+Uh the goal is to learn
+um
+find
+uh
+Ideally,<00:15:51.160> we<00:15:51.320> want<00:15:51.560> to<00:15:51.680> find<00:15:52.000> the<00:15:52.640> exact
+Ideally, we want to find the exact
+parameter<00:15:54.120> theta.
+parameter theta.
+But,<00:15:56.200> usually<00:15:56.640> we<00:15:56.760> cannot<00:15:57.160> do<00:15:57.360> that.<00:15:58.160> And<00:15:58.400> we
+But, usually we cannot do that. And we
+will<00:15:58.920> find<00:15:59.320> an<00:15:59.600> approximate<00:16:00.240> version<00:16:00.960> of
+will find an approximate version of
+theta.
+Uh<00:16:03.520> here<00:16:03.760> it's<00:16:04.000> really<00:16:04.400> important<00:16:05.000> that<00:16:05.320> we
+Uh here it's really important that we
+are<00:16:05.640> allowed<00:16:05.920> to<00:16:06.160> output<00:16:06.600> an<00:16:07.440> approximate
+are allowed to output an approximate
+version<00:16:08.560> because<00:16:09.120> in<00:16:09.320> general
+version because in general
+even<00:16:11.160> if<00:16:11.360> we<00:16:11.480> don't<00:16:11.840> care<00:16:12.280> about<00:16:13.320> competition
+even if we don't care about competition
+time,
+it's<00:16:15.720> usually<00:16:16.120> impossible<00:16:16.640> to<00:16:16.800> get<00:16:17.000> the<00:16:17.120> exact
+it's usually impossible to get the exact
+theta<00:16:18.680> even<00:16:18.920> if<00:16:19.120> it's<00:16:19.280> a<00:16:19.360> simple<00:16:19.720> Gaussian.
+theta even if it's a simple Gaussian.
+Uh<00:16:20.840> I<00:16:20.960> give<00:16:21.200> you<00:16:21.320> many<00:16:21.600> samples<00:16:22.440> and<00:16:22.640> you<00:16:22.720> want
+Uh I give you many samples and you want
+to<00:16:23.000> estimate<00:16:23.720> its<00:16:24.000> mean.
+to estimate its mean.
+You<00:16:25.560> just<00:16:25.839> take<00:16:26.040> the<00:16:26.240> average<00:16:26.680> of<00:16:26.920> all<00:16:27.080> your
+You just take the average of all your
+samples,<00:16:27.800> but<00:16:27.960> that's<00:16:28.440> still
+samples, but that's still
+has<00:16:30.080> a<00:16:30.160> distance<00:16:31.000> depending<00:16:31.400> on<00:16:31.560> how<00:16:31.680> many
+has a distance depending on how many
+samples<00:16:32.320> you<00:16:32.680> use.
+samples you use.
+So,<00:16:34.000> usually<00:16:34.400> we
+So, usually we
+um<00:16:35.600> can<00:16:35.839> only<00:16:36.040> hope<00:16:36.280> to<00:16:36.440> find<00:16:36.720> an<00:16:36.960> approximate
+um can only hope to find an approximate
+theta
+also
+with<00:16:40.360> high<00:16:40.560> probability<00:16:41.760> because
+with high probability because
+there's<00:16:43.320> always<00:16:43.680> a<00:16:43.760> chance<00:16:44.120> that<00:16:44.320> the<00:16:44.440> samples
+there's always a chance that the samples
+you<00:16:44.920> get
+you get
+are<00:16:46.120> not<00:16:46.600> very<00:16:46.920> informative.
+So,<00:16:51.280> this<00:16:51.560> is<00:16:51.760> really<00:16:52.040> the<00:16:52.560> learning<00:16:52.839> problem,
+So, this is really the learning problem,
+uh<00:16:54.120> the<00:16:54.200> general<00:16:55.080> unsupervised<00:16:55.680> learning
+uh the general unsupervised learning
+problem<00:16:56.360> that<00:16:56.640> we<00:16:56.839> want<00:16:57.080> to<00:16:57.200> solve.
+problem that we want to solve.
+Uh
+And<00:17:01.760> it's<00:17:02.120> not<00:17:02.400> very<00:17:02.800> easy<00:17:03.080> to<00:17:03.320> solve<00:17:03.640> this
+And it's not very easy to solve this
+kind<00:17:04.280> of<00:17:04.439> a<00:17:04.560> problem<00:17:05.079> in<00:17:05.280> practice.<00:17:06.280> Uh<00:17:06.360> there
+kind of a problem in practice. Uh there
+is<00:17:07.240> actually<00:17:07.839> a
+is actually a
+uh
+an<00:17:10.600> approach<00:17:11.160> that's<00:17:11.480> used<00:17:11.839> in<00:17:12.199> solving<00:17:12.600> many
+an approach that's used in solving many
+of<00:17:13.000> these<00:17:13.240> problems.
+of these problems.
+Uh<00:17:14.839> and<00:17:15.040> that<00:17:15.240> approach<00:17:15.640> is<00:17:16.040> called<00:17:16.400> the
+Uh and that approach is called the
+maximum<00:17:17.480> likelihood.
+Um<00:17:22.680> maximum<00:17:23.120> likelihood.
+So,<00:17:27.720> the<00:17:27.880> idea<00:17:28.199> of<00:17:28.920> maximum<00:17:29.400> likelihood<00:17:30.080> is
+So, the idea of maximum likelihood is
+I<00:17:31.440> have<00:17:31.920> all<00:17:32.240> these<00:17:32.560> data<00:17:32.880> points.
+I have all these data points.
+Um
+and<00:17:35.840> I
+and I
+I<00:17:37.040> know<00:17:37.640> how<00:17:38.400> what<00:17:38.640> is<00:17:38.960> the<00:17:39.040> model<00:17:39.600> if<00:17:39.840> I<00:17:40.040> have<00:17:40.360> a
+I know how what is the model if I have a
+fixed<00:17:40.760> parameter.
+fixed parameter.
+So,<00:17:42.920> my<00:17:43.120> goal<00:17:43.360> will<00:17:43.520> be<00:17:43.880> I<00:17:44.040> will<00:17:44.280> find<00:17:44.680> a<00:17:44.760> model
+So, my goal will be I will find a model
+within<00:17:45.720> the<00:17:46.000> this<00:17:46.240> family<00:17:46.920> or<00:17:47.400> I<00:17:47.520> will<00:17:47.680> find<00:17:48.040> a
+within the this family or I will find a
+particular<00:17:49.120> parameter
+particular parameter
+such<00:17:50.880> that<00:17:51.440> um
+such that um
+this<00:17:52.720> model<00:17:53.240> will<00:17:54.080> have<00:17:54.480> the
+this model will have the
+best<00:17:56.440> probability<00:17:57.640> of<00:17:57.880> generating<00:17:58.600> the<00:17:58.760> data
+best probability of generating the data
+that<00:17:59.360> I've<00:17:59.520> seen.
+that I've seen.
+Uh
+So,<00:18:04.560> the<00:18:04.880> idea<00:18:05.280> is<00:18:06.320> uh
+So, the idea is uh
+find
+the<00:18:09.920> model
+uh<00:18:14.480> that
+uh that
+uh<00:18:16.880> maximize
+uh maximize
+uh<00:18:19.560> the<00:18:19.720> probability<00:18:21.000> that<00:18:21.920> uh
+uh the probability that uh
+uh<00:18:23.400> the<00:18:23.920> um
+uh the um
+data<00:18:25.240> comes<00:18:25.600> from<00:18:25.840> the
+data comes from the
+model.
+Um<00:18:30.640> usually<00:18:31.040> we<00:18:31.160> assume<00:18:31.600> we<00:18:31.720> get<00:18:32.200> independent
+Um usually we assume we get independent
+samples<00:18:33.240> from<00:18:33.480> this<00:18:33.720> distribution<00:18:34.320> D<00:18:34.520> theta,
+samples from this distribution D theta,
+so
+um
+So,<00:18:38.640> suppose
+uh<00:18:42.160> data<00:18:42.480> points
+uh<00:18:48.280> are<00:18:49.000> um
+uh are um
+say<00:18:50.320> V1<00:18:50.920> to<00:18:51.960> VN.
+say V1 to VN.
+Then,<00:18:54.160> what<00:18:54.360> we<00:18:54.480> want<00:18:54.760> is<00:18:55.040> we<00:18:55.200> want<00:18:55.480> to<00:18:55.680> compute
+Then, what we want is we want to compute
+this<00:18:56.840> maximize
+this maximize
+maximize<00:18:58.880> over<00:18:59.200> all<00:18:59.440> the<00:18:59.560> parameters
+maximize over all the parameters
+uh<00:19:02.360> some<00:19:03.160> I<00:19:03.440> from<00:19:04.320> 1<00:19:04.720> to<00:19:05.080> K
+uh some I from 1 to K
+uh<00:19:06.600> to<00:19:06.800> N
+uh to N
+log<00:19:08.720> of<00:19:09.320> probability<00:19:10.440> of
+log of probability of
+VI.
+Uh<00:19:16.760> so<00:19:16.960> we<00:19:17.200> we<00:19:17.280> want<00:19:17.560> to<00:19:17.800> solve<00:19:18.600> uh<00:19:18.720> this<00:19:19.560> uh
+Uh so we we want to solve uh this uh
+optimization<00:19:20.720> problem.
+optimization problem.
+Uh<00:19:23.240> here<00:19:23.840> I<00:19:24.440> wrote<00:19:24.840> uh<00:19:25.120> sum<00:19:25.640> of<00:19:26.240> log<00:19:26.720> of
+Uh here I wrote uh sum of log of
+probability.<00:19:28.200> This<00:19:28.440> is<00:19:28.760> really<00:19:29.520> uh
+probability. This is really uh
+maximizing<00:19:30.280> this<00:19:30.600> is<00:19:30.880> really<00:19:31.200> the<00:19:31.360> same<00:19:31.800> as
+maximizing this is really the same as
+uh<00:19:33.120> maximizing<00:19:33.920> the<00:19:34.200> product<00:19:34.920> of<00:19:35.400> these
+uh maximizing the product of these
+probabilities,<00:19:36.800> uh<00:19:36.880> which<00:19:37.120> is<00:19:37.600> what<00:19:37.760> we<00:19:37.880> want.
+probabilities, uh which is what we want.
+And<00:19:40.040> uh<00:19:40.480> well,<00:19:40.680> people<00:19:41.120> often<00:19:41.560> write<00:19:41.800> it<00:19:41.920> this
+And uh well, people often write it this
+way<00:19:42.280> because<00:19:42.640> it's<00:19:42.920> easier<00:19:43.360> to<00:19:44.080> well,<00:19:44.640> it's
+way because it's easier to well, it's
+conceptually<00:19:45.480> easier<00:19:45.800> to<00:19:45.960> think<00:19:46.200> of<00:19:46.520> uh
+conceptually easier to think of uh
+maximizing<00:19:47.240> a<00:19:47.320> sum<00:19:47.600> instead<00:19:47.960> of<00:19:48.240> uh
+maximizing a sum instead of uh
+maximizing<00:19:48.960> a<00:19:49.040> product.
+maximizing a product.
+Um
+Okay,<00:19:57.840> so
+Okay, so
+um
+So<00:20:01.240> this<00:20:01.480> is<00:20:02.120> uh<00:20:02.240> the<00:20:02.360> so-called<00:20:02.800> maximum
+So this is uh the so-called maximum
+likelihood<00:20:03.800> approach.<00:20:05.000> Um<00:20:05.920> it<00:20:06.120> can<00:20:06.280> be
+likelihood approach. Um it can be
+applied<00:20:07.240> uh<00:20:07.320> effectively<00:20:08.120> for<00:20:08.360> some<00:20:08.560> very
+applied uh effectively for some very
+simple<00:20:09.120> distributions.<00:20:09.800> For<00:20:09.920> example,<00:20:10.320> you
+simple distributions. For example, you
+can<00:20:10.520> try<00:20:10.800> to<00:20:11.040> do<00:20:11.280> maximum<00:20:11.840> likelihood<00:20:12.520> for<00:20:13.480> a
+can try to do maximum likelihood for a
+single<00:20:14.040> Gaussian.
+single Gaussian.
+Then
+basically<00:20:18.120> this<00:20:19.080> this<00:20:19.360> will<00:20:19.520> be<00:20:20.360> something
+basically this this will be something
+that's<00:20:21.240> very<00:20:21.520> easy<00:20:21.760> to<00:20:21.920> solve<00:20:22.360> and<00:20:22.600> you<00:20:22.680> will
+that's very easy to solve and you will
+see<00:20:23.240> that<00:20:23.800> the<00:20:24.720> mean
+see that the mean
+will<00:20:26.440> really<00:20:26.680> be<00:20:26.840> the<00:20:27.120> mean<00:20:27.400> of<00:20:27.560> the<00:20:27.920> samples.
+will really be the mean of the samples.
+So<00:20:29.440> which<00:20:29.640> is<00:20:29.880> reasonable.
+Well,<00:20:35.240> uh<00:20:35.400> this<00:20:35.600> problem<00:20:36.000> is<00:20:36.160> really<00:20:36.440> very
+Well, uh this problem is really very
+hard<00:20:36.960> to<00:20:37.080> solve<00:20:37.440> once<00:20:37.720> you<00:20:37.880> go<00:20:38.080> to<00:20:38.480> some<00:20:38.960> more
+hard to solve once you go to some more
+complicated<00:20:40.040> models.<00:20:40.480> For<00:20:40.640> example,<00:20:41.080> if<00:20:41.240> you
+complicated models. For example, if you
+try<00:20:41.560> to<00:20:41.720> do<00:20:41.960> maximum<00:20:42.480> likelihood
+try to do maximum likelihood
+for<00:20:44.240> this<00:20:44.480> mixture<00:20:44.840> of<00:20:45.000> Gaussians<00:20:45.440> model,
+for this mixture of Gaussians model,
+uh
+it<00:20:47.600> will<00:20:47.800> be<00:20:48.240> NP-hard.<00:20:49.400> Uh<00:20:49.680> it<00:20:49.840> is<00:20:50.120> at<00:20:50.280> least<00:20:50.600> as
+it will be NP-hard. Uh it is at least as
+hard<00:20:51.240> as<00:20:51.600> doing<00:20:52.200> uh<00:20:52.320> K-means<00:20:52.800> clustering,
+hard as doing uh K-means clustering,
+uh<00:20:54.920> which<00:20:55.200> is<00:20:55.400> itself<00:20:55.880> NP-hard.
+uh which is itself NP-hard.
+Um
+So<00:21:04.000> actually<00:21:05.000> uh<00:21:05.480> it's<00:21:05.680> worth<00:21:05.880> mentioning
+So actually uh it's worth mentioning
+that<00:21:06.960> uh<00:21:07.360> if<00:21:07.640> you<00:21:07.760> think<00:21:08.040> of<00:21:08.280> these<00:21:08.680> we<00:21:09.320> uh
+that uh if you think of these we uh
+these<00:21:09.680> data<00:21:09.960> points<00:21:10.360> are
+these data points are
+uh,<00:21:11.920> come<00:21:12.200> from<00:21:12.640> our<00:21:12.920> just<00:21:13.200> arbitrary<00:21:13.640> data
+uh, come from our just arbitrary data
+points,<00:21:14.320> they<00:21:14.440> may<00:21:14.560> not<00:21:14.840> come<00:21:15.080> from<00:21:15.720> the
+points, they may not come from the
+distribution,<00:21:16.720> then<00:21:17.040> it's<00:21:17.280> actually<00:21:17.760> trying
+distribution, then it's actually trying
+to<00:21:18.200> solve<00:21:18.800> solve<00:21:19.160> a<00:21:19.280> more<00:21:19.520> challenging
+to solve solve a more challenging
+problem.
+Uh,
+if<00:21:28.760> uh,<00:21:28.840> we<00:21:29.160> eyes<00:21:29.560> are
+if uh, we eyes are
+uh,<00:21:31.600> not<00:21:31.880> from
+uh,<00:21:37.400> this<00:21:37.600> distribution<00:21:38.200> D<00:21:38.400> theta.
+uh, this distribution D theta.
+And<00:21:39.720> when<00:21:39.960> when<00:21:40.200> I<00:21:40.280> say<00:21:40.480> NP-hard,<00:21:41.120> it's<00:21:42.040> uh,<00:21:42.120> of
+And when when I say NP-hard, it's uh, of
+course<00:21:42.560> referring<00:21:43.120> to<00:21:43.520> this<00:21:43.760> case<00:21:44.120> because
+course referring to this case because
+this<00:21:44.800> is<00:21:45.240> a<00:21:45.280> worst-case<00:21:45.840> problem.
+this is a worst-case problem.
+And<00:21:48.200> uh,<00:21:48.280> learning<00:21:49.200> a<00:21:49.320> probabilistic<00:21:50.080> model
+And uh, learning a probabilistic model
+problem,<00:21:51.000> this<00:21:51.240> particular<00:21:51.760> problem<00:21:52.400> where
+problem, this particular problem where
+the<00:21:52.800> data<00:21:53.080> points<00:21:53.560> really<00:21:53.840> come<00:21:54.120> from<00:21:54.680> D<00:21:54.840> of
+the data points really come from D of
+theta,
+uh,<00:21:56.880> this<00:21:57.120> is<00:21:57.320> not<00:21:57.760> really<00:21:58.040> a<00:21:58.160> worst-case
+uh, this is not really a worst-case
+problem,<00:21:59.120> so<00:21:59.480> we<00:21:59.600> cannot<00:22:00.000> say<00:22:00.440> it's<00:22:01.160> uh,
+problem, so we cannot say it's uh,
+NP-hard<00:22:01.680> or<00:22:01.880> anything.
+Um,
+by<00:22:16.600> the<00:22:16.680> way,<00:22:16.880> I<00:22:17.360> sorry,<00:22:17.640> I<00:22:17.760> didn't<00:22:18.160> define<00:22:18.680> the
+by the way, I sorry, I didn't define the
+problem<00:22:19.760> the<00:22:19.960> P<00:22:20.160> theta<00:22:20.560> of<00:22:20.760> VI,<00:22:21.480> but<00:22:21.640> P<00:22:21.840> theta
+problem the P theta of VI, but P theta
+is<00:22:22.600> just<00:22:23.160> a<00:22:23.200> density<00:22:23.680> function<00:22:24.240> of<00:22:24.480> the
+is just a density function of the
+distribution<00:22:25.240> D<00:22:25.440> of<00:22:25.600> theta.
+distribution D of theta.
+Um,
+so<00:22:29.760> now
+so now
+uh,<00:22:30.760> we<00:22:31.200> want<00:22:31.440> to<00:22:31.560> solve<00:22:32.480> this<00:22:33.120> uh,<00:22:33.200> learning
+uh, we want to solve this uh, learning
+probabilistic<00:22:34.200> model<00:22:34.520> problem,<00:22:35.360> but<00:22:36.240> uh,<00:22:36.400> the
+probabilistic model problem, but uh, the
+most<00:22:37.280> popular<00:22:37.720> approach<00:22:38.200> turns<00:22:38.520> out<00:22:38.720> to<00:22:38.840> be
+most popular approach turns out to be
+NP-hard.
+So,<00:22:41.440> uh,<00:22:41.520> how<00:22:41.640> do<00:22:41.800> we<00:22:41.960> deal<00:22:42.200> with<00:22:42.680> NP-hardness?
+So, uh, how do we deal with NP-hardness?
+Uh,
+Um,<00:22:59.520> any<00:22:59.720> idea<00:23:00.080> how<00:23:00.240> to
+Um, any idea how to
+uh,<00:23:01.520> how<00:23:01.680> do<00:23:01.840> we<00:23:02.040> usually<00:23:02.880> uh,<00:23:02.960> deal<00:23:03.160> with
+uh, how do we usually uh, deal with
+MP-hard<00:23:03.880> problems?
+Right.<00:23:10.040> So,<00:23:10.400> so<00:23:10.640> in<00:23:10.760> this<00:23:11.000> lecture<00:23:11.440> you've
+Right. So, so in this lecture you've
+learned<00:23:12.640> approximation<00:23:13.320> algorithms,<00:23:14.080> and
+learned approximation algorithms, and
+that's<00:23:14.640> a<00:23:14.760> very<00:23:15.160> nice<00:23:15.520> way<00:23:15.760> of<00:23:16.400> uh
+that's a very nice way of uh
+uh<00:23:17.560> dealing<00:23:17.920> with<00:23:18.480> MP-hard<00:23:18.960> problems.
+Uh<00:23:22.240> and<00:23:22.520> in<00:23:22.840> many<00:23:23.080> cases
+Uh and in many cases
+approximation<00:23:25.200> does<00:23:25.440> make<00:23:25.640> sense.<00:23:25.880> For
+approximation does make sense. For
+example,<00:23:26.560> if<00:23:26.800> we<00:23:27.360> want<00:23:27.600> to<00:23:27.720> do<00:23:27.960> a<00:23:28.160> K-means
+example, if we want to do a K-means
+clustering,<00:23:29.240> and<00:23:29.600> if<00:23:29.840> the<00:23:30.000> data<00:23:30.280> points<00:23:30.560> are
+clustering, and if the data points are
+really<00:23:31.040> like<00:23:31.320> this,
+really like this,
+then<00:23:32.800> maybe<00:23:33.400> even<00:23:33.720> if<00:23:33.920> I<00:23:34.040> get<00:23:34.320> a<00:23:34.680> say<00:23:34.920> a<00:23:35.080> two<00:23:35.360> or
+then maybe even if I get a say a two or
+three<00:23:35.800> approximation,
+three approximation,
+the<00:23:37.720> clustering<00:23:38.320> could<00:23:38.560> still<00:23:38.840> be<00:23:39.080> quite
+the clustering could still be quite
+reasonable.
+Uh
+but<00:23:43.120> if<00:23:43.280> the<00:23:43.440> problem<00:23:44.360> if<00:23:44.600> this<00:23:45.080> maximum
+but if the problem if this maximum
+likelihood<00:23:46.160> problem
+likelihood problem
+does<00:23:47.720> not<00:23:47.920> have<00:23:48.160> a<00:23:48.240> very<00:23:48.560> special<00:23:49.000> structure,
+does not have a very special structure,
+uh<00:23:50.640> sometimes<00:23:51.160> it's<00:23:51.400> not
+uh sometimes it's not
+uh<00:23:52.560> clear<00:23:53.480> what<00:23:54.000> kind<00:23:54.360> approximation
+uh clear what kind approximation
+algorithm<00:23:55.640> do.
+algorithm do.
+Because<00:23:57.160> we<00:23:57.320> are<00:23:57.640> maximizing
+Because we are maximizing
+uh
+Really<00:24:01.040> this<00:24:01.240> is<00:24:01.440> a<00:24:01.560> negative<00:24:02.040> number<00:24:02.400> because
+Really this is a negative number because
+it's<00:24:03.360> log<00:24:03.760> of<00:24:03.960> probabilities.
+it's log of probabilities.
+Um
+so<00:24:07.000> we<00:24:07.120> are<00:24:07.280> maximizing<00:24:07.960> that,<00:24:08.320> or<00:24:08.680> we<00:24:08.840> should
+so we are maximizing that, or we should
+really<00:24:09.520> be<00:24:09.640> thinking<00:24:10.040> we<00:24:10.160> are<00:24:10.280> minimizing<00:24:10.840> the
+really be thinking we are minimizing the
+negative<00:24:12.080> version<00:24:12.440> of<00:24:12.560> that.
+negative version of that.
+Uh<00:24:14.280> usually<00:24:14.680> we<00:24:14.800> can
+Uh usually we can
+uh<00:24:16.120> for<00:24:16.240> most<00:24:16.480> problems<00:24:16.920> we<00:24:17.000> can<00:24:17.200> only<00:24:17.400> get<00:24:17.640> a
+uh for most problems we can only get a
+constant<00:24:18.160> factor<00:24:18.640> approximation.
+constant factor approximation.
+But<00:24:20.560> a<00:24:20.720> constant<00:24:21.320> factor<00:24:21.800> in<00:24:22.000> the<00:24:22.280> log
+But a constant factor in the log
+probability<00:24:23.440> space<00:24:24.440> does<00:24:24.640> not<00:24:24.960> correspond<00:24:25.520> to
+probability space does not correspond to
+a<00:24:26.000> constant<00:24:26.480> factor<00:24:27.320> in<00:24:27.560> the<00:24:27.680> probabilities,
+a constant factor in the probabilities,
+right?<00:24:29.280> Because<00:24:29.720> if<00:24:30.080> the<00:24:30.200> logs<00:24:30.680> are<00:24:30.880> within
+right? Because if the logs are within
+constant<00:24:31.720> factor,<00:24:32.600> it<00:24:32.720> doesn't<00:24:33.040> mean<00:24:33.440> that<00:24:34.000> e
+constant factor, it doesn't mean that e
+to<00:24:34.280> the<00:24:34.440> that<00:24:34.680> number<00:24:35.400> is<00:24:35.640> still<00:24:35.920> within<00:24:36.440> a
+to the that number is still within a
+constant<00:24:36.960> factor.
+constant factor.
+Uh<00:24:38.360> in<00:24:38.480> fact<00:24:39.080> theta<00:24:39.440> we<00:24:39.560> get<00:24:39.960> will<00:24:40.360> might<00:24:41.000> give
+Uh in fact theta we get will might give
+a<00:24:41.440> much<00:24:41.720> lower<00:24:42.040> probability<00:24:43.000> than<00:24:43.240> the
+a much lower probability than the
+optimal<00:24:43.800> theta.
+optimal theta.
+So,<00:24:45.880> in<00:24:46.000> many<00:24:46.240> cases<00:24:47.080> um
+So, in many cases um
+um<00:24:49.400> it's<00:24:49.600> not<00:24:49.840> clear<00:24:50.160> what<00:24:51.000> approximation
+um it's not clear what approximation
+algorithm<00:24:52.200> can<00:24:52.400> do.
+algorithm can do.
+And<00:24:53.840> of<00:24:53.960> course<00:24:54.480> another<00:24:54.800> thing<00:24:55.480> here<00:24:55.920> is<00:24:56.720> um
+Uh
+as<00:25:00.280> I<00:25:00.360> said<00:25:01.120> uh<00:25:01.200> we<00:25:01.400> are
+as I said uh we are
+uh
+well
+the<00:25:04.200> best<00:25:04.440> case<00:25:04.720> is<00:25:05.080> of<00:25:05.240> course<00:25:05.560> if<00:25:05.720> we<00:25:05.840> can
+the best case is of course if we can
+solve<00:25:06.520> this<00:25:06.760> worst<00:25:06.960> case<00:25:07.200> problem,<00:25:07.640> we<00:25:07.760> would
+solve this worst case problem, we would
+be<00:25:08.080> happy,<00:25:08.520> but<00:25:08.720> that<00:25:08.920> only<00:25:09.120> happens<00:25:09.560> for<00:25:10.040> very
+be happy, but that only happens for very
+special
+problems.
+We<00:25:13.240> will<00:25:13.520> also<00:25:13.800> be<00:25:14.720> reasonably<00:25:15.360> happy<00:25:15.760> if<00:25:15.920> we
+We will also be reasonably happy if we
+can<00:25:16.200> solve<00:25:16.600> this<00:25:16.840> average<00:25:17.280> case<00:25:17.520> problem
+can solve this average case problem
+where<00:25:18.120> is<00:25:18.240> the<00:25:18.320> data<00:25:18.680> actually<00:25:19.080> come<00:25:19.400> from<00:25:19.920> the
+where is the data actually come from the
+off<00:25:20.240> theta.
+off theta.
+And<00:25:22.200> that's<00:25:22.600> potentially<00:25:23.160> much<00:25:23.480> easier<00:25:23.880> than
+And that's potentially much easier than
+the<00:25:24.320> worst<00:25:24.520> case<00:25:24.760> problem.
+the worst case problem.
+Or<00:25:27.360> more<00:25:27.640> realistically,<00:25:28.320> we<00:25:28.480> might
+Or more realistically, we might
+really<00:25:29.880> want<00:25:30.120> to<00:25:30.200> solve<00:25:30.440> something<00:25:30.800> in
+really want to solve something in
+between<00:25:31.600> when<00:25:31.800> the<00:25:31.880> data<00:25:32.160> points<00:25:32.560> are<00:25:33.000> roughly
+between when the data points are roughly
+generated<00:25:34.240> according<00:25:34.720> to<00:25:35.040> the<00:25:35.240> off<00:25:35.400> theta,
+generated according to the off theta,
+but<00:25:36.600> uh
+but uh
+let's<00:25:37.640> not<00:25:37.880> go<00:25:38.000> into<00:25:38.240> that.
+let's not go into that.
+So<00:25:39.400> average<00:25:39.760> case<00:25:40.080> is<00:25:40.320> also
+So average case is also
+uh
+possibility<00:25:43.880> that<00:25:44.480> uh<00:25:44.520> the<00:25:44.600> NP-hardness
+possibility that uh the NP-hardness
+might<00:25:45.560> go<00:25:45.720> away<00:25:45.960> because<00:25:46.320> of<00:25:46.440> that.
+might go away because of that.
+Average<00:25:48.040> case<00:25:48.360> also<00:25:48.640> includes<00:25:49.160> sometimes<00:25:49.960> we
+Average case also includes sometimes we
+have<00:25:50.520> some<00:25:50.760> idea<00:25:51.400> of<00:25:51.880> what<00:25:52.280> these<00:25:52.640> means<00:25:53.000> of
+have some idea of what these means of
+the<00:25:53.240> Gaussians<00:25:53.840> say<00:25:54.200> might<00:25:54.600> correspond<00:25:55.240> in
+the Gaussians say might correspond in
+some<00:25:55.840> real<00:25:56.080> system.
+some real system.
+And<00:25:57.720> the<00:25:57.800> real<00:25:58.040> system<00:25:59.320> might<00:25:59.720> have<00:26:00.000> some<00:26:00.280> way
+And the real system might have some way
+of<00:26:00.840> generating<00:26:01.600> these<00:26:01.880> means.<00:26:02.320> For<00:26:02.440> example,
+of generating these means. For example,
+maybe<00:26:03.120> we<00:26:03.240> can<00:26:03.440> assume<00:26:03.880> these
+maybe we can assume these
+means<00:26:05.120> of<00:26:05.280> the<00:26:05.400> Gaussians<00:26:05.920> are<00:26:06.120> also<00:26:06.680> random
+means of the Gaussians are also random
+vectors<00:26:07.520> of<00:26:07.720> some<00:26:07.920> sort.
+vectors of some sort.
+That<00:26:09.360> may<00:26:09.560> further<00:26:10.280> uh<00:26:10.360> simplify<00:26:11.200> the
+That may further uh simplify the
+problem.
+Uh
+and<00:26:16.240> uh<00:26:16.320> the<00:26:16.400> third<00:26:16.720> idea<00:26:17.560> and<00:26:17.920> actually<00:26:18.760> uh
+and uh the third idea and actually uh
+that's<00:26:19.120> the<00:26:19.240> idea<00:26:19.560> we<00:26:19.720> are<00:26:19.960> going<00:26:20.200> to<00:26:20.400> most
+that's the idea we are going to most
+focus<00:26:21.160> on<00:26:21.360> today<00:26:21.640> for<00:26:21.840> topic<00:26:22.200> models
+focus on today for topic models
+is<00:26:23.520> to<00:26:23.800> come<00:26:24.040> up<00:26:24.280> with<00:26:24.880> uh<00:26:24.920> natural
+is to come up with uh natural
+assumptions.
+Again,<00:26:34.240> this<00:26:34.440> is<00:26:35.120> uh<00:26:35.360> so<00:26:35.520> mixture<00:26:35.840> of
+Again, this is uh so mixture of
+Gaussians<00:26:36.360> problem<00:26:36.800> is<00:26:36.960> quite<00:26:37.280> abstract<00:26:37.800> that
+Gaussians problem is quite abstract that
+can<00:26:38.160> be<00:26:38.360> applied<00:26:38.960> in<00:26:39.360> many<00:26:39.640> settings.
+can be applied in many settings.
+Uh<00:26:41.160> maybe<00:26:41.520> in<00:26:41.680> some<00:26:41.920> systems<00:26:42.880> uh<00:26:42.960> these<00:26:43.240> means
+Uh maybe in some systems uh these means
+and<00:26:44.200> the<00:26:44.320> weights<00:26:44.800> have<00:26:45.960> uh<00:26:46.360> real<00:26:46.640> meanings
+and the weights have uh real meanings
+and<00:26:47.560> we
+and we
+uh<00:26:48.760> from<00:26:49.040> that<00:26:49.320> we<00:26:49.440> can<00:26:50.080> have<00:26:50.760> natural
+uh from that we can have natural
+assumptions<00:26:51.880> about<00:26:52.960> those<00:26:53.360> particular
+assumptions about those particular
+parameters.
+And<00:26:55.960> those<00:26:56.640> additional<00:26:57.240> restrictions<00:26:57.960> might
+And those additional restrictions might
+allow<00:26:58.520> us<00:26:58.760> to
+allow us to
+uh<00:27:00.720> have<00:27:01.280> a<00:27:02.120> faster<00:27:02.560> algorithm.
+Um
+and<00:27:07.640> you<00:27:07.760> will<00:27:07.880> see<00:27:08.080> an<00:27:08.200> example<00:27:08.720> today.<00:27:09.600> And
+and you will see an example today. And
+finally,<00:27:10.240> if<00:27:10.400> none<00:27:10.640> of<00:27:10.800> these<00:27:11.080> works,<00:27:11.640> we<00:27:11.800> can
+finally, if none of these works, we can
+always<00:27:12.760> uh
+always uh
+try<00:27:14.720> to<00:27:14.920> use<00:27:15.320> a<00:27:15.440> heuristic<00:27:16.000> algorithm.
+And<00:27:26.080> hope<00:27:26.520> hopefully<00:27:27.000> it<00:27:27.400> works<00:27:28.000> okay<00:27:28.400> in
+And hope hopefully it works okay in
+practice.
+Uh<00:27:30.680> so,<00:27:30.840> none<00:27:31.080> of<00:27:31.240> these<00:27:31.520> points<00:27:31.880> are<00:27:32.200> actually
+Uh so, none of these points are actually
+mutually
+exclusive.
+Uh
+using
+um
+uh<00:27:41.000> using<00:27:41.360> a<00:27:41.440> heuristic<00:27:42.000> algorithm<00:27:42.720> doesn't
+uh using a heuristic algorithm doesn't
+prevent<00:27:43.680> uh<00:27:43.720> shouldn't<00:27:44.200> prevent<00:27:44.600> us<00:27:44.840> from
+prevent uh shouldn't prevent us from
+trying<00:27:45.520> to<00:27:45.760> analyze
+trying to analyze
+the<00:27:47.160> heuristic<00:27:47.640> algorithm<00:27:48.800> using<00:27:49.440> either
+the heuristic algorithm using either
+average-case<00:27:50.520> analysis<00:27:51.200> or<00:27:51.520> under<00:27:51.840> some
+average-case analysis or under some
+natural<00:27:52.440> assumptions.
+natural assumptions.
+Um<00:27:55.440> so,<00:27:55.680> the<00:27:55.840> real<00:27:56.080> hope<00:27:56.840> for<00:27:57.880> uh
+Um so, the real hope for uh
+um
+for<00:28:00.680> this<00:28:00.920> kind<00:28:01.120> of<00:28:01.480> uh<00:28:01.520> research<00:28:02.720> is
+for this kind of uh research is
+uh<00:28:04.080> we<00:28:04.240> have<00:28:04.800> a<00:28:04.880> heuristic<00:28:05.400> algorithm
+that<00:28:12.800> that<00:28:13.000> applies<00:28:13.560> in<00:28:13.800> practice,<00:28:14.840> that
+that that applies in practice, that
+works<00:28:15.400> in<00:28:15.520> practice.
+Uh<00:28:24.160> but<00:28:24.320> we<00:28:24.400> can<00:28:24.640> also<00:28:25.040> analyze<00:28:26.320> in<00:28:27.080> uh<00:28:27.160> under
+Uh but we can also analyze in uh under
+um
+can<00:28:32.600> analyze<00:28:33.480> under
+can analyze under
+um
+well,<00:28:37.600> uh<00:28:38.440> either<00:28:38.880> approximation<00:28:40.120> sense<00:28:40.560> or
+well, uh either approximation sense or
+average<00:28:41.280> case<00:28:41.640> or<00:28:41.800> natural<00:28:42.200> assumptions.
+average case or natural assumptions.
+Under<00:28:45.640> uh<00:28:45.720> approximation
+Under uh approximation
+uh,<00:28:49.080> average<00:28:49.520> case
+or<00:28:53.040> assumptions
+or<00:28:57.240> whatever<00:28:57.680> else<00:28:58.040> you<00:28:58.160> can<00:28:58.360> think<00:28:58.600> about<00:28:59.400> or
+or whatever else you can think about or
+you<00:28:59.680> can<00:28:59.800> think<00:29:00.000> of.
+Um
+So,<00:29:05.560> this<00:29:05.800> is<00:29:05.920> really<00:29:06.280> our<00:29:06.560> hope.
+So, this is really our hope.
+Uh
+We<00:29:09.240> know<00:29:10.120> this<00:29:10.360> is<00:29:10.600> possible<00:29:11.240> for<00:29:11.920> a<00:29:12.000> small<00:29:12.280> set
+We know this is possible for a small set
+of<00:29:12.600> problems,<00:29:13.160> but<00:29:13.520> in<00:29:13.640> general<00:29:14.120> this<00:29:14.360> is
+of problems, but in general this is
+really<00:29:15.120> a
+really a
+new<00:29:16.440> area<00:29:16.960> and
+new area and
+uh,<00:29:18.680> a<00:29:18.720> relatively<00:29:19.280> new<00:29:19.480> area<00:29:20.000> and<00:29:20.640> uh,<00:29:20.720> there
+uh, a relatively new area and uh, there
+are<00:29:21.000> still<00:29:21.240> many<00:29:21.480> open<00:29:21.760> problems<00:29:22.320> in<00:29:22.760> here.
+are still many open problems in here.
+Um
+So,<00:29:26.480> today<00:29:26.800> we<00:29:26.960> will<00:29:27.120> see<00:29:27.600> an<00:29:28.120> algorithm
+So, today we will see an algorithm
+that's<00:29:29.600> different<00:29:30.000> from<00:29:30.240> the
+that's different from the
+heuristic<00:29:31.800> algorithms<00:29:32.320> that<00:29:32.560> people<00:29:32.880> have
+heuristic algorithms that people have
+been<00:29:33.280> applying<00:29:33.800> before.
+been applying before.
+And<00:29:36.080> uh,<00:29:36.160> that<00:29:36.360> can<00:29:36.520> be<00:29:37.040> analyzed<00:29:38.320> uh,<00:29:38.560> in
+And uh, that can be analyzed uh, in
+under<00:29:39.720> natural<00:29:40.080> assumptions<00:29:40.880> for<00:29:41.200> learning
+under natural assumptions for learning
+topic<00:29:41.880> models.
+topic models.
+Um
+Okay,<00:29:46.120> so<00:29:47.080> uh,<00:29:47.160> now<00:29:47.360> let's<00:29:47.680> get<00:29:47.960> to<00:29:48.680> uh
+Okay, so uh, now let's get to uh
+really<00:29:49.840> what<00:29:50.240> is<00:29:50.600> the<00:29:50.720> problem?<00:29:51.560> Uh,<00:29:51.600> I<00:29:51.720> wrote
+really what is the problem? Uh, I wrote
+the<00:29:52.040> title<00:29:53.000> um
+the title um
+half<00:29:54.000> an<00:29:54.160> hour<00:29:54.440> ago,<00:29:54.920> but<00:29:55.560> uh,<00:29:55.600> I<00:29:55.720> haven't<00:29:56.040> been
+half an hour ago, but uh, I haven't been
+explaining<00:29:56.880> what<00:29:57.240> what<00:29:57.480> do<00:29:57.520> I<00:29:57.640> mean<00:29:57.880> by<00:29:58.160> a
+explaining what what do I mean by a
+learning<00:29:58.520> topic<00:29:58.840> models?
+learning topic models?
+Um
+Uh,<00:30:02.000> so<00:30:02.640> so
+Uh, so so
+what<00:30:03.920> are<00:30:04.080> topic<00:30:04.440> models?
+Uh,<00:30:09.600> so<00:30:09.920> topic<00:30:10.320> models<00:30:11.000> is<00:30:11.600> a<00:30:11.640> way<00:30:11.880> to<00:30:12.080> try<00:30:12.960> uh,
+Uh, so topic models is a way to try uh,
+so
+so<00:30:14.280> it's<00:30:14.440> easier<00:30:14.720> to<00:30:15.400> first<00:30:15.640> define<00:30:16.520> what<00:30:16.680> do
+so it's easier to first define what do
+we<00:30:16.960> want<00:30:17.240> to<00:30:17.440> achieve<00:30:17.920> by
+we want to achieve by
+a<00:30:19.360> learning<00:30:19.720> topic<00:30:20.080> models.
+a learning topic models.
+The<00:30:21.320> goal<00:30:21.640> is<00:30:21.960> to<00:30:22.720> learn<00:30:23.400> uh,<00:30:23.520> semantic
+The goal is to learn uh, semantic
+structure
+uh,<00:30:33.440> from
+uh,<00:30:36.720> large<00:30:37.240> corpus<00:30:37.720> of<00:30:37.920> document,<00:30:38.840> a<00:30:38.920> large
+uh, large corpus of document, a large
+text<00:30:39.560> corpus,<00:30:40.200> let's<00:30:40.640> just<00:30:40.760> say.
+Um
+So,<00:30:48.440> for<00:30:48.560> example,<00:30:49.080> if<00:30:49.320> I<00:30:49.440> take<00:30:49.880> uh<00:30:50.040> New<00:30:50.160> York
+So, for example, if I take uh New York
+Times<00:30:50.760> articles<00:30:51.480> for<00:30:51.920> say<00:30:52.160> 20<00:30:52.480> years,<00:30:53.000> and<00:30:53.480> I
+Times articles for say 20 years, and I
+uh<00:30:55.200> try<00:30:55.440> to<00:30:55.600> learn<00:30:55.960> what<00:30:56.200> are<00:30:56.480> these
+uh try to learn what are these
+articles<00:30:58.080> talking<00:30:58.400> about?<00:30:59.320> Um<00:30:59.640> some<00:30:59.880> of<00:31:00.040> them
+articles talking about? Um some of them
+might<00:31:00.760> be<00:31:00.880> talking<00:31:01.200> about<00:31:01.760> say
+might be talking about say
+uh<00:31:03.040> politics<00:31:03.680> or<00:31:03.960> sports<00:31:04.440> or<00:31:04.640> science.
+uh politics or sports or science.
+And
+which<00:31:08.240> documents<00:31:08.760> are<00:31:08.920> talking<00:31:09.240> about<00:31:09.520> these
+which documents are talking about these
+different<00:31:10.120> topics?<00:31:11.320> For<00:31:11.520> each<00:31:11.760> different
+different topics? For each different
+topic,<00:31:12.840> uh<00:31:13.280> what<00:31:13.520> words<00:31:13.840> are<00:31:14.080> used<00:31:14.440> when<00:31:14.640> we
+topic, uh what words are used when we
+are<00:31:14.920> talking<00:31:15.240> about<00:31:15.600> these<00:31:15.840> topics?
+are talking about these topics?
+Uh
+so,<00:31:18.480> we<00:31:18.600> want<00:31:18.840> an<00:31:19.000> algorithm<00:31:19.560> that<00:31:20.200> that<00:31:20.400> can
+so, we want an algorithm that that can
+automatically<00:31:21.520> learn<00:31:22.080> all<00:31:22.280> those
+automatically learn all those
+information
+from<00:31:24.440> just<00:31:25.320> uh
+from just uh
+a<00:31:25.920> bunch<00:31:26.200> of<00:31:26.680> text<00:31:27.000> documents.
+a bunch of text documents.
+Uh<00:31:29.000> and<00:31:29.200> that's<00:31:29.440> really<00:31:29.640> the<00:31:29.760> goal<00:31:30.040> of<00:31:30.280> topic
+Uh and that's really the goal of topic
+models.
+Uh<00:31:32.680> it<00:31:32.760> has<00:31:33.120> many<00:31:33.480> applications,<00:31:34.720> uh<00:31:34.840> but<00:31:35.600> um
+Uh it has many applications, uh but um
+let's<00:31:37.440> not<00:31:37.720> go<00:31:37.840> into<00:31:38.040> that.
+let's not go into that.
+Um
+So,<00:31:40.320> this<00:31:40.600> is<00:31:40.720> the<00:31:40.840> goal.<00:31:41.440> And<00:31:42.400> um<00:31:42.480> the<00:31:42.600> way<00:31:42.760> we
+So, this is the goal. And um the way we
+do<00:31:43.120> it<00:31:43.360> is<00:31:44.240> uh<00:31:44.760> as<00:31:45.040> I<00:31:45.560> suggested,<00:31:46.840> uh
+do it is uh as I suggested, uh
+this<00:31:47.760> is<00:31:47.960> a<00:31:48.200> unsupervised<00:31:49.120> learning<00:31:49.440> task,
+this is a unsupervised learning task,
+and<00:31:50.200> the<00:31:50.320> way<00:31:50.600> we<00:31:50.840> specify<00:31:52.000> what<00:31:52.240> we<00:31:52.400> want<00:31:52.600> to
+and the way we specify what we want to
+do<00:31:52.880> in<00:31:53.200> unsupervised<00:31:54.040> learning<00:31:54.400> is<00:31:54.640> often
+do in unsupervised learning is often
+through<00:31:55.320> a<00:31:55.480> probabilistic<00:31:56.240> model.
+through a probabilistic model.
+So,<00:31:57.800> these<00:31:58.120> probabilistic<00:31:58.800> models<00:31:59.320> are
+So, these probabilistic models are
+called<00:32:00.160> topic<00:32:00.560> models.
+So,<00:32:06.680> a<00:32:06.760> model<00:32:07.240> should<00:32:07.520> specify<00:32:08.760> under<00:32:09.000> some
+So, a model should specify under some
+parameter<00:32:09.840> how<00:32:10.200> to<00:32:10.680> generate<00:32:11.960> uh
+parameter how to generate uh
+data<00:32:13.000> distribution.
+data distribution.
+Uh<00:32:15.000> in<00:32:15.120> this<00:32:15.280> case,<00:32:15.920> the<00:32:16.040> model<00:32:16.560> should<00:32:17.400> uh
+Uh in this case, the model should uh
+specify<00:32:19.120> how<00:32:19.560> to
+specify how to
+uh<00:32:21.240> generate
+uh<00:32:24.880> documents.
+But,<00:32:31.560> uh<00:32:31.600> of<00:32:31.760> course,<00:32:32.000> if<00:32:32.200> you<00:32:32.320> think<00:32:32.520> about
+But, uh of course, if you think about
+it,<00:32:32.960> it's<00:32:33.640> uh
+it, it's uh
+not<00:32:34.520> so<00:32:34.680> easy<00:32:34.960> to<00:32:35.120> generate<00:32:35.640> a<00:32:35.800> document.<00:32:36.680> We
+not so easy to generate a document. We
+we<00:32:37.280> all<00:32:37.560> write<00:32:37.840> articles,<00:32:38.440> but<00:32:38.680> it
+we all write articles, but it
+at<00:32:39.640> least<00:32:39.840> for<00:32:39.960> me,<00:32:40.200> even<00:32:40.440> for<00:32:40.560> me,<00:32:40.760> it's<00:32:41.000> a
+at least for me, even for me, it's a
+hard<00:32:42.400> uh<00:32:42.640> task.<00:32:43.360> Uh<00:32:43.520> I<00:32:43.640> don't<00:32:44.320> uh
+hard uh task. Uh I don't uh
+want<00:32:45.760> to<00:32:45.840> do<00:32:45.960> it<00:32:46.080> very<00:32:46.360> often.<00:32:47.120> Uh<00:32:47.400> and<00:32:47.560> it's
+want to do it very often. Uh and it's
+even<00:32:48.280> harder<00:32:48.680> to<00:32:49.120> uh<00:32:49.160> let<00:32:49.600> uh
+even harder to uh let uh
+a<00:32:50.320> computer<00:32:50.880> to<00:32:51.400> uh<00:32:51.440> program<00:32:51.920> to<00:32:52.200> generate<00:32:53.000> uh
+a computer to uh program to generate uh
+articles,<00:32:53.880> right?
+articles, right?
+Um<00:32:56.040> especially<00:32:56.680> it's<00:32:56.800> the<00:32:57.000> grammar<00:32:57.400> structure
+Um especially it's the grammar structure
+can<00:32:58.680> and<00:32:59.400> um
+can and um
+can<00:33:00.880> be<00:33:00.960> quite<00:33:01.240> complicated.
+can be quite complicated.
+So,<00:33:03.400> really<00:33:03.960> here<00:33:04.320> we<00:33:04.560> will
+So, really here we will
+It's<00:33:06.840> unlikely<00:33:07.440> that<00:33:07.640> we<00:33:07.720> will<00:33:07.840> have<00:33:08.120> a<00:33:08.240> model
+It's unlikely that we will have a model
+that<00:33:08.880> can<00:33:09.080> really<00:33:09.640> really<00:33:09.920> generate
+that can really really generate
+documents.
+Even<00:33:11.880> here<00:33:12.160> we<00:33:12.280> need<00:33:12.520> to<00:33:12.760> start<00:33:13.200> making<00:33:13.920> uh
+Even here we need to start making uh
+simplifying<00:33:14.800> assumptions.
+simplifying assumptions.
+And<00:33:17.360> uh<00:33:17.720> luckily<00:33:18.120> we<00:33:18.360> already<00:33:18.800> have<00:33:19.160> those
+And uh luckily we already have those
+kind<00:33:19.760> of<00:33:20.040> uh<00:33:20.080> simplifying<00:33:20.720> assumptions<00:33:21.600> uh
+kind of uh simplifying assumptions uh
+thanks<00:33:22.120> to
+thanks to
+a<00:33:23.360> long<00:33:23.600> line<00:33:23.960> of<00:33:24.240> research.
+a long line of research.
+So,<00:33:27.920> uh
+Probably<00:33:33.640> not<00:33:33.880> need<00:33:34.120> that<00:33:34.360> in<00:33:34.560> a<00:33:34.600> moment.<00:33:35.440> So,
+Probably not need that in a moment. So,
+uh
+So,<00:33:38.040> we<00:33:38.160> need<00:33:38.320> to<00:33:38.600> make<00:33:38.960> simplifying
+uh<00:33:44.840> assumptions.
+Uh
+so,<00:33:53.560> there's<00:33:53.920> a<00:33:54.040> really<00:33:54.360> a<00:33:54.440> long<00:33:54.680> line<00:33:54.920> of<00:33:55.120> work
+so, there's a really a long line of work
+here.<00:33:55.760> There's<00:33:56.840> uh<00:33:57.320> first<00:33:57.880> uh<00:33:57.920> model<00:33:58.280> called
+here. There's uh first uh model called
+PLSI<00:33:59.600> by<00:34:00.040> Hoffman.
+PLSI by Hoffman.
+Um
+and<00:34:03.240> at<00:34:03.400> the<00:34:03.480> same<00:34:03.760> time<00:34:04.160> by<00:34:04.640> uh<00:34:04.680> Popel
+and at the same time by uh Popel
+Demetrio<00:34:05.720> and<00:34:06.320> uh<00:34:06.400> others.<00:34:07.080> Uh
+Demetrio and uh others. Uh
+And<00:34:08.919> later<00:34:09.320> there's<00:34:09.679> a<00:34:09.840> famous<00:34:10.360> work<00:34:10.879> called
+And later there's a famous work called
+uh<00:34:11.520> latent<00:34:11.879> Dirichlet<00:34:12.440> allocation
+uh latent Dirichlet allocation
+uh<00:34:13.840> by<00:34:14.360> David<00:34:14.879> Blei,<00:34:15.760> Andrew<00:34:16.040> Ng,<00:34:16.440> and<00:34:17.280> uh<00:34:17.760> Mike
+uh by David Blei, Andrew Ng, and uh Mike
+Jordan.
+So,
+um
+and
+uh<00:34:22.760> hundreds<00:34:23.360> or<00:34:23.600> maybe<00:34:23.919> even<00:34:24.159> thousands<00:34:24.560> of
+uh hundreds or maybe even thousands of
+papers<00:34:25.080> following<00:34:25.600> all<00:34:25.760> these<00:34:26.040> papers.
+papers following all these papers.
+So,<00:34:27.879> from<00:34:28.120> this<00:34:28.840> uh<00:34:28.919> long<00:34:29.159> line<00:34:29.399> of<00:34:29.639> work<00:34:30.280> um
+So, from this uh long line of work um
+What<00:34:31.720> they<00:34:31.800> are<00:34:32.120> not<00:34:32.440> all<00:34:32.600> focusing<00:34:33.159> on<00:34:33.760> the
+What they are not all focusing on the
+simplifying<00:34:35.320> assumptions.
+simplifying assumptions.
+But<00:34:37.200> uh<00:34:37.440> this<00:34:38.120> uh<00:34:38.159> line<00:34:38.399> of<00:34:38.560> work<00:34:38.800> really
+But uh this uh line of work really
+identified<00:34:40.040> several<00:34:40.440> important
+identified several important
+assumptions.
+So<00:34:43.040> the<00:34:43.159> first<00:34:43.440> assumption<00:34:44.000> is<00:34:44.240> called<00:34:44.600> the
+So the first assumption is called the
+bag<00:34:45.080> of<00:34:45.280> words<00:34:45.600> assumption.
+Uh<00:34:51.520> so<00:34:51.720> the<00:34:51.840> bag<00:34:52.080> of<00:34:52.240> words<00:34:52.639> assumption<00:34:53.280> says
+Uh so the bag of words assumption says
+uh<00:34:54.159> in<00:34:54.360> order<00:34:54.919> to
+uh in order to
+uh
+learn<00:34:56.960> the<00:34:57.080> semantic<00:34:57.600> structure,
+learn the semantic structure,
+we<00:34:59.560> don't<00:34:59.920> really<00:35:00.120> need<00:35:00.440> to<00:35:01.240> care<00:35:01.480> about<00:35:01.760> the
+we don't really need to care about the
+ordering<00:35:02.400> of<00:35:02.600> the<00:35:02.720> words.<00:35:03.560> So<00:35:03.840> we<00:35:04.000> have<00:35:04.320> an
+ordering of the words. So we have an
+article,
+um
+we<00:35:07.680> can<00:35:07.840> just<00:35:08.000> forget<00:35:08.320> about<00:35:08.840> the<00:35:09.000> ordering<00:35:09.440> of
+we can just forget about the ordering of
+the<00:35:09.680> words<00:35:10.120> and<00:35:10.960> uh<00:35:11.040> throw<00:35:11.280> all<00:35:11.400> the<00:35:11.480> words
+the words and uh throw all the words
+into<00:35:12.000> a<00:35:12.080> bag<00:35:12.680> and<00:35:13.240> try<00:35:13.400> to<00:35:13.560> learn<00:35:13.760> from<00:35:14.000> that.
+into a bag and try to learn from that.
+So<00:35:16.360> this<00:35:16.560> is<00:35:17.240> uh<00:35:17.320> a<00:35:17.360> quite<00:35:17.680> reasonable
+So this is uh a quite reasonable
+assumption<00:35:19.160> and<00:35:19.640> you<00:35:19.760> will<00:35:19.960> believe<00:35:20.280> it<00:35:20.520> if
+assumption and you will believe it if
+you<00:35:20.960> take<00:35:21.200> a<00:35:21.280> few<00:35:21.480> examples.<00:35:22.000> So<00:35:22.080> here's<00:35:22.720> uh
+you take a few examples. So here's uh
+New<00:35:23.120> York<00:35:23.360> Times.<00:35:24.240> Uh
+New York Times. Uh
+So
+uh<00:35:26.360> if<00:35:26.520> you<00:35:26.640> trust<00:35:26.920> me,
+uh if you trust me,
+um
+I<00:35:29.320> will<00:35:29.560> just<00:35:30.040> uh<00:35:30.360> randomly<00:35:30.880> permute<00:35:31.440> uh<00:35:31.560> this
+I will just uh randomly permute uh this
+title<00:35:32.600> of<00:35:32.760> for<00:35:33.040> one<00:35:33.360> article.
+title of for one article.
+So<00:35:35.800> like<00:35:36.320> uh<00:35:36.520> Greece<00:35:37.400> preparations<00:35:38.600> deal,
+So like uh Greece preparations deal,
+hotels,
+rise,<00:35:41.520> Ebola.
+rise, Ebola.
+So
+even<00:35:44.680> though<00:35:44.920> I<00:35:45.120> permuted<00:35:46.120> all<00:35:46.240> the<00:35:46.360> words,
+even though I permuted all the words,
+I'm<00:35:47.080> pretty<00:35:47.320> sure<00:35:47.520> you<00:35:47.640> know<00:35:48.000> what<00:35:48.240> this
+I'm pretty sure you know what this
+article<00:35:49.680> is<00:35:49.800> talking<00:35:50.120> about.
+article is talking about.
+So<00:35:51.960> uh<00:35:52.000> really<00:35:52.240> this<00:35:52.480> bag<00:35:52.680> of<00:35:52.840> words
+So uh really this bag of words
+assumption<00:35:53.800> is<00:35:54.200> quite<00:35:54.520> reasonable.
+assumption is quite reasonable.
+Uh
+so<00:35:57.760> this<00:35:58.000> is<00:35:58.760> and<00:35:58.920> this<00:35:59.120> is<00:35:59.280> very<00:35:59.520> useful
+so this is and this is very useful
+because<00:36:00.480> then<00:36:01.120> uh<00:36:01.280> when<00:36:01.560> generating<00:36:02.160> the
+because then uh when generating the
+words,<00:36:03.040> we<00:36:03.160> don't<00:36:03.520> really<00:36:03.760> need<00:36:03.960> to<00:36:04.080> care
+words, we don't really need to care
+about<00:36:04.640> the<00:36:04.880> grammar<00:36:05.200> structure.<00:36:05.680> We<00:36:05.840> just
+about the grammar structure. We just
+generate<00:36:06.880> them<00:36:07.480> uh<00:36:07.560> randomly.
+generate them uh randomly.
+Uh<00:36:09.640> and<00:36:09.760> then<00:36:10.360> uh<00:36:10.440> the<00:36:10.560> next<00:36:10.840> assumption<00:36:11.360> is<00:36:11.960> uh
+Uh and then uh the next assumption is uh
+we<00:36:12.760> we<00:36:12.880> said<00:36:13.120> we<00:36:13.240> want<00:36:13.480> to<00:36:13.600> learn<00:36:13.840> semantic
+we we said we want to learn semantic
+structure<00:36:14.840> in<00:36:15.000> particular<00:36:15.480> what<00:36:15.760> are<00:36:16.200> what
+structure in particular what are what
+are<00:36:16.560> the<00:36:16.680> topics.
+are the topics.
+So<00:36:18.120> what<00:36:18.320> is<00:36:18.560> a<00:36:18.640> topic?<00:36:19.400> So<00:36:19.800> the<00:36:19.960> second<00:36:21.040> uh
+So what is a topic? So the second uh
+assumption<00:36:21.640> is<00:36:22.160> the<00:36:22.200> definition<00:36:22.920> of<00:36:23.160> a<00:36:23.240> topic.
+assumption is the definition of a topic.
+And<00:36:26.480> the<00:36:26.600> topic<00:36:27.160> is<00:36:27.520> defined<00:36:28.040> to<00:36:28.200> be<00:36:28.600> a
+And the topic is defined to be a
+probabilistic
+uh
+dis-
+distribution
+uh<00:36:36.080> over<00:36:36.480> probability<00:36:37.120> distribution.
+uh
+over<00:36:42.520> words.
+Uh
+so<00:36:48.560> it<00:36:48.720> says<00:36:49.440> uh<00:36:49.880> if<00:36:50.120> I<00:36:50.240> know<00:36:50.680> a<00:36:50.800> word<00:36:51.320> comes
+so it says uh if I know a word comes
+from<00:36:52.480> a<00:36:52.560> topic
+from a topic
+then<00:36:54.120> with<00:36:54.320> some<00:36:54.560> probability<00:36:55.280> this<00:36:55.640> word<00:36:56.760> uh
+then with some probability this word uh
+will<00:36:57.320> be<00:36:58.120> uh<00:36:58.280> something.<00:36:59.000> For<00:36:59.120> example,<00:36:59.840> uh
+will be uh something. For example, uh
+maybe<00:37:00.720> there's<00:37:01.080> a<00:37:01.160> topic<00:37:01.560> called<00:37:01.840> food<00:37:02.640> and<00:37:02.840> if
+maybe there's a topic called food and if
+I'm<00:37:03.320> talking<00:37:03.640> about<00:37:03.920> food<00:37:04.240> with<00:37:04.480> say<00:37:04.720> 1%
+I'm talking about food with say 1%
+probability<00:37:06.000> I<00:37:06.120> will<00:37:06.320> use<00:37:06.640> the<00:37:06.720> word<00:37:07.280> uh<00:37:07.360> say
+probability I will use the word uh say
+banana.
+Uh
+that's<00:37:09.760> the<00:37:09.920> idea<00:37:10.520> of<00:37:11.280> uh<00:37:11.360> topics<00:37:12.280> uh<00:37:12.360> under
+that's the idea of uh topics uh under
+these<00:37:13.080> simplifying<00:37:13.800> assumptions.<00:37:14.640> Uh<00:37:14.720> yes?
+these simplifying assumptions. Uh yes?
+So<00:37:15.480> does<00:37:15.680> this<00:37:15.920> assume<00:37:16.440> then<00:37:16.680> that<00:37:16.960> each<00:37:17.200> word
+So does this assume then that each word
+is<00:37:17.560> independently<00:37:18.200> drawn?
+is independently drawn?
+Uh<00:37:20.360> yes,<00:37:20.840> condition<00:37:21.520> on<00:37:21.920> the<00:37:22.040> topic.
+Uh yes, condition on the topic.
+Uh
+yeah,<00:37:25.320> if<00:37:25.560> you<00:37:25.680> know<00:37:25.840> the<00:37:26.360> topics<00:37:26.800> of<00:37:26.920> the
+yeah, if you know the topics of the
+words<00:37:27.640> they<00:37:27.840> are<00:37:28.120> drawn<00:37:28.560> independently.<00:37:29.720> And
+words they are drawn independently. And
+of<00:37:30.160> course<00:37:30.480> arguably<00:37:31.200> this<00:37:31.520> is<00:37:32.240> uh<00:37:32.480> not
+of course arguably this is uh not
+exactly<00:37:33.280> true.<00:37:33.760> The<00:37:33.960> words<00:37:34.560> will<00:37:34.760> have<00:37:35.600> more
+exactly true. The words will have more
+complicated<00:37:36.720> correlations.<00:37:38.080> But<00:37:38.280> this<00:37:38.640> will
+complicated correlations. But this will
+will<00:37:39.080> capture<00:37:39.480> the<00:37:39.600> first<00:37:39.880> order<00:37:40.120> effect<00:37:41.000> and
+will capture the first order effect and
+it's<00:37:41.720> really<00:37:41.920> very<00:37:42.240> useful<00:37:42.680> in<00:37:42.880> practice.
+it's really very useful in practice.
+Um
+So<00:37:45.920> finally<00:37:46.680> uh
+So finally uh
+uh<00:37:47.440> we
+uh we
+define<00:37:49.040> a<00:37:49.120> topic<00:37:49.760> and<00:37:49.920> then<00:37:50.200> we<00:37:50.360> want<00:37:50.600> to
+define a topic and then we want to
+define<00:37:51.200> what<00:37:51.360> do<00:37:51.480> I<00:37:51.560> mean<00:37:51.880> by<00:37:52.640> a<00:37:52.760> document<00:37:53.520> is
+define what do I mean by a document is
+talking<00:37:54.200> about<00:37:54.600> a<00:37:54.720> particular<00:37:55.320> topic.
+talking about a particular topic.
+So<00:37:57.200> in<00:37:57.360> this<00:37:57.600> kind<00:37:57.840> of<00:37:57.960> a<00:37:58.040> model<00:37:58.840> usually
+So in this kind of a model usually
+document
+uh<00:38:02.440> is<00:38:02.680> just<00:38:03.200> uh
+uh is just uh
+again<00:38:04.600> uh<00:38:04.680> probability<00:38:05.280> distribution
+uh<00:38:10.080> distribution
+uh distribution
+over<00:38:12.720> topics.
+Um
+So<00:38:20.160> this<00:38:20.680> in<00:38:20.800> particular<00:38:21.480> allows<00:38:21.960> a<00:38:22.040> document
+So this in particular allows a document
+to<00:38:22.680> be<00:38:22.840> talking<00:38:23.160> about<00:38:23.440> two<00:38:23.600> different<00:38:24.000> topics
+to be talking about two different topics
+Uh<00:38:24.920> or<00:38:25.240> more<00:38:25.440> than<00:38:25.600> two<00:38:25.840> different<00:38:26.200> topics.
+Uh or more than two different topics.
+Uh<00:38:27.960> for<00:38:28.080> example,<00:38:29.080> uh<00:38:29.160> maybe<00:38:29.600> 80%<00:38:30.200> of<00:38:30.400> a
+Uh for example, uh maybe 80% of a
+document<00:38:31.000> is<00:38:31.120> talking<00:38:31.480> about<00:38:31.840> politics<00:38:32.400> and
+document is talking about politics and
+20%<00:38:33.120> is<00:38:33.240> talking<00:38:33.560> about<00:38:33.800> finance<00:38:34.360> or<00:38:34.720> things
+20% is talking about finance or things
+like<00:38:35.160> that.
+like that.
+Uh
+so,<00:38:37.240> this<00:38:37.440> is<00:38:37.680> actually<00:38:38.120> a<00:38:38.440> relatively<00:38:39.160> new
+so, this is actually a relatively new
+thing<00:38:39.680> in<00:38:39.800> the
+thing in the
+earlier<00:38:41.280> works<00:38:41.720> like<00:38:42.000> PRSI,
+earlier works like PRSI,
+every<00:38:43.800> document<00:38:44.320> has<00:38:44.520> only<00:38:44.760> one<00:38:44.960> topic.
+every document has only one topic.
+Uh<00:38:46.760> but<00:38:47.040> later<00:38:47.480> people<00:38:47.800> find<00:38:48.120> out<00:38:48.400> that<00:38:49.120> um
+Uh but later people find out that um
+if<00:38:50.360> we<00:38:50.760> allow<00:38:51.520> each<00:38:51.760> document<00:38:52.360> to<00:38:52.520> talk<00:38:52.800> about
+if we allow each document to talk about
+a<00:38:53.440> probability<00:38:54.120> distribution<00:38:54.720> of<00:38:54.840> topics,
+a probability distribution of topics,
+it's
+uh<00:38:56.760> it<00:38:56.960> can<00:38:57.160> fit<00:38:57.520> the<00:38:58.120> empirical<00:38:58.640> data<00:38:58.960> much
+uh it can fit the empirical data much
+better.
+So,<00:39:00.480> that's<00:39:00.760> why<00:39:00.960> people<00:39:01.280> switched<00:39:01.720> into<00:39:02.240> this
+So, that's why people switched into this
+definition.
+Um
+Okay,<00:39:08.280> so
+Okay, so
+uh
+under<00:39:10.800> these<00:39:11.080> assumptions,<00:39:12.560> uh
+under these assumptions, uh
+we<00:39:14.560> can<00:39:14.800> try<00:39:15.080> to
+we can try to
+uh
+So,<00:39:16.960> first<00:39:17.680> um<00:39:17.720> most<00:39:18.040> important<00:39:18.560> part<00:39:18.880> of<00:39:19.040> the
+So, first um most important part of the
+parameters<00:39:20.120> for
+parameters for
+uh<00:39:21.680> topic<00:39:22.000> models<00:39:22.880> is
+uh topic models is
+this<00:39:24.800> uh<00:39:24.880> distribution
+this uh distribution
+uh<00:39:26.680> of<00:39:26.960> topic<00:39:27.400> and<00:39:27.640> words.
+uh of topic and words.
+And<00:39:29.720> they<00:39:29.880> are<00:39:30.080> usually<00:39:30.640> summarized<00:39:31.360> into<00:39:31.880> a
+And they are usually summarized into a
+topic<00:39:32.480> matrix.
+Uh<00:39:36.000> this<00:39:36.280> matrix<00:39:36.720> will<00:39:36.880> be<00:39:37.120> very<00:39:37.400> important<00:39:37.960> in
+Uh this matrix will be very important in
+the<00:39:38.760> rest<00:39:39.000> of<00:39:39.120> the<00:39:39.240> lecture,<00:39:39.680> so<00:39:40.160> uh<00:39:40.240> let's
+the rest of the lecture, so uh let's
+take<00:39:40.800> a<00:39:41.000> closer<00:39:41.360> look.<00:39:41.920> So,<00:39:42.200> a<00:39:42.280> topic<00:39:42.720> matrix
+take a closer look. So, a topic matrix
+will<00:39:44.320> be<00:39:44.480> a<00:39:44.560> matrix<00:39:45.040> that<00:39:45.320> looks<00:39:45.560> like<00:39:45.800> this.
+will be a matrix that looks like this.
+Let's<00:39:47.160> say<00:39:47.440> it's<00:39:47.640> a<00:39:47.880> M<00:39:48.000> by<00:39:48.160> K<00:39:48.400> matrix.
+Um
+so,<00:39:54.480> this<00:39:54.720> side<00:39:55.040> is
+so, this side is
+N<00:39:57.120> and<00:39:57.440> N<00:39:57.640> is<00:39:57.840> actually<00:39:58.320> the<00:39:58.680> size<00:39:59.120> of<00:39:59.400> the
+N and N is actually the size of the
+vocabulary.
+Uh
+so,<00:40:02.080> could<00:40:02.240> be<00:40:02.720> thousands<00:40:03.240> or<00:40:03.360> tens<00:40:03.600> of
+so, could be thousands or tens of
+thousands<00:40:04.240> or<00:40:04.360> even<00:40:04.600> larger.
+thousands or even larger.
+Uh<00:40:06.360> so,<00:40:06.520> this<00:40:06.720> side<00:40:07.160> are<00:40:07.640> all<00:40:07.800> the<00:40:08.000> words<00:40:09.000> uh
+Uh so, this side are all the words uh
+that<00:40:09.240> are<00:40:09.360> in<00:40:09.480> the<00:40:09.600> dictionary.
+that are in the dictionary.
+Uh<00:40:12.000> and<00:40:12.320> this<00:40:12.520> side<00:40:12.880> we<00:40:13.080> have<00:40:13.640> K,<00:40:14.040> which<00:40:14.320> is<00:40:14.560> the
+Uh and this side we have K, which is the
+number<00:40:15.080> of<00:40:15.360> topics.
+And<00:40:18.720> this<00:40:18.920> number<00:40:19.200> is<00:40:19.880> uh<00:40:20.000> often<00:40:20.360> much
+And this number is uh often much
+smaller.<00:40:21.320> You<00:40:21.440> should<00:40:21.680> think<00:40:21.920> of<00:40:22.160> K<00:40:22.640> as
+smaller. You should think of K as
+something<00:40:24.160> like<00:40:24.360> 100<00:40:24.880> or<00:40:25.000> 200,<00:40:25.680> something
+something like 100 or 200, something
+like<00:40:26.160> that.
+like that.
+Um
+So<00:40:29.880> then
+So then
+um<00:40:31.440> every<00:40:32.120> column<00:40:33.280> in<00:40:33.720> this<00:40:34.000> matrix<00:40:34.600> will<00:40:34.880> be
+um every column in this matrix will be
+uh<00:40:36.240> a<00:40:36.320> topic.
+uh a topic.
+So<00:40:38.320> column
+So column
+for<00:40:41.000> our<00:40:41.720> topics.
+And<00:40:45.960> uh<00:40:46.040> for<00:40:46.160> example,<00:40:46.560> if<00:40:47.360> uh<00:40:47.600> let's<00:40:47.800> use<00:40:48.040> the
+And uh for example, if uh let's use the
+same<00:40:48.440> example.
+same example.
+Uh
+Let's<00:40:50.520> say<00:40:50.600> there<00:40:50.760> might<00:40:51.000> be<00:40:51.120> a<00:40:51.200> topic<00:40:51.560> called
+Let's say there might be a topic called
+food.<00:40:52.440> Of<00:40:52.600> course,<00:40:52.920> these<00:40:53.200> names<00:40:53.600> are
+food. Of course, these names are
+cannot<00:40:55.080> be<00:40:55.400> automatically
+cannot be automatically
+generated.<00:40:57.600> But<00:40:58.200> if<00:40:58.400> there<00:40:58.560> is<00:40:58.680> a<00:40:58.760> topic
+generated. But if there is a topic
+called<00:40:59.400> food,
+called food,
+uh
+maybe<00:41:01.840> there's<00:41:02.160> a<00:41:02.240> word<00:41:02.760> banana<00:41:03.200> here.
+And<00:41:05.840> maybe<00:41:06.160> then<00:41:06.520> this<00:41:06.760> entry<00:41:07.280> is<00:41:08.040> 1%.
+And maybe then this entry is 1%.
+And<00:41:10.360> this<00:41:10.640> means<00:41:11.360> when<00:41:12.200> a<00:41:12.240> word<00:41:13.040> comes<00:41:13.400> from
+And this means when a word comes from
+this<00:41:14.000> topic<00:41:14.480> food,
+this topic food,
+then<00:41:15.880> with<00:41:16.080> 1%<00:41:16.560> probability,<00:41:17.680> this<00:41:17.960> word<00:41:18.240> will
+then with 1% probability, this word will
+be<00:41:19.240> a<00:41:19.280> banana.
+be a banana.
+And<00:41:21.400> all<00:41:21.600> the<00:41:21.720> entries<00:41:22.160> in<00:41:22.320> this<00:41:22.560> matrix<00:41:23.160> have
+And all the entries in this matrix have
+the<00:41:23.760> same<00:41:24.120> meaning.
+Uh
+And<00:41:28.920> because<00:41:29.600> every<00:41:29.920> column<00:41:30.480> should<00:41:30.800> specify
+And because every column should specify
+a<00:41:32.120> probability<00:41:32.760> distribution<00:41:33.600> over<00:41:33.920> words,
+a probability distribution over words,
+uh<00:41:35.480> we<00:41:35.600> know
+uh we know
+uh<00:41:36.960> entries<00:41:37.480> are
+uh entries are
+entries<00:41:39.160> of<00:41:39.720> this<00:41:39.960> topic<00:41:40.400> matrix<00:41:41.000> should<00:41:41.200> be
+entries of this topic matrix should be
+non-active.
+And<00:41:43.760> also<00:41:44.800> uh<00:41:44.880> columns
+And also uh columns
+uh<00:41:47.920> should<00:41:48.200> sum<00:41:48.440> up<00:41:48.600> to<00:41:48.720> one.
+Just<00:41:53.800> to<00:41:53.960> make<00:41:54.160> sure<00:41:54.480> that<00:41:54.720> this<00:41:54.920> column
+Just to make sure that this column
+represents<00:41:56.160> a<00:41:56.400> probability<00:41:57.040> distribution.
+Um
+Okay,
+um
+So<00:42:18.080> then
+So then
+um<00:42:19.640> using<00:42:20.040> this<00:42:20.240> topic<00:42:20.720> matrix,<00:42:21.280> we<00:42:21.440> can<00:42:22.080> try
+um using this topic matrix, we can try
+to
+uh<00:42:23.600> generate<00:42:24.480> uh<00:42:24.600> documents.
+Uh<00:42:46.200> so<00:42:47.160> in<00:42:47.400> all<00:42:47.560> these<00:42:47.800> topic<00:42:48.120> models,<00:42:48.640> there's
+Uh so in all these topic models, there's
+a<00:42:49.360> general
+a general
+uh<00:42:51.640> recipe<00:42:52.200> for<00:42:52.520> generating<00:42:53.320> documents.
+Uh<00:43:06.760> so<00:43:07.360> how<00:43:07.560> do<00:43:07.720> you<00:43:07.880> generate<00:43:08.560> a<00:43:08.680> document
+Uh so how do you generate a document
+according<00:43:09.720> to<00:43:10.320> uh<00:43:10.400> these<00:43:10.760> simplifying
+according to uh these simplifying
+assumptions?<00:43:11.920> Well,<00:43:12.080> the<00:43:12.200> first<00:43:12.440> step<00:43:12.720> is<00:43:13.000> you
+assumptions? Well, the first step is you
+uh<00:43:14.400> pick<00:43:14.720> the<00:43:14.920> length<00:43:15.240> of<00:43:15.400> the<00:43:15.520> document.
+And<00:43:22.000> uh<00:43:22.080> the<00:43:22.200> second<00:43:22.520> step,<00:43:22.880> you<00:43:23.200> pick<00:43:23.640> the
+And uh the second step, you pick the
+uh<00:43:25.800> topics
+uh topics
+for<00:43:28.400> this<00:43:28.600> document.
+for this document.
+So<00:43:30.520> the<00:43:30.600> topics<00:43:31.040> will<00:43:31.200> be
+So the topics will be
+uh<00:43:32.480> a<00:43:32.520> vector<00:43:32.920> of<00:43:33.160> length<00:43:33.480> K.<00:43:33.800> So<00:43:34.160> W1,<00:43:35.000> W2<00:43:36.240> to
+uh a vector of length K. So W1, W2 to
+uh<00:43:38.040> WK.
+uh WK.
+Uh
+so<00:43:41.920> these<00:43:42.240> are
+so these are
+uh<00:43:43.520> the<00:43:44.040> probability<00:43:44.760> distribution<00:43:45.400> over
+uh the probability distribution over
+topics.
+So<00:43:49.480> all<00:43:49.720> the<00:43:49.880> WIs<00:43:50.680> are<00:43:50.920> bigger<00:43:51.200> than<00:43:51.400> zero<00:43:51.880> and
+So all the WIs are bigger than zero and
+some<00:43:52.880> I<00:43:53.160> from<00:43:53.640> one<00:43:53.880> to<00:43:54.040> K
+some I from one to K
+WI<00:43:56.120> is<00:43:56.360> equal<00:43:56.600> to<00:43:56.760> one.
+WI is equal to one.
+So<00:43:59.560> uh<00:43:59.680> this<00:43:59.880> W<00:44:00.280> specifies<00:44:01.280> what<00:44:01.520> is<00:44:01.840> the
+So uh this W specifies what is the
+uh
+probability<00:44:04.600> distribution<00:44:05.400> over<00:44:05.640> the<00:44:05.920> and
+probability distribution over the and
+topics<00:44:06.480> for<00:44:06.800> this<00:44:07.080> particular<00:44:07.680> document.
+And<00:44:11.280> their<00:44:11.440> third<00:44:11.760> step<00:44:12.080> is<00:44:12.280> to<00:44:12.560> generate<00:44:13.000> the
+And their third step is to generate the
+word.<00:44:13.520> So,<00:44:13.800> for<00:44:14.080> each<00:44:14.360> word
+Uh<00:44:20.680> so,<00:44:21.000> say<00:44:21.400> I<00:44:21.760> from<00:44:22.880> 1<00:44:23.440> to
+Uh so, say I from 1 to
+the<00:44:24.760> length<00:44:25.040> of<00:44:25.200> the<00:44:25.280> document.
+the length of the document.
+Uh
+I'll<00:44:28.520> first<00:44:29.240> pick
+I'll first pick
+uh<00:44:31.520> the<00:44:31.640> topic
+TI.
+TI<00:44:38.040> is<00:44:38.320> a<00:44:38.400> number<00:44:39.160> in
+TI is a number in
+uh<00:44:40.680> 1<00:44:40.960> to<00:44:41.120> K.
+uh 1 to K.
+And<00:44:43.680> it<00:44:43.880> is<00:44:44.040> chosen<00:44:44.640> according<00:44:45.520> to
+And it is chosen according to
+uh<00:44:47.200> these<00:44:47.520> weights<00:44:48.160> uh<00:44:48.280> WIs.
+uh these weights uh WIs.
+So,<00:44:51.240> uh<00:44:51.360> for<00:44:51.520> each<00:44:51.720> word<00:44:52.480> uh
+So, uh for each word uh
+say<00:44:53.560> maybe
+say maybe
+Let's<00:44:55.520> look<00:44:55.680> at<00:44:55.800> an<00:44:55.920> example.<00:44:56.480> If
+Let's look at an example. If
+W1<00:44:57.920> is<00:44:58.160> 0.3<00:44:58.840> 0.7<00:44:59.480> and<00:44:59.640> W2<00:45:00.120> is<00:45:00.280> 0.3<00:45:00.920> and<00:45:01.080> all<00:45:01.200> the
+W1 is 0.3 0.7 and W2 is 0.3 and all the
+others<00:45:01.680> are<00:45:01.880> zero,<00:45:02.280> then
+others are zero, then
+TI<00:45:03.720> will<00:45:03.920> be<00:45:04.120> one<00:45:04.640> with<00:45:05.040> with<00:45:05.240> probability<00:45:06.200> 70%
+TI will be one with with probability 70%
+and<00:45:07.560> TI<00:45:07.920> will<00:45:08.080> be<00:45:08.240> two<00:45:08.520> otherwise.
+and TI will be two otherwise.
+Uh<00:45:11.560> so,<00:45:11.720> for<00:45:11.840> each<00:45:12.040> word,<00:45:12.280> you<00:45:12.400> first<00:45:12.720> choose
+Uh so, for each word, you first choose
+the<00:45:13.040> topic.
+the topic.
+And<00:45:15.640> then<00:45:16.200> uh<00:45:16.280> you<00:45:16.440> pick<00:45:16.680> a<00:45:16.760> word<00:45:17.080> from<00:45:17.280> that
+And then uh you pick a word from that
+topic.
+Pick<00:45:19.520> word<00:45:20.520> uh<00:45:20.840> ZI
+Pick word uh ZI
+in<00:45:23.600> uh
+in uh
+1<00:45:24.600> to<00:45:24.760> N<00:45:25.040> because<00:45:25.880> uh<00:45:25.920> as<00:45:26.120> we<00:45:26.240> assumed<00:45:26.840> N<00:45:27.080> is<00:45:27.320> the
+1 to N because uh as we assumed N is the
+size<00:45:27.760> of<00:45:27.920> the<00:45:28.040> vocabulary.
+size of the vocabulary.
+Uh<00:45:30.040> and<00:45:30.320> this<00:45:30.680> is<00:45:30.960> according<00:45:31.480> to<00:45:31.880> the
+Uh and this is according to the
+distribution
+that's<00:45:34.160> specified<00:45:35.080> by<00:45:35.680> the
+that's specified by the
+TIs<00:45:37.720> column<00:45:38.360> of<00:45:38.680> A.
+TIs column of A.
+Uh
+I'll<00:45:44.360> write<00:45:44.800> A.<00:45:45.480> dot<00:45:46.360> uh<00:45:46.440> TI<00:45:47.440> for<00:45:47.920> the<00:45:48.560> TIs
+I'll write A. dot uh TI for the TIs
+column.
+Um
+Okay,<00:45:53.640> so<00:45:53.920> this<00:45:54.160> is<00:45:54.400> a<00:45:54.480> way<00:45:54.800> to<00:45:55.280> generate<00:45:56.520> uh
+Okay, so this is a way to generate uh
+the<00:45:57.920> documents<00:45:58.640> according<00:45:59.520> to<00:45:59.680> this<00:45:59.880> topic
+the documents according to this topic
+model.
+Uh<00:46:02.280> according<00:46:02.720> to<00:46:02.880> many<00:46:03.160> topic<00:46:03.480> models,<00:46:03.920> in
+Uh according to many topic models, in
+fact.
+Uh<00:46:05.600> the<00:46:05.720> reason<00:46:06.000> that<00:46:06.240> this<00:46:06.440> is<00:46:07.040> not<00:46:07.600> really<00:46:08.000> a
+Uh the reason that this is not really a
+topic<00:46:08.480> model<00:46:08.960> is<00:46:09.440> because<00:46:10.760> there<00:46:10.960> are<00:46:11.280> steps
+topic model is because there are steps
+that<00:46:11.920> I<00:46:12.120> didn't<00:46:12.520> tell<00:46:12.760> you
+that I didn't tell you
+what<00:46:14.160> distribution<00:46:14.920> you<00:46:15.040> should<00:46:15.320> be<00:46:15.800> choosing
+what distribution you should be choosing
+from.
+Uh
+in<00:46:18.760> these<00:46:18.960> steps<00:46:19.360> I<00:46:19.920> we<00:46:20.120> know<00:46:20.440> what<00:46:20.680> is<00:46:20.960> what<00:46:21.160> is
+in these steps I we know what is what is
+the<00:46:21.440> correct<00:46:22.320> distribution<00:46:23.280> to<00:46:23.520> choose<00:46:23.760> from.
+the correct distribution to choose from.
+Uh
+but<00:46:26.320> first<00:46:26.600> we<00:46:26.720> need
+but first we need
+But<00:46:28.760> for<00:46:28.920> this<00:46:29.120> to<00:46:29.240> become<00:46:29.600> a<00:46:29.680> topic<00:46:30.040> model,<00:46:30.360> we
+But for this to become a topic model, we
+need<00:46:30.680> to<00:46:30.760> specify<00:46:31.560> what<00:46:31.760> is<00:46:32.040> how<00:46:32.240> to<00:46:32.360> choose
+need to specify what is how to choose
+the<00:46:32.760> length<00:46:33.040> of<00:46:33.200> the<00:46:33.280> document.
+the length of the document.
+Uh<00:46:34.800> length<00:46:35.080> is<00:46:35.200> not<00:46:35.600> really<00:46:35.840> that<00:46:36.120> important.
+Uh length is not really that important.
+Length<00:46:37.160> of<00:46:37.360> a<00:46:37.560> article<00:46:38.040> is<00:46:38.200> like<00:46:38.600> 300<00:46:39.080> words<00:46:39.360> or
+Length of a article is like 300 words or
+something<00:46:39.840> like<00:46:40.040> that.<00:46:40.440> Uh
+something like that. Uh
+some<00:46:41.320> integer.
+some integer.
+Uh
+and<00:46:43.880> really<00:46:44.440> you<00:46:44.680> observe<00:46:45.120> that<00:46:45.400> from<00:46:45.640> your
+and really you observe that from your
+data,<00:46:46.240> so<00:46:46.480> it's<00:46:46.960> really<00:46:47.200> not<00:46:48.160> uh
+data, so it's really not uh
+uh
+something<00:46:50.080> that<00:46:50.240> you<00:46:50.360> can<00:46:50.560> optimize<00:46:51.120> for.
+something that you can optimize for.
+So<00:46:52.400> many
+So many
+um<00:46:53.880> topic<00:46:54.200> models<00:46:54.640> just<00:46:54.880> ignore<00:46:55.360> this<00:46:55.640> length
+um topic models just ignore this length
+of<00:46:56.000> the<00:46:56.120> document.
+of the document.
+Uh<00:46:59.160> here<00:46:59.400> we<00:46:59.520> will<00:46:59.840> also<00:47:00.120> assume<00:47:00.520> it's<00:47:01.080> uh
+Uh here we will also assume it's uh
+something<00:47:01.480> fixed<00:47:01.840> and<00:47:02.040> known,<00:47:02.640> so<00:47:03.000> we<00:47:03.160> don't
+something fixed and known, so we don't
+worry<00:47:03.640> about<00:47:03.880> that.
+worry about that.
+Uh
+so<00:47:06.840> the<00:47:07.000> difference<00:47:07.480> between<00:47:07.840> all<00:47:08.040> these
+so the difference between all these
+different<00:47:08.720> topic<00:47:09.080> models<00:47:09.920> uh<00:47:10.240> from<00:47:10.480> the
+different topic models uh from the
+earliest<00:47:11.280> one<00:47:11.840> and<00:47:12.400> to<00:47:12.640> the<00:47:13.320> much<00:47:13.600> later<00:47:13.880> ones,
+earliest one and to the much later ones,
+uh<00:47:15.160> many<00:47:15.400> of<00:47:15.520> them<00:47:16.160> uh
+uh many of them uh
+the<00:47:17.040> difference<00:47:17.440> comes<00:47:17.760> from<00:47:18.200> the<00:47:18.520> step<00:47:18.840> two.
+the difference comes from the step two.
+So<00:47:21.240> uh<00:47:21.320> difference<00:47:21.840> in
+in<00:47:28.920> uh<00:47:29.080> topic<00:47:29.480> models.
+Uh<00:47:36.240> it's<00:47:36.440> mostly<00:47:36.880> in<00:47:37.040> the<00:47:37.200> step<00:47:37.560> two.<00:47:38.080> For
+Uh it's mostly in the step two. For
+example,<00:47:38.760> in<00:47:39.120> this<00:47:40.000> uh<00:47:40.080> the<00:47:40.200> earliest<00:47:40.600> work<00:47:41.160> uh
+example, in this uh the earliest work uh
+PLSI,
+uh<00:47:43.400> this<00:47:43.760> vector<00:47:44.240> W
+uh this vector W
+will<00:47:45.840> just<00:47:46.080> be<00:47:46.840> uh<00:47:46.920> one<00:47:47.160> of<00:47:47.360> the<00:47:47.520> basis
+will just be uh one of the basis
+vectors.
+Uh<00:47:50.240> of<00:47:50.360> course<00:47:50.640> this<00:47:50.840> is<00:47:51.080> happens<00:47:51.560> with
+Uh of course this is happens with
+probability
+uh<00:47:54.200> PI.
+uh PI.
+So<00:47:57.000> in<00:47:57.160> these<00:47:57.440> works<00:47:57.800> they<00:47:57.960> are<00:47:58.200> assuming<00:47:58.920> all
+So in these works they are assuming all
+the<00:47:59.520> documents<00:48:00.040> are<00:48:00.360> about<00:48:00.720> a<00:48:00.800> single<00:48:01.160> topic.
+the documents are about a single topic.
+So,<00:48:03.840> uh<00:48:03.920> this<00:48:04.840> topic<00:48:05.200> proportion<00:48:05.920> vector<00:48:06.400> is
+So, uh this topic proportion vector is
+really<00:48:07.000> a<00:48:07.120> basis<00:48:07.520> vector,<00:48:07.920> meaning<00:48:08.360> it's<00:48:08.720> only
+really a basis vector, meaning it's only
+one<00:48:09.480> in<00:48:10.160> a<00:48:10.200> particular<00:48:10.720> entry<00:48:11.600> and<00:48:11.760> zero<00:48:12.120> at
+one in a particular entry and zero at
+everywhere<00:48:12.960> else.
+everywhere else.
+Uh
+and<00:48:15.680> the<00:48:15.800> whole<00:48:15.960> document<00:48:16.480> will<00:48:16.640> be<00:48:16.880> about<00:48:17.720> uh
+and the whole document will be about uh
+the<00:48:17.960> single<00:48:18.320> topic.
+Uh
+in<00:48:21.840> the<00:48:21.960> later<00:48:22.240> models,<00:48:22.680> for<00:48:22.800> example,<00:48:23.280> this
+in the later models, for example, this
+latent<00:48:23.880> Dirichlet<00:48:24.840> allocation,
+latent Dirichlet allocation,
+uh<00:48:27.560> the<00:48:27.680> vector<00:48:28.040> W<00:48:28.560> is<00:48:28.840> chosen<00:48:29.320> according<00:48:30.040> to
+uh the vector W is chosen according to
+something<00:48:30.600> called<00:48:30.920> a<00:48:31.120> Dirichlet
+something called a Dirichlet
+uh<00:48:32.480> Dirichlet<00:48:33.080> distribution
+uh Dirichlet distribution
+with<00:48:34.880> some<00:48:35.160> other<00:48:35.440> parameter<00:48:36.040> alpha.
+with some other parameter alpha.
+Uh
+so,
+the<00:48:40.720> reason<00:48:40.960> they<00:48:41.080> choose<00:48:41.360> this<00:48:41.560> distribution
+the reason they choose this distribution
+has<00:48:42.400> to<00:48:42.520> do<00:48:42.760> with<00:48:43.280> uh<00:48:43.320> simplifying<00:48:44.160> their<00:48:45.080> uh
+has to do with uh simplifying their uh
+algorithm.
+But,<00:48:47.400> uh<00:48:47.640> really<00:48:47.920> the<00:48:48.040> main<00:48:48.280> intuition<00:48:48.960> is
+But, uh really the main intuition is
+this<00:48:49.520> is<00:48:49.720> a<00:48:49.760> distribution<00:48:50.720> that<00:48:51.240> do<00:48:51.360> not<00:48:51.600> just
+this is a distribution that do not just
+generate<00:48:52.640> all<00:48:52.880> these<00:48:53.440> uh<00:48:53.480> basis<00:48:53.840> vectors.<00:48:54.280> So,
+generate all these uh basis vectors. So,
+they<00:48:55.040> allows
+they allows
+a<00:48:56.360> document<00:48:56.880> to<00:48:57.040> talk<00:48:57.280> about<00:48:57.520> more<00:48:57.680> than<00:48:57.840> one
+a document to talk about more than one
+topic.
+But,<00:48:59.320> at<00:48:59.440> the<00:48:59.520> same<00:48:59.760> time,<00:49:00.200> this<00:49:00.480> distribution
+But, at the same time, this distribution
+tend<00:49:01.520> to<00:49:01.720> generate<00:49:02.440> uh<00:49:02.680> sparse<00:49:03.160> vectors.
+tend to generate uh sparse vectors.
+Uh
+which<00:49:06.640> translates<00:49:07.360> into<00:49:08.320> uh<00:49:08.440> topic<00:49:08.800> modeling
+which translates into uh topic modeling
+language,<00:49:09.800> it<00:49:09.960> means<00:49:10.600> this
+language, it means this
+every<00:49:11.640> document<00:49:12.120> is<00:49:12.720> only<00:49:12.960> talking<00:49:13.360> about<00:49:13.840> a
+every document is only talking about a
+few<00:49:14.200> topics.
+few topics.
+Uh<00:49:16.160> which<00:49:16.480> agrees<00:49:16.920> with<00:49:17.120> our<00:49:17.400> intuition
+Uh which agrees with our intuition
+because<00:49:18.320> we<00:49:18.440> don't
+because we don't
+expect<00:49:20.160> there's<00:49:20.440> a<00:49:20.520> document<00:49:21.000> talking<00:49:21.320> about,
+expect there's a document talking about,
+say,<00:49:21.880> all
+say, all
+all<00:49:23.040> the<00:49:23.360> uh<00:49:23.480> 100<00:49:23.920> topics<00:49:24.400> that<00:49:24.680> we<00:49:24.880> are<00:49:25.080> going
+all the uh 100 topics that we are going
+to<00:49:25.400> find.
+to find.
+Uh
+and<00:49:28.000> there<00:49:28.120> are<00:49:28.240> many<00:49:28.520> later<00:49:28.960> models,<00:49:29.560> and
+and there are many later models, and
+they<00:49:30.000> all<00:49:30.240> have<00:49:30.520> different<00:49:30.880> ways<00:49:31.160> of<00:49:31.360> choosing
+they all have different ways of choosing
+the<00:49:31.960> distributions.
+the distributions.
+Um
+In<00:49:36.400> this<00:49:36.600> lecture,<00:49:36.960> we'll<00:49:37.200> ignore<00:49:37.640> all<00:49:37.800> these
+In this lecture, we'll ignore all these
+differences,<00:49:38.760> and
+differences, and
+we'll<00:49:40.200> we'll<00:49:40.320> treat<00:49:40.840> essentially<00:49:41.320> treat<00:49:41.680> all
+we'll we'll treat essentially treat all
+these<00:49:42.640> uh<00:49:42.720> Ws
+these uh Ws
+also<00:49:44.240> as<00:49:44.560> a<00:49:44.680> part<00:49:45.200> of<00:49:45.720> the
+also as a part of the
+uh<00:49:47.320> parameters.
+uh parameters.
+Um
+Uh<00:49:52.480> so,<00:49:52.720> they<00:49:52.880> can<00:49:53.040> be<00:49:53.240> arbitrary<00:49:53.720> as<00:49:53.920> long<00:49:54.120> as
+Uh so, they can be arbitrary as long as
+they<00:49:54.480> satisfy<00:49:55.120> some<00:49:55.480> reasonable<00:49:56.000> assumptions
+they satisfy some reasonable assumptions
+that<00:49:56.880> we're<00:49:57.440> we<00:49:57.560> are<00:49:57.680> going<00:49:57.920> to<00:49:58.080> make.
+that we're we are going to make.
+Uh,<00:50:00.320> and<00:50:00.640> also<00:50:01.240> we<00:50:01.440> are<00:50:01.800> not<00:50:02.280> going<00:50:02.560> to<00:50:02.720> be<00:50:02.880> able
+Uh, and also we are not going to be able
+to<00:50:03.320> handle<00:50:03.840> the
+to handle the
+most<00:50:05.760> general<00:50:06.240> algorithm<00:50:06.840> for<00:50:07.680> learning
+most general algorithm for learning
+topic<00:50:08.320> model.<00:50:08.680> Instead,<00:50:09.120> we'll<00:50:09.400> be<00:50:09.600> focusing
+topic model. Instead, we'll be focusing
+on<00:50:10.840> uh,
+on uh,
+easy<00:50:11.920> case.
+easy case.
+Uh,<00:50:13.880> easy<00:50:14.200> case<00:50:14.760> is<00:50:15.200> when
+uh,<00:50:19.520> when<00:50:19.840> N<00:50:20.160> goes<00:50:20.520> to<00:50:21.400> uh,<00:50:21.560> infinity.
+uh, when N goes to uh, infinity.
+Remember<00:50:23.720> this<00:50:24.120> N<00:50:24.960> is<00:50:25.520> the<00:50:25.680> length<00:50:26.000> of<00:50:26.160> the
+Remember this N is the length of the
+document.
+So,<00:50:28.280> the<00:50:28.440> easy<00:50:28.680> case<00:50:28.960> is<00:50:29.360> if<00:50:29.680> every<00:50:29.920> document
+So, the easy case is if every document
+is<00:50:30.880> really<00:50:31.280> very,<00:50:31.720> very<00:50:32.000> long.<00:50:32.880> Uh,
+is really very, very long. Uh,
+uh,<00:50:34.440> of<00:50:34.600> course<00:50:34.840> our<00:50:35.000> candidate<00:50:35.520> this<00:50:35.720> is<00:50:35.920> not
+uh, of course our candidate this is not
+very<00:50:36.440> reasonable<00:50:37.000> in<00:50:37.120> practice,<00:50:37.680> but<00:50:38.440> uh,
+very reasonable in practice, but uh,
+uh,
+for<00:50:40.840> this<00:50:41.040> lecture,<00:50:41.400> let's<00:50:41.640> focus<00:50:42.120> on<00:50:42.560> this
+for this lecture, let's focus on this
+simple<00:50:43.480> case<00:50:44.040> and<00:50:44.280> if<00:50:44.440> you<00:50:44.880> want<00:50:45.160> to<00:50:46.040> look<00:50:46.200> at
+simple case and if you want to look at
+the<00:50:46.400> case<00:50:46.800> for<00:50:47.320> uh,<00:50:47.400> finite<00:50:47.880> N<00:50:48.360> or<00:50:48.600> a<00:50:48.680> small<00:50:49.040> N,
+the case for uh, finite N or a small N,
+uh,<00:50:50.760> there<00:50:50.840> are<00:50:51.000> relevant<00:50:51.480> papers<00:50:51.920> about
+uh, there are relevant papers about
+that.
+Uh,
+so<00:50:54.320> it's<00:50:54.400> a<00:50:54.440> good<00:50:54.640> thing<00:50:55.000> when<00:50:55.560> uh,<00:50:55.760> this
+so it's a good thing when uh, this
+number<00:50:56.680> uh,<00:50:56.760> this<00:50:57.040> length<00:50:57.520> of<00:50:57.840> the<00:50:58.000> document
+number uh, this length of the document
+goes<00:50:59.560> to<00:50:59.880> almost<00:51:00.240> infinity
+goes to almost infinity
+is<00:51:02.400> that<00:51:03.280> uh,<00:51:03.360> we<00:51:03.520> can<00:51:04.240> hope<00:51:04.640> that<00:51:05.040> every<00:51:05.360> word
+is that uh, we can hope that every word
+appears<00:51:07.120> uh,
+appears uh,
+more<00:51:08.120> than<00:51:08.320> just<00:51:08.560> once<00:51:08.960> in<00:51:09.120> the<00:51:09.200> document.
+more than just once in the document.
+And<00:51:11.320> that<00:51:11.600> allows<00:51:12.040> us<00:51:12.240> to<00:51:12.560> estimate<00:51:13.240> all<00:51:13.440> these
+And that allows us to estimate all these
+probably<00:51:14.680> all<00:51:14.880> these<00:51:15.160> probabilities.
+probably all these probabilities.
+So,<00:51:17.280> we<00:51:17.400> can<00:51:17.720> estimate
+So, we can estimate
+the<00:51:19.880> probabilities
+the probabilities
+of<00:51:22.160> a<00:51:22.360> word<00:51:23.080> uh,<00:51:23.200> ZI
+of a word uh, ZI
+uh,
+being<00:51:26.320> a<00:51:26.520> particular<00:51:27.040> word<00:51:27.440> V
+being a particular word V
+conditional<00:51:29.160> on<00:51:29.640> this<00:51:29.920> word<00:51:30.200> is<00:51:30.480> chosen<00:51:31.040> from
+conditional on this word is chosen from
+this<00:51:31.640> document.
+this document.
+So,<00:51:34.200> to<00:51:34.400> estimate<00:51:34.840> this,<00:51:35.080> we<00:51:35.280> just<00:51:35.560> take<00:51:36.400> uh,
+So, to estimate this, we just take uh,
+look<00:51:36.680> at<00:51:36.800> the<00:51:36.880> document,<00:51:37.960> uh,<00:51:38.040> look<00:51:38.280> at
+look at the document, uh, look at
+how<00:51:39.720> many<00:51:39.960> times<00:51:40.320> this<00:51:40.520> word<00:51:40.720> appeared
+how many times this word appeared
+divided<00:51:41.640> by<00:51:41.840> the<00:51:42.000> length<00:51:42.240> of<00:51:42.400> the<00:51:42.520> document.
+divided by the length of the document.
+And<00:51:43.920> if<00:51:44.080> the<00:51:44.200> document<00:51:44.640> is<00:51:44.840> really<00:51:45.080> long,<00:51:45.400> this
+And if the document is really long, this
+will<00:51:45.760> be<00:51:46.000> a<00:51:46.320> fairly<00:51:46.640> good<00:51:47.400> estimate
+will be a fairly good estimate
+uh<00:51:48.920> for<00:51:49.160> this<00:51:49.400> probability.
+uh for this probability.
+Uh<00:51:51.720> of<00:51:51.880> course,<00:51:52.120> for<00:51:52.280> it<00:51:52.440> to<00:51:52.640> be<00:51:53.280> accurate,<00:51:54.080> uh
+Uh of course, for it to be accurate, uh
+the<00:51:54.560> document<00:51:55.440> the<00:51:55.560> length<00:51:55.920> need<00:51:56.160> to<00:51:56.280> be
+the document the length need to be
+comparable<00:51:57.280> to<00:51:58.200> the<00:51:58.320> size<00:51:58.600> of<00:51:58.760> the
+comparable to the size of the
+vocabulary,<00:52:00.280> which<00:52:00.480> means<00:52:00.720> it's<00:52:00.920> uh<00:52:01.280> really
+vocabulary, which means it's uh really
+long<00:52:01.760> document.
+long document.
+Um
+but<00:52:04.960> for<00:52:05.120> now,<00:52:05.280> let's<00:52:05.520> work<00:52:05.800> with<00:52:05.960> that.
+but for now, let's work with that.
+Uh
+let's<00:52:09.560> uh<00:52:09.600> for<00:52:09.760> now<00:52:09.920> suppose<00:52:10.360> we<00:52:10.520> have<00:52:11.000> these
+let's uh for now suppose we have these
+estimations.<00:52:12.480> We<00:52:12.600> know<00:52:13.280> what<00:52:13.480> is<00:52:13.640> the
+estimations. We know what is the
+probability<00:52:14.480> that<00:52:14.800> a<00:52:15.160> word<00:52:16.040> uh<00:52:16.240> appears<00:52:16.760> in
+probability that a word uh appears in
+this<00:52:17.000> document.
+this document.
+Uh
+so,<00:52:19.880> what<00:52:20.080> does<00:52:20.480> that<00:52:20.920> uh<00:52:21.160> tell<00:52:21.400> us?<00:52:22.120> Well,
+so, what does that uh tell us? Well,
+so<00:52:23.840> once<00:52:24.080> we<00:52:24.200> have<00:52:24.680> all<00:52:24.840> these<00:52:25.120> probabilities,
+so once we have all these probabilities,
+we<00:52:26.080> can<00:52:26.400> organize<00:52:27.200> all<00:52:27.440> these<00:52:27.840> probabilities
+we can organize all these probabilities
+uh<00:52:29.800> in<00:52:29.960> a<00:52:30.000> matrix.
+Uh<00:52:33.280> and<00:52:33.480> this<00:52:33.680> will<00:52:33.840> be<00:52:34.120> a<00:52:34.440> document
+Uh and this will be a document
+uh<00:52:36.640> word<00:52:37.000> matrix.
+uh word matrix.
+On<00:52:39.520> this<00:52:39.720> side,<00:52:40.320> uh<00:52:40.480> the<00:52:40.680> dimension<00:52:41.200> is<00:52:41.480> N,<00:52:41.840> the
+On this side, uh the dimension is N, the
+number<00:52:42.840> of<00:52:43.000> words<00:52:43.360> in<00:52:43.720> vocabulary.
+number of words in vocabulary.
+And<00:52:45.360> on<00:52:45.480> this<00:52:45.680> side,<00:52:46.160> uh<00:52:46.520> the<00:52:47.240> length<00:52:47.960> uh<00:52:48.320> is
+And on this side, uh the length uh is
+say<00:52:49.120> we<00:52:49.240> have<00:52:49.680> M<00:52:49.960> documents.
+say we have M documents.
+And<00:52:52.320> every<00:52:52.560> column<00:52:52.960> will<00:52:53.160> be<00:52:54.000> um
+And every column will be um
+document<00:52:55.520> uh
+document uh
+it<00:52:56.360> will<00:52:56.520> specify<00:52:57.160> this<00:52:57.400> probability
+it will specify this probability
+distribution.
+What<00:52:59.600> is<00:52:59.840> the<00:52:59.960> probability<00:53:00.720> that<00:53:01.080> we<00:53:01.320> choose
+What is the probability that we choose
+uh<00:53:02.760> we<00:53:03.080> that<00:53:03.280> we<00:53:03.400> see<00:53:03.640> this<00:53:03.880> word<00:53:04.600> if<00:53:04.800> we<00:53:04.920> are<00:53:05.080> in
+uh we that we see this word if we are in
+this<00:53:05.440> particular<00:53:05.920> document.
+And<00:53:09.760> that's<00:53:10.080> really<00:53:10.320> roughly<00:53:10.800> all<00:53:11.000> the
+And that's really roughly all the
+information<00:53:11.640> we've<00:53:12.040> got<00:53:12.560> because<00:53:13.600> uh<00:53:13.760> we<00:53:13.920> are
+information we've got because uh we are
+assuming<00:53:14.480> bag<00:53:14.680> of<00:53:14.840> words<00:53:15.320> uh<00:53:15.640> assumption.
+assuming bag of words uh assumption.
+So,<00:53:17.400> really
+So, really
+uh<00:53:18.640> the<00:53:19.440> the<00:53:19.560> words<00:53:20.600> uh<00:53:20.680> do<00:53:20.800> not<00:53:21.280> uh<00:53:21.400> the
+uh the the words uh do not uh the
+ordering<00:53:21.880> of<00:53:21.960> the<00:53:22.080> words<00:53:22.400> do<00:53:22.520> not<00:53:22.800> really
+ordering of the words do not really
+matter.
+Uh
+so,<00:53:26.400> how<00:53:26.520> do<00:53:26.640> we<00:53:26.760> deal<00:53:27.000> with<00:53:27.320> this<00:53:28.080> uh<00:53:28.160> matrix?
+so, how do we deal with this uh matrix?
+Well,
+we<00:53:30.200> can<00:53:30.480> observe<00:53:31.120> that<00:53:31.800> uh
+we can observe that uh
+according<00:53:33.880> to<00:53:34.360> this<00:53:34.640> generating<00:53:35.200> process,
+according to this generating process,
+uh
+we<00:53:37.560> have<00:53:37.760> a<00:53:37.880> particular<00:53:38.480> way<00:53:38.720> of<00:53:38.920> generating
+we have a particular way of generating
+words.
+So,<00:53:41.360> according<00:53:41.840> to<00:53:42.080> this<00:53:42.280> process,<00:53:42.960> what<00:53:43.200> is
+So, according to this process, what is
+the<00:53:43.560> probability<00:53:44.360> that<00:53:44.640> we<00:53:44.800> generate<00:53:45.280> this
+the probability that we generate this
+word<00:53:46.040> in<00:53:46.200> this<00:53:46.400> document?
+word in this document?
+Well,<00:53:49.520> according<00:53:49.960> to<00:53:50.120> here,<00:53:50.720> it<00:53:50.960> goes<00:53:51.240> in<00:53:51.440> two
+Well, according to here, it goes in two
+steps,<00:53:51.960> right?<00:53:52.360> Uh<00:53:52.600> you<00:53:52.720> first<00:53:53.120> choose<00:53:53.400> a
+steps, right? Uh you first choose a
+topic,<00:53:54.400> and<00:53:54.560> then<00:53:54.920> you
+topic, and then you
+choose<00:53:56.120> the<00:53:56.240> word<00:53:56.520> according<00:53:56.960> to<00:53:57.080> the<00:53:57.200> topic.
+choose the word according to the topic.
+Uh
+So,<00:54:02.240> this<00:54:02.520> is<00:54:02.800> equal<00:54:03.160> to
+So, this is equal to
+uh
+sum<00:54:06.160> over<00:54:06.560> all<00:54:06.800> topics.
+J<00:54:10.640> is<00:54:10.880> from<00:54:11.200> one<00:54:11.560> to<00:54:11.880> okay.
+J is from one to okay.
+Uh<00:54:13.840> the<00:54:13.960> probability<00:54:14.760> that<00:54:15.200> uh<00:54:15.360> this<00:54:15.560> document
+Uh the probability that uh this document
+generates<00:54:16.760> this<00:54:17.000> particular<00:54:18.040> topic.
+generates this particular topic.
+So,<00:54:20.400> TI<00:54:21.120> is<00:54:21.280> equal<00:54:21.600> to<00:54:21.840> J
+So, TI is equal to J
+conditional<00:54:23.680> on<00:54:23.760> the<00:54:23.880> document.
+conditional on the document.
+times
+the<00:54:28.000> probability<00:54:28.880> that
+the probability that
+once<00:54:30.440> I<00:54:30.560> have<00:54:30.800> this<00:54:30.960> topic,<00:54:31.400> what<00:54:31.560> is<00:54:31.720> the
+once I have this topic, what is the
+probability<00:54:32.400> that<00:54:32.640> I<00:54:32.760> generate<00:54:33.280> the
+probability that I generate the
+particular<00:54:33.880> word?
+particular word?
+Uh<00:54:35.480> so,<00:54:36.160> TI<00:54:36.840> is<00:54:37.040> equal<00:54:37.280> to<00:54:37.520> V
+Uh so, TI is equal to V
+conditional<00:54:39.120> on<00:54:39.560> TI<00:54:40.080> is<00:54:40.280> equal<00:54:40.520> to<00:54:40.640> J.
+Uh<00:54:44.600> so,<00:54:44.760> this<00:54:45.000> is<00:54:45.240> just<00:54:45.520> a<00:54:45.560> equation<00:54:46.040> that's
+Uh so, this is just a equation that's
+true<00:54:46.520> because<00:54:46.880> of<00:54:47.320> probability.
+true because of probability.
+Um
+and<00:54:52.880> uh<00:54:53.000> really<00:54:53.320> uh<00:54:53.600> what<00:54:53.880> is<00:54:54.680> this?
+These<00:54:57.960> are<00:54:58.560> really<00:54:58.840> just<00:54:59.520> uh
+These are really just uh
+the<00:55:00.800> topic<00:55:01.800> uh<00:55:01.920> probability<00:55:02.600> distributions,
+the topic uh probability distributions,
+these<00:55:03.760> W<00:55:04.080> values<00:55:04.720> that<00:55:05.080> we<00:55:05.240> have<00:55:05.480> here.
+these W values that we have here.
+So,<00:55:06.880> these<00:55:07.160> are<00:55:07.440> really<00:55:07.720> the<00:55:07.880> W<00:55:08.200> values.<00:55:09.280> Uh
+So, these are really the W values. Uh
+and<00:55:10.120> what<00:55:10.360> are<00:55:10.600> these<00:55:10.880> values?<00:55:11.400> Well,<00:55:11.760> these
+and what are these values? Well, these
+are<00:55:12.320> really
+are really
+uh
+what<00:55:16.520> we<00:55:16.640> have<00:55:16.960> in<00:55:17.440> the<00:55:18.120> topic<00:55:18.480> matrix,<00:55:19.320> right?
+Um
+so,<00:55:23.200> this<00:55:23.440> is<00:55:23.680> really<00:55:24.240> A<00:55:24.560> of
+uh<00:55:27.680> VJ.
+So,<00:55:32.640> every<00:55:32.920> entry<00:55:33.400> in<00:55:33.560> this<00:55:33.840> matrix<00:55:34.600> is<00:55:35.080> the
+So, every entry in this matrix is the
+sum<00:55:36.080> of<00:55:36.440> product<00:55:37.200> of<00:55:37.640> these<00:55:37.920> things.
+sum of product of these things.
+And<00:55:39.520> we<00:55:39.640> can<00:55:39.840> write<00:55:40.200> uh<00:55:40.320> this<00:55:40.520> equation<00:55:41.280> much
+And we can write uh this equation much
+more<00:55:41.720> compactly<00:55:42.640> using<00:55:43.200> the<00:55:43.320> rule<00:55:43.560> of<00:55:43.760> matrix
+more compactly using the rule of matrix
+product.
+So,<00:55:46.120> this<00:55:46.400> is<00:55:46.720> really<00:55:47.040> equal<00:55:47.320> to<00:55:47.880> the<00:55:48.000> matrix
+So, this is really equal to the matrix
+A.
+Uh<00:55:50.240> let's<00:55:50.440> call<00:55:50.600> this<00:55:50.800> matrix<00:55:51.280> M.
+Uh let's call this matrix M.
+M<00:55:52.520> is<00:55:52.720> really<00:55:52.960> equal<00:55:53.240> to<00:55:53.400> the<00:55:53.520> matrix<00:55:54.080> A<00:55:54.480> times
+a<00:55:57.520> matrix<00:55:57.960> W.
+a matrix W.
+Where<00:55:59.440> A<00:55:59.680> is<00:56:00.120> just<00:56:00.440> our<00:56:00.960> topic<00:56:01.400> matrix.
+Where A is just our topic matrix.
+And
+uh<00:56:04.760> a<00:56:04.840> column<00:56:05.320> in<00:56:05.520> W<00:56:06.040> will<00:56:06.160> just<00:56:06.440> be<00:56:06.680> the<00:56:07.360> WIs
+uh a column in W will just be the WIs
+for<00:56:08.240> the
+for the
+documents.
+And<00:56:13.200> of<00:56:13.320> course,<00:56:13.680> A<00:56:14.080> has<00:56:14.640> dimension<00:56:15.240> N<00:56:15.400> by<00:56:15.600> K
+And of course, A has dimension N by K
+and<00:56:16.640> W<00:56:17.000> has<00:56:17.240> dimension<00:56:17.800> K<00:56:18.040> by<00:56:18.600> by<00:56:18.840> M.
+and W has dimension K by by M.
+Uh
+So,<00:56:23.600> if<00:56:23.800> you<00:56:23.960> think<00:56:24.160> about<00:56:24.440> it,<00:56:24.720> this<00:56:25.000> is<00:56:25.560> this
+So, if you think about it, this is this
+is<00:56:26.200> really<00:56:26.440> equivalent<00:56:27.080> to<00:56:27.440> this<00:56:27.720> formula
+is really equivalent to this formula
+because
+this<00:56:30.200> particular<00:56:30.760> entry
+this particular entry
+in<00:56:32.200> the<00:56:32.320> matrix<00:56:32.720> product<00:56:33.440> is<00:56:33.640> equal<00:56:33.880> to<00:56:34.160> the
+in the matrix product is equal to the
+inner<00:56:34.600> product<00:56:35.240> of<00:56:35.520> this<00:56:35.840> row<00:56:36.640> and<00:56:36.880> this
+inner product of this row and this
+column.<00:56:37.840> This<00:56:38.080> row<00:56:38.320> correspond<00:56:38.840> to<00:56:39.120> all<00:56:39.280> these
+column. This row correspond to all these
+values.
+And<00:56:40.880> this<00:56:41.040> column<00:56:41.480> correspond<00:56:41.960> to<00:56:42.120> all<00:56:42.240> these
+And this column correspond to all these
+values.
+Uh
+So,<00:56:48.720> this<00:56:49.000> is<00:56:49.240> very<00:56:49.520> good<00:56:49.760> because<00:56:50.560> uh<00:56:50.640> it
+So, this is very good because uh it
+relates<00:56:51.640> uh<00:56:51.720> the
+relates uh the
+document<00:56:53.880> word<00:56:54.080> matrix,<00:56:54.680> which<00:56:55.120> we<00:56:55.280> know<00:56:55.560> from
+document word matrix, which we know from
+the<00:56:56.600> data,
+the data,
+to<00:56:58.480> the<00:56:59.200> topic<00:56:59.600> matrix,<00:57:00.200> which<00:57:00.480> is<00:57:00.680> the
+to the topic matrix, which is the
+parameter<00:57:01.400> we<00:57:01.600> want<00:57:01.800> to<00:57:01.920> learn.
+parameter we want to learn.
+So,<00:57:03.640> really<00:57:04.360> uh<00:57:04.440> our<00:57:04.640> problem<00:57:05.120> becomes<00:57:05.760> the
+So, really uh our problem becomes the
+given<00:57:06.520> this<00:57:06.720> matrix<00:57:07.200> A,<00:57:07.680> uh<00:57:07.840> sorry,<00:57:08.080> given
+given this matrix A, uh sorry, given
+this<00:57:08.560> matrix<00:57:08.960> M,<00:57:09.560> I<00:57:09.680> want<00:57:09.880> to<00:57:10.000> find<00:57:10.840> this
+this matrix M, I want to find this
+decomposition<00:57:11.880> A<00:57:12.000> times<00:57:12.360> W.
+decomposition A times W.
+Where<00:57:14.200> A<00:57:14.840> and<00:57:15.040> W<00:57:15.400> have<00:57:15.680> size<00:57:16.080> much<00:57:16.320> smaller
+Where A and W have size much smaller
+than<00:57:16.920> M.<00:57:17.560> So,<00:57:17.720> that's<00:57:18.000> a
+than M. So, that's a
+important<00:57:19.480> structure<00:57:19.920> in<00:57:20.040> this<00:57:20.240> matrix.
+important structure in this matrix.
+And<00:57:22.280> that<00:57:22.480> is<00:57:23.080> uh<00:57:23.160> actually<00:57:23.520> a<00:57:23.640> problem<00:57:24.200> called
+And that is uh actually a problem called
+non-negative
+matrix<00:57:29.760> factorization.
+Uh
+factorization.
+Uh<00:57:41.720> that's<00:57:42.080> studied<00:57:42.880> independently<00:57:43.720> of<00:57:44.360> topic
+Uh that's studied independently of topic
+models.
+Um
+So,<00:57:49.920> a<00:57:50.240> non-negative<00:57:50.920> matrix<00:57:51.320> factorization
+So, a non-negative matrix factorization
+problem<00:57:52.560> is<00:57:52.920> just<00:57:53.680> given
+problem is just given
+a<00:57:55.320> matrix<00:57:55.920> M
+a matrix M
+uh<00:57:59.200> it's<00:58:00.080> uh<00:58:00.160> M<00:58:00.280> by<00:58:00.480> M.
+Um
+the<00:58:07.240> goal<00:58:07.440> is<00:58:07.600> to<00:58:07.800> find
+the goal is to find
+matrices
+A<00:58:14.640> and<00:58:14.840> W.
+Um<00:58:18.800> well,<00:58:19.240> A<00:58:19.600> is<00:58:19.920> in<00:58:20.440> R<00:58:20.880> to<00:58:21.200> the<00:58:22.000> N<00:58:22.200> by<00:58:22.400> K.
+And<00:58:25.160> W<00:58:25.560> is<00:58:25.840> in<00:58:26.240> R<00:58:26.520> to<00:58:26.720> the
+And W is in R to the
+K<00:58:28.280> by<00:58:28.520> M.
+Um
+with
+non-negative<00:58:36.320> entries.
+Uh
+and<00:58:48.320> um
+and um
+M<00:58:49.920> is<00:58:50.120> equal<00:58:50.360> to<00:58:50.600> A<00:58:50.720> times<00:58:51.040> W.
+Uh
+So,<00:59:00.320> the<00:59:00.480> reason<00:59:00.800> we<00:59:00.920> want<00:59:01.200> non-negative
+So, the reason we want non-negative
+entries<00:59:02.200> is<00:59:02.600> because
+entries is because
+of<00:59:04.040> course<00:59:04.280> I
+of course I
+as<00:59:05.200> we<00:59:05.360> explained<00:59:06.440> this<00:59:06.800> matrix<00:59:07.440> A<00:59:08.040> is<00:59:08.400> the
+as we explained this matrix A is the
+topic<00:59:08.880> matrix,<00:59:09.560> the<00:59:09.720> entries<00:59:10.120> are
+topic matrix, the entries are
+probabilities.
+So,<00:59:12.040> it<00:59:12.120> must<00:59:12.360> be<00:59:12.480> non-negative.
+So, it must be non-negative.
+Uh<00:59:14.800> same<00:59:15.160> similar<00:59:15.520> things<00:59:16.000> works<00:59:16.280> for<00:59:16.480> W.
+Uh same similar things works for W.
+There's<00:59:17.960> also<00:59:18.240> the<00:59:18.480> normalization
+There's also the normalization
+constraint,<00:59:20.080> but<00:59:20.400> actually<00:59:20.760> that's<00:59:21.320> without
+constraint, but actually that's without
+loss<00:59:21.920> of<00:59:22.040> generality<00:59:22.800> as<00:59:23.000> long<00:59:23.200> as
+loss of generality as long as
+M<00:59:24.760> satisfies<00:59:25.320> the<00:59:25.400> normalization,<00:59:26.200> we<00:59:26.320> can
+M satisfies the normalization, we can
+always<00:59:27.720> without<00:59:28.080> loss<00:59:28.280> of<00:59:28.400> generality,<00:59:29.080> make
+always without loss of generality, make
+A<00:59:29.520> and<00:59:29.680> W<00:59:30.040> satisfy<00:59:30.560> the<00:59:30.680> same<00:59:30.920> normalization.
+A and W satisfy the same normalization.
+So,
+uh<00:59:33.200> so<00:59:33.400> so<00:59:33.640> that's<00:59:33.920> not<00:59:34.120> a<00:59:34.200> big<00:59:34.400> problem.
+uh so so that's not a big problem.
+Uh<00:59:35.600> the<00:59:35.720> big<00:59:35.920> problem<00:59:36.280> is<00:59:36.440> really<00:59:36.760> this
+Uh the big problem is really this
+non-negativity<00:59:38.360> constraint.
+non-negativity constraint.
+Uh<00:59:41.000> if<00:59:41.200> we<00:59:41.400> don't<00:59:41.680> have<00:59:41.960> this<00:59:42.160> constraint,
+Uh if we don't have this constraint,
+just<00:59:43.440> uh<00:59:43.480> we<00:59:43.640> want<00:59:43.880> to<00:59:44.080> factorize<00:59:44.760> a<00:59:44.840> matrix<00:59:45.360> M
+just uh we want to factorize a matrix M
+into<00:59:46.520> uh<00:59:46.560> two<00:59:46.840> smaller<00:59:47.240> matrices.<00:59:48.280> That's<00:59:48.560> a
+into uh two smaller matrices. That's a
+very<00:59:49.560> common<00:59:49.880> problem.<00:59:50.320> That's<00:59:50.600> just<00:59:50.960> a<00:59:51.040> rank
+very common problem. That's just a rank
+decomposition.
+We<00:59:53.040> can<00:59:53.200> just<00:59:53.520> pick<00:59:53.760> K<00:59:54.000> to<00:59:54.200> be<00:59:54.480> the
+We can just pick K to be the
+The<00:59:55.920> scale<00:59:56.360> looks<00:59:56.600> strange.<00:59:57.400> Uh<00:59:57.560> we<00:59:57.720> can<00:59:57.920> just
+The scale looks strange. Uh we can just
+pick<00:59:58.360> K<00:59:58.560> to<00:59:58.720> be<00:59:58.880> the<00:59:59.080> rank<00:59:59.320> of<00:59:59.440> the<00:59:59.560> matrix,<01:00:00.080> and
+pick K to be the rank of the matrix, and
+there's<01:00:00.600> always<01:00:00.960> such<01:00:01.200> a<01:00:01.280> factorization.
+there's always such a factorization.
+And<01:00:03.360> usually,<01:00:03.720> we<01:00:03.840> can<01:00:04.000> find<01:00:04.360> such<01:00:04.600> a
+And usually, we can find such a
+factorization<01:00:05.400> by<01:00:05.680> doing<01:00:06.040> singular<01:00:06.400> value
+factorization by doing singular value
+decomposition.
+Uh<01:00:09.040> but<01:00:09.240> really,<01:00:09.560> uh<01:00:09.720> those<01:00:10.000> decompositions
+Uh but really, uh those decompositions
+do<01:00:11.040> not<01:00:11.360> make<01:00:11.600> sure<01:00:12.000> that<01:00:12.520> uh<01:00:12.560> A<01:00:12.680> and<01:00:12.880> W<01:00:13.360> have
+do not make sure that uh A and W have
+non-negative<01:00:14.520> entries.
+non-negative entries.
+And<01:00:16.680> non-negativity<01:00:17.440> is<01:00:17.640> really<01:00:17.880> important
+And non-negativity is really important
+in<01:00:18.480> our<01:00:18.680> problems.<01:00:19.160> Otherwise,<01:00:19.640> we<01:00:19.720> cannot
+in our problems. Otherwise, we cannot
+interpret<01:00:21.480> these<01:00:21.760> parameters<01:00:22.560> as<01:00:23.080> the
+interpret these parameters as the
+probabilities.
+Uh<01:00:26.200> so<01:00:26.360> really,<01:00:27.120> uh
+Uh so really, uh
+we<01:00:28.000> want<01:00:28.280> the<01:00:28.360> non-negativity,<01:00:29.240> but
+we want the non-negativity, but
+unfortunately,
+uh
+like<01:00:32.920> many<01:00:33.160> times<01:00:33.560> we<01:00:33.720> see<01:00:33.960> in<01:00:34.160> machine
+like many times we see in machine
+learning,
+uh<01:00:36.320> this<01:00:36.560> problem<01:00:37.080> is<01:00:37.600> known<01:00:37.960> to<01:00:38.120> be<01:00:38.400> NP-hard.
+uh this problem is known to be NP-hard.
+Uh<01:00:40.120> it's<01:00:40.240> shown<01:00:40.560> by<01:00:40.880> Woodbury's<01:00:41.240> thesis.
+Okay,<01:01:17.840> so<01:01:18.400> now<01:01:18.600> we<01:01:18.720> have<01:01:19.000> a<01:01:19.080> NP-hard<01:01:19.640> problem.
+Okay, so now we have a NP-hard problem.
+We<01:01:20.640> just<01:01:20.920> talked<01:01:21.160> about<01:01:21.600> several<01:01:21.960> ways<01:01:22.360> of
+We just talked about several ways of
+getting<01:01:23.320> around<01:01:24.080> MP<01:01:24.320> hardness.
+getting around MP hardness.
+So<01:01:25.920> here<01:01:26.160> in<01:01:26.280> particular
+We<01:01:29.640> are<01:01:30.360> already<01:01:30.760> in<01:01:30.880> the<01:01:31.120> average<01:01:31.480> case<01:01:31.760> in
+We are already in the average case in
+some<01:01:32.080> sense<01:01:32.400> because
+some sense because
+we<01:01:33.880> came<01:01:34.200> to<01:01:34.320> this<01:01:34.520> problem<01:01:34.920> from<01:01:35.360> topic
+we came to this problem from topic
+modeling.
+So
+we<01:01:39.640> also<01:01:39.840> don't<01:01:40.280> want<01:01:40.480> to<01:01:40.600> do<01:01:40.720> any
+we also don't want to do any
+approximation<01:01:41.600> in<01:01:41.720> this<01:01:41.920> case.<01:01:42.760> So
+approximation in this case. So
+In<01:01:45.040> this<01:01:45.240> case<01:01:45.520> we<01:01:45.800> can<01:01:46.080> actually<01:01:46.480> identify
+In this case we can actually identify
+some
+Natural<01:01:49.200> assumptions<01:01:49.840> in<01:01:50.000> particular<01:01:50.520> this
+Natural assumptions in particular this
+matrix<01:01:51.240> A
+matrix A
+Is<01:01:52.800> the<01:01:52.880> matrix<01:01:53.440> of<01:01:54.080> topics<01:01:54.600> and<01:01:54.800> words.<01:01:55.600> So<01:01:56.080> we
+Is the matrix of topics and words. So we
+would<01:01:57.000> think<01:01:57.360> that<01:01:57.600> we<01:01:57.720> know<01:01:58.040> enough<01:01:58.680> about
+would think that we know enough about
+topics<01:01:59.840> to
+topics to
+Have<01:02:01.520> some<01:02:02.000> special<01:02:02.400> properties.
+Have some special properties.
+It<01:02:03.680> turns<01:02:03.920> out<01:02:04.120> one<01:02:04.320> of<01:02:04.480> the<01:02:04.680> properties<01:02:05.440> that
+It turns out one of the properties that
+People
+define
+In<01:02:11.320> different<01:02:11.720> context<01:02:12.600> called<01:02:12.880> separability
+In different context called separability
+as<01:02:14.240> defined<01:02:14.800> in
+as defined in
+a<01:02:16.040> work<01:02:16.400> by<01:02:16.720> Donoho
+a work by Donoho
+And<01:02:19.160> Stodden.
+Uh
+Is<01:02:24.360> a<01:02:24.400> very<01:02:24.720> relevant<01:02:25.440> in<01:02:25.880> the<01:02:26.080> topic<01:02:26.480> modeling
+Is a very relevant in the topic modeling
+case.
+First<01:02:28.400> see<01:02:28.800> the<01:02:29.040> definition.
+So
+um
+The<01:02:35.240> definition<01:02:35.840> of<01:02:36.000> separability<01:02:36.720> is<01:02:36.880> as
+The definition of separability is as
+matrix<01:02:38.080> A
+matrix A
+A<01:02:41.000> is<01:02:41.280> in<01:02:41.720> R<01:02:42.560> N<01:02:42.760> by<01:02:42.920> K
+A is in R N by K
+Is<01:02:45.400> separable
+If
+For<01:02:53.840> any<01:02:54.080> column
+I
+I<01:03:02.160> in<01:03:02.400> 1<01:03:02.640> to<01:03:02.760> K
+I in 1 to K
+There<01:03:05.360> is<01:03:05.640> a<01:03:05.720> row
+Say<01:03:12.600> AI<01:03:13.480> in
+Say AI in
+um
+So<01:03:15.640> the<01:03:15.760> set<01:03:16.040> of<01:03:16.160> rows
+So the set of rows
+such<01:03:18.600> that
+first
+um
+the<01:03:25.080> intersection<01:03:25.840> of<01:03:26.120> this<01:03:26.400> row<01:03:26.720> and<01:03:26.960> this
+the intersection of this row and this
+column<01:03:27.960> is
+column is
+bigger<01:03:29.720> than<01:03:29.880> zero.
+But<01:03:34.280> uh<01:03:34.800> and
+But uh and
+uh
+this
+so<01:03:39.520> other<01:03:39.840> entries<01:03:40.280> in<01:03:40.400> this<01:03:40.640> row
+so other entries in this row
+are<01:03:43.040> all<01:03:43.200> zeros
+are all zeros
+for<01:03:44.600> all
+for all
+j<01:03:46.920> not<01:03:47.240> equal<01:03:47.480> to<01:03:47.640> i.
+Um
+So,<01:03:52.760> this<01:03:53.000> is<01:03:53.200> quite<01:03:53.480> abstract.<01:03:54.000> Now,<01:03:54.200> let<01:03:54.360> me
+So, this is quite abstract. Now, let me
+draw<01:03:55.400> a<01:03:55.440> picture<01:03:55.960> to
+draw a picture to
+um
+explain.<01:04:00.080> So,<01:04:00.480> what<01:04:00.680> does<01:04:00.920> this<01:04:01.120> definition
+explain. So, what does this definition
+saying?<01:04:02.120> It<01:04:02.320> says<01:04:02.960> this<01:04:03.200> matrix<01:04:03.760> A<01:04:04.280> is
+saying? It says this matrix A is
+separable<01:04:05.760> if<01:04:06.080> for<01:04:06.520> every<01:04:06.840> column
+separable if for every column
+for<01:04:08.960> every<01:04:09.240> column<01:04:09.800> i,<01:04:10.400> there<01:04:10.960> should<01:04:11.400> be<01:04:11.800> a
+for every column i, there should be a
+row<01:04:12.680> that's
+row that's
+let's<01:04:14.280> say<01:04:14.320> this<01:04:14.560> row.
+let's say this row.
+Let's<01:04:16.240> call<01:04:16.520> it<01:04:16.960> A<01:04:17.120> sub<01:04:17.440> i.
+Let's call it A sub i.
+And<01:04:19.320> what<01:04:19.480> property<01:04:19.960> does<01:04:20.200> this<01:04:20.440> row<01:04:20.640> have?
+And what property does this row have?
+Well,<01:04:21.800> at<01:04:22.040> first<01:04:23.000> uh<01:04:23.040> this<01:04:23.280> particular<01:04:23.760> entry
+Well, at first uh this particular entry
+should<01:04:25.320> be<01:04:25.440> non-zero.
+should be non-zero.
+And<01:04:27.840> then<01:04:28.320> all<01:04:28.480> the<01:04:28.640> other<01:04:28.920> entries<01:04:29.320> in<01:04:29.480> this
+And then all the other entries in this
+row<01:04:30.160> should<01:04:30.440> be<01:04:30.600> zero.<01:04:31.480> So,<01:04:32.720> should<01:04:33.400> look<01:04:33.600> like
+row should be zero. So, should look like
+this.
+Right?
+Similarly,<01:04:37.560> uh<01:04:37.720> for<01:04:38.040> another<01:04:38.440> column
+Similarly, uh for another column
+there<01:04:40.240> is<01:04:40.480> a<01:04:40.600> different<01:04:41.040> row.
+there is a different row.
+And<01:04:43.560> this<01:04:43.800> particular<01:04:44.360> entry<01:04:45.040> is
+And this particular entry is
+non-negative<01:04:46.560> or<01:04:46.920> is<01:04:47.200> positive.
+non-negative or is positive.
+And<01:04:48.920> all<01:04:49.080> the<01:04:49.280> other<01:04:49.600> entries<01:04:50.080> are<01:04:50.320> zeros.
+So,<01:04:54.960> in<01:04:55.080> other<01:04:55.360> words,<01:04:56.040> uh<01:04:56.120> actually<01:04:56.480> if<01:04:56.640> we
+So, in other words, uh actually if we
+permute<01:04:57.680> uh<01:04:57.760> the<01:04:57.960> rows<01:04:58.760> to<01:04:58.960> make<01:04:59.600> all<01:04:59.760> these
+permute uh the rows to make all these
+rows<01:05:00.400> up<01:05:00.680> in<01:05:01.000> the<01:05:01.160> front
+rows up in the front
+uh<01:05:02.560> this<01:05:02.800> matrix<01:05:03.320> actually<01:05:03.800> looks<01:05:04.120> like
+uh this matrix actually looks like
+uh
+there<01:05:06.520> is<01:05:06.800> a<01:05:07.120> diagonal<01:05:07.560> matrix
+there is a diagonal matrix
+on<01:05:09.200> top
+on top
+that's<01:05:10.720> formed<01:05:11.040> by<01:05:11.280> all<01:05:11.520> these
+that's formed by all these
+uh
+rows.
+And<01:05:15.680> uh<01:05:15.760> well,<01:05:15.920> you<01:05:16.040> can<01:05:16.240> have<01:05:16.880> uh<01:05:17.280> anything<01:05:17.920> as
+And uh well, you can have uh anything as
+a<01:05:18.120> bottom.<01:05:18.880> It<01:05:18.920> doesn't<01:05:19.200> matter.
+So,<01:05:22.800> this<01:05:23.000> is<01:05:23.280> what<01:05:23.520> separability<01:05:24.280> means<01:05:24.800> for
+So, this is what separability means for
+a<01:05:25.200> matrix.
+a matrix.
+And<01:05:27.560> what<01:05:27.680> does<01:05:27.920> it<01:05:28.080> mean<01:05:28.520> if<01:05:28.720> we<01:05:28.960> assume<01:05:30.000> uh
+And what does it mean if we assume uh
+the<01:05:30.480> topic<01:05:30.840> matrix<01:05:31.360> to<01:05:31.520> be<01:05:31.680> separable?
+Um
+so
+so,<01:05:38.040> we<01:05:38.160> can<01:05:38.320> translate<01:05:38.920> this<01:05:39.600> uh
+so, we can translate this uh
+assumption
+in<01:05:42.000> the<01:05:42.120> context<01:05:42.840> of<01:05:43.440> uh<01:05:43.520> topic<01:05:43.880> modeling.
+in the context of uh topic modeling.
+So,<01:05:46.360> so<01:05:46.520> it<01:05:46.640> says<01:05:46.880> for<01:05:47.080> any<01:05:47.320> column,<01:05:47.880> but<01:05:48.040> a
+So, so it says for any column, but a
+column<01:05:48.600> is<01:05:49.080> a<01:05:49.240> topic.
+column is a topic.
+So,<01:05:50.640> it<01:05:50.760> says<01:05:51.080> for<01:05:51.360> any<01:05:51.600> topic.
+Uh<01:05:58.680> and<01:05:58.840> then<01:05:59.040> there<01:05:59.240> should<01:05:59.440> exist<01:05:59.840> a<01:05:59.920> row,
+Uh and then there should exist a row,
+but<01:06:00.480> a<01:06:00.560> row<01:06:00.800> is<01:06:01.000> a<01:06:01.080> word.
+but a row is a word.
+So,<01:06:03.000> there<01:06:03.280> is<01:06:03.520> a<01:06:03.640> word.
+Uh<01:06:12.040> and<01:06:12.200> that<01:06:12.400> we<01:06:12.520> will<01:06:12.640> call<01:06:13.080> anchor<01:06:13.360> word<01:06:13.800> uh
+Uh and that we will call anchor word uh
+later.
+And<01:06:19.400> what<01:06:19.560> should<01:06:19.880> this<01:06:20.200> word
+And what should this word
+um<01:06:21.560> what<01:06:21.760> property<01:06:22.240> should<01:06:22.440> this<01:06:22.680> word<01:06:22.920> have?
+um what property should this word have?
+Well,
+uh<01:06:24.560> it<01:06:24.760> should<01:06:25.000> have<01:06:25.800> uh<01:06:26.120> a<01:06:26.200> non-zero<01:06:26.680> entry
+uh it should have uh a non-zero entry
+here,<01:06:27.360> which<01:06:27.640> means<01:06:27.880> it<01:06:28.040> has<01:06:28.640> uh
+here, which means it has uh
+non-zero<01:06:29.760> probability<01:06:30.520> of<01:06:30.800> appearing<01:06:31.360> in
+non-zero probability of appearing in
+this<01:06:31.720> particular<01:06:32.240> topic.
+this particular topic.
+And<01:06:33.720> then<01:06:34.040> all<01:06:34.160> the<01:06:34.320> other<01:06:34.560> entries<01:06:35.000> are
+And then all the other entries are
+zeros,<01:06:35.840> which<01:06:36.040> means<01:06:36.360> this<01:06:36.600> word<01:06:36.960> just<01:06:37.360> does
+zeros, which means this word just does
+not<01:06:37.800> appear<01:06:38.120> in<01:06:38.320> any<01:06:38.560> other<01:06:38.800> topic.
+not appear in any other topic.
+So,<01:06:40.720> this<01:06:40.960> word<01:06:41.480> uh
+So, this word uh
+that
+this<01:06:44.720> word<01:06:45.040> should<01:06:45.400> only<01:06:45.840> appear
+uh<01:06:50.280> in<01:06:50.560> this<01:06:50.760> topic.
+Uh<01:06:58.520> for<01:06:58.640> example,
+Uh for example,
+um
+if<01:07:00.680> we<01:07:00.800> are<01:07:00.960> talking<01:07:01.440> about<01:07:02.280> uh<01:07:02.360> weather
+if we are talking about uh weather
+uh<01:07:04.080> maybe<01:07:04.920> uh<01:07:05.000> say<01:07:05.160> a<01:07:05.280> word<01:07:05.520> like<01:07:05.760> snow<01:07:06.120> will
+uh maybe uh say a word like snow will
+have<01:07:06.560> some<01:07:07.240> large<01:07:07.560> probability<01:07:08.280> in<01:07:08.560> weather,
+have some large probability in weather,
+but
+quite<01:07:10.680> unlikely<01:07:11.320> in<01:07:11.640> other<01:07:11.920> topics.<01:07:12.880> Or<01:07:13.080> if
+quite unlikely in other topics. Or if
+you<01:07:13.360> think<01:07:13.600> snow<01:07:13.840> is<01:07:14.000> not<01:07:14.280> specific<01:07:14.840> enough,
+you think snow is not specific enough,
+you<01:07:15.320> are<01:07:15.640> like
+you are like
+polar<01:07:17.040> vortex<01:07:17.560> or<01:07:17.680> some<01:07:18.040> things<01:07:18.320> like<01:07:18.480> that
+polar vortex or some things like that
+that<01:07:19.000> that<01:07:19.200> are<01:07:19.360> really<01:07:19.640> specific<01:07:20.200> to
+that that are really specific to
+weather.<01:07:20.800> So,
+weather. So,
+um
+So,<01:07:25.000> hopefully<01:07:25.640> these<01:07:26.000> anchor<01:07:26.320> words<01:07:26.800> exist
+So, hopefully these anchor words exist
+for<01:07:27.920> all<01:07:28.120> the<01:07:28.240> topics.<01:07:29.280> And<01:07:29.600> that<01:07:29.800> is<01:07:30.040> our
+for all the topics. And that is our
+assumption<01:07:31.440> on<01:07:31.720> the<01:07:31.840> topic<01:07:32.200> matrix.
+Um
+So,<01:07:40.760> um
+So, um
+is<01:07:41.640> there<01:07:41.760> any<01:07:41.920> questions?
+is there any questions?
+Um
+So,<01:07:46.240> intuitively<01:07:46.880> this<01:07:47.080> assumption<01:07:47.640> should
+So, intuitively this assumption should
+help<01:07:48.600> in
+help in
+in<01:07:51.120> learning<01:07:51.640> a<01:07:51.760> topic<01:07:52.160> model<01:07:52.600> because
+in learning a topic model because
+uh
+So,<01:07:55.440> first<01:07:55.680> notice<01:07:56.040> that<01:07:56.240> it<01:07:56.360> doesn't<01:07:56.720> mean<01:07:57.320> if
+So, first notice that it doesn't mean if
+a<01:07:58.520> word<01:07:59.080> has<01:07:59.400> a<01:07:59.480> topic,<01:08:00.280> the<01:08:00.480> anchor<01:08:00.760> word<01:08:01.000> has
+a word has a topic, the anchor word has
+to<01:08:01.520> appear.
+to appear.
+Because<01:08:03.560> maybe<01:08:04.000> the<01:08:04.360> document<01:08:04.880> is<01:08:05.240> short<01:08:05.880> and
+Because maybe the document is short and
+it<01:08:07.280> just<01:08:07.560> didn't<01:08:07.920> mention<01:08:08.280> the<01:08:08.440> anchor<01:08:08.720> word.
+it just didn't mention the anchor word.
+But<01:08:11.080> what<01:08:11.640> what<01:08:11.840> we<01:08:11.920> can<01:08:12.080> really<01:08:12.320> say<01:08:12.720> is<01:08:13.080> we<01:08:13.440> if
+But what what we can really say is we if
+we<01:08:13.800> see<01:08:14.560> the<01:08:14.840> anchor<01:08:15.120> words<01:08:16.040> in<01:08:16.600> a<01:08:16.680> particular
+we see the anchor words in a particular
+document,
+then<01:08:19.520> that<01:08:19.839> document,<01:08:20.440> at<01:08:20.640> least<01:08:21.160> some
+then that document, at least some
+fraction<01:08:21.960> of<01:08:22.080> the<01:08:22.200> document,<01:08:22.759> must<01:08:23.000> be
+fraction of the document, must be
+talking<01:08:23.560> about<01:08:23.839> this<01:08:24.040> particular<01:08:24.600> topic.
+talking about this particular topic.
+And
+that<01:08:27.839> could<01:08:27.960> be<01:08:28.120> something<01:08:28.560> very<01:08:28.839> useful.
+Uh
+and<01:08:32.200> here<01:08:32.520> we<01:08:33.279> let's<01:08:33.640> look<01:08:33.839> at<01:08:34.319> that<01:08:34.600> picture
+and here we let's look at that picture
+again.<01:08:35.680> We<01:08:35.839> have<01:08:36.480> this<01:08:37.040> matrix<01:08:37.480> M<01:08:37.799> is<01:08:38.040> equal<01:08:38.319> to
+again. We have this matrix M is equal to
+A<01:08:38.920> *<01:08:39.240> W.
+A * W.
+So,<01:08:40.480> what<01:08:40.680> happens<01:08:41.200> if<01:08:41.520> we<01:08:41.720> have
+So, what happens if we have
+matrix<01:08:43.600> A<01:08:43.799> that's<01:08:44.160> separable?
+matrix A that's separable?
+Again,<01:08:46.640> let<01:08:46.759> me<01:08:46.880> draw<01:08:47.160> this<01:08:47.440> picture<01:08:47.799> here.
+Again, let me draw this picture here.
+So,<01:08:48.640> M<01:08:49.000> is<01:08:49.240> equal<01:08:49.520> to
+So, M is equal to
+A<01:08:51.200> *<01:08:51.720> W.
+But<01:08:54.799> now<01:08:55.000> we<01:08:55.160> are<01:08:55.359> assuming<01:08:56.080> A<01:08:56.640> is<01:08:57.160> separable.
+But now we are assuming A is separable.
+So,<01:08:59.480> in<01:08:59.600> particular,<01:09:00.080> there<01:09:00.279> are<01:09:00.560> these<01:09:00.920> rows
+So, in particular, there are these rows
+there<01:09:01.960> are<01:09:02.160> these<01:09:02.480> rows<01:09:03.000> that<01:09:03.520> say<01:09:04.000> there<01:09:04.359> is
+there are these rows that say there is
+one<01:09:04.920> row<01:09:05.160> where<01:09:05.480> only<01:09:05.759> the<01:09:05.880> first<01:09:06.160> entry<01:09:06.880> is
+one row where only the first entry is
+non-active.
+Uh
+so<01:09:11.000> then<01:09:11.319> what<01:09:11.560> is<01:09:11.759> the<01:09:11.839> product<01:09:12.640> of<01:09:12.920> this<01:09:13.200> row
+so then what is the product of this row
+and<01:09:14.000> this<01:09:14.200> matrix?
+and this matrix?
+Well,<01:09:16.200> the<01:09:16.319> product<01:09:16.880> is<01:09:17.319> really<01:09:17.720> just
+uh
+a<01:09:21.960> row
+a row
+in<01:09:23.920> this<01:09:24.240> M<01:09:24.520> matrix.
+Uh
+and<01:09:29.680> this<01:09:29.960> row<01:09:30.200> in<01:09:30.359> the<01:09:30.560> M<01:09:30.839> matrix<01:09:31.560> is<01:09:31.920> really
+and this row in the M matrix is really
+uh<01:09:33.560> very<01:09:33.880> similar<01:09:34.520> to<01:09:35.160> this<01:09:35.440> first<01:09:35.839> row<01:09:36.120> in<01:09:36.480> the
+uh very similar to this first row in the
+W<01:09:37.040> matrix.
+W matrix.
+Right?<01:09:39.400> Uh<01:09:39.680> so<01:09:40.040> basically
+Right? Uh so basically
+uh
+the<01:09:43.120> observations
+the<01:09:50.839> i-th<01:09:51.520> row<01:09:51.960> of<01:09:52.680> M
+uh
+This<01:09:57.240> means<01:09:57.520> the<01:09:57.760> i-th<01:09:58.120> row
+This means the i-th row
+as<01:09:59.120> a<01:09:59.160> vector<01:10:00.080> is<01:10:00.520> equal<01:10:00.800> to
+as a vector is equal to
+um
+Well,<01:10:05.320> the<01:10:05.520> corresponding<01:10:06.120> entry
+Well, the corresponding entry
+a<01:10:07.800> a<01:10:08.040> i<01:10:08.280> i
+a a i i
+times
+the<01:10:11.840> i-th<01:10:12.240> row<01:10:12.600> of<01:10:13.240> W,<01:10:13.800> right?
+So<01:10:17.080> in<01:10:17.280> words,<01:10:18.080> uh<01:10:18.160> the<01:10:18.480> rows<01:10:18.800> of<01:10:19.040> W<01:10:20.040> are<01:10:20.520> really
+So in words, uh the rows of W are really
+appearing<01:10:21.640> in<01:10:22.240> rows<01:10:22.560> of<01:10:22.840> M<01:10:23.360> up<01:10:23.560> to<01:10:23.680> scaling.
+So<01:10:26.440> that's<01:10:26.760> got<01:10:27.000> to<01:10:27.080> be<01:10:27.200> very<01:10:27.480> helpful<01:10:27.880> because
+So that's got to be very helpful because
+we<01:10:28.520> want<01:10:28.760> to<01:10:29.200> know<01:10:29.440> this<01:10:29.920> product<01:10:30.560> uh<01:10:30.720> A<01:10:30.880> and<01:10:31.080> W,
+we want to know this product uh A and W,
+but<01:10:32.200> W<01:10:32.520> is<01:10:32.720> actually<01:10:33.080> hiding<01:10:33.400> in<01:10:33.560> M.
+but W is actually hiding in M.
+Uh
+another<01:10:36.600> observation<01:10:37.280> is<01:10:37.560> even<01:10:37.880> if<01:10:38.240> I<01:10:38.440> have<01:10:38.680> a
+another observation is even if I have a
+row<01:10:39.080> that's<01:10:39.760> uh<01:10:39.840> not<01:10:40.120> really<01:10:40.680> uh<01:10:41.120> row
+row that's uh not really uh row
+corresponding<01:10:41.960> to<01:10:42.200> an<01:10:42.440> anchor<01:10:42.760> word<01:10:43.520> has<01:10:43.840> many
+corresponding to an anchor word has many
+entries.
+Still<01:10:45.880> I<01:10:45.960> can<01:10:46.200> write<01:10:46.840> uh<01:10:47.000> M<01:10:47.720> J,<01:10:48.320> this<01:10:48.640> row<01:10:48.840> in<01:10:49.040> M
+Still I can write uh M J, this row in M
+as<01:10:51.400> a<01:10:52.280> uh<01:10:52.360> combination.
+as a uh combination.
+So<01:10:54.280> it's<01:10:54.480> equal<01:10:54.800> to<01:10:55.120> some<01:10:55.600> I<01:10:55.920> from<01:10:56.360> one<01:10:56.640> to<01:10:56.800> K.
+So it's equal to some I from one to K.
+A
+um
+JK.
+Uh<01:11:04.680> sorry,<01:11:05.000> JI.
+Uh<01:11:09.280> WI.
+So,<01:11:13.200> even<01:11:13.960> uh<01:11:14.240> for<01:11:14.480> rows<01:11:15.080> that<01:11:15.320> are<01:11:16.200> that<01:11:16.480> do
+So, even uh for rows that are that do
+not<01:11:16.880> correspond<01:11:17.480> to<01:11:17.760> rows<01:11:18.080> in<01:11:18.320> W,
+not correspond to rows in W,
+uh<01:11:20.080> they<01:11:20.240> are<01:11:20.400> still<01:11:21.320> non-negative<01:11:22.360> linear
+uh they are still non-negative linear
+combinations<01:11:23.680> of<01:11:24.000> rows<01:11:24.280> in<01:11:24.440> W.
+combinations of rows in W.
+Right?
+Uh
+and<01:11:28.680> actually,<01:11:29.840> uh<01:11:29.960> without<01:11:30.600> loss<01:11:30.960> of
+and actually, uh without loss of
+generality,
+uh
+uh<01:11:36.320> we<01:11:36.640> can<01:11:37.000> scale
+uh we can scale
+can<01:11:38.720> rescale
+uh<01:11:41.960> M
+uh M
+so<01:11:43.760> that
+uh<01:11:47.520> rows<01:11:48.000> of
+uh<01:11:51.520> M
+uh M
+AW
+all<01:11:55.080> sum<01:11:55.360> up<01:11:55.520> to<01:11:55.680> one.
+Um
+so,<01:12:03.880> we<01:12:04.040> can<01:12:04.240> really<01:12:04.520> rescale<01:12:05.000> the<01:12:05.120> rows<01:12:05.360> of<01:12:05.600> M
+so, we can really rescale the rows of M
+to<01:12:06.040> make<01:12:06.240> sure<01:12:06.480> they<01:12:06.640> sum<01:12:06.880> up<01:12:07.000> to<01:12:07.160> one.
+to make sure they sum up to one.
+And<01:12:08.200> then,<01:12:08.520> there's<01:12:08.800> a<01:12:08.880> scaling<01:12:09.400> of<01:12:09.720> AW<01:12:10.360> so
+And then, there's a scaling of AW so
+that<01:12:10.840> their<01:12:11.120> rows<01:12:11.440> also<01:12:11.760> sum<01:12:12.000> up<01:12:12.120> to<01:12:12.280> one.
+that their rows also sum up to one.
+In<01:12:13.880> that<01:12:14.120> case,<01:12:14.760> this<01:12:15.080> guy,<01:12:15.760> because<01:12:16.160> it's<01:12:16.400> the
+In that case, this guy, because it's the
+only<01:12:17.000> non-zero<01:12:17.520> entry,
+only non-zero entry,
+will<01:12:18.840> be<01:12:19.040> really<01:12:19.400> one.<01:12:19.880> So,<01:12:20.440> MA<01:12:21.400> is<01:12:21.640> really
+will be really one. So, MA is really
+equal<01:12:22.160> to<01:12:22.320> W.
+equal to W.
+Uh<01:12:24.240> and<01:12:24.600> this
+Uh and this
+uh<01:12:26.280> instead<01:12:26.680> of<01:12:26.840> just<01:12:27.160> a<01:12:27.200> non-negative
+uh instead of just a non-negative
+combination,<01:12:28.640> will<01:12:28.840> be
+combination, will be
+uh<01:12:30.280> convex<01:12:30.760> combination.
+So,<01:12:37.000> really,<01:12:37.280> the<01:12:37.520> rows<01:12:37.840> of<01:12:38.240> M<01:12:38.760> are<01:12:39.160> either
+So, really, the rows of M are either
+really<01:12:40.520> the<01:12:40.680> rows<01:12:40.920> of<01:12:41.080> W,<01:12:41.840> or<01:12:42.160> they<01:12:42.320> are<01:12:42.480> in<01:12:42.600> the
+really the rows of W, or they are in the
+convex<01:12:43.080> hall
+convex hall
+of<01:12:44.400> the<01:12:44.520> rows<01:12:44.760> of<01:12:44.920> W.
+So,<01:12:54.320> so<01:12:54.560> in<01:12:54.680> this<01:12:54.880> way<01:12:55.160> we<01:12:55.360> have<01:12:55.720> reduced<01:12:56.080> the
+So, so in this way we have reduced the
+problem<01:12:56.840> into<01:12:57.360> a<01:12:57.520> geo-<01:12:57.960> geometric<01:12:58.680> problem.
+problem into a geo- geometric problem.
+Um
+So,<01:13:06.800> what<01:13:07.000> is<01:13:07.160> the<01:13:07.280> geometric<01:13:07.920> problem?<01:13:08.520> Well,
+So, what is the geometric problem? Well,
+in<01:13:09.600> this<01:13:09.760> problem<01:13:10.160> we<01:13:10.320> are<01:13:10.480> given
+in this problem we are given
+uh
+n<01:13:14.600> points
+v1,<01:13:19.280> v2
+v1, v2
+vn<01:13:22.000> in<01:13:22.760> uh<01:13:22.920> R<01:13:23.160> to<01:13:23.320> the<01:13:23.480> m.
+Uh
+that<01:13:27.400> are<01:13:27.560> in<01:13:27.800> the<01:13:27.920> convex<01:13:28.320> hull
+of
+v<01:13:38.160> a1<01:13:39.280> v<01:13:39.640> a2.<01:13:40.480> Remember,<01:13:40.880> these<01:13:41.160> are<01:13:41.440> just<01:13:41.760> the
+v a1 v a2. Remember, these are just the
+same<01:13:42.280> as<01:13:42.640> the<01:13:43.040> rows<01:13:43.480> in<01:13:43.760> W,<01:13:44.440> right?
+same as the rows in W, right?
+Uh<01:13:45.600> to<01:13:46.000> v<01:13:46.280> ak
+Uh to v ak
+where
+uh<01:13:49.360> a1<01:13:50.000> to
+uh a1 to
+ak
+are<01:13:52.800> in
+are in
+um<01:13:54.160> n
+um n
+but<01:13:55.560> uh<01:13:55.640> they<01:13:55.840> are<01:13:56.040> unknown.
+Uh
+we<01:14:02.720> want<01:14:03.000> to<01:14:03.120> find
+uh<01:14:10.000> a1<01:14:10.400> to<01:14:11.160> ak.
+uh a1 to ak.
+Or<01:14:14.040> just<01:14:14.600> the<01:14:14.760> corresponding<01:14:15.760> rows.<01:14:16.520> It's
+Or just the corresponding rows. It's
+good<01:14:16.880> enough.
+good enough.
+We<01:14:17.880> want<01:14:18.080> to<01:14:18.200> find<01:14:18.520> v<01:14:18.760> a1<01:14:19.120> to<01:14:19.360> v<01:14:19.600> ak.
+We want to find v a1 to v ak.
+Uh<01:14:21.360> so,
+Uh so,
+uh<01:14:22.800> in<01:14:22.920> picture<01:14:23.480> it<01:14:23.680> is<01:14:23.960> equal<01:14:24.280> to<01:14:24.920> uh
+uh in picture it is equal to uh
+it<01:14:25.800> is<01:14:26.000> this<01:14:26.200> kind<01:14:26.400> of<01:14:26.560> problem.
+it is this kind of problem.
+We<01:14:28.080> are<01:14:28.400> given<01:14:29.040> this<01:14:29.680> bunch<01:14:30.040> of<01:14:30.240> points
+We are given this bunch of points
+that<01:14:32.440> are<01:14:32.640> really<01:14:32.960> in<01:14:33.080> the<01:14:33.560> convex<01:14:33.960> hull<01:14:34.280> in
+that are really in the convex hull in
+this<01:14:34.640> triangle.
+Uh<01:14:38.080> and<01:14:38.400> the<01:14:38.480> points<01:14:38.760> we<01:14:38.880> are<01:14:39.000> given<01:14:39.400> include
+Uh and the points we are given include
+all<01:14:40.080> these<01:14:40.400> three<01:14:40.640> vertices<01:14:41.280> of<01:14:41.480> the
+all these three vertices of the
+triangle.
+And<01:14:43.680> our<01:14:43.880> goal<01:14:44.080> is<01:14:44.440> to<01:14:44.720> really<01:14:45.000> find<01:14:45.640> all<01:14:45.800> these
+And our goal is to really find all these
+vertices.
+So,<01:14:49.680> this<01:14:49.960> problem<01:14:50.560> is<01:14:50.840> really<01:14:51.160> equivalent<01:14:51.920> to
+So, this problem is really equivalent to
+finding<01:14:53.000> the<01:14:53.120> non-negative<01:14:53.800> matrix
+finding the non-negative matrix
+factorization,<01:14:55.280> okay,<01:14:55.680> which<01:14:55.960> was<01:14:56.200> here.
+factorization, okay, which was here.
+It's<01:14:57.600> equivalent<01:14:58.080> to<01:14:58.240> the<01:14:58.360> non-negative
+It's equivalent to the non-negative
+matrix<01:14:59.360> factorization<01:15:00.080> problem
+matrix factorization problem
+when<01:15:01.360> we<01:15:01.560> assume<01:15:02.120> the<01:15:02.280> separability
+when we assume the separability
+assumption.
+Uh<01:15:06.560> now,<01:15:06.720> this<01:15:06.920> problem<01:15:07.320> becomes<01:15:07.800> much
+Uh now, this problem becomes much
+easier.<01:15:09.160> Uh
+easier. Uh
+in<01:15:10.040> the<01:15:10.200> rest<01:15:10.520> 5<01:15:10.800> minutes,<01:15:11.200> I'm<01:15:11.600> going<01:15:11.840> to<01:15:11.960> give
+in the rest 5 minutes, I'm going to give
+you<01:15:12.560> an<01:15:12.840> algorithm<01:15:13.320> for<01:15:13.680> this<01:15:14.320> uh<01:15:14.400> problem.
+you an algorithm for this uh problem.
+Um
+So,<01:15:18.560> So,<01:15:18.680> first<01:15:19.040> uh<01:15:19.200> notice<01:15:19.560> that<01:15:20.080> uh<01:15:20.240> it<01:15:20.440> is
+So, So, first uh notice that uh it is
+possible<01:15:21.440> that
+possible that
+the<01:15:22.520> rows<01:15:22.760> of<01:15:22.920> W,<01:15:23.720> which<01:15:23.960> correspond<01:15:24.440> to<01:15:24.680> these
+the rows of W, which correspond to these
+vertices,
+it<01:15:26.440> could<01:15:26.640> be<01:15:26.880> that<01:15:27.120> there<01:15:27.360> is<01:15:27.640> a<01:15:27.760> row<01:15:28.000> of<01:15:28.160> W
+it could be that there is a row of W
+that's<01:15:28.920> lying<01:15:29.360> inside<01:15:29.880> the<01:15:30.000> con-<01:15:30.520> convex<01:15:30.920> hull
+that's lying inside the con- convex hull
+without<01:15:31.840> any<01:15:32.080> further<01:15:32.400> assumption.
+without any further assumption.
+But,<01:15:34.560> that's<01:15:35.040> really<01:15:35.360> a<01:15:35.480> degenerate<01:15:36.120> case
+But, that's really a degenerate case
+because<01:15:36.880> in<01:15:37.000> that<01:15:37.280> case,
+because in that case,
+I<01:15:38.680> can<01:15:38.920> have<01:15:39.480> the<01:15:39.600> same<01:15:39.920> factorization,<01:15:40.920> but
+I can have the same factorization, but
+removing<01:15:42.480> this<01:15:42.760> particular<01:15:43.400> row<01:15:43.600> in<01:15:43.800> W,<01:15:44.480> and
+removing this particular row in W, and
+that<01:15:44.840> will<01:15:45.240> result<01:15:45.640> in<01:15:45.800> a<01:15:45.880> smaller
+that will result in a smaller
+factorization.
+So,<01:15:48.320> in<01:15:48.440> some<01:15:48.640> sense,<01:15:49.160> that's<01:15:49.480> a<01:15:49.600> degenerate
+So, in some sense, that's a degenerate
+case,<01:15:50.720> and<01:15:51.000> we
+case, and we
+uh<01:15:52.720> it's<01:15:52.920> like<01:15:53.200> the<01:15:53.440> matrix<01:15:53.840> has<01:15:54.160> rank<01:15:54.520> R,<01:15:54.840> but
+uh it's like the matrix has rank R, but
+I<01:15:55.520> factorize<01:15:56.120> it<01:15:56.440> into<01:15:56.960> a
+I factorize it into a
+matrix<01:15:58.400> with<01:15:58.920> R<01:15:59.120> +<01:15:59.360> 1<01:15:59.560> columns,<01:16:00.320> and<01:16:00.560> that's
+matrix with R + 1 columns, and that's
+not<01:16:01.000> something<01:16:01.360> that<01:16:01.560> we<01:16:01.680> want<01:16:01.920> to<01:16:02.000> do.
+not something that we want to do.
+So,<01:16:03.040> we<01:16:03.240> will<01:16:03.400> just<01:16:03.600> assume<01:16:03.920> that<01:16:04.400> the<01:16:04.600> rows<01:16:04.840> of
+So, we will just assume that the rows of
+W<01:16:05.520> are<01:16:05.840> not<01:16:06.160> inside<01:16:06.480> the<01:16:06.560> convex<01:16:06.920> hull.<01:16:07.120> They
+W are not inside the convex hull. They
+are<01:16:07.360> all<01:16:07.560> vertices<01:16:08.080> of<01:16:08.200> the<01:16:08.280> convex<01:16:08.680> hull.
+are all vertices of the convex hull.
+So,<01:16:11.000> how<01:16:11.120> do<01:16:11.280> we<01:16:11.480> define<01:16:11.840> the<01:16:11.960> vertices?<01:16:13.120> Well,
+So, how do we define the vertices? Well,
+uh
+the<01:16:16.560> algorithm
+the algorithm
+uh<01:16:19.040> is<01:16:19.400> just<01:16:19.760> to<01:16:19.960> check
+uh is just to check
+um<01:16:22.800> whether
+um whether
+a<01:16:25.560> point
+a point
+is<01:16:27.760> in<01:16:28.400> the<01:16:28.760> convex<01:16:29.240> hull
+uh<01:16:32.720> of
+uh of
+uh
+V1<01:16:35.440> to<01:16:35.960> Vi<01:16:36.320> -<01:16:36.800> 1,<01:16:37.160> so<01:16:37.920> all<01:16:38.080> the<01:16:38.240> other<01:16:38.520> points.
+Uh<01:16:42.800> so,<01:16:43.000> of<01:16:43.160> course,<01:16:43.440> we<01:16:43.560> first<01:16:43.880> remove<01:16:44.240> the
+Uh so, of course, we first remove the
+duplicate<01:16:45.240> points.
+So<01:16:58.000> the<01:16:58.120> claim<01:16:58.440> is
+So the claim is
+um
+if
+VI<01:17:06.920> is
+VI is
+uh
+is<01:17:09.880> a<01:17:10.040> vertex
+uh<01:17:13.440> then
+uh then
+then<01:17:14.720> VI<01:17:15.360> is<01:17:15.640> not<01:17:15.960> in<01:17:16.440> the<01:17:16.560> convex<01:17:16.960> hull.
+then VI is not in the convex hull.
+And<01:17:19.840> if<01:17:20.400> VI<01:17:21.480> is
+And if VI is
+not<01:17:22.960> a<01:17:23.040> vertex
+then<01:17:28.720> VI<01:17:29.160> must<01:17:29.520> be<01:17:29.840> in<01:17:30.120> this<01:17:30.360> convex<01:17:30.760> hull.
+Right?<01:17:34.400> Uh<01:17:34.480> because<01:17:35.400> uh
+Right? Uh because uh
+what<01:17:37.200> this<01:17:37.360> is<01:17:37.600> kind<01:17:37.840> of<01:17:37.960> clear<01:17:38.560> uh<01:17:38.600> the<01:17:38.720> proof
+what this is kind of clear uh the proof
+is<01:17:39.120> very<01:17:39.440> easy.
+is very easy.
+If<01:17:40.800> I<01:17:40.880> have<01:17:41.120> a<01:17:41.200> point<01:17:41.520> here<01:17:42.360> that's<01:17:42.720> not<01:17:43.040> in<01:17:43.200> the
+If I have a point here that's not in the
+convex<01:17:43.720> hull,<01:17:44.600> I<01:17:44.760> remove<01:17:45.320> uh
+convex hull, I remove uh
+all<01:17:46.360> the<01:17:46.480> duplications<01:17:47.240> which<01:17:47.560> doesn't<01:17:47.840> do
+all the duplications which doesn't do
+anything<01:17:48.720> here,
+anything here,
+uh<01:17:49.840> it's<01:17:50.040> still<01:17:50.280> in<01:17:50.400> the<01:17:50.480> convex<01:17:50.840> hull<01:17:51.040> of
+uh it's still in the convex hull of
+these<01:17:51.480> three<01:17:51.720> points.
+these three points.
+But<01:17:53.360> if<01:17:53.600> I<01:17:53.800> remove<01:17:54.280> this<01:17:54.520> one
+But if I remove this one
+then<01:17:57.440> uh<01:17:57.520> of<01:17:57.680> course<01:17:58.240> uh<01:17:58.280> the<01:17:58.360> convex<01:17:58.720> hull
+then uh of course uh the convex hull
+looks<01:17:59.360> like<01:17:59.600> this<01:18:00.160> and<01:18:00.400> it's<01:18:01.200> uh<01:18:01.280> not<01:18:01.480> in<01:18:01.560> the
+looks like this and it's uh not in the
+convex<01:18:02.040> hull<01:18:02.560> anymore.
+convex hull anymore.
+And<01:18:04.480> how<01:18:04.640> can<01:18:04.840> we<01:18:04.960> check<01:18:05.440> whether<01:18:05.920> a<01:18:06.040> point<01:18:06.640> is
+And how can we check whether a point is
+in<01:18:07.040> the<01:18:07.120> convex<01:18:07.520> hull<01:18:08.040> of<01:18:08.200> some<01:18:08.440> other<01:18:08.680> points?
+in the convex hull of some other points?
+Uh<01:18:11.480> so<01:18:11.640> this<01:18:11.840> can
+Uh so this can
+uh<01:18:13.040> easily<01:18:13.440> be<01:18:13.600> done<01:18:14.000> using<01:18:14.440> a<01:18:14.600> linear
+uh easily be done using a linear
+program.
+Basically<01:18:16.640> what<01:18:16.840> does<01:18:17.320> it<01:18:17.440> mean<01:18:17.760> for<01:18:18.080> VI<01:18:18.480> to<01:18:18.600> be
+Basically what does it mean for VI to be
+in<01:18:18.880> the<01:18:19.000> convex<01:18:19.440> hull?<01:18:19.800> It<01:18:19.880> means<01:18:20.280> VI
+in the convex hull? It means VI
+can<01:18:21.720> be<01:18:21.840> written<01:18:22.680> as<01:18:23.080> some<01:18:24.080> J<01:18:24.320> not<01:18:24.600> equal<01:18:24.840> to<01:18:25.080> I
+can be written as some J not equal to I
+alpha<01:18:26.400> J
+alpha J
+VJ
+and<01:18:30.800> these<01:18:31.080> alpha<01:18:31.360> J's<01:18:31.720> are<01:18:32.000> convex
+and these alpha J's are convex
+combinations.<01:18:33.280> So<01:18:33.760> alpha<01:18:34.120> J's<01:18:34.720> are<01:18:35.480> non-zero
+combinations. So alpha J's are non-zero
+and<01:18:37.080> some<01:18:37.800> J<01:18:38.080> not<01:18:38.360> equal<01:18:38.600> to<01:18:38.800> i
+and some J not equal to i
+alpha<01:18:40.680> j<01:18:41.440> should<01:18:41.680> be<01:18:41.840> equal<01:18:42.040> to<01:18:42.240> one.
+alpha j should be equal to one.
+So,<01:18:44.560> so<01:18:44.680> this<01:18:44.920> is<01:18:45.160> a<01:18:45.720> linear<01:18:46.080> program.
+So, so this is a linear program.
+Uh<01:18:48.880> if<01:18:49.120> this<01:18:49.360> linear<01:18:49.680> program<01:18:50.320> is<01:18:50.760> feasible,
+Uh if this linear program is feasible,
+means<01:18:52.280> vi<01:18:52.920> is<01:18:53.240> in<01:18:53.360> the<01:18:53.480> convex<01:18:53.880> hull
+means vi is in the convex hull
+of
+all<01:18:57.920> the<01:18:58.080> other<01:18:58.440> points<01:18:59.360> and<01:18:59.520> therefore<01:19:00.000> it
+all the other points and therefore it
+must<01:19:00.400> be<01:19:00.640> something<01:19:01.080> that's<01:19:01.320> inside.
+must be something that's inside.
+If<01:19:03.640> this<01:19:03.960> linear<01:19:04.320> program<01:19:04.960> is<01:19:05.360> not<01:19:05.720> feasible,
+If this linear program is not feasible,
+then<01:19:07.400> it<01:19:07.560> means<01:19:07.960> vi<01:19:08.400> cannot<01:19:08.760> be<01:19:08.880> represented
+then it means vi cannot be represented
+by<01:19:09.800> the<01:19:09.920> convex<01:19:10.280> combination<01:19:10.840> of<01:19:11.000> other
+by the convex combination of other
+points
+and<01:19:12.680> that<01:19:12.920> means<01:19:13.200> it<01:19:13.360> must<01:19:13.560> be
+and that means it must be
+uh<01:19:15.080> this<01:19:15.240> point<01:19:15.520> here<01:19:16.320> or<01:19:16.720> one<01:19:16.880> of<01:19:17.000> the
+uh this point here or one of the
+vertices.
+So,<01:19:21.280> that's<01:19:21.560> a<01:19:21.640> very<01:19:21.920> simple<01:19:22.240> algorithm.
+So, that's a very simple algorithm.
+Uh
+but<01:19:24.800> in<01:19:24.960> order<01:19:25.200> to<01:19:25.360> apply<01:19:25.760> it<01:19:26.040> to<01:19:26.320> the<01:19:26.480> topic
+but in order to apply it to the topic
+modeling,<01:19:27.720> there<01:19:27.920> are<01:19:28.280> some<01:19:28.840> more
+modeling, there are some more
+complicated<01:19:30.520> things<01:19:31.040> that<01:19:31.280> we<01:19:31.400> need<01:19:31.560> to
+complicated things that we need to
+worry.
+So,<01:19:32.880> first<01:19:33.160> is<01:19:33.400> we<01:19:33.640> cannot<01:19:34.000> really<01:19:34.240> estimate
+So, first is we cannot really estimate
+all<01:19:35.120> these<01:19:35.400> probabilities<01:19:36.320> accurately.
+all these probabilities accurately.
+Uh
+in<01:19:39.240> fact,<01:19:39.520> really<01:19:39.760> it's<01:19:40.000> very<01:19:40.200> far<01:19:40.440> from
+in fact, really it's very far from
+accurate,<01:19:41.120> but<01:19:41.360> even<01:19:41.640> if<01:19:41.840> it's
+accurate, but even if it's
+uh<01:19:42.840> a<01:19:42.880> small<01:19:43.280> perturbation,
+uh a small perturbation,
+uh<01:19:44.800> this<01:19:45.720> uh<01:19:45.760> if<01:19:46.160> these<01:19:46.440> points<01:19:46.800> can<01:19:47.080> move,
+uh this uh if these points can move,
+especially<01:19:48.400> they<01:19:48.520> can<01:19:49.000> move<01:19:49.280> in<01:19:49.520> a<01:19:49.640> higher
+especially they can move in a higher
+dimensional<01:19:50.440> space,<01:19:50.800> meaning<01:19:51.120> they<01:19:51.200> can<01:19:51.400> move
+dimensional space, meaning they can move
+outside<01:19:52.200> the<01:19:52.280> board,
+outside the board,
+then<01:19:53.960> it's<01:19:54.160> no<01:19:54.280> longer<01:19:54.600> true<01:19:54.920> that
+then it's no longer true that
+uh<01:19:56.080> something<01:19:56.480> can<01:19:56.640> be<01:19:56.800> in<01:19:56.920> the<01:19:57.040> convex<01:19:57.440> hull
+uh something can be in the convex hull
+of<01:19:57.920> all<01:19:58.080> these<01:19:58.320> points.<01:19:58.680> They<01:19:59.120> they<01:19:59.240> might<01:19:59.560> not
+of all these points. They they might not
+really<01:20:00.880> be<01:20:01.120> in<01:20:01.280> a<01:20:01.400> lower<01:20:01.680> dimensional<01:20:02.240> space
+really be in a lower dimensional space
+anymore.
+Uh
+So,<01:20:07.240> in<01:20:07.360> that<01:20:07.600> case,<01:20:07.880> we<01:20:08.000> need<01:20:08.440> a<01:20:08.760> slightly
+So, in that case, we need a slightly
+different<01:20:09.800> algorithm.<01:20:10.760> In<01:20:10.880> particular,<01:20:11.400> we
+different algorithm. In particular, we
+need<01:20:11.920> to<01:20:12.040> check<01:20:12.920> whether<01:20:13.280> the<01:20:13.400> point<01:20:13.760> is<01:20:14.120> close
+need to check whether the point is close
+to<01:20:14.680> the<01:20:14.800> convex<01:20:15.160> hull<01:20:15.400> of<01:20:15.600> other<01:20:15.880> points.
+to the convex hull of other points.
+Uh<01:20:18.760> that's<01:20:19.080> still<01:20:19.320> a<01:20:19.360> linear<01:20:19.680> program,<01:20:20.200> but
+Uh that's still a linear program, but
+slightly<01:20:20.840> harder.
+slightly harder.
+And<01:20:22.360> finally,<01:20:22.720> we<01:20:22.840> cannot<01:20:23.320> really<01:20:23.560> estimate<01:20:24.120> m
+And finally, we cannot really estimate m
+well<01:20:25.480> enough.<01:20:26.160> Instead,<01:20:26.680> we'll<01:20:26.920> we'll
+well enough. Instead, we'll we'll
+actually<01:20:28.000> estimate<01:20:29.120> what<01:20:29.360> is<01:20:29.520> the
+actually estimate what is the
+probability<01:20:30.320> that<01:20:30.560> two<01:20:30.800> words<01:20:31.640> appear<01:20:32.160> in<01:20:32.320> the
+probability that two words appear in the
+same<01:20:32.680> document<01:20:33.840> and<01:20:34.040> that's<01:20:34.360> something<01:20:34.840> that
+same document and that's something that
+we<01:20:35.120> can
+we can
+estimate<01:20:37.240> as<01:20:37.480> accurate<01:20:37.920> as<01:20:38.080> we<01:20:38.200> want
+estimate as accurate as we want
+once<01:20:39.440> we<01:20:39.560> have<01:20:39.800> enough<01:20:40.080> number<01:20:40.360> of<01:20:40.560> documents.
+Uh
+yeah,<01:20:45.600> so<01:20:46.120> so<01:20:46.280> this<01:20:46.520> is
+yeah, so so this is
+idea<01:20:47.960> of<01:20:48.440> how<01:20:49.160> we<01:20:49.760> uh
+idea of how we uh
+design<01:20:51.320> algorithms<01:20:51.960> for<01:20:52.320> learning<01:20:52.680> topic
+design algorithms for learning topic
+models,<01:20:53.680> what<01:20:54.200> are<01:20:54.600> some<01:20:54.840> difficult<01:20:55.280> problems
+models, what are some difficult problems
+and<01:20:56.240> how<01:20:56.440> can<01:20:56.640> we<01:20:56.880> use
+and how can we use
+these<01:20:58.400> kind<01:20:58.640> of<01:20:59.000> natural<01:20:59.360> assumptions<01:21:00.040> to<01:21:00.280> get
+these kind of natural assumptions to get
+around<01:21:01.000> the<01:21:01.160> MP<01:21:01.400> hardness<01:21:01.880> result.
+around the MP hardness result.
+And<01:21:03.840> it<01:21:03.920> turns<01:21:04.200> out<01:21:04.320> this<01:21:04.920> algorithm,<01:21:05.560> not
+And it turns out this algorithm, not
+this<01:21:06.120> particular<01:21:06.600> algorithm,<01:21:07.080> but
+this particular algorithm, but
+improved<01:21:08.520> version<01:21:09.520> can<01:21:09.840> actually<01:21:10.200> be
+improved version can actually be
+implemented.<01:21:11.160> It's<01:21:11.440> pretty<01:21:11.720> fast<01:21:12.040> and<01:21:12.200> it
+implemented. It's pretty fast and it
+works<01:21:13.000> for<01:21:13.960> say<01:21:14.720> New<01:21:14.880> York<01:21:15.120> Times<01:21:16.000> article
+works for say New York Times article
+corpus
+and<01:21:18.360> it
+and it
+uh<01:21:20.040> has<01:21:20.360> results<01:21:20.840> that's<01:21:21.120> comparable<01:21:21.880> to<01:21:22.320> all
+uh has results that's comparable to all
+the<01:21:22.600> previous<01:21:23.680> heuristic<01:21:24.120> algorithms<01:21:24.880> and
+the previous heuristic algorithms and
+it's<01:21:25.360> even<01:21:25.600> faster.
+it's even faster.
+So<01:21:27.080> if<01:21:27.280> you<01:21:27.360> want<01:21:27.560> to<01:21:27.640> know<01:21:27.880> more<01:21:28.160> about<01:21:28.520> it,<01:21:28.960> uh
+So if you want to know more about it, uh
+it's<01:21:30.160> in
+it's in
+I<01:21:31.320> have<01:21:31.600> a<01:21:31.680> few<01:21:31.960> papers<01:21:32.360> on<01:21:32.520> this<01:21:32.960> and<01:21:33.680> you<01:21:33.800> can
+I have a few papers on this and you can
+email<01:21:34.320> me<01:21:34.520> or<01:21:34.840> I<01:21:34.960> can<01:21:35.280> tell<01:21:35.560> Jelani
+email me or I can tell Jelani
+where<01:21:37.040> are<01:21:37.160> the<01:21:37.280> papers.
+where are the papers.
+Uh
+that's<01:21:39.840> it<01:21:40.040> for<01:21:40.240> today's<01:21:40.600> class.<01:21:41.240> Thanks<01:21:41.520> for
+that's it for today's class. Thanks for
+coming.

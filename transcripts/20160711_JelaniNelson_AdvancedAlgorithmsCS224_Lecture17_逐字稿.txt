@@ -1,0 +1,2579 @@
+[Music]
+Yeah.<00:00:07.279> Hello.
+Yeah. Hello.
+I'm<00:00:09.840> not<00:00:10.000> sure<00:00:10.240> exactly<00:00:10.639> where<00:00:10.880> people
+I'm not sure exactly where people
+are.<00:00:12.960> I<00:00:13.200> guess<00:00:13.360> I'll<00:00:13.519> wait<00:00:13.759> one<00:00:13.920> more<00:00:14.160> minute.
+Is<00:00:22.080> there<00:00:22.320> some<00:00:22.560> event
+today?<00:00:26.320> Oh,<00:00:26.720> let<00:00:26.880> me<00:00:27.119> make<00:00:27.279> sure.
+Each
+ring
+charge.<00:00:54.960> Okay.<00:00:55.360> Well,
+I<00:01:04.559> guess<00:01:04.640> I'll<00:01:04.879> just<00:01:05.040> get<00:01:05.199> started.<00:01:06.159> So,<00:01:06.640> uh,
+I guess I'll just get started. So, uh,
+today<00:01:07.280> I<00:01:07.680> promised<00:01:08.000> you<00:01:08.240> we're<00:01:08.400> going<00:01:08.479> to
+today I promised you we're going to
+cover<00:01:09.840> interior
+point.<00:01:23.280> Okay.<00:01:23.799> So<00:01:24.799> this<00:01:25.040> is<00:01:25.520> Oh,<00:01:26.240> are<00:01:26.479> you
+point. Okay. So this is Oh, are you
+today's<00:01:26.960> scribe?<00:01:27.840> Okay,<00:01:28.080> good.<00:01:28.400> Let<00:01:28.560> me<00:01:28.880> uh
+today's scribe? Okay, good. Let me uh
+Oh,<00:01:30.720> wrong.<00:01:31.040> So,<00:01:31.200> okay.<00:01:31.439> So,<00:01:32.159> I<00:01:32.400> just<00:01:32.560> started
+Oh, wrong. So, okay. So, I just started
+like<00:01:33.280> five<00:01:33.520> seconds<00:01:33.759> ago.<00:01:34.320> Awesome.<00:01:35.320> Um,<00:01:36.320> so
+like five seconds ago. Awesome. Um, so
+today<00:01:36.720> we're<00:01:36.960> covering<00:01:37.200> the<00:01:37.360> interior<00:01:37.759> point
+today we're covering the interior point
+method<00:01:39.600> and<00:01:40.079> uh<00:01:40.240> this<00:01:40.400> is<00:01:40.799> in<00:01:41.119> this<00:01:41.360> is<00:01:41.520> a
+method and uh this is in this is a
+method<00:01:42.079> for
+solving<00:01:46.399> solving<00:01:47.119> uh<00:01:47.600> convex<00:01:48.159> programs.<00:01:49.079> But
+solving solving uh convex programs. But
+you<00:01:50.240> know,<00:01:50.320> we're<00:01:50.479> just<00:01:50.640> going<00:01:50.720> to<00:01:50.799> look<00:01:50.960> at
+you know, we're just going to look at
+it.<00:01:53.520> We're<00:01:53.759> just<00:01:53.840> going<00:01:53.920> to<00:01:54.000> look<00:01:54.159> at<00:01:54.320> it<00:01:54.479> for
+it. We're just going to look at it for
+uh<00:01:55.280> linear
+programming.
+[Music]
+And<00:02:10.800> I<00:02:11.039> think<00:02:11.120> I<00:02:11.280> mentioned<00:02:11.599> last<00:02:11.840> time<00:02:12.000> at<00:02:12.160> the
+And I think I mentioned last time at the
+end<00:02:12.319> of<00:02:12.480> last<00:02:12.720> lecture,<00:02:14.040> um<00:02:15.040> this<00:02:15.200> is
+end of last lecture, um this is
+introduced
+as<00:02:19.120> a
+method<00:02:22.480> for<00:02:22.800> solving<00:02:23.120> LPS
+uh<00:02:28.239> by
+carar.<00:02:36.879> This<00:02:37.040> is<00:02:37.120> cominatorica<00:02:38.000> 84.<00:02:38.640> Right.
+carar. This is cominatorica 84. Right.
+So<00:02:39.280> cominator
+Okay.<00:02:51.080> And<00:02:52.080> I<00:02:52.400> said<00:02:52.640> some<00:02:52.959> very<00:02:53.200> vague<00:02:53.519> things
+Okay. And I said some very vague things
+last<00:02:54.000> time.<00:02:54.319> So<00:02:55.040> our<00:02:55.720> setup,<00:02:56.720> let<00:02:56.879> me<00:02:57.040> just
+last time. So our setup, let me just
+remind<00:02:57.360> you<00:02:57.519> of<00:02:57.680> the<00:02:57.840> vague<00:02:58.080> outline.<00:02:58.480> Our
+remind you of the vague outline. Our
+setup<00:02:58.959> is<00:02:59.280> we<00:02:59.519> want<00:02:59.680> to
+setup is we want to
+minimize<00:03:01.519> cranspose<00:03:02.440> x<00:03:03.440> subject<00:03:03.840> to<00:03:04.239> ax<00:03:04.640> is<00:03:04.879> at
+minimize cranspose x subject to ax is at
+least
+b.<00:03:07.319> Okay,<00:03:08.319> where<00:03:08.959> this<00:03:09.200> is<00:03:09.360> coordinate<00:03:10.040> wise.
+b. Okay, where this is coordinate wise.
+Um,<00:03:14.000> A<00:03:14.400> is<00:03:15.040> an<00:03:15.680> let's<00:03:15.840> say<00:03:16.080> it's<00:03:16.239> an<00:03:16.400> M<00:03:16.560> byN
+Um, A is an let's say it's an M byN
+matrix.<00:03:18.640> Uh,<00:03:18.959> and
+matrix. Uh, and
+B,<00:03:21.040> so<00:03:21.360> and<00:03:21.599> B<00:03:21.760> is<00:03:22.080> a<00:03:22.800> well<00:03:23.440> B<00:03:23.680> has<00:03:23.840> to<00:03:24.000> now<00:03:24.239> be<00:03:24.400> an
+B, so and B is a well B has to now be an
+R<00:03:25.519> M<00:03:25.840> and<00:03:26.000> X<00:03:26.239> is<00:03:26.319> an
+RN.<00:03:32.159> Okay.
+RN. Okay.
+So<00:03:36.000> the<00:03:36.319> basic<00:03:36.640> idea<00:03:36.879> of<00:03:37.120> an<00:03:37.280> interior<00:03:37.760> point
+So the basic idea of an interior point
+method<00:03:39.920> and<00:03:40.159> let<00:03:40.319> me<00:03:40.640> I'm<00:03:40.879> going<00:03:41.040> to<00:03:41.120> keep
+method and let me I'm going to keep
+abbreviating<00:03:41.920> the<00:03:42.080> interior<00:03:42.480> point<00:03:42.720> method
+abbreviating the interior point method
+is
+IPM.
+Okay,<00:03:49.920> the<00:03:50.159> basic
+idea
+is
+minimize<00:04:04.400> f<00:04:04.640> of<00:04:04.920> lambda<00:04:05.920> of<00:04:06.159> x<00:04:06.720> which<00:04:06.879> I'll
+minimize f of lambda of x which I'll
+define<00:04:07.439> to<00:04:07.599> be<00:04:07.760> lambda*<00:04:08.640> cranspose<00:04:09.360> x<00:04:10.680> plus
+define to be lambda* cranspose x plus
+some<00:04:12.000> barrier<00:04:12.400> function
+some barrier function
+uh<00:04:14.720> let's<00:04:15.040> call<00:04:15.120> it<00:04:15.360> p
+uh let's call it p
+of<00:04:17.440> we'll<00:04:17.680> say<00:04:17.759> what<00:04:17.919> this<00:04:18.000> This<00:04:18.079> is<00:04:18.239> in<00:04:18.400> a
+of we'll say what this This is in a
+second.<00:04:18.720> P<00:04:18.880> of<00:04:19.040> S<00:04:19.199> of
+second. P of S of
+X
+where<00:04:24.080> S<00:04:24.320> of<00:04:24.479> X
+where S of X
+I<00:04:26.400> is<00:04:26.560> the
+slack<00:04:31.960> ai.x<00:04:32.960> minus
+slack ai.x minus
+BI,<00:04:35.520> right?<00:04:35.919> So<00:04:36.160> in<00:04:36.400> for<00:04:36.560> any<00:04:36.800> feasible
+BI, right? So in for any feasible
+solution<00:04:37.680> X,<00:04:38.479> we<00:04:38.720> have<00:04:38.880> that<00:04:39.120> the<00:04:39.360> I<00:04:39.600> throw<00:04:39.840> of
+solution X, we have that the I throw of
+A,<00:04:40.320> let's<00:04:40.560> call<00:04:40.639> it<00:04:40.800> AI,<00:04:41.479> AI.X<00:04:42.479> is<00:04:42.800> at<00:04:42.960> least
+A, let's call it AI, AI.X is at least
+BI.<00:04:44.639> Okay?<00:04:44.960> So<00:04:45.440> ai<00:04:45.759> dox<00:04:46.240> minus<00:04:46.560> bi<00:04:46.880> is<00:04:47.040> some
+BI. Okay? So ai dox minus bi is some
+non-<00:04:47.520> negative<00:04:48.520> real<00:04:49.520> for<00:04:49.759> any<00:04:50.080> feasible<00:04:50.479> x
+non- negative real for any feasible x
+and<00:04:51.680> the<00:04:51.919> vector<00:04:52.240> of<00:04:52.400> all<00:04:52.560> of<00:04:52.720> these
+and the vector of all of these
+differences<00:04:54.160> is<00:04:54.400> called<00:04:54.560> the<00:04:54.720> slack<00:04:55.160> vector.
+differences is called the slack vector.
+Okay,<00:04:56.560> I'm<00:04:56.720> calling<00:04:56.880> it<00:04:56.960> the<00:04:57.120> slack<00:04:57.440> vector
+Okay, I'm calling it the slack vector
+and<00:05:01.199> where<00:05:01.520> so<00:05:01.759> s<00:05:02.000> is<00:05:02.160> defined<00:05:02.479> as<00:05:02.639> follow<00:05:02.960> as
+and where so s is defined as follow as
+this<00:05:03.600> and
+this and
+uh<00:05:06.000> p<00:05:06.160> of<00:05:06.400> x<00:05:06.720> p<00:05:06.880> of<00:05:07.039> s<00:05:07.199> of<00:05:07.360> x<00:05:08.160> goes<00:05:08.479> to<00:05:08.919> infinity
+uh p of x p of s of x goes to infinity
+if
+any<00:05:12.000> s<00:05:12.160> of<00:05:12.320> x<00:05:12.560> i<00:05:13.520> goes<00:05:13.840> to
+any s of x i goes to
+zero.<00:05:16.440> Okay,<00:05:17.440> so<00:05:17.600> the<00:05:17.840> point<00:05:18.000> is<00:05:18.240> that<00:05:18.560> if<00:05:18.800> any
+zero. Okay, so the point is that if any
+of<00:05:19.120> the<00:05:19.360> s<00:05:19.520> of<00:05:19.600> x<00:05:19.759> i's<00:05:20.320> are<00:05:20.560> zero,<00:05:21.280> that<00:05:21.520> means
+of the s of x i's are zero, that means
+you're<00:05:21.840> right<00:05:22.000> up<00:05:22.160> on<00:05:22.320> the<00:05:22.479> boundary<00:05:22.800> of<00:05:22.960> the
+you're right up on the boundary of the
+feasible<00:05:23.720> region,<00:05:24.720> right?
+feasible region, right?
+And<00:05:27.199> by<00:05:27.520> penalizing<00:05:28.400> the<00:05:28.960> uh<00:05:29.199> objective
+And by penalizing the uh objective
+function<00:05:30.160> in<00:05:30.479> terms<00:05:30.639> of<00:05:30.800> this<00:05:31.400> barrier,<00:05:32.400> this
+function in terms of this barrier, this
+p<00:05:32.880> is<00:05:33.039> called<00:05:33.120> a<00:05:33.360> barrier<00:05:33.680> function<00:05:34.080> because
+p is called a barrier function because
+it<00:05:34.560> keeps<00:05:34.720> you<00:05:34.960> away<00:05:35.120> from<00:05:36.080> it's<00:05:36.320> a<00:05:36.479> barrier
+it keeps you away from it's a barrier
+preventing<00:05:37.039> you<00:05:37.199> from<00:05:37.360> getting<00:05:37.520> too<00:05:37.680> close<00:05:37.759> to
+preventing you from getting too close to
+the<00:05:38.080> boundary<00:05:38.479> basically,<00:05:39.440> right?<00:05:39.680> By
+the boundary basically, right? By
+penalizing<00:05:40.400> with<00:05:40.560> this<00:05:40.720> barrier<00:05:41.120> function,
+penalizing with this barrier function,
+you're<00:05:42.320> ensuring<00:05:42.639> that<00:05:42.880> the<00:05:43.120> optimal<00:05:43.440> x<00:05:43.680> for
+you're ensuring that the optimal x for
+this<00:05:44.080> is<00:05:44.320> not<00:05:44.560> too<00:05:44.800> close<00:05:45.039> to<00:05:45.199> the<00:05:45.440> boundary.
+this is not too close to the boundary.
+So<00:05:46.400> it<00:05:46.639> stays<00:05:46.960> well<00:05:47.280> in<00:05:47.520> the<00:05:47.759> interior<00:05:48.240> of<00:05:48.400> the
+So it stays well in the interior of the
+feasible<00:05:49.039> region.<00:05:49.360> And<00:05:49.520> that<00:05:49.680> that's<00:05:49.919> why
+feasible region. And that that's why
+it's<00:05:50.160> called<00:05:50.320> an<00:05:50.479> interior<00:05:50.880> point<00:05:51.120> method.
+it's called an interior point method.
+you<00:05:52.320> have<00:05:52.639> you<00:05:52.800> you<00:05:53.120> basically<00:05:53.520> keep<00:05:53.759> track<00:05:54.280> of
+you have you you basically keep track of
+points<00:05:55.600> interior<00:05:56.160> in<00:05:56.400> in<00:05:56.880> the<00:05:57.120> feasible
+points interior in in the feasible
+region.
+Okay.<00:06:00.560> And<00:06:00.720> the<00:06:00.960> point<00:06:01.120> is
+Okay. And the point is
+as<00:06:03.680> lambda<00:06:04.240> goes<00:06:04.479> to<00:06:04.720> zero
+as lambda goes to zero
+um<00:06:07.680> basically<00:06:08.240> c<00:06:08.560> doesn't
+matter
+and<00:06:15.919> the
+and the
+optimizer<00:06:19.039> let<00:06:19.199> me<00:06:19.360> call<00:06:19.880> it<00:06:20.880> x
+optimizer let me call it x
+lambda.<00:06:22.800> So<00:06:23.039> this<00:06:23.199> is<00:06:23.360> the<00:06:23.520> optimal<00:06:23.919> solution
+lambda. So this is the optimal solution
+for<00:06:24.479> this<00:06:24.720> f<00:06:24.880> of<00:06:25.039> lambda<00:06:25.440> the<00:06:25.600> minimizer.<00:06:26.880> This
+for this f of lambda the minimizer. This
+goes<00:06:27.440> to<00:06:27.759> what's<00:06:28.080> called<00:06:28.240> the<00:06:28.479> analytic
+center<00:06:34.560> of<00:06:34.800> the<00:06:34.960> feasible<00:06:35.360> region.<00:06:35.840> The
+center of the feasible region. The
+feasible<00:06:36.400> region,<00:06:36.639> let's<00:06:36.800> call<00:06:36.880> it<00:06:37.039> P,<00:06:37.280> which
+feasible region, let's call it P, which
+is<00:06:37.520> the<00:06:37.680> set<00:06:37.759> of<00:06:37.919> all<00:06:38.080> points<00:06:38.319> X<00:06:38.479> such<00:06:38.720> that<00:06:38.880> AX
+is the set of all points X such that AX
+is<00:06:39.280> at<00:06:39.440> least<00:06:39.680> P.
+Meanwhile,<00:06:46.800> as<00:06:47.199> x<00:06:47.520> goes<00:06:47.759> to<00:06:47.919> infinity<00:06:48.800> or
+Meanwhile, as x goes to infinity or
+lambda<00:06:49.440> goes<00:06:49.600> to<00:06:49.960> infinity,<00:06:50.960> x<00:06:51.280> of<00:06:51.440> lambda
+lambda goes to infinity, x of lambda
+goes<00:06:52.720> to
+goes to
+um<00:06:55.880> xar
+um xar
+where<00:06:59.759> xar<00:07:00.319> is<00:07:00.479> the
+minimizer.<00:07:10.080> Okay?<00:07:10.639> And<00:07:10.880> I<00:07:11.039> I'm<00:07:11.280> not<00:07:11.440> going<00:07:11.520> to
+minimizer. Okay? And I I'm not going to
+spend<00:07:11.840> too<00:07:12.000> much<00:07:12.160> time<00:07:12.319> on<00:07:12.479> this,<00:07:12.720> but<00:07:13.840> um<00:07:13.919> you
+spend too much time on this, but um you
+can<00:07:14.240> assume<00:07:14.479> that<00:07:14.720> if<00:07:15.039> this<00:07:15.280> thing<00:07:15.520> is
+can assume that if this thing is
+feasible<00:07:16.240> and<00:07:16.440> bounded<00:07:17.440> that<00:07:17.680> the<00:07:17.919> minimizer
+feasible and bounded that the minimizer
+is<00:07:18.960> a<00:07:19.280> unique<00:07:19.599> vertex.<00:07:20.160> There's<00:07:20.319> only<00:07:20.479> one
+is a unique vertex. There's only one
+vertex<00:07:20.960> which<00:07:21.199> achieves<00:07:21.440> the<00:07:21.599> minimum.<00:07:22.400> The
+vertex which achieves the minimum. The
+basic<00:07:22.880> idea<00:07:23.199> to<00:07:23.520> ensure<00:07:23.840> that<00:07:24.160> is<00:07:25.120> so<00:07:25.360> we
+basic idea to ensure that is so we
+discussed<00:07:26.000> earlier<00:07:26.319> that<00:07:26.639> there's<00:07:26.960> some
+discussed earlier that there's some
+precision<00:07:28.240> that's<00:07:28.800> that<00:07:29.039> this<00:07:29.280> LP<00:07:29.680> obeys<00:07:30.160> like
+precision that's that this LP obeys like
+all<00:07:30.479> the<00:07:30.639> entries<00:07:31.039> have<00:07:31.360> L<00:07:31.599> bits<00:07:31.840> of<00:07:31.919> precision
+all the entries have L bits of precision
+or<00:07:32.479> some<00:07:32.639> such<00:07:32.880> thing<00:07:33.520> right<00:07:34.560> um<00:07:35.280> what<00:07:35.520> you<00:07:35.599> can
+or some such thing right um what you can
+do<00:07:35.840> is<00:07:36.000> you<00:07:36.240> can<00:07:36.479> create<00:07:36.720> a<00:07:36.960> new<00:07:37.199> cost<00:07:37.520> vector
+do is you can create a new cost vector
+where<00:07:38.639> you<00:07:38.800> just<00:07:38.960> add<00:07:39.280> kind<00:07:39.520> of<00:07:39.680> random<00:07:40.280> noise
+where you just add kind of random noise
+at<00:07:41.680> you<00:07:41.840> know<00:07:42.080> at<00:07:42.240> the<00:07:42.479> 10<00:07:42.800> L<00:07:43.039> bit<00:07:43.440> bit<00:07:43.680> of
+at you know at the 10 L bit bit of
+precision<00:07:44.240> and<00:07:44.840> beyond<00:07:45.840> okay<00:07:46.160> so<00:07:46.319> that<00:07:46.560> random
+precision and beyond okay so that random
+noise<00:07:47.120> will<00:07:47.280> ensure<00:07:47.599> that<00:07:47.840> there's<00:07:48.080> a<00:07:48.319> unique
+noise will ensure that there's a unique
+vertex<00:07:49.280> that's<00:07:49.599> that's<00:07:49.919> optimal<00:07:50.319> once<00:07:50.560> you
+vertex that's that's optimal once you
+randomly<00:07:51.199> perturb<00:07:51.520> this<00:07:51.759> cost<00:07:52.080> vector.<00:07:52.800> So<00:07:53.039> I
+randomly perturb this cost vector. So I
+don't<00:07:53.360> want<00:07:53.520> to<00:07:53.599> get<00:07:53.680> into<00:07:54.000> precision<00:07:54.400> issues
+don't want to get into precision issues
+but<00:07:55.360> there<00:07:55.599> are<00:07:55.759> standard<00:07:56.080> tricks<00:07:56.400> that
+but there are standard tricks that
+ensure<00:07:57.840> um<00:07:58.000> that<00:07:58.639> the<00:07:58.879> vertex<00:07:59.280> which<00:07:59.520> achieves
+ensure um that the vertex which achieves
+the<00:08:00.000> minimum<00:08:00.319> is<00:08:00.520> unique.
+the minimum is unique.
+Okay.<00:08:03.599> Um<00:08:04.000> I'll<00:08:04.240> I'll<00:08:04.479> put<00:08:04.720> I'll<00:08:04.879> put<00:08:05.039> a<00:08:05.199> link
+Okay. Um I'll I'll put I'll put a link
+in<00:08:05.520> the<00:08:05.680> notes<00:08:06.240> uh<00:08:06.400> to<00:08:06.960> some<00:08:07.120> of<00:08:07.199> these<00:08:07.440> because
+in the notes uh to some of these because
+there<00:08:07.680> are<00:08:07.840> too<00:08:08.000> many<00:08:08.240> such<00:08:08.720> uh<00:08:09.199> minor<00:08:09.520> tricks
+there are too many such uh minor tricks
+that<00:08:09.840> I<00:08:10.000> don't<00:08:10.080> want<00:08:10.160> to<00:08:10.240> get
+that I don't want to get
+into.
+Okay.<00:08:15.199> Okay.<00:08:15.599> Good.
+Okay. Okay. Good.
+So<00:08:17.840> to<00:08:18.080> actually<00:08:18.319> implement<00:08:18.639> this<00:08:18.800> basic
+So to actually implement this basic
+idea,<00:08:19.520> well<00:08:19.599> I<00:08:19.840> mean<00:08:19.919> who<00:08:20.160> says<00:08:20.680> that<00:08:21.680> who<00:08:22.000> says
+idea, well I mean who says that who says
+that<00:08:22.800> um<00:08:23.360> we<00:08:23.599> can<00:08:23.759> solve<00:08:24.000> this<00:08:24.240> problem
+that um we can solve this problem
+either,<00:08:25.199> right?<00:08:25.520> I<00:08:25.759> mean<00:08:26.240> so<00:08:26.400> what<00:08:26.560> are<00:08:26.720> we
+either, right? I mean so what are we
+going<00:08:26.960> to<00:08:27.160> do?<00:08:28.160> So
+going to do? So
+uh<00:08:30.000> the<00:08:30.240> vague
+outline<00:08:34.399> of<00:08:34.560> of<00:08:34.959> the<00:08:35.320> algorithm<00:08:36.320> will<00:08:36.560> look<00:08:36.719> as
+outline of of the algorithm will look as
+follows.<00:08:38.240> Step
+one,<00:08:42.080> let<00:08:42.240> me<00:08:42.479> call
+one, let me call
+this<00:08:44.720> this<00:08:44.959> is<00:08:45.040> our
+LP.
+Modify<00:08:52.440> LP<00:08:53.440> to<00:08:53.680> LP
+Modify LP to LP
+prime<00:08:56.399> such
+prime such
+that<00:08:58.240> LP<00:08:58.720> prime<00:09:00.160> uh<00:09:00.240> trivially<00:09:01.120> has<00:09:01.440> some<00:09:01.680> has
+that LP prime uh trivially has some has
+some<00:09:02.160> trivial
+interior
+point.<00:09:14.959> Okay.
+um<00:09:20.200> to<00:09:21.200> okay
+um to okay
+uh<00:09:23.120> show
+that<00:09:27.519> if<00:09:27.920> the<00:09:28.160> LP<00:09:28.560> is<00:09:28.720> bounded<00:09:29.040> in
+feasible<00:09:36.640> then<00:09:37.120> uh<00:09:37.279> we
+feasible then uh we
+can<00:09:39.360> read<00:09:39.680> off
+can read off
+basically<00:09:42.240> the<00:09:42.480> optimal<00:09:42.959> solution.
+to
+LP<00:09:50.240> from<00:09:50.560> the<00:09:50.800> optimal<00:09:51.399> solution<00:09:52.399> to<00:09:52.560> the<00:09:52.800> to
+LP from the optimal solution to the to
+LP
+prime.
+Okay.<00:09:57.839> Okay.<00:09:58.160> So<00:09:58.320> now<00:09:58.480> we<00:09:58.640> have<00:09:58.720> this<00:09:58.880> LP<00:09:59.279> prime
+Okay. Okay. So now we have this LP prime
+that<00:09:59.680> we're<00:09:59.839> trying<00:09:59.920> to<00:10:00.000> minimize<00:10:00.600> instead.
+that we're trying to minimize instead.
+What<00:10:01.839> do<00:10:01.920> we<00:10:02.080> do<00:10:02.240> there?
+So<00:10:07.040> we<00:10:07.360> start
+uh<00:10:10.880> so<00:10:11.519> let's<00:10:12.200> say<00:10:13.200> let's<00:10:13.440> say
+uh so let's say let's say
+uh<00:10:16.399> x<00:10:17.160> prime<00:10:18.160> is
+uh x prime is
+initial<00:10:21.120> interior
+point<00:10:25.440> for<00:10:25.760> LP
+point for LP
+prime<00:10:27.920> everything<00:10:28.240> I'm<00:10:28.480> writing<00:10:28.720> by<00:10:28.880> the<00:10:28.959> way
+prime everything I'm writing by the way
+here<00:10:29.279> is<00:10:29.519> the<00:10:29.680> vague<00:10:29.920> outline<00:10:30.399> okay<00:10:31.200> so<00:10:32.160> I<00:10:32.480> will
+here is the vague outline okay so I will
+start<00:10:33.279> being<00:10:33.519> a<00:10:33.680> little<00:10:33.760> more<00:10:34.000> specific<00:10:34.320> pick
+start being a little more specific pick
+right<00:10:35.279> after<00:10:35.440> I<00:10:35.680> write
+right after I write
+this.<00:10:38.160> Okay,<00:10:38.320> so<00:10:38.480> let's<00:10:38.640> say<00:10:38.800> we<00:10:38.880> have<00:10:38.959> some
+this. Okay, so let's say we have some
+initial<00:10:39.360> interior<00:10:39.760> point<00:10:39.920> for<00:10:40.000> LP<00:10:40.320> prime.<00:10:40.640> I
+initial interior point for LP prime. I
+didn't<00:10:40.959> tell<00:10:41.040> you<00:10:41.200> how<00:10:41.360> we<00:10:41.519> do<00:10:41.600> this
+didn't tell you how we do this
+modification,<00:10:42.399> but<00:10:43.360> I'll<00:10:43.680> I'll<00:10:44.000> tell<00:10:44.160> you<00:10:44.640> uh
+modification, but I'll I'll tell you uh
+later<00:10:45.200> how<00:10:45.360> we<00:10:45.600> do<00:10:45.680> this.<00:10:46.000> Okay,<00:10:46.240> but<00:10:46.560> let's
+later how we do this. Okay, but let's
+say<00:10:46.959> that<00:10:47.120> there<00:10:47.360> is<00:10:47.440> some<00:10:47.600> LP<00:10:48.000> prime<00:10:48.320> that<00:10:48.880> it
+say that there is some LP prime that it
+suffices<00:10:49.519> to<00:10:49.680> minimize<00:10:50.000> that<00:10:50.320> instead<00:10:51.600> um<00:10:52.240> to
+suffices to minimize that instead um to
+optimize<00:10:52.880> that<00:10:53.040> instead.
+Okay.<00:10:57.360> So<00:10:57.600> then
+Okay. So then
+we'll<00:10:59.600> step<00:10:59.920> four<00:11:00.320> from<00:11:00.640> x-p
+we'll step four from x-p
+prime<00:11:02.800> obtain
+um<00:11:07.920> x<00:11:08.240> tilda<00:11:08.800> lambda
+0<00:11:13.480> which
+approximately
+minimizes<00:11:23.680> f<00:11:23.920> of<00:11:24.079> lambda<00:11:24.560> 0
+Okay.<00:11:30.240> And<00:11:30.480> then<00:11:30.720> the<00:11:30.959> main<00:11:31.200> work<00:11:31.519> then
+Okay. And then the main work then
+happens<00:11:32.079> here.<00:11:32.320> So<00:11:32.480> this<00:11:32.560> is<00:11:32.640> all
+happens here. So this is all
+initialization.<00:11:33.600> Steps<00:11:33.839> one<00:11:34.000> through<00:11:34.240> four
+initialization. Steps one through four
+all
+initialization.<00:11:36.160> Now<00:11:36.480> finally<00:11:36.880> step
+five.<00:11:41.200> While
+five. While
+uh<00:11:43.839> K<00:11:44.640> is<00:11:44.880> smaller<00:11:45.200> than<00:11:45.360> some<00:11:45.680> threshold
+uh K is smaller than some threshold
+which<00:11:46.480> we'll<00:11:46.720> see<00:11:46.880> in<00:11:47.040> the<00:11:47.200> analysis.
+use<00:11:56.160> uh<00:11:56.760> xtilda<00:11:57.760> of<00:11:58.000> lambda<00:11:58.760> k<00:12:00.040> as<00:12:01.040> an
+approximate
+solution<00:12:10.560> to<00:12:10.880> f<00:12:11.600> lambda<00:12:12.079> k<00:12:12.320> +<00:12:12.560> one.<00:12:13.600> So<00:12:13.839> lambda
+solution to f lambda k + one. So lambda
+k<00:12:14.399> +<00:12:14.839> one<00:12:15.839> is<00:12:16.079> going<00:12:16.240> to<00:12:16.320> be
+something<00:12:19.839> slightly<00:12:20.320> bigger<00:12:20.560> than<00:12:20.800> lambda
+k<00:12:28.240> and<00:12:28.480> then
+iteratively
+refine<00:12:34.480> to
+refine to
+get<00:12:36.800> an<00:12:37.120> even
+better<00:12:42.160> solution.
+for<00:12:46.480> f<00:12:46.720> lambda<00:12:47.120> k<00:12:47.360> +<00:12:47.800> one<00:12:48.800> using<00:12:49.200> some
+for f lambda k + one using some
+iterative<00:12:49.839> algorithm<00:12:50.240> like<00:12:50.480> Newton's
+iterative algorithm like Newton's
+method.<00:12:51.920> Okay?<00:12:52.160> And<00:12:52.320> I'll<00:12:52.480> tell<00:12:52.639> you<00:12:52.959> more
+method. Okay? And I'll tell you more
+about<00:12:53.440> that<00:12:53.760> throughout<00:12:54.079> the
+lecture<00:12:59.040> and<00:12:59.279> then<00:12:59.440> increment
+k<00:13:03.440> and<00:13:03.760> continue<00:13:04.160> the
+loop.<00:13:08.079> Okay.<00:13:08.320> So<00:13:09.000> somehow<00:13:10.000> somehow<00:13:10.320> from<00:13:10.480> an
+loop. Okay. So somehow somehow from an
+interior<00:13:11.240> point<00:13:12.240> we're<00:13:12.480> going<00:13:12.560> to<00:13:12.720> get<00:13:12.800> an
+interior point we're going to get an
+approximate<00:13:13.360> minimizer<00:13:13.920> for<00:13:14.079> lambda<00:13:14.480> 0<00:13:14.720> being
+approximate minimizer for lambda 0 being
+something<00:13:15.440> very<00:13:15.680> small.<00:13:16.320> Right?<00:13:16.560> When<00:13:16.720> lambda
+something very small. Right? When lambda
+0<00:13:17.360> is<00:13:17.519> something<00:13:17.680> very
+0 is something very
+small<00:13:19.680> we<00:13:19.920> basically<00:13:20.240> don't<00:13:20.399> care<00:13:20.560> about<00:13:20.639> the
+small we basically don't care about the
+cost<00:13:21.120> function<00:13:21.360> at<00:13:21.519> all.<00:13:21.760> We<00:13:22.000> just<00:13:22.160> want<00:13:22.320> to
+cost function at all. We just want to
+find<00:13:22.720> something<00:13:22.959> that's<00:13:23.920> well<00:13:24.399> inside<00:13:24.800> of<00:13:24.959> the
+find something that's well inside of the
+poly<00:13:25.760> well<00:13:25.920> inside<00:13:26.160> of<00:13:26.240> the<00:13:26.399> feasible<00:13:27.000> region.
+poly well inside of the feasible region.
+Okay.<00:13:29.200> And<00:13:29.360> then<00:13:29.519> from<00:13:29.760> lambda<00:13:30.160> 0<00:13:30.560> we're<00:13:30.720> going
+Okay. And then from lambda 0 we're going
+to<00:13:30.880> just<00:13:31.120> very<00:13:31.560> slightly<00:13:32.560> you're<00:13:32.800> going<00:13:32.880> to
+to just very slightly you're going to
+see<00:13:33.360> by<00:13:33.519> how<00:13:33.680> much<00:13:33.920> but<00:13:34.160> very<00:13:34.399> slightly
+see by how much but very slightly
+increment<00:13:35.120> lambda<00:13:35.440> 0<00:13:35.680> to<00:13:35.760> get<00:13:35.920> lambda<00:13:36.240> 1.<00:13:37.440> And
+increment lambda 0 to get lambda 1. And
+we're<00:13:37.839> going<00:13:37.920> to<00:13:38.000> use<00:13:38.240> this<00:13:38.639> thing,<00:13:39.200> this
+we're going to use this thing, this
+approximate<00:13:40.000> minimizer<00:13:40.480> of<00:13:40.639> lambda<00:13:41.040> 0<00:13:41.839> as<00:13:42.079> a
+approximate minimizer of lambda 0 as a
+starting<00:13:42.639> point<00:13:43.600> for<00:13:43.839> an<00:13:44.000> approximate
+starting point for an approximate
+minimizer<00:13:45.040> of<00:13:45.200> f<00:13:45.360> of<00:13:45.519> lambda<00:13:45.920> 1<00:13:46.240> f<00:13:46.480> sub<00:13:46.639> lambda
+minimizer of f of lambda 1 f sub lambda
+1.<00:13:47.360> So<00:13:47.519> the<00:13:47.760> point<00:13:47.839> is<00:13:48.079> if<00:13:48.320> we<00:13:48.480> didn't
+1. So the point is if we didn't
+increment<00:13:49.680> lambda<00:13:50.160> by<00:13:50.399> much,<00:13:50.800> if<00:13:51.040> lambda<00:13:51.440> 1<00:13:51.680> is
+increment lambda by much, if lambda 1 is
+very<00:13:52.000> very<00:13:52.240> close<00:13:52.399> to<00:13:52.560> lambda<00:13:52.959> 0<00:13:53.200> but<00:13:53.360> slightly
+very very close to lambda 0 but slightly
+bigger,<00:13:54.800> then<00:13:55.200> you<00:13:55.360> know<00:13:55.519> by<00:13:55.760> some<00:13:56.000> continuity
+bigger, then you know by some continuity
+argument,<00:13:58.240> the<00:13:58.399> an<00:13:58.639> approximate<00:13:59.040> minimizer
+argument, the an approximate minimizer
+for<00:13:59.680> f<00:13:59.920> lambda<00:14:00.320> 0<00:14:00.639> will<00:14:00.880> still<00:14:01.120> be<00:14:02.079> an
+for f lambda 0 will still be an
+approximate<00:14:02.800> minimizer<00:14:03.279> for<00:14:03.440> f<00:14:03.600> lambda<00:14:04.000> 1.
+approximate minimizer for f lambda 1.
+not<00:14:05.040> as<00:14:05.519> good<00:14:05.839> an<00:14:06.160> approximate<00:14:06.560> solution<00:14:06.880> but
+not as good an approximate solution but
+still<00:14:07.360> some<00:14:07.600> level<00:14:07.760> of<00:14:08.279> approximation<00:14:09.279> and
+still some level of approximation and
+then<00:14:09.600> we<00:14:09.760> can<00:14:09.920> apply<00:14:10.079> some<00:14:10.320> iterative
+then we can apply some iterative
+algorithm<00:14:11.279> to<00:14:11.519> gradually<00:14:12.000> refine<00:14:12.320> it<00:14:12.399> and
+algorithm to gradually refine it and
+make<00:14:12.720> it<00:14:12.800> a<00:14:12.959> better<00:14:13.199> approximate<00:14:13.760> solution<00:14:14.000> to
+make it a better approximate solution to
+f<00:14:14.399> lambda<00:14:14.720> 1<00:14:15.680> and<00:14:15.839> then<00:14:16.000> that<00:14:16.240> will<00:14:16.399> give<00:14:16.480> us<00:14:16.639> x
+f lambda 1 and then that will give us x
+tilda<00:14:17.199> lambda<00:14:17.519> 1<00:14:18.079> and<00:14:18.240> then<00:14:18.399> we<00:14:18.560> go<00:14:18.720> back<00:14:18.880> to
+tilda lambda 1 and then we go back to
+the<00:14:19.120> loop<00:14:19.279> and<00:14:19.519> we<00:14:19.680> use<00:14:19.760> that<00:14:20.000> as<00:14:20.160> an
+the loop and we use that as an
+approximate<00:14:20.639> minimizer<00:14:21.120> for<00:14:21.199> f<00:14:21.440> sub<00:14:21.600> lambda<00:14:22.000> 2
+approximate minimizer for f sub lambda 2
+and<00:14:22.399> then<00:14:22.480> we<00:14:22.639> keep<00:14:22.880> iterating<00:14:24.240> um<00:14:24.399> until
+and then we keep iterating um until
+finally<00:14:26.160> lambda<00:14:26.639> k<00:14:26.959> is<00:14:27.120> big<00:14:27.360> enough<00:14:27.760> and<00:14:27.920> once
+finally lambda k is big enough and once
+lambda<00:14:28.560> k<00:14:28.720> is<00:14:28.880> big<00:14:29.079> enough
+lambda k is big enough
+then<00:14:32.240> this<00:14:32.560> becomes<00:14:32.880> the<00:14:33.040> dominant<00:14:33.440> term<00:14:33.680> in
+then this becomes the dominant term in
+the<00:14:34.000> sum<00:14:34.399> not<00:14:34.560> the<00:14:34.800> barrier<00:14:35.480> function<00:14:36.480> and
+the sum not the barrier function and
+then<00:14:36.959> you<00:14:37.120> can<00:14:37.199> show<00:14:37.360> that<00:14:37.519> once<00:14:37.760> lambda<00:14:38.079> is
+then you can show that once lambda is
+big<00:14:38.399> enough<00:14:39.199> an<00:14:39.519> optimizer<00:14:40.160> for<00:14:40.399> this<00:14:41.519> uh
+big enough an optimizer for this uh
+function<00:14:43.040> basically<00:14:43.519> is<00:14:43.760> an<00:14:44.240> can<00:14:44.480> be<00:14:44.560> easily
+function basically is an can be easily
+rounded<00:14:45.279> to<00:14:45.600> an<00:14:45.920> optimal<00:14:46.240> solution<00:14:46.480> for<00:14:46.639> the
+rounded to an optimal solution for the
+original<00:14:46.959> LP.<00:14:47.600> Uh<00:14:47.920> is<00:14:48.000> there<00:14:48.160> a<00:14:48.320> question?
+original LP. Uh is there a question?
+Okay.<00:14:49.920> So<00:14:50.240> everything<00:14:50.480> I've<00:14:50.800> said<00:14:50.959> has<00:14:51.199> been
+Okay. So everything I've said has been
+the<00:14:51.839> vague<00:14:52.519> outline.<00:14:53.519> You<00:14:53.600> know<00:14:53.680> I<00:14:53.920> have<00:14:54.000> to
+the vague outline. You know I have to
+somehow<00:14:54.639> make<00:14:54.720> this<00:14:54.959> more<00:14:55.320> precise<00:14:56.320> but<00:14:56.800> are
+somehow make this more precise but are
+there<00:14:57.199> questions<00:14:57.519> about<00:14:57.760> at<00:14:57.839> least<00:14:58.240> strategy?
+Okay.<00:15:08.320> Okay.
+So,<00:15:14.079> so<00:15:14.800> um<00:15:15.040> so<00:15:15.279> this<00:15:15.440> is<00:15:15.519> the<00:15:15.680> the<00:15:16.000> order<00:15:16.240> the
+So, so um so this is the the order the
+algorithm<00:15:16.959> does<00:15:17.199> things<00:15:17.560> in.<00:15:18.560> Uh<00:15:19.079> but<00:15:20.079> this<00:15:20.240> is
+algorithm does things in. Uh but this is
+not<00:15:20.480> the<00:15:20.639> order<00:15:20.880> I'm<00:15:21.120> going<00:15:21.199> to<00:15:21.279> explain
+not the order I'm going to explain
+things<00:15:21.920> in.<00:15:22.320> Okay.<00:15:22.639> So<00:15:22.880> I'm<00:15:23.120> going<00:15:23.199> to<00:15:23.560> assume
+things in. Okay. So I'm going to assume
+that<00:15:25.680> we<00:15:26.079> already<00:15:26.959> have<00:15:27.199> completed<00:15:27.680> step
+that we already have completed step
+four.<00:15:29.360> Okay.<00:15:29.920> we<00:15:30.240> already<00:15:30.480> have<00:15:30.720> something
+four. Okay. we already have something
+that<00:15:31.279> approximately<00:15:31.839> minimizes<00:15:32.399> f<00:15:32.639> of<00:15:32.800> lambda
+that approximately minimizes f of lambda
+0<00:15:35.360> and<00:15:35.600> then<00:15:35.760> I<00:15:35.920> want<00:15:36.079> to<00:15:36.240> talk<00:15:36.399> about<00:15:37.360> how<00:15:37.600> to
+0 and then I want to talk about how to
+do<00:15:37.920> this<00:15:38.240> step<00:15:38.760> five<00:15:39.760> and<00:15:40.000> also<00:15:40.320> when<00:15:40.560> do<00:15:40.720> we
+do this step five and also when do we
+finish<00:15:42.880> and<00:15:43.040> then<00:15:43.199> once<00:15:43.440> I<00:15:43.680> explain<00:15:44.000> that<00:15:44.639> I'll
+finish and then once I explain that I'll
+go<00:15:45.120> back<00:15:45.279> and<00:15:45.519> talk<00:15:45.680> about<00:15:45.920> how<00:15:46.160> to<00:15:46.320> actually
+go back and talk about how to actually
+implement<00:15:47.040> steps<00:15:47.279> one<00:15:47.519> through
+implement steps one through
+four<00:15:50.079> okay
+Okay.
+So,<00:16:09.440> we'll<00:16:09.759> come
+back<00:16:13.839> to<00:16:14.079> steps<00:16:14.399> one<00:16:14.639> through<00:16:15.000> four
+back to steps one through four
+later.<00:16:18.560> So,<00:16:18.800> let's<00:16:19.040> go<00:16:19.199> to<00:16:19.360> step<00:16:19.600> five.
+So<00:16:25.120> we'll<00:16:25.360> see<00:16:25.519> this<00:16:25.759> when<00:16:25.920> we<00:16:26.160> actually<00:16:26.480> do
+So we'll see this when we actually do
+steps<00:16:27.759> one<00:16:27.920> through<00:16:28.160> four,<00:16:28.399> but<00:16:28.720> lambda
+steps one through four, but lambda
+0<00:16:30.720> will<00:16:30.959> be<00:16:31.240> something<00:16:32.240> that's<00:16:32.639> you<00:16:32.800> know
+0 will be something that's you know
+exponentially
+small<00:16:35.600> in<00:16:35.839> the
+small in the
+precision.<00:16:37.920> So<00:16:38.480> just<00:16:38.639> a<00:16:38.880> reminder,<00:16:39.279> I<00:16:39.440> think<00:16:39.519> I
+precision. So just a reminder, I think I
+mentioned<00:16:39.920> this<00:16:40.160> last<00:16:40.320> time,<00:16:40.480> but<00:16:40.800> L<00:16:41.680> is
+mentioned this last time, but L is
+something<00:16:42.240> like
+something like
+um<00:16:44.399> the<00:16:45.160> max<00:16:46.279> of<00:16:47.279> log
+of<00:16:51.120> B<00:16:51.360> infinity
+uh<00:16:55.880> and<00:16:56.880> log
+uh and log
+of<00:16:59.120> the<00:16:59.360> maximum<00:16:59.920> determinant<00:17:00.480> of<00:17:00.720> a
+of the maximum determinant of a
+submatrix<00:17:03.040> as<00:17:03.279> well<00:17:03.440> as
+submatrix as well as
+log<00:17:05.520> of<00:17:05.839> C<00:17:06.000> infinity.
+What<00:17:11.039> is<00:17:11.199> this<00:17:11.439> term?<00:17:12.160> So<00:17:12.400> you<00:17:12.640> remember<00:17:12.959> from
+What is this term? So you remember from
+uh<00:17:14.799> when<00:17:15.039> we<00:17:15.199> were<00:17:15.439> looking<00:17:15.600> at<00:17:15.760> the<00:17:15.919> simplex
+uh when we were looking at the simplex
+algorithm,<00:17:17.360> right?<00:17:17.760> Vertices<00:17:18.400> are<00:17:18.640> specified
+algorithm, right? Vertices are specified
+by<00:17:19.600> solving<00:17:20.000> linear<00:17:20.400> systems<00:17:21.280> on<00:17:21.520> submatrices
+by solving linear systems on submatrices
+of<00:17:22.760> a.<00:17:23.799> Okay,<00:17:24.799> so<00:17:25.360> how<00:17:25.600> much<00:17:25.760> precision<00:17:26.160> do<00:17:26.319> you
+of a. Okay, so how much precision do you
+need<00:17:27.360> to<00:17:27.919> um<00:17:28.799> so<00:17:28.960> you<00:17:29.200> basically<00:17:29.440> have<00:17:29.520> to
+need to um so you basically have to
+invert<00:17:30.000> some<00:17:30.320> some<00:17:30.720> matrix<00:17:31.120> and<00:17:31.280> then<00:17:31.440> that
+invert some some matrix and then that
+gives<00:17:31.760> you<00:17:31.919> your<00:17:32.080> answer,<00:17:32.400> right?<00:17:32.480> invert<00:17:32.799> a
+gives you your answer, right? invert a
+matrix<00:17:33.200> and<00:17:33.360> multiply<00:17:33.679> it<00:17:33.760> by<00:17:33.919> the<00:17:34.000> right<00:17:34.160> hand
+matrix and multiply it by the right hand
+side<00:17:34.799> to<00:17:35.039> get<00:17:35.200> a
+side to get a
+vertex.<00:17:37.039> Okay.<00:17:37.840> And<00:17:38.000> the<00:17:38.240> number<00:17:38.400> of<00:17:38.559> bits<00:17:38.799> of
+vertex. Okay. And the number of bits of
+precision
+um<00:17:41.840> involved<00:17:42.320> in<00:17:42.480> inverting<00:17:42.880> that<00:17:43.039> matrix<00:17:43.440> is
+um involved in inverting that matrix is
+proportional<00:17:44.559> to<00:17:44.720> the<00:17:44.880> logarithm<00:17:45.520> of<00:17:46.320> the
+proportional to the logarithm of the
+determinant<00:17:47.039> of<00:17:47.200> that<00:17:47.440> matrix.<00:17:48.080> So<00:17:48.480> debt<00:17:48.880> max
+determinant of that matrix. So debt max
+is<00:17:49.200> the<00:17:49.360> maximum<00:17:49.760> over<00:17:50.000> all<00:17:50.160> submatrices<00:17:50.880> of
+is the maximum over all submatrices of
+the<00:17:51.200> logarithm<00:17:51.679> of<00:17:52.400> the<00:17:52.559> determinant<00:17:53.039> of<00:17:53.200> of
+the logarithm of the determinant of of
+the<00:17:53.520> submatrix<00:17:54.480> in<00:17:55.000> magnitude.<00:17:56.000> So<00:17:56.160> this<00:17:56.400> is
+the submatrix in magnitude. So this is
+uh<00:17:57.039> just<00:17:57.280> think<00:17:57.440> of<00:17:57.600> this<00:17:58.400> just<00:17:58.559> think<00:17:58.720> of<00:17:58.799> this
+uh just think of this just think of this
+as<00:17:59.200> precision.
+Okay,<00:18:06.799> so<00:18:07.200> somehow<00:18:07.600> in<00:18:07.840> steps<00:18:08.160> one<00:18:08.320> through
+Okay, so somehow in steps one through
+four,<00:18:09.200> we're<00:18:09.440> going<00:18:09.520> to<00:18:09.679> end<00:18:09.840> up<00:18:10.000> with<00:18:10.160> an
+four, we're going to end up with an
+approximate<00:18:11.240> solution<00:18:12.240> approximate
+approximate solution approximate
+minimizer<00:18:13.280> of<00:18:13.440> f<00:18:13.600> sub<00:18:13.760> lambda<00:18:14.080> 0<00:18:14.320> where<00:18:14.480> lambda
+minimizer of f sub lambda 0 where lambda
+0<00:18:14.960> is<00:18:15.120> really<00:18:15.280> tiny.
+0 is really tiny.
+And<00:18:18.559> now<00:18:18.799> we<00:18:19.039> ask<00:18:19.280> ourselves
+And now we ask ourselves
+uh<00:18:22.080> for
+what<00:18:25.360> lambda<00:18:25.919> k<00:18:26.880> uh<00:18:27.039> can<00:18:27.280> we
+stop?
+Well,
+okay.<00:18:45.679> So<00:18:46.000> for
+okay. So for
+this<00:18:48.400> basically<00:18:49.280> uh<00:18:49.360> we<00:18:49.600> can
+stop<00:18:54.320> when
+uh<00:18:57.840> let's<00:18:58.160> say<00:18:58.640> cranspose<00:18:59.600> of<00:19:00.160> xar<00:19:00.960> of<00:19:01.200> x
+uh let's say cranspose of xar of x
+lambda<00:19:02.280> sorry<00:19:03.280> minus
+lambda sorry minus
+cranspose<00:19:06.160> of
+cranspose of
+xar.<00:19:08.000> So<00:19:08.400> crpose<00:19:08.880> xar<00:19:09.200> is<00:19:09.360> the<00:19:09.440> true<00:19:09.600> minimum.
+xar. So crpose xar is the true minimum.
+Cranspose<00:19:12.480> of<00:19:12.559> X<00:19:12.720> lambda<00:19:13.240> is<00:19:14.480> uh<00:19:15.200> what<00:19:15.440> is<00:19:15.919> if
+Cranspose of X lambda is uh what is if
+we<00:19:16.320> used<00:19:16.559> X<00:19:16.880> lambda<00:19:17.440> as<00:19:17.679> a<00:19:17.840> solution<00:19:18.160> to<00:19:18.320> the
+we used X lambda as a solution to the
+actual<00:19:18.799> LP<00:19:19.360> as<00:19:19.520> opposed<00:19:19.760> to<00:19:19.919> this
+actual LP as opposed to this
+modified<00:19:21.760> penalized<00:19:22.400> function<00:19:23.600> uh<00:19:23.760> then<00:19:24.000> what
+modified penalized function uh then what
+would<00:19:24.320> our<00:19:24.480> cost<00:19:24.720> be<00:19:25.280> once<00:19:25.600> this<00:19:25.760> is<00:19:25.919> less<00:19:26.080> than
+would our cost be once this is less than
+let's<00:19:26.480> say<00:19:26.640> epsilon<00:19:27.520> and<00:19:27.679> epsilon<00:19:28.160> is<00:19:28.320> also
+let's say epsilon and epsilon is also
+going<00:19:28.640> to<00:19:28.720> be<00:19:28.880> something<00:19:29.039> that's
+going to be something that's
+exponentially<00:19:29.919> small<00:19:30.080> in<00:19:30.240> the
+exponentially small in the
+precision<00:19:32.559> okay<00:19:32.880> so<00:19:33.440> I'll<00:19:33.679> put<00:19:34.000> details<00:19:34.400> in
+precision okay so I'll put details in
+the<00:19:34.720> notes<00:19:34.960> for<00:19:35.120> this<00:19:35.360> I<00:19:35.520> don't<00:19:35.600> want<00:19:35.760> to
+the notes for this I don't want to
+really<00:19:36.000> get<00:19:36.160> into<00:19:36.400> precision<00:19:36.720> issues<00:19:37.120> but<00:19:37.360> the
+really get into precision issues but the
+point<00:19:37.679> is<00:19:38.600> once<00:19:39.600> once<00:19:39.919> the<00:19:40.160> difference<00:19:40.400> in
+point is once once the difference in
+cost<00:19:40.960> is<00:19:41.280> really<00:19:41.520> really<00:19:41.840> tiny<00:19:42.320> like<00:19:42.640> like
+cost is really really tiny like like
+this<00:19:44.000> then<00:19:44.720> you<00:19:45.039> can<00:19:45.200> easily<00:19:45.679> round<00:19:46.480> uh<00:19:46.640> this
+this then you can easily round uh this
+thing<00:19:47.120> to<00:19:47.280> a<00:19:47.440> to<00:19:47.679> the<00:19:47.840> closest<00:19:48.080> vertex<00:19:48.559> and<00:19:48.799> get
+thing to a to the closest vertex and get
+the<00:19:49.200> actual<00:19:49.679> vertex<00:19:50.160> that<00:19:50.400> that<00:19:50.720> achieves<00:19:51.120> the
+the actual vertex that that achieves the
+minimizing<00:19:52.080> the<00:19:52.320> minimum<00:19:52.640> for<00:19:52.799> the<00:19:52.960> LP.<00:19:53.760> Okay.
+minimizing the minimum for the LP. Okay.
+So<00:19:55.440> um<00:19:55.520> if<00:19:55.679> you're<00:19:55.840> not<00:19:56.000> comfortable<00:19:56.320> with
+So um if you're not comfortable with
+that<00:19:56.880> then<00:19:57.360> let's<00:19:57.600> just<00:19:57.760> say<00:19:57.919> that<00:19:58.320> you're<00:19:58.480> not
+that then let's just say that you're not
+actually<00:19:58.880> going<00:19:58.960> to<00:19:59.039> solve<00:19:59.200> the<00:19:59.360> LP.<00:19:59.760> You're
+actually going to solve the LP. You're
+going<00:20:00.000> to<00:20:00.559> you're<00:20:00.799> going<00:20:00.880> to<00:20:01.039> minimize<00:20:01.360> it<00:20:01.520> up
+going to you're going to minimize it up
+to<00:20:01.760> some<00:20:01.919> very<00:20:02.160> very<00:20:02.400> small<00:20:02.720> error.
+to some very very small error.
+Okay.<00:20:05.760> Okay.<00:20:06.160> So<00:20:06.559> we<00:20:06.799> can<00:20:06.880> stop<00:20:07.120> when<00:20:07.360> this<00:20:07.440> is
+Okay. Okay. So we can stop when this is
+the<00:20:07.679> case.<00:20:08.080> Well<00:20:08.400> I<00:20:08.640> want<00:20:08.799> to<00:20:08.960> understand<00:20:09.440> when
+the case. Well I want to understand when
+is<00:20:09.840> that<00:20:10.000> going<00:20:10.160> to<00:20:10.320> happen?<00:20:10.480> And<00:20:10.640> how<00:20:10.799> big
+is that going to happen? And how big
+does<00:20:11.200> lambda<00:20:11.600> have<00:20:11.760> to
+does lambda have to
+be?<00:20:13.440> So
+be? So
+uh<00:20:15.840> one
+observation<00:20:23.200> is<00:20:23.520> that<00:20:23.760> this<00:20:24.080> function<00:20:24.480> this
+observation is that this function this
+is<00:20:24.720> now<00:20:24.960> calculus.<00:20:25.440> So<00:20:25.679> f
+is now calculus. So f
+lambda<00:20:27.679> for<00:20:28.000> lambda<00:20:28.960> gal<00:20:29.600> zero<00:20:30.000> is<00:20:30.720> strictly
+convex<00:20:39.039> from<00:20:39.360> as<00:20:39.600> a<00:20:39.760> function<00:20:40.080> from<00:20:40.799> of<00:20:41.039> the
+convex from as a function from of the
+x's<00:20:41.600> from<00:20:41.760> r<00:20:42.000> to
+x's from r to
+r.
+Okay.<00:20:47.760> So<00:20:48.080> there<00:20:48.640> is
+a<00:20:51.919> unique
+minimizer<00:20:58.000> x<00:20:58.240> of<00:20:58.760> lambda<00:21:00.039> and<00:21:01.039> the
+minimizer x of lambda and the
+gradient<00:21:03.200> of<00:21:03.440> f<00:21:03.760> sublambda<00:21:04.320> of<00:21:04.480> x<00:21:04.720> lambda<00:21:05.120> will
+gradient of f sublambda of x lambda will
+be
+zero.<00:21:11.600> Okay.<00:21:12.240> So<00:21:12.400> the<00:21:12.640> minimizer<00:21:13.120> of<00:21:13.280> this
+zero. Okay. So the minimizer of this
+function<00:21:13.679> f<00:21:13.840> of<00:21:14.000> lambda<00:21:14.480> is<00:21:14.720> the<00:21:14.960> x<00:21:15.600> which
+function f of lambda is the x which
+makes<00:21:16.080> the<00:21:16.240> gradient<00:21:16.559> zero.<00:21:17.600> Right?<00:21:18.080> Okay.<00:21:18.320> So
+makes the gradient zero. Right? Okay. So
+if<00:21:18.640> if<00:21:18.960> people<00:21:19.200> are<00:21:19.600> forgetting<00:21:20.000> their
+if if people are forgetting their
+multivariate<00:21:20.880> calculus,<00:21:21.360> hopefully<00:21:21.600> people
+multivariate calculus, hopefully people
+at least<00:21:22.080> remember<00:21:22.240> in<00:21:22.400> univariate
+at least remember in univariate
+calculus,<00:21:23.760> you<00:21:23.840> know,<00:21:23.919> you<00:21:24.080> want<00:21:24.240> to<00:21:24.320> set<00:21:24.400> the
+calculus, you know, you want to set the
+derivative<00:21:24.880> to<00:21:25.039> zero.<00:21:25.360> Okay.<00:21:25.520> So<00:21:25.679> just<00:21:26.080> uh
+derivative to zero. Okay. So just uh
+just<00:21:26.960> think<00:21:27.200> think<00:21:27.440> like<00:21:27.679> that.
+just think think like that.
+Okay.<00:21:30.320> Okay.<00:21:30.640> Good.<00:21:31.240> So<00:21:32.240> we<00:21:32.480> know<00:21:32.640> that
+zero<00:21:36.640> is<00:21:36.880> Oh,<00:21:37.039> and<00:21:37.200> let<00:21:37.360> me<00:21:37.440> write<00:21:37.679> actually
+zero is Oh, and let me write actually
+what<00:21:38.240> the<00:21:38.480> gradient
+what the gradient
+is.<00:21:41.280> The<00:21:41.520> gradient<00:21:42.159> if<00:21:42.320> you<00:21:42.480> calculate<00:21:42.799> the
+is. The gradient if you calculate the
+gradient<00:21:43.280> of<00:21:43.440> f<00:21:43.960> lambda.<00:21:45.039> Oh,<00:21:45.280> and<00:21:45.440> I<00:21:45.600> didn't
+gradient of f lambda. Oh, and I didn't
+tell<00:21:45.919> you<00:21:46.880> I<00:21:47.120> didn't<00:21:47.280> actually<00:21:47.520> tell<00:21:47.600> you<00:21:47.760> what
+tell you I didn't actually tell you what
+this<00:21:48.400> uh<00:21:48.880> what<00:21:49.120> barrier<00:21:49.520> function<00:21:49.840> we're
+this uh what barrier function we're
+going<00:21:50.159> to<00:21:50.320> use,<00:21:50.799> right?<00:21:51.200> Did<00:21:51.360> I?<00:21:51.600> I<00:21:51.760> did<00:21:51.919> not
+going to use, right? Did I? I did not
+tell<00:21:52.240> you.<00:21:53.039> So,<00:21:53.280> the<00:21:53.440> barrier<00:21:53.679> function<00:21:53.919> we're
+tell you. So, the barrier function we're
+going<00:21:54.320> to
+going to
+use,<00:21:57.120> let<00:21:57.280> me<00:21:57.440> just<00:21:57.600> write<00:21:57.760> this
+use, let me just write this
+here.<00:21:59.760> We're<00:22:00.000> going<00:22:00.080> to<00:22:00.240> use<00:22:00.880> minus<00:22:01.360> the<00:22:01.679> sum<00:22:02.480> i
+here. We're going to use minus the sum i
+goes<00:22:02.960> from<00:22:03.120> 1<00:22:03.360> to<00:22:04.039> m<00:22:05.039> of
+goes from 1 to m of
+log<00:22:06.880> of<00:22:07.120> s<00:22:07.360> of
+log of s of
+xi.<00:22:09.840> Okay.
+Um,<00:22:17.200> I<00:22:17.440> mean,<00:22:17.520> the<00:22:17.760> reason<00:22:17.919> we're<00:22:18.159> using<00:22:18.400> this
+Um, I mean, the reason we're using this
+is<00:22:19.200> because<00:22:19.360> it<00:22:19.600> has<00:22:19.760> certain<00:22:20.000> nice
+is because it has certain nice
+properties<00:22:20.559> that<00:22:20.720> will<00:22:20.880> make<00:22:20.960> your<00:22:21.200> analysis
+properties that will make your analysis
+work,<00:22:22.480> but<00:22:22.799> it<00:22:22.960> does<00:22:23.200> it<00:22:23.360> does<00:22:23.600> at<00:22:23.600> least<00:22:23.919> fit
+work, but it does it does at least fit
+what<00:22:25.039> I<00:22:25.200> said,<00:22:25.520> right?<00:22:25.679> So,<00:22:25.760> if<00:22:25.919> any<00:22:26.080> of<00:22:26.159> the
+what I said, right? So, if any of the
+slacks<00:22:26.720> go<00:22:26.799> to<00:22:27.039> zero,<00:22:27.919> then<00:22:28.320> log<00:22:28.640> of<00:22:28.880> zero<00:22:29.280> is
+slacks go to zero, then log of zero is
+like<00:22:29.760> minus<00:22:30.080> infinity,<00:22:30.559> and<00:22:30.720> there's<00:22:30.880> a<00:22:31.039> minus
+like minus infinity, and there's a minus
+sign<00:22:31.520> out<00:22:31.679> there,<00:22:31.840> which<00:22:32.080> makes<00:22:32.240> it<00:22:32.400> infinity.
+sign out there, which makes it infinity.
+Okay,<00:22:33.200> so<00:22:33.440> this<00:22:33.600> function<00:22:33.919> does<00:22:34.080> go<00:22:34.240> to
+Okay, so this function does go to
+infinity<00:22:35.280> as<00:22:35.520> you<00:22:35.679> approach<00:22:36.480> as<00:22:36.720> the<00:22:36.880> slack<00:22:37.280> as
+infinity as you approach as the slack as
+any<00:22:37.600> slack<00:22:37.919> goes<00:22:38.080> to<00:22:38.240> zero,<00:22:38.480> which<00:22:38.640> means
+any slack goes to zero, which means
+you're<00:22:38.960> approaching<00:22:39.200> the<00:22:39.440> boundary.
+Okay.<00:22:45.600> Okay.<00:22:45.919> Good.<00:22:46.640> So<00:22:47.200> now<00:22:47.360> that<00:22:47.520> we<00:22:47.679> have<00:22:47.760> an
+Okay. Okay. Good. So now that we have an
+explicit<00:22:48.320> function<00:22:48.720> written<00:22:49.039> there,<00:22:49.919> we<00:22:50.240> can
+explicit function written there, we can
+compute<00:22:52.159> the<00:22:52.480> gradient<00:22:53.240> explicitly.<00:22:54.240> And<00:22:54.480> the
+compute the gradient explicitly. And the
+gradient<00:22:55.520> is<00:22:55.840> equal<00:22:56.159> to
+gradient is equal to
+uh<00:22:58.320> lambda
+c<00:23:03.039> minus<00:23:03.840> arpose
+c minus arpose
+uh<00:23:06.960> s<00:23:07.200> of<00:23:07.600> x<00:23:08.480> lamb<00:23:08.960> s<00:23:09.200> of<00:23:09.520> uh<00:23:09.760> let's<00:23:10.080> say
+uh s of x lamb s of uh let's say
+at<00:23:11.360> the<00:23:11.520> point
+at the point
+x<00:23:13.520> is<00:23:13.840> sx
+inverse<00:23:18.760> e
+inverse e
+where<00:23:21.840> e<00:23:22.080> is<00:23:22.320> just<00:23:22.480> the<00:23:22.640> all<00:23:22.799> ones<00:23:23.120> vector.
+where e is just the all ones vector.
+Actually<00:23:24.159> let<00:23:24.320> me<00:23:24.400> just<00:23:24.559> use<00:23:24.799> all
+ones.<00:23:28.240> So<00:23:28.400> the<00:23:28.559> all<00:23:28.799> ones<00:23:29.039> vector<00:23:29.440> is<00:23:30.240> well
+ones. So the all ones vector is well
+it's<00:23:30.640> the<00:23:30.720> all<00:23:30.960> ones
+it's the all ones
+vector<00:23:34.120> and<00:23:35.120> s<00:23:35.280> of<00:23:35.600> x<00:23:36.559> this<00:23:36.720> is<00:23:36.880> the<00:23:37.039> slack
+vector and s of x this is the slack
+matrix<00:23:38.640> at<00:23:39.400> x<00:23:40.400> which<00:23:40.720> is<00:23:41.600> this<00:23:41.840> has<00:23:42.000> the<00:23:42.159> slacks
+matrix at x which is this has the slacks
+on<00:23:42.559> the<00:23:42.720> diagonals<00:23:43.440> s<00:23:43.679> of
+on the diagonals s of
+x1<00:23:45.600> s<00:23:45.840> of<00:23:46.000> xm<00:23:46.880> so<00:23:47.039> diagonal
+x1 s of xm so diagonal
+matrix.<00:23:49.280> Okay,<00:23:49.600> so<00:23:49.760> the<00:23:50.000> inverse<00:23:50.480> is<00:23:50.640> just<00:23:51.600> one
+matrix. Okay, so the inverse is just one
+over<00:23:52.000> the<00:23:52.240> slacks<00:23:52.640> on<00:23:52.799> the
+over the slacks on the
+diagonal,<00:23:55.120> right?<00:23:55.840> And<00:23:56.080> notice<00:23:56.400> that<00:23:56.640> if<00:23:56.880> x<00:23:57.120> is
+diagonal, right? And notice that if x is
+not<00:23:57.760> up<00:23:57.919> on<00:23:58.000> the<00:23:58.159> boundary,<00:23:58.400> if<00:23:58.480> it's<00:23:58.640> in<00:23:58.720> the
+not up on the boundary, if it's in the
+interior,<00:23:59.360> none<00:23:59.600> of<00:23:59.679> these<00:23:59.840> slacks<00:24:00.240> are<00:24:00.760> zero.
+interior, none of these slacks are zero.
+Okay,<00:24:02.720> so<00:24:03.679> we<00:24:03.919> can<00:24:04.159> actually<00:24:04.799> that<00:24:04.960> actually
+Okay, so we can actually that actually
+has<00:24:05.280> an
+inverse.<00:24:09.360> Okay,<00:24:09.760> good.
+So<00:24:18.080> what<00:24:18.320> do<00:24:18.480> we<00:24:18.640> have<00:24:18.799> here?<00:24:19.200> So<00:24:19.360> we<00:24:19.679> have
+that
+well
+zero<00:24:26.159> is<00:24:26.480> equal<00:24:27.159> to<00:24:28.159> definitely<00:24:29.039> 0<00:24:30.000> dotted
+zero is equal to definitely 0 dotted
+with<00:24:31.679> x<00:24:32.000> lambda<00:24:32.400> minus
+xar<00:24:37.279> and<00:24:37.440> then<00:24:37.679> now<00:24:37.919> I<00:24:38.159> will<00:24:38.320> replace<00:24:38.799> this
+xar and then now I will replace this
+zero<00:24:40.159> with<00:24:40.559> the<00:24:40.880> gradient<00:24:41.279> at<00:24:41.520> x<00:24:41.679> of
+zero with the gradient at x of
+lambda<00:24:43.360> okay<00:24:43.760> because<00:24:43.919> the<00:24:44.080> gradient<00:24:44.480> x<00:24:44.640> of
+lambda okay because the gradient x of
+lambda<00:24:45.039> is<00:24:45.279> zero<00:24:45.840> and<00:24:46.080> this<00:24:46.240> is<00:24:46.400> equal<00:24:46.760> to<00:24:47.760> the
+lambda is zero and this is equal to the
+gradient
+at<00:24:49.520> f<00:24:49.679> sub<00:24:49.919> lambda<00:24:50.320> x
+at f sub lambda x
+lambda<00:24:52.799> dotted<00:24:53.200> with<00:24:53.440> x<00:24:53.720> lambda<00:24:54.720> minus
+xar.<00:24:59.279> Okay.<00:25:00.080> And<00:25:00.240> then<00:25:00.400> now<00:25:00.640> let<00:25:00.799> me<00:25:00.880> just
+xar. Okay. And then now let me just
+write<00:25:01.279> explicitly<00:25:01.760> what<00:25:01.919> that<00:25:02.080> gradient<00:25:02.480> is.
+write explicitly what that gradient is.
+We<00:25:03.039> said<00:25:03.200> that<00:25:03.279> that
+We said that that
+gradient<00:25:05.559> is<00:25:06.559> lambda
+c<00:25:11.200> minus
+c minus
+arpose<00:25:13.279> sx<00:25:13.799> inverse<00:25:14.799> the<00:25:14.960> all1's<00:25:15.440> vector
+X<00:25:19.039> lambda<00:25:19.440> -<00:25:19.679> Xar.
+Okay,<00:25:48.799> just<00:25:48.960> remember<00:25:49.200> that<00:25:49.440> all<00:25:49.600> of<00:25:49.760> this<00:25:49.919> is
+Okay, just remember that all of this is
+equal<00:25:50.320> to
+equal to
+zero<00:25:52.640> which
+implies<00:25:56.960> that<00:25:57.360> lambda
+implies that lambda
+cranspose<00:26:00.000> x<00:26:00.240> of<00:26:00.400> lambda<00:26:01.120> minus
+cranspose x of lambda minus
+xar<00:26:03.760> is<00:26:04.080> equal
+xar is equal
+to<00:26:06.080> and<00:26:06.320> then<00:26:06.799> so<00:26:06.960> I<00:26:07.200> just<00:26:07.360> want<00:26:07.440> to<00:26:07.600> say<00:26:08.039> that
+to and then so I just want to say that
+so<00:26:09.279> you<00:26:09.440> have<00:26:09.520> two<00:26:09.760> terms<00:26:09.919> here<00:26:10.159> you<00:26:10.320> have
+so you have two terms here you have
+lambda<00:26:10.880> c<00:26:11.360> transpose<00:26:12.000> times<00:26:12.240> this<00:26:12.400> thing<00:26:12.559> and
+lambda c transpose times this thing and
+then<00:26:12.880> you<00:26:13.039> also<00:26:13.279> have<00:26:13.840> this<00:26:14.159> vector<00:26:14.559> dotted
+then you also have this vector dotted
+with<00:26:15.120> this
+Okay.<00:26:20.480> So<00:26:20.720> this<00:26:20.960> thing<00:26:21.120> is<00:26:21.279> equal<00:26:21.720> to<00:26:22.720> the<00:26:22.960> all
+Okay. So this thing is equal to the all
+ones
+vector
+transpose<00:26:29.919> sx
+transpose sx
+inverse<00:26:32.720> a
+uh<00:26:36.720> x<00:26:36.960> lambda<00:26:37.360> minus
+xar.
+Okay.<00:26:48.240> So<00:26:48.640> tell<00:26:48.799> me<00:26:49.039> though<00:26:49.279> what<00:26:49.799> is<00:26:50.799> a<00:26:50.960> of<00:26:51.279> x
+Okay. So tell me though what is a of x
+lambda<00:26:51.919> minus<00:26:52.240> a<00:26:52.400> of
+lambda minus a of
+xar<00:26:54.320> in<00:26:54.559> terms<00:26:54.720> of<00:26:55.120> slacks
+anyway.<00:27:08.960> Right?
+anyway. Right?
+So<00:27:10.960> a<00:27:11.120> of<00:27:11.279> x<00:27:11.520> lambda<00:27:12.000> minus<00:27:12.400> b<00:27:13.279> that's<00:27:13.440> the
+So a of x lambda minus b that's the
+definition<00:27:14.000> of<00:27:14.159> the<00:27:14.320> slack<00:27:14.640> vector<00:27:14.880> for<00:27:15.039> x<00:27:15.200> of
+definition of the slack vector for x of
+lambda.<00:27:16.960> Right?<00:27:17.840> A<00:27:18.240> *<00:27:18.400> Xar<00:27:18.960> minus<00:27:19.279> B.<00:27:20.159> That's
+lambda. Right? A * Xar minus B. That's
+the<00:27:20.559> definition<00:27:20.799> of<00:27:20.880> the<00:27:21.039> slack<00:27:21.440> vector<00:27:21.679> for
+the definition of the slack vector for
+XAR.<00:27:23.520> And<00:27:23.679> then<00:27:23.840> we're<00:27:24.080> just<00:27:24.240> taking<00:27:24.880> so<00:27:25.039> when
+XAR. And then we're just taking so when
+you<00:27:25.360> when<00:27:25.600> you<00:27:25.679> take<00:27:25.840> the<00:27:26.159> difference<00:27:26.400> between
+you when you take the difference between
+them,<00:27:26.799> the<00:27:26.960> B's
+them, the B's
+cancel,<00:27:29.320> right?<00:27:30.320> So<00:27:30.480> this<00:27:30.640> is<00:27:30.799> just<00:27:31.039> equal
+cancel, right? So this is just equal
+to<00:27:33.600> one
+to one
+transpose<00:27:35.919> SX<00:27:36.760> inverse.<00:27:37.760> Uh<00:27:38.000> and<00:27:38.240> then<00:27:38.760> now
+transpose SX inverse. Uh and then now
+let's<00:27:40.000> say<00:27:40.240> this<00:27:40.640> use<00:27:40.880> little<00:27:41.039> S<00:27:41.279> for<00:27:41.440> the
+let's say this use little S for the
+actual<00:27:41.840> vector<00:27:42.159> of<00:27:42.600> slacks.<00:27:43.600> Little<00:27:43.919> S<00:27:44.080> of<00:27:44.240> X
+actual vector of slacks. Little S of X
+lambda.
+minus<00:27:48.000> a<00:27:48.080> little<00:27:48.240> less<00:27:48.400> of
+xar.
+Okay.<00:27:57.760> But<00:27:57.919> then<00:27:58.159> this<00:27:58.760> thing<00:27:59.760> this
+Okay. But then this thing this
+dotproduct<00:28:00.640> right<00:28:00.880> we're<00:28:01.039> taking<00:28:01.200> the<00:28:01.360> all
+dotproduct right we're taking the all
+ones
+vector<00:28:03.480> dotted<00:28:04.480> with<00:28:04.799> this
+vector dotted with this
+vector.<00:28:07.000> Okay.<00:28:08.000> So<00:28:08.240> this<00:28:08.480> is<00:28:08.559> some<00:28:08.799> diagonal
+vector. Okay. So this is some diagonal
+matrix<00:28:09.679> where<00:28:10.000> each<00:28:10.159> diagonal<00:28:10.559> entry<00:28:10.880> is<00:28:11.039> one
+matrix where each diagonal entry is one
+over<00:28:11.520> the<00:28:11.760> slack<00:28:12.080> in<00:28:12.320> some<00:28:12.919> coordinate.
+over the slack in some coordinate.
+Right?<00:28:14.480> So<00:28:14.720> this<00:28:14.880> thing<00:28:15.039> is<00:28:15.200> equal<00:28:15.440> to<00:28:15.600> the<00:28:16.039> sum
+Right? So this thing is equal to the sum
+i<00:28:17.360> going<00:28:17.600> from<00:28:17.760> one<00:28:17.919> to
+i going from one to
+m<00:28:20.399> of<00:28:21.279> s<00:28:21.520> of<00:28:21.919> x
+m of s of x
+uh<00:28:24.559> this<00:28:24.799> is<00:28:24.880> all<00:28:25.039> s<00:28:25.279> of<00:28:25.440> x
+uh this is all s of x
+lambda<00:28:28.880> right<00:28:29.120> this<00:28:29.279> is<00:28:29.360> the<00:28:29.520> gradient<00:28:29.840> at<00:28:30.080> x
+lambda right this is the gradient at x
+lambda.<00:28:30.640> So<00:28:30.799> this<00:28:30.960> is<00:28:31.120> the<00:28:31.440> slack<00:28:31.760> vector<00:28:32.000> at<00:28:32.159> x
+lambda.<00:28:39.279> So<00:28:39.520> this<00:28:39.760> is<00:28:40.320> the<00:28:40.919> sum<00:28:41.919> of<00:28:42.240> s<00:28:42.480> of<00:28:42.720> x
+lambda. So this is the sum of s of x
+lambda<00:28:44.960> sub<00:28:45.200> i<00:28:45.600> minus<00:28:46.080> s<00:28:46.320> of<00:28:46.600> xar<00:28:47.600> sub<00:28:47.840> i<00:28:48.240> over
+lambda sub i minus s of xar sub i over
+the<00:28:49.440> slack<00:28:49.760> of<00:28:50.000> x<00:28:50.240> of<00:28:50.320> x
+the slack of x of x
+lambda<00:28:52.080> sub
+lambda sub
+i.
+Uh<00:28:59.520> yeah,<00:29:00.159> are<00:29:00.320> people<00:29:00.559> with
+me?<00:29:05.440> Okay.<00:29:06.320> And<00:29:06.559> then<00:29:06.919> now<00:29:07.919> we'll<00:29:08.240> use<00:29:08.480> I<00:29:08.640> guess
+me? Okay. And then now we'll use I guess
+the<00:29:08.960> only<00:29:09.200> inequality<00:29:09.919> here<00:29:10.720> which
+the only inequality here which
+is<00:29:12.480> what's<00:29:13.200> the<00:29:13.440> only<00:29:13.679> thing<00:29:14.000> basically<00:29:14.320> you
+is what's the only thing basically you
+can<00:29:14.720> tell<00:29:14.799> me<00:29:15.039> about<00:29:15.279> s<00:29:15.520> of
+xstar.<00:29:19.919> What's<00:29:20.080> the<00:29:20.240> only<00:29:20.320> thing<00:29:20.399> you<00:29:20.559> can
+xstar. What's the only thing you can
+tell<00:29:20.720> me<00:29:20.880> about<00:29:21.039> any<00:29:21.200> slack<00:29:21.520> vector?
+tell me about any slack vector?
+It's<00:29:24.640> not<00:29:24.799> negative.<00:29:25.679> So<00:29:25.919> this<00:29:26.159> is<00:29:26.320> certainly
+It's not negative. So this is certainly
+at<00:29:26.880> most<00:29:27.760> the<00:29:28.000> sum<00:29:28.320> over<00:29:28.559> i<00:29:29.279> of<00:29:29.600> s<00:29:29.760> of<00:29:29.919> x<00:29:30.159> lambda
+at most the sum over i of s of x lambda
+i<00:29:32.000> over<00:29:32.240> s<00:29:32.399> of<00:29:32.559> x<00:29:32.720> lambda
+i over s of x lambda
+i<00:29:35.520> which<00:29:35.760> is<00:29:35.919> just
+m.
+Yeah.<00:29:43.039> So<00:29:43.480> overall<00:29:44.480> you<00:29:44.640> know<00:29:44.799> this<00:29:44.960> is
+Yeah. So overall you know this is
+exactly<00:29:45.360> what<00:29:45.520> we<00:29:45.679> wanted.<00:29:45.919> We<00:29:46.080> wanted<00:29:46.320> to
+exactly what we wanted. We wanted to
+understand<00:29:47.120> crpose<00:29:47.679> of<00:29:47.760> x<00:29:47.919> of<00:29:48.000> lambda<00:29:48.320> minus
+understand crpose of x of lambda minus
+crpose<00:29:49.039> of<00:29:49.120> xar.<00:29:50.159> So<00:29:50.399> this
+crpose of xar. So this
+implies<00:29:53.520> this<00:29:53.840> implies<00:29:54.320> that
+implies this implies that
+cranspose<00:29:57.600> of<00:29:57.919> x<00:29:58.279> lambda<00:29:59.279> minus<00:29:59.760> crpose<00:30:00.399> of
+cranspose of x lambda minus crpose of
+xar<00:30:01.600> is<00:30:01.840> at<00:30:02.080> most
+xar is at most
+uh<00:30:04.320> m<00:30:04.559> over
+lambda.
+Okay,<00:30:18.399> good.
+Um<00:30:30.640> so<00:30:30.880> what<00:30:31.039> is<00:30:31.200> this<00:30:31.360> telling<00:30:31.679> us?<00:30:32.640> This
+Um so what is this telling us? This
+tells<00:30:33.120> us<00:30:33.720> that
+tells us that
+once<00:30:36.320> lambda<00:30:36.880> is<00:30:37.039> at<00:30:37.200> least<00:30:37.520> say<00:30:37.760> m<00:30:38.000> over
+epsilon<00:30:42.640> and<00:30:42.880> remember<00:30:43.480> epsilon<00:30:44.480> I<00:30:44.720> mentioned
+epsilon and remember epsilon I mentioned
+if<00:30:45.120> you<00:30:45.200> want<00:30:45.279> to<00:30:45.440> actually<00:30:45.600> round<00:30:45.840> to<00:30:46.000> a
+if you want to actually round to a
+vertex<00:30:47.919> epsilon<00:30:48.320> can<00:30:48.480> be<00:30:48.559> as<00:30:48.720> small<00:30:48.880> as
+vertex epsilon can be as small as
+exponential<00:30:49.600> in<00:30:49.840> the<00:30:50.320> precision
+exponential in the precision
+exponentially<00:30:51.600> small<00:30:51.919> precision.<00:30:52.240> So<00:30:52.399> this
+exponentially small precision. So this
+is<00:30:53.279> this<00:30:53.600> is<00:30:53.760> roughly<00:30:54.799> uh<00:30:55.039> you<00:30:55.200> know<00:30:55.480> x<00:30:56.480> of<00:30:56.880> cl
+is this is roughly uh you know x of cl
+uh<00:30:59.799> times<00:31:00.799> m
+Okay.
+Um,<00:31:24.000> so<00:31:24.159> that<00:31:24.320> tells<00:31:24.559> us<00:31:24.640> how<00:31:24.880> big<00:31:25.039> lambda
+Um, so that tells us how big lambda
+needs<00:31:25.679> to<00:31:25.840> be<00:31:26.159> in<00:31:26.399> our<00:31:26.880> step<00:31:27.279> five<00:31:28.720> uh<00:31:28.880> before
+needs to be in our step five uh before
+we<00:31:29.919> before<00:31:30.240> we<00:31:30.480> can<00:31:30.640> terminate<00:31:31.039> and<00:31:31.279> have<00:31:31.440> a
+we before we can terminate and have a
+really<00:31:31.840> good
+really good
+solution.<00:31:33.679> That<00:31:33.840> doesn't<00:31:34.080> tell<00:31:34.159> us<00:31:34.320> how<00:31:34.480> many
+solution. That doesn't tell us how many
+iterations<00:31:35.200> this<00:31:35.440> takes<00:31:35.760> because<00:31:36.000> I<00:31:36.159> didn't
+iterations this takes because I didn't
+really<00:31:36.559> tell<00:31:36.720> you<00:31:37.360> how<00:31:37.600> much<00:31:37.760> we'll<00:31:38.000> increment
+really tell you how much we'll increment
+lambda<00:31:38.799> by<00:31:38.960> in<00:31:39.120> each
+lambda by in each
+step.<00:31:41.279> Okay,<00:31:42.000> but<00:31:42.240> we<00:31:42.399> will<00:31:42.640> get<00:31:43.159> there.<00:31:44.159> So<00:31:44.320> we
+step. Okay, but we will get there. So we
+will<00:31:44.799> show
+will show
+We<00:31:47.840> will
+We will
+show<00:31:50.000> that<00:31:50.320> you<00:31:50.559> can
+take<00:31:54.720> lambda<00:31:55.200> k<00:31:55.360> +<00:31:55.600> 1<00:31:55.840> to<00:31:56.080> be<00:31:56.240> something<00:31:56.760> like<00:31:57.760> 1
+take lambda k + 1 to be something like 1
++<00:31:58.240> 1<00:31:58.480> over<00:31:58.720> root
+m<00:32:02.159> of<00:32:02.880> uh<00:32:03.120> lambda
+k.<00:32:08.559> Okay,<00:32:09.200> I<00:32:09.360> haven't<00:32:09.519> shown<00:32:09.760> this<00:32:09.919> yet<00:32:10.159> but
+k. Okay, I haven't shown this yet but
+we'll<00:32:10.640> show<00:32:11.080> that<00:32:12.080> right.<00:32:12.480> What<00:32:12.640> what's<00:32:12.960> the
+we'll show that right. What what's the
+constraint<00:32:13.679> in<00:32:13.919> choosing<00:32:14.320> lambda<00:32:14.720> k<00:32:14.960> plus
+constraint in choosing lambda k plus
+one?<00:32:15.440> The<00:32:15.679> constraint<00:32:16.000> in<00:32:16.159> choosing<00:32:16.399> lambda<00:32:16.720> k
+one? The constraint in choosing lambda k
+plus<00:32:17.039> one<00:32:17.279> is<00:32:17.440> we<00:32:17.679> want<00:32:17.760> to<00:32:17.919> make<00:32:18.080> sure<00:32:18.799> that
+plus one is we want to make sure that
+the<00:32:19.360> approximate<00:32:19.919> solution<00:32:20.240> we<00:32:20.399> have<00:32:20.480> for
+the approximate solution we have for
+lambda<00:32:21.039> k<00:32:22.120> still<00:32:23.120> is<00:32:23.360> somewhat<00:32:23.840> good<00:32:24.440> for<00:32:25.440> the
+lambda k still is somewhat good for the
+next<00:32:25.919> function<00:32:26.399> for<00:32:26.559> f<00:32:26.799> of<00:32:26.960> lambda<00:32:27.279> k<00:32:27.440> plus
+next function for f of lambda k plus
+one.<00:32:28.399> Right?<00:32:29.279> So<00:32:29.519> when<00:32:29.679> we<00:32:29.919> actually<00:32:30.080> work<00:32:30.320> out
+one. Right? So when we actually work out
+that<00:32:30.720> calculation,<00:32:31.360> we're<00:32:31.600> going<00:32:31.679> to<00:32:31.760> see
+that calculation, we're going to see
+that<00:32:32.559> if<00:32:32.799> you<00:32:32.880> don't<00:32:33.039> increment<00:32:33.440> lambda<00:32:33.760> k
+that if you don't increment lambda k
+plus<00:32:34.080> one<00:32:34.240> by<00:32:34.399> too<00:32:34.559> much,<00:32:34.799> if<00:32:34.880> you<00:32:34.960> just<00:32:35.120> do<00:32:35.200> it
+plus one by too much, if you just do it
+by<00:32:35.440> this<00:32:35.679> small<00:32:35.919> multiplicative<00:32:36.600> factor,
+by this small multiplicative factor,
+then<00:32:38.080> your<00:32:38.320> old<00:32:38.640> solution<00:32:39.039> here<00:32:39.440> will<00:32:39.679> still
+then your old solution here will still
+be<00:32:40.000> a<00:32:40.159> good<00:32:40.320> sol<00:32:40.720> will<00:32:40.880> still<00:32:41.120> be<00:32:42.000> roughly<00:32:42.320> a
+be a good sol will still be roughly a
+good<00:32:42.640> solution<00:32:42.960> here.<00:32:43.279> Okay,<00:32:43.840> I'm<00:32:44.080> going<00:32:44.159> to
+good solution here. Okay, I'm going to
+show<00:32:44.480> that.<00:32:45.440> So<00:32:45.840> just<00:32:46.159> given<00:32:46.399> these<00:32:46.720> two
+show that. So just given these two
+things,<00:32:47.919> how<00:32:48.159> many<00:32:48.320> iterations<00:32:49.120> in<00:32:49.360> this<00:32:49.600> loop
+things, how many iterations in this loop
+do<00:32:50.640> we<00:32:50.880> need<00:32:51.279> to<00:32:51.519> actually<00:32:52.640> uh
+terminate,<00:33:01.200> right?<00:33:01.519> So<00:33:01.840> did<00:33:02.000> I<00:33:02.159> tell<00:33:02.320> you<00:33:02.559> what
+terminate, right? So did I tell you what
+the<00:33:03.200> original<00:33:03.600> lambda<00:33:04.000> 0<00:33:04.399> was?<00:33:04.880> Uh<00:33:05.120> I<00:33:05.279> think<00:33:05.440> I
+the original lambda 0 was? Uh I think I
+did.
+Yeah.<00:33:09.120> Oh,<00:33:09.360> good.<00:33:09.600> Yeah.<00:33:09.760> So<00:33:09.919> the<00:33:10.159> original
+Yeah. Oh, good. Yeah. So the original
+lambda<00:33:10.880> 0<00:33:11.200> is<00:33:11.440> is<00:33:11.760> that
+lambda 0 is is that
+So<00:33:13.440> the<00:33:13.760> question<00:33:14.360> is<00:33:15.360> how<00:33:15.600> many<00:33:16.320> powers<00:33:16.799> of<00:33:17.120> 1
+So the question is how many powers of 1
+plus<00:33:17.519> 1<00:33:17.679> over<00:33:17.840> root<00:33:18.159> m<00:33:18.799> do<00:33:18.960> we<00:33:19.200> need<00:33:19.360> to<00:33:19.600> go<00:33:19.760> from
+plus 1 over root m do we need to go from
+that<00:33:20.320> kind<00:33:20.480> of<00:33:20.960> lambda<00:33:21.440> 0<00:33:21.760> to<00:33:22.480> this<00:33:22.720> kind<00:33:22.880> of
+that kind of lambda 0 to this kind of
+lambda<00:33:23.360> 0<00:33:23.840> m<00:33:24.159> times<00:33:24.480> exponential<00:33:25.200> cl
+log<00:33:30.559> yeah<00:33:30.799> so<00:33:31.039> good<00:33:31.360> so<00:33:32.399> um<00:33:32.720> yeah<00:33:32.960> so<00:33:33.120> I<00:33:33.360> want<00:33:33.440> I
+log yeah so good so um yeah so I want I
+want
+uh<00:33:35.519> I<00:33:36.080> give<00:33:36.240> me<00:33:36.320> an<00:33:36.480> answer<00:33:36.640> in<00:33:36.799> terms<00:33:36.960> of<00:33:37.120> log
+uh I give me an answer in terms of log
+base<00:33:37.600> two<00:33:37.840> let's<00:33:38.080> say<00:33:38.559> so<00:33:39.360> so<00:33:39.679> okay<00:33:39.919> one<00:33:40.080> one
+base two let's say so so okay one one
+good<00:33:40.799> uh<00:33:41.279> you<00:33:41.440> know<00:33:41.760> heristic<00:33:42.240> calculation<00:33:42.559> to
+good uh you know heristic calculation to
+keep<00:33:42.880> in<00:33:43.039> mind<00:33:43.840> is<00:33:44.159> in<00:33:44.320> general<00:33:44.640> if<00:33:44.799> you<00:33:44.960> have<00:33:45.679> 1
+keep in mind is in general if you have 1
++
+uh<00:33:49.519> 1<00:33:49.760> +<00:33:50.080> 1<00:33:50.320> /x<00:33:50.799> to<00:33:50.960> the<00:33:51.320> x<00:33:52.320> that's<00:33:52.559> roughly
+uh 1 + 1 /x to the x that's roughly
+e<00:33:55.080> right<00:33:56.080> so<00:33:56.720> if<00:33:56.880> I<00:33:57.120> do<00:33:57.279> this<00:33:57.519> step<00:33:58.000> root<00:33:58.320> m
+e right so if I do this step root m
+times<00:33:59.840> it<00:34:00.080> means<00:34:00.320> I've<00:34:00.960> increased<00:34:01.440> lambda<00:34:01.919> by
+times it means I've increased lambda by
+a<00:34:02.240> constant
+a constant
+factor<00:34:04.080> right<00:34:04.399> every<00:34:04.640> root<00:34:04.960> m<00:34:05.039> times<00:34:05.279> that<00:34:05.440> I
+factor right every root m times that I
+go<00:34:05.600> through<00:34:05.760> this<00:34:05.919> loop<00:34:06.159> I've<00:34:06.320> increased
+go through this loop I've increased
+lambda<00:34:06.880> by<00:34:07.039> a<00:34:07.120> constant
+lambda by a constant
+factor<00:34:09.040> and<00:34:09.280> then<00:34:09.440> now<00:34:09.679> I<00:34:09.839> need<00:34:10.000> to<00:34:10.159> go<00:34:10.399> from
+factor and then now I need to go from
+this<00:34:11.679> val<00:34:11.919> from<00:34:12.159> that<00:34:12.399> value<00:34:12.560> to<00:34:12.800> this<00:34:13.320> value.
+this val from that value to this value.
+So<00:34:14.480> that's<00:34:14.800> log<00:34:15.200> base<00:34:15.679> e<00:34:16.079> let's<00:34:16.320> say<00:34:16.560> or<00:34:16.800> log
+So that's log base e let's say or log
+log<00:34:17.280> base<00:34:17.520> a<00:34:17.679> constant<00:34:18.000> of<00:34:18.159> the
+log base a constant of the
+ratio<00:34:20.000> right.
+ratio right.
+So<00:34:22.800> this
+So this
+implies<00:34:24.560> to
+implies to
+get<00:34:26.480> from<00:34:27.200> lambda<00:34:27.800> 0<00:34:28.839> to<00:34:29.839> a<00:34:30.079> big<00:34:30.240> enough
+lambda
+suffices<00:34:39.040> to<00:34:39.839> go
+suffices to go
+for<00:34:42.079> well<00:34:42.399> root<00:34:43.079> m<00:34:44.079> right<00:34:44.320> root<00:34:44.639> m<00:34:44.879> steps<00:34:45.200> just
+for well root m right root m steps just
+to<00:34:45.520> get<00:34:45.599> a<00:34:45.760> constant<00:34:46.079> factor<00:34:46.399> increase<00:34:46.639> in
+to get a constant factor increase in
+lambda<00:34:47.839> times<00:34:48.159> log<00:34:48.399> of<00:34:48.560> the<00:34:48.800> ratio<00:34:49.760> which
+lambda times log of the ratio which
+which<00:34:50.079> is<00:34:50.240> going<00:34:50.320> to<00:34:50.399> be<00:34:50.560> something<00:34:51.000> like<00:34:52.000> L<00:34:52.320> +
+which is going to be something like L +
+log
+M
+iterations.
+Okay,<00:35:06.640> so<00:35:06.880> that's<00:35:07.040> the<00:35:07.280> kind<00:35:07.359> of
+Okay, so that's the kind of
+bound<00:35:09.119> we're<00:35:09.359> going<00:35:09.440> to<00:35:09.520> be<00:35:09.680> getting.<00:35:10.400> In
+bound we're going to be getting. In
+fact,<00:35:11.040> I<00:35:11.280> think<00:35:11.359> if<00:35:11.680> you<00:35:11.760> go<00:35:12.000> from<00:35:12.320> paper<00:35:12.640> to
+fact, I think if you go from paper to
+paper,<00:35:13.760> people<00:35:14.000> define<00:35:14.400> L<00:35:14.720> slightly
+paper, people define L slightly
+differently.<00:35:15.599> So<00:35:15.920> for<00:35:16.079> example,<00:35:16.480> some<00:35:16.720> papers
+differently. So for example, some papers
+uh<00:35:18.960> L<00:35:19.200> is<00:35:19.359> the<00:35:19.440> the<00:35:19.760> max<00:35:20.000> of<00:35:20.160> many<00:35:20.400> logs.<00:35:20.880> They
+uh L is the the max of many logs. They
+also<00:35:21.280> put<00:35:21.440> log<00:35:21.760> N<00:35:21.920> and<00:35:22.079> log<00:35:22.320> M<00:35:22.480> in<00:35:22.640> there<00:35:22.880> for
+also put log N and log M in there for
+example<00:35:23.280> in<00:35:23.599> some<00:35:23.760> papers<00:35:24.240> in<00:35:24.480> which<00:35:24.720> case<00:35:25.280> L
+example in some papers in which case L
+plus<00:35:25.760> log<00:35:26.079> M<00:35:26.240> is<00:35:26.400> basically<00:35:26.720> L<00:35:26.960> again.<00:35:27.839> Okay.
+plus log M is basically L again. Okay.
+So<00:35:28.320> you'll<00:35:28.560> often<00:35:28.880> just<00:35:29.040> see<00:35:29.520> the<00:35:29.760> number<00:35:29.920> of
+So you'll often just see the number of
+iterations<00:35:30.480> written<00:35:30.640> as<00:35:30.800> root<00:35:31.119> M*
+L.<00:35:41.760> Okay.<00:35:42.640> And<00:35:42.880> just<00:35:43.119> a<00:35:43.359> little<00:35:43.440> bit<00:35:43.599> of
+L. Okay. And just a little bit of
+history<00:35:44.240> before<00:35:44.560> I<00:35:44.800> continue.
+history before I continue.
+So<00:35:47.680> the
+original<00:35:52.960> original
+original original
+uh
+IPM<00:35:57.680> for
+IPM for
+LP<00:35:59.760> due<00:36:00.000> to
+carar
+needed<00:36:08.000> something<00:36:08.320> like<00:36:08.640> O<00:36:08.800> of<00:36:09.480> ML
+needed something like O of ML
+iterations.<00:36:13.200> Okay.
+iterations. Okay.
+And<00:36:15.119> this<00:36:15.359> was
+improved<00:36:19.280> to<00:36:19.599> o<00:36:20.119> of<00:36:21.119> root
+improved to o of root
+ML<00:36:24.119> iterations<00:36:25.119> by
+Renegar.<00:36:32.560> This<00:36:32.800> was<00:36:32.880> in
+1988.<00:36:43.200> Okay.<00:36:44.079> and<00:36:44.640> recently
+uh
+improved
+to<00:36:56.240> o<00:36:56.400> of<00:36:56.960> otilda.<00:36:57.839> So<00:36:58.160> otild<00:36:58.560> is<00:36:58.640> hiding<00:36:58.880> like
+to o of otilda. So otild is hiding like
+log
+factors.<00:37:01.280> Uh<00:37:01.680> otilda<00:37:02.320> of<00:37:02.720> square<00:37:03.040> root<00:37:03.359> rank
+factors. Uh otilda of square root rank
+of
+a<00:37:08.560> time
+a time
+l<00:37:10.560> and<00:37:10.800> this<00:37:11.040> was<00:37:11.280> due<00:37:11.440> to<00:37:11.599> Lee<00:37:11.760> and
+Sidford<00:37:16.880> of<00:37:17.680> uh<00:37:18.160> this<00:37:18.400> was<00:37:18.560> this<00:37:18.800> year<00:37:19.200> Fox
+Sidford of uh this was this year Fox
+of<00:37:21.760> this<00:37:22.000> was<00:37:22.240> well<00:37:22.480> this<00:37:22.640> was<00:37:22.720> not<00:37:22.880> just<00:37:23.040> this
+of this was well this was not just this
+year<00:37:23.440> this<00:37:23.599> was<00:37:23.680> like<00:37:23.839> a<00:37:24.000> week<00:37:24.079> ago<00:37:24.720> two<00:37:24.880> weeks
+year this was like a week ago two weeks
+ago<00:37:25.280> or<00:37:25.520> something<00:37:26.079> I<00:37:26.240> think.<00:37:26.480> Yeah,<00:37:26.640> a<00:37:26.800> week
+ago or something I think. Yeah, a week
+ago.<00:37:27.200> This<00:37:27.359> was<00:37:27.440> a<00:37:27.599> week<00:37:27.680> ago.<00:37:28.400> Okay.<00:37:29.000> Um,<00:37:30.000> and
+ago. This was a week ago. Okay. Um, and
+I<00:37:30.800> think<00:37:30.960> at<00:37:31.119> some<00:37:31.280> point<00:37:31.440> I<00:37:31.680> sent<00:37:31.920> a<00:37:32.240> an<00:37:32.560> email
+I think at some point I sent a an email
+to<00:37:32.960> this<00:37:33.200> class<00:37:33.440> saying<00:37:33.760> if<00:37:33.920> you<00:37:34.079> want<00:37:34.160> to<00:37:34.720> see
+to this class saying if you want to see
+something<00:37:35.200> related<00:37:35.440> to<00:37:35.599> the<00:37:35.760> class,<00:37:36.000> go<00:37:36.079> to
+something related to the class, go to
+this<00:37:36.440> talk.<00:37:37.440> So,<00:37:37.760> I'm<00:37:38.000> not<00:37:38.160> going<00:37:38.240> to<00:37:38.400> show<00:37:38.560> you
+this talk. So, I'm not going to show you
+this.<00:37:39.119> I'm<00:37:39.359> going<00:37:39.440> to<00:37:39.599> show<00:37:39.680> you<00:37:39.920> basically
+this. I'm going to show you basically
+this,<00:37:40.960> but<00:37:41.280> I'm<00:37:41.440> going<00:37:41.520> to<00:37:41.599> show<00:37:41.680> you<00:37:41.839> this
+this, but I'm going to show you this
+using<00:37:43.599> um<00:37:44.400> I<00:37:44.640> guess<00:37:44.800> mostly<00:37:45.200> notation.<00:37:45.760> I
+using um I guess mostly notation. I
+mean,<00:37:45.920> the<00:37:46.160> notation<00:37:46.480> I'm<00:37:46.640> going<00:37:46.720> to<00:37:46.800> use<00:37:46.960> is
+mean, the notation I'm going to use is
+like<00:37:47.440> heavily<00:37:47.760> borrowed<00:37:48.079> from<00:37:48.240> this<00:37:48.480> paper.
+like heavily borrowed from this paper.
+In<00:37:49.480> fact,<00:37:50.720> um,<00:37:51.359> even<00:37:51.599> the<00:37:51.760> way<00:37:51.920> I'm<00:37:52.079> presenting
+In fact, um, even the way I'm presenting
+it<00:37:52.960> came<00:37:53.200> from<00:37:53.520> me,<00:37:54.920> uh,<00:37:55.920> getting<00:37:56.240> Erin
+it came from me, uh, getting Erin
+Sidford<00:37:57.040> and<00:37:57.280> just<00:37:57.520> forcing<00:37:57.920> him<00:37:58.079> to<00:37:58.480> explain
+Sidford and just forcing him to explain
+everything<00:37:59.119> to<00:37:59.280> me.
+everything to me.
+So,
+so,<00:38:09.599> so<00:38:09.920> thank<00:38:10.079> you,
+so, so thank you,
+Erin.
+Okay,<00:38:13.839> good.<00:38:14.160> So<00:38:14.400> I<00:38:14.560> want<00:38:14.640> to<00:38:14.800> show<00:38:14.960> you<00:38:15.280> this
+Okay, good. So I want to show you this
+and<00:38:16.240> I<00:38:16.480> guess<00:38:16.560> you<00:38:16.800> saw<00:38:17.040> roughly<00:38:17.720> how<00:38:18.720> where
+and I guess you saw roughly how where
+the<00:38:19.200> bound<00:38:19.520> is<00:38:19.680> coming<00:38:19.920> from<00:38:20.320> even<00:38:20.560> though<00:38:20.720> I
+the bound is coming from even though I
+didn't<00:38:21.119> justify
+didn't justify
+um<00:38:23.760> and<00:38:23.920> justify<00:38:24.400> why<00:38:24.640> you<00:38:24.800> can<00:38:24.960> do<00:38:25.119> this<00:38:25.359> for
+um and justify why you can do this for
+example.<00:38:26.400> Yeah.
+Oh<00:38:34.720> good.<00:38:35.040> Yeah.<00:38:35.280> So<00:38:35.440> you're<00:38:35.680> saying<00:38:36.240> that's
+Oh good. Yeah. So you're saying that's
+the<00:38:36.640> number<00:38:36.800> of<00:38:36.880> iterations<00:38:37.520> but<00:38:37.760> what<00:38:37.839> do<00:38:38.000> we
+the number of iterations but what do we
+do<00:38:38.240> inside<00:38:38.480> of<00:38:38.640> an<00:38:38.800> iteration?<00:38:39.599> Right.<00:38:40.480> So,
+do inside of an iteration? Right. So,
+uh,<00:38:41.440> we're<00:38:41.599> going<00:38:41.680> to<00:38:41.760> see<00:38:41.920> that,<00:38:42.800> but<00:38:43.200> we're
+uh, we're going to see that, but we're
+not<00:38:43.680> actually<00:38:43.920> going<00:38:44.079> to<00:38:44.240> compute,<00:38:44.800> right?
+not actually going to compute, right?
+We're<00:38:45.200> not<00:38:45.359> actually<00:38:45.599> going<00:38:45.680> to<00:38:45.760> compute
+We're not actually going to compute
+minimizers<00:38:46.960> of<00:38:47.280> f<00:38:47.520> lambda.<00:38:48.160> Where's<00:38:48.480> f
+minimizers of f lambda. Where's f
+lambda?<00:38:49.119> Well,<00:38:49.280> I<00:38:49.760> erased<00:38:49.920> it.<00:38:50.079> We're<00:38:50.240> not
+lambda? Well, I erased it. We're not
+actually<00:38:50.480> going<00:38:50.560> to<00:38:50.640> compute<00:38:50.880> minimizers<00:38:51.359> f
+actually going to compute minimizers f
+of<00:38:51.520> lambda.<00:38:52.079> We're<00:38:52.320> going<00:38:52.400> to<00:38:52.480> compute
+of lambda. We're going to compute
+approximate<00:38:53.720> minimizers.<00:38:54.920> Um,<00:38:55.920> and<00:38:56.400> the<00:38:56.720> way
+approximate minimizers. Um, and the way
+I'm<00:38:57.040> going<00:38:57.119> to<00:38:57.200> define<00:38:57.520> approximate
+I'm going to define approximate
+minimizer,<00:38:58.800> I'm<00:38:59.040> not<00:38:59.200> even<00:38:59.760> I<00:39:00.000> mean,<00:39:00.240> it's<00:39:00.480> not
+minimizer, I'm not even I mean, it's not
+going<00:39:00.720> to
+going to
+be<00:39:02.720> it<00:39:02.960> shouldn't<00:39:03.119> be<00:39:03.280> obvious<00:39:03.440> at<00:39:03.599> this<00:39:03.760> point
+be it shouldn't be obvious at this point
+how<00:39:04.079> I<00:39:04.240> will<00:39:04.320> even<00:39:04.480> define<00:39:04.800> that.<00:39:05.680> But<00:39:05.760> I<00:39:05.920> will
+how I will even define that. But I will
+give<00:39:06.240> a<00:39:06.480> definition<00:39:06.800> of<00:39:06.880> it<00:39:07.040> and<00:39:07.200> I'll<00:39:07.359> show
+give a definition of it and I'll show
+that<00:39:07.599> we<00:39:07.839> can<00:39:07.920> do<00:39:08.079> that.<00:39:08.960> Right?<00:39:09.200> So<00:39:09.359> we<00:39:09.599> don't
+that we can do that. Right? So we don't
+have<00:39:09.760> x<00:39:10.000> of<00:39:10.160> lambda<00:39:10.400> 0.<00:39:10.640> We<00:39:10.800> have<00:39:10.880> x<00:39:11.040> tilda
+have x of lambda 0. We have x tilda
+lambd<00:39:11.520> lambda<00:39:11.839> 0.<00:39:12.000> And<00:39:12.160> that's<00:39:12.320> going<00:39:12.400> to<00:39:12.560> stay
+lambd lambda 0. And that's going to stay
+that<00:39:13.040> way.<00:39:13.960> Um<00:39:14.960> and<00:39:15.200> in<00:39:15.440> each<00:39:15.680> iteration,
+that way. Um and in each iteration,
+basically<00:39:16.720> what<00:39:16.880> we're<00:39:16.960> going<00:39:17.040> to<00:39:17.119> have<00:39:17.200> to<00:39:17.280> do
+basically what we're going to have to do
+is<00:39:17.599> we're<00:39:17.760> going<00:39:17.920> to<00:39:18.079> have
+is we're going to have
+to<00:39:19.960> compute<00:39:20.960> a<00:39:21.280> constant<00:39:21.760> number<00:39:22.240> of
+to compute a constant number of
+um<00:39:24.880> solutions<00:39:25.359> to<00:39:25.599> various<00:39:25.839> linear
+um solutions to various linear
+systems.
+Okay.<00:39:29.599> So<00:39:29.839> that's
+Okay. So that's
+um<00:39:32.079> that's<00:39:32.400> what's<00:39:32.640> involved.
+So<00:39:36.160> linear<00:39:36.560> systems<00:39:36.800> on<00:39:37.040> n<00:39:37.200> byn
+So linear systems on n byn
+matrices.<00:39:40.560> Yeah,<00:39:40.880> good<00:39:41.119> question.<00:39:41.920> Any<00:39:42.160> other
+matrices. Yeah, good question. Any other
+any<00:39:42.720> other<00:39:43.119> uh
+any other uh
+questions?<00:39:45.839> Yeah,<00:39:46.160> that<00:39:46.400> is<00:39:46.560> also<00:39:46.800> something
+questions? Yeah, that is also something
+that<00:39:47.280> differs
+that differs
+uh<00:39:49.680> from<00:39:50.240> IPM<00:39:50.720> to<00:39:50.880> IPM.<00:39:51.440> So<00:39:52.240> right<00:39:52.560> the<00:39:52.800> v<00:39:53.119> so
+uh from IPM to IPM. So right the v so
+even<00:39:54.280> this<00:39:55.280> this<00:39:55.599> vague<00:39:56.000> idea<00:39:56.400> here.<00:39:56.880> So<00:39:57.680> let
+even this this vague idea here. So let
+me<00:39:58.000> say<00:39:58.400> another<00:39:58.720> few<00:39:58.960> words.
+me say another few words.
+So<00:40:01.520> vague
+So vague
+idea
+outlined
+above<00:40:09.920> is
+above is
+called<00:40:12.640> kind<00:40:12.880> of<00:40:13.040> path
+following<00:40:17.680> path<00:40:18.079> following<00:40:18.320> interior
+following path following interior
+point.<00:40:20.560> It's<00:40:20.800> called<00:40:20.880> a<00:40:21.040> path<00:40:21.280> following
+point. It's called a path following
+interior<00:40:21.839> point<00:40:22.000> method.<00:40:22.640> And<00:40:22.880> where<00:40:23.040> that
+interior point method. And where that
+name<00:40:23.440> comes<00:40:23.680> from<00:40:23.920> is
+name comes from is
+uh<00:40:26.880> we<00:40:27.119> define<00:40:27.440> a<00:40:27.680> curve
+uh
+lambda<00:40:34.400> x<00:40:34.720> of
+lambda<00:40:38.079> for<00:40:38.400> all<00:40:39.119> lambda<00:40:39.440> bigger<00:40:39.680> than<00:40:39.839> equal
+lambda for all lambda bigger than equal
+to<00:40:40.160> zero.<00:40:40.640> So<00:40:40.880> as<00:40:41.119> we<00:40:41.440> as<00:40:41.760> we<00:40:42.000> increment<00:40:42.400> lambda
+to zero. So as we as we increment lambda
+from<00:40:42.960> 0<00:40:43.200> to<00:40:43.359> infinity,<00:40:44.160> this<00:40:44.400> traces<00:40:44.800> out<00:40:44.960> a
+from 0 to infinity, this traces out a
+curve.<00:40:46.960> Okay,<00:40:47.440> when<00:40:47.680> lambda<00:40:48.079> is<00:40:48.400> is<00:40:48.560> equal<00:40:48.800> to
+curve. Okay, when lambda is is equal to
+zero,<00:40:49.599> we're<00:40:49.760> at<00:40:49.920> what's<00:40:50.240> called<00:40:50.400> the
+zero, we're at what's called the
+analytic<00:40:51.119> center<00:40:51.359> of<00:40:51.440> the<00:40:51.599> feasible<00:40:52.000> region.
+analytic center of the feasible region.
+Right?<00:40:52.640> When<00:40:52.960> when<00:40:53.119> lambda<00:40:53.440> is<00:40:53.520> zero,<00:40:53.760> the
+Right? When when lambda is zero, the
+cost<00:40:54.160> function<00:40:54.400> doesn't<00:40:54.640> matter<00:40:54.800> at<00:40:55.040> all.
+cost function doesn't matter at all.
+We're<00:40:55.440> just<00:40:55.599> trying<00:40:55.760> to<00:40:55.920> stay<00:40:56.160> as<00:40:56.400> well<00:40:56.560> inside
+We're just trying to stay as well inside
+the<00:40:57.040> boundary<00:40:57.280> as<00:40:57.520> possible.<00:40:58.400> And<00:40:58.560> then<00:40:58.720> as
+the boundary as possible. And then as
+lambda<00:40:59.280> goes<00:40:59.440> to<00:40:59.520> infinity<00:41:00.079> we<00:41:00.319> arrive<00:41:00.560> at
+lambda goes to infinity we arrive at
+some<00:41:00.880> optimal<00:41:01.319> vertex.<00:41:02.319> Okay.<00:41:02.640> And<00:41:02.800> that
+some optimal vertex. Okay. And that
+curve<00:41:04.480> uh<00:41:04.720> this<00:41:04.960> curve<00:41:05.599> is
+called<00:41:09.359> the<00:41:09.599> central
+path.<00:41:15.359> Okay.
+curve<00:41:18.800> and<00:41:19.040> what<00:41:19.280> path<00:41:19.599> following<00:41:19.920> interior
+curve and what path following interior
+point<00:41:20.640> methods<00:41:21.040> try<00:41:21.200> to<00:41:21.720> do<00:41:22.720> is<00:41:23.599> they<00:41:23.839> try<00:41:24.079> to
+point methods try to do is they try to
+start<00:41:24.400> somewhere<00:41:24.720> at<00:41:24.880> the<00:41:25.119> beginning<00:41:25.280> of<00:41:25.520> this
+start somewhere at the beginning of this
+curve<00:41:26.160> and<00:41:26.400> then<00:41:26.560> they<00:41:26.720> try<00:41:26.880> and<00:41:27.119> follow<00:41:27.280> the
+curve and then they try and follow the
+curve.
+Okay,<00:41:30.880> but<00:41:31.119> let<00:41:31.280> me<00:41:31.520> let<00:41:31.760> me<00:41:31.920> draw<00:41:32.160> some<00:41:32.400> kind
+Okay, but let me let me draw some kind
+of<00:41:33.599> picture.<00:41:34.000> I'm<00:41:34.160> not<00:41:34.319> great<00:41:34.480> at<00:41:34.640> pictures,
+of picture. I'm not great at pictures,
+but<00:41:35.119> let's<00:41:35.280> say<00:41:35.359> this<00:41:35.520> is<00:41:35.599> the<00:41:35.760> feasible
+region<00:41:40.720> and<00:41:40.960> let's<00:41:41.119> say<00:41:41.280> we're<00:41:41.440> trying<00:41:41.599> to
+region and let's say we're trying to
+just<00:41:41.960> minimize<00:41:42.960> let's<00:41:43.200> say<00:41:43.359> gravity.<00:41:44.319> Let's
+just minimize let's say gravity. Let's
+say<00:41:44.640> that<00:41:44.800> the<00:41:45.040> cost<00:41:45.280> function<00:41:45.599> points<00:41:45.839> upward
+say that the cost function points upward
+and<00:41:46.319> we're<00:41:46.480> trying<00:41:46.560> to<00:41:46.640> minimize<00:41:46.960> it.<00:41:47.119> So<00:41:47.280> this
+and we're trying to minimize it. So this
+is<00:41:47.440> the<00:41:47.520> optimal
+is the optimal
+vertex.<00:41:50.599> Okay.<00:41:51.599> So<00:41:52.079> the<00:41:52.400> analytic<00:41:52.880> center<00:41:53.200> is
+vertex. Okay. So the analytic center is
+somewhere.<00:41:54.800> I<00:41:54.960> don't<00:41:55.119> know<00:41:55.200> exactly<00:41:55.520> where<00:41:55.680> it
+somewhere. I don't know exactly where it
+is<00:41:55.839> in<00:41:56.000> this<00:41:56.160> picture,<00:41:56.319> but<00:41:56.560> let's<00:41:56.720> say<00:41:56.800> it's
+is in this picture, but let's say it's
+here.<00:41:58.800> And<00:41:58.960> there's<00:41:59.200> some<00:41:59.440> curve<00:41:59.760> that<00:42:00.079> goes
+here. And there's some curve that goes
+from<00:42:00.680> there<00:42:01.680> to<00:42:01.920> the<00:42:02.079> optimal
+from there to the optimal
+vertex.<00:42:04.400> Okay?
+vertex. Okay?
+And<00:42:07.280> so<00:42:07.520> this
+And so this
+this<00:42:10.000> is<00:42:10.160> the<00:42:10.400> central
+path.<00:42:15.200> And<00:42:15.359> what<00:42:15.920> path<00:42:16.160> following<00:42:16.480> interior
+path. And what path following interior
+point<00:42:17.359> tries<00:42:17.680> to<00:42:17.839> do<00:42:18.720> is<00:42:19.040> it
+point tries to do is it
+starts<00:42:20.880> you<00:42:21.040> know<00:42:21.200> this<00:42:21.359> is<00:42:21.760> let's<00:42:22.000> say<00:42:22.160> this
+starts you know this is let's say this
+this<00:42:22.720> corresponds<00:42:23.280> to<00:42:24.160> lambda<00:42:24.560> 0<00:42:25.040> then<00:42:25.280> lambda
+this corresponds to lambda 0 then lambda
+1<00:42:25.920> then<00:42:26.160> lambda<00:42:26.560> 2<00:42:26.960> etc.
+1 then lambda 2 etc.
+And<00:42:30.079> all<00:42:30.319> along<00:42:30.560> the<00:42:30.800> way<00:42:31.040> we<00:42:31.280> never<00:42:31.440> are
+And all along the way we never are
+actually<00:42:32.160> exactly<00:42:32.640> on<00:42:32.880> this<00:42:33.119> central<00:42:33.440> path
+actually exactly on this central path
+but<00:42:34.400> we<00:42:34.560> always<00:42:34.800> try<00:42:35.040> to<00:42:35.200> stay<00:42:35.359> near<00:42:35.599> it.<00:42:36.319> Okay.
+but we always try to stay near it. Okay.
+So<00:42:36.800> we<00:42:37.040> have<00:42:37.640> some<00:42:38.640> we<00:42:38.880> have<00:42:39.040> some<00:42:39.720> uh<00:42:40.720> x<00:42:41.040> lambda
+So we have some we have some uh x lambda
+x<00:42:41.839> tilda<00:42:42.319> lambda<00:42:42.640> 0<00:42:42.960> which<00:42:43.119> is<00:42:43.280> sort<00:42:43.440> of<00:42:43.599> near
+x tilda lambda 0 which is sort of near
+the<00:42:44.319> true<00:42:44.560> minimizer<00:42:45.200> of<00:42:45.440> f<00:42:45.680> lambda<00:42:46.119> 0<00:42:47.119> and
+the true minimizer of f lambda 0 and
+then<00:42:47.520> we<00:42:48.160> refine<00:42:48.560> it<00:42:48.800> to<00:42:49.040> get<00:42:49.280> even<00:42:49.599> closer.
+then we refine it to get even closer.
+Well<00:42:50.319> let's<00:42:50.560> say<00:42:51.280> we<00:42:51.520> refine<00:42:51.839> it<00:42:52.000> to<00:42:52.160> get<00:42:52.319> even
+Well let's say we refine it to get even
+closer<00:42:54.800> and<00:42:54.960> then<00:42:55.200> now<00:42:55.359> we<00:42:55.599> use<00:42:55.760> that<00:42:56.000> as<00:42:56.240> the
+closer and then now we use that as the
+approximate<00:42:56.960> solution<00:42:57.280> for<00:42:57.440> this<00:42:57.599> thing.<00:42:57.920> And
+approximate solution for this thing. And
+then<00:42:58.160> we<00:42:58.480> we<00:42:58.800> iterate<00:42:59.200> and<00:42:59.359> try<00:42:59.520> to<00:42:59.599> get<00:42:59.760> closer
+then we we iterate and try to get closer
+and<00:43:00.400> we<00:43:00.560> just<00:43:00.720> keep<00:43:00.960> kind<00:43:01.200> of<00:43:01.359> staying<00:43:01.599> near
+and we just keep kind of staying near
+the<00:43:02.079> central
+the central
+path.<00:43:05.359> Uh<00:43:05.839> we<00:43:06.160> never<00:43:06.400> quite<00:43:06.640> get<00:43:06.800> on<00:43:07.040> it,<00:43:07.800> but
+path. Uh we never quite get on it, but
+that's<00:43:09.119> roughly<00:43:09.440> what<00:43:09.599> the<00:43:09.839> algorithm
+does.<00:43:15.119> And
+does. And
+this<00:43:16.880> this<00:43:17.119> is<00:43:17.280> us.
+this this is us.
+Okay.<00:43:20.560> So,<00:43:20.800> this<00:43:20.960> is<00:43:21.040> kind<00:43:21.119> of<00:43:21.200> a<00:43:21.440> cartoon
+Okay. So, this is kind of a cartoon
+picture,<00:43:22.240> but<00:43:22.800> that's
+uh
+okay,<00:43:30.319> right?<00:43:30.640> So,<00:43:30.800> not<00:43:31.040> all<00:43:31.200> interior<00:43:31.680> point
+okay, right? So, not all interior point
+methods<00:43:32.359> are<00:43:33.359> described<00:43:33.760> in<00:43:33.920> this<00:43:34.079> path
+methods are described in this path
+following<00:43:34.800> way,<00:43:35.119> but<00:43:35.440> at<00:43:35.440> least<00:43:35.760> the<00:43:35.920> way<00:43:36.000> I'm
+following way, but at least the way I'm
+going<00:43:36.319> to<00:43:36.400> show<00:43:36.480> you<00:43:36.640> in<00:43:36.880> class,<00:43:38.319> um<00:43:38.880> I<00:43:39.119> will
+going to show you in class, um I will
+show<00:43:39.359> you<00:43:39.440> a<00:43:39.599> path<00:43:39.920> following<00:43:40.319> version.
+questions.
+So,<00:43:58.000> so
+uh
+digression<00:44:05.680> into
+optimization.<00:44:11.200> So<00:44:11.440> before<00:44:11.680> I<00:44:11.920> can<00:44:12.079> tell<00:44:12.520> you
+optimization. So before I can tell you
+how<00:44:13.680> we<00:44:13.920> actually<00:44:14.319> carry<00:44:14.560> out<00:44:15.599> uh<00:44:15.760> the<00:44:16.000> vague
+how we actually carry out uh the vague
+plan,<00:44:18.240> I<00:44:18.480> need<00:44:18.640> to<00:44:18.800> tell<00:44:19.079> you<00:44:20.079> right<00:44:21.280> uh<00:44:21.760> I
+plan, I need to tell you right uh I
+guess<00:44:22.079> I<00:44:22.240> erased<00:44:22.480> step<00:44:22.800> five.<00:44:23.280> I<00:44:23.440> need<00:44:23.599> to<00:44:23.760> tell
+guess I erased step five. I need to tell
+you<00:44:24.079> once<00:44:24.400> we<00:44:24.560> have<00:44:24.640> a<00:44:24.880> solution<00:44:25.200> that's
+you once we have a solution that's
+roughly<00:44:26.400> good<00:44:26.640> at<00:44:26.880> minimizing<00:44:27.520> something<00:44:28.720> um
+roughly good at minimizing something um
+how<00:44:29.200> do<00:44:29.359> we<00:44:29.599> improve<00:44:29.920> the<00:44:30.319> error<00:44:30.800> via<00:44:31.119> some
+how do we improve the error via some
+iterative<00:44:31.760> approach.<00:44:32.800> Okay,<00:44:33.359> so<00:44:33.520> that<00:44:33.760> gets
+iterative approach. Okay, so that gets
+into<00:44:34.160> the<00:44:34.319> territory<00:44:34.720> of<00:44:35.079> optimization.<00:44:36.079> And
+into the territory of optimization. And
+I<00:44:36.480> just<00:44:36.640> want<00:44:36.800> to<00:44:38.000> um<00:44:38.319> tell<00:44:38.480> you<00:44:38.720> a<00:44:38.960> couple
+I just want to um tell you a couple
+things<00:44:39.280> that<00:44:39.520> you'll<00:44:39.760> need<00:44:39.839> to<00:44:40.000> know<00:44:40.160> to<00:44:40.400> be
+things that you'll need to know to be
+able<00:44:40.640> to<00:44:41.240> understand<00:44:42.240> how<00:44:42.480> we're<00:44:42.640> actually
+able to understand how we're actually
+going<00:44:42.960> to<00:44:43.119> do<00:44:43.200> this.<00:44:43.440> And<00:44:43.599> this<00:44:43.680> is<00:44:43.760> going<00:44:43.839> to
+going to do this. And this is going to
+come<00:44:44.079> to<00:44:44.160> your<00:44:44.319> question<00:44:44.480> of<00:44:44.720> what<00:44:44.800> do<00:44:44.960> we<00:44:45.040> do
+come to your question of what do we do
+inside<00:44:45.520> every<00:44:45.960> iteration.<00:44:46.960> Okay.
+So<00:44:54.960> good.
+So<00:45:05.760> we're<00:45:06.000> going<00:45:06.079> to<00:45:06.160> look<00:45:06.240> at<00:45:06.400> iterative
+procedures<00:45:14.880> for
+procedures for
+minimizing<00:45:18.000> well<00:45:18.319> say<00:45:18.480> for
+computing<00:45:24.200> xar<00:45:25.200> which<00:45:25.440> is<00:45:25.599> the<00:45:25.760> arg
+min<00:45:29.280> over<00:45:29.520> x<00:45:29.760> and
+min over x and
+rn<00:45:31.760> of<00:45:32.079> f<00:45:32.240> ofx
+rn of f ofx
+where<00:45:36.240> f<00:45:36.480> ofx
+where f ofx
+uh<00:45:38.480> f<00:45:38.800> maps<00:45:39.200> r<00:45:39.359> into
+r.
+Okay.
+So<00:45:59.920> first<00:46:00.160> I<00:46:00.319> want<00:46:00.480> to<00:46:00.560> tell<00:46:00.720> you<00:46:00.960> before<00:46:01.200> I
+So first I want to tell you before I
+tell<00:46:01.520> you<00:46:01.599> what<00:46:01.920> interior<00:46:02.400> point<00:46:02.640> we'll
+tell you what interior point we'll
+actually<00:46:02.960> use<00:46:03.280> I<00:46:03.440> want<00:46:03.520> to<00:46:03.680> tell<00:46:03.760> you
+actually use I want to tell you
+something<00:46:04.240> that's<00:46:05.599> um<00:46:06.480> kind<00:46:06.640> of<00:46:06.720> a<00:46:06.960> precursor
+something that's um kind of a precursor
+to<00:46:07.599> that.<00:46:08.480> So<00:46:08.880> first<00:46:09.200> order
+methods.<00:46:19.359> We
+assume<00:46:23.920> that<00:46:24.240> we<00:46:24.480> assume<00:46:24.800> that<00:46:25.680> uh<00:46:25.839> first<00:46:26.000> of
+assume that we assume that uh first of
+all
+one<00:46:31.760> there<00:46:32.000> is<00:46:32.160> some
+oracle<00:46:37.839> that
+oracle that
+given<00:46:40.800> an<00:46:41.040> x<00:46:41.280> and
+given an x and
+rn<00:46:43.760> it<00:46:44.000> tells<00:46:44.240> us<00:46:44.560> that<00:46:44.720> oracle<00:46:45.200> tells<00:46:45.440> us<00:46:46.000> f
+rn it tells us that oracle tells us f
+ofx<00:46:47.920> and<00:46:48.800> the<00:46:49.040> gradient<00:46:49.440> of<00:46:49.599> f<00:46:49.839> at
+x.
+Okay.
+Two,<00:47:04.400> we<00:47:04.640> have<00:47:04.800> some
+Two, we have some
+control.<00:47:07.359> We<00:47:07.520> have<00:47:07.599> some<00:47:07.920> we<00:47:08.079> have<00:47:08.240> some<00:47:08.560> g
+control. We have some we have some g
+bound<00:47:09.119> given<00:47:09.440> to
+us<00:47:16.640> on<00:47:17.119> uh<00:47:17.280> how
+us on uh how
+the<00:47:19.440> hessen<00:47:19.839> of<00:47:20.000> f<00:47:20.319> can<00:47:20.560> can<00:47:21.040> behave.
+Okay,<00:47:31.760> so<00:47:31.920> let<00:47:32.160> me<00:47:32.319> remind
+Okay, so let me remind
+you
+remember<00:47:38.240> that<00:47:38.560> the
+hessen<00:47:43.920> at<00:47:44.160> any<00:47:44.400> point
+hessen at any point
+x<00:47:47.440> is<00:47:47.599> a<00:47:47.839> matrix.
+Okay,<00:47:52.560> it's<00:47:52.800> an<00:47:52.960> n<00:47:53.119> byn
+Okay, it's an n byn
+matrix
+where<00:47:58.800> the<00:47:59.280> j<00:47:59.520> entry<00:47:59.920> dell<00:48:00.319> squar<00:48:00.720> of<00:48:00.960> f
+where the j entry dell squar of f
+ofx<00:48:04.000> j<00:48:04.560> is<00:48:04.880> equal<00:48:05.200> to<00:48:06.359> uh
+ofx j is equal to uh
+d^2<00:48:09.839> del<00:48:10.240> xi<00:48:10.960> del
+d^2 del xi del
+xj<00:48:12.960> of<00:48:13.200> f<00:48:13.440> ofx
+Okay.
+And<00:48:39.040> what<00:48:39.200> I<00:48:39.359> mean<00:48:39.599> by<00:48:40.079> how<00:48:40.319> it<00:48:40.559> can<00:48:40.920> behave<00:48:41.920> is
+And what I mean by how it can behave is
+we're
+told<00:48:46.480> so<00:48:46.960> this<00:48:47.119> is<00:48:47.280> back<00:48:47.520> to<00:48:47.760> two<00:48:48.400> in
+particular<00:48:54.079> there<00:48:54.319> exists<00:48:54.800> let's<00:48:55.040> say<00:48:55.359> zero
+particular there exists let's say zero
+less<00:48:56.000> than<00:48:56.160> mu<00:48:56.720> less<00:48:57.000> than
+l<00:49:01.440> such
+that<00:49:08.440> mu<00:49:09.440> times<00:49:09.760> the
+that mu times the
+identity<00:49:11.680> and<00:49:11.839> I'll<00:49:12.079> say<00:49:12.160> what<00:49:12.319> this<00:49:12.480> means<00:49:12.640> in
+identity and I'll say what this means in
+a<00:49:12.960> second<00:49:13.920> actually<00:49:14.160> let<00:49:14.319> me<00:49:14.400> make<00:49:14.720> is<00:49:15.119> uh<00:49:15.720> is
+a second actually let me make is uh is
+at<00:49:17.040> most<00:49:17.760> I'll<00:49:18.000> say<00:49:18.160> what<00:49:18.319> this<00:49:18.480> funny
+at most I'll say what this funny
+squiggle<00:49:19.119> less<00:49:19.280> than<00:49:19.440> or<00:49:19.520> equal<00:49:19.680> to<00:49:19.839> means<00:49:20.079> in
+squiggle less than or equal to means in
+a<00:49:20.319> second<00:49:20.559> is<00:49:20.800> at<00:49:21.040> most<00:49:22.319> uh<00:49:22.559> the<00:49:22.880> great<00:49:23.040> the
+hessen<00:49:26.319> is<00:49:26.559> at<00:49:26.800> most<00:49:27.680> l<00:49:28.000> times<00:49:28.240> the<00:49:28.480> identity
+for<00:49:32.520> all<00:49:33.520> x<00:49:33.760> and
+rn.<00:49:41.200> And<00:49:42.079> when<00:49:42.319> I<00:49:42.480> say<00:49:42.640> that<00:49:42.960> a<00:49:43.200> is<00:49:43.359> at<00:49:43.599> most
+rn. And when I say that a is at most
+b,<00:49:46.480> I
+b, I
+mean
+that<00:49:50.960> b<00:49:51.200> minus
+that b minus
+a<00:49:53.359> is<00:49:53.599> positive
+a is positive
+semidefinite.<00:49:56.240> Okay?<00:49:56.400> Okay.<00:49:56.559> And<00:49:56.720> if<00:49:56.800> you're
+semidefinite. Okay? Okay. And if you're
+not<00:49:57.119> comfortable<00:49:57.520> with<00:49:57.839> what<00:49:58.079> I<00:49:58.240> mean<00:49:58.520> there,
+not comfortable with what I mean there,
+that's<00:49:59.760> the<00:49:59.920> same<00:50:00.160> thing<00:50:00.240> as
+that's the same thing as
+saying<00:50:02.240> for<00:50:02.480> all
+xrpose<00:50:08.079> b<00:50:08.319> minus<00:50:09.079> a<00:50:10.079> x<00:50:10.480> is<00:50:11.200> at<00:50:11.200> least<00:50:11.520> zero.
+So<00:50:24.000> really<00:50:24.319> what<00:50:24.559> this<00:50:24.720> thing<00:50:24.880> is<00:50:25.119> saying<00:50:25.920> is
+So really what this thing is saying is
+that<00:50:27.040> if<00:50:27.200> you<00:50:27.359> look<00:50:27.440> at<00:50:27.599> this<00:50:27.760> matrix<00:50:28.480> right<00:50:28.720> so
+that if you look at this matrix right so
+for<00:50:29.119> any<00:50:29.280> X<00:50:29.599> this<00:50:29.760> is<00:50:29.839> a<00:50:30.000> matrix<00:50:30.880> if<00:50:31.040> you<00:50:31.200> look
+for any X this is a matrix if you look
+at<00:50:31.440> this<00:50:31.599> matrix<00:50:32.079> its<00:50:32.400> largest<00:50:32.960> igen<00:50:33.280> value<00:50:33.520> in
+at this matrix its largest igen value in
+magnitude<00:50:35.200> is<00:50:35.520> at<00:50:35.680> most
+magnitude is at most
+L<00:50:38.160> and<00:50:38.400> its<00:50:38.640> smallest<00:50:39.280> igen<00:50:39.599> value<00:50:39.920> or<00:50:40.160> the<00:50:40.319> one
+L and its smallest igen value or the one
+that's<00:50:40.720> closest<00:50:41.119> to<00:50:41.359> to<00:50:42.119> zero<00:50:43.119> is<00:50:43.440> still<00:50:43.680> at
+that's closest to to zero is still at
+least<00:50:44.079> mu<00:50:44.640> none<00:50:44.800> of<00:50:44.880> the<00:50:45.040> igen<00:50:45.280> values<00:50:45.520> are<00:50:45.680> too
+least mu none of the igen values are too
+small<00:50:46.720> so<00:50:47.040> this<00:50:47.359> this<00:50:47.680> matrix<00:50:48.079> is<00:50:48.319> somehow
+small so this this matrix is somehow
+well<00:50:49.319> conditioned<00:50:50.319> it<00:50:50.480> doesn't<00:50:50.800> have<00:50:50.880> any
+well conditioned it doesn't have any
+really<00:50:51.280> big<00:50:51.440> or<00:50:51.760> really<00:50:52.000> small<00:50:52.559> values<00:50:52.880> and
+magnitude
+questions.<00:51:00.640> This<00:51:00.960> thing
+questions. This thing
+here,<00:51:02.800> this<00:51:03.040> squiggly<00:51:03.680> less<00:51:03.920> than<00:51:04.160> thing<00:51:04.400> is
+here, this squiggly less than thing is
+usually<00:51:05.040> called
+usually called
+uh<00:51:06.880> the
+uh the
+loner
+ordering<00:51:14.480> on<00:51:14.720> matrices.
+Yeah.
+Oh.
+Um,<00:51:30.960> so<00:51:31.599> yeah.<00:51:31.920> So,<00:51:32.160> okay,
+Um, so yeah. So, okay,
+good.<00:51:34.160> So,<00:51:34.319> I<00:51:34.559> don't<00:51:34.800> Okay,<00:51:35.040> I'm<00:51:35.200> not<00:51:35.359> going<00:51:35.440> to
+good. So, I don't Okay, I'm not going to
+get<00:51:35.760> in.<00:51:36.079> So,<00:51:36.319> for<00:51:36.559> this<00:51:36.720> class,<00:51:37.040> you<00:51:37.200> don't
+get in. So, for this class, you don't
+need<00:51:37.440> to<00:51:37.520> know<00:51:37.599> it.<00:51:37.839> I'm<00:51:38.079> not<00:51:38.160> going<00:51:38.240> to<00:51:38.400> assume
+need to know it. I'm not going to assume
+you<00:51:39.119> know<00:51:39.200> it.<00:51:39.440> I'll<00:51:39.599> just<00:51:39.680> just<00:51:39.920> take<00:51:40.079> it<00:51:40.319> by
+you know it. I'll just just take it by
+faith.<00:51:41.119> But,<00:51:41.760> uh,<00:51:41.839> the<00:51:42.000> way<00:51:42.079> you<00:51:42.240> do<00:51:42.319> it<00:51:42.480> is<00:51:42.640> by
+faith. But, uh, the way you do it is by
+something<00:51:43.119> called<00:51:43.280> the<00:51:43.440> RAI<00:51:43.839> quotient.<00:51:45.040> Okay,
+something called the RAI quotient. Okay,
+so<00:51:46.400> the<00:51:46.720> largest<00:51:47.520> um<00:51:48.400> the<00:51:48.720> largest<00:51:49.359> value<00:51:49.880> is
+so the largest um the largest value is
+the<00:51:51.200> soup<00:51:51.520> overall<00:51:51.920> x<00:51:52.160> of<00:51:52.400> or<00:51:52.640> the<00:51:52.720> max<00:51:52.960> overall
+the soup overall x of or the max overall
+x<00:51:53.440> of<00:51:53.599> xrpose
+x of xrpose
+ax.<00:51:55.880> Okay.
+ax. Okay.
+Um<00:51:59.000> so<00:52:00.000> right<00:52:00.319> if<00:52:00.559> you
+um<00:52:05.760> right<00:52:06.880> uh<00:52:07.280> I<00:52:07.520> don't<00:52:07.599> know<00:52:07.760> does<00:52:07.920> that
+um right uh I don't know does that
+answer
+your<00:52:12.000> right<00:52:12.240> so<00:52:12.920> xrpose<00:52:13.920> lix
+your right so xrpose lix
+uh<00:52:16.720> is<00:52:16.960> just<00:52:17.440> l*s<00:52:17.920> the<00:52:18.079> square<00:52:18.319> norm<00:52:18.559> of
+uh is just l*s the square norm of
+x<00:52:20.559> so<00:52:20.880> sorry<00:52:21.119> when<00:52:21.280> I<00:52:21.440> said<00:52:21.839> it's<00:52:22.000> the<00:52:22.160> max<00:52:22.319> of
+x so sorry when I said it's the max of
+raw<00:52:22.640> x<00:52:22.800> of<00:52:22.960> xrpose<00:52:23.680> ax<00:52:24.880> uh<00:52:25.040> that's<00:52:25.200> where<00:52:25.359> x<00:52:25.520> has
+raw x of xrpose ax uh that's where x has
+unit<00:52:26.000> norm<00:52:26.400> you<00:52:26.559> Otherwise<00:52:26.960> you<00:52:27.040> have<00:52:27.119> to
+unit norm you Otherwise you have to
+normalize<00:52:27.680> by<00:52:27.920> the<00:52:28.559> square<00:52:28.800> norm<00:52:29.040> of<00:52:29.119> x.<00:52:29.359> You
+normalize by the square norm of x. You
+have<00:52:29.520> to<00:52:29.599> normalize<00:52:29.920> by<00:52:30.079> xrpose
+have to normalize by xrpose
+x.<00:52:32.400> So<00:52:32.880> if<00:52:33.119> x<00:52:33.359> is<00:52:33.520> unit<00:52:33.760> norm<00:52:34.240> the<00:52:34.480> max<00:52:34.720> of
+x. So if x is unit norm the max of
+xrpose<00:52:35.520> lix<00:52:36.079> is<00:52:36.319> just<00:52:36.880> l*<00:52:37.359> the<00:52:37.440> square<00:52:37.760> norm<00:52:38.000> of
+xrpose lix is just l* the square norm of
+x<00:52:38.960> which<00:52:39.200> is<00:52:39.359> just<00:52:39.760> l<00:52:40.240> if<00:52:40.480> x<00:52:40.720> is<00:52:40.880> unit<00:52:41.559> norm.<00:52:42.559> Uh
+x which is just l if x is unit norm. Uh
+whereas<00:52:43.200> here<00:52:44.079> it's<00:52:45.280> um<00:52:46.160> it's<00:52:46.400> at<00:52:46.640> most<00:52:47.000> xrpose
+whereas here it's um it's at most xrpose
+times<00:52:48.240> the<00:52:48.400> largest<00:52:49.040> value.
+times the largest value.
+uh<00:52:51.040> it's<00:52:51.280> at<00:52:51.440> most<00:52:51.599> the<00:52:51.839> largest<00:52:52.400> value<00:52:52.559> times
+uh it's at most the largest value times
+xrpose<00:52:53.440> x<00:52:54.240> which<00:52:54.559> is<00:52:55.520> the<00:52:55.760> largest<00:52:56.319> value
+xrpose x which is the largest value
+which<00:52:56.880> is<00:52:56.960> at<00:52:57.119> most<00:52:57.280> largest<00:52:57.880> value.
+which is at most largest value.
+So<00:53:01.440> that<00:53:01.599> says<00:53:01.839> the<00:53:01.920> largest<00:53:02.400> value<00:53:02.480> is<00:53:02.640> most
+l<00:53:10.720> maybe<00:53:10.880> I'll<00:53:11.680> put<00:53:11.920> some<00:53:12.160> pointers<00:53:12.480> in<00:53:12.640> the
+l maybe I'll put some pointers in the
+notes<00:53:13.119> to<00:53:13.839> to<00:53:14.240> more<00:53:14.480> on<00:53:14.720> more<00:53:14.960> linear<00:53:15.280> algebra
+notes to to more on more linear algebra
+stuff.
+Are<00:53:21.520> there<00:53:21.680> any<00:53:21.839> other<00:53:22.559> I<00:53:22.800> don't<00:53:22.800> know<00:53:23.280> did<00:53:23.440> I
+Are there any other I don't know did I
+answer<00:53:23.760> your<00:53:24.240> question<00:53:24.559> sort<00:53:24.800> of<00:53:24.960> or<00:53:25.720> okay?<00:53:26.839> Uh
+answer your question sort of or okay? Uh
+yeah,<00:53:28.079> but<00:53:28.240> at<00:53:28.240> least<00:53:28.640> for<00:53:28.880> what<00:53:29.040> I'm<00:53:29.200> going<00:53:29.280> to
+yeah, but at least for what I'm going to
+say<00:53:29.520> from<00:53:29.680> now<00:53:29.839> on,
+say from now on,
+uh<00:53:32.160> you<00:53:32.319> won't<00:53:32.559> need<00:53:32.640> to<00:53:32.800> understand<00:53:33.040> the
+uh you won't need to understand the
+proof<00:53:33.440> of<00:53:33.599> that<00:53:33.839> to<00:53:34.240> to<00:53:34.880> appreciate<00:53:35.280> what<00:53:35.440> I'll
+proof of that to to appreciate what I'll
+say,<00:53:36.000> I<00:53:36.240> hope.<00:53:37.040> But<00:53:37.200> interrupt<00:53:37.599> me<00:53:37.680> if<00:53:37.839> that<00:53:38.000> if
+say, I hope. But interrupt me if that if
+that's<00:53:38.480> not<00:53:38.640> the
+that's not the
+case.<00:53:41.680> Any<00:53:42.000> other<00:53:42.240> questions?
+Okay.
+So,<00:53:57.280> so<00:53:57.440> what<00:53:57.599> do<00:53:57.760> iterative<00:53:58.160> methods
+do<00:54:07.359> for
+minimizing<00:54:12.800> f<00:54:12.960> ofx?
+minimizing f ofx?
+Okay,<00:54:14.880> what<00:54:15.040> do<00:54:15.200> they<00:54:15.359> do?
+Okay, what do they do?
+So
+start<00:54:20.160> with
+start with
+some<00:54:22.319> x<00:54:22.559> knot<00:54:23.200> in
+Rn
+iteratively<00:54:34.559> compute
+um<00:54:41.119> x<00:54:41.359> k<00:54:41.680> +
+um x k +
+one<00:54:43.760> from<00:54:44.079> x
+a
+VSSM<00:54:51.680> update
+rule<00:54:56.400> and<00:54:56.640> then<00:54:56.880> you<00:54:56.960> know<00:54:57.200> stop<00:54:57.440> after<00:54:57.680> some
+rule and then you know stop after some
+number<00:54:58.079> of
+iterations.<00:55:08.400> Right?<00:55:08.640> Right.<00:55:08.800> So<00:55:08.880> the<00:55:09.119> thing
+iterations. Right? Right. So the thing
+that<00:55:09.359> we'd<00:55:09.520> like<00:55:09.680> to
+understand<00:55:21.200> is
+is<00:55:24.720> how<00:55:25.040> well<00:55:25.920> does<00:55:26.240> iterating<00:55:26.720> help<00:55:27.079> us?
+is how well does iterating help us?
+Okay.
+So,<00:55:50.079> we
+So, we
+would<00:55:52.559> like
+would like
+to<00:55:55.119> find<00:55:55.280> an<00:55:55.440> update
+rule<00:56:02.480> such
+rule such
+that<00:56:04.960> let's<00:56:05.240> say<00:56:06.240> if<00:56:06.400> you<00:56:06.480> look<00:56:06.640> at<00:56:06.960> f
+of<00:56:10.960> x<00:56:11.400> k<00:56:12.400> minus<00:56:13.200> f<00:56:13.440> of<00:56:13.520> x<00:56:13.680> k<00:56:13.920> +<00:56:14.079> 1<00:56:14.319> minus<00:56:14.559> f<00:56:14.799> of<00:56:14.880> x
+star<00:56:18.960> this<00:56:19.119> is<00:56:19.280> at<00:56:19.880> most<00:56:20.880> let's<00:56:21.200> say
+star this is at most let's say
+alpha
+times<00:56:25.839> f<00:56:26.280> ofx<00:56:27.280> 0<00:56:27.680> -<00:56:27.920> f<00:56:28.160> of
+xar<00:56:31.760> where<00:56:31.920> alpha<00:56:32.240> is<00:56:32.559> all
+um<00:56:43.119> oh<00:56:43.760> this<00:56:44.000> should<00:56:44.079> have<00:56:44.240> been<00:56:44.319> xk
+yeah<00:56:48.880> right<00:56:49.119> so<00:56:49.280> yeah<00:56:49.520> so<00:56:49.680> the<00:56:49.839> point<00:56:50.000> is<00:56:50.240> like
+yeah right so yeah so the point is like
+as<00:56:50.559> you<00:56:50.720> said<00:56:51.200> just<00:56:51.440> by<00:56:51.680> induction
+as you said just by induction
+um<00:56:53.680> this<00:56:54.000> means<00:56:54.240> that<00:56:54.799> if<00:56:55.040> you<00:56:55.200> go<00:56:55.359> from<00:56:55.599> say<00:56:56.240> x0
+um this means that if you go from say x0
+and<00:56:57.280> iterate<00:56:57.680> k<00:56:57.920> times<00:56:58.160> and<00:56:58.400> get<00:56:58.680> xk<00:56:59.680> then
+and iterate k times and get xk then
+you've<00:57:00.480> gone<00:57:00.799> from<00:57:01.599> you've<00:57:01.920> you've
+you've gone from you've you've
+multiplied<00:57:02.640> your<00:57:02.880> error<00:57:03.040> by<00:57:03.200> alpha<00:57:03.520> to<00:57:03.599> the<00:57:03.760> k
+multiplied your error by alpha to the k
+and<00:57:04.000> if<00:57:04.160> alpha<00:57:04.480> is<00:57:04.559> less<00:57:04.720> than<00:57:04.880> one<00:57:05.119> it<00:57:05.280> means
+and if alpha is less than one it means
+you're<00:57:05.680> kind<00:57:05.760> of<00:57:05.839> exponentially<00:57:06.559> decaying
+you're kind of exponentially decaying
+your
+error.<00:57:08.839> Okay,<00:57:09.839> so<00:57:10.000> that's<00:57:10.240> kind<00:57:10.400> of<00:57:10.480> the<00:57:10.720> goal
+error. Okay, so that's kind of the goal
+of<00:57:12.079> of<00:57:12.640> uh<00:57:12.799> kind<00:57:12.960> of<00:57:13.040> first<00:57:13.280> order<00:57:13.599> methods<00:57:13.920> and
+of of uh kind of first order methods and
+you<00:57:14.240> should<00:57:14.400> do<00:57:14.559> this<00:57:15.040> in<00:57:15.280> the<00:57:15.359> update<00:57:15.760> rule.
+you should do this in the update rule.
+Your<00:57:16.480> update<00:57:16.799> rule<00:57:17.040> is<00:57:17.280> only<00:57:17.520> allowed<00:57:17.839> to
+Your update rule is only allowed to
+depend<00:57:19.319> on<00:57:20.319> f<00:57:20.559> ofx<00:57:20.960> and<00:57:21.200> lambda<00:57:21.760> and<00:57:21.920> and<00:57:22.240> a
+depend on f ofx and lambda and and a
+gradient<00:57:22.960> of<00:57:23.119> f<00:57:23.359> ofx.<00:57:24.319> Okay,<00:57:24.640> because<00:57:24.799> that's
+gradient of f ofx. Okay, because that's
+all<00:57:25.200> your<00:57:25.359> oracle<00:57:25.760> gives<00:57:26.040> you.<00:57:27.119> And<00:57:27.359> in<00:57:27.520> your
+all your oracle gives you. And in your
+analysis,<00:57:28.960> you're<00:57:29.280> allowed<00:57:29.520> to<00:57:29.680> use<00:57:29.920> the<00:57:30.160> fact
+analysis, you're allowed to use the fact
+that<00:57:30.480> you<00:57:30.640> have<00:57:30.799> control<00:57:31.119> of<00:57:31.200> the<00:57:31.720> hessen,<00:57:32.720> but
+that you have control of the hessen, but
+the<00:57:33.119> the<00:57:33.359> oracle<00:57:33.760> doesn't<00:57:33.920> let<00:57:34.079> you<00:57:34.240> compute
+the the oracle doesn't let you compute
+the<00:57:34.559> hessen.<00:57:35.280> Okay,<00:57:35.839> if<00:57:36.000> you<00:57:36.160> could<00:57:36.319> compute
+the hessen. Okay, if you could compute
+the<00:57:36.640> hash,<00:57:37.040> that<00:57:37.200> would<00:57:37.280> be<00:57:37.359> called<00:57:37.520> a<00:57:37.680> second
+the hash, that would be called a second
+order<00:57:38.160> method.<00:57:38.799> So<00:57:39.119> kth<00:57:39.520> order,<00:57:39.760> I<00:57:39.920> think,
+order method. So kth order, I think,
+means<00:57:40.559> you<00:57:40.799> have<00:57:40.960> information<00:57:41.280> about<00:57:41.599> kind<00:57:41.760> of
+means you have information about kind of
+kith<00:57:42.240> order<00:57:42.720> partial<00:57:43.119> derivatives.
+Oh,<00:57:48.960> sorry,<00:57:49.200> say<00:57:49.359> it<00:57:49.520> again.
+Oh, sorry, say it again.
+Oh,<00:57:51.280> no.<00:57:51.520> So<00:57:51.760> actually<00:57:52.160> the<00:57:52.480> thing<00:57:52.559> that
+Oh, no. So actually the thing that
+interior<00:57:53.280> point<00:57:53.520> will<00:57:53.960> use<00:57:54.960> it<00:57:55.200> will<00:57:55.359> use<00:57:55.520> a
+interior point will use it will use a
+second<00:57:55.920> order<00:57:56.440> method<00:57:57.440> and<00:57:58.240> um<00:57:58.400> we<00:57:58.720> won't<00:57:58.960> have
+second order method and um we won't have
+we<00:57:59.680> won't<00:58:00.079> assume<00:58:00.559> control<00:58:00.960> on<00:58:01.200> the<00:58:01.440> third
+we won't assume control on the third
+order<00:58:02.079> partial<00:58:02.480> derivatives<00:58:02.960> we'll<00:58:03.200> assume
+order partial derivatives we'll assume
+some<00:58:03.680> other<00:58:03.839> kind<00:58:04.079> of<00:58:04.319> control<00:58:04.880> which<00:58:05.200> I'll
+some other kind of control which I'll
+I'll<00:58:05.839> state<00:58:06.160> when<00:58:06.319> we<00:58:06.480> get<00:58:06.559> there
+what
+it<00:58:19.280> just<00:58:19.920> uh<00:58:20.240> right<00:58:20.480> so<00:58:20.720> I<00:58:20.880> Actually,<00:58:21.200> I'm
+it just uh right so I Actually, I'm
+going<00:58:21.440> to<00:58:21.599> I'm<00:58:21.839> going<00:58:21.920> to<00:58:22.000> look<00:58:22.079> at<00:58:22.319> I'm<00:58:22.480> going
+going to I'm going to look at I'm going
+to<00:58:22.799> tell<00:58:22.960> you<00:58:23.040> about<00:58:23.200> Newton's<00:58:23.599> method<00:58:23.839> soon.
+to tell you about Newton's method soon.
+Okay.<00:58:24.960> But
+Okay. But
+um<00:58:27.920> it's<00:58:28.160> not<00:58:28.319> going<00:58:28.480> to<00:58:28.559> be<00:58:28.640> a<00:58:28.880> pure<00:58:29.359> first
+um it's not going to be a pure first
+order<00:58:30.079> method<00:58:30.319> in<00:58:30.480> the<00:58:30.640> sense<00:58:30.799> that<00:58:31.040> we<00:58:31.200> will
+order method in the sense that we will
+actually<00:58:31.839> need<00:58:32.640> access<00:58:32.960> to<00:58:33.119> the<00:58:33.240> hesshen<00:58:34.240> like
+actually need access to the hesshen like
+the<00:58:34.640> update<00:58:34.960> rule<00:58:35.200> will<00:58:35.440> depend<00:58:35.680> on<00:58:35.839> the
+the update rule will depend on the
+hessen.
+Yeah.
+Okay.<00:58:42.400> But<00:58:42.640> there<00:58:42.799> is<00:58:42.960> a<00:58:43.119> first<00:58:43.280> order<00:58:43.599> rule
+Okay. But there is a first order rule
+which<00:58:44.000> just<00:58:44.160> needs<00:58:44.319> information<00:58:44.559> about<00:58:44.799> the
+which just needs information about the
+gradient<00:58:45.200> and<00:58:45.440> it's<00:58:45.599> called<00:58:45.760> gradient
+gradient and it's called gradient
+descent.<00:58:46.880> Okay.<00:58:47.280> So<00:58:48.079> I'll<00:58:48.400> tell<00:58:48.480> you<00:58:48.799> I'll
+descent. Okay. So I'll tell you I'll
+tell<00:58:49.119> you<00:58:49.280> about<00:58:49.440> that.
+So,<00:58:59.440> so<00:58:59.680> one<00:58:59.920> such<00:59:00.240> update
+rule<00:59:05.760> which<00:59:06.000> is<00:59:06.160> a<00:59:06.319> first<00:59:06.640> order
+method<00:59:11.440> is<00:59:12.319> gradient<00:59:12.799> descent.
+Okay.<00:59:20.240> So,<00:59:20.799> let<00:59:21.040> me<00:59:21.200> just<00:59:21.359> tell<00:59:21.440> you<00:59:21.680> what<00:59:21.839> that
+Okay. So, let me just tell you what that
+what<00:59:22.400> that<00:59:22.720> is.
+So<00:59:45.680> who<00:59:45.839> here<00:59:46.079> has<00:59:46.240> heard<00:59:46.400> of<00:59:46.559> gradient
+So who here has heard of gradient
+descent<00:59:47.839> out<00:59:48.000> of<00:59:48.440> curiosity?<00:59:49.440> Okay.<00:59:49.839> Who<00:59:50.079> here
+descent out of curiosity? Okay. Who here
+has<00:59:50.400> seen<00:59:50.880> it<00:59:51.119> actually,<00:59:51.599> you<00:59:51.760> know,<00:59:51.920> analyzed
+has seen it actually, you know, analyzed
+rigorously<00:59:53.119> with<00:59:53.440> proofs<00:59:53.880> of<00:59:54.880> convergence
+rigorously with proofs of convergence
+and<00:59:55.680> things<00:59:55.920> like
+and things like
+that.<00:59:58.480> Okay.<00:59:59.119> Well,<00:59:59.520> definitely<00:59:59.760> not<00:59:59.920> as
+that. Okay. Well, definitely not as
+many.<01:00:00.319> Okay,<01:00:00.559> good.<01:00:00.799> So<01:00:00.960> you'll<01:00:01.280> see<01:00:01.520> some
+many. Okay, good. So you'll see some
+analysis<01:00:02.720> now.<01:00:03.440> In<01:00:03.799> particular,<01:00:04.799> when<01:00:05.040> you
+analysis now. In particular, when you
+have<01:00:05.280> that<01:00:05.520> kind<01:00:05.680> of<01:00:05.839> control,<01:00:06.240> you<01:00:06.480> can<01:00:06.640> give
+have that kind of control, you can give
+some<01:00:07.040> kind<01:00:07.119> of<01:00:07.280> bound.<01:00:07.760> Okay.<01:00:08.319> So<01:00:09.040> gradient
+descent.<01:00:21.920> Okay.
+descent. Okay.
+So<01:00:25.359> before<01:00:25.680> I<01:00:25.839> tell<01:00:25.920> you<01:00:26.000> what<01:00:26.079> the<01:00:26.240> update
+So before I tell you what the update
+rule<01:00:26.720> actually<01:00:27.040> is,
+suppose<01:00:32.079> we<01:00:32.400> have<01:00:32.839> some<01:00:33.839> x0<01:00:34.400> and<01:00:34.559> x1<01:00:35.040> that<01:00:35.280> are
+suppose we have some x0 and x1 that are
+two<01:00:35.680> points<01:00:35.920> in<01:00:36.160> Rn.
+and
+define<01:00:43.720> XT<01:00:44.720> to<01:00:44.960> be<01:00:45.119> equal
+to<01:00:49.200> X0<01:00:49.920> +<01:00:50.240> T
+uh<01:00:54.240> this<01:00:54.480> should<01:00:54.640> probably
+be<01:00:59.000> yeah<01:01:00.000> X0<01:01:00.880> +<01:01:01.119> T<01:01:02.160> *<01:01:02.400> X1<01:01:02.880> -
+be yeah X0 + T * X1 -
+X0<01:01:05.200> okay<01:01:06.160> So<01:01:07.119> in<01:01:07.359> particular<01:01:07.760> x0<01:01:08.160> is<01:01:08.319> x0<01:01:08.640> and<01:01:08.799> x1
+X0 okay So in particular x0 is x0 and x1
+is
+x1.
+So<01:01:16.000> I'm<01:01:16.240> not<01:01:16.400> going<01:01:16.480> to<01:01:16.559> prove<01:01:16.799> this.<01:01:17.119> This<01:01:17.359> is
+So I'm not going to prove this. This is
+this<01:01:18.240> is<01:01:18.400> follows<01:01:18.720> from<01:01:18.880> Taylor's<01:01:19.559> theorem
+this is follows from Taylor's theorem
+with<01:01:20.720> an<01:01:20.960> explicit<01:01:21.559> remainder.<01:01:22.559> Okay,<01:01:22.720> if<01:01:22.880> you
+with an explicit remainder. Okay, if you
+want<01:01:23.119> to<01:01:23.200> see<01:01:23.280> a<01:01:23.480> proof,<01:01:24.480> it<01:01:24.640> should<01:01:24.799> be<01:01:24.960> in
+want to see a proof, it should be in
+pretty<01:01:25.280> much<01:01:25.440> any<01:01:25.680> calculus
+pretty much any calculus
+book.<01:01:27.839> f
+book. f
+ofx1.<01:01:30.559> So<01:01:30.960> the<01:01:31.200> first<01:01:31.359> two<01:01:31.599> or<01:01:31.920> the<01:01:32.079> first<01:01:32.240> two
+ofx1. So the first two or the first two
+terms<01:01:32.880> in<01:01:33.040> the<01:01:33.119> tailor<01:01:33.440> expansion<01:01:33.760> are<01:01:33.920> f<01:01:34.280> ofx0
+terms in the tailor expansion are f ofx0
+plus<01:01:36.240> the<01:01:36.559> gradient<01:01:37.520> at<01:01:37.760> f
+plus the gradient at f
+ofx0<01:01:39.520> dotted<01:01:39.920> with<01:01:40.079> x1<01:01:40.559> -
+x0.<01:01:44.240> Okay.<01:01:44.559> So<01:01:44.720> those<01:01:44.880> are<01:01:44.960> the<01:01:45.119> two<01:01:45.280> first
+x0. Okay. So those are the two first
+those<01:01:45.760> are<01:01:46.000> two<01:01:46.240> first<01:01:46.559> terms<01:01:47.440> the<01:01:47.760> first<01:01:47.920> two
+those are two first terms the first two
+terms<01:01:48.480> in<01:01:48.640> the<01:01:48.799> tailor<01:01:49.280> expansion<01:01:49.839> of<01:01:50.079> f
+terms in the tailor expansion of f
+ofx1<01:01:51.839> and<01:01:52.079> then<01:01:52.240> there's<01:01:52.400> an<01:01:52.640> error<01:01:52.880> term.
+ofx1 and then there's an error term.
+Okay.<01:01:54.880> And<01:01:55.119> you<01:01:55.280> can<01:01:55.359> write<01:01:55.599> this<01:01:55.839> error<01:01:56.079> term
+Okay. And you can write this error term
+error<01:01:56.880> term<01:01:57.480> explicitly,<01:01:58.480> okay,<01:01:58.720> in<01:01:58.960> some
+error term explicitly, okay, in some
+funny<01:01:59.520> form.<01:02:00.480> And<01:02:00.640> if<01:02:00.799> you<01:02:00.960> write<01:02:01.359> Taylor's
+funny form. And if you write Taylor's
+theorem<01:02:02.000> with<01:02:02.240> remainder,<01:02:02.880> this<01:02:03.200> error<01:02:03.359> term
+theorem with remainder, this error term
+looks<01:02:03.760> like<01:02:03.920> the<01:02:04.079> integral<01:02:04.480> from<01:02:04.640> 0<01:02:04.880> to<01:02:05.119> 1,<01:02:05.599> the
+looks like the integral from 0 to 1, the
+integral<01:02:06.240> from<01:02:06.640> 0<01:02:06.880> to
+integral from 0 to
+t<01:02:09.319> of<01:02:10.319> x1<01:02:10.880> -
+t of x1 -
+x0<01:02:13.200> times<01:02:13.599> the
+x0 times the
+hessen<01:02:16.520> at<01:02:17.520> some<01:02:17.839> x<01:02:18.079> alpha
+hessen at some x alpha
+uh<01:02:20.000> x1<01:02:20.480> -<01:02:20.720> x0.
+D<01:02:24.480> alpha<01:02:24.799> dt.
+Okay,<01:02:44.400> so<01:02:44.960> just<01:02:45.200> to<01:02:45.440> recap,
+Okay, so just to recap,
+uh<01:02:48.079> just<01:02:48.319> take<01:02:48.480> it<01:02:48.720> by<01:02:48.960> faith<01:02:49.200> that<01:02:49.599> this<01:02:49.920> thing
+uh just take it by faith that this thing
+here<01:02:51.040> or<01:02:51.280> look<01:02:51.440> at<01:02:51.520> the<01:02:51.680> notes<01:02:52.000> later<01:02:52.240> once<01:02:52.720> uh
+here or look at the notes later once uh
+I<01:02:53.359> I'll<01:02:53.680> insert<01:02:54.079> something<01:02:54.400> for<01:02:54.640> linear
+I I'll insert something for linear
+algebra.<01:02:56.040> This<01:02:57.040> second<01:02:57.359> inequality<01:02:58.000> here,
+algebra. This second inequality here,
+this<01:02:59.119> loner<01:02:59.520> ordering<01:02:59.839> inequality<01:03:00.400> means
+this loner ordering inequality means
+that<01:03:00.799> the<01:03:01.119> largest<01:03:02.400> uh<01:03:02.720> singular<01:03:03.559> value<01:03:04.559> of
+that the largest uh singular value of
+this<01:03:05.040> matrix<01:03:05.839> is<01:03:06.079> at<01:03:06.319> most<01:03:06.559> L.
+this matrix is at most L.
+Okay,<01:03:10.160> what<01:03:10.400> does<01:03:10.559> that<01:03:10.799> tell<01:03:10.960> you<01:03:11.400> about<01:03:12.400> any
+Okay, what does that tell you about any
+one<01:03:12.799> of<01:03:12.960> these<01:03:13.200> dot<01:03:13.520> productducts?<01:03:13.920> So<01:03:14.079> this
+one of these dot productducts? So this
+is<01:03:14.319> a<01:03:14.480> dotproduct<01:03:14.960> between<01:03:15.280> x1<01:03:15.680> -<01:03:15.920> x0<01:03:16.319> and<01:03:16.480> the
+is a dotproduct between x1 - x0 and the
+hessen*<01:03:17.200> x1<01:03:17.520> -<01:03:17.760> x0.
+Yeah,<01:03:25.440> exactly.<01:03:26.400> So<01:03:26.640> this
+Yeah, exactly. So this
+thing<01:03:29.440> is<01:03:29.760> at<01:03:30.119> most<01:03:31.400> L*<01:03:32.400> X1<01:03:32.880> -<01:03:33.480> X0<01:03:34.480> L2
+Okay,<01:03:38.559> good.<01:03:39.440> So<01:03:39.839> what<01:03:40.079> we<01:03:40.319> have<01:03:41.119> is<01:03:41.359> that<01:03:41.839> f
+Okay, good. So what we have is that f
+ofx1<01:03:43.760> is<01:03:44.079> at
+ofx1 is at
+most<01:03:46.960> f
+most f
+ofx0<01:03:48.880> plus
+uh<01:03:52.319> the<01:03:52.640> gradient<01:03:53.280> at<01:03:53.520> f<01:03:53.760> of<01:03:54.200> x0<01:03:55.200> dotted<01:03:55.720> with
+uh the gradient at f of x0 dotted with
+x1<01:03:57.280> -<01:03:57.960> x0<01:03:58.960> plus<01:04:00.240> uh<01:04:00.640> l<01:04:00.960> over<01:04:01.280> two<01:04:01.520> because<01:04:01.839> now
+x1 - x0 plus uh l over two because now
+we<01:04:02.079> need<01:04:02.240> to<01:04:02.359> integrate<01:04:03.359> we<01:04:03.599> need<01:04:03.680> to
+we need to integrate we need to
+integrate<01:04:04.240> this<01:04:04.760> expression<01:04:05.760> from<01:04:06.079> alpha
+integrate this expression from alpha
+going<01:04:06.640> from<01:04:06.799> zero<01:04:07.039> to<01:04:07.200> t<01:04:08.000> and<01:04:08.400> from<01:04:09.119> t<01:04:09.440> going
+going from zero to t and from t going
+from<01:04:10.400> 0<01:04:10.640> to<01:04:11.240> 1,<01:04:12.240> right?<01:04:12.559> This<01:04:12.720> doesn't<01:04:12.960> depend
+from 0 to 1, right? This doesn't depend
+on<01:04:13.359> alpha<01:04:13.680> at<01:04:13.839> all.<01:04:14.720> So<01:04:14.880> when<01:04:15.119> you<01:04:15.200> integrate
+on alpha at all. So when you integrate
+alpha<01:04:15.920> from<01:04:16.079> 0<01:04:16.240> to<01:04:16.400> t,<01:04:16.720> you<01:04:16.880> just<01:04:16.960> get
+alpha from 0 to t, you just get
+t.<01:04:19.119> And<01:04:19.359> when<01:04:19.520> you<01:04:19.599> integrate
+t. And when you integrate
+t,<01:04:21.760> you<01:04:21.920> get<01:04:22.160> t<01:04:22.400> ^2<01:04:22.720> over<01:04:22.960> two.<01:04:23.839> That's<01:04:24.079> going
+t, you get t ^2 over two. That's going
+from<01:04:24.480> 0<01:04:24.720> to<01:04:24.880> 1,<01:04:25.119> that's<01:04:25.400> 12.<01:04:26.400> So<01:04:26.559> this<01:04:26.720> is<01:04:26.880> l
+from 0 to 1, that's 12. So this is l
+over<01:04:27.559> two<01:04:28.599> times<01:04:29.599> x1<01:04:30.079> -<01:04:30.599> x0
+l2.<01:04:35.359> Okay.
+So<01:04:40.240> given<01:04:40.720> so<01:04:40.960> now<01:04:41.119> let<01:04:41.280> me<01:04:41.440> tell<01:04:41.520> you<01:04:41.599> what
+So given so now let me tell you what
+gradient<01:04:42.000> descent<01:04:42.319> does.<01:04:42.480> is<01:04:42.640> what's<01:04:42.799> the
+gradient descent does. is what's the
+update<01:04:43.400> rule
+update rule
+given<01:04:46.240> some
+iterate<01:04:49.760> let<01:04:49.920> me<01:04:50.000> call<01:04:50.240> and<01:04:50.400> let<01:04:50.559> me<01:04:50.640> call<01:04:51.000> this
+iterate let me call and let me call this
+this<01:04:52.400> uh<01:04:52.559> inequality<01:04:53.200> inequality
+this uh inequality inequality
+star<01:04:55.599> given<01:04:55.920> some<01:04:56.079> iterate
+star given some iterate
+x0<01:04:58.559> gradient
+descent
+updates<01:05:08.480> to
+updates to
+x1<01:05:10.799> which<01:05:11.119> minimizes
+x1 which minimizes
+the<01:05:14.079> upper<01:05:14.319> bound<01:05:14.640> it<01:05:14.799> minimizes<01:05:15.760> the<01:05:16.079> right
+the upper bound it minimizes the right
+hand<01:05:16.599> side<01:05:17.599> of<01:05:17.839> the
+star.<01:05:23.160> Okay.<01:05:24.599> And<01:05:25.599> you<01:05:25.839> can<01:05:26.000> show<01:05:26.160> just<01:05:26.400> using
+star. Okay. And you can show just using
+calculus<01:05:27.200> that<01:05:27.520> this<01:05:27.960> minimizer<01:05:28.960> is<01:05:29.520> x1<01:05:30.079> is
+calculus that this minimizer is x1 is
+equal<01:05:30.559> to<01:05:31.000> x0
+equal to x0
+minus<01:05:33.680> 1<01:05:34.000> /<01:05:34.319> 2<01:05:34.920> l<01:05:35.920> times<01:05:36.319> the<01:05:36.640> gradient<01:05:37.440> of<01:05:37.680> f<01:05:37.920> of
+minus 1 / 2 l times the gradient of f of
+x0
+l2.
+Okay,<01:05:52.799> questions.
+Yeah,<01:05:56.640> X0<01:05:56.960> is<01:05:57.039> a<01:05:57.119> vector.
+Oh,<01:06:04.000> that<01:06:04.240> is<01:06:04.400> a<01:06:04.559> very<01:06:04.799> good<01:06:05.880> point.<01:06:06.880> That<01:06:07.039> is
+Oh, that is a very good point. That is
+not<01:06:07.280> what<01:06:07.440> I<01:06:07.599> mean.
+Okay.<01:06:22.480> And<01:06:22.640> the<01:06:22.799> upper<01:06:23.039> bound<01:06:23.280> that<01:06:23.359> you'll
+Okay. And the upper bound that you'll
+get<01:06:26.400> and<01:06:26.640> this<01:06:26.799> will<01:06:26.960> imply<01:06:27.359> that<01:06:27.920> if<01:06:28.160> you<01:06:28.240> if
+get and this will imply that if you if
+you<01:06:28.640> just<01:06:28.799> plug<01:06:29.119> this<01:06:29.920> into<01:06:30.240> the<01:06:30.400> right<01:06:30.559> hand
+you just plug this into the right hand
+side<01:06:31.039> there,<01:06:31.920> that<01:06:32.160> will<01:06:32.319> imply<01:06:32.559> that<01:06:32.720> f
+side there, that will imply that f
+ofx1<01:06:34.640> is<01:06:34.960> at<01:06:35.119> most<01:06:35.760> f
+ofx1 is at most f
+ofx0<01:06:38.559> minus<01:06:39.280> 1<01:06:39.599> over<01:06:39.839> 2<01:06:40.280> l<01:06:41.280> times<01:06:42.240> the<01:06:42.559> gradient
+ofx0 minus 1 over 2 l times the gradient
+of<01:06:43.039> f<01:06:43.599> at<01:06:43.839> x0.
+Okay.<01:06:56.079> So<01:06:56.240> we<01:06:56.480> have<01:06:56.680> some<01:06:57.680> kind<01:06:57.920> of<01:06:58.079> explicit
+Okay. So we have some kind of explicit
+bound<01:06:59.119> on<01:06:59.960> progress,<01:07:00.960> right?<01:07:01.680> So<01:07:01.920> remember
+bound on progress, right? So remember
+we're<01:07:02.400> trying<01:07:02.480> to<01:07:02.559> minimize<01:07:03.039> f.<01:07:03.920> So<01:07:04.160> before<01:07:04.400> we
+we're trying to minimize f. So before we
+were<01:07:04.720> getting<01:07:04.880> a<01:07:05.039> value<01:07:05.280> of<01:07:05.359> x0,<01:07:06.319> now<01:07:06.480> we're
+were getting a value of x0, now we're
+getting<01:07:06.880> f<01:07:07.119> of<01:07:07.200> x0<01:07:07.760> minus
+getting f of x0 minus
+something,<01:07:10.000> right?<01:07:11.119> And<01:07:12.000> kind<01:07:12.240> of<01:07:12.400> this<01:07:12.640> is
+something, right? And kind of this is
+why<01:07:13.039> you<01:07:13.280> need<01:07:13.440> to<01:07:13.599> say<01:07:13.680> that<01:07:13.839> the<01:07:14.000> hessha
+why you need to say that the hessha
+never<01:07:14.640> gets<01:07:14.799> too
+never gets too
+small<01:07:16.640> because<01:07:16.880> for<01:07:17.039> all<01:07:17.280> you
+know<01:07:22.200> well<01:07:23.200> I<01:07:23.359> mean<01:07:23.599> basically<01:07:23.920> the<01:07:24.160> problem
+know well I mean basically the problem
+is<01:07:24.559> you<01:07:24.720> don't<01:07:24.880> want<01:07:25.039> this<01:07:25.200> thing<01:07:25.440> to<01:07:25.599> be<01:07:25.760> equal
+is you don't want this thing to be equal
+to<01:07:26.400> zero<01:07:26.799> or<01:07:27.119> something<01:07:27.359> very
+tiny.
+Okay.<01:07:35.119> So,<01:07:35.359> we<01:07:35.520> need<01:07:35.760> to<01:07:35.920> actually,<01:07:36.240> you<01:07:36.400> know,
+Okay. So, we need to actually, you know,
+what<01:07:36.880> we<01:07:37.039> actually<01:07:37.280> want<01:07:37.440> to<01:07:37.599> say<01:07:37.680> is<01:07:37.920> where
+what we actually want to say is where
+where<01:07:38.319> did<01:07:38.400> I<01:07:38.559> put<01:07:38.640> that<01:07:38.799> alpha
+where did I put that alpha
+business?<01:07:40.960> Uh,<01:07:41.760> did<01:07:41.920> I<01:07:42.400> did<01:07:42.480> I<01:07:42.559> already<01:07:42.960> did<01:07:43.119> I
+business? Uh, did I did I already did I
+just<01:07:43.520> erase<01:07:43.760> that?<01:07:44.720> Oh,<01:07:45.000> well.<01:07:46.000> Right.
+So,<01:07:49.440> we<01:07:49.680> wanted<01:07:49.920> to<01:07:50.160> say<01:07:50.319> that<01:07:51.799> um<01:07:52.799> if<01:07:52.960> you<01:07:53.119> look
+So, we wanted to say that um if you look
+at<01:07:54.000> f<01:07:54.240> ofx1<01:07:55.039> minus<01:07:55.520> f<01:07:56.039> ofxar,<01:07:57.039> this
+at f ofx1 minus f ofxar, this
+multiplicatively<01:07:58.240> decreases<01:07:58.799> from<01:07:59.039> f<01:07:59.200> ofx0
+multiplicatively decreases from f ofx0
+minus<01:08:00.000> f<01:08:00.160> of<01:08:00.440> xar.<01:08:01.440> Right?<01:08:01.680> So,<01:08:01.839> we're<01:08:02.000> not
+minus f of xar. Right? So, we're not
+there<01:08:02.400> yet.<01:08:02.720> we<01:08:02.960> have<01:08:03.039> to<01:08:03.200> say<01:08:03.440> something<01:08:03.680> more
+there yet. we have to say something more
+to<01:08:04.079> actually<01:08:04.319> get<01:08:04.480> that.<01:08:05.119> And<01:08:05.359> here<01:08:05.520> we're
+to actually get that. And here we're
+going<01:08:05.760> to<01:08:05.920> use<01:08:06.079> the<01:08:06.240> lower<01:08:06.559> bound<01:08:06.720> on<01:08:06.880> the
+hessen.<01:08:15.560> Okay.
+hessen. Okay.
+So<01:08:18.319> on<01:08:18.560> the<01:08:18.719> one<01:08:19.319> hand<01:08:20.319> we<01:08:20.560> said<01:08:20.719> that<01:08:20.960> this
+So on the one hand we said that this
+thing<01:08:21.440> is<01:08:21.679> at<01:08:22.199> most<01:08:23.640> something.<01:08:24.640> It's<01:08:24.799> also<01:08:25.040> at
+thing is at most something. It's also at
+least<01:08:25.799> something<01:08:26.799> right?
+Do<01:08:31.679> people<01:08:31.920> agree<01:08:32.080> with
+Do people agree with
+me?<01:08:33.759> Okay.<01:08:34.080> So,<01:08:34.319> what<01:08:34.640> changes<01:08:34.960> if<01:08:35.120> I<01:08:35.279> wanted
+me? Okay. So, what changes if I wanted
+to<01:08:35.520> put<01:08:35.759> an<01:08:35.920> inequality<01:08:36.400> in<01:08:36.560> the<01:08:36.640> other
+to put an inequality in the other
+direction?
+Yeah,<01:08:39.520> L<01:08:39.679> changes<01:08:40.000> to<01:08:40.159> mu.
+So<01:08:45.679> we<01:08:45.920> also<01:08:46.159> have
+that<01:08:53.199> in<01:08:53.359> particular<01:08:54.719> um<01:08:54.960> let's<01:08:55.199> say<01:08:55.359> f
+ofxar<01:09:00.159> is<01:09:00.480> at
+least<01:09:04.560> well<01:09:04.880> let<01:09:05.040> me<01:09:05.359> write<01:09:05.600> like
+f<01:09:13.440> of<01:09:13.719> y<01:09:14.719> for<01:09:14.960> any<01:09:15.199> y.<01:09:15.600> F<01:09:15.759> of<01:09:16.040> y<01:09:17.040> is<01:09:17.359> equal
+to<01:09:20.880> or<01:09:21.120> is<01:09:21.279> at
+least<01:09:25.120> f<01:09:25.279> ofx<01:09:26.239> minus<01:09:26.880> or<01:09:27.040> plus<01:09:27.759> the<01:09:28.359> gradient
+least f ofx minus or plus the gradient
+of<01:09:29.600> f<01:09:29.839> at<01:09:30.120> x<01:09:31.120> y<01:09:31.440> -<01:09:31.839> x
+of f at x y - x
+uh<01:09:34.719> minus
+uh minus
+uh<01:09:36.799> mu<01:09:37.120> /<01:09:37.440> 2<01:09:38.560> *<01:09:39.040> x<01:09:39.279> -<01:09:39.719> y<01:09:40.719> lun
+uh mu / 2 * x - y lun
+squared.<01:09:43.920> This<01:09:44.080> is<01:09:44.239> true<01:09:44.400> for<01:09:44.560> all<01:09:44.799> xy.
+So<01:09:59.520> let's<01:09:59.840> fix
+So let's fix
+x<01:10:03.199> and<01:10:03.520> let's<01:10:03.840> take<01:10:04.000> the<01:10:04.239> minimum<01:10:04.560> overall
+x and let's take the minimum overall
+y.
+Okay.<01:10:17.760> So<01:10:18.000> what's<01:10:18.159> the<01:10:18.320> minimum<01:10:18.719> overall<01:10:19.120> y<01:10:19.360> of
+Okay. So what's the minimum overall y of
+the<01:10:19.760> left<01:10:19.920> hand<01:10:20.159> side?
+It's<01:10:23.440> f<01:10:23.600> of<01:10:23.760> x<01:10:23.920> star.<01:10:24.159> So<01:10:24.320> f<01:10:24.480> of
+It's f of x star. So f of
+xar<01:10:26.640> is<01:10:26.880> at<01:10:26.960> least<01:10:27.199> the<01:10:27.440> min<01:10:27.679> overall
+xar is at least the min overall
+y
+of<01:10:32.159> x<01:10:32.480> plus<01:10:33.360> this
+of x plus this
+gradient<01:10:35.719> y<01:10:36.719> -<01:10:37.280> mu<01:10:37.520> /<01:10:37.960> 2<01:10:39.040> *<01:10:39.280> x<01:10:39.520> -
+y^2.<01:10:45.520> And<01:10:45.760> this<01:10:46.000> thing<01:10:46.239> again<01:10:46.560> you<01:10:46.800> can<01:10:46.880> write
+y^2. And this thing again you can write
+down<01:10:47.199> an<01:10:47.440> explicit<01:10:47.840> formula<01:10:48.159> for<01:10:48.320> when<01:10:48.480> it's
+down an explicit formula for when it's
+minimized.<01:10:50.239> basically
+uh<01:10:55.360> I<01:10:55.520> think
+uh I think
+uh<01:10:58.640> okay<01:10:58.880> well<01:10:59.040> I<01:10:59.560> didn't<01:11:00.560> have<01:11:00.640> to
+uh okay well I didn't have to
+recalculate<01:11:01.440> it<01:11:02.000> but<01:11:02.320> you<01:11:02.560> can<01:11:02.719> show<01:11:02.800> that
+recalculate it but you can show that
+this<01:11:03.280> thing<01:11:03.520> is<01:11:03.840> when<01:11:04.080> it's<01:11:04.239> minimized<01:11:04.800> it
+this thing is when it's minimized it
+equals<01:11:06.320> um<01:11:07.120> f
+equals um f
+ofx<01:11:08.800> minus<01:11:09.600> 1<01:11:09.760> over<01:11:10.000> 2
+mu<01:11:15.360> f<01:11:15.600> of<01:11:16.080> x<01:11:16.719> the<01:11:16.960> gradient<01:11:17.280> of<01:11:17.360> f
+mu f of x the gradient of f
+ofx<01:11:19.440> Okay,<01:11:19.760> f
+ofx^2.
+Okay,<01:11:27.679> so<01:11:27.840> this<01:11:28.080> is<01:11:28.159> just<01:11:28.400> calculus<01:11:28.800> to<01:11:29.040> figure
+Okay, so this is just calculus to figure
+out<01:11:29.280> which<01:11:29.520> y<01:11:29.760> minimizes<01:11:30.400> this<01:11:30.640> right<01:11:30.880> hand
+side.<01:11:36.719> And<01:11:36.960> actually<01:11:37.280> I<01:11:37.520> want<01:11:37.600> to
+side. And actually I want to
+fix<01:11:40.159> so<01:11:40.320> I<01:11:40.480> want<01:11:40.560> to<01:11:40.640> fix<01:11:40.880> x<01:11:41.120> to<01:11:41.280> be<01:11:41.440> let's<01:11:41.600> say<01:11:41.760> x
+fix so I want to fix x to be let's say x
+k<01:11:42.320> our<01:11:42.480> kth<01:11:42.719> iterate.
+Okay.<01:12:07.120> So<01:12:07.280> now<01:12:07.440> I<01:12:07.679> want<01:12:07.760> to<01:12:07.840> combine<01:12:08.159> these
+Okay. So now I want to combine these
+things.
+So<01:12:12.880> what<01:12:13.120> do<01:12:13.199> I<01:12:13.440> know?
+I<01:12:17.920> know
+I know
+that<01:12:19.840> f<01:12:20.000> ofx<01:12:20.400> k<01:12:20.640> +
+that f ofx k +
+one<01:12:23.280> and<01:12:23.520> let<01:12:23.679> me<01:12:23.840> actually<01:12:24.080> write<01:12:24.679> this.<01:12:25.679> Let
+one and let me actually write this. Let
+me<01:12:26.000> actually<01:12:26.679> bring<01:12:27.679> this<01:12:28.080> thing<01:12:28.480> over<01:12:28.800> here
+me actually bring this thing over here
+and<01:12:29.600> let<01:12:29.760> me<01:12:29.840> just<01:12:30.000> say<01:12:30.159> that<01:12:30.239> this<01:12:30.520> implies
+and let me just say that this implies
+that<01:12:33.280> the
+gradient<01:12:38.880> is<01:12:39.199> at<01:12:39.360> least
+mu<01:12:48.320> time<01:12:48.719> f<01:12:48.880> ofx<01:12:49.280> k<01:12:49.520> minus<01:12:49.760> f
+xar.
+Okay,<01:13:00.080> so<01:13:00.320> this<01:13:00.480> looks<01:13:00.800> sort<01:13:00.960> of<01:13:01.120> nice<01:13:01.520> because
+Okay, so this looks sort of nice because
+we<01:13:02.719> know<01:13:02.880> that<01:13:03.719> our<01:13:04.719> progress<01:13:05.199> is<01:13:05.440> measured<01:13:05.760> in
+we know that our progress is measured in
+terms<01:13:06.159> of<01:13:06.400> subtracting<01:13:06.960> off<01:13:07.199> some<01:13:07.440> multiple
+terms of subtracting off some multiple
+of<01:13:07.920> the<01:13:08.080> gradient.<01:13:08.880> So<01:13:09.040> we'd<01:13:09.199> like<01:13:09.360> to<01:13:09.440> say
+of the gradient. So we'd like to say
+that<01:13:09.679> the<01:13:09.760> gradient<01:13:10.000> is<01:13:10.159> big.<01:13:10.400> So<01:13:10.560> that<01:13:10.719> we
+that the gradient is big. So that we
+made<01:13:10.960> a<01:13:11.040> lot<01:13:11.120> of<01:13:11.280> progress<01:13:12.159> and<01:13:12.400> this<01:13:12.560> is
+made a lot of progress and this is
+telling<01:13:13.040> us<01:13:13.760> some<01:13:14.080> lower<01:13:14.400> bound<01:13:14.560> on<01:13:14.800> the
+gradient.<01:13:19.600> So<01:13:19.840> on<01:13:20.000> the<01:13:20.159> one<01:13:20.320> hand<01:13:20.560> what<01:13:20.719> do<01:13:20.880> we
+gradient. So on the one hand what do we
+know?<01:13:22.320> So
+summary<01:13:30.320> we<01:13:30.560> know<01:13:30.640> from<01:13:30.880> up<01:13:31.040> there<01:13:31.719> that<01:13:32.719> f<01:13:32.920> ofx
+summary we know from up there that f ofx
+k<01:13:34.159> +
+k +
+1<01:13:36.080> is<01:13:36.400> at<01:13:36.560> most<01:13:36.960> let's<01:13:37.199> say<01:13:37.360> f<01:13:37.520> of<01:13:37.679> x
+1 is at most let's say f of x
+k<01:13:40.000> minus<01:13:40.640> 1<01:13:40.960> over<01:13:41.199> 2
+k minus 1 over 2
+l<01:13:43.719> times<01:13:44.719> the<01:13:45.040> squared<01:13:45.520> norm<01:13:45.840> of<01:13:45.920> the
+l times the squared norm of the
+gradient.
+And<01:13:55.040> we<01:13:55.280> also<01:13:55.600> know<01:13:56.400> that<01:13:56.640> the<01:13:56.800> gradient<01:13:57.120> is
+And we also know that the gradient is
+not<01:13:57.440> too<01:13:57.679> small.<01:13:57.920> This<01:13:58.000> is<01:13:58.080> the<01:13:58.159> graded<01:13:58.480> xk.<01:13:58.880> We
+not too small. This is the graded xk. We
+also<01:13:59.040> know<01:13:59.199> the<01:13:59.280> gradient<01:13:59.520> xk<01:13:59.760> is<01:13:59.920> not<01:14:00.080> too
+also know the gradient xk is not too
+small.
+Okay.<01:14:27.280> So<01:14:27.440> this<01:14:27.679> imply<01:14:28.080> so<01:14:28.239> what<01:14:28.400> do<01:14:28.480> we<01:14:28.640> have
+here?<01:14:33.040> This
+here? This
+implies<01:14:35.760> what<01:14:36.000> do<01:14:36.080> I<01:14:36.239> want<01:14:36.320> to<01:14:36.400> look<01:14:36.480> at?<01:14:36.719> I
+implies what do I want to look at? I
+want<01:14:36.960> to<01:14:37.040> look<01:14:37.120> at<01:14:37.280> f<01:14:37.440> ofx<01:14:37.760> k<01:14:37.920> plus<01:14:38.159> one<01:14:38.400> minus<01:14:38.640> f
+want to look at f ofx k plus one minus f
+of<01:14:38.960> x<01:14:39.239> star.<01:14:40.239> Right?
+This<01:14:44.719> implies<01:14:45.040> that<01:14:45.280> f
+This implies that f
+ofx<01:14:47.199> k<01:14:47.520> +<01:14:48.040> one<01:14:49.040> minus<01:14:49.360> f<01:14:49.600> ofx
+star<01:14:55.360> is<01:14:55.679> at
+most<01:14:59.040> well<01:14:59.600> I<01:14:59.840> subtract<01:15:00.239> I'm<01:15:00.400> just
+most well I subtract I'm just
+subtracting<01:15:00.960> f<01:15:01.120> of<01:15:01.199> xar<01:15:01.520> from<01:15:01.679> both<01:15:01.840> sides.
+subtracting f of xar from both sides.
+I'm<01:15:02.320> not<01:15:02.400> doing<01:15:02.560> anything<01:15:02.800> fancy.<01:15:03.520> This<01:15:03.679> is<01:15:03.840> at
+I'm not doing anything fancy. This is at
+most<01:15:04.239> f<01:15:04.400> ofx<01:15:04.800> k<01:15:04.960> minus<01:15:05.280> f
+most f ofx k minus f
+ofxar.<01:15:07.199> There's<01:15:07.520> me<01:15:07.679> subtracting<01:15:08.159> from<01:15:08.320> both
+ofxar. There's me subtracting from both
+sides.
+minus<01:15:12.560> 1<01:15:12.800> over<01:15:13.040> 2<01:15:13.320> L<01:15:14.320> times<01:15:14.560> this<01:15:14.800> gradient
+squared<01:15:22.800> but<01:15:23.040> now<01:15:23.199> I<01:15:23.360> have<01:15:23.440> a<01:15:23.600> bound<01:15:23.920> on<01:15:24.280> this
+squared but now I have a bound on this
+right<01:15:27.440> well<01:15:27.679> I<01:15:27.840> have<01:15:27.920> an<01:15:28.320> I<01:15:28.560> know<01:15:28.719> that<01:15:28.880> this
+right well I have an I know that this
+thing<01:15:29.199> is<01:15:29.360> big<01:15:29.600> so<01:15:29.840> when<01:15:30.000> I<01:15:30.159> subtract<01:15:30.480> it<01:15:30.719> I
+thing is big so when I subtract it I
+know<01:15:30.960> that<01:15:31.280> I<01:15:31.440> have<01:15:31.520> an<01:15:31.679> upper<01:15:32.000> bound<01:15:32.239> on<01:15:32.400> this
+know that I have an upper bound on this
+right<01:15:32.719> hand<01:15:32.960> side<01:15:33.840> and<01:15:34.159> when<01:15:34.400> you<01:15:34.640> just
+right hand side and when you just
+manipulate<01:15:35.679> that<01:15:35.920> what<01:15:36.080> you<01:15:36.239> get<01:15:36.400> is<01:15:36.560> that
+manipulate that what you get is that
+this<01:15:36.880> thing<01:15:37.040> is<01:15:37.199> at<01:15:37.360> most
+this thing is at most
+1<01:15:40.480> -<01:15:41.199> mu
+l<01:15:44.880> times
+l times
+um<01:15:48.400> f<01:15:48.640> ofx<01:15:48.960> k<01:15:49.199> -<01:15:49.440> f<01:15:49.600> of
+xar.<01:15:53.760> Okay.<01:15:54.159> So
+this<01:15:59.679> is<01:15:59.840> the<01:16:00.000> thing<01:16:00.080> I<01:16:00.320> was<01:16:00.400> saying<01:16:00.560> was<01:16:00.719> alpha
+this is the thing I was saying was alpha
+before.<01:16:02.400> Okay.<01:16:02.800> So<01:16:02.960> in<01:16:03.199> one<01:16:03.440> step<01:16:03.600> of<01:16:03.760> gradient
+before. Okay. So in one step of gradient
+descent<01:16:05.520> you<01:16:05.840> have<01:16:06.000> some<01:16:06.320> promised<01:16:07.280> reduction
+descent you have some promised reduction
+in<01:16:07.920> your<01:16:08.280> error<01:16:09.280> that<01:16:09.520> depends<01:16:09.920> on<01:16:10.880> basically
+in your error that depends on basically
+the<01:16:11.440> singular<01:16:11.840> values<01:16:12.080> of<01:16:12.239> the<01:16:12.320> hessen.<01:16:13.199> As
+the singular values of the hessen. As
+long<01:16:13.679> as
+long as
+um<01:16:16.239> right<01:16:16.560> as<01:16:16.719> long<01:16:16.880> as<01:16:17.040> this<01:16:17.360> ratio<01:16:17.679> is<01:16:17.840> small
+um right as long as this ratio is small
+you<01:16:18.640> have<01:16:18.719> some<01:16:18.960> good<01:16:19.120> bound<01:16:19.920> or
+you have some good bound or
+yeah<01:16:22.480> as<01:16:22.719> long<01:16:22.800> as<01:16:22.960> this<01:16:23.199> ratio<01:16:23.520> is<01:16:23.679> big<01:16:23.920> you
+yeah as long as this ratio is big you
+have a<01:16:24.239> good<01:16:24.400> bound<01:16:24.560> because<01:16:24.719> you're<01:16:24.880> taking
+have a good bound because you're taking
+one<01:16:25.280> minus.
+one minus.
+Okay.<01:16:28.000> Yeah.
+Uh,<01:16:42.560> wait,<01:16:42.800> sorry,<01:16:43.040> can<01:16:43.199> you<01:16:43.280> say<01:16:43.360> it<01:16:43.520> again?
+Here.<01:16:48.719> Yeah.<01:16:48.960> So,<01:16:49.120> this<01:16:49.280> is<01:16:49.440> so<01:16:49.760> right.<01:16:49.920> So,
+Here. Yeah. So, this is so right. So,
+this<01:16:50.239> is<01:16:50.400> basically<01:16:50.640> my<01:16:50.800> update<01:16:51.120> rule.<01:16:51.280> So,<01:16:51.440> XK
+this is basically my update rule. So, XK
++<01:16:52.280> one<01:16:53.280> is<01:16:53.520> X<01:16:54.040> K<01:16:55.040> minus<01:16:55.280> one<01:16:55.600> real<01:16:55.760> X
++ one is X K minus one real X
+K,<01:16:57.520> right?
+So<01:17:02.480> okay<01:17:02.719> so<01:17:02.880> what's<01:17:03.120> your<01:17:03.280> question
+over<01:17:08.080> here?
+over here?
+Oh<01:17:09.920> I<01:17:10.080> mean<01:17:10.320> so<01:17:11.280> I<01:17:11.520> just<01:17:11.679> wanted<01:17:11.920> to<01:17:12.400> tell<01:17:12.640> you
+Oh I mean so I just wanted to tell you
+where<01:17:13.199> gradient<01:17:13.600> descent<01:17:13.920> comes<01:17:14.159> from.<01:17:14.960> So
+where gradient descent comes from. So
+the<01:17:15.440> place<01:17:15.520> where<01:17:15.760> gradient<01:17:16.000> descent<01:17:16.320> comes
+the place where gradient descent comes
+from<01:17:17.280> is
+from is
+um<01:17:20.480> writing<01:17:21.159> down<01:17:22.159> kind<01:17:22.400> of<01:17:22.640> writing<01:17:22.960> down<01:17:23.280> f
+um writing down kind of writing down f
+ofx1<01:17:24.080> in<01:17:24.239> terms<01:17:24.400> of<01:17:24.560> f<01:17:24.719> ofx0<01:17:25.600> using
+ofx1 in terms of f ofx0 using
+tailaylor's<01:17:26.480> theorem<01:17:27.440> with<01:17:27.679> an<01:17:27.840> explicit
+tailaylor's theorem with an explicit
+remainder<01:17:29.280> and<01:17:29.520> then<01:17:29.760> now<01:17:30.320> upper<01:17:30.719> bounding
+remainder and then now upper bounding
+the<01:17:31.360> right<01:17:31.600> hand<01:17:31.840> side<01:17:32.800> using<01:17:33.199> the
+the right hand side using the
+information<01:17:33.920> you<01:17:34.159> have<01:17:34.320> about<01:17:34.400> the
+information you have about the
+hessen<01:17:36.320> right<01:17:36.800> so<01:17:37.040> we<01:17:37.280> said<01:17:37.679> using
+hessen right so we said using
+information<01:17:38.320> we<01:17:38.480> have<01:17:38.640> about<01:17:38.719> the<01:17:38.880> hessen
+information we have about the hessen
+this<01:17:39.920> right<01:17:40.159> hand<01:17:40.400> side<01:17:40.640> is<01:17:40.960> at<01:17:41.120> most<01:17:41.440> that<01:17:42.400> and
+this right hand side is at most that and
+then<01:17:42.719> gradient<01:17:43.040> descent<01:17:43.440> just<01:17:43.600> tries<01:17:43.760> to
+then gradient descent just tries to
+minimize<01:17:44.440> that<01:17:45.440> right?<01:17:46.159> So<01:17:46.400> really<01:17:47.360> really<01:17:47.679> I
+minimize that right? So really really I
+mean<01:17:48.719> f<01:17:48.960> ofx<01:17:49.280> for<01:17:49.440> any<01:17:49.679> x<01:17:50.000> could<01:17:50.159> be<01:17:50.239> written<01:17:50.480> in
+mean f ofx for any x could be written in
+this<01:17:50.800> way<01:17:50.960> with<01:17:51.199> Taylor's<01:17:51.600> theorem.<01:17:52.159> So<01:17:52.320> the
+this way with Taylor's theorem. So the
+real<01:17:52.640> thing<01:17:52.719> we<01:17:52.880> wanted<01:17:53.120> to<01:17:53.199> do<01:17:53.280> is<01:17:53.440> just
+real thing we wanted to do is just
+minimize<01:17:54.000> this<01:17:54.159> whole<01:17:54.400> right<01:17:54.560> hand<01:17:54.719> side.<01:17:55.040> But
+minimize this whole right hand side. But
+this<01:17:55.280> whole<01:17:55.440> right<01:17:55.600> hand<01:17:55.760> side<01:17:55.840> is
+this whole right hand side is
+complicated.<01:17:56.480> In<01:17:56.719> particular<01:17:57.040> this<01:17:57.199> integral
+complicated. In particular this integral
+part<01:17:57.760> looks<01:17:58.199> complicated.<01:17:59.199> So<01:17:59.360> we<01:17:59.520> just<01:17:59.760> bound
+part looks complicated. So we just bound
+that<01:18:00.520> thing<01:18:01.520> using<01:18:01.840> information<01:18:02.159> about<01:18:02.320> the
+that thing using information about the
+hessen<01:18:02.800> and<01:18:02.960> then<01:18:03.040> we<01:18:03.199> just<01:18:03.360> minimize<01:18:03.679> the
+hessen and then we just minimize the
+right<01:18:04.000> hand<01:18:04.159> side<01:18:04.320> of<01:18:04.480> this<01:18:04.840> expression<01:18:05.840> and
+right hand side of this expression and
+that's<01:18:06.159> what<01:18:06.320> gradient<01:18:06.640> descent<01:18:06.960> does.
+Oh,<01:18:13.440> why<01:18:13.600> did<01:18:13.760> I<01:18:13.920> define<01:18:14.159> that<01:18:14.320> at<01:18:14.480> all?
+Oh, why did I define that at all?
+Because
+Oh,<01:18:19.679> I<01:18:19.840> see.<01:18:20.000> You<01:18:20.159> mean<01:18:20.320> the<01:18:20.560> notations<01:18:21.360> the
+Oh, I see. You mean the notations the
+notations<01:18:22.159> collide?<01:18:22.480> Is<01:18:22.640> that<01:18:22.719> what<01:18:22.880> you
+notations collide? Is that what you
+mean?
+Yeah.<01:18:25.120> Okay.<01:18:26.000> Yeah.<01:18:26.400> Sorry.<01:18:26.880> The<01:18:27.199> the
+Yeah. Okay. Yeah. Sorry. The the
+notations<01:18:27.840> do<01:18:28.000> collide.
+Yeah.<01:18:35.040> Okay.<01:18:36.040> So,<01:18:37.040> there's<01:18:37.280> only<01:18:37.440> a<01:18:37.600> few
+Yeah. Okay. So, there's only a few
+minutes<01:18:38.000> left.
+minutes left.
+So<01:18:40.080> okay<01:18:40.320> so
+So okay so
+that's<01:18:42.320> that's
+um<01:18:45.760> gradient<01:18:46.080> descent.<01:18:47.480> So<01:18:48.480> what's<01:18:48.719> the<01:18:48.880> punch
+um gradient descent. So what's the punch
+line<01:18:49.280> you<01:18:49.520> should<01:18:49.679> take<01:18:49.760> away?
+Well<01:18:53.679> suppose<01:18:54.000> I<01:18:54.159> have<01:18:54.320> some<01:18:54.480> initial<01:18:54.880> iterate
+Well suppose I have some initial iterate
+point<01:18:55.640> x0<01:18:56.640> that's<01:18:56.960> that<01:18:57.199> kicks<01:18:57.520> off<01:18:57.600> my
+point x0 that's that kicks off my
+gradient<01:18:58.159> descent<01:18:58.480> and<01:18:58.640> then<01:18:58.800> I<01:18:58.960> keep
+gradient descent and then I keep
+updating<01:18:59.520> x0<01:18:59.920> to<01:19:00.080> get<01:19:00.159> x1<01:19:00.480> then<01:19:00.640> x2<01:19:01.280> etc.
+updating x0 to get x1 then x2 etc.
+Right?<01:19:02.920> And<01:19:03.920> I<01:19:04.159> want<01:19:04.320> to<01:19:04.480> decrease<01:19:04.880> my<01:19:05.199> error
+Right? And I want to decrease my error
+by<01:19:05.520> a<01:19:05.679> certain<01:19:06.000> multiplicative<01:19:06.640> factor.<01:19:07.280> I
+by a certain multiplicative factor. I
+want<01:19:07.600> to<01:19:07.679> go<01:19:07.840> from
+want to go from
+error
+uh<01:19:11.800> delta<01:19:12.800> to<01:19:13.280> error<01:19:14.239> epsilon<01:19:14.880> times<01:19:15.320> delta
+uh delta to error epsilon times delta
+right<01:19:18.239> so<01:19:18.400> you<01:19:18.560> could<01:19:18.719> ask<01:19:18.960> you<01:19:19.120> know<01:19:19.199> how<01:19:19.440> many
+right so you could ask you know how many
+iterations<01:19:20.239> do<01:19:20.480> I<01:19:20.640> need<01:19:20.880> before<01:19:21.199> I<01:19:21.440> have<01:19:21.520> that
+iterations do I need before I have that
+promise<01:19:22.719> so<01:19:23.040> again<01:19:23.840> using<01:19:24.080> that<01:19:24.320> heristic
+promise so again using that heristic
+calculation<01:19:25.040> I<01:19:25.280> told<01:19:25.440> you<01:19:25.679> where<01:19:26.560> one<01:19:26.880> let's
+calculation I told you where one let's
+say<01:19:27.280> one<01:19:27.520> minus<01:19:28.480> 1<01:19:28.800> -<01:19:29.120> 1<01:19:29.360> overx<01:19:29.679> to<01:19:29.840> the<01:19:29.920> x<01:19:30.159> is
+say one minus 1 - 1 overx to the x is
+roughly<01:19:30.640> one<01:19:30.880> over
+roughly one over
+e
+okay<01:19:35.199> how<01:19:35.440> many<01:19:35.600> iterations<01:19:36.239> do<01:19:36.400> I<01:19:36.560> need<01:19:36.800> to
+okay how many iterations do I need to
+have<01:19:37.360> my
+error<01:19:48.560> sorry<01:19:48.880> just<01:19:49.040> to<01:19:49.280> have<01:19:49.360> my<01:19:49.600> error<01:19:49.760> let's
+error sorry just to have my error let's
+say<01:19:50.800> over<01:19:51.440> L<01:19:51.600> over<01:19:51.760> mu<01:19:52.080> right<01:19:52.320> yeah<01:19:52.560> but
+say over L over mu right yeah but
+exactly<01:19:53.040> as<01:19:53.199> you<01:19:53.440> said<01:19:53.600> so<01:19:54.560> so
+exactly as you said so so
+so<01:19:56.880> to<01:19:57.600> to<01:19:57.920> guarantee<01:19:58.400> that<01:19:58.640> I<01:19:58.960> I<01:19:59.400> have<01:20:00.400> I<01:20:00.560> think
+so to to guarantee that I I have I think
+as<01:20:00.880> a<01:20:00.960> verb<01:20:01.199> is<01:20:01.360> it<01:20:01.440> is<01:20:01.600> it<01:20:01.760> have<01:20:02.080> with<01:20:02.239> a<01:20:02.400> v<01:20:03.040> to
+as a verb is it is it have with a v to
+guar<01:20:03.679> to<01:20:04.159> have<01:20:04.320> my<01:20:04.719> error
+We<01:20:09.480> need<01:20:10.480> O<01:20:10.719> of<01:20:10.960> L<01:20:11.280> over<01:20:11.719> mu
+We need O of L over mu
+iterations,<01:20:15.120> right?<01:20:15.440> Because<01:20:16.000> 1<01:20:16.320> minus<01:20:16.640> mu
+iterations, right? Because 1 minus mu
+over<01:20:17.120> L<01:20:17.360> to<01:20:17.440> the<01:20:17.520> L<01:20:17.760> over<01:20:17.920> mu<01:20:18.880> is<01:20:19.120> one<01:20:19.360> is<01:20:19.520> at
+over L to the L over mu is one is at
+most<01:20:19.920> one<01:20:20.159> over<01:20:20.600> E.
+most one over E.
+Okay.<01:20:23.239> Um<01:20:24.239> this
+Okay. Um this
+implies<01:20:26.239> and<01:20:26.480> as<01:20:26.640> you<01:20:26.800> were<01:20:26.960> saying<01:20:27.199> to<01:20:27.440> reduce
+implies and as you were saying to reduce
+error<01:20:30.880> from<01:20:31.360> let's
+error from let's
+say<01:20:33.679> delta<01:20:34.159> to<01:20:34.400> epsilon
+say delta to epsilon
+delta<01:20:36.640> we
+delta we
+need<01:20:39.120> of<01:20:39.920> l<01:20:40.159> over<01:20:40.679> mu<01:20:41.679> time<01:20:42.000> log<01:20:42.320> of<01:20:42.480> 1<01:20:42.640> /
+need of l over mu time log of 1 /
+epsilon
+iterations.<01:20:48.800> So<01:20:48.960> you<01:20:49.199> could<01:20:49.280> ask<01:20:49.440> yourself<01:20:49.840> I
+iterations. So you could ask yourself I
+mean<01:20:50.159> so<01:20:50.320> this<01:20:50.480> is<01:20:50.640> not<01:20:51.199> this<01:20:51.440> is<01:20:51.520> not<01:20:51.679> going<01:20:51.760> to
+mean so this is not this is not going to
+be<01:20:52.000> too<01:20:52.400> relevant<01:20:52.800> for<01:20:53.600> what<01:20:53.840> we're<01:20:54.000> going<01:20:54.080> to
+be too relevant for what we're going to
+do<01:20:54.320> with<01:20:54.480> with<01:20:55.040> interior<01:20:55.440> point<01:20:55.679> but<01:20:55.840> I<01:20:56.000> just
+do with with interior point but I just
+want<01:20:56.159> to<01:20:56.320> mention<01:20:56.640> you<01:20:56.800> could<01:20:56.880> ask<01:20:57.120> yourself
+want to mention you could ask yourself
+well<01:20:57.760> in<01:20:58.000> this<01:20:58.159> model<01:20:59.040> in<01:20:59.280> this<01:20:59.440> model<01:20:59.679> where<01:20:59.840> I
+well in this model in this model where I
+have<01:21:00.080> an<01:21:00.239> oracle<01:21:00.719> for<01:21:01.040> f<01:21:01.280> and<01:21:01.440> its<01:21:01.679> gradient
+have an oracle for f and its gradient
+and<01:21:02.880> I<01:21:03.120> have<01:21:03.199> these<01:21:03.520> bounds<01:21:03.840> on<01:21:04.000> the<01:21:04.159> hessen
+and I have these bounds on the hessen
+okay<01:21:06.080> what's<01:21:06.400> the<01:21:06.640> best<01:21:07.040> bound<01:21:07.360> I<01:21:07.600> could<01:21:07.800> get
+okay what's the best bound I could get
+is<01:21:09.040> l<01:21:09.199> over<01:21:09.360> mu<01:21:09.600> log<01:21:09.760> one<01:21:09.920> repson<01:21:10.320> the<01:21:10.480> best
+is l over mu log one repson the best
+right<01:21:11.280> or<01:21:11.520> like<01:21:11.760> to<01:21:11.920> have<01:21:12.000> my<01:21:12.239> error<01:21:12.480> do<01:21:12.640> I
+right or like to have my error do I
+really<01:21:12.960> need<01:21:13.280> l<01:21:13.520> over<01:21:13.679> mu
+really need l over mu
+so<01:21:16.239> it<01:21:16.560> turns
+out.<01:21:20.560> This<01:21:20.800> is<01:21:20.960> not<01:21:21.199> an<01:21:21.360> optimal
+method.<01:21:29.840> There's<01:21:30.080> another<01:21:30.600> method.<01:21:31.600> There's
+method. There's another method. There's
+another<01:21:32.080> method<01:21:32.480> called<01:21:32.800> accelerated
+another method called accelerated
+gradient<01:21:33.840> descent.
+How's
+error<01:21:48.159> in<01:21:48.560> O<01:21:48.800> of<01:21:49.280> square<01:21:49.600> root<01:21:50.320> L<01:21:50.560> over<01:21:51.080> mu
+iterations<01:21:55.199> and<01:21:55.440> this<01:21:55.600> is<01:21:55.760> due<01:21:56.000> to
+Nesterovv<01:22:02.560> and<01:22:02.880> the<01:22:03.120> exact
+reference<01:22:10.400> is
+reference is
+a<01:22:12.320> Soviet<01:22:12.800> math.
+and
+83.<01:22:24.320> Okay.<01:22:24.719> So,<01:22:24.880> I'm<01:22:25.040> I'm<01:22:25.360> not<01:22:25.520> gonna<01:22:26.239> not
+83. Okay. So, I'm I'm not gonna not
+really<01:22:26.639> going<01:22:26.800> to<01:22:27.320> cover<01:22:28.320> that.<01:22:28.480> I<01:22:28.639> just
+really going to cover that. I just
+thought<01:22:28.880> I'd<01:22:29.120> make<01:22:29.199> you<01:22:29.440> aware<01:22:29.760> of<01:22:29.920> its
+thought I'd make you aware of its
+existence.<01:22:31.520> I<01:22:31.760> mean,<01:22:31.920> for<01:22:32.159> us<01:22:32.480> actually<01:22:32.800> when
+existence. I mean, for us actually when
+we<01:22:33.280> do<01:22:33.440> this
+we do this
+um<01:22:35.840> all<01:22:36.000> our<01:22:36.239> kind<01:22:36.400> of<01:22:36.639> control<01:22:36.960> parameters
+um all our kind of control parameters
+will<01:22:37.600> all<01:22:37.760> be<01:22:37.920> constants.<01:22:38.560> So,<01:22:38.719> there's<01:22:38.960> not
+will all be constants. So, there's not
+really<01:22:39.360> going<01:22:39.440> to<01:22:39.520> be<01:22:39.600> a<01:22:39.679> difference<01:22:39.920> between
+really going to be a difference between
+blah<01:22:40.800> and<01:22:41.040> square<01:22:41.199> root<01:22:41.360> of<01:22:41.520> blah.
+blah and square root of blah.
+But<01:22:43.199> I<01:22:43.440> just<01:22:43.600> thought<01:22:43.760> I<01:22:43.920> would<01:22:44.000> point<01:22:44.239> out
+But I just thought I would point out
+that<01:22:44.880> uh<01:22:45.840> later<01:22:46.000> in<01:22:46.239> the<01:22:46.320> future<01:22:46.639> if<01:22:46.800> you<01:22:46.880> ever
+that uh later in the future if you ever
+think,<01:22:47.360> hey,<01:22:47.600> how<01:22:47.679> does<01:22:48.000> gradient<01:22:48.239> descent
+think, hey, how does gradient descent
+work<01:22:48.800> again<01:22:49.040> for<01:22:49.280> some<01:22:49.440> other<01:22:49.760> problem<01:22:50.080> you're
+work again for some other problem you're
+working<01:22:50.560> on,<01:22:51.360> I<01:22:51.600> want<01:22:51.679> you<01:22:51.840> to<01:22:51.920> know<01:22:52.080> that<01:22:52.719> uh
+working on, I want you to know that uh
+there<01:22:53.199> is<01:22:53.360> this<01:22:53.520> that<01:22:53.760> exists.<01:22:54.159> So<01:22:54.320> you<01:22:54.560> can<01:22:54.639> go
+there is this that exists. So you can go
+read<01:22:55.120> about<01:22:55.280> that<01:22:55.520> if<01:22:55.679> you<01:22:55.760> want
+to.<01:22:58.960> Okay,<01:22:59.199> so<01:22:59.440> we're<01:22:59.600> basically<01:23:00.000> out<01:23:00.159> of
+to. Okay, so we're basically out of
+time.
+So<01:23:04.800> next
+lecture<01:23:12.960> we'll
+lecture we'll
+state<01:23:15.440> second<01:23:15.840> order
+method<01:23:22.080> and
+method and
+bounds.<01:23:24.880> This<01:23:25.120> is<01:23:25.679> Newton's<01:23:26.159> method.
+I<01:23:29.679> probably<01:23:29.920> won't<01:23:30.639> because<01:23:30.880> we're<01:23:31.199> I<01:23:31.520> don't
+I probably won't because we're I don't
+want<01:23:31.679> to<01:23:31.840> spend<01:23:32.080> too<01:23:32.320> much<01:23:32.480> time<01:23:33.199> here.<01:23:33.679> I
+want to spend too much time here. I
+probably<01:23:34.239> won't<01:23:35.199> actually<01:23:35.520> go<01:23:35.760> through<01:23:35.920> the
+probably won't actually go through the
+proof<01:23:37.040> of<01:23:37.440> what<01:23:37.600> it<01:23:37.840> achieves,<01:23:38.159> but<01:23:38.320> I'll<01:23:38.480> just
+proof of what it achieves, but I'll just
+state<01:23:38.880> it<01:23:39.040> and<01:23:39.280> you<01:23:39.520> can<01:23:39.600> read<01:23:39.840> the<01:23:40.000> the<01:23:40.400> proof
+state it and you can read the the proof
+in<01:23:40.800> the
+in the
+notes<01:23:42.639> and
+notes and
+then<01:23:44.400> and<01:23:44.639> then<01:23:44.800> we'll<01:23:45.120> finish<01:23:45.440> off<01:23:45.679> by
+showing<01:23:49.120> how<01:23:49.920> to
+showing how to
+use<01:23:52.159> Newton's
+use Newton's
+method.
+We'll
+show<01:24:00.239> how<01:24:00.480> to<01:24:00.639> use<01:24:00.800> Newton's
+show how to use Newton's
+method<01:24:03.600> to
+method to
+get<01:24:05.760> kind<01:24:06.000> of<01:24:06.159> an<01:24:06.320> X<01:24:07.080> tilda<01:24:08.440> lambda<01:24:09.440> k<01:24:09.679> +
+get kind of an X tilda lambda k +
+one<01:24:11.800> from<01:24:12.800> x<01:24:13.120> tilda<01:24:13.440> lambda<01:24:13.840> k.<01:24:14.480> Okay,<01:24:15.080> so
+one from x tilda lambda k. Okay, so
+we're<01:24:16.320> not<01:24:16.480> going<01:24:16.560> to<01:24:16.639> be<01:24:16.719> using<01:24:16.880> gradient
+we're not going to be using gradient
+descent<01:24:17.600> because<01:24:17.840> we<01:24:18.000> will<01:24:18.159> actually<01:24:18.480> need
+descent because we will actually need
+to<01:24:20.159> not<01:24:20.480> just<01:24:20.639> have<01:24:20.960> bounds<01:24:21.360> on<01:24:21.440> the<01:24:21.600> hessen
+to not just have bounds on the hessen
+but<01:24:22.400> actually<01:24:22.719> explicitly<01:24:23.280> compute<01:24:23.520> the
+but actually explicitly compute the
+hessen<01:24:24.000> in<01:24:24.159> interior<01:24:24.639> point.<01:24:25.600> Okay,<01:24:25.920> but<01:24:26.560> what
+hessen in interior point. Okay, but what
+you<01:24:26.960> should<01:24:27.120> have<01:24:27.199> in<01:24:27.440> your<01:24:27.600> mind<01:24:27.760> right<01:24:28.000> now
+you should have in your mind right now
+is<01:24:29.040> kind<01:24:29.280> of<01:24:29.760> our<01:24:30.159> Newton's<01:24:30.560> method<01:24:30.880> which
+is kind of our Newton's method which
+think<01:24:31.360> of<01:24:31.440> it<01:24:31.600> as<01:24:31.760> something<01:24:31.920> like<01:24:32.159> gradient
+think of it as something like gradient
+descent.<01:24:32.719> It's<01:24:32.880> some<01:24:32.960> iterative<01:24:33.360> method.
+descent. It's some iterative method.
+It's<01:24:34.400> going<01:24:34.560> to<01:24:34.719> start<01:24:34.960> off<01:24:35.600> what<01:24:35.840> what<01:24:36.000> it's
+It's going to start off what what it's
+trying<01:24:36.320> to<01:24:36.480> do<01:24:36.639> at<01:24:36.880> every<01:24:37.120> step<01:24:37.360> is<01:24:37.880> minimize<01:24:38.880> f
+trying to do at every step is minimize f
+sublambda<01:24:39.679> k<01:24:39.920> plus<01:24:40.080> one.<01:24:40.960> Right?<01:24:42.320> And<01:24:42.480> what
+sublambda k plus one. Right? And what
+have<01:24:42.800> we<01:24:42.960> done<01:24:43.120> in<01:24:43.280> the<01:24:43.440> last<01:24:44.000> uh<01:24:44.480> what<01:24:44.719> have<01:24:44.800> we
+have we done in the last uh what have we
+done<01:24:45.120> previously?<01:24:45.600> We've<01:24:45.840> we've
+done previously? We've we've
+approximately<01:24:46.639> minimized<01:24:47.199> f<01:24:47.360> of<01:24:47.520> lambda
+approximately minimized f of lambda
+k.<01:24:49.760> So<01:24:50.080> since<01:24:50.320> we've<01:24:50.560> approximately
+k. So since we've approximately
+minimized<01:24:51.360> f<01:24:51.520> of<01:24:51.679> lambda<01:24:52.000> k,<01:24:52.800> we<01:24:53.040> basically
+minimized f of lambda k, we basically
+have<01:24:53.520> this<01:24:53.679> thing<01:24:53.840> in<01:24:54.000> our<01:24:54.239> hands.<01:24:54.880> X<01:24:55.199> tilda
+have this thing in our hands. X tilda
+lambda<01:24:55.840> k<01:24:55.920> is<01:24:56.080> an<01:24:56.239> approximate
+lambda k is an approximate
+minimizer.<01:24:58.239> Okay.<01:24:59.040> And<01:24:59.280> this<01:24:59.520> is<01:24:59.679> going<01:24:59.760> to<01:24:59.920> be
+minimizer. Okay. And this is going to be
+our<01:25:00.520> x0<01:25:01.520> for<01:25:01.760> Newton's<01:25:02.239> method.<01:25:02.800> It's<01:25:03.040> going
+our x0 for Newton's method. It's going
+to<01:25:03.199> be<01:25:03.360> the<01:25:03.600> initial<01:25:04.400> well<01:25:04.719> it's<01:25:04.880> going<01:25:04.960> to<01:25:05.040> be
+to be the initial well it's going to be
+that<01:25:05.280> x0<01:25:05.760> the<01:25:06.159> initial<01:25:06.480> point<01:25:06.880> that<01:25:07.120> we<01:25:07.360> start
+that x0 the initial point that we start
+off<01:25:07.760> Newton's<01:25:08.080> method<01:25:08.320> with<01:25:08.560> will<01:25:08.800> be<01:25:08.960> this.
+off Newton's method with will be this.
+And<01:25:10.400> then<01:25:10.560> we'll<01:25:10.880> run<01:25:11.040> the<01:25:11.199> update<01:25:11.520> rule<01:25:11.760> many
+And then we'll run the update rule many
+times<01:25:12.960> until<01:25:13.280> the<01:25:13.520> error<01:25:13.760> gets<01:25:14.000> small<01:25:14.239> enough
+times until the error gets small enough
+that<01:25:15.920> the<01:25:16.159> new<01:25:16.400> point<01:25:16.560> we<01:25:16.800> have<01:25:16.880> with<01:25:17.120> small
+that the new point we have with small
+error<01:25:18.159> that<01:25:18.400> will<01:25:18.560> be<01:25:18.639> our<01:25:18.800> x<01:25:19.040> till<01:25:19.199> the<01:25:19.360> lambda
+error that will be our x till the lambda
+k<01:25:19.840> plus<01:25:20.040> one.<01:25:21.400> Okay.<01:25:22.400> And<01:25:22.560> then<01:25:22.719> now<01:25:22.960> we'll<01:25:23.280> use
+k plus one. Okay. And then now we'll use
+that<01:25:23.679> as<01:25:23.920> the<01:25:24.080> starting<01:25:24.400> point<01:25:24.560> in<01:25:25.120> Newton's
+that as the starting point in Newton's
+method<01:25:26.400> to<01:25:26.960> to<01:25:27.440> minimize<01:25:27.920> or<01:25:28.159> approximately
+method to to minimize or approximately
+minimize<01:25:29.440> f<01:25:29.679> of<01:25:29.760> lambda<01:25:30.080> k
+minimize f of lambda k
+plus2.
+Okay.<01:25:34.239> So,
+Okay. So,
+um,<01:25:36.960> are<01:25:37.199> there<01:25:37.440> questions<01:25:37.760> about<01:25:38.080> where
+um, are there questions about where
+we're<01:25:38.560> going<01:25:38.560> to<01:25:38.639> go<01:25:38.800> in<01:25:39.040> next<01:25:39.199> lecture<01:25:39.520> or
+we're going to go in next lecture or
+about<01:25:40.080> anything<01:25:40.400> that<01:25:40.800> I<01:25:41.040> said<01:25:41.199> in<01:25:41.360> this
+lecture?
+No.<01:25:51.040> Okay.<01:25:51.679> Well,<01:25:52.000> I<01:25:52.159> guess<01:25:52.480> the<01:25:52.639> pet's<01:25:53.120> due
+No. Okay. Well, I guess the pet's due
+tomorrow
+and<01:25:55.440> also<01:25:56.000> the<01:25:56.800> project<01:25:57.120> proposal.<01:25:58.320> It<01:25:58.560> was
+and also the project proposal. It was
+due<01:25:58.800> last<01:25:59.040> night.
+due last night.
+Really?<01:26:01.360> Oh,<01:26:01.679> great.<01:26:01.920> Okay.<01:26:02.000> It<01:26:02.159> was<01:26:02.239> due<01:26:02.400> last
+Really? Oh, great. Okay. It was due last
+night.<01:26:02.880> Okay.
+night. Okay.
+Right.<01:26:04.800> Something<01:26:05.120> is<01:26:05.280> due<01:26:05.440> soon,<01:26:05.760> right?
+Right. Something is due soon, right?
+Project<01:26:06.239> proposal.<01:26:07.280> Yes.<01:26:07.679> Project<01:26:08.000> proposal
+Project proposal. Yes. Project proposal
+is<01:26:08.480> due.
+Yeah.<01:26:12.639> This<01:26:12.800> Thursday<01:26:13.040> at<01:26:13.199> 11:59<01:26:13.920> p.m.,<01:26:14.159> I
+Yeah. This Thursday at 11:59 p.m., I
+think<01:26:14.639> is<01:26:15.360> Yeah,<01:26:15.600> I<01:26:15.760> believe<01:26:16.080> 11:59<01:26:16.800> p.m.
+think is Yeah, I believe 11:59 p.m.
+Yeah.<01:26:19.440> Okay.<01:26:20.000> Well,<01:26:20.080> the<01:26:20.239> pizza's<01:26:20.719> due
+Yeah. Okay. Well, the pizza's due
+whenever<01:26:21.360> the<01:26:21.600> website<01:26:21.920> said<01:26:22.080> it<01:26:22.239> was<01:26:22.520> due.<01:26:23.520> I
+whenever the website said it was due. I
+thought<01:26:23.920> it<01:26:24.080> was<01:26:24.320> tomorrow<01:26:24.639> night,<01:26:24.800> but<01:26:25.040> maybe
+thought it was tomorrow night, but maybe
+I'm<01:26:25.520> just
+the<01:26:29.440> project.<01:26:30.159> Yeah,<01:26:30.480> good.<01:26:30.800> That<01:26:30.960> that<01:26:31.199> I<01:26:31.360> was
+the project. Yeah, good. That that I was
+more<01:26:31.840> sure<01:26:32.000> of.<01:26:32.239> But<01:26:32.320> the<01:26:32.400> piece's<01:26:32.800> due
+more sure of. But the piece's due
+whenever<01:26:33.199> the<01:26:33.360> website<01:26:33.679> said<01:26:33.840> it<01:26:34.080> was<01:26:34.159> due.<01:26:34.480> So
+whenever the website said it was due. So
+yeah.<01:26:35.920> Okay.

@@ -1,0 +1,2605 @@
+okay<00:00:02.639> so<00:00:02.800> I'll<00:00:03.000> get
+okay so I'll get
+started<00:00:05.200> sent<00:00:05.440> an<00:00:05.560> email<00:00:05.920> but<00:00:06.080> just<00:00:06.200> in<00:00:06.399> case
+started sent an email but just in case
+someone<00:00:06.919> didn't<00:00:07.160> see<00:00:07.559> it<00:00:08.559> uh<00:00:08.800> next<00:00:09.040> week<00:00:09.240> we're
+someone didn't see it uh next week we're
+having<00:00:09.960> two<00:00:10.200> guest<00:00:10.440> lectures<00:00:10.800> one<00:00:10.920> on<00:00:11.000> Tuesday
+having two guest lectures one on Tuesday
+one<00:00:11.440> on<00:00:11.559> Thursday<00:00:11.920> the<00:00:12.040> Thursday<00:00:12.400> one<00:00:12.639> will
+one on Thursday the Thursday one will
+not<00:00:13.080> be<00:00:13.599> recorded<00:00:14.599> So<00:00:14.839> if<00:00:14.960> you<00:00:15.040> want<00:00:15.200> to<00:00:15.320> see
+not be recorded So if you want to see
+that<00:00:15.639> lecture<00:00:16.000> you<00:00:16.080> should<00:00:16.840> be<00:00:17.039> here<00:00:17.240> in
+that lecture you should be here in
+person<00:00:18.960> okay<00:00:19.160> so<00:00:19.400> today<00:00:19.960> I<00:00:20.039> want<00:00:20.400> to<00:00:21.400> uh<00:00:21.519> wrap
+person okay so today I want to uh wrap
+up<00:00:21.960> with<00:00:22.160> approximation<00:00:23.160> algorithms<00:00:24.160> so
+um<00:00:29.679> uh<00:00:30.000> we're<00:00:30.080> going<00:00:30.199> to<00:00:30.400> finish<00:00:30.759> FP
+um uh we're going to finish FP
+tasks<00:00:33.480> this<00:00:33.600> is<00:00:33.719> for<00:00:33.960> NP<00:00:34.120> we're<00:00:34.239> going<00:00:34.320> to<00:00:34.399> do
+tasks this is for NP we're going to do
+it<00:00:34.559> for
+napsack<00:00:38.760> two
+napsack two
+um<00:00:41.480> we're<00:00:41.640> going<00:00:41.760> to<00:00:42.039> look<00:00:42.160> at<00:00:42.360> F
+um we're going to look at F
+presses<00:00:44.800> I'm<00:00:44.879> going<00:00:45.000> to<00:00:45.160> do<00:00:45.280> this<00:00:45.399> for<00:00:45.520> dnf
+counting<00:00:51.320> and<00:00:51.440> then<00:00:52.000> three<00:00:53.000> we're<00:00:53.199> going<00:00:53.280> to
+counting and then three we're going to
+look<00:00:53.680> at<00:00:54.280> uh<00:00:54.680> semi-definite<00:00:55.399> programming
+and<00:01:08.400> we'll<00:01:08.640> look<00:01:08.840> at<00:01:09.360> Max
+and we'll look at Max
+cut<00:01:12.360> and<00:01:12.520> if<00:01:12.640> we<00:01:12.759> have<00:01:12.920> time<00:01:13.080> we<00:01:13.200> might<00:01:13.360> look<00:01:13.479> at
+cut and if we have time we might look at
+one<00:01:13.840> other<00:01:14.840> application<00:01:15.360> as
+well
+okay<00:01:21.240> so<00:01:21.479> let's<00:01:21.720> get<00:01:21.840> started<00:01:22.479> so<00:01:22.799> last<00:01:23.040> time
+okay so let's get started so last time
+we<00:01:23.479> saw<00:01:23.759> with<00:01:24.439> napsack<00:01:25.439> um<00:01:26.119> that<00:01:26.240> there<00:01:26.400> was<00:01:26.520> a
+we saw with napsack um that there was a
+ptas<00:01:28.439> right<00:01:28.560> a<00:01:28.680> ptas<00:01:29.079> just<00:01:29.200> means<00:01:29.360> for<00:01:29.479> any
+ptas right a ptas just means for any
+fixed<00:01:30.040> Epsilon<00:01:31.040> you<00:01:31.119> can<00:01:31.280> get<00:01:31.400> a<00:01:31.479> 1<00:01:31.680> plus
+fixed Epsilon you can get a 1 plus
+Epsilon<00:01:32.399> approximation<00:01:33.240> or<00:01:33.640> for<00:01:33.840> for<00:01:34.079> napsack
+Epsilon approximation or for for napsack
+I<00:01:34.640> guess<00:01:34.759> a<00:01:34.880> one<00:01:35.040> minus<00:01:35.360> Epsilon
+I guess a one minus Epsilon
+approximation<00:01:37.240> and<00:01:37.320> your<00:01:37.479> running<00:01:37.880> time<00:01:38.119> is<00:01:38.439> a
+approximation and your running time is a
+polinomial<00:01:39.119> in<00:01:39.280> N<00:01:39.720> if<00:01:39.880> epsilon's<00:01:40.320> a<00:01:40.600> constant
+polinomial in N if epsilon's a constant
+but<00:01:41.720> with<00:01:41.840> an<00:01:42.000> FP<00:01:42.640> Tas<00:01:43.640> we<00:01:44.040> want<00:01:44.200> to<00:01:44.399> say<00:01:44.600> that
+but with an FP Tas we want to say that
+your<00:01:44.840> dependence<00:01:45.200> on<00:01:45.320> Epsilon<00:01:45.640> is<00:01:46.040> also
+your dependence on Epsilon is also
+polinomial<00:01:48.079> okay
+polinomial okay
+so<00:01:50.200> so<00:01:50.360> we<00:01:50.520> want<00:01:51.280> um<00:01:52.640> poly<00:01:53.640> and<00:01:53.960> one<00:01:54.159> over
+so so we want um poly and one over
+Epsilon
+dependence<00:01:57.560> for<00:01:57.799> napsack
+and<00:02:02.840> I<00:02:03.000> think<00:02:03.439> actually<00:02:03.680> what<00:02:03.799> we'll<00:02:04.079> get<00:02:04.560> is
+and I think actually what we'll get is
+today<00:02:08.560> we'll<00:02:08.759> just<00:02:08.920> see<00:02:09.360> it's<00:02:09.479> a<00:02:09.640> very<00:02:09.800> simple
+today we'll just see it's a very simple
+algorithm<00:02:10.599> it'll<00:02:10.840> get<00:02:10.959> you<00:02:11.120> n<00:02:11.440> cubed<00:02:12.360> over
+algorithm it'll get you n cubed over
+Epsilon<00:02:13.760> 1<00:02:13.959> minus<00:02:14.319> Epsilon
+approximation<00:02:19.680> okay<00:02:20.680> um<00:02:20.840> do<00:02:20.959> I<00:02:21.040> have<00:02:21.120> a<00:02:21.200> scribe
+approximation okay um do I have a scribe
+today<00:02:22.360> good
+today good
+okay<00:02:25.000> um<00:02:25.480> the<00:02:26.360> I<00:02:26.480> did<00:02:26.599> some<00:02:26.760> searching<00:02:27.120> around
+okay um the I did some searching around
+to<00:02:27.519> see<00:02:28.280> what<00:02:29.280> uh<00:02:29.440> the<00:02:29.560> best<00:02:29.959> known<00:02:30.239> bound<00:02:30.640> was
+to see what uh the best known bound was
+for
+napsack<00:02:33.040> uh
+napsack uh
+so<00:02:35.800> it's<00:02:36.120> possible<00:02:36.920> to
+so it's possible to
+get<00:02:40.200> with<00:02:40.319> a<00:02:40.440> different
+get with a different
+algorithm<00:02:42.319> a<00:02:42.480> running<00:02:42.800> time<00:02:43.000> of<00:02:43.159> n<00:02:43.440> *<00:02:43.879> log<00:02:44.080> 1
+algorithm a running time of n * log 1
+Epsilon<00:02:45.720> plus<00:02:45.959> one<00:02:46.120> or<00:02:46.319> Epsilon<00:02:46.680> to<00:02:46.800> the<00:02:47.280> 4th
+Epsilon plus one or Epsilon to the 4th
+this<00:02:48.400> is<00:02:48.560> due<00:02:48.800> to<00:02:49.319> a
+Lawler
+[Music]
+in<00:02:57.120> 79
+I<00:03:01.640> searched<00:03:01.959> around<00:03:02.120> a<00:03:02.200> bit<00:03:02.360> to<00:03:02.480> see<00:03:02.640> if<00:03:02.760> there
+I searched around a bit to see if there
+was<00:03:03.040> anything<00:03:03.319> after<00:03:03.599> 79<00:03:04.080> where<00:03:04.200> someone
+was anything after 79 where someone
+improved<00:03:04.959> this<00:03:05.480> but<00:03:05.640> I<00:03:05.760> couldn't<00:03:06.040> find<00:03:06.280> things
+improved this but I couldn't find things
+maybe<00:03:06.799> I<00:03:06.879> just<00:03:06.959> didn't<00:03:07.239> search<00:03:07.519> hard<00:03:08.120> enough
+maybe I just didn't search hard enough
+um<00:03:10.319> so<00:03:10.560> yeah<00:03:10.720> there<00:03:10.799> you<00:03:10.959> go<00:03:11.159> for<00:03:11.319> if<00:03:11.400> you<00:03:11.519> want
+um so yeah there you go for if you want
+a<00:03:11.799> final<00:03:12.120> project<00:03:12.560> I'm<00:03:12.879> I'm<00:03:13.000> just
+a final project I'm I'm just
+kidding<00:03:15.159> um<00:03:16.159> yeah
+kidding um yeah
+okay<00:03:18.560> so<00:03:19.560> um<00:03:20.159> good<00:03:20.319> so<00:03:20.440> let<00:03:20.560> me<00:03:20.640> show<00:03:20.799> you<00:03:20.959> this
+algorithm<00:03:24.760> so<00:03:24.920> this<00:03:25.040> is<00:03:25.120> an<00:03:25.319> idea
+algorithm so this is an idea
+that<00:03:28.040> gets<00:03:28.200> used<00:03:28.439> a<00:03:28.560> lot<00:03:28.760> in<00:03:29.000> FP<00:03:29.360> tases<00:03:30.000> which
+that gets used a lot in FP tases which
+is<00:03:30.720> so<00:03:30.920> the<00:03:31.080> idea<00:03:31.519> is
+rounding<00:03:36.799> so<00:03:37.040> remember<00:03:37.360> the
+rounding so remember the
+setup<00:03:40.280> okay<00:03:40.439> we<00:03:40.560> have<00:03:40.680> n<00:03:40.959> items<00:03:41.599> we<00:03:41.720> have<00:03:41.799> a
+setup okay we have n items we have a
+napsack<00:03:42.400> first<00:03:42.560> of<00:03:42.640> all<00:03:42.799> a
+napsack<00:03:46.120> of<00:03:46.439> size
+napsack of size
+W<00:03:49.400> capital
+W capital
+W<00:03:52.400> and<00:03:52.519> then<00:03:52.640> we<00:03:52.799> have<00:03:53.000> n
+items<00:03:57.879> with<00:03:58.560> uh<00:03:59.079> weights
+W1<00:04:03.799> up<00:04:03.959> to<00:04:04.720> WN<00:04:05.720> and<00:04:05.879> also
+W1 up to WN and also
+values<00:04:08.640> V1<00:04:09.640> up<00:04:09.760> to<00:04:10.000> VN<00:04:11.000> remember<00:04:11.439> and<00:04:11.760> the<00:04:11.920> goal
+values V1 up to VN remember and the goal
+is<00:04:12.280> to<00:04:12.519> pack<00:04:12.760> this
+is to pack this
+napsack<00:04:14.920> um<00:04:15.159> don't<00:04:15.840> don't<00:04:16.079> overload<00:04:16.840> it<00:04:17.320> you
+napsack um don't don't overload it you
+can't<00:04:17.759> put<00:04:18.639> more<00:04:18.880> than<00:04:19.120> W<00:04:19.720> total<00:04:20.040> weight<00:04:20.280> in
+can't put more than W total weight in
+the<00:04:20.759> napsack<00:04:21.759> and<00:04:22.079> uh<00:04:22.240> the<00:04:22.360> items<00:04:22.639> that<00:04:22.720> you
+the napsack and uh the items that you
+put<00:04:22.960> in<00:04:23.080> there<00:04:23.240> you<00:04:23.360> want<00:04:23.960> you<00:04:24.160> you're<00:04:24.320> going
+put in there you want you you're going
+to<00:04:24.600> collect<00:04:25.040> the<00:04:25.199> sum<00:04:25.440> of<00:04:25.639> values<00:04:25.960> of<00:04:26.160> those
+to collect the sum of values of those
+items<00:04:26.680> and<00:04:26.759> you<00:04:26.840> want<00:04:26.960> to<00:04:27.080> get<00:04:27.199> as<00:04:27.320> much<00:04:27.520> value
+items and you want to get as much value
+as
+possible<00:04:29.560> okay<00:04:29.759> okay<00:04:30.560> so<00:04:30.759> the<00:04:30.919> basic<00:04:31.280> idea
+possible okay okay so the basic idea
+is<00:04:33.720> well<00:04:33.880> what<00:04:33.960> do<00:04:34.080> we
+know<00:04:39.199> we<00:04:39.320> know<00:04:39.520> that<00:04:39.680> there<00:04:39.800> is<00:04:39.960> an<00:04:40.199> algorithm
+know we know that there is an algorithm
+with<00:04:41.000> running
+time
+NV<00:04:51.120> right<00:04:51.240> so<00:04:51.360> we<00:04:51.479> mentioned<00:04:51.800> this<00:04:52.039> last<00:04:52.240> time
+NV right so we mentioned this last time
+this<00:04:52.520> is<00:04:52.639> via<00:04:52.919> dynamic<00:04:53.320> programming<00:04:53.919> where
+this is via dynamic programming where
+here<00:04:54.440> V<00:04:55.360> is<00:04:55.520> just<00:04:55.639> the<00:04:55.759> sum<00:04:55.960> of<00:04:56.080> the
+vi<00:04:59.360> okay<00:04:59.479> and<00:04:59.720> unfortunately<00:05:00.280> this<00:05:00.360> is<00:05:00.600> not
+vi okay and unfortunately this is not
+polinomial<00:05:02.120> time<00:05:03.120> because<00:05:03.720> the<00:05:03.840> running<00:05:04.160> time
+polinomial time because the running time
+depends<00:05:04.880> on<00:05:05.520> the<00:05:05.720> sizes<00:05:06.039> of<00:05:06.160> the<00:05:06.240> numbers<00:05:06.639> as
+depends on the sizes of the numbers as
+opposed<00:05:07.000> to<00:05:07.080> the<00:05:07.199> logarithms<00:05:07.840> of<00:05:08.160> the<00:05:08.320> numbers
+opposed to the logarithms of the numbers
+okay<00:05:09.479> writing<00:05:09.800> down<00:05:09.960> a<00:05:10.120> number<00:05:10.320> V<00:05:10.560> only<00:05:10.720> takes
+okay writing down a number V only takes
+log<00:05:11.160> V<00:05:11.360> bits<00:05:12.199> so<00:05:12.360> the<00:05:12.560> input<00:05:13.560> is<00:05:13.720> exponentially
+log V bits so the input is exponentially
+smaller<00:05:14.720> than<00:05:15.400> V<00:05:15.919> potentially
+smaller than V potentially
+okay<00:05:18.160> uh<00:05:18.319> so<00:05:19.000> the<00:05:19.199> trick<00:05:19.520> is<00:05:19.639> just<00:05:19.759> to<00:05:19.919> make<00:05:20.120> V
+okay uh so the trick is just to make V
+small<00:05:23.199> okay
+small okay
+so<00:05:26.160> to<00:05:26.360> get<00:05:26.520> FP<00:05:26.880> Tas<00:05:27.160> what<00:05:27.240> are<00:05:27.280> we<00:05:27.400> going<00:05:27.479> to<00:05:27.639> do
+we're<00:05:31.759> going<00:05:31.840> to<00:05:32.000> Define<00:05:32.280> new
+values<00:05:36.960> we're<00:05:37.080> going<00:05:37.199> to<00:05:37.319> set<00:05:37.680> V
+values we're going to set V
+Prime<00:05:39.600> to<00:05:39.840> equal<00:05:40.160> or<00:05:40.319> VI
+Prime to equal or VI
+Prime<00:05:42.600> to
+Prime to
+be<00:05:44.479> n<00:05:44.960> over<00:05:45.600> Epsilon
+be n over Epsilon
+times<00:05:48.600> uh<00:05:49.039> VI<00:05:49.720> over<00:05:50.000> V
+times uh VI over V
+Max<00:05:52.120> and<00:05:52.360> let's<00:05:52.600> make<00:05:52.720> it<00:05:52.919> let's<00:05:53.080> floor<00:05:53.400> it<00:05:53.520> so
+Max and let's make it let's floor it so
+that<00:05:53.800> it's<00:05:53.880> an
+integer<00:05:58.160> okay<00:05:59.039> and<00:05:59.240> then
+run<00:06:03.520> an<00:06:03.720> O<00:06:03.919> of<00:06:04.120> n<00:06:04.720> v<00:06:05.160> Prime
+algorithm<00:06:10.199> that's<00:06:10.360> going<00:06:10.440> to<00:06:10.599> give<00:06:10.720> us<00:06:10.840> a<00:06:11.319> set
+algorithm that's going to give us a set
+right<00:06:12.440> this<00:06:12.520> is<00:06:12.680> going<00:06:12.759> to<00:06:12.840> be<00:06:12.960> an<00:06:13.160> exact
+right this is going to be an exact
+algorithm<00:06:14.560> for<00:06:14.720> the<00:06:14.840> new
+algorithm for the new
+values
+okay<00:06:18.919> and<00:06:19.080> that's<00:06:19.240> going<00:06:19.319> to<00:06:19.440> give<00:06:19.560> us<00:06:19.680> a<00:06:19.840> set
+okay and that's going to give us a set
+of<00:06:20.199> items<00:06:20.680> which<00:06:20.800> is<00:06:21.000> the<00:06:21.160> optimal<00:06:21.560> thing<00:06:21.720> for
+of items which is the optimal thing for
+this<00:06:22.000> new<00:06:22.160> set<00:06:22.319> of<00:06:22.479> values<00:06:23.280> and<00:06:23.400> the<00:06:23.599> claim<00:06:23.880> is
+this new set of values and the claim is
+just<00:06:24.280> if<00:06:24.400> you<00:06:24.520> use<00:06:24.800> that<00:06:25.000> set<00:06:25.240> for<00:06:25.400> the
+just if you use that set for the
+original<00:06:26.240> problem<00:06:26.680> with<00:06:26.840> the<00:06:26.919> original
+original problem with the original
+values<00:06:28.199> you'll<00:06:28.440> get<00:06:28.599> at<00:06:28.720> least<00:06:28.880> 1us<00:06:29.240> Epsilon
+values you'll get at least 1us Epsilon
+times<00:06:29.880> opt<00:06:30.880> okay<00:06:31.080> so<00:06:31.319> I'll<00:06:31.520> justify<00:06:32.000> that<00:06:32.120> for
+times opt okay so I'll justify that for
+you<00:06:33.000> but<00:06:33.160> what's<00:06:33.400> v<00:06:33.599> Prime
+here<00:06:42.000> or<00:06:42.199> any<00:06:42.400> bound<00:06:42.680> on<00:06:42.840> V<00:06:43.199> Prime<00:06:44.199> capital<00:06:44.520> V
+Prime<00:06:48.520> n<00:06:48.680> squ<00:06:48.919> over<00:06:49.039> Epsilon<00:06:49.479> right<00:06:49.759> so<00:06:49.960> this
+Prime n squ over Epsilon right so this
+thing<00:06:51.199> this<00:06:51.400> thing<00:06:51.639> here<00:06:52.199> we<00:06:52.360> have<00:06:52.520> V<00:06:52.800> Prime<00:06:53.199> is
+thing this thing here we have V Prime is
+at
+most<00:06:56.039> uh<00:06:56.520> n<00:06:56.840> *<00:06:57.360> the<00:06:57.520> max<00:06:57.879> over<00:06:58.199> I<00:06:59.120> of<00:06:59.280> V<00:06:59.639> I<00:07:00.319> Prime
+most uh n * the max over I of V I Prime
+and<00:07:02.080> well<00:07:02.479> VI<00:07:02.879> is<00:07:02.960> at<00:07:03.120> most<00:07:03.360> Vmax<00:07:03.759> certainly<00:07:04.120> so
+and well VI is at most Vmax certainly so
+this<00:07:04.360> is<00:07:04.440> at<00:07:04.560> most<00:07:04.720> one<00:07:04.919> so<00:07:05.039> this<00:07:05.080> is<00:07:05.160> at<00:07:05.280> most<00:07:05.400> n
+this is at most one so this is at most n
+over<00:07:05.720> Epsilon<00:07:06.120> so<00:07:06.240> this<00:07:06.319> is<00:07:06.440> at<00:07:06.639> most<00:07:07.319> n<00:07:07.599> Square
+over Epsilon so this is at most n Square
+over<00:07:08.319> Epsilon<00:07:09.319> so<00:07:09.479> this<00:07:09.639> running<00:07:09.960> time<00:07:10.160> is<00:07:10.319> at
+over Epsilon so this running time is at
+most<00:07:10.759> what<00:07:10.879> I<00:07:11.000> said<00:07:11.160> n<00:07:11.360> Cub<00:07:11.599> over<00:07:11.720> Epsilon<00:07:12.319> so
+most what I said n Cub over Epsilon so
+that's<00:07:12.599> all<00:07:12.720> there<00:07:12.800> is<00:07:12.960> to
+it<00:07:21.440> and<00:07:21.560> the<00:07:21.879> the<00:07:22.000> basic<00:07:22.280> idea<00:07:22.599> is<00:07:23.599> something
+it and the the basic idea is something
+fairly<00:07:24.240> simple<00:07:24.599> so<00:07:24.840> what's<00:07:25.039> the<00:07:25.160> basic<00:07:25.520> idea
+okay<00:07:31.840> first<00:07:32.039> of<00:07:32.199> all<00:07:32.919> we
+okay first of all we
+know<00:07:36.039> that<00:07:36.319> opt<00:07:36.759> Prime<00:07:37.560> by<00:07:37.680> opt<00:07:37.960> Prime<00:07:38.199> I<00:07:38.280> mean
+know that opt Prime by opt Prime I mean
+op<00:07:38.879> the<00:07:39.039> value<00:07:39.360> of<00:07:39.599> opt<00:07:40.000> in<00:07:40.120> the<00:07:40.280> new<00:07:40.680> problem
+op the value of opt in the new problem
+okay<00:07:41.639> after<00:07:41.800> you<00:07:41.919> change<00:07:42.240> these<00:07:42.440> values<00:07:43.240> opt
+okay after you change these values opt
+Prime<00:07:44.039> is<00:07:44.240> at<00:07:44.479> least<00:07:45.479> Vmax
+Prime is at least Vmax
+Prime<00:07:48.120> right<00:07:48.240> the<00:07:48.400> maximum<00:07:49.199> value
+Prime right the maximum value
+um<00:07:51.759> the<00:07:51.919> maximum<00:07:52.400> value<00:07:53.360> of<00:07:53.560> the<00:07:53.680> vi<00:07:54.199> primes
+um the maximum value of the vi primes
+right<00:07:55.919> and<00:07:56.560> one<00:07:56.720> of<00:07:56.840> the<00:07:57.000> items<00:07:57.479> actually<00:07:58.000> has
+right and one of the items actually has
+V<00:08:00.080> Max<00:08:01.080> right<00:08:01.720> so<00:08:01.960> that<00:08:02.159> item<00:08:02.479> will<00:08:02.759> have<00:08:03.759> at
+V Max right so that item will have at
+least<00:08:04.120> n<00:08:04.319> over<00:08:04.720> Epsilon
+value
+okay<00:08:12.319> but<00:08:12.479> how<00:08:12.639> much<00:08:12.919> value<00:08:13.280> did<00:08:13.440> we<00:08:14.080> lose<00:08:15.080> uh
+okay but how much value did we lose uh
+in<00:08:15.360> any<00:08:15.680> given
+in any given
+solution<00:08:18.560> in<00:08:18.720> this<00:08:18.879> new<00:08:19.080> rounded<00:08:19.919> problem
+solution in this new rounded problem
+well<00:08:22.400> for<00:08:22.639> each<00:08:22.840> item<00:08:23.039> in<00:08:23.159> a<00:08:23.440> set<00:08:24.440> we<00:08:24.599> rounded
+well for each item in a set we rounded
+down<00:08:25.360> its<00:08:25.639> value<00:08:26.000> after<00:08:26.240> this<00:08:26.440> multiplication
+down its value after this multiplication
+right<00:08:27.919> so<00:08:28.120> by<00:08:28.280> rounding<00:08:28.759> down<00:08:29.039> we<00:08:29.199> at<00:08:29.520> most
+right so by rounding down we at most
+decreased<00:08:30.199> its<00:08:30.400> value<00:08:30.759> by<00:08:31.240> one<00:08:32.240> so<00:08:32.640> I<00:08:32.719> mean<00:08:32.839> the
+decreased its value by one so I mean the
+basic<00:08:33.320> idea<00:08:33.680> is<00:08:34.120> I'll<00:08:34.279> make<00:08:34.399> this<00:08:34.560> more
+basic idea is I'll make this more
+formal<00:08:37.120> after
+formal after
+rounding<00:08:40.240> right<00:08:40.399> I<00:08:40.440> mean<00:08:40.599> if<00:08:40.719> there<00:08:40.839> was<00:08:41.000> no
+rounding right I mean if there was no
+rounding<00:08:41.640> if<00:08:41.760> we<00:08:41.959> just<00:08:42.560> if<00:08:42.640> we<00:08:42.800> just
+rounding if we just if we just
+multiplied<00:08:43.599> by<00:08:43.760> some<00:08:44.200> scalar<00:08:44.640> on<00:08:44.839> every
+multiplied by some scalar on every
+single<00:08:45.320> value<00:08:46.279> then<00:08:46.480> op<00:08:46.760> doesn't<00:08:47.040> change
+single value then op doesn't change
+right<00:08:47.880> every<00:08:48.120> set<00:08:48.399> just<00:08:48.600> has<00:08:49.200> a<00:08:49.600> the<00:08:49.680> same
+right every set just has a the same
+multiplicative<00:08:51.080> uh<00:08:51.279> Factor<00:08:51.600> times<00:08:51.800> its<00:08:51.920> old
+multiplicative uh Factor times its old
+value<00:08:53.320> but<00:08:53.560> by<00:08:53.680> this<00:08:53.839> rounding<00:08:54.240> we
+value but by this rounding we
+potentially<00:08:54.800> lose<00:08:55.120> one<00:08:55.440> from<00:08:55.640> every<00:08:56.000> value<00:08:57.000> so
+potentially lose one from every value so
+after<00:08:58.160> rounding
+after rounding
+any<00:09:01.600> set<00:09:02.399> let's<00:09:02.600> call<00:09:02.720> it<00:09:02.959> s<00:09:03.760> a<00:09:03.920> subset<00:09:04.279> of<00:09:04.399> the
+any set let's call it s a subset of the
+items<00:09:06.040> loses<00:09:07.040> at
+items loses at
+most<00:09:09.760> s<00:09:10.360> which<00:09:10.440> is<00:09:10.600> at<00:09:10.880> most<00:09:11.200> n
+value<00:09:15.200> right<00:09:16.200> which<00:09:16.360> is<00:09:16.519> at<00:09:16.959> most<00:09:17.959> Epsilon
+value right which is at most Epsilon
+time<00:09:18.800> Ops
+Prime<00:09:25.880> okay
+Prime okay
+so<00:09:28.440> let's<00:09:28.680> just<00:09:28.880> now<00:09:29.440> make<00:09:29.640> this<00:09:29.760> a<00:09:29.800> little
+so let's just now make this a little
+more<00:09:30.360> very<00:09:30.680> slightly<00:09:31.040> more<00:09:31.240> formal<00:09:31.839> so
+claim<00:09:35.640> if
+claim if
+DP
+unrounded
+instance
+returns<00:09:47.320> some
+returns some
+set
+a<00:09:53.440> okay<00:09:53.640> which<00:09:53.760> is<00:09:53.880> subset<00:09:54.240> of
+a okay which is subset of
+n<00:09:55.959> then<00:09:56.959> the<00:09:57.160> value<00:09:57.480> of<00:09:57.680> a
+n then the value of a
+is<00:10:00.800> at<00:10:01.000> least<00:10:01.399> one<00:10:01.600> minus<00:10:01.920> Epsilon
+opt<00:10:05.600> the<00:10:05.720> original<00:10:06.320> if<00:10:06.399> you<00:10:06.560> take<00:10:06.920> the<00:10:07.200> uh<00:10:07.560> the
+opt the original if you take the uh the
+original<00:10:08.120> valuation<00:10:08.720> and<00:10:08.839> compare<00:10:09.160> to<00:10:09.279> opt<00:10:09.440> of
+original valuation and compare to opt of
+the<00:10:09.640> original<00:10:10.079> problem<00:10:11.000> so
+the original problem so
+proof<00:10:14.079> okay<00:10:14.279> what's<00:10:14.440> the<00:10:14.560> proof<00:10:14.760> of<00:10:15.440> that
+proof okay what's the proof of that
+well<00:10:18.120> for<00:10:18.399> all
+well for all
+sets<00:10:20.360> s<00:10:21.079> what<00:10:21.200> we<00:10:21.320> said<00:10:21.600> over<00:10:21.839> there<00:10:22.560> s<00:10:22.800> subset
+sets s what we said over there s subset
+of<00:10:23.200> one<00:10:23.399> to
+n<00:10:26.600> we<00:10:26.760> know<00:10:27.399> that<00:10:28.399> the<00:10:28.640> value
+n we know that the value
+if<00:10:30.839> you<00:10:31.040> look<00:10:31.279> at<00:10:31.720> so<00:10:32.240> so<00:10:32.720> um<00:10:33.720> let<00:10:33.800> me<00:10:34.000> write<00:10:34.120> it
+if you look at so so um let me write it
+like<00:10:34.440> this<00:10:34.800> so<00:10:35.880> Alpha<00:10:36.880> so<00:10:37.079> the<00:10:37.320> value<00:10:37.959> Prime<00:10:38.240> of
+like this so Alpha so the value Prime of
+s<00:10:39.760> is<00:10:39.959> at<00:10:40.160> least<00:10:41.079> Alpha<00:10:41.480> the<00:10:41.560> old<00:10:41.839> value<00:10:42.079> of<00:10:42.240> s
+s is at least Alpha the old value of s
+minus<00:10:43.000> the<00:10:43.200> size<00:10:43.399> of<00:10:43.600> s<00:10:44.600> and<00:10:44.680> it's<00:10:44.880> at<00:10:45.040> most
+minus the size of s and it's at most
+Alpha<00:10:46.320> times<00:10:46.680> the<00:10:46.800> value<00:10:47.040> of
+Alpha times the value of
+s
+where<00:10:51.760> Alpha<00:10:52.160> is<00:10:52.399> this<00:10:52.560> scaling<00:10:53.360> that<00:10:53.440> we're
+where Alpha is this scaling that we're
+doing
+um<00:10:56.920> and<00:10:57.320> over<00:10:57.639> Epsilon<00:10:58.279> time<00:10:58.560> VMAX
+right<00:11:06.519> that's<00:11:06.720> what<00:11:06.800> I<00:11:06.920> just<00:11:07.000> said<00:11:07.160> over<00:11:07.399> here
+right that's what I just said over here
+we<00:11:07.639> lose<00:11:07.839> at<00:11:08.000> most<00:11:08.200> the<00:11:08.399> size
+value
+so<00:11:14.720> let<00:11:15.720> a<00:11:16.360> star<00:11:17.360> be<00:11:18.079> some
+so let a star be some
+optimal
+set<00:11:22.839> for<00:11:23.040> the<00:11:23.240> original<00:11:23.519> lapet<00:11:24.040> problem
+set for the original lapet problem
+before<00:11:24.600> rounding
+right<00:11:34.360> so<00:11:34.519> what<00:11:34.600> do<00:11:34.720> I<00:11:34.800> want<00:11:34.880> to<00:11:34.959> show<00:11:35.160> I<00:11:35.240> want
+right so what do I want to show I want
+to<00:11:35.399> show<00:11:35.519> a<00:11:35.639> lower<00:11:35.880> bound<00:11:36.120> on<00:11:36.240> the<00:11:36.399> value<00:11:36.639> of<00:11:36.839> a
+to show a lower bound on the value of a
+what<00:11:37.920> do<00:11:38.079> I<00:11:38.200> know<00:11:38.440> well<00:11:38.560> I<00:11:38.680> know<00:11:38.920> that<00:11:39.079> the
+what do I know well I know that the
+value<00:11:39.519> of
+a<00:11:42.839> is<00:11:43.079> at
+a is at
+least<00:11:45.000> one<00:11:45.320> over<00:11:45.560> Alpha<00:11:46.279> times<00:11:47.000> the<00:11:47.200> value
+least one over Alpha times the value
+Prime<00:11:48.279> of
+a
+right<00:11:53.760> that's<00:11:53.959> just<00:11:54.120> that<00:11:54.240> inequality
+right that's just that inequality
+here<00:11:56.880> and<00:11:57.040> then<00:11:57.240> I<00:11:57.360> know<00:11:57.600> that<00:11:57.800> a<00:11:58.160> is<00:11:58.320> the
+here and then I know that a is the
+optimal<00:11:58.920> solution<00:11:59.560> to<00:11:59.720> the<00:11:59.839> new<00:12:00.600> valuations
+optimal solution to the new valuations
+right<00:12:02.399> so<00:12:02.639> this<00:12:02.760> is<00:12:02.959> certainly<00:12:03.399> at<00:12:03.519> least<00:12:03.800> 1
+right so this is certainly at least 1
+Alp<00:12:05.120> time<00:12:05.959> V<00:12:06.120> Prime<00:12:06.360> of<00:12:06.480> a
+star<00:12:12.240> okay<00:12:13.240> and<00:12:13.480> now<00:12:14.199> now<00:12:14.320> I<00:12:14.399> want<00:12:14.519> to<00:12:14.680> go<00:12:14.839> back
+star okay and now now I want to go back
+toward<00:12:15.480> opt<00:12:15.760> for<00:12:15.880> the<00:12:16.000> original<00:12:16.480> problem<00:12:17.199> so<00:12:17.440> V
+toward opt for the original problem so V
+Prime<00:12:17.880> of<00:12:18.000> a<00:12:18.199> star<00:12:18.440> this<00:12:18.519> is<00:12:18.600> true<00:12:18.760> for<00:12:18.880> all
+Prime of a star this is true for all
+sets<00:12:19.320> so<00:12:19.480> in<00:12:19.560> particular<00:12:19.880> it's<00:12:20.000> true<00:12:20.160> for<00:12:20.320> a
+sets so in particular it's true for a
+star<00:12:21.199> V<00:12:21.399> Prime<00:12:21.600> of<00:12:21.760> a<00:12:22.000> star<00:12:22.959> is<00:12:23.279> at<00:12:23.440> least<00:12:23.800> Alpha
+star V Prime of a star is at least Alpha
+V<00:12:24.440> of<00:12:24.600> a<00:12:24.800> star<00:12:25.120> which<00:12:25.240> is<00:12:25.399> opt<00:12:26.240> minus<00:12:26.560> the<00:12:26.760> size
+V of a star which is opt minus the size
+of<00:12:27.160> a<00:12:27.360> star<00:12:28.240> so<00:12:28.440> this<00:12:28.519> is<00:12:28.720> at<00:12:28.880> least
+uh<00:12:32.399> Alpha<00:12:32.839> times<00:12:33.440> so<00:12:33.680> this<00:12:33.800> is<00:12:34.240> V<00:12:34.440> of<00:12:34.600> a<00:12:34.800> star
+uh Alpha times so this is V of a star
+which<00:12:35.199> is
+which is
+opt<00:12:37.440> this<00:12:37.560> is
+opt this is
+opt<00:12:40.639> minus
+opt minus
+Alpha
+times<00:12:46.639> uh<00:12:47.639> or<00:12:47.839> one<00:12:48.000> over<00:12:48.240> Alpha
+sorry<00:12:52.120> times<00:12:52.480> the<00:12:52.600> size<00:12:52.800> of<00:12:52.920> a
+star<00:12:58.519> okay
+[Music]
+um
+and<00:13:07.519> that's<00:13:07.680> certainly<00:13:08.040> at<00:13:08.199> most<00:13:08.800> n<00:13:09.800> so<00:13:10.000> this
+and that's certainly at most n so this
+is<00:13:10.279> at<00:13:10.519> least<00:13:11.680> opt<00:13:12.680> minus<00:13:13.040> n<00:13:13.279> over
+is at least opt minus n over
+Alpha<00:13:15.800> which<00:13:15.920> is<00:13:16.120> equal<00:13:16.399> to<00:13:16.880> which<00:13:16.959> is<00:13:17.120> at
+Alpha which is equal to which is at
+least
+opt
+minus<00:13:21.279> Epsilon<00:13:22.279> time<00:13:22.639> V<00:13:23.120> Max<00:13:24.120> that's<00:13:24.279> just<00:13:24.399> the
+minus Epsilon time V Max that's just the
+definition<00:13:24.880> of
+definition of
+alpha<00:13:27.199> right<00:13:27.920> and<00:13:28.120> now<00:13:28.480> VMAX<00:13:29.320> opt<00:13:29.639> is<00:13:29.959> opt<00:13:30.160> is
+alpha right and now VMAX opt is opt is
+certainly<00:13:30.519> at<00:13:30.600> least<00:13:30.800> V
+Max<00:13:40.519> okay<00:13:40.680> so<00:13:40.920> that's<00:13:41.399> that's
+it<00:13:45.440> so<00:13:45.600> are<00:13:45.760> there<00:13:45.959> questions
+it so are there questions
+about<00:13:47.959> about<00:13:48.240> this<00:13:48.560> FP<00:13:48.920> task
+okay<00:14:07.680> there<00:14:07.800> are<00:14:07.920> no<00:14:08.120> questions<00:14:09.079> then<00:14:10.079> let's
+okay there are no questions then let's
+be<00:14:10.720> done<00:14:10.920> with
+be done with
+napsack<00:14:13.160> and<00:14:14.160> before<00:14:14.399> I<00:14:14.519> move<00:14:14.759> actually
+napsack and before I move actually
+before<00:14:15.199> I<00:14:15.279> move<00:14:15.440> on<00:14:15.519> to
+before I move on to
+fesses<00:14:17.279> you
+fesses you
+know<00:14:19.480> you<00:14:19.600> could<00:14:20.279> ask<00:14:21.279> when<00:14:21.519> can<00:14:21.639> I<00:14:21.800> know<00:14:22.000> for
+know you could ask when can I know for
+sure<00:14:22.639> that<00:14:22.800> there<00:14:22.959> is<00:14:23.279> no<00:14:24.120> FP
+sure that there is no FP
+task<00:14:26.399> right<00:14:26.839> not<00:14:27.040> every<00:14:27.279> problem<00:14:27.519> has<00:14:27.639> an<00:14:27.759> FP
+task right not every problem has an FP
+task<00:14:28.880> okay<00:14:29.160> okay<00:14:29.440> so<00:14:30.440> uh<00:14:30.600> for<00:14:30.759> example<00:14:31.000> for<00:14:31.160> set
+task okay okay so uh for example for set
+cover<00:14:31.639> we<00:14:31.759> know<00:14:31.880> you<00:14:32.040> can't<00:14:32.240> beat<00:14:32.480> login
+cover we know you can't beat login
+approximation<00:14:33.920> not<00:14:34.120> just<00:14:34.279> because<00:14:34.480> of
+approximation not just because of
+integrality<00:14:35.160> gaps<00:14:35.480> but<00:14:35.639> there's<00:14:35.920> actually<00:14:36.160> a
+integrality gaps but there's actually a
+proof<00:14:36.800> that<00:14:37.600> unless<00:14:37.839> you<00:14:37.959> can<00:14:38.079> solve<00:14:38.360> sat
+proof that unless you can solve sat
+really<00:14:39.040> fast<00:14:39.360> which<00:14:39.480> we<00:14:39.600> don't<00:14:39.839> expect
+really fast which we don't expect
+there's<00:14:40.600> no<00:14:41.440> there's<00:14:41.639> nothing<00:14:41.839> better<00:14:42.040> than<00:14:42.160> a
+there's no there's nothing better than a
+lawn<00:14:42.480> and
+lawn and
+approximation<00:14:44.199> sometimes<00:14:44.480> for<00:14:44.639> some
+approximation sometimes for some
+problems<00:14:45.199> you<00:14:45.279> know<00:14:45.360> you<00:14:45.480> can't<00:14:45.600> beat<00:14:45.759> a<00:14:45.880> two
+problems you know you can't beat a two
+approximation<00:14:46.880> for<00:14:47.079> vertex<00:14:47.560> cover<00:14:48.560> it's
+approximation for vertex cover it's
+known<00:14:49.040> that<00:14:49.160> there's<00:14:49.320> a<00:14:49.480> fixed
+known that there's a fixed
+constant<00:14:51.360> um<00:14:51.920> I<00:14:52.000> forgot<00:14:52.279> exactly<00:14:52.560> what<00:14:52.639> that
+constant um I forgot exactly what that
+constant<00:14:53.040> is<00:14:53.199> but<00:14:53.320> it's<00:14:53.440> bigger<00:14:53.639> than<00:14:53.800> one
+constant is but it's bigger than one
+that<00:14:54.800> unless<00:14:55.120> P<00:14:55.279> equals<00:14:55.519> NP<00:14:55.920> you<00:14:56.040> can't<00:14:56.279> beat
+that unless P equals NP you can't beat
+that<00:14:56.839> approximation<00:14:57.440> ratio<00:14:58.440> okay<00:14:58.560> and
+that approximation ratio okay and
+there's<00:14:58.839> there's<00:14:59.160> also<00:14:59.320> some<00:14:59.600> recent<00:14:59.920> more
+there's there's also some recent more
+recent<00:15:00.399> evidence<00:15:00.759> that<00:15:00.839> says<00:15:01.040> you<00:15:01.160> can't<00:15:01.320> beat
+recent evidence that says you can't beat
+a<00:15:01.600> two<00:15:01.800> approximation<00:15:02.399> if<00:15:02.480> you<00:15:02.639> assume<00:15:02.959> some
+a two approximation if you assume some
+conjecture<00:15:04.920> but<00:15:05.600> okay<00:15:05.800> but<00:15:06.120> sometimes<00:15:06.360> there
+conjecture but okay but sometimes there
+are<00:15:06.639> just<00:15:07.240> kind<00:15:07.360> of<00:15:08.160> easy<00:15:08.519> reasons<00:15:08.959> why
+are just kind of easy reasons why
+there's<00:15:09.279> no<00:15:09.440> FP<00:15:10.120> Tas<00:15:11.120> okay
+so<00:15:15.120> you<00:15:15.240> don't<00:15:15.440> always<00:15:15.680> have<00:15:15.839> enough<00:15:16.120> P
+tests<00:15:23.040> and<00:15:23.160> let's<00:15:23.360> give<00:15:23.480> it<00:15:23.680> a<00:15:23.839> very<00:15:24.040> simple
+tests and let's give it a very simple
+example<00:15:26.040> so<00:15:26.279> bin<00:15:26.600> packing
+okay<00:15:34.759> in<00:15:34.920> bin<00:15:35.319> packing<00:15:36.319> what's<00:15:36.560> the<00:15:36.680> input
+okay in bin packing what's the input
+they're<00:15:37.360> n
+items<00:15:41.399> with
+sizes<00:15:44.720> S1<00:15:45.399> S2<00:15:46.079> up<00:15:46.240> to<00:15:46.720> SN<00:15:47.720> and<00:15:47.920> all<00:15:48.120> those<00:15:48.360> sizes
+sizes S1 S2 up to SN and all those sizes
+are<00:15:48.880> in<00:15:49.000> the<00:15:49.240> range<00:15:50.240> from<00:15:51.199> 0<00:15:51.560> to<00:15:51.720> one
+bins<00:16:02.639> have
+capacity<00:16:07.000> exactly
+one<00:16:11.880> and<00:16:11.959> then<00:16:12.360> the<00:16:12.800> the
+one and then the the
+goal<00:16:15.199> is<00:16:15.440> to
+goal is to
+pack<00:16:17.480> all
+items<00:16:21.199> into<00:16:22.199> as<00:16:22.440> few
+bins<00:16:26.160> as<00:16:26.440> possible
+okay<00:16:35.040> and<00:16:35.120> you<00:16:35.279> can't<00:16:35.519> cut<00:16:35.720> items<00:16:36.079> up<00:16:36.399> okay<00:16:36.560> so
+okay and you can't cut items up okay so
+either<00:16:37.880> you<00:16:38.000> have<00:16:38.120> to<00:16:38.360> put<00:16:39.079> an<00:16:39.319> item<00:16:39.639> fully
+either you have to put an item fully
+into<00:16:40.199> a<00:16:40.279> single
+bin<00:16:45.240> people<00:16:45.440> have<00:16:45.560> questions<00:16:45.839> about<00:16:45.959> the
+bin people have questions about the
+problem
+statement<00:16:52.240> okay<00:16:53.240> so<00:16:54.240> it's<00:16:54.440> known<00:16:54.880> that<00:16:55.120> bin
+statement okay so it's known that bin
+packing<00:16:55.839> as<00:16:55.959> I've<00:16:56.120> stated<00:16:56.399> it<00:16:56.639> here<00:16:57.319> is<00:16:58.079> NP
+packing as I've stated it here is NP
+hard<00:16:59.240> okay<00:16:59.360> and<00:16:59.480> the<00:16:59.639> decision<00:17:00.160> problem<00:17:00.839> the
+hard okay and the decision problem the
+decision<00:17:01.399> problem
+decision problem
+of<00:17:03.560> can<00:17:04.000> can<00:17:04.160> you<00:17:04.400> pack<00:17:04.720> these<00:17:04.959> bin<00:17:05.439> these
+of can can you pack these bin these
+items<00:17:05.959> into<00:17:06.199> even<00:17:06.400> two
+items into even two
+bins<00:17:08.280> that<00:17:08.439> even<00:17:08.720> that<00:17:08.919> problem<00:17:09.160> is<00:17:09.400> NP
+bins that even that problem is NP
+complete
+okay<00:17:13.000> so<00:17:14.280> question<00:17:15.280> given<00:17:15.760> what<00:17:15.880> I've<00:17:16.079> just
+okay so question given what I've just
+told<00:17:16.439> you<00:17:16.640> do<00:17:16.760> you<00:17:16.919> expect<00:17:17.120> to<00:17:17.240> have<00:17:17.319> an<00:17:17.480> FP
+told you do you expect to have an FP
+task<00:17:18.120> for<00:17:18.280> bin<00:17:18.959> packing<00:17:19.959> right<00:17:20.079> you<00:17:20.160> should
+task for bin packing right you should
+use<00:17:20.480> at<00:17:20.679> most<00:17:20.959> one<00:17:21.199> plus<00:17:21.400> Epsilon<00:17:22.000> times<00:17:22.319> the
+use at most one plus Epsilon times the
+optimal<00:17:22.760> number<00:17:23.000> of
+bins<00:17:26.480> so<00:17:27.319> what<00:17:27.439> would<00:17:27.559> an<00:17:27.679> FP<00:17:27.919> Tas<00:17:28.079> for<00:17:28.199> bin
+bins so what would an FP Tas for bin
+packing<00:17:28.600> mean
+okay<00:17:51.160> so<00:17:51.440> an<00:17:51.600> FP
+task<00:17:55.360> and<00:17:55.520> your<00:17:55.720> runtime<00:17:56.080> to<00:17:56.320> find<00:17:56.520> this
+task and your runtime to find this
+packing<00:17:58.840> is
+packing is
+polinomial<00:18:01.000> In<00:18:01.640> N<00:18:02.640> as<00:18:02.760> well<00:18:02.919> as<00:18:03.039> one<00:18:03.200> over
+polinomial In N as well as one over
+Epsilon<00:18:05.880> right<00:18:06.039> do<00:18:06.120> you<00:18:06.280> expect<00:18:06.520> to<00:18:06.600> have<00:18:06.720> an
+Epsilon right do you expect to have an
+FP<00:18:07.080> task<00:18:07.240> for<00:18:07.360> bin<00:18:07.600> packing<00:18:08.120> why
+not
+okay<00:18:24.320> that<00:18:24.480> uses<00:18:24.840> fewer<00:18:25.360> than<00:18:25.799> but<00:18:26.120> but<00:18:26.280> why
+okay that uses fewer than but but why
+can't<00:18:26.640> you
+yeah<00:18:33.039> yeah<00:18:33.320> right<00:18:33.480> so<00:18:33.840> the<00:18:33.919> point<00:18:34.200> is<00:18:34.679> so<00:18:34.880> the
+reason<00:18:39.200> so<00:18:39.400> we<00:18:39.480> don't<00:18:39.640> have<00:18:39.760> an<00:18:39.880> FP
+reason so we don't have an FP
+Tas
+unless<00:18:45.320> P<00:18:45.720> equals<00:18:46.120> NP<00:18:46.919> what's<00:18:47.120> the<00:18:47.240> proof<00:18:47.480> of
+unless P equals NP what's the proof of
+that<00:18:50.600> if<00:18:50.720> we<00:18:50.880> had<00:18:51.039> FP
+Tas<00:18:56.120> run
+Tas run
+it<00:18:58.440> with<00:18:58.840> Epsilon<00:18:59.320> much<00:18:59.520> less<00:18:59.679> than<00:18:59.840> you<00:18:59.919> know
+it with Epsilon much less than you know
+1<00:19:00.200> over<00:19:00.360> n<00:19:00.600> or
+1 over n or
+something<00:19:02.360> then<00:19:02.520> the<00:19:02.600> point<00:19:02.840> is<00:19:03.000> the<00:19:03.120> error<00:19:03.360> in
+something then the point is the error in
+the<00:19:03.559> number<00:19:03.760> of<00:19:03.880> bins<00:19:04.200> you<00:19:04.400> use<00:19:04.799> will<00:19:05.000> be<00:19:05.240> less
+the number of bins you use will be less
+than<00:19:05.600> one<00:19:06.159> and<00:19:06.280> we<00:19:06.360> know<00:19:06.480> the<00:19:06.600> number<00:19:06.720> of<00:19:06.840> bins
+than one and we know the number of bins
+you<00:19:07.080> use<00:19:07.240> as<00:19:07.320> an
+you use as an
+integer<00:19:09.080> okay<00:19:09.320> so<00:19:10.039> if<00:19:10.159> I<00:19:10.320> tell<00:19:10.559> you<00:19:10.880> there<00:19:11.039> is<00:19:11.159> a
+integer okay so if I tell you there is a
+packing<00:19:11.679> us<00:19:12.000> using<00:19:12.320> at<00:19:12.520> most<00:19:12.919> 2.2<00:19:13.600> bins<00:19:14.200> well
+packing us using at most 2.2 bins well
+then<00:19:14.480> you<00:19:14.559> know<00:19:14.840> that<00:19:14.960> there's<00:19:15.080> a<00:19:15.240> packing
+then you know that there's a packing
+using<00:19:15.679> two<00:19:15.880> bins<00:19:16.280> right<00:19:16.640> so<00:19:17.640> um<00:19:17.880> you<00:19:18.039> can<00:19:18.159> you
+using two bins right so um you can you
+could<00:19:18.360> have<00:19:18.480> solved<00:19:18.760> that<00:19:18.880> decision<00:19:19.240> problem
+could have solved that decision problem
+with<00:19:19.559> an<00:19:19.679> FP<00:19:20.000> Tas<00:19:20.280> and<00:19:20.400> it<00:19:20.440> would<00:19:20.559> have<00:19:20.640> been<00:19:20.760> a
+with an FP Tas and it would have been a
+polinomial<00:19:21.320> time
+polinomial time
+algorithm<00:19:23.320> okay<00:19:23.679> so<00:19:24.640> you<00:19:24.760> don't<00:19:25.039> always
+algorithm okay so you don't always
+expect<00:19:25.600> to<00:19:25.720> have<00:19:25.840> an<00:19:25.960> FP<00:19:26.280> Tas
+and<00:19:30.280> uh<00:19:30.360> I<00:19:30.480> guess<00:19:30.799> the<00:19:30.919> term<00:19:31.240> that's<00:19:31.480> used<00:19:31.880> when
+and uh I guess the term that's used when
+you<00:19:32.280> don't<00:19:32.520> have<00:19:32.640> an<00:19:32.760> FP<00:19:33.159> task<00:19:34.039> is<00:19:34.240> that<00:19:34.440> the
+you don't have an FP task is that the
+problem<00:19:34.840> is<00:19:35.240> strongly<00:19:35.640> NP
+hard
+okay<00:19:46.000> um<00:19:47.000> good<00:19:47.720> so<00:19:47.960> that's<00:19:48.080> all<00:19:48.200> I<00:19:48.280> want<00:19:48.400> to<00:19:48.520> say
+okay um good so that's all I want to say
+now<00:19:48.840> about<00:19:49.039> FP
+now about FP
+tases<00:19:51.360> and<00:19:51.480> I<00:19:51.559> want<00:19:51.640> to<00:19:51.760> move<00:19:51.919> to
+tases and I want to move to
+fasses<00:19:54.159> okay<00:19:54.799> so<00:19:55.039> F<00:19:55.320> press<00:19:55.679> so<00:19:55.960> two<00:19:56.320> F<00:19:56.559> press
+it's<00:20:01.000> like<00:20:01.159> an<00:20:01.280> FP
+Tas<00:20:06.880> but<00:20:07.039> you<00:20:07.159> know<00:20:07.360> the
+algorithm<00:20:12.080> is
+randomized<00:20:16.559> and<00:20:16.919> has<00:20:17.200> you<00:20:17.320> know<00:20:17.760> some
+randomized and has you know some
+onethird
+chance<00:20:21.799> of
+chance of
+failing<00:20:24.799> to
+failing to
+find<00:20:27.000> a<00:20:27.200> good<00:20:27.360> solution
+at<00:20:33.440> most<00:20:33.640> a<00:20:33.760> one3
+at most a one3
+chance<00:20:36.799> so<00:20:36.919> I<00:20:37.000> want<00:20:37.120> to<00:20:37.200> give<00:20:37.320> you<00:20:37.440> an<00:20:37.600> example
+chance so I want to give you an example
+for<00:20:38.320> this<00:20:38.520> as
+well<00:20:46.480> okay<00:20:46.679> which<00:20:46.799> is<00:20:47.000> dnf
+counting<00:20:54.960> okay<00:20:55.120> so<00:20:55.280> maybe<00:20:55.520> people<00:20:55.760> remember
+counting okay so maybe people remember
+what<00:20:56.200> cnfs<00:20:57.120> are<00:20:58.120> um<00:20:58.840> from<00:20:59.159> threat<00:20:59.799> or<00:21:00.200> sat
+what cnfs are um from threat or sat
+right<00:21:01.320> so<00:21:01.440> cnfs<00:21:02.240> are<00:21:03.240> formulas<00:21:03.799> written<00:21:04.120> so
+right so cnfs are formulas written so
+it's<00:21:04.600> called<00:21:04.840> conjunctive<00:21:05.320> normal<00:21:05.640> form<00:21:05.960> dnfs
+it's called conjunctive normal form dnfs
+d<00:21:07.080> d<00:21:07.240> stands<00:21:07.440> for<00:21:07.559> a<00:21:07.679> disjunctive<00:21:08.159> normal<00:21:08.480> form
+d d stands for a disjunctive normal form
+what<00:21:08.840> does<00:21:08.960> it<00:21:09.120> mean<00:21:09.919> it<00:21:10.039> means<00:21:10.480> that<00:21:11.159> you<00:21:11.320> have
+what does it mean it means that you have
+some<00:21:11.720> Clause<00:21:12.279> so<00:21:12.480> an<00:21:12.679> input<00:21:13.039> what<00:21:13.120> does<00:21:13.240> an
+some Clause so an input what does an
+input<00:21:13.720> look
+like<00:21:17.360> it<00:21:17.520> looks<00:21:17.919> like<00:21:18.360> a<00:21:18.559> clause<00:21:19.480> I'll<00:21:19.640> say
+like it looks like a clause I'll say
+what<00:21:19.919> a<00:21:20.039> clause<00:21:20.320> is<00:21:20.440> in<00:21:20.520> a<00:21:20.679> second<00:21:21.039> a<00:21:21.200> clause<00:21:21.799> C1
+what a clause is in a second a clause C1
+or<00:21:23.279> C2<00:21:24.279> or<00:21:24.640> dot<00:21:24.840> do<00:21:25.039> dot<00:21:25.240> or<00:21:25.480> cm
+and<00:21:31.039> a<00:21:31.240> clause<00:21:31.640> some<00:21:31.880> CI<00:21:32.520> looks<00:21:32.799> like
+some<00:21:36.960> X<00:21:37.520> you<00:21:37.640> know<00:21:38.200> J1<00:21:39.200> and
+some X you know J1 and
+xj2<00:21:41.919> and<00:21:42.200> whatever<00:21:42.600> and<00:21:42.840> X<00:21:44.000> Jr<00:21:45.000> and<00:21:45.159> some<00:21:45.320> of
+xj2 and whatever and X Jr and some of
+these<00:21:45.600> might<00:21:45.720> be<00:21:46.240> negated<00:21:47.240> you
+know<00:21:55.039> and<00:21:55.799> right<00:21:56.000> the<00:21:56.159> satisfiability
+know and right the satisfiability
+problem<00:21:57.360> for<00:21:57.600> dnfs<00:21:58.320> is
+problem for dnfs is
+um<00:22:00.760> right<00:22:01.039> in<00:22:01.200> cnfs<00:22:02.120> you<00:22:02.240> sort<00:22:02.400> of<00:22:02.520> flip<00:22:02.799> where
+um right in cnfs you sort of flip where
+the<00:22:03.080> ANS<00:22:03.360> and<00:22:03.480> the<00:22:03.559> ores<00:22:03.880> are<00:22:04.159> right<00:22:04.279> so<00:22:04.400> in<00:22:04.480> a
+the ANS and the ores are right so in a
+CNF<00:22:05.640> you<00:22:05.760> would<00:22:06.039> and<00:22:06.279> a<00:22:06.400> bunch<00:22:06.559> of<00:22:06.760> Clauses<00:22:07.200> and
+CNF you would and a bunch of Clauses and
+each<00:22:07.600> Clause<00:22:07.880> would<00:22:08.039> be<00:22:08.120> an<00:22:08.279> or<00:22:08.640> of<00:22:08.799> some
+each Clause would be an or of some
+number<00:22:09.159> of
+number of
+literals<00:22:11.320> okay<00:22:11.480> in<00:22:11.600> dnf<00:22:12.080> you<00:22:12.279> chain<00:22:12.600> you
+literals okay in dnf you chain you
+reverse<00:22:13.440> that<00:22:14.440> and<00:22:14.679> we<00:22:14.880> know<00:22:16.080> from<00:22:17.080> you
+reverse that and we know from you
+know<00:22:19.400> we<00:22:19.520> know<00:22:19.799> from<00:22:20.200> the<00:22:20.320> cook<00:22:20.559> L<00:22:21.240> theorem
+know we know from the cook L theorem
+that<00:22:22.919> sat<00:22:23.919> is<00:22:24.240> an<00:22:24.400> NP<00:22:24.799> complete
+that sat is an NP complete
+problem<00:22:27.679> okay<00:22:27.880> so<00:22:28.520> sat<00:22:28.840> at<00:22:28.919> least<00:22:29.080> is<00:22:29.200> NP
+problem okay so sat at least is NP
+hard<00:22:31.679> how<00:22:31.840> about<00:22:32.400> the<00:22:32.559> decision<00:22:32.960> problem<00:22:33.240> I
+hard how about the decision problem I
+mean<00:22:33.640> the<00:22:33.760> decision<00:22:34.120> problem<00:22:34.320> for<00:22:34.480> sat<00:22:34.840> is<00:22:34.960> if
+mean the decision problem for sat is if
+you're<00:22:35.240> given<00:22:35.440> a<00:22:35.600> CNF<00:22:36.200> formula<00:22:37.200> does<00:22:37.360> there
+you're given a CNF formula does there
+exist<00:22:37.840> an<00:22:38.039> assignment<00:22:38.440> to<00:22:38.600> the<00:22:39.120> variables
+exist an assignment to the variables
+which<00:22:40.440> causes<00:22:40.760> the<00:22:40.880> formula<00:22:41.240> to<00:22:41.400> evaluate<00:22:41.760> to
+which causes the formula to evaluate to
+True<00:22:43.440> how<00:22:43.559> about<00:22:43.720> for<00:22:43.880> dnfs<00:22:44.400> if<00:22:44.559> I<00:22:44.640> give<00:22:44.760> you<00:22:44.840> a
+True how about for dnfs if I give you a
+dnf<00:22:45.360> and<00:22:45.440> I<00:22:45.600> ask<00:22:45.840> you<00:22:46.400> is<00:22:46.520> there<00:22:46.720> assignment<00:22:47.080> is
+dnf and I ask you is there assignment is
+there<00:22:47.279> an<00:22:47.400> assignment<00:22:47.720> to<00:22:47.840> the<00:22:47.960> variables
+there an assignment to the variables
+which<00:22:48.679> makes<00:22:48.960> this<00:22:49.120> thing
+which makes this thing
+true<00:22:50.880> right<00:22:51.000> is<00:22:51.159> that
+true right is that
+hard<00:22:52.919> no<00:22:53.480> why<00:22:53.600> is<00:22:53.720> that<00:22:53.880> not<00:22:54.440> hard
+hard no why is that not hard
+well<00:22:57.360> you
+well you
+solve<00:23:00.120> any<00:23:00.360> Clause<00:23:01.200> so<00:23:01.919> this<00:23:02.120> thing<00:23:02.320> is
+solve any Clause so this thing is
+satisfiable<00:23:03.360> if<00:23:03.480> and<00:23:03.640> only<00:23:03.960> if<00:23:04.159> at<00:23:04.279> least<00:23:04.480> one
+satisfiable if and only if at least one
+of<00:23:04.720> the<00:23:04.799> Clauses<00:23:05.159> is<00:23:05.600> satisfiable<00:23:06.600> and<00:23:06.679> then
+of the Clauses is satisfiable and then
+you<00:23:06.880> can<00:23:07.039> just<00:23:07.240> go<00:23:07.400> Loop<00:23:07.720> through<00:23:07.919> Clause<00:23:08.240> by
+you can just go Loop through Clause by
+clause<00:23:08.840> and<00:23:09.000> just<00:23:09.159> check<00:23:09.559> that<00:23:10.240> you<00:23:10.360> know
+clause and just check that you know
+basically<00:23:10.960> it's<00:23:11.120> satisfiable<00:23:11.760> as<00:23:11.880> long<00:23:12.039> as
+basically it's satisfiable as long as
+you<00:23:12.240> don't<00:23:12.400> have<00:23:12.600> X<00:23:12.799> and<00:23:12.960> not<00:23:13.200> X<00:23:13.679> somewhere
+you don't have X and not X somewhere
+right<00:23:16.120> okay
+so
+dnf<00:23:22.720> satisfiability<00:23:23.720> that<00:23:24.000> that<00:23:24.279> problem
+is<00:23:29.000> in<00:23:29.240> P<00:23:29.520> there's<00:23:29.679> a<00:23:29.799> polinomial<00:23:30.320> Time
+is in P there's a polinomial Time
+algorithm<00:23:30.960> for<00:23:31.159> that<00:23:31.440> it's<00:23:31.559> a<00:23:31.760> pretty<00:23:31.960> simple
+algorithm for that it's a pretty simple
+algorithm<00:23:33.279> how
+about<00:23:37.600> dnf
+counting<00:23:44.559> given<00:23:44.760> a
+counting given a
+dnf<00:23:47.400> given<00:23:47.600> a<00:23:47.720> dnf
+formula
+count<00:23:53.919> the
+count the
+number<00:23:55.640> of<00:23:55.919> satisfying
+of<00:24:00.880> satisfying<00:24:01.400> assignments<00:24:01.880> to<00:24:02.000> the<00:24:02.120> V<00:24:02.360> to
+of satisfying assignments to the V to
+the
+variables<00:24:06.320> okay<00:24:06.520> do<00:24:06.600> you<00:24:06.720> expect<00:24:07.000> that<00:24:07.120> to<00:24:07.240> be
+easy<00:24:19.000> any
+thoughts<00:24:25.279> that<00:24:25.520> all
+yeah<00:24:37.559> yeah<00:24:37.720> exactly<00:24:38.120> so<00:24:38.360> if<00:24:38.440> you<00:24:38.559> could<00:24:38.799> count
+yeah yeah exactly so if you could count
+a<00:24:39.240> number<00:24:39.440> of<00:24:39.520> dnf<00:24:39.880> solutions<00:24:40.320> you<00:24:40.399> could
+a number of dnf solutions you could
+solve<00:24:40.840> sat<00:24:41.640> right<00:24:41.919> because<00:24:42.640> if<00:24:42.760> you<00:24:43.000> have<00:24:44.159> so
+solve sat right because if you have so
+this<00:24:46.080> is<00:24:46.200> a<00:24:46.360> hard
+this is a hard
+problem<00:24:48.320> to<00:24:48.480> do<00:24:48.600> it
+problem to do it
+exactly<00:24:51.360> so<00:24:51.559> the<00:24:51.720> proof<00:24:52.000> that<00:24:52.120> it's
+exactly so the proof that it's
+hard<00:24:54.600> is<00:24:54.720> that<00:24:54.840> if<00:24:54.919> you<00:24:55.000> have<00:24:55.120> a<00:24:55.240> SAT<00:24:55.880> formula
+hard is that if you have a SAT formula
+let's<00:24:57.039> say<00:24:57.240> you<00:24:57.440> have<00:24:57.880> you<00:24:58.000> know
+let's say you have you know
+X1<00:25:00.080> uh<00:25:00.320> and<00:25:00.640> not
+X1 uh and not
+X2<00:25:02.559> and<00:25:02.799> X4<00:25:03.399> or<00:25:04.080> something<00:25:05.080> uh<00:25:05.240> whoops<00:25:05.600> this<00:25:05.799> is
+X2 and X4 or something uh whoops this is
+this<00:25:06.880> is<00:25:06.960> a<00:25:07.240> dnf<00:25:08.240> let's<00:25:08.399> say<00:25:08.520> if<00:25:08.600> a<00:25:08.720> set<00:25:08.880> formula
+this is a dnf let's say if a set formula
+looks<00:25:09.399> like<00:25:09.840> that<00:25:10.840> and<00:25:11.000> you<00:25:11.200> have<00:25:11.440> some<00:25:11.640> other
+looks like that and you have some other
+thing
+X5<00:25:14.039> or<00:25:14.360> not<00:25:14.600> X1<00:25:15.279> or
+X5 or not X1 or
+whatever<00:25:17.600> right<00:25:18.159> so<00:25:18.320> you<00:25:18.440> want<00:25:18.559> to<00:25:18.960> know<00:25:19.960> you
+whatever right so you want to know you
+want<00:25:20.240> to<00:25:20.399> know<00:25:20.600> whether<00:25:20.760> or<00:25:20.880> not<00:25:21.039> this<00:25:21.159> thing
+want to know whether or not this thing
+is<00:25:21.480> satisfiable<00:25:22.039> this<00:25:22.120> is<00:25:22.200> your<00:25:22.399> in<00:25:22.720> this<00:25:22.840> is
+is satisfiable this is your in this is
+your<00:25:23.080> input<00:25:23.360> for<00:25:23.640> sat<00:25:24.640> well<00:25:25.200> if<00:25:25.279> you<00:25:25.440> could
+your input for sat well if you could
+count<00:25:25.919> the<00:25:26.039> number<00:25:26.279> of<00:25:26.960> solutions<00:25:27.960> and<00:25:28.120> tell
+count the number of solutions and tell
+how<00:25:28.720> then<00:25:28.919> then<00:25:29.039> you<00:25:29.120> would<00:25:29.279> know<00:25:29.440> whether<00:25:29.559> or
+how then then you would know whether or
+not<00:25:29.760> it's<00:25:29.919> satisfiable<00:25:30.600> because<00:25:31.600> you<00:25:31.720> would
+not it's satisfiable because you would
+know<00:25:32.080> whether<00:25:32.279> the<00:25:32.399> number<00:25:32.559> of<00:25:32.640> solutions<00:25:32.960> is
+know whether the number of solutions is
+zero<00:25:33.399> or<00:25:33.760> not<00:25:34.760> right<00:25:35.159> so<00:25:35.320> how<00:25:35.480> could<00:25:35.600> you<00:25:35.760> count
+zero or not right so how could you count
+the<00:25:36.080> number<00:25:36.399> of<00:25:36.559> solutions<00:25:37.080> to<00:25:37.360> this<00:25:37.960> CNF
+the number of solutions to this CNF
+formula<00:25:39.480> well<00:25:39.679> you<00:25:39.799> could<00:25:40.000> negate<00:25:40.360> it<00:25:40.600> just
+formula well you could negate it just
+negate<00:25:41.080> the<00:25:41.200> whole
+negate the whole
+thing
+right<00:25:45.480> and<00:25:45.559> then<00:25:45.799> this<00:25:45.960> just<00:25:46.120> become<00:25:46.480> the
+right and then this just become the
+negation<00:25:46.960> of<00:25:47.080> a<00:25:47.200> CNF<00:25:47.600> is<00:25:47.679> a
+negation of a CNF is a
+dnf<00:25:49.480> right<00:25:50.399> so<00:25:50.640> notice<00:25:51.120> that<00:25:51.720> C1
+dnf right so notice that C1
+or<00:25:54.360> C1<00:25:54.919> and<00:25:55.120> C2<00:25:55.880> negation<00:25:56.880> is<00:25:57.039> just<00:25:57.240> equal<00:25:57.520> to
+or C1 and C2 negation is just equal to
+negation<00:25:58.440> of<00:25:58.559> C1<00:25:59.520> or<00:26:00.640> uh<00:26:01.640> negation<00:26:02.000> of
+negation of C1 or uh negation of
+C2
+right<00:26:08.919> so<00:26:09.919> if<00:26:10.039> you<00:26:10.159> have<00:26:10.279> a<00:26:10.399> CNF<00:26:11.080> so<00:26:11.399> here<00:26:11.520> if
+right so if you have a CNF so here if
+you<00:26:11.679> have<00:26:11.760> a
+CNF<00:26:15.200> CNF<00:26:15.919> this<00:26:16.159> is<00:26:16.320> now<00:26:16.440> a
+CNF CNF this is now a
+dnf<00:26:18.320> and<00:26:18.480> you<00:26:18.600> know<00:26:18.799> you<00:26:18.919> could<00:26:19.120> have<00:26:19.320> you
+dnf and you know you could have you
+could<00:26:19.520> have<00:26:19.640> lots<00:26:19.799> of<00:26:19.919> Clauses
+here<00:26:24.240> and<00:26:24.320> if<00:26:24.440> there<00:26:24.520> are<00:26:24.679> n
+here and if there are n
+variables<00:26:26.640> well<00:26:26.960> if<00:26:27.080> the<00:26:27.159> number<00:26:27.360> of
+variables well if the number of
+solutions<00:26:27.919> to<00:26:28.080> this
+solutions to this
+dnf<00:26:29.919> is
+dnf is
+T<00:26:32.640> then<00:26:32.919> that<00:26:33.039> means<00:26:33.279> the<00:26:33.360> number<00:26:33.600> of
+T then that means the number of
+solutions<00:26:34.320> to<00:26:34.559> the<00:26:34.880> negated<00:26:35.360> CNF<00:26:35.840> is<00:26:35.960> T<00:26:36.720> which
+solutions to the negated CNF is T which
+means<00:26:37.039> the<00:26:37.159> number<00:26:37.320> of<00:26:37.440> solutions<00:26:37.760> to<00:26:37.919> the
+means the number of solutions to the
+non-<00:26:38.279> negated<00:26:38.640> CNF<00:26:39.200> is<00:26:39.399> 2<00:26:39.720> the<00:26:39.799> N<00:26:40.000> minus<00:26:40.559> t
+non- negated CNF is 2 the N minus t
+right<00:26:42.360> so<00:26:43.360> if<00:26:43.480> you<00:26:43.600> could<00:26:43.799> count<00:26:44.120> the<00:26:44.600> uh
+right so if you could count the uh
+solutions<00:26:45.240> to<00:26:45.399> the<00:26:45.520> negative<00:26:46.000> then<00:26:46.120> you<00:26:46.320> got
+solutions to the negative then you got
+you<00:26:46.880> you're<00:26:47.039> counting<00:26:47.279> the<00:26:47.360> solutions<00:26:47.679> to<00:26:47.799> the
+you you're counting the solutions to the
+original
+thing<00:26:50.120> does<00:26:50.279> that<00:26:50.440> make
+sense<00:26:54.480> Okay<00:26:55.480> so
+solving<00:26:59.279> the<00:26:59.440> counting<00:26:59.919> the<00:27:00.120> exact<00:27:00.480> counting
+solving the counting the exact counting
+problem<00:27:01.080> for<00:27:01.240> dnfs<00:27:01.880> is<00:27:02.080> NP<00:27:02.520> hard<00:27:03.399> in<00:27:03.559> fact<00:27:03.760> it's
+problem for dnfs is NP hard in fact it's
+even<00:27:04.440> harder<00:27:04.960> than<00:27:05.279> NP<00:27:05.799> hard<00:27:06.000> it's<00:27:06.240> what's
+even harder than NP hard it's what's
+called<00:27:06.679> sharp<00:27:07.039> P<00:27:07.320> hard<00:27:08.200> okay
+called sharp P hard okay
+so<00:27:10.320> in<00:27:10.520> fact<00:27:10.799> there's<00:27:11.080> I'm<00:27:11.200> not<00:27:11.320> going<00:27:11.399> to
+so in fact there's I'm not going to
+dwell<00:27:11.960> much<00:27:12.120> on<00:27:12.279> this<00:27:12.480> in<00:27:12.600> fact<00:27:12.799> there's<00:27:12.960> a
+dwell much on this in fact there's a
+complexity
+class<00:27:21.360> sharp
+class sharp
+p<00:27:24.039> and<00:27:24.159> a<00:27:24.360> complete<00:27:25.000> the<00:27:25.159> complete<00:27:25.600> problem
+p and a complete the complete problem
+for<00:27:26.000> Sharp<00:27:26.360> p<00:27:26.679> is<00:27:26.840> counting<00:27:27.159> the<00:27:27.279> number<00:27:27.520> of
+for Sharp p is counting the number of
+solutions<00:27:28.200> to
+solutions to
+sat
+okay
+and<00:27:34.000> and<00:27:34.159> dnf<00:27:34.559> Counting<00:27:34.919> happens<00:27:35.200> to<00:27:35.320> be
+and and dnf Counting happens to be
+complete<00:27:36.480> for<00:27:36.679> that<00:27:36.880> class<00:27:37.159> dnf
+complete for that class dnf
+counting<00:27:40.320> is<00:27:40.559> sharp<00:27:40.960> P
+complete<00:27:48.720> sharp<00:27:49.120> is<00:27:49.240> like<00:27:49.440> number<00:27:50.279> so<00:27:50.440> it's
+complete sharp is like number so it's
+like<00:27:50.919> counting<00:27:51.919> yeah<00:27:52.640> I<00:27:52.720> mean<00:27:52.880> that's<00:27:53.039> where
+like counting yeah I mean that's where
+that<00:27:53.640> name<00:27:53.960> came
+that name came
+from<00:27:56.320> but<00:27:56.440> it's<00:27:56.640> it's<00:27:56.720> a<00:27:56.880> class<00:27:57.200> that<00:27:57.360> contains
+from but it's it's a class that contains
+NP
+so<00:27:59.760> it's<00:28:00.760> basically<00:28:01.159> so<00:28:01.279> for<00:28:01.440> people<00:28:01.760> who<00:28:02.000> have
+so it's basically so for people who have
+taken<00:28:02.559> some<00:28:03.440> complexity<00:28:03.919> course<00:28:04.159> and<00:28:04.320> have
+taken some complexity course and have
+seen<00:28:04.799> the<00:28:04.919> formal<00:28:05.279> definition<00:28:05.720> of<00:28:06.679> NP<00:28:07.679> right
+seen the formal definition of NP right
+in
+NP<00:28:09.960> um<00:28:10.960> NP<00:28:11.320> is<00:28:11.399> the<00:28:11.519> class<00:28:11.720> of<00:28:11.880> problems<00:28:12.240> where
+NP um NP is the class of problems where
+there's<00:28:12.600> a<00:28:12.760> witness<00:28:13.200> that's<00:28:13.399> verifiable<00:28:13.919> in
+there's a witness that's verifiable in
+polinomial<00:28:14.640> time<00:28:15.320> and<00:28:15.480> sharp<00:28:15.960> P<00:28:16.960> um<00:28:17.120> in<00:28:17.240> sharp
+polinomial time and sharp P um in sharp
+P<00:28:17.640> you<00:28:17.720> want<00:28:17.799> to<00:28:17.919> count<00:28:18.120> the<00:28:18.200> number<00:28:18.360> of
+P you want to count the number of
+witnesses<00:28:19.279> basically
+witnesses basically
+so<00:28:22.240> it's<00:28:22.399> an<00:28:22.519> even<00:28:22.679> harder<00:28:23.039> problem<00:28:23.600> than
+so it's an even harder problem than
+finding<00:28:24.039> a<00:28:24.159> witness
+okay<00:28:28.919> so<00:28:29.080> this<00:28:29.159> is<00:28:29.240> a<00:28:29.399> pretty<00:28:29.600> hard<00:28:30.320> problem
+okay so this is a pretty hard problem
+but<00:28:31.480> you<00:28:31.600> could<00:28:31.760> ask<00:28:31.919> ourselves
+but you could ask ourselves
+well<00:28:35.120> can<00:28:35.320> we
+well can we
+count<00:28:37.440> number<00:28:37.880> of
+count number of
+solutions<00:28:41.720> to
+dnf<00:28:46.000> up<00:28:46.159> to<00:28:46.320> 1<00:28:46.519> plus
+dnf up to 1 plus
+Epsilon<00:28:49.559> so<00:28:49.720> I'm<00:28:49.840> not<00:28:49.960> going<00:28:50.039> to<00:28:50.159> get<00:28:50.320> the
+Epsilon so I'm not going to get the
+exact<00:28:50.880> number<00:28:51.080> of<00:28:51.200> solutions<00:28:51.600> to<00:28:52.120> dnf<00:28:53.120> to<00:28:53.360> the
+exact number of solutions to dnf to the
+dnf<00:28:53.760> counting<00:28:54.080> problem<00:28:54.360> but<00:28:54.480> I'll<00:28:54.679> get<00:28:54.799> it<00:28:54.960> up
+dnf counting problem but I'll get it up
+to<00:28:56.559> I'll<00:28:56.720> get<00:28:56.880> some<00:28:57.080> number<00:28:57.440> that's<00:28:57.679> at<00:28:57.760> least
+to I'll get some number that's at least
+1us<00:28:58.559> Epsilon<00:28:58.919> times<00:28:59.159> the<00:28:59.279> true<00:28:59.480> number<00:28:59.720> and
+1us Epsilon times the true number and
+it's<00:28:59.960> at<00:29:00.120> most<00:29:00.360> 1<00:29:00.600> plus<00:29:00.799> Epsilon<00:29:01.159> times<00:29:01.399> the
+it's at most 1 plus Epsilon times the
+true
+number<00:29:03.600> okay<00:29:04.600> notice<00:29:05.519> that<00:29:06.519> it's<00:29:06.679> not
+number okay notice that it's not
+immediately<00:29:08.480> clear<00:29:08.960> that<00:29:09.120> we<00:29:09.240> can't<00:29:09.519> do<00:29:09.760> this
+immediately clear that we can't do this
+right<00:29:11.559> the<00:29:11.760> proof<00:29:12.240> that<00:29:12.880> counting<00:29:13.279> dnf<00:29:13.640> was
+right the proof that counting dnf was
+hard<00:29:14.200> really<00:29:14.440> relied<00:29:14.840> on<00:29:15.080> the<00:29:15.279> exact
+hard really relied on the exact
+count
+right<00:29:20.919> right<00:29:21.080> we<00:29:21.200> said<00:29:21.600> that<00:29:22.600> basically<00:29:23.600> if<00:29:23.679> we
+right right we said that basically if we
+could<00:29:23.960> tell<00:29:24.159> whether<00:29:24.320> the<00:29:24.399> number<00:29:24.559> of
+could tell whether the number of
+solutions<00:29:24.960> to<00:29:25.120> the<00:29:25.240> CNF<00:29:25.640> is<00:29:25.799> zero<00:29:26.080> or<00:29:26.240> not<00:29:27.080> then
+solutions to the CNF is zero or not then
+we<00:29:27.279> would<00:29:27.399> have<00:29:27.519> solved
+we would have solved
+but<00:29:29.000> if<00:29:29.120> there's<00:29:29.279> some<00:29:29.399> multiplicative<00:29:30.000> error
+but if there's some multiplicative error
+here<00:29:30.840> then<00:29:31.000> we<00:29:31.120> can't<00:29:31.360> distinguish<00:29:31.880> Zero<00:29:32.159> from
+nonzero
+okay<00:29:37.919> so<00:29:38.919> and<00:29:39.080> the<00:29:39.279> answer<00:29:40.279> the<00:29:40.440> answer<00:29:40.600> to
+okay so and the answer the answer to
+this<00:29:40.919> question<00:29:41.120> is<00:29:41.399> yes<00:29:41.720> we
+can<00:29:45.640> there's<00:29:45.799> an
+Fess<00:29:52.039> uh<00:29:52.600> due
+Fess uh due
+to<00:29:55.320> carp
+Luby<00:30:00.880> and
+Madras<00:30:04.679> what<00:30:04.840> year<00:30:05.039> is<00:30:05.240> that<00:30:05.519> of<00:30:06.159> pross<00:30:07.159> uh<00:30:07.440> let
+Madras what year is that of pross uh let
+me<00:30:08.159> J
+89<00:30:15.480> okay<00:30:15.679> that's<00:30:15.799> what<00:30:15.919> I'm<00:30:16.000> going<00:30:16.080> to<00:30:16.200> show
+you<00:30:21.200> you<00:30:21.320> mean<00:30:21.640> a<00:30:21.919> um<00:30:22.360> a
+you you mean a um a
+deterministic<00:30:24.200> counting
+deterministic counting
+um<00:30:27.360> yeah<00:30:27.480> I<00:30:27.559> should<00:30:27.720> know<00:30:28.360> I<00:30:28.880> I<00:30:29.159> don't<00:30:30.159> think<00:30:30.399> so
+um yeah I should know I I don't think so
+but<00:30:31.039> let<00:30:31.200> me<00:30:32.200> let<00:30:32.279> me<00:30:32.440> look<00:30:32.600> into<00:30:32.880> that<00:30:33.640> oh<00:30:34.120> um
+but let me let me look into that oh um
+like<00:30:34.720> for<00:30:35.159> like<00:30:35.360> is<00:30:35.440> it<00:30:35.640> hard<00:30:36.000> for<00:30:36.159> some
+like for like is it hard for some
+complex<00:30:36.760> would<00:30:36.880> it<00:30:37.320> imply<00:30:37.640> collapses<00:30:38.039> of
+complex would it imply collapses of
+complexity<00:30:38.640> classes<00:30:39.000> if<00:30:39.159> that<00:30:39.679> happened<00:30:40.960> um<00:30:41.960> I
+complexity classes if that happened um I
+don't<00:30:42.320> I<00:30:42.399> don't<00:30:42.480> know<00:30:42.600> off<00:30:42.720> the<00:30:42.840> top<00:30:42.960> of<00:30:43.039> my
+don't I don't know off the top of my
+head<00:30:43.640> I<00:30:44.200> I'll<00:30:44.360> have<00:30:44.760> to<00:30:45.760> I'll<00:30:45.919> look<00:30:46.039> into<00:30:46.279> that
+head I I'll have to I'll look into that
+I'm<00:30:46.559> not<00:30:46.720> sure<00:30:47.480> yeah<00:30:48.159> is
+sols<00:30:52.120> other<00:30:52.880> problem<00:30:53.880> we
+sols other problem we
+haveg<00:30:55.519> small<00:30:56.399> yeah
+haveg small yeah
+integer<00:30:58.720> that's<00:30:58.840> our<00:30:59.039> answer<00:30:59.440> right<00:30:59.880> yeah
+integer that's our answer right yeah
+okay<00:31:01.000> so<00:31:01.120> that's<00:31:01.240> a<00:31:01.360> good<00:31:01.559> question<00:31:02.200> I<00:31:02.240> mean
+okay so that's a good question I mean
+you<00:31:02.440> could<00:31:02.559> ask<00:31:02.760> the<00:31:02.840> same<00:31:03.039> question<00:31:03.240> for
+you could ask the same question for
+napsack<00:31:04.679> right<00:31:05.080> so<00:31:05.320> in<00:31:05.480> napsack<00:31:06.039> let's<00:31:06.200> say
+napsack right so in napsack let's say
+that<00:31:06.440> the<00:31:06.600> values<00:31:07.279> the<00:31:07.440> values<00:31:07.760> are<00:31:08.399> integers
+that the values the values are integers
+um<00:31:09.679> and<00:31:09.799> the<00:31:09.880> weights<00:31:10.120> are<00:31:10.240> also
+um and the weights are also
+integers<00:31:12.240> uh<00:31:12.919> but<00:31:13.039> we<00:31:13.159> have<00:31:13.240> an<00:31:13.399> FP<00:31:13.760> task<00:31:14.519> so
+integers uh but we have an FP task so
+why<00:31:14.960> is
+why is
+that<00:31:16.760> right<00:31:16.960> we<00:31:17.120> we<00:31:17.279> know<00:31:17.480> that<00:31:17.639> the<00:31:17.840> answer
+that right we we know that the answer
+for<00:31:18.480> napsack<00:31:19.039> has<00:31:19.159> to<00:31:19.240> be<00:31:19.360> an<00:31:19.440> integer<00:31:19.799> if<00:31:19.919> the
+for napsack has to be an integer if the
+values<00:31:20.279> are<00:31:20.679> integers<00:31:21.679> right<00:31:21.799> so
+values are integers right so
+why<00:31:23.840> why<00:31:23.960> does<00:31:24.120> anyone<00:31:24.360> have<00:31:24.440> an<00:31:24.559> answer<00:31:25.000> why
+why why does anyone have an answer why
+why<00:31:25.919> why<00:31:26.039> can<00:31:26.159> we<00:31:26.279> have<00:31:26.360> an<00:31:26.440> FP<00:31:26.720> task<00:31:26.919> for
+why why can we have an FP task for
+napsack
+so<00:31:35.039> let's<00:31:35.200> say<00:31:35.360> that<00:31:35.480> let's<00:31:35.600> say<00:31:35.720> that<00:31:35.880> the<00:31:36.039> max
+so let's say that let's say that the max
+weight<00:31:36.760> let's<00:31:36.880> say<00:31:37.039> the<00:31:37.159> max<00:31:37.399> value<00:31:37.679> of<00:31:37.840> any
+weight let's say the max value of any
+item<00:31:38.240> is<00:31:38.399> Vmax<00:31:39.360> we<00:31:39.519> know<00:31:39.679> that<00:31:39.840> opt<00:31:40.120> is
+item is Vmax we know that opt is
+certainly<00:31:40.519> not<00:31:40.679> bigger<00:31:40.919> than<00:31:41.080> n<00:31:41.279> times<00:31:41.840> Vmax
+certainly not bigger than n times Vmax
+right<00:31:43.360> so<00:31:43.519> what<00:31:43.639> I'll<00:31:43.799> do<00:31:44.000> is<00:31:44.080> I'll<00:31:44.240> set
+right so what I'll do is I'll set
+Epsilon<00:31:44.880> to<00:31:45.000> be<00:31:45.200> much<00:31:45.399> smaller<00:31:45.880> than<00:31:46.600> 1<00:31:46.880> over<00:31:47.120> n
+Epsilon to be much smaller than 1 over n
+*<00:31:47.799> Vmax<00:31:48.799> I'll<00:31:48.960> run<00:31:49.159> my<00:31:49.320> FP<00:31:49.720> task<00:31:50.679> it'll<00:31:50.960> give<00:31:51.080> me
+* Vmax I'll run my FP task it'll give me
+some<00:31:51.600> number<00:31:52.320> with<00:31:52.679> with<00:31:53.120> fractional<00:31:53.600> error
+some number with with fractional error
+and<00:31:54.000> I'll<00:31:54.120> just<00:31:54.240> round<00:31:54.440> it<00:31:54.519> to<00:31:54.639> an<00:31:54.720> integer
+and I'll just round it to an integer
+because<00:31:55.159> I<00:31:55.240> know<00:31:55.360> the<00:31:55.440> answer<00:31:55.639> has<00:31:55.720> to<00:31:55.799> be<00:31:55.880> an
+because I know the answer has to be an
+integer<00:31:57.120> right<00:31:57.240> so<00:31:57.440> what's
+sorry<00:32:04.519> it's<00:32:04.679> not<00:32:04.880> polinomial
+sorry it's not polinomial
+why<00:32:07.840> right<00:32:08.519> yeah<00:32:09.159> so<00:32:10.159> right<00:32:10.320> exactly<00:32:10.679> so<00:32:10.840> it's
+why right yeah so right exactly so it's
+that<00:32:11.159> same<00:32:11.399> issue<00:32:11.880> right<00:32:12.120> so<00:32:12.960> with<00:32:13.320> napsack
+that same issue right so with napsack
+the<00:32:14.480> problem<00:32:14.679> is<00:32:14.880> that<00:32:15.039> you<00:32:15.120> don't<00:32:15.279> want<00:32:15.360> to
+the problem is that you don't want to
+run<00:32:15.679> in<00:32:15.840> time<00:32:16.080> proportional<00:32:16.480> to<00:32:16.600> the<00:32:16.679> numbers
+run in time proportional to the numbers
+you<00:32:17.080> want<00:32:17.159> to<00:32:17.600> run<00:32:17.760> in<00:32:17.880> time<00:32:18.120> proportional<00:32:18.559> to
+you want to run in time proportional to
+the<00:32:19.000> description<00:32:19.440> of<00:32:19.559> the<00:32:19.799> input<00:32:20.799> and<00:32:20.919> to
+the description of the input and to
+write<00:32:21.320> down<00:32:21.600> Vmax<00:32:22.080> takes<00:32:22.320> log<00:32:22.559> Vmax<00:32:23.000> bits<00:32:23.840> so
+write down Vmax takes log Vmax bits so
+you<00:32:24.399> would<00:32:24.519> have<00:32:24.600> to<00:32:24.679> set<00:32:24.840> Epsilon<00:32:25.159> to<00:32:25.240> be<00:32:25.360> too
+you would have to set Epsilon to be too
+small<00:32:26.679> and<00:32:26.880> po1<00:32:27.200> over<00:32:27.360> Epsilon<00:32:27.639> wouldn't<00:32:27.960> cut
+small and po1 over Epsilon wouldn't cut
+it<00:32:29.120> okay<00:32:29.559> and<00:32:29.639> it's<00:32:29.760> the<00:32:29.840> same<00:32:30.039> with<00:32:30.200> dnf
+it okay and it's the same with dnf
+counting<00:32:30.799> it's<00:32:30.919> a<00:32:31.000> similar<00:32:31.320> thing<00:32:31.559> you<00:32:31.679> can
+counting it's a similar thing you can
+have<00:32:32.080> dnfs<00:32:33.039> where<00:32:33.159> the<00:32:33.320> dnf<00:32:33.760> has<00:32:34.000> size<00:32:34.840> n<00:32:35.200> or
+have dnfs where the dnf has size n or
+something<00:32:36.559> but<00:32:36.720> the<00:32:36.799> number<00:32:37.039> of<00:32:37.240> solutions<00:32:37.799> to
+something but the number of solutions to
+that<00:32:38.159> dnf<00:32:38.639> is<00:32:38.840> exponential<00:32:39.360> in<00:32:39.880> N<00:32:40.880> right<00:32:41.159> so
+that dnf is exponential in N right so
+imagine<00:32:41.679> a
+imagine a
+dnf<00:32:43.919> which<00:32:44.360> is<00:32:45.360> uh<00:32:46.000> X1<00:32:46.760> or<00:32:47.000> X2<00:32:47.760> or<00:32:48.120> X3
+dnf which is uh X1 or X2 or X3
+Etc<00:32:50.720> it<00:32:50.919> has<00:32:51.200> exponentially<00:32:51.679> many<00:32:51.960> solutions
+Etc it has exponentially many solutions
+right<00:32:52.760> the<00:32:52.840> only<00:32:53.000> thing<00:32:53.159> that's<00:32:53.399> not<00:32:53.519> a
+right the only thing that's not a
+solution<00:32:54.120> is<00:32:54.240> if<00:32:54.360> all<00:32:54.559> the<00:32:54.639> X's<00:32:54.919> are<00:32:55.399> false<00:32:56.399> so
+solution is if all the X's are false so
+it<00:32:56.679> has<00:32:56.919> it<00:32:57.039> has<00:32:57.200> 2<00:32:57.360> to<00:32:57.480> the<00:32:57.559> n<00:32:57.840> minus<00:32:58.039> n
+it has it has 2 to the n minus n
+Solutions<00:32:59.559> um<00:32:59.799> so<00:33:00.000> if<00:33:00.120> you<00:33:00.240> wanted<00:33:00.559> to<00:33:01.080> get
+Solutions um so if you wanted to get
+that<00:33:01.720> answer<00:33:02.559> accurately<00:33:02.960> You'<00:33:03.159> have<00:33:03.240> to<00:33:03.320> set
+that answer accurately You' have to set
+Epsilon<00:33:03.799> to<00:33:03.880> be<00:33:04.039> one<00:33:04.200> over<00:33:04.440> that<00:33:05.159> and<00:33:05.240> then
+Epsilon to be one over that and then
+poly<00:33:05.600> one<00:33:05.720> of<00:33:05.799> epson<00:33:06.080> would<00:33:06.159> be<00:33:06.279> exponentially
+big<00:33:10.320> okay
+so<00:33:14.480> so<00:33:14.679> the<00:33:14.840> idea
+so so the idea
+behind<00:33:17.240> um<00:33:17.840> you<00:33:17.960> know<00:33:18.399> the<00:33:18.559> way<00:33:18.799> that<00:33:18.919> we're
+behind um you know the way that we're
+going<00:33:19.200> to<00:33:19.320> get<00:33:19.480> started<00:33:19.919> developing<00:33:20.399> this
+going to get started developing this
+carp<00:33:20.880> Luby<00:33:21.080> Madras<00:33:21.600> algorithm<00:33:22.600> would<00:33:22.760> be<00:33:22.960> to
+carp Luby Madras algorithm would be to
+you<00:33:23.240> know<00:33:23.399> to<00:33:23.600> try<00:33:23.919> out<00:33:24.200> the<00:33:24.320> first<00:33:24.519> thing<00:33:24.639> that
+you know to try out the first thing that
+might<00:33:24.919> come<00:33:25.039> to<00:33:25.200> mind<00:33:25.440> if<00:33:25.519> I<00:33:25.639> tell<00:33:25.840> you<00:33:26.080> come<00:33:26.240> up
+might come to mind if I tell you come up
+with<00:33:26.399> a<00:33:26.440> randomized<00:33:26.919> algorithm<00:33:27.960> right<00:33:28.799> uh<00:33:28.919> but
+with a randomized algorithm right uh but
+there's<00:33:29.159> going<00:33:29.240> to<00:33:29.320> be<00:33:29.399> a<00:33:29.600> problem<00:33:29.880> and<00:33:30.000> then
+there's going to be a problem and then
+we're<00:33:30.200> going<00:33:30.279> to<00:33:30.399> have<00:33:30.480> to<00:33:30.720> be<00:33:31.159> we're<00:33:31.279> going<00:33:31.399> to
+we're going to have to be we're going to
+have<00:33:31.559> to<00:33:32.279> use<00:33:32.480> a<00:33:32.679> clever<00:33:33.000> trick<00:33:33.200> to<00:33:33.320> get<00:33:33.440> around
+have to use a clever trick to get around
+that<00:33:34.039> problem
+that problem
+so<00:33:37.519> what's<00:33:37.760> one<00:33:38.080> way
+so what's one way
+to<00:33:40.399> um<00:33:41.360> randomly
+to um randomly
+estimate<00:33:43.880> the<00:33:44.039> fraction<00:33:44.480> of<00:33:44.679> so<00:33:44.840> there<00:33:44.919> are
+estimate the fraction of so there are
+there<00:33:45.120> are<00:33:45.200> two<00:33:45.360> to<00:33:45.440> the<00:33:45.519> end<00:33:45.720> assignments
+there are two to the end assignments
+let's<00:33:46.240> say<00:33:46.360> there<00:33:46.399> are<00:33:46.519> n
+variables<00:33:53.399> and<00:33:53.559> N<00:33:53.799> clauses
+sum<00:34:00.039> of<00:34:01.039> the<00:34:01.200> 2<00:34:01.480> to<00:34:01.600> the
+sum of the 2 to the
+N<00:34:03.279> variable
+assignments
+satisfy<00:34:14.320> our<00:34:14.760> formula<00:34:15.760> our<00:34:15.960> dnf
+formula<00:34:21.240> let's<00:34:21.839> say<00:34:22.839> let's<00:34:23.040> say<00:34:23.240> a<00:34:23.399> p<00:34:23.679> fraction
+right<00:34:30.879> so<00:34:31.079> really<00:34:31.359> what<00:34:31.480> we<00:34:31.560> want<00:34:31.679> to<00:34:31.760> do<00:34:31.879> is<00:34:32.000> we
+right so really what we want to do is we
+want<00:34:32.159> to<00:34:32.320> estimate
+want to estimate
+P
+right<00:34:36.919> so<00:34:37.919> are<00:34:38.119> are<00:34:38.280> people<00:34:38.520> with
+right so are are people with
+me<00:34:40.480> okay<00:34:40.679> so<00:34:41.040> how<00:34:41.159> would<00:34:41.280> you<00:34:41.440> estimate
+P<00:34:46.040> yes<00:34:46.359> sample<00:34:46.720> a<00:34:46.839> random<00:34:47.159> assignment<00:34:47.560> a
+P yes sample a random assignment a
+uniformly<00:34:48.119> random<00:34:48.919> assignment<00:34:49.919> check
+uniformly random assignment check
+whether<00:34:50.839> or<00:34:51.040> not<00:34:51.399> it<00:34:51.679> satisfies<00:34:52.159> your<00:34:52.760> dnf<00:34:53.760> and
+whether or not it satisfies your dnf and
+do<00:34:54.119> this<00:34:54.240> a<00:34:54.320> bunch<00:34:54.520> of<00:34:54.639> times<00:34:54.919> and<00:34:55.079> take<00:34:55.280> the
+do this a bunch of times and take the
+empirical<00:34:56.119> mean<00:34:56.879> right<00:34:57.000> or<00:34:57.200> take<00:34:57.760> see<00:34:57.920> what
+empirical mean right or take see what
+empirical<00:34:59.000> fraction<00:34:59.880> satisfies<00:35:00.880> uh<00:35:01.400> your
+empirical fraction satisfies uh your
+dnf<00:35:03.400> okay<00:35:03.520> so<00:35:03.680> what's<00:35:03.880> wrong<00:35:04.079> with<00:35:04.240> this
+algorithm
+onlys
+yeah<00:35:15.760> right<00:35:16.640> if<00:35:16.839> there<00:35:17.000> if<00:35:17.119> p<00:35:17.280> is<00:35:17.440> very<00:35:17.640> small
+yeah right if there if p is very small
+in<00:35:18.359> fact<00:35:18.560> if<00:35:18.720> p<00:35:18.880> is<00:35:19.000> one<00:35:19.160> over<00:35:19.320> two<00:35:19.480> to<00:35:19.599> the<00:35:19.680> N<00:35:19.839> so
+in fact if p is one over two to the N so
+there's<00:35:20.119> only<00:35:20.240> one<00:35:20.440> assignment<00:35:21.320> you're<00:35:21.520> not
+there's only one assignment you're not
+going<00:35:21.839> to<00:35:22.000> see<00:35:22.240> a<00:35:22.440> satisfying<00:35:23.079> assignment
+going to see a satisfying assignment
+unless<00:35:24.320> you<00:35:24.480> sample<00:35:24.920> exponentially<00:35:25.480> many
+unless you sample exponentially many
+assignments<00:35:26.640> right<00:35:26.880> so<00:35:27.680> so<00:35:27.800> a<00:35:27.960> bad<00:35:28.160> example
+assignments right so so a bad example
+for
+this<00:35:33.839> is<00:35:34.040> you<00:35:34.160> know<00:35:34.320> what<00:35:34.440> if<00:35:34.560> the<00:35:34.640> first<00:35:34.960> what
+this is you know what if the first what
+if<00:35:35.160> the<00:35:35.560> Clause<00:35:36.560> whatever<00:35:36.839> your<00:35:36.960> dnf<00:35:37.359> formula
+if the Clause whatever your dnf formula
+is<00:35:38.359> just<00:35:39.680> um<00:35:40.680> X1<00:35:41.320> and<00:35:41.599> X2<00:35:42.280> and<00:35:42.560> dot<00:35:42.760> dot<00:35:42.960> dot<00:35:43.200> and
+xn<00:35:47.200> okay<00:35:47.839> there's<00:35:48.000> only<00:35:48.200> one<00:35:48.440> assignment<00:35:49.440> and
+xn okay there's only one assignment and
+you're<00:35:49.640> not<00:35:49.800> going<00:35:49.880> to<00:35:50.000> see<00:35:50.160> it<00:35:50.319> you're<00:35:50.400> going
+you're not going to see it you're going
+to<00:35:50.640> think<00:35:50.800> the<00:35:50.920> answer<00:35:51.119> is<00:35:51.319> zero<00:35:51.680> unless
+to think the answer is zero unless
+you<00:35:53.480> do<00:35:53.720> exponentially<00:35:54.240> many<00:35:54.800> U<00:35:55.280> samples
+so<00:35:59.960> really<00:36:00.280> the<00:36:00.520> problem<00:36:00.839> is<00:36:01.000> that<00:36:01.280> P<00:36:01.520> can<00:36:01.640> be
+so really the problem is that P can be
+small<00:36:04.000> so<00:36:04.200> the<00:36:04.440> trick<00:36:04.760> in<00:36:05.000> this<00:36:05.599> F<00:36:05.839> press<00:36:06.119> that
+small so the trick in this F press that
+I'm<00:36:06.319> about<00:36:06.480> to<00:36:06.599> show
+I'm about to show
+you<00:36:08.560> is<00:36:08.680> to<00:36:08.880> rig
+you is to rig
+things<00:36:11.560> so<00:36:11.960> that<00:36:12.960> P<00:36:13.400> is<00:36:14.040> not<00:36:14.240> too
+things so that P is not too
+small
+okay<00:36:18.200> so<00:36:18.560> here's<00:36:19.000> the<00:36:19.400> let<00:36:19.520> me<00:36:19.760> let<00:36:19.839> me<00:36:20.000> just
+okay so here's the let me let me just
+call<00:36:20.440> this<00:36:21.079> a
+call this a
+KLM<00:36:24.400> so<00:36:24.760> okay<00:36:24.880> so<00:36:25.079> what<00:36:25.240> what<00:36:25.319> does<00:36:25.520> KLM<00:36:25.960> do
+okay<00:36:32.720> let
+okay let
+SI<00:36:35.560> be<00:36:36.359> the<00:36:36.800> set<00:36:37.800> of
+assignments
+satisfying<00:36:49.520> satisfying<00:36:50.160> Clause
+ey<00:36:55.000> and<00:36:55.319> now<00:36:55.960> set<00:36:56.359> u<00:36:57.160> to<00:36:57.319> be
+ey and now set u to be
+uh<00:36:59.200> well<00:36:59.400> not<00:36:59.599> you<00:36:59.839> let's<00:37:00.040> say
+uh well not you let's say
+B<00:37:02.119> set<00:37:02.440> B<00:37:02.599> to<00:37:02.720> be<00:37:02.880> the<00:37:03.079> union<00:37:04.079> over<00:37:04.319> all<00:37:04.599> I<00:37:04.800> from
+B set B to be the union over all I from
+1<00:37:05.160> to<00:37:05.280> M<00:37:06.200> of
+Si<00:37:10.920> we<00:37:11.119> want<00:37:11.319> to
+Si we want to
+estimate<00:37:13.720> the<00:37:13.880> size<00:37:14.119> of
+B<00:37:22.480> up<00:37:22.640> to<00:37:22.800> one<00:37:22.960> plus<00:37:23.160> Epsilon<00:37:24.119> okay<00:37:25.200> now<00:37:26.200> define
+B up to one plus Epsilon okay now define
+B<00:37:26.960> Prime
+to
+be<00:37:37.640> um<00:37:38.599> how<00:37:38.720> should<00:37:38.920> I<00:37:39.079> put
+this<00:37:44.400> the<00:37:44.560> set<00:37:44.720> of<00:37:44.920> all
+this the set of all
+pairs<00:37:47.960> I<00:37:48.359> comma
+X<00:37:52.800> such<00:37:53.200> that
+assignment
+X
+satisfies<00:38:08.240> uh<00:38:09.000> Clause
+ey<00:38:12.440> or<00:38:12.599> if<00:38:12.680> you<00:38:12.800> want<00:38:12.880> to<00:38:13.040> think<00:38:13.200> about<00:38:13.480> it<00:38:14.200> uh<00:38:14.520> I
+ey or if you want to think about it uh I
+don't<00:38:15.040> know<00:38:16.040> I<00:38:16.119> wanted<00:38:16.359> to<00:38:16.520> write<00:38:16.680> it
+don't know I wanted to write it
+explicitly<00:38:17.400> so<00:38:17.520> you<00:38:17.640> know<00:38:17.760> what<00:38:17.839> I'm<00:38:18.000> saying<00:38:18.359> I
+explicitly so you know what I'm saying I
+think<00:38:18.760> some<00:38:18.920> people<00:38:19.160> use<00:38:19.400> this<00:38:19.680> notation<00:38:20.680> the
+think some people use this notation the
+disjoint<00:38:21.319> Union<00:38:22.319> of
+Si<00:38:26.240> Okay<00:38:26.640> so
+Si Okay so
+each<00:38:28.680> each<00:38:28.960> assign<00:38:29.400> each<00:38:29.560> satisfying
+each each assign each satisfying
+assignment<00:38:30.760> is<00:38:30.920> not<00:38:31.119> written<00:38:31.440> just<00:38:31.680> once<00:38:31.920> in
+assignment is not written just once in
+the<00:38:32.280> set<00:38:33.160> it's<00:38:33.400> written<00:38:34.240> multiple<00:38:34.760> times<00:38:35.680> once
+the set it's written multiple times once
+for<00:38:36.160> every<00:38:37.119> Clause<00:38:37.440> that<00:38:37.560> it<00:38:37.720> actually
+satisfies
+okay<00:38:50.920> okay
+okay okay
+so<00:38:54.119> notice
+that<00:39:00.920> so
+that so
+question<00:39:03.760> we<00:39:03.880> want<00:39:04.000> to<00:39:04.200> estimate<00:39:04.560> the<00:39:04.680> size<00:39:04.880> of
+question we want to estimate the size of
+B<00:39:05.839> is<00:39:05.920> it<00:39:06.240> is<00:39:06.359> it<00:39:06.480> easy<00:39:06.680> or<00:39:06.800> hard<00:39:06.960> to<00:39:07.040> estimate
+B is it is it easy or hard to estimate
+the<00:39:07.400> size<00:39:07.560> of<00:39:07.680> B<00:39:07.880> Prime
+um<00:39:32.079> wait<00:39:32.319> in<00:39:32.680> in<00:39:32.960> this<00:39:33.760> right<00:39:33.880> I<00:39:33.920> mean<00:39:34.079> in
+um wait in in this right I mean in
+general<00:39:34.480> I<00:39:34.599> give<00:39:34.720> you<00:39:34.800> a<00:39:35.160> dnf<00:39:36.160> right<00:39:36.280> I<00:39:36.400> give
+general I give you a dnf right I give
+you<00:39:36.560> an<00:39:36.640> arbitrary<00:39:37.040> dnf<00:39:37.599> which<00:39:37.720> is<00:39:37.839> an<00:39:38.000> or<00:39:38.280> of<00:39:38.400> a
+you an arbitrary dnf which is an or of a
+bunch<00:39:38.720> of<00:39:39.440> Clauses<00:39:40.200> a<00:39:40.319> clause<00:39:40.599> is<00:39:40.720> just<00:39:40.800> an<00:39:40.960> and
+bunch of Clauses a clause is just an and
+of<00:39:41.240> some
+of some
+literals<00:39:42.960> and<00:39:43.079> I<00:39:43.200> want<00:39:43.440> you<00:39:43.560> to<00:39:44.000> I<00:39:44.079> want<00:39:44.200> you<00:39:44.280> to
+literals and I want you to I want you to
+compute<00:39:44.880> or<00:39:45.119> estimate<00:39:45.680> the<00:39:45.839> size<00:39:46.040> of<00:39:46.200> B
+Prime<00:39:51.560> okay<00:39:51.720> you<00:39:51.800> don't<00:39:51.920> have<00:39:52.000> to<00:39:52.079> be<00:39:52.160> shy<00:39:52.400> you
+Prime okay you don't have to be shy you
+know<00:39:52.760> just<00:39:53.200> yell<00:39:53.440> it
+out<00:39:57.400> I<00:39:57.480> see<00:39:57.599> a
+out I see a
+nod<00:39:59.440> okay<00:39:59.599> so<00:40:00.480> explain<00:40:00.800> your
+nod<00:40:08.280> right<00:40:08.640> yeah<00:40:08.800> so<00:40:09.040> the<00:40:09.160> point<00:40:09.520> is<00:40:10.640> um<00:40:11.640> the
+nod right yeah so the point is um the
+size<00:40:12.000> of<00:40:12.119> B
+size of B
+Prime<00:40:14.000> is<00:40:14.359> the
+Prime is the
+sum<00:40:16.240> of<00:40:16.400> the<00:40:16.560> size<00:40:16.760> of<00:40:16.960> Si<00:40:17.599> where<00:40:17.800> I<00:40:17.960> goes<00:40:18.160> from
+sum of the size of Si where I goes from
+1<00:40:18.440> to<00:40:18.880> M<00:40:19.880> and<00:40:20.000> what's<00:40:20.200> the<00:40:20.319> size<00:40:20.520> of<00:40:20.880> Si
+1 to M and what's the size of Si
+well<00:40:23.640> this<00:40:23.920> is<00:40:24.200> just<00:40:24.680> 2<00:40:25.040> to<00:40:25.200> the<00:40:25.480> N<00:40:26.480> minus
+um<00:40:31.359> number<00:40:31.640> of
+um number of
+literals<00:40:34.839> in
+literals in
+C<00:40:37.359> right<00:40:38.160> so<00:40:38.359> for<00:40:38.480> the<00:40:38.640> literals<00:40:39.040> that
+C right so for the literals that
+actually<00:40:39.520> appeared<00:40:39.920> in<00:40:40.040> the<00:40:40.160> I<00:40:40.880> Clause<00:40:41.880> you
+actually appeared in the I Clause you
+know<00:40:42.200> what<00:40:42.319> you<00:40:42.400> have<00:40:42.480> to<00:40:42.599> set<00:40:42.760> them<00:40:42.880> to<00:40:43.079> to
+know what you have to set them to to
+make<00:40:43.359> this<00:40:43.520> and<00:40:44.119> evaluate<00:40:44.480> to
+make this and evaluate to
+true<00:40:46.319> and<00:40:46.440> then<00:40:46.599> all<00:40:46.760> the<00:40:46.880> other<00:40:47.079> n<00:40:47.319> variables
+true and then all the other n variables
+you<00:40:47.880> can<00:40:48.000> just<00:40:48.160> set<00:40:48.319> to<00:40:48.480> whatever<00:40:48.760> you<00:40:48.960> want<00:40:49.960> or
+you can just set to whatever you want or
+all<00:40:50.319> the<00:40:50.440> other<00:40:50.720> n<00:40:50.920> minus<00:40:51.400> number<00:40:51.599> of
+all the other n minus number of
+variables<00:40:52.079> you<00:40:52.119> can<00:40:52.240> set<00:40:52.359> to<00:40:52.480> whatever<00:40:52.680> you
+variables you can set to whatever you
+want<00:40:54.440> okay<00:40:55.040> so<00:40:55.280> the<00:40:55.400> point<00:40:55.640> is<00:40:55.839> we<00:40:55.960> can
+want okay so the point is we can
+actually<00:40:56.359> compute<00:40:56.680> the<00:40:56.760> size<00:40:56.920> of<00:40:57.319> Prime
+actually compute the size of Prime
+exactly<00:40:58.880> uh<00:40:59.040> very
+quickly<00:41:02.280> so<00:41:02.560> now<00:41:03.160> instead<00:41:03.400> of<00:41:03.560> estimating
+quickly so now instead of estimating
+this
+P<00:41:05.920> let's
+estimate<00:41:10.920> P<00:41:11.280> Prime<00:41:12.280> which<00:41:12.400> is<00:41:12.599> the<00:41:12.800> size<00:41:13.000> of<00:41:13.280> B
+estimate P Prime which is the size of B
+over<00:41:14.359> the<00:41:14.520> size<00:41:14.760> of<00:41:14.920> B
+Prime<00:41:18.880> and<00:41:18.960> then<00:41:19.119> once<00:41:19.319> we<00:41:19.480> get<00:41:19.800> that<00:41:20.240> once<00:41:20.400> we
+Prime and then once we get that once we
+get<00:41:20.720> this<00:41:20.880> we'll<00:41:21.040> just<00:41:21.280> multiply<00:41:21.640> it<00:41:21.760> by<00:41:21.839> the
+get this we'll just multiply it by the
+size<00:41:22.119> of<00:41:22.240> B<00:41:22.440> Prime<00:41:22.720> which<00:41:22.839> we<00:41:22.960> know<00:41:23.240> and<00:41:23.319> then
+size of B Prime which we know and then
+we'll<00:41:23.640> get<00:41:23.800> the<00:41:23.920> size<00:41:24.079> of<00:41:24.280> B<00:41:24.560> up<00:41:24.680> to<00:41:24.839> some<00:41:25.119> error
+we'll get the size of B up to some error
+okay
+so<00:41:30.400> what's<00:41:30.560> a<00:41:30.720> lower<00:41:31.000> bound<00:41:31.200> on<00:41:31.400> P<00:41:31.599> Prime<00:41:31.880> the
+so what's a lower bound on P Prime the
+problem<00:41:32.280> before<00:41:32.560> was<00:41:32.680> that<00:41:32.839> P<00:41:33.000> Prime<00:41:33.240> could<00:41:33.359> be
+problem before was that P Prime could be
+too<00:41:33.640> small<00:41:34.440> right<00:41:35.000> so<00:41:35.200> now<00:41:35.400> it's<00:41:35.520> a<00:41:35.640> lower
+too small right so now it's a lower
+bound<00:41:36.040> on<00:41:36.240> P
+Prime<00:41:44.800> can<00:41:45.079> can<00:41:45.200> p<00:41:45.359> Prime<00:41:45.599> be<00:41:45.680> too
+small<00:41:52.960> one<00:41:53.119> over<00:41:53.359> M<00:41:53.800> right<00:41:53.920> so<00:41:54.160> P<00:41:54.520> Prime<00:41:55.520> note<00:41:55.880> P
+small one over M right so P Prime note P
+Prime
+is<00:41:58.079> at<00:41:58.240> least<00:41:58.480> 1/<00:41:58.920> M<00:41:59.920> right
+because<00:42:03.760> each<00:42:04.040> assignment<00:42:04.560> in
+because each assignment in
+B<00:42:06.599> appears<00:42:07.040> at<00:42:07.160> least<00:42:07.400> once<00:42:07.599> in<00:42:07.760> B<00:42:08.000> Prime<00:42:08.359> and
+B appears at least once in B Prime and
+it<00:42:08.599> appears<00:42:08.920> with<00:42:09.040> multiplicity<00:42:09.599> at<00:42:09.760> most<00:42:10.000> M
+it appears with multiplicity at most M
+right<00:42:11.000> so<00:42:11.200> B<00:42:11.400> Prime<00:42:11.720> is<00:42:11.880> at<00:42:12.079> most<00:42:12.920> an<00:42:13.160> M<00:42:13.520> Factor
+right so B Prime is at most an M Factor
+larger<00:42:14.640> than<00:42:14.920> b<00:42:15.599> is<00:42:16.599> okay<00:42:16.880> so<00:42:17.079> P<00:42:17.240> Prime<00:42:17.440> is<00:42:17.560> not
+larger than b is okay so P Prime is not
+too
+small<00:42:20.240> and<00:42:20.440> now<00:42:20.839> how<00:42:20.960> can<00:42:21.160> I<00:42:21.520> give<00:42:21.680> me<00:42:21.800> an
+small and now how can I give me an
+algorithm<00:42:22.480> to<00:42:22.640> estimate<00:42:23.119> P
+Prime<00:42:27.160> for
+right<00:43:16.720> so<00:43:16.880> what<00:43:17.000> we<00:43:17.079> want<00:43:17.200> to<00:43:17.319> do<00:43:17.480> is<00:43:17.599> we<00:43:17.680> want
+right so what we want to do is we want
+to<00:43:18.040> pick<00:43:18.559> somehow<00:43:19.079> do<00:43:19.240> something<00:43:19.520> similar
+to pick somehow do something similar
+what<00:43:20.000> we<00:43:20.079> did<00:43:20.280> before<00:43:20.760> which<00:43:20.920> didn't<00:43:21.200> work
+what we did before which didn't work
+pick<00:43:22.119> a<00:43:22.319> random<00:43:23.160> assignment<00:43:24.160> and<00:43:24.359> then<00:43:24.760> reject
+pick a random assignment and then reject
+and<00:43:25.319> then<00:43:25.559> you<00:43:25.640> know<00:43:25.839> reject<00:43:26.200> it<00:43:26.319> if<00:43:26.440> it's<00:43:26.559> not
+and then you know reject it if it's not
+in<00:43:26.839> b
+in b
+the<00:43:28.280> problem<00:43:28.520> is<00:43:28.720> that<00:43:28.920> a<00:43:29.040> totally<00:43:29.400> random
+the problem is that a totally random
+assignment<00:43:31.720> is<00:43:31.920> probably<00:43:32.160> not<00:43:32.319> in<00:43:32.480> b<00:43:33.280> or<00:43:33.400> it
+assignment is probably not in b or it
+might<00:43:33.720> not<00:43:33.839> you<00:43:33.920> know<00:43:34.240> the<00:43:34.359> chance<00:43:34.559> that<00:43:34.680> it's
+might not you know the chance that it's
+in<00:43:34.880> B<00:43:35.000> is<00:43:35.160> really
+in B is really
+small
+so<00:43:39.160> instead<00:43:39.559> what<00:43:39.680> do<00:43:39.800> we
+do<00:43:43.559> right<00:43:44.160> we<00:43:44.280> need<00:43:44.400> to<00:43:44.559> pick<00:43:44.680> a<00:43:44.839> random
+do right we need to pick a random
+element<00:43:45.599> of<00:43:45.760> B
+element of B
+Prime<00:43:48.880> and<00:43:49.040> check<00:43:49.319> if<00:43:49.599> if<00:43:49.680> a<00:43:49.800> random<00:43:50.040> element
+Prime and check if if a random element
+of<00:43:50.400> B<00:43:50.559> Prime<00:43:50.760> is<00:43:50.839> in<00:43:51.000> B<00:43:51.960> right<00:43:52.280> so<00:43:53.280> right<00:43:53.400> so
+of B Prime is in B right so right so
+pick<00:43:55.839> a<00:43:56.079> random
+element<00:44:01.240> of<00:44:01.440> B<00:44:02.079> Prime<00:44:03.079> and
+check<00:44:07.440> if
+check if
+it's<00:44:09.119> in<00:44:09.640> B
+well<00:44:14.119> checking<00:44:14.440> if<00:44:14.520> it's<00:44:14.640> in<00:44:14.839> B<00:44:15.079> is<00:44:15.200> sort<00:44:15.359> of<00:44:15.520> a
+well checking if it's in B is sort of a
+weird<00:44:16.119> thing<00:44:16.280> to<00:44:16.480> say<00:44:16.960> because<00:44:17.960> kind<00:44:18.079> of<00:44:18.240> the
+weird thing to say because kind of the
+types<00:44:19.040> of<00:44:19.440> the<00:44:19.599> elements<00:44:19.880> of<00:44:20.040> B<00:44:20.280> Prime<00:44:20.599> and<00:44:20.720> the
+types of the elements of B Prime and the
+types<00:44:21.160> of<00:44:21.359> of<00:44:21.480> elements<00:44:21.800> in<00:44:21.960> B<00:44:22.280> when<00:44:22.359> I<00:44:22.480> say
+types of of elements in B when I say
+type<00:44:22.960> I<00:44:23.040> mean<00:44:23.240> in<00:44:23.400> like<00:44:23.520> in<00:44:23.720> programming
+type I mean in like in programming
+languages<00:44:24.720> right<00:44:25.319> like
+languages right like
+an<00:44:28.160> element<00:44:28.480> of<00:44:29.040> B<00:44:30.040> is<00:44:31.040> a<00:44:31.200> bit<00:44:31.400> string<00:44:31.760> of
+an element of B is a bit string of
+length<00:44:32.200> n<00:44:33.040> right<00:44:33.160> it's<00:44:33.280> a<00:44:33.359> true<00:44:33.599> false
+length n right it's a true false
+assignment<00:44:35.359> an<00:44:35.520> element<00:44:35.839> of<00:44:36.000> B<00:44:36.599> Prime<00:44:37.599> is<00:44:37.760> not
+assignment an element of B Prime is not
+a<00:44:38.079> bit<00:44:38.280> string<00:44:38.599> of<00:44:38.760> length<00:44:39.000> n<00:44:39.319> it's<00:44:39.480> a<00:44:39.599> bit
+a bit string of length n it's a bit
+string<00:44:39.960> of<00:44:40.119> length<00:44:40.319> n<00:44:40.680> together<00:44:40.920> with<00:44:41.000> an
+string of length n together with an
+index<00:44:41.559> from<00:44:41.680> 1<00:44:41.839> to<00:44:42.000> M<00:44:42.800> so<00:44:43.599> what<00:44:43.720> is<00:44:44.000> you<00:44:44.079> know
+index from 1 to M so what is you know
+what<00:44:44.319> do<00:44:44.440> I<00:44:44.599> mean<00:44:44.880> when<00:44:45.000> I<00:44:45.160> say<00:44:45.559> check<00:44:46.040> if<00:44:46.760> if
+what do I mean when I say check if if
+the<00:44:47.040> element<00:44:47.280> of<00:44:47.440> B<00:44:47.680> Prime<00:44:48.079> if<00:44:48.280> this<00:44:48.520> pair
+the element of B Prime if this pair
+check<00:44:49.200> if<00:44:49.400> it's<00:44:49.520> in<00:44:49.760> B<00:44:50.760> right<00:44:50.880> so<00:44:51.079> what's<00:44:51.319> one
+check if it's in B right so what's one
+way<00:44:53.559> how<00:44:53.800> how<00:44:53.920> can<00:44:54.000> I<00:44:54.160> implement<00:44:54.599> this<00:44:54.800> check
+way how how can I implement this check
+if<00:44:55.119> it's<00:44:55.240> in<00:44:55.440> B<00:44:55.800> and<00:44:55.920> then<00:44:56.040> we'll<00:44:56.240> also<00:44:56.480> talk
+if it's in B and then we'll also talk
+about<00:44:57.040> picking<00:44:57.160> a<00:44:57.240> random<00:44:57.480> element<00:44:57.800> but<00:44:57.920> how
+about picking a random element but how
+can<00:44:58.119> I<00:44:58.319> check<00:44:58.760> if<00:44:58.880> it's<00:44:59.040> in<00:44:59.599> B
+yeah<00:45:05.640> oh
+yeah oh
+um<00:45:08.839> so<00:45:09.480> the<00:45:09.599> way<00:45:09.720> a<00:45:09.800> dnf<00:45:10.280> is<00:45:10.960> to<00:45:11.119> satisfy<00:45:11.520> the
+um so the way a dnf is to satisfy the
+entire<00:45:11.920> thing<00:45:12.079> you<00:45:12.200> just<00:45:12.319> have<00:45:12.400> to<00:45:12.520> satisfy
+entire thing you just have to satisfy
+one<00:45:13.079> of<00:45:13.160> the<00:45:13.240> Clauses<00:45:13.800> right<00:45:14.520> so<00:45:15.200> any<00:45:15.599> any<00:45:15.920> X<00:45:16.319> in
+one of the Clauses right so any any X in
+B<00:45:16.800> Prime<00:45:17.280> definitely<00:45:17.920> is<00:45:18.040> in<00:45:18.280> this
+B Prime definitely is in this
+set<00:45:20.760> right<00:45:20.920> so<00:45:21.720> I<00:45:21.800> want<00:45:21.920> to<00:45:22.760> basically<00:45:23.119> what<00:45:23.240> I
+set right so I want to basically what I
+want<00:45:23.839> right<00:45:24.000> what<00:45:24.079> do<00:45:24.240> I<00:45:24.359> want<00:45:24.599> I<00:45:24.720> want<00:45:24.839> a<00:45:25.040> bje
+want right what do I want I want a bje
+between<00:45:26.119> B<00:45:27.079> and<00:45:27.200> a<00:45:27.400> subset<00:45:27.760> of<00:45:27.880> B<00:45:28.119> Prime<00:45:29.079> so
+between B and a subset of B Prime so
+that<00:45:29.400> it<00:45:29.599> makes<00:45:29.880> sense<00:45:30.160> to<00:45:30.319> check<00:45:30.720> that<00:45:31.319> this
+that it makes sense to check that this
+element<00:45:31.720> of<00:45:31.839> B<00:45:31.960> Prime<00:45:32.160> is<00:45:32.240> in
+element of B Prime is in
+B<00:45:34.040> okay<00:45:34.240> and<00:45:34.359> I'll<00:45:34.520> just<00:45:34.680> spill<00:45:35.079> oh
+B okay and I'll just spill oh
+yeah<00:45:36.920> yeah<00:45:37.160> so<00:45:37.400> check<00:45:38.000> so<00:45:38.640> look<00:45:38.800> at<00:45:39.040> so<00:45:39.160> what's
+yeah yeah so check so look at so what's
+the<00:45:39.480> bje<00:45:39.880> going<00:45:39.960> to<00:45:40.599> be<00:45:41.599> basically<00:45:42.040> for<00:45:42.319> every
+the bje going to be basically for every
+assignment<00:45:43.119> X<00:45:43.400> that<00:45:43.520> appears<00:45:43.839> anywhere<00:45:44.079> in<00:45:44.200> B
+assignment X that appears anywhere in B
+Prime<00:45:46.280> its<00:45:46.520> representative<00:45:47.240> which
+Prime its representative which
+corresponds<00:45:48.000> to<00:45:48.280> it<00:45:48.400> being<00:45:48.599> in<00:45:48.800> B<00:45:49.079> will<00:45:49.280> be<00:45:49.960> the
+corresponds to it being in B will be the
+I<00:45:50.559> such<00:45:50.800> that<00:45:51.599> it's<00:45:51.800> the<00:45:51.960> first<00:45:52.559> time<00:45:53.559> I<00:45:53.720> is<00:45:53.880> the
+I such that it's the first time I is the
+the<00:45:54.280> index<00:45:54.520> of<00:45:54.680> the<00:45:54.800> first<00:45:55.079> Clause<00:45:55.400> that<00:45:55.559> X
+the index of the first Clause that X
+satisfies
+okay
+so<00:46:03.119> bctiv
+map<00:46:07.839> B<00:46:08.839> into<00:46:09.599> the
+map B into the
+set
+iix<00:46:15.839> so<00:46:16.440> B<00:46:16.760> Prime<00:46:17.760> uh<00:46:17.960> well<00:46:18.119> this<00:46:18.240> is<00:46:18.359> bad
+iix so B Prime uh well this is bad
+notation
+where<00:46:21.960> CI<00:46:22.839> is<00:46:23.440> the
+where CI is the
+first<00:46:25.800> clause
+first clause
+X
+satisfies<00:46:31.800> right<00:46:31.920> so<00:46:32.119> each<00:46:32.359> satisfying
+satisfies right so each satisfying
+assignment<00:46:33.079> is<00:46:33.160> counted<00:46:33.480> exactly<00:46:33.800> once<00:46:34.559> now
+assignment is counted exactly once now
+and<00:46:35.680> we<00:46:35.800> can<00:46:36.000> check<00:46:36.359> that<00:46:36.720> right<00:46:37.240> once<00:46:37.400> we<00:46:37.520> get
+and we can check that right once we get
+an<00:46:37.720> element<00:46:37.960> of<00:46:38.079> B<00:46:38.240> Prime<00:46:38.559> we<00:46:38.640> can<00:46:38.839> just<00:46:39.119> now
+an element of B Prime we can just now
+take<00:46:39.839> that<00:46:40.000> X<00:46:40.559> compare<00:46:41.040> like<00:46:41.160> run<00:46:41.280> it<00:46:41.440> through
+take that X compare like run it through
+every<00:46:41.800> clause<00:46:42.200> and<00:46:42.440> make<00:46:42.559> sure<00:46:42.960> that<00:46:43.160> that<00:46:43.319> I
+every clause and make sure that that I
+is<00:46:43.599> the<00:46:43.720> first<00:46:43.880> time<00:46:44.000> it<00:46:44.160> satisfied<00:46:44.599> so<00:46:44.680> we<00:46:44.760> can
+is the first time it satisfied so we can
+check<00:46:45.200> that
+check that
+quickly
+okay<00:46:49.119> how<00:46:49.240> about<00:46:49.400> picking<00:46:49.640> a<00:46:49.760> random<00:46:50.040> element
+okay how about picking a random element
+of<00:46:50.400> B<00:46:50.599> Prime<00:46:50.920> how<00:46:51.000> do<00:46:51.119> we<00:46:51.240> do<00:46:51.440> that
+how<00:47:03.920> do<00:47:04.119> pick<00:47:04.240> a<00:47:04.280> random<00:47:04.480> l<00:47:04.640> in<00:47:04.720> a<00:47:04.800> V
+Prime<00:47:20.280> how<00:47:20.359> do<00:47:20.480> I<00:47:20.559> choose<00:47:20.720> a
+clause<00:47:24.200> CL<00:47:24.920> choose<00:47:25.200> any<00:47:25.680> Clause<00:47:26.680> okay<00:47:27.200> okay
+clause CL choose any Clause okay okay
+you<00:47:28.359> mean<00:47:29.319> not<00:47:29.559> randomly<00:47:30.160> just
+arbitrarily<00:47:34.559> randomly<00:47:35.319> okay<00:47:35.640> uniform<00:47:36.200> like
+arbitrarily randomly okay uniform like
+under<00:47:36.760> what
+distribution
+uniform<00:47:44.400> okay<00:47:45.000> we<00:47:45.480> so<00:47:45.640> we<00:47:45.760> could<00:47:45.880> do<00:47:46.079> that<00:47:46.200> I
+uniform okay we so we could do that I
+don't<00:47:46.440> know<00:47:46.800> I<00:47:46.880> don't<00:47:47.000> know<00:47:47.119> how<00:47:47.200> to<00:47:47.359> make<00:47:47.640> a
+don't know I don't know how to make a
+uniform<00:47:48.400> Clause<00:47:48.760> work<00:47:49.720> but<00:47:50.000> okay<00:47:50.319> you<00:47:50.440> have<00:47:50.559> a
+uniform Clause work but okay you have a
+suggestion
+yeah<00:48:15.079> um<00:48:16.079> wait<00:48:16.280> so<00:48:16.880> okay<00:48:17.040> so<00:48:17.920> I<00:48:18.040> think<00:48:18.680> so<00:48:18.920> yeah
+yeah um wait so okay so I think so yeah
+so<00:48:19.200> you<00:48:19.319> said<00:48:19.680> we'll<00:48:19.920> pick<00:48:20.119> Clauses<00:48:20.680> prop<00:48:21.240> like
+so you said we'll pick Clauses prop like
+that<00:48:21.960> with<00:48:22.119> probability<00:48:22.960> dependent<00:48:23.960> SI<00:48:24.280> of
+that with probability dependent SI of
+the<00:48:26.839> SI<00:48:27.440> of<00:48:28.440> the<00:48:28.599> size<00:48:28.800> of<00:48:28.960> the<00:48:29.079> Clause<00:48:29.680> okay<00:48:29.760> so
+the SI of the size of the Clause okay so
+not<00:48:30.240> yeah<00:48:30.400> not<00:48:30.599> quite<00:48:30.839> the
+not yeah not quite the
+size<00:48:32.640> the<00:48:32.720> size<00:48:32.880> of<00:48:33.000> Si<00:48:34.000> right<00:48:34.200> right<00:48:34.400> okay
+size the size of Si right right okay
+good<00:48:34.880> so<00:48:35.480> the<00:48:35.640> point
+good so the point
+is<00:48:37.800> what<00:48:37.920> are<00:48:37.960> we<00:48:38.119> going<00:48:38.200> to<00:48:38.359> do<00:48:39.160> we'll
+is what are we going to do we'll
+first
+pick<00:48:43.359> a<00:48:43.599> clause<00:48:44.400> I<00:48:45.400> pick<00:48:45.559> a<00:48:45.720> clause
+pick a clause I pick a clause
+randomly<00:48:48.280> where<00:48:48.440> the<00:48:48.559> distribution<00:48:49.000> is<00:48:49.160> as
+randomly where the distribution is as
+follows<00:48:49.799> Clause
+follows Clause
+I<00:48:52.359> is
+I is
+picked<00:48:55.160> with<00:48:55.440> probability
+picked with probability
+the<00:48:57.079> number<00:48:57.280> of<00:48:57.440> assignments<00:48:57.839> it<00:48:58.400> has<00:48:59.640> over
+the number of assignments it has over
+the<00:49:01.280> sum<00:49:02.280> J<00:49:02.520> from<00:49:02.640> 1<00:49:02.839> to<00:49:02.960> M<00:49:03.280> of<00:49:03.480> size<00:49:03.680> of
+the sum J from 1 to M of size of
+SJ<00:49:06.119> right<00:49:06.319> so<00:49:06.480> not<00:49:06.640> uniformly<00:49:07.319> but<00:49:07.480> according
+SJ right so not uniformly but according
+to<00:49:07.920> this
+to this
+distribution<00:49:10.359> right<00:49:11.359> and<00:49:11.480> then
+now<00:49:15.640> then
+now then
+pick<00:49:17.799> a
+random
+satisfying<00:49:24.040> assignment
+for<00:49:30.200> CI<00:49:31.200> a<00:49:31.319> uniformly<00:49:31.839> random<00:49:32.119> assignment
+uniformly
+okay
+right<00:49:49.040> so<00:49:50.040> if<00:49:50.119> you<00:49:50.319> pick<00:49:50.480> from<00:49:50.720> B<00:49:50.920> Prime<00:49:51.400> this
+right so if you pick from B Prime this
+way<00:49:52.280> then<00:49:53.280> um<00:49:53.559> you<00:49:53.720> will<00:49:53.960> guarantee<00:49:55.000> that<00:49:56.000> the
+way then um you will guarantee that the
+element<00:49:56.359> you<00:49:56.520> get<00:49:56.920> is<00:49:57.000> a<00:49:57.160> uniform<00:49:57.880> a<00:49:58.040> uniformly
+element you get is a uniform a uniformly
+random<00:49:58.799> element<00:49:59.119> from<00:49:59.319> B<00:49:59.880> Prime<00:50:00.880> now<00:50:01.480> we
+random element from B Prime now we
+already<00:50:01.839> said<00:50:02.040> we<00:50:02.160> know<00:50:02.359> how<00:50:02.440> to<00:50:02.599> compute
+already said we know how to compute
+these<00:50:03.240> things<00:50:03.880> right<00:50:04.400> so<00:50:05.400> we<00:50:05.520> can<00:50:05.720> actually<00:50:05.920> do
+these things right so we can actually do
+this<00:50:06.359> the<00:50:06.480> size<00:50:06.680> of<00:50:06.880> Si<00:50:07.319> is<00:50:07.559> just<00:50:08.400> well<00:50:08.520> we
+this the size of Si is just well we
+wrote<00:50:08.839> it<00:50:08.920> somewhere<00:50:09.280> before<00:50:09.680> two<00:50:10.040> to
+wrote it somewhere before two to
+something<00:50:11.240> minus<00:50:11.559> something<00:50:12.000> maybe<00:50:12.200> I<00:50:12.319> erased
+something minus something maybe I erased
+it
+already<00:50:14.680> top<00:50:15.160> oh<00:50:15.319> yeah<00:50:15.520> there<00:50:15.880> the<00:50:16.040> size<00:50:16.200> of<00:50:16.319> Si
+already top oh yeah there the size of Si
+is<00:50:16.720> that<00:50:16.839> two<00:50:17.040> to<00:50:17.280> two<00:50:17.440> to<00:50:17.599> n<00:50:17.760> minus<00:50:18.119> number<00:50:18.280> of
+is that two to two to n minus number of
+literals<00:50:18.640> in<00:50:18.760> CI<00:50:19.160> so<00:50:19.520> we<00:50:19.599> can<00:50:19.760> compute<00:50:20.160> this<00:50:20.400> we
+literals in CI so we can compute this we
+can<00:50:20.680> compute<00:50:21.000> these
+numbers<00:50:26.240> yeah<00:50:26.359> so<00:50:26.440> if<00:50:26.520> you<00:50:26.760> ever<00:50:26.880> have<00:50:27.000> a
+numbers yeah so if you ever have a
+clause<00:50:27.559> if<00:50:27.640> you<00:50:27.760> ever<00:50:28.000> if<00:50:28.040> you<00:50:28.160> ever<00:50:28.280> a<00:50:28.359> clause
+clause if you ever if you ever a clause
+that's<00:50:28.799> ever<00:50:29.160> like<00:50:29.440> X<00:50:29.640> and<00:50:29.799> not<00:50:30.040> X<00:50:30.799> then<00:50:30.960> you
+that's ever like X and not X then you
+can<00:50:31.160> just<00:50:31.280> throw<00:50:31.520> that<00:50:31.680> out<00:50:31.760> of<00:50:31.880> your<00:50:32.000> dnf
+can just throw that out of your dnf
+because<00:50:32.680> there's<00:50:33.079> no<00:50:33.240> way<00:50:33.359> you're<00:50:33.480> ever<00:50:33.640> going
+because there's no way you're ever going
+to<00:50:33.880> satisfy
+to satisfy
+that<00:50:36.559> okay
+that okay
+um<00:50:39.079> and<00:50:39.240> now<00:50:39.400> picking<00:50:39.640> a<00:50:39.799> random<00:50:40.160> satisfying
+um and now picking a random satisfying
+assignment<00:50:41.119> well<00:50:41.240> how<00:50:41.319> do<00:50:41.400> you<00:50:41.520> do<00:50:41.720> that<00:50:42.119> for
+assignment well how do you do that for
+the<00:50:42.559> Clause<00:50:43.760> well<00:50:44.760> the<00:50:44.960> variable<00:50:45.400> the
+the Clause well the variable the
+literals<00:50:45.839> that<00:50:45.960> are<00:50:46.160> actually<00:50:46.400> in<00:50:46.520> the<00:50:46.680> Clause
+literals that are actually in the Clause
+you<00:50:47.119> set<00:50:47.280> them<00:50:47.400> to<00:50:47.520> what<00:50:47.640> they<00:50:47.720> have<00:50:47.839> to<00:50:48.000> be<00:50:48.559> and
+you set them to what they have to be and
+everybody<00:50:49.000> else<00:50:49.200> you<00:50:49.319> just<00:50:49.440> pick<00:50:49.599> uniformly
+everybody else you just pick uniformly
+at<00:50:50.280> random
+at random
+okay<00:50:53.040> so<00:50:53.240> that's<00:50:53.760> that<00:50:54.760> okay<00:50:54.960> so<00:50:55.240> that's<00:50:55.520> the
+okay so that's that okay so that's the
+entire<00:50:56.000> algorithm<00:50:56.799> that's
+entire algorithm that's
+gonna<00:50:59.559> um<00:51:00.480> we<00:51:00.920> sample<00:51:01.319> and<00:51:01.520> estimate<00:51:01.880> P<00:51:02.359> Prime
+gonna um we sample and estimate P Prime
+so<00:51:03.720> now<00:51:03.839> we<00:51:03.960> just<00:51:04.040> want<00:51:04.160> to<00:51:04.280> argue<00:51:04.599> that<00:51:04.799> this
+so now we just want to argue that this
+works<00:51:07.520> so<00:51:07.760> that<00:51:07.920> the<00:51:08.040> total<00:51:08.440> the<00:51:08.520> final
+algorithm
+is<00:51:14.240> uh
+is uh
+sample
+T
+elements<00:51:21.520> from<00:51:22.200> uh<00:51:23.000> B<00:51:23.359> Prime
+uh
+let<00:51:32.440> P<00:51:32.960> prime<00:51:33.960> or<00:51:34.160> let<00:51:34.480> uh<00:51:34.760> P<00:51:35.040> Prime
+let P prime or let uh P Prime
+Tilda<00:51:37.799> be
+fraction
+of<00:51:46.240> T<00:51:46.640> sampled
+of T sampled
+elements<00:51:49.599> that<00:51:49.680> are<00:51:49.920> actually<00:51:50.200> in
+elements that are actually in
+B<00:51:52.319> and<00:51:52.440> then<00:51:52.680> three<00:51:53.640> will<00:51:53.920> output
+B and then three will output
+P<00:51:57.040> Prime<00:51:57.599> Tilda<00:51:58.160> times<00:51:58.520> the<00:51:58.640> size<00:51:58.799> of<00:51:58.920> B
+Prime<00:52:04.640> are<00:52:04.799> there<00:52:04.960> questions<00:52:05.240> about<00:52:05.440> what<00:52:05.559> the
+Prime are there questions about what the
+algorithm
+is<00:52:17.839> so<00:52:18.079> does<00:52:18.240> anyone<00:52:18.480> have<00:52:18.599> any<00:52:18.760> ideas<00:52:19.160> for<00:52:19.359> how
+is so does anyone have any ideas for how
+we<00:52:20.040> might<00:52:21.040> prove<00:52:21.480> that<00:52:21.640> this<00:52:21.799> algorithm<00:52:22.280> works
+we might prove that this algorithm works
+well
+okay<00:52:32.599> well<00:52:32.720> I<00:52:32.799> saw<00:52:33.000> it<00:52:33.079> on<00:52:33.160> people's<00:52:33.520> lips<00:52:34.000> but
+okay well I saw it on people's lips but
+no<00:52:34.240> one<00:52:34.480> wants<00:52:34.720> to<00:52:35.079> speak<00:52:35.280> it<00:52:35.440> loudly<00:52:35.760> so<00:52:35.960> the
+no one wants to speak it loudly so the
+turnoff<00:52:36.480> bound<00:52:37.280> right
+turnoff bound right
+so
+analysis<00:52:42.920> turnoff
+bound<00:52:47.000> right<00:52:47.200> so<00:52:47.760> more
+formally<00:52:52.040> let<00:52:52.640> X1<00:52:53.200> up<00:52:53.359> to
+formally let X1 up to
+XT<00:52:55.200> be<00:52:55.440> such<00:52:55.799> that
+XT be such that
+XJ<00:52:59.160> is<00:53:00.400> one<00:53:01.400> if<00:53:01.559> the<00:53:01.880> J
+XJ is one if the J
+sampled<00:53:05.680> element<00:53:06.680> is<00:53:06.839> in<00:53:07.240> B<00:53:08.240> and<00:53:08.520> zero
+otherwise<00:53:16.200> um
+otherwise um
+and<00:53:20.040> let<00:53:20.280> X<00:53:20.680> be<00:53:20.880> the<00:53:21.079> sum<00:53:21.960> from<00:53:22.160> Jal<00:53:22.559> 1<00:53:22.720> to<00:53:22.880> T<00:53:23.559> of
+and let X be the sum from Jal 1 to T of
+XJ<00:53:25.920> so<00:53:26.160> what's<00:53:26.319> the
+XJ so what's the
+expectation<00:53:27.960> of<00:53:28.200> X<00:53:28.640> well<00:53:28.839> by<00:53:28.960> linear
+expectation of X well by linear
+expectation<00:53:30.799> it's<00:53:31.000> going<00:53:31.079> to<00:53:31.200> be<00:53:31.440> P<00:53:31.720> Prime<00:53:32.440> *
+T<00:53:37.240> so<00:53:37.640> now<00:53:38.640> when<00:53:38.880> does<00:53:39.040> this<00:53:39.200> algorithm<00:53:39.760> fail
+T so now when does this algorithm fail
+this<00:53:40.880> algorithm<00:53:41.880> fails<00:53:42.880> if<00:53:43.280> this<00:53:43.640> if<00:53:43.839> x<00:53:44.599> minus
+this algorithm fails if this if x minus
+its
+expectation<00:53:50.599> is<00:53:50.960> bigger<00:53:52.079> than
+expectation is bigger than
+Epsilon<00:53:54.880> times<00:53:55.280> the<00:53:55.480> expectation
+right<00:54:00.480> so<00:54:00.720> this
+right so this
+is<00:54:03.880> this<00:54:04.599> this<00:54:04.680> means<00:54:04.960> we<00:54:05.119> failed<00:54:05.920> we<00:54:06.079> failed
+is this this means we failed we failed
+to<00:54:06.480> get<00:54:06.559> a<00:54:06.640> good
+approximation<00:54:14.559> so<00:54:14.760> what's<00:54:14.920> the<00:54:15.119> probability
+approximation so what's the probability
+of
+that<00:54:18.359> well<00:54:18.559> the<00:54:18.680> turnoff<00:54:19.400> bound<00:54:20.400> says<00:54:20.760> that
+that well the turnoff bound says that
+it's<00:54:21.119> at
+it's at
+most<00:54:23.480> uh<00:54:23.680> well<00:54:23.799> the<00:54:23.920> turn<00:54:24.119> of<00:54:24.200> bound<00:54:24.440> says<00:54:24.640> 2<00:54:24.960> *
+most uh well the turn of bound says 2 *
+e<00:54:26.000> to<00:54:26.160> the<00:54:26.720> minus<00:54:27.720> Epsilon<00:54:28.280> 2<00:54:28.799> mu<00:54:29.440> mu<00:54:29.680> is<00:54:29.839> the
+e to the minus Epsilon 2 mu mu is the
+expectation<00:54:31.559> uh<00:54:32.040> over<00:54:32.280> some<00:54:32.520> constant<00:54:33.440> I
+expectation uh over some constant I
+don't<00:54:33.640> know<00:54:33.799> three<00:54:33.960> or<00:54:34.079> four<00:54:34.319> or
+don't know three or four or
+something<00:54:37.160> and<00:54:37.319> what's<00:54:37.640> this
+something and what's this
+thing<00:54:39.839> we<00:54:39.960> said<00:54:40.200> this<00:54:40.319> thing<00:54:40.480> is<00:54:40.640> p<00:54:40.839> Prime
+T
+right
+so<00:54:49.760> this<00:54:50.760> is<00:54:50.960> less<00:54:51.200> than
+so this is less than
+Delta<00:54:53.359> if<00:54:54.799> T<00:54:55.799> is<00:54:56.599> at<00:54:56.720> least<00:54:57.000> some<00:54:57.559> constant
+Delta if T is at least some constant
+times<00:55:01.359> um<00:55:02.359> log<00:55:02.680> one<00:55:02.880> over
+times um log one over
+Delta
+over<00:55:06.520> P<00:55:06.920> Prime<00:55:07.280> *<00:55:07.720> Epsilon
+s<00:55:13.839> right<00:55:14.680> and<00:55:14.880> remember<00:55:15.760> we<00:55:15.920> know<00:55:16.280> that<00:55:16.480> P
+s right and remember we know that P
+Prime<00:55:17.119> is<00:55:17.280> at<00:55:17.440> least<00:55:17.680> one/
+Prime is at least one/
+M<00:55:19.839> right<00:55:20.079> that<00:55:20.160> was<00:55:20.359> the<00:55:20.520> problem<00:55:20.839> before<00:55:21.160> we
+M right that was the problem before we
+could<00:55:21.400> have<00:55:21.559> done<00:55:21.760> the<00:55:21.880> same<00:55:22.160> exact<00:55:22.480> argument
+could have done the same exact argument
+in<00:55:23.400> the<00:55:23.559> beginning<00:55:24.280> where<00:55:24.440> we<00:55:24.559> just<00:55:24.720> sampled
+in the beginning where we just sampled
+random<00:55:25.400> assignments<00:55:25.760> and<00:55:25.880> saw<00:55:26.039> what<00:55:26.359> fraction
+random assignments and saw what fraction
+of<00:55:26.720> them<00:55:26.880> worked<00:55:27.799> the<00:55:28.000> problem<00:55:28.400> then<00:55:28.559> is<00:55:28.799> that
+of them worked the problem then is that
+P<00:55:29.799> could<00:55:29.920> have<00:55:30.079> been<00:55:30.240> 2<00:55:30.440> to<00:55:30.559> the<00:55:30.640> N<00:55:30.839> or
+P could have been 2 to the N or
+something<00:55:31.799> which<00:55:31.920> means<00:55:32.200> we<00:55:32.319> need<00:55:32.520> at<00:55:32.599> least<00:55:32.799> 2
+something which means we need at least 2
+to<00:55:33.039> the<00:55:33.119> N<00:55:33.319> samples<00:55:34.280> but<00:55:34.400> the<00:55:34.520> point<00:55:34.799> here<00:55:35.000> is
+to the N samples but the point here is
+that<00:55:35.920> P<00:55:36.119> Prime<00:55:36.400> is<00:55:36.520> not<00:55:36.720> too<00:55:36.920> small<00:55:37.319> P<00:55:37.520> Prime<00:55:37.760> is
+that P Prime is not too small P Prime is
+like<00:55:38.039> 1/<00:55:38.400> M<00:55:39.359> so<00:55:39.680> this<00:55:39.920> is
+like 1/ M so this is
+just<00:55:43.280> m<00:55:43.680> *<00:55:44.079> log<00:55:44.240> 1/
+just m * log 1/
+Delta<00:55:46.559> over<00:55:46.760> Epsilon
+Delta over Epsilon
+s<00:55:49.240> okay<00:55:49.960> so<00:55:50.119> we<00:55:50.280> take<00:55:50.400> a<00:55:50.520> polinomial<00:55:50.960> number<00:55:51.119> of
+s okay so we take a polinomial number of
+samples<00:55:53.880> um<00:55:54.839> for<00:55:55.039> each<00:55:55.200> of<00:55:55.319> the<00:55:55.480> samples<00:55:55.839> in
+samples um for each of the samples in
+Pol<00:55:56.720> time<00:55:57.039> we<00:55:57.160> can<00:55:57.680> check<00:55:57.960> whether<00:55:58.079> or<00:55:58.200> not
+Pol time we can check whether or not
+it's<00:55:58.480> in<00:55:58.680> B<00:55:59.319> we<00:55:59.400> can<00:55:59.520> do<00:55:59.680> the<00:55:59.799> sampling<00:56:00.160> in
+it's in B we can do the sampling in
+polom<00:56:00.839> time<00:56:01.240> so<00:56:01.559> this<00:56:01.640> is<00:56:01.799> all<00:56:01.960> a<00:56:02.079> polom<00:56:02.520> Time
+polom time so this is all a polom Time
+algorithm<00:56:04.680> so<00:56:04.920> that's<00:56:05.280> that's
+algorithm so that's that's
+it<00:56:07.039> that's<00:56:07.160> an<00:56:07.280> F<00:56:07.520> press<00:56:07.760> for<00:56:07.920> dnf
+counting<00:56:13.680> okay<00:56:14.680> questions<00:56:15.400> about<00:56:16.400> I'm<00:56:16.520> gonna
+counting okay questions about I'm gonna
+I'm<00:56:16.799> going<00:56:16.920> to<00:56:17.000> move<00:56:17.200> away<00:56:17.480> now<00:56:17.760> from<00:56:18.079> F<00:56:18.319> prases
+I'm going to move away now from F prases
+and<00:56:18.799> FP<00:56:19.160> tases<00:56:19.440> and<00:56:19.559> move<00:56:19.720> to<00:56:19.920> another<00:56:20.400> topic
+and FP tases and move to another topic
+another<00:56:21.720> approximation<00:56:22.280> algorithms<00:56:22.880> topic
+another approximation algorithms topic
+so<00:56:24.240> before<00:56:24.480> we<00:56:24.640> do<00:56:24.760> a<00:56:24.960> switch<00:56:25.640> are<00:56:25.760> there<00:56:25.880> any
+so before we do a switch are there any
+questions
+so<00:56:54.240> I<00:56:54.319> haven't<00:56:54.599> told<00:56:54.799> you<00:56:55.079> yet<00:56:55.880> how<00:56:56.280> algorithms
+so I haven't told you yet how algorithms
+work<00:56:57.000> to<00:56:57.200> actually<00:56:57.440> solve<00:56:57.799> linear<00:56:58.240> programs<00:56:58.799> I
+work to actually solve linear programs I
+just<00:56:59.039> claimed<00:56:59.480> that<00:56:59.640> there<00:56:59.760> are<00:57:00.039> algorithms
+just claimed that there are algorithms
+to<00:57:00.680> do<00:57:01.039> it
+to do it
+um<00:57:03.559> after<00:57:03.960> so<00:57:04.599> next<00:57:04.799> week<00:57:04.960> you're<00:57:05.039> going<00:57:05.160> to
+um after so next week you're going to
+see<00:57:05.359> some<00:57:05.480> guest<00:57:05.680> lectures<00:57:06.039> when<00:57:06.160> I<00:57:06.280> come<00:57:06.520> back
+see some guest lectures when I come back
+we'll<00:57:06.880> start<00:57:07.119> talking<00:57:07.400> about<00:57:07.599> how<00:57:07.720> to
+we'll start talking about how to
+actually<00:57:08.079> solve<00:57:08.400> linear<00:57:08.920> programs<00:57:09.920> so<00:57:10.119> now
+actually solve linear programs so now
+that<00:57:10.400> we're<00:57:10.559> in<00:57:10.680> the<00:57:10.880> phase<00:57:11.240> where<00:57:11.720> um<00:57:12.079> I'm
+that we're in the phase where um I'm
+just<00:57:12.359> claiming<00:57:12.760> certain<00:57:13.039> things<00:57:13.240> can<00:57:13.359> be
+just claiming certain things can be
+solved<00:57:13.920> without<00:57:14.160> actually<00:57:14.400> proving<00:57:14.799> it<00:57:15.640> I'm
+solved without actually proving it I'm
+going<00:57:15.839> to<00:57:15.960> claim<00:57:16.240> that<00:57:16.359> we<00:57:16.480> can<00:57:16.599> also<00:57:16.880> solve
+going to claim that we can also solve
+semi-definite<00:57:17.880> programs<00:57:18.760> okay<00:57:19.000> so<00:57:20.000> uh<00:57:20.240> I
+semi-definite programs okay so uh I
+should<00:57:20.520> first<00:57:20.760> Define<00:57:21.240> what<00:57:21.599> what<00:57:21.760> that
+should first Define what what that
+is<00:57:23.760> so<00:57:23.960> semi-definite<00:57:24.559> programming<00:57:25.480> I'll
+is so semi-definite programming I'll
+just<00:57:26.000> just<00:57:26.319> like<00:57:26.440> linear<00:57:26.720> programming<00:57:27.000> is
+just just like linear programming is
+often<00:57:27.240> called<00:57:27.440> LP<00:57:27.920> this<00:57:28.000> is<00:57:28.119> usually<00:57:28.359> called
+sdp<00:57:33.160> um<00:57:34.160> so<00:57:34.359> what<00:57:34.559> is<00:57:34.760> a<00:57:34.960> semi-definite
+program<00:57:43.559> what<00:57:44.280> okay<00:57:44.480> good
+program what okay good
+so<00:57:47.160> so
+stdp<00:57:52.680> so<00:57:53.520> x<00:57:54.079> capital<00:57:54.440> x
+is<00:57:58.520> an<00:57:59.280> N<00:57:59.559> byn
+is an N byn
+Matrix<00:58:02.760> so<00:58:02.960> linear<00:58:03.319> programming<00:58:03.720> we're
+Matrix so linear programming we're
+trying<00:58:04.039> to<00:58:04.200> solve<00:58:04.440> for<00:58:04.559> some<00:58:04.760> Vector<00:58:05.119> X<00:58:05.920> now
+trying to solve for some Vector X now
+we're<00:58:06.200> trying<00:58:06.400> to<00:58:06.520> solve<00:58:06.760> for<00:58:06.920> some<00:58:07.119> Matrix
+we're trying to solve for some Matrix
+X<00:58:09.160> and<00:58:09.359> what<00:58:09.480> the<00:58:09.599> problems<00:58:09.920> look<00:58:10.160> like<00:58:10.400> are
+X and what the problems look like are
+minimize<00:58:13.079> the
+minimize the
+trace<00:58:15.000> of<00:58:15.160> cpose<00:58:16.200> X<00:58:17.200> I'll<00:58:17.359> say<00:58:17.599> a<00:58:17.760> sec<00:58:18.119> second
+trace of cpose X I'll say a sec second
+how<00:58:18.799> to<00:58:19.039> interpret
+this<00:58:23.000> such<00:58:23.559> that<00:58:24.559> for<00:58:24.880> I<00:58:25.280> from<00:58:25.480> 1<00:58:25.680> to<00:58:25.839> m
+this such that for I from 1 to m
+the
+trace<00:58:29.680> of<00:58:29.920> AI<00:58:30.920> transpose<00:58:31.640> X<00:58:32.440> is<00:58:32.559> equal<00:58:32.799> to
+bi<00:58:36.880> okay<00:58:37.880> so<00:58:38.079> just<00:58:38.240> like<00:58:38.400> LP<00:58:39.160> LP<00:58:39.640> is<00:58:40.240> you
+bi okay so just like LP LP is you
+minimize<00:58:41.200> c.x<00:58:42.200> subject<00:58:42.599> to<00:58:43.319> AI<00:58:44.039> dox<00:58:44.599> is<00:58:44.799> bi<00:58:45.200> for
+minimize c.x subject to AI dox is bi for
+a<00:58:45.440> bunch<00:58:45.599> of<00:58:45.760> different<00:58:46.000> rows<00:58:46.280> of<00:58:46.440> this<00:58:46.559> Matrix
+a bunch of different rows of this Matrix
+a<00:58:48.920> but<00:58:49.079> now<00:58:49.400> both<00:58:49.599> a<00:58:49.720> and<00:58:49.880> X<00:58:50.440> Ai<00:58:50.760> and<00:58:50.839> X<00:58:51.000> are<00:58:51.119> both
+a but now both a and X Ai and X are both
+matrices<00:58:52.039> now<00:58:53.039> and<00:58:53.160> there's<00:58:53.400> also<00:58:53.599> these<00:58:53.760> non-
+matrices now and there's also these non-
+negativity<00:58:54.559> constraints
+negativity constraints
+okay<00:58:57.599> and<00:58:57.680> we're<00:58:57.839> going<00:58:57.920> to<00:58:58.079> replace<00:58:58.400> the<00:58:58.520> non-
+okay and we're going to replace the non-
+negativity<00:58:59.720> constraints<00:59:01.160> with<00:59:02.160> uh<00:59:02.440> well<00:59:02.680> it's
+negativity constraints with uh well it's
+called<00:59:03.039> semidefinite<00:59:03.640> programming<00:59:04.160> a
+called semidefinite programming a
+positive<00:59:04.599> semidefinite<00:59:05.400> constraint<00:59:06.400> um
+positive semidefinite constraint um
+so<00:59:08.760> and<00:59:09.200> and<00:59:09.319> I'll<00:59:09.480> say<00:59:09.640> what<00:59:09.799> that<00:59:09.920> means<00:59:10.839> I'll
+so and and I'll say what that means I'll
+do<00:59:11.079> a<00:59:11.160> little<00:59:11.319> linear<00:59:11.559> algebra<00:59:11.880> review<00:59:12.680> X<00:59:13.079> is
+positive
+semidefinite<00:59:22.280> and<00:59:22.559> I'll<00:59:22.720> usually<00:59:23.079> write<00:59:23.319> this
+semidefinite and I'll usually write this
+as<00:59:24.520> X
+as X
+is<00:59:27.920> at<00:59:28.079> least<00:59:28.359> zero<00:59:29.240> with<00:59:29.720> little<00:59:29.880> squiggly
+is at least zero with little squiggly
+greater<00:59:30.680> than
+sign<00:59:41.960> so
+sign so
+known<00:59:44.559> so<00:59:44.799> you<00:59:44.920> can<00:59:45.039> see<00:59:45.240> a<00:59:45.400> book<00:59:45.680> there's<00:59:45.839> a
+known so you can see a book there's a
+book<00:59:46.280> on<00:59:46.480> semi-definite
+book on semi-definite
+programming<00:59:49.599> what's<00:59:49.760> it<00:59:49.920> called<00:59:50.359> again<00:59:50.640> so
+programming what's it called again so
+it's<00:59:51.039> called<00:59:51.839> uh<00:59:52.839> it's<00:59:53.039> called<00:59:53.280> semi-definite
+it's called uh it's called semi-definite
+programming
+uh<01:00:03.559> it's
+uh it's
+by<01:00:05.839> uh<01:00:06.480> Vandenberg<01:00:07.359> and
+Boyd
+okay<01:00:25.240> that
+okay that
+can
+solve
+sdp<01:00:31.720> up
+sdp up
+to<01:00:33.520> say<01:00:33.720> l
+to say l
+bits<01:00:36.079> of
+precision<01:00:40.240> in
+time
+poly
+nml<01:00:49.440> okay<01:00:49.559> so<01:00:49.720> we're<01:00:49.880> just<01:00:50.039> going<01:00:50.119> to<01:00:50.240> take
+nml okay so we're just going to take
+that<01:00:50.640> as<01:00:50.760> a<01:00:50.920> blackbox<01:00:51.880> just<01:00:52.039> like<01:00:52.160> for<01:00:52.319> LP<01:00:52.880> I
+that as a blackbox just like for LP I
+said<01:00:53.319> there<01:00:53.480> are<01:00:54.480> algorithms<01:00:55.000> out<01:00:55.160> there<01:00:55.280> that
+said there are algorithms out there that
+can<01:00:55.480> solve<01:00:56.119> programs<01:00:56.440> in<01:00:56.559> polinomial
+can solve programs in polinomial
+time<01:00:59.440> I'm<01:00:59.520> just<01:00:59.640> going<01:00:59.720> to<01:00:59.799> take<01:00:59.920> for<01:01:00.119> black<01:01:00.640> as
+time I'm just going to take for black as
+a<01:01:00.920> black<01:01:01.160> box<01:01:01.359> that<01:01:01.480> we<01:01:01.559> can<01:01:01.680> do<01:01:01.799> this<01:01:01.880> for
+sdp
+okay<01:01:12.480> and<01:01:13.160> so<01:01:13.599> what<01:01:13.720> is<01:01:13.920> this<01:01:14.119> trace<01:01:14.440> of<01:01:14.599> cpose
+okay and so what is this trace of cpose
+X<01:01:15.760> business<01:01:16.760> so<01:01:17.000> you<01:01:17.079> can<01:01:17.280> prove<01:01:17.520> to<01:01:17.960> yourself
+X business so you can prove to yourself
+so<01:01:19.480> I'm<01:01:19.599> not<01:01:19.720> going<01:01:19.799> to<01:01:19.960> prove<01:01:20.160> it<01:01:20.280> so<01:01:20.599> just
+so I'm not going to prove it so just
+fact<01:01:21.200> you<01:01:21.319> can<01:01:21.520> go<01:01:21.720> and<01:01:22.240> I<01:01:22.319> mean<01:01:22.440> it's<01:01:22.599> just<01:01:22.680> a
+fact you can go and I mean it's just a
+computation<01:01:24.079> the<01:01:24.640> trace<01:01:25.640> of<01:01:25.960> a<01:01:26.160> transpose<01:01:26.760> B
+computation the trace of a transpose B
+in<01:01:27.119> general<01:01:28.119> is<01:01:28.319> just<01:01:28.480> the<01:01:28.640> sum<01:01:28.880> over<01:01:29.119> i<01:01:29.359> j<01:01:30.079> of
+in general is just the sum over i j of
+AIG<01:01:30.640> J<01:01:30.920> B
+J<01:01:35.720> okay<01:01:36.960> so<01:01:37.960> really<01:01:38.359> what<01:01:38.520> this<01:01:38.640> is<01:01:38.920> saying<01:01:39.559> is
+J okay so really what this is saying is
+don't<01:01:40.799> view<01:01:41.079> X<01:01:41.319> as<01:01:41.400> a<01:01:41.559> matrix<01:01:42.160> so<01:01:42.799> except<01:01:43.039> for
+don't view X as a matrix so except for
+the<01:01:43.359> last<01:01:43.559> part<01:01:43.839> which<01:01:43.960> is<01:01:44.119> really<01:01:44.400> something
+the last part which is really something
+Matrix<01:01:45.200> specific<01:01:46.200> don't<01:01:46.440> view<01:01:46.680> X<01:01:46.839> as<01:01:46.960> a<01:01:47.039> matrix
+Matrix specific don't view X as a matrix
+just<01:01:47.559> view<01:01:47.720> it<01:01:47.839> as<01:01:47.960> an<01:01:48.079> N<01:01:48.280> Square<01:01:48.599> dimensional
+just view it as an N Square dimensional
+vector<01:01:50.400> and<01:01:50.559> this<01:01:50.640> is<01:01:50.799> really<01:01:50.960> just<01:01:51.119> linear
+vector and this is really just linear
+programming<01:01:52.000> right<01:01:52.520> so<01:01:52.720> this<01:01:52.799> is<01:01:52.960> C<01:01:53.160> transpose
+programming right so this is C transpose
+X<01:01:53.880> where<01:01:54.000> C<01:01:54.200> is<01:01:54.279> also<01:01:54.440> an<01:01:54.559> N<01:01:54.720> Square
+X where C is also an N Square
+dimensional<01:01:55.279> vector<01:01:56.279> this<01:01:56.400> is<01:01:56.640> AI<01:01:57.079> dox<01:01:57.520> where
+dimensional vector this is AI dox where
+AI<01:01:58.039> is<01:01:58.119> an<01:01:58.240> N<01:01:58.359> Square<01:01:58.599> dimensional<01:01:59.000> vector<01:01:59.720> and
+AI is an N Square dimensional vector and
+then<01:01:59.960> you<01:02:00.079> have<01:02:00.279> this<01:02:00.480> funny<01:02:00.799> constraint<01:02:01.200> at
+then you have this funny constraint at
+the<01:02:01.400> end<01:02:01.720> where<01:02:01.920> instead<01:02:02.160> of<01:02:02.319> saying<01:02:02.839> that
+the end where instead of saying that
+it's<01:02:03.079> a<01:02:03.240> non-<01:02:03.440> negative<01:02:03.760> Vector<01:02:04.160> you<01:02:04.279> say<01:02:04.559> that
+it's a non- negative Vector you say that
+if<01:02:05.079> you<01:02:05.240> view<01:02:05.520> this<01:02:05.640> n<01:02:05.839> squ<01:02:06.240> dimensional
+if you view this n squ dimensional
+Vector<01:02:06.960> as<01:02:07.039> an<01:02:07.200> N<01:02:07.400> byn<01:02:07.799> Matrix<01:02:08.799> that<01:02:09.000> Matrix
+Vector as an N byn Matrix that Matrix
+should<01:02:09.559> be
+should be
+PSD<01:02:11.799> okay<01:02:12.279> so<01:02:12.480> that's<01:02:12.640> the<01:02:12.799> difference
+PSD okay so that's the difference
+between<01:02:13.640> sdp<01:02:14.119> and
+LP
+um
+now<01:02:21.559> so<01:02:21.720> what<01:02:21.839> does<01:02:21.960> it<01:02:22.039> mean<01:02:22.200> to<01:02:22.319> be<01:02:22.520> positive
+now so what does it mean to be positive
+semi-definite<01:02:23.559> so<01:02:23.880> definition
+X<01:02:33.680> is<01:02:34.119> PSD<01:02:34.960> positive
+X is PSD positive
+semidefinite<01:02:37.559> if<01:02:38.520> for<01:02:38.839> all<01:02:39.279> vectors<01:02:40.240> uh<01:02:40.400> Z<01:02:40.960> or
+semidefinite if for all vectors uh Z or
+let's<01:02:41.319> say<01:02:41.559> Y<01:02:41.880> in
+let's say Y in
+RN<01:02:44.319> we<01:02:44.440> have<01:02:44.599> the<01:02:44.720> inequality<01:02:45.440> that<01:02:45.720> y
+RN we have the inequality that y
+transpose
+x
+y<01:02:52.559> is<01:02:52.760> at<01:02:52.920> least<01:02:53.200> zero
+actually<01:03:08.480> let<01:03:08.599> me<01:03:08.760> just<01:03:09.000> write<01:03:09.279> one<01:03:09.400> more
+actually let me just write one more
+thing<01:03:11.839> which<01:03:12.039> we're<01:03:12.200> always<01:03:12.400> going<01:03:12.520> to<01:03:12.640> use
+thing which we're always going to use
+it's<01:03:13.000> going<01:03:13.079> to<01:03:13.200> be<01:03:13.440> a<01:03:13.599> is<01:03:13.720> a
+symmetric<01:03:19.839> Matrix
+okay<01:03:42.200> so
+claim<01:03:46.920> I<01:03:47.039> just<01:03:47.119> want<01:03:47.240> to<01:03:47.359> do<01:03:47.440> a<01:03:47.520> little<01:03:47.640> bit<01:03:47.760> of
+claim I just want to do a little bit of
+linear<01:03:48.160> algebra
+review<01:03:54.319> The<01:03:54.480> Following
+are
+equivalent<01:04:03.440> for
+symmetric<01:04:07.640> n<01:04:07.960> byn<01:04:08.319> matrices
+X<01:04:12.960> so<01:04:13.319> one<01:04:13.960> or<01:04:14.160> let's<01:04:14.359> say<01:04:14.880> a<01:04:15.880> x<01:04:16.119> is
+PSD
+B<01:04:22.760> so<01:04:23.599> remember<01:04:24.599> so<01:04:25.079> another<01:04:25.720> fact<01:04:25.880> from
+B so remember so another fact from
+linear<01:04:26.279> algebra<01:04:27.000> is<01:04:28.000> if<01:04:28.119> you<01:04:28.319> have<01:04:28.480> a
+linear algebra is if you have a
+symmetric<01:04:29.359> real<01:04:30.039> Matrix<01:04:31.039> then<01:04:31.920> uh<01:04:32.400> it<01:04:32.480> can<01:04:32.640> be
+symmetric real Matrix then uh it can be
+diagonalized<01:04:33.520> and<01:04:33.599> it<01:04:33.799> has<01:04:33.920> a<01:04:34.039> full<01:04:34.760> set<01:04:34.920> of
+diagonalized and it has a full set of
+real<01:04:35.279> igen<01:04:35.640> values<01:04:36.039> this<01:04:36.119> is<01:04:36.240> the<01:04:36.359> spectral
+real igen values this is the spectral
+theorem<01:04:38.119> okay<01:04:38.559> so<01:04:38.880> B<01:04:39.559> all<01:04:39.839> igen
+theorem okay so B all igen
+[Music]
+values<01:04:43.760> of
+values of
+X
+are<01:04:49.200> non
+negative<01:04:53.079> and<01:04:53.240> C
+um<01:04:58.920> can
+write<01:05:06.960> we<01:05:07.079> can<01:05:07.359> write
+write we can write
+X<01:05:10.599> as<01:05:11.559> M<01:05:11.839> transpose
+X as M transpose
+M<01:05:14.960> for<01:05:15.200> some<01:05:15.920> real<01:05:16.200> Matrix
+M<01:05:24.880> Okay<01:05:25.119> so
+M Okay so
+um<01:05:27.960> if<01:05:28.119> these<01:05:28.279> things<01:05:28.480> don't<01:05:28.680> look<01:05:28.799> familiar
+um if these things don't look familiar
+to<01:05:29.319> you<01:05:29.720> then<01:05:29.839> for<01:05:30.079> lecture<01:05:30.480> just<01:05:30.640> take<01:05:30.799> them
+to you then for lecture just take them
+as<01:05:31.240> truth<01:05:32.119> and<01:05:32.279> you<01:05:32.359> can<01:05:32.559> find<01:05:32.839> them<01:05:33.000> in<01:05:33.160> any
+as truth and you can find them in any
+pretty<01:05:33.599> much<01:05:33.760> any<01:05:33.920> linear<01:05:34.200> algebra<01:05:34.559> book<01:05:35.119> okay
+pretty much any linear algebra book okay
+I<01:05:35.720> mean<01:05:35.920> it<01:05:36.039> basically<01:05:36.359> follow<01:05:36.720> so<01:05:36.960> look<01:05:37.119> up
+I mean it basically follow so look up
+spectral<01:05:37.720> theorem<01:05:38.480> okay<01:05:38.680> and<01:05:38.799> you'll<01:05:39.039> see<01:05:39.440> all
+spectral theorem okay and you'll see all
+of
+this<01:05:48.799> okay<01:05:49.599> so<01:05:50.599> first<01:05:50.799> of<01:05:51.440> all<01:05:52.440> first<01:05:52.599> of<01:05:52.720> all<01:05:52.839> I
+this okay so first of all first of all I
+claim<01:05:53.319> that<01:05:53.640> linear<01:05:54.119> programming<01:05:54.799> is<01:05:54.960> really
+claim that linear programming is really
+just<01:05:55.279> a<01:05:55.640> special<01:05:55.920> case<01:05:56.160> of<01:05:56.279> semi-definite
+programming<01:06:00.640> okay<01:06:01.640> so<01:06:02.319> I<01:06:02.400> don't<01:06:02.520> want<01:06:02.640> to<01:06:02.760> go
+programming okay so I don't want to go
+through<01:06:03.000> the<01:06:03.119> details<01:06:03.520> because<01:06:03.640> I<01:06:03.720> want<01:06:03.799> to
+through the details because I want to
+actually<01:06:04.520> talk<01:06:04.760> about<01:06:05.400> you<01:06:05.559> know<01:06:06.359> for<01:06:06.559> for<01:06:06.720> our
+actually talk about you know for for our
+purposes<01:06:07.359> in<01:06:07.559> this<01:06:07.720> lecture<01:06:08.400> and<01:06:08.559> what
+purposes in this lecture and what
+remains<01:06:09.000> of<01:06:09.119> this<01:06:09.240> lecture<01:06:09.599> I<01:06:09.720> just<01:06:09.799> want<01:06:09.920> to
+remains of this lecture I just want to
+say<01:06:10.440> that<01:06:10.599> there's<01:06:10.799> this<01:06:10.920> thing<01:06:11.079> called<01:06:11.680> sdp
+say that there's this thing called sdp
+which<01:06:12.799> can<01:06:12.920> be<01:06:13.039> solved<01:06:13.799> efficiently<01:06:14.799> and<01:06:15.520> now
+which can be solved efficiently and now
+we<01:06:15.799> can<01:06:15.920> use<01:06:16.079> it<01:06:16.200> for<01:06:16.400> approximation
+we can use it for approximation
+algorithms<01:06:18.559> okay<01:06:19.000> so<01:06:19.119> I<01:06:19.200> don't<01:06:19.319> want<01:06:19.400> to<01:06:19.520> get
+algorithms okay so I don't want to get
+too<01:06:19.880> much<01:06:20.119> into<01:06:20.720> the<01:06:20.839> theory<01:06:21.119> of<01:06:21.240> how<01:06:21.319> to<01:06:21.480> solve
+too much into the theory of how to solve
+them<01:06:22.000> Etc<01:06:22.520> but<01:06:22.640> I<01:06:22.720> want<01:06:22.839> to<01:06:23.000> do<01:06:23.200> I<01:06:23.279> want<01:06:23.359> to<01:06:23.480> say
+them Etc but I want to do I want to say
+just<01:06:23.760> a<01:06:23.839> couple<01:06:24.119> things<01:06:24.279> about<01:06:24.520> them<01:06:25.119> so
+just a couple things about them so
+LP<01:06:27.200> linear<01:06:27.599> programming<01:06:28.200> is<01:06:28.359> a<01:06:28.559> special
+case<01:06:34.039> of<01:06:34.240> sdp<01:06:35.039> does<01:06:35.200> anyone<01:06:35.559> see
+case of sdp does anyone see
+why<01:06:38.160> so<01:06:38.480> suppose<01:06:38.839> I<01:06:39.000> suppose<01:06:39.240> I<01:06:39.359> have<01:06:39.520> an
+why so suppose I suppose I have an
+LP<01:06:41.640> that<01:06:41.760> looks<01:06:41.960> like<01:06:42.200> this<01:06:42.720> any<01:06:42.920> LP<01:06:43.359> by<01:06:43.480> the
+LP that looks like this any LP by the
+way<01:06:43.680> can<01:06:43.799> be<01:06:43.920> written<01:06:44.160> in<01:06:44.279> this<01:06:44.440> form<01:06:44.799> minimize
+way can be written in this form minimize
+C<01:06:45.400> transpose<01:06:45.920> X<01:06:46.240> subject<01:06:46.599> to<01:06:46.799> axal<01:06:47.799> B<01:06:48.799> and<01:06:49.000> X<01:06:49.200> is
+C transpose X subject to axal B and X is
+at<01:06:49.760> least<01:06:49.960> zero<01:06:50.160> in<01:06:50.240> every<01:06:50.680> coordinate<01:06:51.680> I
+at least zero in every coordinate I
+claim<01:06:52.240> that<01:06:53.119> this<01:06:53.279> can<01:06:53.400> be<01:06:53.559> represented<01:06:54.119> as<01:06:54.240> an
+claim that this can be represented as an
+sdp
+right<01:06:59.400> yeah<01:06:59.640> so<01:06:59.839> exactly<01:07:00.319> so<01:07:01.079> so
+sdp<01:07:07.359> okay<01:07:08.079> we're<01:07:08.240> going<01:07:08.319> to<01:07:08.480> have<01:07:08.680> we're<01:07:08.799> going
+sdp okay we're going to have we're going
+to<01:07:09.039> Define<01:07:09.400> c<01:07:10.119> to<01:07:10.359> just<01:07:10.599> be<01:07:10.720> a<01:07:10.799> diagonal<01:07:11.200> matrix
+to Define c to just be a diagonal matrix
+C1<01:07:12.119> CN<01:07:12.559> on<01:07:12.680> the<01:07:13.279> diagonal<01:07:14.279> okay<01:07:14.960> we're<01:07:15.160> also
+C1 CN on the diagonal okay we're also
+going<01:07:15.440> to<01:07:15.880> define<01:07:17.119> AI<01:07:18.119> as<01:07:18.559> being<01:07:19.960> a<01:07:20.960> uh
+going to define AI as being a uh
+ai1<01:07:23.119> a
+ai1 a
+a<01:07:26.279> i
+n<01:07:29.640> a<01:07:29.839> diagonal
+n a diagonal
+matrix<01:07:32.200> and<01:07:32.400> then<01:07:32.880> we're<01:07:33.079> also<01:07:33.319> going<01:07:33.599> to
+matrix and then we're also going to
+enforce<01:07:35.799> we'll<01:07:36.079> also<01:07:36.359> add
+constraints<01:07:42.319> to
+constraints to
+force<01:07:44.920> XI<01:07:45.480> J<01:07:46.480> equals<01:07:47.039> zero<01:07:48.039> for<01:07:48.279> I<01:07:48.480> not<01:07:48.640> equal
+force XI J equals zero for I not equal
+to<01:07:49.079> J<01:07:50.079> you<01:07:50.200> can<01:07:50.319> add<01:07:50.440> more<01:07:50.559> constraints<01:07:50.920> to
+to J you can add more constraints to
+force<01:07:51.680> that<01:07:52.760> okay<01:07:53.760> and<01:07:53.920> to<01:07:54.079> say<01:07:54.240> that<01:07:54.400> it's<01:07:54.599> PSD
+force that okay and to say that it's PSD
+now<01:07:55.559> say<01:07:55.720> x<01:07:55.880> is<01:07:56.039> PSD<01:07:56.520> well<01:07:56.640> it's<01:07:56.720> a<01:07:56.799> diagonal
+now say x is PSD well it's a diagonal
+matrix<01:07:58.279> so<01:07:58.640> all<01:07:58.760> the<01:07:58.880> igen<01:07:59.160> values<01:07:59.400> have<01:07:59.480> to<01:07:59.599> be
+matrix so all the igen values have to be
+non-<01:07:59.880> negative<01:08:00.279> which<01:08:00.359> means<01:08:00.559> all<01:08:00.680> the
+non- negative which means all the
+entries<01:08:01.000> on<01:08:01.079> the<01:08:01.160> diagonal<01:08:01.480> have<01:08:01.559> to<01:08:01.640> be<01:08:01.720> non-
+entries on the diagonal have to be non-
+negative<01:08:02.880> okay<01:08:03.119> so<01:08:03.720> LP<01:08:04.119> is<01:08:04.200> just<01:08:04.319> a<01:08:04.400> special
+negative okay so LP is just a special
+case<01:08:04.799> of
+sdp<01:08:08.599> and<01:08:09.599> I<01:08:09.680> won't<01:08:09.960> say<01:08:10.559> much<01:08:10.760> more<01:08:10.920> about<01:08:11.160> this
+sdp and I won't say much more about this
+but<01:08:11.559> sdp<01:08:12.200> also<01:08:12.599> sdp<01:08:13.079> is<01:08:13.240> actually<01:08:13.480> a<01:08:13.599> special
+but sdp also sdp is actually a special
+case<01:08:14.039> of<01:08:14.200> LP<01:08:14.880> well<01:08:15.760> where<01:08:16.000> you<01:08:16.120> have
+case of LP well where you have
+infinitely<01:08:16.719> many<01:08:17.279> constraints<01:08:18.279> so<01:08:18.839> basically
+infinitely many constraints so basically
+for<01:08:19.400> every<01:08:20.080> y<01:08:21.080> you<01:08:21.199> can<01:08:21.400> write<01:08:21.520> a<01:08:21.679> constraint
+for every y you can write a constraint
+where<01:08:23.920> you<01:08:24.040> can<01:08:24.199> write<01:08:24.319> a<01:08:24.440> constraint<01:08:24.880> where
+where you can write a constraint where
+the
+race<01:08:27.120> of<01:08:27.759> your<01:08:27.960> Matrix<01:08:28.359> now<01:08:28.520> is<01:08:28.719> like<01:08:28.960> y<01:08:29.239> y
+race of your Matrix now is like y y
+transpose<01:08:30.960> time<01:08:31.759> x<01:08:32.759> um<01:08:33.560> should<01:08:33.799> be<01:08:34.799> at<01:08:35.000> least
+transpose time x um should be at least
+zero
+okay<01:08:45.640> so<01:08:45.759> you<01:08:45.880> have<01:08:46.120> if<01:08:46.199> you<01:08:46.279> have<01:08:46.440> infinitely
+okay so you have if you have infinitely
+many<01:08:47.000> constraints<01:08:47.480> in<01:08:47.600> your<01:08:47.759> LP<01:08:48.159> you<01:08:48.239> can
+many constraints in your LP you can
+represent<01:08:48.719> an<01:08:48.799> sdp<01:08:49.400> but<01:08:49.560> of<01:08:49.719> course<01:08:50.159> uh<01:08:50.640> that's
+represent an sdp but of course uh that's
+a<01:08:50.920> really<01:08:51.080> big<01:08:51.239> LP
+so<01:09:09.159> now<01:09:10.120> I<01:09:10.199> just<01:09:10.319> want<01:09:10.440> to<01:09:10.600> say<01:09:10.799> that
+so now I just want to say that
+sdp<01:09:12.920> is<01:09:13.120> now<01:09:13.400> really<01:09:13.679> the<01:09:13.799> same<01:09:14.199> because<01:09:14.400> of
+sdp is now really the same because of
+this<01:09:14.759> claim<01:09:15.199> sdp<01:09:15.640> is<01:09:15.759> really<01:09:15.960> the<01:09:16.080> same<01:09:16.359> as<01:09:16.880> VP
+this claim sdp is really the same as VP
+which<01:09:17.600> is<01:09:17.799> Vector<01:09:18.199> programming
+what<01:09:25.880> do<01:09:26.000> I<01:09:26.080> mean<01:09:26.279> by
+what do I mean by
+that<01:09:28.600> we<01:09:28.759> said<01:09:29.199> that<01:09:29.799> if<01:09:29.960> x<01:09:30.199> is<01:09:30.400> PSD<01:09:30.960> it's<01:09:31.159> the
+that we said that if x is PSD it's the
+same<01:09:31.560> thing<01:09:31.759> as<01:09:31.960> saying<01:09:32.799> it's<01:09:33.000> m<01:09:33.359> transpose<01:09:34.279> M
+same thing as saying it's m transpose M
+which<01:09:35.400> is<01:09:35.600> saying<01:09:36.080> it's<01:09:37.000> so<01:09:37.359> right<01:09:37.640> it's<01:09:37.920> it's
+which is saying it's so right it's it's
+a<01:09:38.159> gr<01:09:38.480> Matrix<01:09:38.880> what's<01:09:39.040> called<01:09:39.159> a<01:09:39.279> gram<01:09:39.520> matrix
+a gr Matrix what's called a gram matrix
+it's<01:09:40.040> V1<01:09:40.440> up<01:09:40.600> to<01:09:41.199> VN
+it's V1 up to VN
+times<01:09:44.359> V1
+VN<01:09:48.640> which<01:09:48.799> means<01:09:49.440> that<01:09:50.440> if<01:09:50.520> we<01:09:50.679> look<01:09:50.799> at<01:09:50.920> the<01:09:51.080> IJ
+VN which means that if we look at the IJ
+thry<01:09:53.880> of<01:09:54.080> X<01:09:54.480> that's<01:09:54.640> just<01:09:54.760> equal<01:09:54.960> to<01:09:55.120> V<01:09:55.480> i.
+VJ<01:10:00.600> okay<01:10:01.840> so<01:10:02.840> this<01:10:03.000> implies<01:10:03.480> for<01:10:03.640> example<01:10:04.480> you
+VJ okay so this implies for example you
+know<01:10:04.760> the<01:10:04.920> trace<01:10:05.400> of<01:10:05.719> C<01:10:06.040> transpose
+know the trace of C transpose
+X<01:10:08.920> that's<01:10:09.159> just<01:10:09.360> the<01:10:09.480> sum<01:10:09.719> overall<01:10:10.159> i<01:10:10.360> j<01:10:10.960> of<01:10:11.120> C
+X that's just the sum overall i j of C
+jv.
+VJ<01:10:15.199> and<01:10:15.360> similarly<01:10:15.960> for<01:10:16.679> the<01:10:16.840> other
+VJ and similarly for the other
+constraints<01:10:17.600> that<01:10:17.719> you<01:10:17.960> have<01:10:18.880> you<01:10:19.040> can<01:10:19.239> write
+constraints that you have you can write
+it<01:10:19.600> as<01:10:19.880> just<01:10:20.840> a<01:10:21.000> sum<01:10:21.320> of<01:10:21.640> you<01:10:21.760> know<01:10:21.920> AI<01:10:22.320> J<01:10:22.760> time
+it as just a sum of you know AI J time
+vi.
+VJ<01:10:25.120> right<01:10:25.760> so<01:10:26.040> Vector<01:10:26.800> programming
+VJ right so Vector programming
+is
+well<01:10:31.560> it's<01:10:31.760> like<01:10:31.920> linear<01:10:32.320> programming<01:10:33.000> except
+well it's like linear programming except
+variables<01:10:34.520> are<01:10:34.760> do<01:10:35.000> products<01:10:35.679> like
+this<01:10:39.199> so<01:10:39.719> sdb<01:10:40.280> can<01:10:40.440> sdb<01:10:40.840> can<01:10:40.920> be<01:10:41.040> solved
+this so sdb can sdb can be solved
+efficiently<01:10:41.840> so<01:10:42.080> VP<01:10:42.480> can<01:10:42.560> be<01:10:42.679> solved
+efficiently<01:10:50.920> right<01:10:51.000> and<01:10:51.159> there's<01:10:51.400> no<01:10:51.719> there's
+efficiently right and there's no there's
+no<01:10:52.080> more<01:10:52.840> once<01:10:53.040> you're<01:10:53.199> solving<01:10:53.520> Vector
+no more once you're solving Vector
+programming<01:10:54.320> there's<01:10:54.520> no<01:10:54.640> more<01:10:55.440> PSD
+programming there's no more PSD
+constraint<01:10:56.760> because<01:10:56.960> I<01:10:57.040> mean<01:10:57.159> you're<01:10:57.280> already
+constraint because I mean you're already
+encoding<01:10:57.960> that<01:10:58.080> in<01:10:58.239> the<01:10:58.360> fact<01:10:58.560> that<01:10:58.640> you're
+encoding that in the fact that you're
+using<01:10:59.159> vectors<01:10:59.600> in<01:10:59.719> the<01:10:59.840> first<01:11:00.159> place<01:11:01.159> that
+using vectors in the first place that
+using<01:11:01.560> these<01:11:01.719> Vector<01:11:01.960> dot<01:11:02.440> products<01:11:03.440> so
+VP<01:11:07.360> says<01:11:07.760> minimize<01:11:08.760> sum<01:11:09.040> over<01:11:09.280> i<01:11:09.520> j<01:11:10.280> c<01:11:11.280> vi.
+VP says minimize sum over i j c vi.
+VJ<01:11:14.000> such
+VJ such
+that
+um<01:11:18.280> for<01:11:18.719> I<01:11:19.320> let's<01:11:19.520> say<01:11:19.679> for<01:11:20.520> I<01:11:20.760> going<01:11:20.960> from<01:11:21.159> one
+um for I let's say for I going from one
+up<01:11:21.520> to
+up to
+M<01:11:23.560> or<01:11:23.800> let's<01:11:23.960> say<01:11:24.120> for<01:11:24.360> K<01:11:24.640> going<01:11:24.840> from<01:11:24.960> one<01:11:25.080> up
+M or let's say for K going from one up
+to
+M<01:11:27.199> the
+sum<01:11:30.440> over<01:11:30.719> i<01:11:30.920> j<01:11:31.360> of<01:11:32.040> AK<01:11:33.040> IJ<01:11:33.840> vi.<01:11:34.760> VJ<01:11:35.760> should
+sum over i j of AK IJ vi. VJ should
+equal
+BK<01:11:38.480> that's<01:11:38.639> what<01:11:38.760> Vector<01:11:39.040> programming<01:11:39.440> looks
+like
+okay
+so<01:11:51.360> now<01:11:51.520> I<01:11:51.600> want<01:11:51.719> to<01:11:51.920> look<01:11:52.080> at<01:11:52.360> an<01:11:52.560> example<01:11:53.000> of
+so now I want to look at an example of
+using
+Vector<01:11:56.600> programming<01:11:57.199> which<01:11:57.320> is<01:11:57.600> the<01:11:57.719> same
+Vector programming which is the same
+thing<01:11:58.080> as<01:11:58.199> semi-definite
+thing as semi-definite
+programming<01:12:01.000> to<01:12:01.239> get<01:12:01.360> an<01:12:01.480> approximation
+programming to get an approximation
+algorithm<01:12:04.520> so<01:12:04.800> an
+example<01:12:08.080> is<01:12:08.280> Max
+example is Max
+cut<01:12:11.600> okay<01:12:11.760> so<01:12:12.080> the
+cut okay so the
+input<01:12:14.679> is<01:12:14.800> a
+input is a
+graph<01:12:17.320> gals<01:12:18.360> ve<01:12:19.360> it's<01:12:19.480> an<01:12:19.639> undirected
+graph gals ve it's an undirected
+graph<01:12:22.320> and<01:12:22.840> you've<01:12:23.080> probably<01:12:23.280> heard<01:12:23.440> of
+graph and you've probably heard of
+mincut<01:12:24.120> Max<01:12:24.440> cut<01:12:24.679> is<01:12:24.880> Max<01:12:25.159> ma<01:12:25.280> imize<01:12:25.639> find<01:12:25.800> a
+mincut Max cut is Max ma imize find a
+cut<01:12:26.199> that<01:12:26.320> has<01:12:26.440> the<01:12:26.560> maximum<01:12:26.880> number<01:12:27.040> of<01:12:27.120> edges
+cut that has the maximum number of edges
+Crossing<01:12:27.800> it<01:12:28.800> so
+Crossing it so
+goal<01:12:32.159> find<01:12:32.400> a<01:12:32.600> cut<01:12:33.400> a<01:12:33.520> cut<01:12:33.719> is<01:12:33.840> just<01:12:33.920> a
+goal find a cut a cut is just a
+partition<01:12:34.440> of<01:12:34.560> the<01:12:34.679> vertices<01:12:35.120> into<01:12:35.320> two
+partition of the vertices into two
+pieces<01:12:36.400> find<01:12:36.639> a
+pieces find a
+cut<01:12:38.800> which<01:12:38.960> is<01:12:39.560> a<01:12:39.719> partition<01:12:40.159> s<01:12:40.360> and<01:12:40.560> V<01:12:40.719> minus
+cut which is a partition s and V minus
+s
+maximizing
+maximizing<01:12:48.880> number<01:12:49.159> of
+maximizing number of
+edges
+going<01:12:54.320> from<01:12:54.600> s
+going from s
+to<01:12:57.440> the<01:12:57.840> the<01:12:57.960> opposite<01:12:58.239> side<01:12:58.360> of<01:12:58.440> the
+partition<01:13:02.760> so<01:13:03.679> if<01:13:03.760> you<01:13:03.880> took<01:13:04.080> 124<01:13:04.679> last<01:13:04.840> term<01:13:05.080> I
+partition so if you took 124 last term I
+think<01:13:05.360> I
+think I
+mentioned<01:13:07.600> a<01:13:07.800> good<01:13:08.080> approximation<01:13:08.600> algorithm
+mentioned a good approximation algorithm
+for<01:13:09.159> Max
+for Max
+cut<01:13:11.080> uh<01:13:11.760> has<01:13:11.880> anyone<01:13:12.120> seen<01:13:12.400> any<01:13:12.600> approximation
+cut uh has anyone seen any approximation
+algor<01:13:13.400> for<01:13:13.520> Max
+algor for Max
+cut<01:13:15.960> anyone<01:13:16.280> remember
+anything<01:13:20.760> well<01:13:20.920> I'll<01:13:21.080> tell
+anything well I'll tell
+you<01:13:23.080> just<01:13:23.239> pick<01:13:23.360> a<01:13:23.480> random<01:13:23.800> partition
+you just pick a random partition
+so<01:13:25.719> for<01:13:25.960> each<01:13:26.520> so<01:13:27.080> uh<01:13:27.639> you<01:13:27.760> know<01:13:28.120> have<01:13:28.239> a<01:13:28.360> left
+so for each so uh you know have a left
+set<01:13:28.719> and<01:13:28.800> a<01:13:28.960> right<01:13:29.120> set<01:13:29.320> for<01:13:29.440> each<01:13:29.600> vertex<01:13:29.960> put
+set and a right set for each vertex put
+it<01:13:30.199> randomly<01:13:30.560> in<01:13:30.639> the<01:13:30.800> left<01:13:31.080> and<01:13:31.400> randomly<01:13:31.760> in
+it randomly in the left and randomly in
+the<01:13:31.920> right<01:13:32.080> flip<01:13:32.280> a<01:13:32.400> coin<01:13:32.880> probably<01:13:33.280> a<01:13:33.360> half
+the right flip a coin probably a half
+it's<01:13:33.600> in<01:13:33.679> the<01:13:33.760> left<01:13:33.960> probably<01:13:34.280> half<01:13:34.400> it's<01:13:34.480> in
+it's in the left probably half it's in
+the<01:13:34.760> right<01:13:35.320> look<01:13:35.440> at<01:13:35.600> any
+the right look at any
+Edge<01:13:37.440> what's<01:13:37.639> the<01:13:37.800> probability<01:13:38.239> that<01:13:38.400> the
+Edge what's the probability that the
+edge<01:13:39.000> crosses<01:13:39.440> the
+edge crosses the
+partition<01:13:41.400> well<01:13:41.520> it's<01:13:41.639> a
+partition well it's a
+half<01:13:43.480> so<01:13:43.760> in<01:13:43.960> expectation<01:13:44.679> half<01:13:44.920> the<01:13:45.040> edges
+half so in expectation half the edges
+cross<01:13:46.120> the<01:13:46.320> partition<01:13:47.320> and<01:13:47.520> you<01:13:47.679> get<01:13:47.920> at<01:13:48.040> least
+cross the partition and you get at least
+m<01:13:48.560> over2<01:13:49.280> m<01:13:49.440> is<01:13:49.560> the<01:13:49.639> number<01:13:49.800> of<01:13:49.880> edges<01:13:50.560> so
+m over2 m is the number of edges so
+let's<01:13:51.360> say<01:13:51.639> this<01:13:51.800> thing<01:13:52.080> is<01:13:52.920> is<01:13:53.080> equal<01:13:53.320> to<01:13:53.480> M
+let's say this thing is is equal to M
+and<01:13:54.120> this<01:13:54.280> thing<01:13:54.440> is<01:13:54.560> equal<01:13:54.760> to<01:13:54.880> m<01:13:55.280> you<01:13:55.400> get<01:13:55.520> at
+and this thing is equal to m you get at
+least<01:13:55.800> M<01:13:55.960> over<01:13:56.120> two<01:13:56.480> edges<01:13:57.480> and<01:13:57.639> opt<01:13:57.920> is
+least M over two edges and opt is
+certainly<01:13:58.320> at<01:13:58.480> most<01:13:58.719> M<01:13:59.320> so<01:13:59.400> you're<01:13:59.560> getting<01:13:59.760> at
+certainly at most M so you're getting at
+least<01:14:00.000> opt<01:14:00.280> over<01:14:00.440> two
+least opt over two
+edges<01:14:02.360> okay<01:14:03.440> um<01:14:04.440> another<01:14:04.880> non-random
+edges okay um another non-random
+algorithm<01:14:06.440> is<01:14:07.440> just<01:14:07.600> start<01:14:07.840> with<01:14:07.960> an
+algorithm is just start with an
+arbitrary
+partition<01:14:10.560> and<01:14:10.840> as<01:14:11.080> long<01:14:11.280> as<01:14:11.440> there<01:14:11.600> exists<01:14:11.920> a
+partition and as long as there exists a
+Vertex<01:14:13.600> that<01:14:13.840> has<01:14:14.080> more<01:14:14.320> Neighbors<01:14:14.760> in<01:14:14.880> its
+Vertex that has more Neighbors in its
+own<01:14:15.320> partition<01:14:15.760> than<01:14:15.880> in<01:14:16.040> the<01:14:16.159> other<01:14:16.360> one<01:14:17.320> swap
+own partition than in the other one swap
+it<01:14:19.600> okay<01:14:19.760> so<01:14:20.000> this<01:14:20.159> has<01:14:20.280> to<01:14:20.480> terminate<01:14:21.040> because
+it okay so this has to terminate because
+you're<01:14:21.440> always<01:14:21.760> increasing<01:14:22.560> the<01:14:22.679> number<01:14:22.880> of
+you're always increasing the number of
+edges<01:14:23.360> that<01:14:23.520> cross<01:14:23.760> the<01:14:23.880> partition<01:14:25.320> and<01:14:25.960> if
+edges that cross the partition and if
+it's<01:14:26.280> now<01:14:26.840> terminated<01:14:27.840> then<01:14:28.280> that<01:14:28.400> means<01:14:28.800> that
+it's now terminated then that means that
+every<01:14:29.920> vertex<01:14:30.480> has<01:14:30.639> at<01:14:30.760> least<01:14:30.960> half<01:14:31.159> its
+every vertex has at least half its
+neighbors<01:14:31.600> in<01:14:31.760> the<01:14:31.880> opposite<01:14:32.280> side<01:14:32.840> which
+neighbors in the opposite side which
+means<01:14:33.360> that<01:14:33.480> you've<01:14:33.760> you've<01:14:33.960> gained<01:14:34.239> at<01:14:34.600> you
+means that you've you've gained at you
+have<01:14:34.880> at<01:14:34.960> least<01:14:35.120> M<01:14:35.320> over2<01:14:35.719> at<01:14:35.840> just<01:14:35.960> crossing
+have at least M over2 at just crossing
+the
+partition<01:14:37.880> okay<01:14:38.080> so<01:14:38.480> both<01:14:38.639> of<01:14:38.800> those<01:14:38.960> are<01:14:39.320> two
+partition okay so both of those are two
+approximations<01:14:40.199> you<01:14:40.360> get<01:14:40.480> at<01:14:40.560> least<01:14:40.719> half<01:14:40.880> of
+approximations you get at least half of
+opt<01:14:43.000> and<01:14:43.120> for<01:14:43.280> a<01:14:43.480> really<01:14:43.719> long<01:14:44.000> time<01:14:44.960> those
+opt and for a really long time those
+were<01:14:45.400> the<01:14:45.520> best<01:14:46.000> algorithms<01:14:47.000> until<01:14:47.440> I<01:14:47.520> think
+were the best algorithms until I think
+it<01:14:47.719> was
+it was
+95<01:14:50.239> um<01:14:51.239> was<01:14:51.360> it
+95 um was it
+95<01:14:53.480> it<01:14:53.560> was<01:14:53.679> Gman<01:14:54.000> and<01:14:54.080> Williams<01:14:54.600> yes<01:14:55.120> Gman
+95 it was Gman and Williams yes Gman
+Williamson<01:14:55.920> 95<01:14:56.280> well<01:14:56.360> actually<01:14:56.520> 95<01:14:56.840> is<01:14:56.920> the
+Williamson 95 well actually 95 is the
+journal<01:14:57.360> version<01:14:58.120> so<01:14:58.520> it<01:14:58.639> was<01:14:58.760> even<01:14:58.960> earlier
+journal version so it was even earlier
+when<01:14:59.520> they<01:14:59.719> wrot<01:14:59.880> when<01:15:00.000> they<01:15:00.120> first<01:15:00.360> came<01:15:00.520> up
+when they wrot when they first came up
+with<01:15:00.760> it<01:15:01.000> but<01:15:01.600> Gman<01:15:01.960> and
+Williamson<01:15:08.040> the<01:15:08.159> journal<01:15:08.520> version<01:15:08.760> is<01:15:08.880> in
+95<01:15:12.800> what<01:15:12.920> did<01:15:13.120> they<01:15:13.320> get<01:15:13.520> instead<01:15:13.760> of<01:15:13.880> getting
+95 what did they get instead of getting
+at<01:15:14.320> least<01:15:14.600> half<01:15:14.760> of<01:15:14.960> opt<01:15:15.679> they<01:15:15.800> showed<01:15:16.120> how<01:15:16.239> to
+at least half of opt they showed how to
+get<01:15:18.360> uh
+get uh
+0.878
+approximation<01:15:22.600> okay
+approximation okay
+and<01:15:25.679> what<01:15:25.800> is<01:15:26.000> this
+and what is this
+number<01:15:28.760> this<01:15:29.000> number<01:15:29.840> is<01:15:30.159> the
+number this number is the
+um<01:15:32.400> the<01:15:32.560> lowest<01:15:33.080> possible
+um the lowest possible
+value<01:15:36.239> over<01:15:36.520> all<01:15:36.840> angles<01:15:37.480> in<01:15:37.639> the<01:15:37.840> range<01:15:38.560> from
+value over all angles in the range from
+uh<01:15:40.719> 0<01:15:41.159> to
+uh 0 to
+Pi<01:15:43.120> of<01:15:43.320> 2<01:15:43.600> over<01:15:43.960> Pi<01:15:44.920> *<01:15:45.920> thet<01:15:46.360> over<01:15:46.600> 1<01:15:46.760> -<01:15:47.159> cosine
+Theta<01:15:54.040> Okay<01:15:54.679> so<01:15:55.080> so<01:15:56.080> that's<01:15:56.600> so<01:15:56.760> we're<01:15:56.920> going
+Theta Okay so so that's so we're going
+to<01:15:57.080> see<01:15:57.280> that
+to see that
+algorithm<01:15:59.080> even<01:15:59.280> though<01:15:59.400> the<01:15:59.480> number<01:15:59.719> looks
+algorithm even though the number looks
+weird<01:16:00.360> it's<01:16:00.600> actually<01:16:01.560> um<01:16:02.560> it's<01:16:02.719> actually<01:16:02.960> a
+weird it's actually um it's actually a
+very<01:16:03.280> simple<01:16:03.560> algorithm<01:16:04.040> it's<01:16:04.199> just<01:16:04.440> that
+very simple algorithm it's just that
+before<01:16:05.159> them<01:16:06.000> people<01:16:06.239> weren't<01:16:06.520> using<01:16:06.840> sdps<01:16:07.480> to
+before them people weren't using sdps to
+come<01:16:07.920> up<01:16:08.040> with<01:16:08.159> approximation
+come up with approximation
+algorithms<01:16:11.120> and<01:16:11.320> kind<01:16:11.440> of<01:16:11.639> after<01:16:11.920> they<01:16:12.080> did
+algorithms and kind of after they did
+that<01:16:14.120> uh<01:16:14.239> it<01:16:14.320> was<01:16:14.480> you<01:16:14.560> know<01:16:14.679> it<01:16:14.719> was<01:16:14.840> a<01:16:14.960> really
+that uh it was you know it was a really
+influential<01:16:15.679> paper<01:16:16.080> so<01:16:16.840> then<01:16:17.040> people<01:16:17.280> started
+influential paper so then people started
+saying<01:16:18.080> hey<01:16:18.280> maybe<01:16:18.440> we<01:16:18.560> could<01:16:18.679> use<01:16:18.840> sdps<01:16:19.360> for
+saying hey maybe we could use sdps for
+other<01:16:19.760> problems<01:16:20.080> as<01:16:20.239> well<01:16:20.960> and<01:16:21.120> in<01:16:21.280> fact<01:16:21.480> they
+other problems as well and in fact they
+did<01:16:22.920> um<01:16:23.239> and<01:16:23.360> there's<01:16:23.600> something<01:16:24.080> called
+did um and there's something called
+so<01:16:25.639> first<01:16:25.840> of<01:16:26.000> all<01:16:26.800> just<01:16:27.000> like<01:16:27.199> LPS<01:16:27.639> have
+so first of all just like LPS have
+integrality<01:16:28.360> gaps<01:16:28.679> sdps<01:16:29.280> also<01:16:29.440> have
+integrality gaps sdps also have
+integrality
+gaps<01:16:32.440> okay<01:16:33.440> um<01:16:33.679> so<01:16:34.320> you<01:16:34.400> know<01:16:35.040> I'm<01:16:35.159> G<01:16:35.280> to<01:16:35.520> write
+gaps okay um so you know I'm G to write
+down<01:16:37.120> Max<01:16:37.520> cut<01:16:37.960> not<01:16:38.159> I'm<01:16:38.239> going<01:16:38.360> to<01:16:38.480> write<01:16:38.639> down
+down Max cut not I'm going to write down
+Max<01:16:39.159> cut<01:16:39.400> not<01:16:39.520> as<01:16:39.639> an<01:16:39.800> integer<01:16:40.199> LP<01:16:41.000> but<01:16:41.120> I'm
+Max cut not as an integer LP but I'm
+going<01:16:41.280> to<01:16:41.400> write<01:16:41.520> it<01:16:41.600> down<01:16:41.760> as<01:16:41.880> a<01:16:42.000> quadratic
+going to write it down as a quadratic
+program<01:16:42.920> with<01:16:43.040> integral
+program with integral
+constraints<01:16:45.080> okay<01:16:45.840> and<01:16:46.360> you'll<01:16:46.560> see<01:16:46.760> what<01:16:46.880> I
+constraints okay and you'll see what I
+mean<01:16:47.199> in<01:16:47.320> a<01:16:47.679> second<01:16:48.679> we're<01:16:48.880> going<01:16:49.000> to<01:16:49.159> relax<01:16:49.480> it
+mean in a second we're going to relax it
+to<01:16:49.679> an<01:16:49.800> sdp<01:16:50.440> by<01:16:50.600> whenever<01:16:50.920> we<01:16:51.040> have<01:16:51.239> quadratic
+to an sdp by whenever we have quadratic
+terms<01:16:52.080> like<01:16:52.239> XI<01:16:52.760> time<01:16:53.040> XJ<01:16:53.960> we're<01:16:54.120> going<01:16:54.199> to
+terms like XI time XJ we're going to
+relax<01:16:54.679> that<01:16:55.159> to<01:16:56.040> vi.<01:16:57.000> VJ<01:16:58.000> so<01:16:58.239> instead<01:16:58.440> of
+relax that to vi. VJ so instead of
+thinking<01:16:58.760> of<01:16:58.920> XI<01:16:59.360> as<01:16:59.440> being<01:16:59.600> a<01:16:59.719> plusus<01:17:00.239> one
+thinking of XI as being a plusus one
+we'll<01:17:01.080> think<01:17:01.239> of<01:17:01.320> it<01:17:01.440> as<01:17:01.520> being<01:17:01.679> a<01:17:01.760> unit<01:17:02.159> vector
+we'll think of it as being a unit vector
+and<01:17:03.480> multiplication<01:17:04.040> will<01:17:04.159> be<01:17:04.280> do
+and multiplication will be do
+product<01:17:06.159> okay<01:17:06.320> so<01:17:06.600> max
+cut<01:17:11.040> we<01:17:11.120> can<01:17:11.280> write<01:17:11.400> it<01:17:11.560> as<01:17:11.639> a<01:17:11.760> quadratic
+cut we can write it as a quadratic
+program<01:17:13.199> we<01:17:13.320> want<01:17:13.560> to
+program we want to
+maximize<01:17:15.400> uh<01:17:15.560> the<01:17:15.760> sum<01:17:16.480> over<01:17:16.760> edges<01:17:17.040> in<01:17:17.280> E
+maximize uh the sum over edges in E
+where<01:17:18.440> e<01:17:19.080> and<01:17:19.239> edges<01:17:19.920> from<01:17:20.120> I<01:17:20.280> to<01:17:20.800> J
+where e and edges from I to J
+of<01:17:23.480> I<01:17:23.600> think<01:17:23.840> 1us<01:17:24.600> X<01:17:24.920> x<01:17:25.080> i<01:17:25.320> *<01:17:25.719> xj/<01:17:26.920> 2<01:17:27.920> so<01:17:28.719> the
+of I think 1us X x i * xj/ 2 so the
+point<01:17:29.120> is<01:17:29.320> if<01:17:29.880> and<01:17:30.239> here<01:17:31.239> um<01:17:32.000> for<01:17:32.199> all<01:17:32.560> I<01:17:32.960> XI<01:17:33.440> is
+point is if and here um for all I XI is
+in<01:17:33.639> the<01:17:33.800> set<01:17:34.040> from<01:17:34.280> minus<01:17:34.600> one<01:17:34.800> and
+one<01:17:38.639> okay<01:17:39.320> so<01:17:39.520> the<01:17:39.639> point<01:17:40.080> is<01:17:41.080> Xi<01:17:41.560> tells<01:17:41.760> you
+one okay so the point is Xi tells you
+whether<01:17:42.000> they're<01:17:42.080> on<01:17:42.199> the<01:17:42.280> left<01:17:42.480> side<01:17:42.600> or<01:17:42.719> the
+whether they're on the left side or the
+right<01:17:43.040> side<01:17:43.159> of<01:17:43.239> the<01:17:43.400> cut<01:17:43.960> vertex<01:17:44.440> I<01:17:45.440> now<01:17:45.560> if
+right side of the cut vertex I now if
+they're<01:17:45.880> both<01:17:46.040> on<01:17:46.159> the<01:17:46.280> same<01:17:46.560> side<01:17:46.840> the
+they're both on the same side the
+product<01:17:47.239> will<01:17:47.320> be<01:17:47.520> one<01:17:47.840> one<01:17:48.000> minus<01:17:48.280> one<01:17:48.440> is
+product will be one one minus one is
+zero<01:17:50.679> if<01:17:50.800> they're<01:17:51.000> on<01:17:51.280> opposite<01:17:51.639> sides<01:17:51.880> of<01:17:52.000> the
+zero if they're on opposite sides of the
+cut<01:17:53.840> then<01:17:54.040> you'll<01:17:54.239> have<01:17:54.440> one<01:17:54.639> time<01:17:54.840> *<01:17:55.080> -1<01:17:55.800> which
+cut then you'll have one time * -1 which
+is<01:17:56.120> minus<01:17:56.480> one<01:17:56.920> 1<01:17:57.120> --<01:17:57.679> one<01:17:57.840> is<01:17:57.960> 2<01:17:58.600> 2<01:17:58.800> over<01:17:58.960> two<01:17:59.080> is
+is minus one 1 -- one is 2 2 over two is
+1<01:17:59.520> so<01:17:59.760> this<01:17:59.960> counts<01:18:00.360> basically<01:18:00.679> how<01:18:00.800> many
+1 so this counts basically how many
+edges<01:18:01.120> are<01:18:01.239> crossing<01:18:01.520> the<01:18:01.920> cut<01:18:02.920> this<01:18:03.000> is<01:18:03.080> a
+edges are crossing the cut this is a
+quadratic
+program<01:18:05.679> so<01:18:06.040> by<01:18:06.159> the<01:18:06.239> way<01:18:06.400> Max<01:18:06.679> cut<01:18:06.880> is<01:18:06.960> NP<01:18:07.320> hard
+program so by the way Max cut is NP hard
+so<01:18:09.040> we<01:18:09.239> just<01:18:09.719> we've<01:18:09.960> also<01:18:10.120> shown<01:18:10.440> that<01:18:10.560> now
+so we just we've also shown that now
+quadratic<01:18:11.159> programming<01:18:11.480> is<01:18:11.600> NP<01:18:12.440> hard<01:18:13.520> okay
+quadratic programming is NP hard okay
+so<01:18:16.639> we<01:18:16.760> don't<01:18:17.040> expect<01:18:17.239> to<01:18:17.360> be<01:18:17.480> able<01:18:17.600> to<01:18:17.719> solve
+so we don't expect to be able to solve
+this<01:18:18.120> quadratic<01:18:18.560> program<01:18:18.920> unless<01:18:19.239> P<01:18:19.400> equals
+this quadratic program unless P equals
+NP<01:18:20.360> so<01:18:20.560> the<01:18:20.679> sdp<01:18:21.239> relaxation
+is<01:18:27.480> to
+maximize<01:18:31.040> the<01:18:31.400> sum<01:18:32.400> over<01:18:32.760> edges<01:18:33.000> in<01:18:33.520> e<01:18:34.520> e<01:18:34.760> is<01:18:34.960> i
+maximize the sum over edges in e e is i
+j<01:18:36.560> of<01:18:37.000> 1<01:18:37.280> minus<01:18:37.960> VI<01:18:38.760> do<01:18:39.400> VJ<01:18:40.400> over<01:18:40.760> 2<01:18:41.639> and<01:18:41.800> for<01:18:42.000> all
+j of 1 minus VI do VJ over 2 and for all
+I<01:18:43.440> VI<01:18:44.199> Dov<01:18:45.080> is<01:18:45.239> equal<01:18:45.480> to
+I VI Dov is equal to
+one<01:18:48.159> or<01:18:48.920> sdp<01:18:49.480> or<01:18:49.639> VP<01:18:50.040> you<01:18:50.120> know<01:18:50.239> it's<01:18:50.360> the<01:18:50.480> same
+one or sdp or VP you know it's the same
+thing
+okay<01:19:06.159> so<01:19:06.719> we<01:19:06.840> can<01:19:07.000> solve<01:19:07.360> this<01:19:07.800> thing<01:19:08.800> um
+okay so we can solve this thing um
+quickly<01:19:11.480> okay<01:19:11.679> but<01:19:11.880> now<01:19:12.320> we<01:19:12.440> don't<01:19:12.639> get<01:19:12.800> a
+quickly okay but now we don't get a
+bunch<01:19:13.080> of<01:19:13.400> minus<01:19:13.639> ones<01:19:13.840> and<01:19:14.000> ones<01:19:14.360> telling<01:19:14.639> us
+bunch of minus ones and ones telling us
+left<01:19:15.040> or<01:19:15.320> right<01:19:16.080> in<01:19:16.239> the<01:19:16.360> partition<01:19:17.360> what<01:19:17.520> we
+left or right in the partition what we
+get<01:19:18.120> is<01:19:18.239> a<01:19:18.360> bunch<01:19:18.520> of<01:19:18.639> unit
+get is a bunch of unit
+vectors<01:19:20.760> so<01:19:21.159> now<01:19:21.440> how<01:19:21.560> do<01:19:21.679> we<01:19:22.360> actually<01:19:23.360> turn
+vectors so now how do we actually turn
+those<01:19:23.880> vectors<01:19:24.239> into<01:19:24.400> a<01:19:24.520> part
+those vectors into a part
+partition<01:19:26.280> so<01:19:26.520> the<01:19:26.719> algorithm<01:19:27.560> the<01:19:27.719> Gman
+partition so the algorithm the Gman
+Williamson
+algorithm<01:19:32.199> is
+pick<01:19:36.280> um<01:19:36.719> a<01:19:36.960> random
+pick um a random
+hyperplane<01:19:39.080> pick<01:19:39.239> a<01:19:39.400> random<01:19:39.719> R<01:19:40.520> in<01:19:41.040> RN<01:19:42.040> by<01:19:42.159> the
+hyperplane pick a random R in RN by the
+way<01:19:43.360> remember<01:19:43.960> from<01:19:44.960> the<01:19:45.080> way<01:19:45.239> we<01:19:45.400> got<01:19:45.520> to
+way remember from the way we got to
+Vector<01:19:46.239> programming<01:19:47.239> from<01:19:47.840> sdp<01:19:48.840> remember
+Vector programming from sdp remember
+these<01:19:49.440> V<01:19:49.840> were<01:19:50.040> The<01:19:50.239> Columns<01:19:50.600> of<01:19:50.679> a<01:19:50.800> matrix<01:19:51.199> M
+these V were The Columns of a matrix M
+they're<01:19:51.760> n<01:19:51.960> dimensional<01:19:52.880> vectors<01:19:53.880> so<01:19:54.040> what
+they're n dimensional vectors so what
+we're<01:19:54.199> going<01:19:54.280> to<01:19:54.360> do<01:19:54.440> is<01:19:54.679> we're<01:19:54.760> going<01:19:54.840> to<01:19:54.960> pick
+we're going to do is we're going to pick
+random<01:19:55.600> vectors<01:19:56.000> R<01:19:56.239> in<01:19:56.480> RN<01:19:57.480> pick<01:19:57.639> a<01:19:57.719> single
+random vectors R in RN pick a single
+random<01:19:58.199> Vector<01:19:58.400> R<01:19:58.560> in<01:19:58.920> RN
+and<01:20:03.120> put
+and put
+vertex<01:20:05.920> I<01:20:06.920> in<01:20:07.520> s<01:20:08.520> if<01:20:08.840> the<01:20:09.520> sign<01:20:10.520> of<01:20:11.400> R<01:20:12.120> do
+vertex I in s if the sign of R do
+VI<01:20:15.280> is<01:20:15.480> at<01:20:15.679> least<01:20:16.159> zero<01:20:17.159> and<01:20:17.440> we'll<01:20:17.639> put<01:20:17.840> vertex
+VI is at least zero and we'll put vertex
+I<01:20:18.840> in<01:20:19.520> the<01:20:19.920> the<01:20:20.000> other<01:20:20.199> side<01:20:20.360> of<01:20:20.480> the<01:20:20.600> partition
+I in the the other side of the partition
+if<01:20:21.560> the
+if the
+sign<01:20:23.320> is<01:20:23.639> negative
+sign is negative
+okay<01:20:26.679> so<01:20:26.840> pick<01:20:26.960> a<01:20:27.080> random<01:20:27.520> hyperplane<01:20:28.520> and
+okay so pick a random hyperplane and
+you're<01:20:28.840> either<01:20:29.199> above<01:20:29.400> the<01:20:29.520> hyper<01:20:29.719> plane<01:20:29.920> or
+you're either above the hyper plane or
+below<01:20:30.280> it<01:20:30.520> and<01:20:30.639> that<01:20:30.840> decides<01:20:31.320> what<01:20:31.480> side<01:20:31.600> of
+below it and that decides what side of
+the<01:20:31.760> partition<01:20:32.080> you're
+the partition you're
+on
+okay<01:20:36.360> so<01:20:37.080> now<01:20:38.080> in<01:20:38.199> the<01:20:38.440> last<01:20:39.080> minute<01:20:40.080> what's
+okay so now in the last minute what's
+the
+expected<01:20:43.679> what's<01:20:43.920> the<01:20:44.159> expected
+um<01:20:49.600> size<01:20:49.880> of<01:20:50.000> the<01:20:50.199> cut<01:20:50.719> by<01:20:50.840> doing
+um size of the cut by doing
+this<01:20:53.159> this<01:20:53.280> is<01:20:53.520> just<01:20:53.719> the<01:20:53.880> sum<01:20:54.120> over<01:20:54.320> edges<01:20:54.639> is
+this this is just the sum over edges is
+an
+e<01:20:56.679> of<01:20:56.880> the<01:20:57.040> probability<01:20:57.920> that
+e of the probability that
+um<01:21:00.920> let's<01:21:01.080> say<01:21:01.199> e<01:21:01.360> is<01:21:01.520> i<01:21:01.679> j<01:21:02.600> the<01:21:02.800> probability
+um let's say e is i j the probability
+that<01:21:03.960> I<01:21:04.320> and<01:21:04.560> J
+that I and J
+are<01:21:07.239> well<01:21:07.920> VI
+are well VI
+and<01:21:11.800> VJ<01:21:12.800> are<01:21:13.080> on<01:21:14.040> opposite
+sides<01:21:18.719> of
+R<01:21:23.239> right<01:21:24.719> but<01:21:24.880> VI<01:21:25.159> and<01:21:25.280> VJ<01:21:25.600> are<01:21:25.760> just<01:21:25.920> two
+R right but VI and VJ are just two
+vectors<01:21:27.320> so<01:21:27.520> we<01:21:27.639> can<01:21:27.840> draw<01:21:28.320> them<01:21:29.320> you<01:21:29.440> know<01:21:29.679> in
+vectors so we can draw them you know in
+they<01:21:30.280> they<01:21:30.400> span<01:21:30.639> a<01:21:30.760> two-<01:21:30.920> dimensional<01:21:31.400> space
+they they span a two- dimensional space
+so<01:21:31.800> we<01:21:31.880> can<01:21:32.040> draw
+so we can draw
+them<01:21:34.760> they're<01:21:34.960> on<01:21:35.080> the<01:21:35.199> unit<01:21:35.520> sphere<01:21:36.000> they
+them they're on the unit sphere they
+have<01:21:36.280> Norm<01:21:36.560> one<01:21:36.880> so<01:21:37.120> VI<01:21:37.520> is
+have Norm one so VI is
+somewhere<01:21:39.520> VJ<01:21:39.960> is<01:21:40.600> somewhere<01:21:41.600> what's<01:21:41.760> the
+somewhere VJ is somewhere what's the
+probability<01:21:42.360> that<01:21:42.440> they're<01:21:42.639> separated<01:21:43.120> by
+probability that they're separated by
+this<01:21:43.400> hyper<01:21:43.719> plane<01:21:44.719> well<01:21:45.040> R<01:21:45.360> has<01:21:45.480> to<01:21:45.639> be
+this hyper plane well R has to be
+somewhere<01:21:46.199> in<01:21:46.400> here<01:21:47.400> right<01:21:47.719> so<01:21:47.880> for<01:21:48.040> them<01:21:48.159> to
+somewhere in here right so for them to
+be<01:21:48.360> separated<01:21:48.920> R<01:21:49.159> had<01:21:49.280> to<01:21:49.440> be<01:21:49.560> somewhere<01:21:49.880> in
+be separated R had to be somewhere in
+here<01:21:51.560> so<01:21:51.719> there's<01:21:51.880> an<01:21:52.040> angle<01:21:52.400> Theta
+so<01:21:56.679> the<01:21:57.280> probability<01:21:58.280> that<01:21:58.520> e<01:21:58.719> is
+separated<01:22:02.880> is<01:22:03.080> equal
+to<01:22:06.440> I
+to I
+guess<01:22:08.560> uh<01:22:08.840> well<01:22:08.960> I'm<01:22:09.080> running<01:22:09.360> out<01:22:09.480> of<01:22:09.679> time
+so<01:22:18.520> well<01:22:18.679> the<01:22:18.760> probability<01:22:19.120> that<01:22:19.199> e<01:22:19.320> is
+so well the probability that e is
+separated<01:22:19.760> is<01:22:19.920> theeta<01:22:20.159> over<01:22:20.400> pi
+which<01:22:25.360> means
+that
+uh<01:22:32.600> the<01:22:32.760> probability
+separated
+over<01:22:40.080> one<01:22:40.480> minus<01:22:41.360> vi.<01:22:42.040> VJ<01:22:42.520> over
+over one minus vi. VJ over
+2<01:22:45.719> is<01:22:45.880> equal<01:22:46.159> to<01:22:46.400> this<01:22:46.560> 2<01:22:46.760> over<01:22:47.400> Pi
+2 is equal to this 2 over Pi
+um<01:22:50.920> 2<01:22:51.199> over<01:22:51.480> piun<01:22:52.199> *<01:22:53.199> Theta<01:22:53.600> over<01:22:53.840> 1<01:22:53.960> -
+um 2 over piun * Theta over 1 -
+Theta<01:22:55.960> right<01:22:56.159> vi.<01:22:56.600> VJ<01:22:56.960> is
+Theta right vi. VJ is
+exactly<01:22:58.800> cosine
+exactly cosine
+Theta<01:23:01.080> okay<01:23:02.159> and<01:23:03.159> so<01:23:03.400> this<01:23:03.520> is<01:23:03.719> exactly<01:23:04.560> where
+Theta okay and so this is exactly where
+this<01:23:05.760> ratio<01:23:06.120> comes<01:23:06.400> from<01:23:07.400> okay<01:23:07.560> and<01:23:07.800> then<01:23:07.920> you
+this ratio comes from okay and then you
+ask<01:23:08.400> like<01:23:08.600> what's<01:23:08.800> the<01:23:08.920> worst<01:23:09.199> that<01:23:09.320> this
+ask like what's the worst that this
+ratio<01:23:09.719> could<01:23:09.840> ever<01:23:10.080> be<01:23:10.360> well<01:23:10.520> it's<01:23:10.639> the<01:23:10.719> INF
+ratio could ever be well it's the INF
+over<01:23:11.199> all<01:23:11.400> Theta<01:23:12.400> so<01:23:13.080> I'm<01:23:13.239> out<01:23:13.360> of<01:23:13.560> time<01:23:13.800> but<01:23:13.960> I
+over all Theta so I'm out of time but I
+mean<01:23:14.199> that's<01:23:14.360> basically<01:23:14.639> how<01:23:14.760> the<01:23:14.840> algorithm
+mean that's basically how the algorithm
+goes<01:23:16.320> maybe<01:23:16.480> I'll<01:23:16.639> fill<01:23:16.840> in<01:23:17.080> details<01:23:17.400> a<01:23:17.480> little
+goes maybe I'll fill in details a little
+more<01:23:17.760> rigorously<01:23:18.159> in<01:23:18.239> the<01:23:18.679> notes<01:23:19.920> um<01:23:21.280> but
+more rigorously in the notes um but
+that's
+it<01:23:24.199> okay<01:23:24.600> questions<01:23:25.159> in<01:23:25.320> the<01:23:25.560> last<01:23:26.120> few
+seconds
+yeah<01:23:36.280> yeah<01:23:36.400> I<01:23:36.480> mean<01:23:37.040> I<01:23:37.159> just<01:23:37.320> mean
+um<01:23:41.360> I<01:23:41.400> mean<01:23:41.600> what's<01:23:41.760> the<01:23:41.880> probability<01:23:42.280> that<01:23:42.480> VI
+um I mean what's the probability that VI
+what's<01:23:43.239> the<01:23:43.360> probability<01:23:43.679> that<01:23:43.840> the<01:23:44.000> sign<01:23:44.239> of
+what's the probability that the sign of
+vi.<01:23:44.920> R<01:23:45.239> is<01:23:45.360> not<01:23:45.520> equal<01:23:45.760> to<01:23:45.920> the<01:23:46.040> sign<01:23:46.280> of<01:23:46.440> vj.<01:23:47.000> R
+vi. R is not equal to the sign of vj. R
+so<01:23:49.159> by<01:23:49.320> this<01:23:49.440> I<01:23:49.520> mean<01:23:49.679> what's<01:23:49.840> the<01:23:49.960> probability
+so by this I mean what's the probability
+that<01:23:51.000> the<01:23:51.679> sign<01:23:52.679> of<01:23:53.159> vi.<01:23:53.880> r<01:23:54.800> is<01:23:54.960> not<01:23:55.159> equal<01:23:55.400> to
+that the sign of vi. r is not equal to
+the
+sign<01:23:57.280> of<01:23:57.560> VJ
+R<01:24:15.600> all<01:24:15.840> right
+so<01:24:20.280> right<01:24:20.560> yeah<01:24:20.679> sorry<01:24:20.920> yeah<01:24:21.040> so<01:24:21.199> I<01:24:21.360> guess<01:24:21.920> so
+um<01:24:26.239> so<01:24:26.400> r<01:24:26.719> r<01:24:26.960> is<01:24:27.080> the<01:24:27.239> normal<01:24:27.520> to<01:24:27.639> the<01:24:27.760> hyper
+um so r r is the normal to the hyper
+plane<01:24:28.600> so<01:24:29.600> um<01:24:30.159> I<01:24:30.239> guess<01:24:30.400> what<01:24:30.520> I<01:24:30.639> meant<01:24:30.920> is<01:24:31.159> so
+plane so um I guess what I meant is so
+if<01:24:31.520> this<01:24:31.639> is<01:24:31.760> the<01:24:31.880> hyper
+if this is the hyper
+plane
+then<01:24:37.000> um<01:24:37.600> in<01:24:37.800> this<01:24:38.360> picture<01:24:39.360> R<01:24:39.639> would<01:24:39.800> be<01:24:40.000> here
+then um in this picture R would be here
+I<01:24:40.840> guess<01:24:41.639> yeah<01:24:42.360> sorry<01:24:42.920> that<01:24:43.080> picture<01:24:43.320> was<01:24:43.400> a
+I guess yeah sorry that picture was a
+little
+misleading<01:24:47.639> right<01:24:47.880> but<01:24:48.360> the<01:24:48.440> point<01:24:48.600> is<01:24:48.679> the
+misleading right but the point is the
+hyper<01:24:49.000> plane<01:24:49.199> has<01:24:49.280> to<01:24:49.400> be<01:24:49.480> somewhere<01:24:49.800> in<01:24:49.960> this
+hyper plane has to be somewhere in this
+window<01:24:50.920> in<01:24:51.000> order<01:24:51.199> for<01:24:51.320> you<01:24:51.440> to<01:24:51.520> be<01:24:51.679> cut
+okay<01:24:55.400> so<01:24:56.119> anyway<01:24:57.119> enjoy<01:24:57.440> the<01:24:57.560> guest<01:24:57.719> lectures
+okay so anyway enjoy the guest lectures
+next<01:24:58.320> week
