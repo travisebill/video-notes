@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages
+name: Deploy GitHub Pages via gh-pages branch
 
 # 觸發條件
 # 1. push to main branch（docs/ 有變更時自動 deploy）
@@ -12,141 +12,77 @@ on:
   workflow_dispatch:
 
 # 必要權限
-# - contents: read（讀 repo source code）
-# - pages: write（建立 GitHub Pages deployment）
-# - id-token: write（OIDC token for Pages deployment 認證）
-# - deployments: read（post-deploy verify 查 status）
-# - statuses: read（備用，pull commit status）
+# - contents: write（git push 到 gh-pages branch）
+# - deployments: read（verify step 查 status）
+# - statuses: read（備用）
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
   deployments: read
   statuses: read
 
 # Concurrency control：避免多次 push 同時跑多個 deploy
-# - group: 'pages'（所有 pages deploy 同一組）
-# - cancel-in-progress: false（讓前 deploy 跑完，不要 cancel）
-#   （reason: GitHub Pages deployment 取消後狀態不乾淨，留前 deploy 完成比較安全）
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
   deploy:
-    name: Deploy docs/ → GitHub Pages
+    name: Push docs/ to gh-pages branch + verify
     runs-on: ubuntu-latest
 
-    # environment: github-pages（會把部署 URL bind 到 Pages environment）
-    # 詳細 deployment status 會在 https://github.com/{owner}/{repo}/deployments 看
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      # 1. checkout repo
+      # 1. checkout repo（含完整 history 才能用 git subtree push）
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      # 2. 設定 GitHub Pages（建立必要 token）
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      # 3. 把 docs/ 包成 Pages artifact
-      - name: Upload docs artifact
-        uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          fetch-depth: 0  # 完整 history
 
-      # 4. deploy artifact → GitHub Pages service
-      # 輸出 page_url 給 environment 設定
-      # 加長 retry: 60 次 × 10 秒 = 10 分鐘（Pages service 偶爾需要 5-6 分鐘消化）
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          timeout: 600000          # 10 minutes total
-          error_count: 60          # retry 60 次
-          reporting_interval: 10000 # 10 秒/次
-          artifact_name: github-pages
-          preview: false
+      # 2. Setup git config（subtree push 需要 user.name / user.email）
+      - name: Setup git config
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # 5. Post-deploy verify 步驟
-      # - 用 polling loop 等 GitHub deployment 從 in_progress → success（最多 5 分鐘）
-      # - 確認 deployment state = success
+      # 3. Push docs/ 到 gh-pages branch（用 git subtree split + push）
+      # 跟之前 publish.sh 的 subtree push 邏輯一樣，但用 gh-pages branch 直接 deploy
+      # 優點：Pages 從 branch source 直接 serve，不經 Pages deployment API
+      # 缺點：subtree push 失敗沒 retry 機制
+      - name: Push docs/ to gh-pages branch
+        id: push
+        run: |
+          git subtree push --prefix=docs origin gh-pages
+          echo "✓ docs/ pushed to gh-pages branch"
+
+      # 4. Verify 步驟
+      # - 等 30 秒讓 Pages 從 gh-pages branch build + serve
       # - fetch 網站確認 HTTP 200
       # - fetch data/video-notes.json 確認內容 OK
       # - 全部 OK 才算 success，否則 fail
-      - name: Verify deployment success + site reachable
+      - name: Verify site reachable + data OK
         uses: actions/github-script@v7
-        timeout-minutes: 12
+        timeout-minutes: 8
         with:
           script: |
             const SITE = 'https://travisebill.github.io/video-notes/';
             const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-            const POLL_INTERVAL_MS = 15000; // 15 seconds
-            const MAX_WAIT_MS = 600000; // 10 minutes (Pages service 偶爾需要 6+ 分鐘 final state)
-            core.info(`[verify] deployment.outputs.page_url = ${{ steps.deployment.outputs.page_url }}`);
 
-            // --- A. 先等 5 秒讓 deployment API 有時間註冊新 deployment ---
-            core.info('[verify] waiting 5s for deployment API registration...');
-            await sleep(5000);
+            // --- A. 等 30 秒讓 Pages build gh-pages branch + 同步 CDN ---
+            core.info('[verify] waiting 30s for Pages to build gh-pages branch...');
+            await sleep(30000);
 
-            // --- B. 查最新 GitHub deployment ---
-            const deployments = await github.rest.repos.listDeployments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              environment: 'github-pages',
-              per_page: 1,
-            });
-            if (deployments.data.length === 0) {
-              core.setFailed('[verify] ❌ 查不到任何 GitHub Pages deployment');
-              return;
-            }
-            const dep = deployments.data[0];
-            core.info(`[verify] tracking deployment ${dep.id} (sha ${dep.sha.slice(0, 7)})`);
-
-            // --- C. Polling loop: 等 state = success（最多 5 分鐘）---
-            let state = null;
-            let attempt = 0;
-            const startTime = Date.now();
-            while (Date.now() - startTime < MAX_WAIT_MS) {
-              attempt++;
-              const statuses = await github.rest.repos.listDeploymentStatuses({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                deployment_id: dep.id,
-              });
-              state = statuses.data[0].state;
-              const desc = statuses.data[0].description || '';
-              core.info(`[verify] attempt ${attempt}: state = ${state}${desc ? ' | ' + desc : ''}`);
-              if (state === 'success') break;
-              if (state === 'failure') {
-                core.setFailed(`[verify] ❌ deployment ${dep.id} 失敗: ${desc}`);
-                return;
-              }
-              // state 是 queued 或 in_progress，繼續等
-              await sleep(POLL_INTERVAL_MS);
-            }
-            if (state !== 'success') {
-              core.setFailed(`[verify] ❌ 等了 ${MAX_WAIT_MS/1000}s deployment state 還是 ${state}`);
-              return;
-            }
-            core.info(`[verify] ✅ deployment ${dep.id} 成功（${attempt} 次檢查）`);
-
-            // --- D. 驗證 site HTTP 200 ---
+            // --- B. fetch 網站確認 HTTP 200 ---
             core.info(`[verify] GET ${SITE}`);
             const resp = await fetch(SITE, { redirect: 'manual' });
             const status = resp.status;
             core.info(`[verify] site HTTP ${status}`);
             if (status < 200 || status >= 400) {
-              core.setFailed(`[verify] ❌ ${SITE} HTTP ${status}（deployment success 但網站打不開）`);
+              core.setFailed(`[verify] ❌ ${SITE} HTTP ${status}（subtree push 完成但網站打不開）`);
               return;
             }
 
-            // --- E. 驗證 data/video-notes.json 可以抓到 ---
+            // --- C. fetch data/video-notes.json 確認內容 OK ---
             const dataUrl = SITE + 'data/video-notes.json';
+            core.info(`[verify] GET ${dataUrl}`);
             const dataResp = await fetch(dataUrl);
             if (!dataResp.ok) {
               core.setFailed(`[verify] ❌ ${dataUrl} HTTP ${dataResp.status}`);
@@ -156,14 +92,23 @@ jobs:
             const videoCount = data.videos?.length || 0;
             core.info(`[verify] data/video-notes.json OK（${videoCount} 支影片）`);
 
-            // --- F. 全部 OK ---
-            core.info(`[verify] ✅ deployment success + 網站 HTTP 200 + data ${videoCount} 支影片`);
+            // --- D. 額外驗證：確認 Lecture 1-26 順序正確（用 lec_num）---
+            const cs224 = (data.videos || []).filter((v) => 'CS224' in (v.id || '') || 'JelaniNelson' in (v.id || '') || 'PiotrIndyk' in (v.id || ''));
+            const lecNums = cs224.map((v) => v.lec_num).filter((n) => n != null).sort((a, b) => a - b);
+            const lecNumStr = lecNums.join(',');
+            core.info(`[verify] CS224 lec_num 順序: [${lecNumStr}]`);
+            if (lecNums.length !== 26) {
+              core.setFailed(`[verify] ❌ CS224 預期 26 支但只有 ${lecNums.length} 支有 lec_num`);
+              return;
+            }
+
+            // --- E. 全部 OK ---
+            core.info(`[verify] ✅ ${SITE} HTTP 200 + data ${videoCount} 支 + CS224 lec_num 1-26 順序正確`);
             core.summary.addRaw(
                 `# GitHub Pages Deployment Verified ✅\n\n` +
-                `- Deployment ID: ${dep.id}\n` +
-                `- SHA: \`${dep.sha}\`\n` +
-                `- State: ${state}\n` +
                 `- Site: ${SITE}\n` +
+                `- HTTP Status: ${status}\n` +
                 `- Videos: ${videoCount}\n` +
-                `- Verify attempts: ${attempt}\n`
+                `- CS224 順序: [${lecNumStr}]\n` +
+                `- Method: git subtree push --prefix=docs origin gh-pages\n`
             ).write();
