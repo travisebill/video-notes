@@ -1,0 +1,19 @@
+Harvard CS224 高阶演算法第六堂课正式离开 word-RAM 模型，进入 amortized analysis 主题，并建构 binomial heaps 与 Fibonacci heaps。整堂课的核心讯息是：当你运用 amortized analysis 时，资料结构设计可以从单一操作的 worst case 思考中解放出来。
+
+Section 1｜开场行政事项与 Bug 修正
+课程开头，教授先为你处理行政事项。教授提醒学生填 Piazza poll 记录第一次作业花费的时间。九月底的 scribe 还缺人，请学生补上。教授宣布已修正上次 cuckoo hashing 的 off-by-one bug，并修正 power of two choices lemma 的 dependency issue。
+
+Section 2｜Amortized Analysis 与 Potential Function
+Amortized analysis 关心一连串操作的平均成本。教授为你解释资料结构支援多种类型的操作，每种类型有 amortized cost。任何 n_A 次 A、n_B 次 B 操作的序列总时间最多是 n_A 乘以 t_A 加 n_B 乘以 t_B。Potential function 是证明 amortized bound 的核心工具，你会看到定义 Φ 从状态映射到非负实数，Φ 对空资料结构为零。操作的 amortized cost 等于实际时间加上 Φ 的变化量。为什么这样定义有效：对所有操作做 telescoping sum，总 amortized cost 等于实际时间总和加上最终 Φ 减去初始 Φ，后者是非负数，因此 bound amortized 等于 bound 实际。
+
+Section 3｜Heap ADT 与 Dijkstra
+Heap 支援三种操作，教授为你展示：插入、delete min 回传并删除最小元素、decrease key 把元素键值降低。Dijkstra 最短路径演算法是 heap 的杀手级应用。设定 n 个顶点 m 条边，Dijkstra 需要 m 次插入、m 次 decrease key、n 次 delete min。Binary heap 所有操作对数 n 时间，整体 m 对数 n。Fibonacci heap 达到插入与 decrease key 常数 amortized、delete min 对数 n amortized，整体 m 加 n 对数 n。
+
+Section 4｜Binomial Heaps
+教授为你介绍 Binomial heap，这是 Fibonacci heap 的前身。结构是 forest of trees，rank k tree 有 2 的 k 次方个节点，每个 rank 最多一棵树。Rank k tree 的 root 有 rank 0 到 rank 减 1 的子树。插入像 binary addition：把新元素加进 top-level linked list，重复合并同 rank 的树。Delete min 先从所有 root 中找最小者移除，其子树变成新的 top-level trees，再重新 consolidate。Potential 函数取树的数量，插入的 amortized cost 是常数。
+
+Section 5｜Fibonacci Heaps 设计
+Fibonacci heap 的核心是 lazy，教授为你展示：插入时只把元素加进 top-level linked list，不 consolidate；decrease key 违反 heap order 时把元素 cut 出去变成 top-level tree。Mark bit 是每个节点一个位元，记录是否已经失去一个 child。当节点失去第二个 child 时，把它自己也 cut 出去。这个 cascading cut 维持树的形状跟 Fibonacci 数列的关系：rank k tree 至少有 F_{k+2} 个节点，成长速率是 φ 的 k 次方，因此 rank 是对数 n 量级。
+
+Section 6｜Fibonacci Heaps 分析
+Potential 函数取 Φ 等于树的数量加上两倍被标记的节点数，教授为你插入实际常数、ΔΦ 增加一棵树，amortized 常数。Delete min 实际最多对数 n 等级，加上 consolidate 后 rank 最多对数 n，amortized 对数 n。Decrease key：若不违反 heap order 则 amortized 常数；若有 c 次 cascading cut，实际 c、ΔΦ 等于负 c，amortized 常数。因此 Fibonacci heap 达到插入常数、decrease key 常数、delete min 对数 n，全部 amortized。Dijkstra 因此从 m 对数 n 加速到 m 加 n 对数 n，是 amortized analysis 最具影响力的应用。

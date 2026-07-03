@@ -1,0 +1,19 @@
+Harvard CS224 高階演算法第五堂課是 hashing 主題的最後一堂，涵蓋 cuckoo hashing 的嚴格分析與 power of two choices 的最大負載上限。整堂課的核心訊息是：當你使用兩個 hash 函數而非一個時，會帶來指數級的改善。
+
+Section 1｜開場行政事項
+課程開頭，教授先為你處理一些行政事項。教授提到第一次作業最後忘了加一個簡單的題目，記錄學生花多少時間做作業，未來會設 Piazza poll 收集這些資訊，從第二次作業開始會固定加在最後。今天的 scribe 是 Albert Wu。教授公告今天的計畫：完成 cuckoo hashing 的分析證明、講解 power of two choices、宣布下週進入 Fibonacci heaps 主題。
+
+Section 2｜Cuckoo Hashing 嚴格分析
+Cuckoo hashing 的預期插入時間是常數，教授為你展示，證明依賴一個關鍵機率上界：cuckoo graph 包含 cycle 的機率最多二分之一。Cuckoo graph 是 m 個頂點與 n 條邊的多重圖，每個元素對應一條邊連接它的兩個 hash 位置。一旦出現 cycle，插入過程可能無限循環，所以需要 rebuild 機制。證明技巧是對特定長度的 path 取存在的機率，再對所有可能的頂點集合與邊集合做 union bound。利用 moment method 把高次動差的期望算出來，搭配 Chernoff 風格的衰減估計。因為 cycle-free 機率至少二分之一，rebuild 期望兩次內就會成功，把整個 amortized cost 維持在常數。
+
+Section 3｜Power of Two Choices 直覺
+Power of two choices 的設定，教授為你展示是用兩個 hash 函數把每個元素放到當前負載較小的桶。直覺論證從 B_i 開始：B_i 是至少有 i 個元素的桶數。某個元素高度達到 i 加一的機率最多是 B_i 除以 n 的平方，因為兩個桶都要有至少 i 個元素。條件期望下 B_{i+1} 最多是 B_i 平方除以 n。當 B_10 除以 n 最多二分之一時，B_{10 加 j} 除以 n 最多是二分之一之二進位 j 次方。當二進位 j 次方大於 n 時這個值變成零，所以 j 約等於對數對數 n。因此最大負載是對數對數 n 這個量級。
+
+Section 4｜Power of Two Choices 嚴格證明
+教授指出直覺論證無法直接變成嚴格證明，因為實際的隨機變數並不總是服從期望值。教授定義 α_i 等於 e 乘以 α_{i-1} 平方除以 n 作為遞迴上界，比直覺論證多一個 e 的 slack。事件 E_i 是 B_i 不超過 α_i。基本情況 E_6 成立機率是一，因為 n 個元素最多 n 除以 6 個桶有六個以上元素。歸納步驟是 claim 一：條件在 E_i 成立下 B_{i+1} 超過 α_{i+1} 的機率最多是 Binomial α_i 平方除以 n 平方超過 α_{i+1} 的機率，可用 Chernoff bound。最後對所有層級做 union bound，得到所有 E_i 同時成立的 high probability。教授承認有 dependency issue 需要在 notes 中修正。
+
+Section 5｜下週預告：Amortized Analysis
+最後教授為你公告下週進入 amortized analysis 主題，不再有 hashing。會講解 binomial heaps、Fibonacci heaps、splay trees 等資料結構。Fibonacci heaps 對 Dijkstra 演算法特別重要：Dijkstra 需要 m 次插入、m 次 decrease key、n 次 delete min。Binary heap 所有操作對數 n 時間，整體是 m 對數 n。Fibonacci heaps 達到插入與 decrease key 常數時間、delete min 對數 n 時間，整體是 m 加 n 對數 n，在 dense graph 中 m 遠大於 n 時是顯著加速。教授詢問誰看過 Fibonacci heaps，多數人有概念；誰看過嚴格分析則寥寥無幾，這顯示 amortized analysis 是資料結構進階設計的關鍵工具。
+
+Section 6｜本週結論
+這堂課教授為你展示了 hashing 主題的兩個收尾主題：cuckoo hashing 用兩個 hash 函數加 kick-out 機制達到預期常數插入時間，power of two choices 用兩個 hash 函數選較小負載達到最大負載對數對數 n。共同主題是兩個 hash 函數比一個 hash 函數帶來指數級改善，這個觀察將延伸到後續資料結構設計中。

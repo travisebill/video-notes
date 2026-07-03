@@ -1,0 +1,19 @@
+Harvard CS224 高阶演算法第三堂课的主题是 hashing 的基础概念、K-wise 独立性，以及线性探测的分析。整堂课教授为你建立一个核心数学工具：证明时往往只需要 K-wise 独立而非完全独立，这让多项式 hash family 足以取代 fully random function，省下大量储存成本。
+
+Section 1｜Hashing 与四大问题定义
+教授从 word-RAM 模型出发，为你，定义 hash family H：把 universe 映射到零到 m 减一的范围。接著定义四个问题的差别：字典问题支援 key-value 结构，可插入删除；撷取问题让每个元素有一个 r 位元字串；成员问题只问在不在；最后是完美杂凑、线性探测、cuckoo hashing、Bloomier filters 等解法的对应关系。教授强调 hashing 不只是找个函数把东西打散，而是设计一个家族在正确的独立性强度下兼顾空间、查询时间、储存表示成本。
+
+Section 2｜负载平衡与 K-wise 独立性
+用负载平衡作为 running example，教授为你介绍 K-wise 独立性。设定是 n 个工作、n 个机器、hash 函数把工作分配到机器。教授为你证明最大机器的负载期望值是对数 n 除以对数对数 n。关键观察是：证明过程中其实只需要任意 K 个 hash 值互相独立，不需要所有 n 个都互相独立。K-wise 独立的定义很直接：对任意 K 个索引或 universe 值，这 K 个随机变数互相独立。教授展示多项式 hash family 构造：以 mod p 的 K-1 次多项式，只需要存 K 个系数，省下 u 对数 m 位元的储存成本。
+
+Section 3｜其他 Hash Family 构造
+教授为你简介其他 K-wise independent hash family 的设计，并特别推荐 tabulation hashing，这是 Thorup 在 2013 年 FOCS 提出的构造，用 lookup table 达到快速 K-wise evaluation。另一个是 Dietzfelbinger 等人提出的 multiply-shift hashing，用乘法与位移取代 mod 运算，速度更快且仍维持 pairwise 独立。预告即将在 2014 年 FOCS 发表的论文，会展示顺序评估时 K-wise 可达到常数时间，不过需要承诺按顺序呼叫 hash 函数，这限制了部分应用场景。
+
+Section 4｜完美杂凑回顾
+教授为你快速复习完美杂凑的两阶段构造。第一阶段用主 hash 函数把 n 个元素分配到 n 个桶，每个桶的期望大小是对数 n 除以对数对数 n，可由 Chernoff bound 推出。第二阶段对每个桶选一个 secondary hash 函数，把桶内元素映射到大小为桶大小平方的 array，达到零碰撞。总空间是各桶平方的总和，期望值是线性。查询时先用主 hash 找桶，再用 secondary hash 找位置。缺点是静态、需要事先知道所有元素，且空间有 overhead。
+
+Section 5｜线性探测分析与 Moment Method
+这是全堂最技术性的部分。教授为你证明线性探测在七元独立下达到期望常数时间查询与更新。核心引理是：若查询进行 K 个探测，则 hash 值至少落在 K 个长度为 K 的满区间中。证明技巧是把事件机率转成六次动差加 Markov 不等式，得到长度 K 区间为满的机率是 1 除以 K 的三次方量级。对 K 从 1 到无限大求和后收敛，得到常数时间。教授解释为何五元独立就够：condition on hash 值落在区间内用掉一个变数后，剩下四个仍是四元独立，四元独立对六次动差展开已足够。最后介绍 moment method 这个普适技巧：对集中的随机变数取大幂次不伤，对分散的取大幂次会爆掉，可用来推导 Chernoff bound。
+
+Section 6｜结论与下周预告
+这堂课为你建立的 K-wise 独立性是 word-RAM hashing 设计的核心数学工具。教授预告下周会继续 hashing 主题，包含五元独立的更紧证明、Bloom filters 的成员问题解法、Bloomier filters 的撷取问题解法、cuckoo hashing 的字典问题解法、以及 power of two choices 的负载平衡。这些主题将展示 hashing 从分析工具走到实用资料结构的完整路径。
