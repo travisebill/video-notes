@@ -38,7 +38,11 @@ def parse_filename(stem: str) -> dict:
     if not re.match(r'^\d{8}$', date_str):
         return None
     date_iso = f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:8]}"
-    return {'date': date_iso, 'speaker_slug': speaker, 'title_slug': title}
+    # 抽 Lecture 編號（課程系列用：CS224 / Harvard / MIT 等 _LectureN_ pattern）
+    # 例如：AdvancedAlgorithmsCS224_Lecture12 → 12
+    lec_match = re.search(r'Lecture(\d+)', title)
+    lec_num = int(lec_match.group(1)) if lec_match else None
+    return {'date': date_iso, 'speaker_slug': speaker, 'title_slug': title, 'lec_num': lec_num}
 
 
 def parse_md_frontmatter(content: str) -> dict:
@@ -291,6 +295,7 @@ def main():
                 'duration_seconds': fm.get('duration_seconds'),
                 'duration_display': format_duration(fm.get('duration_seconds')),
                 'video_url': fm.get('video_url'),
+                'lec_num': filename_meta.get('lec_num'),
                 'audio': find_audio_files(base_name),
                 'transcripts': find_transcripts(base_name),
                 'note_path': note_rel_path,
