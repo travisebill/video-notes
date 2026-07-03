@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_videos": 64,
-    "total_with_audio": 35,
-    "total_with_transcript": 36,
-    "total_with_spoken_script": 35,
+    "total_videos": 88,
+    "total_with_audio": 59,
+    "total_with_transcript": 60,
+    "total_with_spoken_script": 59,
     "speakers_count": 50,
     "categories_count": 4,
     "topics_count": 13,
-    "last_updated": "2026-07-03 16:04:13",
+    "last_updated": "2026-07-03 16:56:52",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -1657,6 +1657,606 @@
       },
       "note_path": "技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md"
+    },
+    {
+      "id": "20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26",
+      "title": "【Harvard CS224 高階演算法 — Lecture 26：Streaming Algorithms 與 Linear Sketching — 從 F0 Distinct Elements 到 F2 L2 Norm 的 AMS 草圖】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-12",
+      "note_date": "2016-07-12",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/DpxNW0T8CWg",
+      "audio": {
+        "opus": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26.opus",
+        "m4a": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26.m4a",
+        "mp3": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26_逐字稿.txt",
+        "spoken_script": "transcripts/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26.md"
+    },
+    {
+      "id": "20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25",
+      "title": "【Harvard CS224 高階演算法 — Lecture 25：Inclusion-Exclusion、Zeta Transform 與 Möbius Inversion 應用於 K-Coloring】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-12",
+      "note_date": "2016-07-12",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/M42rQM0vC4g",
+      "audio": {
+        "opus": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25.opus",
+        "m4a": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25.m4a",
+        "mp3": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25_逐字稿.txt",
+        "spoken_script": "transcripts/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25.md"
+    },
+    {
+      "id": "20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24",
+      "title": "【Harvard CS224 高階演算法 — Lecture 24：快速指數時間演算法 — Divide-and-Conquer、Pruned Brute Force、隨機化與 Inclusion-Exclusion】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-12",
+      "note_date": "2016-07-12",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/GAKpnKLnJtc",
+      "audio": {
+        "opus": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24.opus",
+        "m4a": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24.m4a",
+        "mp3": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24_逐字稿.txt",
+        "spoken_script": "transcripts/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24.md"
+    },
+    {
+      "id": "20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23",
+      "title": "【Harvard CS224 高階演算法 — Lecture 23：Link-Cut Trees 平攤分析與 Min-Cost Max-Flow】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-12",
+      "note_date": "2016-07-12",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/nDLe6_sPSfs",
+      "audio": {
+        "opus": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23.opus",
+        "m4a": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23.m4a",
+        "mp3": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23_逐字稿.txt",
+        "spoken_script": "transcripts/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9",
+      "title": "【Harvard CS224 高階演算法 — Lecture 9：Randomized Paging、Packing/Covering LP Duality、Primal-Dual Online】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/KBVkri8k3Ao",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8",
+      "title": "【Harvard CS224 高階演算法 — Lecture 8：Online Algorithms、Move-to-Front、Paging】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/aHW6HKVC-SY",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7",
+      "title": "【Harvard CS224 高階演算法 — Lecture 7：Splay Trees】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/LbX51mey3vo",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6",
+      "title": "【Harvard CS224 高階演算法 — Lecture 6：攤銷分析、二項堆與費氏堆】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/gxp_FrgTkQI",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5",
+      "title": "【Harvard CS224 高階演算法 — Lecture 5：Cuckoo Hashing 嚴格分析與 Power of Two Choices】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/rLMikQTOVnI",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4",
+      "title": "【Harvard CS224 高階演算法 — Lecture 4：線性探測 5-wise 證明、Bloom Filters、Bloomier Filters 與 Cuckoo Hashing】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/edOWKZE1t84",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3",
+      "title": "【Harvard CS224 高階演算法 — Lecture 3：Hashing 基礎、K-wise 獨立性與線性探測分析】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/WqBc0ZCU4Uw",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22",
+      "title": "【Harvard CS224 高階演算法 — Lecture 22：Link-cut Trees 完整解析 — Preferred Path、Splay 與 Access 操作】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/HFqO_8Eoc1U",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21",
+      "title": "【Harvard CS224 高階演算法 — Lecture 21：Faster Max Flow — Scaling、Blocking Flow 與 Link-cut Trees 整合】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/rfTt7k6Nv-I",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20",
+      "title": "【Harvard CS224 高階演算法 — Lecture 20：Multiplicative Weights 應用至 LP、近似演算法與 Flow 演算法入門】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/TdTFYVjzs1I",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2",
+      "title": "【Harvard CS224 高階演算法 — Lecture 2：Fusion Trees 與 Word-RAM 下的靜態前驅問題】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/3_o0-zPRQqw",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19",
+      "title": "【Harvard CS224 高階演算法 — Lecture 19：Multiplicative Weights 與專家意見的競爭式分析】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/R9mT5CtdHLg",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18",
+      "title": "【Harvard CS224 高階演算法 — Lecture 18：Newton's Method、進度定理與內點法的內層收斂】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/kqt1YV9dEoE",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17",
+      "title": "【Harvard CS224 高階演算法 — Lecture 17：內點法（Interior Point Method）】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/PPCnYiTpbCo",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16",
+      "title": "【Harvard CS224 高階演算法 — Lecture 16：Bland 規則、互補鬆弛、平滑分析與橢球演算法】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/4A5LiJpPDRw",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15",
+      "title": "【Harvard CS224 高階演算法 — Lecture 15：線性規畫與單體法】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/U7158Q-2rJc",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13",
+      "title": "【Harvard CS224 高階演算法 — Lecture 13：主題模型學習（Guest Lecture by Runge, Microsoft Research）】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/VuM1WnwEMRQ",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12",
+      "title": "【Harvard CS224 高階演算法 — Lecture 12：DNF 計數 FPRAS、半正定規畫與 Max-Cut 0.878 逼近】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/2Gl-yNso0_0",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11",
+      "title": "【Harvard CS224 高階演算法 — Lecture 11：Duel Fitting wrap-up、LP Integrality Gaps、PTAS for Knapsack】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/vnS9_NKoEKI",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.md"
+    },
+    {
+      "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10",
+      "title": "【Harvard CS224 高階演算法 — Lecture 10：Randomized e/(e-1) Ski Rental、Online Set Cover、Dual Fitting】",
+      "speaker": "JelaniNelson",
+      "speaker_slug": "JelaniNelson",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2016-07-11",
+      "note_date": "2016-07-11",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/Jsg9TwLRTbM",
+      "audio": {
+        "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.opus",
+        "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.m4a",
+        "mp3": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10_逐字稿.txt",
+        "spoken_script": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10_口播稿.txt",
+        "spoken_script_tts": "transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.md"
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1",
