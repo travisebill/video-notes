@@ -72,13 +72,13 @@ jobs:
       # - 全部 OK 才算 success，否則 fail
       - name: Verify deployment success + site reachable
         uses: actions/github-script@v7
-        timeout-minutes: 8
+        timeout-minutes: 12
         with:
           script: |
             const SITE = 'https://travisebill.github.io/video-notes/';
             const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
             const POLL_INTERVAL_MS = 15000; // 15 seconds
-            const MAX_WAIT_MS = 300000; // 5 minutes
+            const MAX_WAIT_MS = 600000; // 10 minutes (Pages service 偶爾需要 6+ 分鐘 final state)
             core.info(`[verify] deployment.outputs.page_url = ${{ steps.deployment.outputs.page_url }}`);
 
             // --- A. 先等 5 秒讓 deployment API 有時間註冊新 deployment ---
