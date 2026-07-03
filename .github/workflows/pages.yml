@@ -1,0 +1,145 @@
+name: Deploy GitHub Pages
+
+# 觸發條件
+# 1. push to main branch（docs/ 有變更時自動 deploy）
+# 2. workflow_dispatch（手動 trigger，從 Actions tab 點按鈕）
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+# 必要權限
+# - contents: read（讀 repo source code）
+# - pages: write（建立 GitHub Pages deployment）
+# - id-token: write（OIDC token for Pages deployment 認證）
+# - deployments: read（post-deploy verify 查 status）
+# - statuses: read（備用，pull commit status）
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  deployments: read
+  statuses: read
+
+# Concurrency control：避免多次 push 同時跑多個 deploy
+# - group: 'pages'（所有 pages deploy 同一組）
+# - cancel-in-progress: false（讓前 deploy 跑完，不要 cancel）
+#   （reason: GitHub Pages deployment 取消後狀態不乾淨，留前 deploy 完成比較安全）
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy docs/ → GitHub Pages
+    runs-on: ubuntu-latest
+
+    # environment: github-pages（會把部署 URL bind 到 Pages environment）
+    # 詳細 deployment status 會在 https://github.com/{owner}/{repo}/deployments 看
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # 1. checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. 設定 GitHub Pages（建立必要 token）
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 3. 把 docs/ 包成 Pages artifact
+      - name: Upload docs artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      # 4. deploy artifact → GitHub Pages service
+      # 輸出 page_url 給 environment 設定
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
+
+      # 5. Post-deploy verify 步驟
+      # - 等 30 秒讓 deployment 完全 sync 到 CDN
+      # - 查 deployment status API（state: success/queued/in_progress/failure）
+      # - 對 gh-pages branch raw githubusercontent 做 curl 確認 fetch 沒問題
+      # - 全部 OK 才算 success，否則 fail
+      - name: Verify deployment success + site reachable
+        uses: actions/github-script@v7
+        timeout-minutes: 4
+        with:
+          script: |
+            const SITE = 'https://travisebill.github.io/video-notes/';
+            const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+            core.info(`[verify] deployment.outputs.page_url = ${{ steps.deployment.outputs.page_url }}`);
+
+            // --- A. 等 30 秒讓 deployment 同步到 CDN ---
+            core.info('[verify] waiting 30s for CDN sync...');
+            await sleep(30000);
+
+            // --- B. 查 GitHub deployment status API ---
+            const deployments = await github.rest.repos.listDeployments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              environment: 'github-pages',
+              per_page: 1,
+            });
+            if (deployments.data.length === 0) {
+              core.setFailed('[verify] ❌ 查不到任何 GitHub Pages deployment');
+              return;
+            }
+            const dep = deployments.data[0];
+            const statuses = await github.rest.repos.listDeploymentStatuses({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: dep.id,
+            });
+            const latestStatus = statuses.data[0];
+            const state = latestStatus.state;
+            core.info(`[verify] deployment ${dep.id} (sha ${dep.sha.slice(0, 7)}) state: ${state}`);
+            if (latestStatus.description) {
+              core.info(`[verify] description: ${latestStatus.description}`);
+            }
+            if (state !== 'success') {
+              core.setFailed(`[verify] ❌ GitHub Pages deployment state = ${state} (期望 success)`);
+              return;
+            }
+
+            // --- C. 驗證 site HTTP 200 ---
+            core.info(`[verify] GET ${SITE}`);
+            const resp = await fetch(SITE, { redirect: 'manual' });
+            const status = resp.status;
+            core.info(`[verify] site HTTP ${status}`);
+            if (status < 200 || status >= 400) {
+              core.setFailed(`[verify] ❌ ${SITE} HTTP ${status}（deployment success 但網站打不開）`);
+              return;
+            }
+
+            // --- D. 驗證 data/video-notes.json 可以抓到（確認 fetch doc + data 都成功）---
+            const dataUrl = SITE + 'data/video-notes.json';
+            const dataResp = await fetch(dataUrl);
+            if (!dataResp.ok) {
+              core.setFailed(`[verify] ❌ ${dataUrl} HTTP ${dataResp.status}`);
+              return;
+            }
+            const data = await dataResp.json();
+            const videoCount = data.videos?.length || 0;
+            core.info(`[verify] data/video-notes.json OK（${videoCount} 支影片）`);
+
+            // --- E. 全部 OK ---
+            core.info(`[verify] ✅ deployment success + 網站 HTTP 200 + data ${videoCount} 支影片`);
+            core.summary.addRaw(`# GitHub Pages Deployment Verified ✅
+
+| 項目 | 值 |
+|------|-----|
+| Deployment ID | ${dep.id} |
+| SHA | \`${dep.sha}\` |
+| State | ${state} |
+| Site | ${SITE} |
+| 影片數 | ${videoCount} |
+`).write();
