@@ -236,8 +236,21 @@ document.addEventListener('alpine:init', () => {
       // 6. Sort
       result.sort((a, b) => {
         switch (this.sort) {
-          case 'date_desc': return b.date.localeCompare(a.date);
-          case 'date_asc': return a.date.localeCompare(b.date);
+          case 'date_desc':
+            // 對同 date 影片（CS224 系列：同 2016-07-11 上傳），優先按 Lecture 編號 asc
+            if (a.date === b.date) {
+              if (a.lec_num != null && b.lec_num != null) return a.lec_num - b.lec_num;
+              if (a.lec_num != null) return -1;
+              if (b.lec_num != null) return 1;
+            }
+            return b.date.localeCompare(a.date);
+          case 'date_asc':
+            if (a.date === b.date) {
+              if (a.lec_num != null && b.lec_num != null) return a.lec_num - b.lec_num;
+              if (a.lec_num != null) return -1;
+              if (b.lec_num != null) return 1;
+            }
+            return a.date.localeCompare(b.date);
           case 'duration_desc': return (b.duration_seconds || 0) - (a.duration_seconds || 0);
           case 'duration_asc': return (a.duration_seconds || 0) - (b.duration_seconds || 0);
           default: return 0;

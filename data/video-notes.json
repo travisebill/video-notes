@@ -7,7 +7,7 @@
     "speakers_count": 51,
     "categories_count": 4,
     "topics_count": 13,
-    "last_updated": "2026-07-03 17:11:45",
+    "last_updated": "2026-07-03 17:14:27",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -96,6 +96,7 @@
       "duration_seconds": 1854,
       "duration_display": "30:54",
       "video_url": "https://youtu.be/quAx1iOKWgM",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260627_自說自話的總裁_煤與Starship與2100年的地球.opus",
         "m4a": "audio/20260627_自說自話的總裁_煤與Starship與2100年的地球.m4a",
@@ -121,6 +122,7 @@
       "duration_seconds": 4532,
       "duration_display": "1:15:32",
       "video_url": "https://youtu.be/Jk7RAkFN4vk",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260619_DrDarrenCandow_CreatineForAntiAging.opus",
         "m4a": "audio/20260619_DrDarrenCandow_CreatineForAntiAging.m4a",
@@ -146,6 +148,7 @@
       "duration_seconds": 1730,
       "duration_display": "28:50",
       "video_url": "https://youtu.be/Tn28HA_TaQg",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260613_自說自話的總裁_上古中國的魔法時代.opus",
         "m4a": "audio/20260613_自說自話的總裁_上古中國的魔法時代.m4a",
@@ -171,6 +174,7 @@
       "duration_seconds": 7000,
       "duration_display": "1:56:40",
       "video_url": "https://youtu.be/Xs94KBeIiAo",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.opus",
         "m4a": "audio/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.m4a",
@@ -196,6 +200,7 @@
       "duration_seconds": 9146,
       "duration_display": "2:32:26",
       "video_url": "https://youtu.be/uLBsHXNEwAU",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.opus",
         "m4a": "audio/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.m4a",
@@ -221,6 +226,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/RwlgFC6S-OE",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260602_Mo_Gawdat_AI倫理與人類未來.opus",
         "m4a": "audio/20260602_Mo_Gawdat_AI倫理與人類未來.m4a",
@@ -246,6 +252,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -271,6 +278,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260512_歐麗娟_王維與唐代貴族.opus",
         "m4a": "audio/20260512_歐麗娟_王維與唐代貴族.m4a",
@@ -296,6 +304,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -321,6 +330,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/m-nnyNZ0TQ0",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260423_Eagleman_DreamsWarningSignals.opus",
         "m4a": "audio/20260423_Eagleman_DreamsWarningSignals.m4a",
@@ -346,6 +356,7 @@
       "duration_seconds": 2891,
       "duration_display": "48:11",
       "video_url": "https://youtu.be/kC0QAejBsJo",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260627_TVBS_文茜_英國脫歐.opus",
         "m4a": "audio/20260627_TVBS_文茜_英國脫歐.m4a",
@@ -371,6 +382,7 @@
       "duration_seconds": 2897,
       "duration_display": "48:17",
       "video_url": "https://youtu.be/XZ0caf8AczQ",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260627_TVBS_文茜_美伊停火.opus",
         "m4a": "audio/20260627_TVBS_文茜_美伊停火.m4a",
@@ -396,6 +408,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/l8KFoS59S30",
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -421,6 +434,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/PeVMWsW1MD8",
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -446,6 +460,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/EX3W99SdONQ",
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -471,6 +486,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.opus",
         "m4a": "audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.m4a",
@@ -496,6 +512,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260614_陳文茜_AI畢業生與文明重組.opus",
         "m4a": "audio/20260614_陳文茜_AI畢業生與文明重組.m4a",
@@ -521,6 +538,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -546,6 +564,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -571,6 +590,7 @@
       "duration_seconds": 3139,
       "duration_display": "52:19",
       "video_url": "https://youtu.be/wDf1IR8yP9s",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260627_CNBC_ZAI_Chinese_OpenSourceMoment.opus",
         "m4a": "audio/20260627_CNBC_ZAI_Chinese_OpenSourceMoment.m4a",
@@ -596,6 +616,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://developer.apple.com/videos/play/wwdc2026/232/",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.opus",
         "m4a": "audio/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.m4a",
@@ -621,6 +642,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://martinfowler.com/articles/harness-engineering.html",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260626_MartinFowler_HarnessEngineering.opus",
         "m4a": "audio/20260626_MartinFowler_HarnessEngineering.m4a",
@@ -646,6 +668,7 @@
       "duration_seconds": 3628,
       "duration_display": "1:00:28",
       "video_url": "https://www.youtube.com/live/uCFW0i9xrBc",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260620_Kaggle_5DayGenAI_Day5.opus",
         "m4a": "audio/20260620_Kaggle_5DayGenAI_Day5.m4a",
@@ -671,6 +694,7 @@
       "duration_seconds": 3766,
       "duration_display": "1:02:46",
       "video_url": "https://www.youtube.com/live/odvuLMJWUSU",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260620_Kaggle_5DayGenAI_Day4.opus",
         "m4a": "audio/20260620_Kaggle_5DayGenAI_Day4.m4a",
@@ -696,6 +720,7 @@
       "duration_seconds": 3449,
       "duration_display": "57:29",
       "video_url": "https://www.youtube.com/live/1T2mxYZkqL0",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260620_Kaggle_5DayAIAgents_Day3.opus",
         "m4a": "audio/20260620_Kaggle_5DayAIAgents_Day3.m4a",
@@ -721,6 +746,7 @@
       "duration_seconds": 3155,
       "duration_display": "52:35",
       "video_url": "https://www.youtube.com/live/PGI_S59EoRA",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260620_Kaggle_5DayAIAgents_Day2.opus",
         "m4a": "audio/20260620_Kaggle_5DayAIAgents_Day2.m4a",
@@ -746,6 +772,7 @@
       "duration_seconds": 3091,
       "duration_display": "51:31",
       "video_url": "https://www.youtube.com/live/7iic3Zj427M",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260620_Kaggle_5DayAIAgents_Day1.opus",
         "m4a": "audio/20260620_Kaggle_5DayAIAgents_Day1.m4a",
@@ -771,6 +798,7 @@
       "duration_seconds": 1795,
       "duration_display": "29:55",
       "video_url": "https://youtu.be/AZ5jJSQ0pBI",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.opus",
         "m4a": "audio/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.m4a",
@@ -796,6 +824,7 @@
       "duration_seconds": 3744,
       "duration_display": "1:02:24",
       "video_url": "https://youtu.be/nQwJVHCtDDY",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260619_MattPocock_AgenticEngineeringWorkflow.opus",
         "m4a": "audio/20260619_MattPocock_AgenticEngineeringWorkflow.m4a",
@@ -821,6 +850,7 @@
       "duration_seconds": 1899,
       "duration_display": "31:39",
       "video_url": "https://youtu.be/OaRhpwz_TGM",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260619_AndrewNg_FutureOfAIAgents.opus",
         "m4a": "audio/20260619_AndrewNg_FutureOfAIAgents.m4a",
@@ -846,6 +876,7 @@
       "duration_seconds": 3554,
       "duration_display": "59:14",
       "video_url": "https://www.youtube.com/live/vmybpMc4GMY",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260619_AWSShowAndTell_AIPoweredSDLC.opus",
         "m4a": "audio/20260619_AWSShowAndTell_AIPoweredSDLC.m4a",
@@ -871,6 +902,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260618_TaraAgyemang_WebMCP.opus",
         "m4a": "audio/20260618_TaraAgyemang_WebMCP.m4a",
@@ -896,6 +928,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260618_MarieHaynes_OKF.opus",
         "m4a": "audio/20260618_MarieHaynes_OKF.m4a",
@@ -921,6 +954,7 @@
       "duration_seconds": 2780,
       "duration_display": "46:20",
       "video_url": "https://youtu.be/am_oeAoUhew",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260617_RyanLopopolo_HarnessEngineering.opus",
         "m4a": "audio/20260617_RyanLopopolo_HarnessEngineering.m4a",
@@ -946,6 +980,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -971,6 +1006,7 @@
       "duration_seconds": 509,
       "duration_display": "8:29",
       "video_url": "https://youtu.be/Zqno_vux6d8",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260613_Smitha_AI_agents_explained.opus",
         "m4a": "audio/20260613_Smitha_AI_agents_explained.m4a",
@@ -996,6 +1032,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1021,6 +1058,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/zjFE-dBzP_E",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260612_Matthew_Berman_四個必試開源AI專案.opus",
         "m4a": "audio/20260612_Matthew_Berman_四個必試開源AI專案.m4a",
@@ -1046,6 +1084,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.opus",
         "m4a": "audio/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.m4a",
@@ -1071,6 +1110,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/_gCXmKjDecU",
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1096,6 +1136,7 @@
       "duration_seconds": 960,
       "duration_display": "16:00",
       "video_url": "https://youtu.be/hCMrEfPG2Yg>",
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1121,6 +1162,7 @@
       "duration_seconds": 784,
       "duration_display": "13:04",
       "video_url": "https://youtu.be/s5T5oQJcJ6U",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260608_MattPocock_teach_skill_個人化學習.opus",
         "m4a": "audio/20260608_MattPocock_teach_skill_個人化學習.m4a",
@@ -1146,6 +1188,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1171,6 +1214,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1196,6 +1240,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1221,6 +1266,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1246,6 +1292,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1271,6 +1318,7 @@
       "duration_seconds": 1583,
       "duration_display": "26:23",
       "video_url": "https://youtu.be/wKAeqSfIX5g",
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1296,6 +1344,7 @@
       "duration_seconds": 1161,
       "duration_display": "19:21",
       "video_url": "https://youtu.be/g8um2AEf5ZA",
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1321,6 +1370,7 @@
       "duration_seconds": 2371,
       "duration_display": "39:31",
       "video_url": "https://youtu.be/CwePo4847ho",
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1346,6 +1396,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1371,6 +1422,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1396,6 +1448,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1421,6 +1474,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1446,6 +1500,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1471,6 +1526,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1496,6 +1552,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1521,6 +1578,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1546,6 +1604,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1571,6 +1630,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260425_李宏毅_AI自我修正Decoding到Reasoning.opus",
         "m4a": "audio/20260425_李宏毅_AI自我修正Decoding到Reasoning.m4a",
@@ -1596,6 +1656,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": null,
+      "lec_num": null,
       "audio": {
         "opus": "audio/20260412_李宏毅_Harness_Engineering駕馭工程.opus",
         "m4a": "audio/20260412_李宏毅_Harness_Engineering駕馭工程.m4a",
@@ -1621,6 +1682,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/vqfMFavnvxU",
+      "lec_num": null,
       "audio": {
         "opus": null,
         "m4a": null,
@@ -1646,6 +1708,7 @@
       "duration_seconds": 2358,
       "duration_display": "39:18",
       "video_url": "https://youtu.be/GrxU2GK842w",
+      "lec_num": null,
       "audio": {
         "opus": "audio/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.opus",
         "m4a": "audio/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.m4a",
@@ -1671,6 +1734,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/DpxNW0T8CWg",
+      "lec_num": 26,
       "audio": {
         "opus": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26.opus",
         "m4a": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26.m4a",
@@ -1696,6 +1760,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/M42rQM0vC4g",
+      "lec_num": 25,
       "audio": {
         "opus": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25.opus",
         "m4a": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25.m4a",
@@ -1721,6 +1786,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/GAKpnKLnJtc",
+      "lec_num": 24,
       "audio": {
         "opus": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24.opus",
         "m4a": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24.m4a",
@@ -1746,6 +1812,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/nDLe6_sPSfs",
+      "lec_num": 23,
       "audio": {
         "opus": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23.opus",
         "m4a": "audio/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23.m4a",
@@ -1771,6 +1838,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/KBVkri8k3Ao",
+      "lec_num": 9,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9.m4a",
@@ -1796,6 +1864,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/aHW6HKVC-SY",
+      "lec_num": 8,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8.m4a",
@@ -1821,6 +1890,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/LbX51mey3vo",
+      "lec_num": 7,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7.m4a",
@@ -1846,6 +1916,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/gxp_FrgTkQI",
+      "lec_num": 6,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6.m4a",
@@ -1871,6 +1942,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/rLMikQTOVnI",
+      "lec_num": 5,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5.m4a",
@@ -1896,6 +1968,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/edOWKZE1t84",
+      "lec_num": 4,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4.m4a",
@@ -1921,6 +1994,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/WqBc0ZCU4Uw",
+      "lec_num": 3,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.m4a",
@@ -1946,6 +2020,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/HFqO_8Eoc1U",
+      "lec_num": 22,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22.m4a",
@@ -1971,6 +2046,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/rfTt7k6Nv-I",
+      "lec_num": 21,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21.m4a",
@@ -1996,6 +2072,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/TdTFYVjzs1I",
+      "lec_num": 20,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20.m4a",
@@ -2021,6 +2098,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/3_o0-zPRQqw",
+      "lec_num": 2,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.m4a",
@@ -2046,6 +2124,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/R9mT5CtdHLg",
+      "lec_num": 19,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19.m4a",
@@ -2071,6 +2150,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/kqt1YV9dEoE",
+      "lec_num": 18,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18.m4a",
@@ -2096,6 +2176,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/PPCnYiTpbCo",
+      "lec_num": 17,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17.m4a",
@@ -2121,6 +2202,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/4A5LiJpPDRw",
+      "lec_num": 16,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.m4a",
@@ -2146,6 +2228,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/U7158Q-2rJc",
+      "lec_num": 15,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.m4a",
@@ -2171,6 +2254,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/VuM1WnwEMRQ",
+      "lec_num": 13,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.m4a",
@@ -2196,6 +2280,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/2Gl-yNso0_0",
+      "lec_num": 12,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.m4a",
@@ -2221,6 +2306,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/vnS9_NKoEKI",
+      "lec_num": 11,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.m4a",
@@ -2246,6 +2332,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/Jsg9TwLRTbM",
+      "lec_num": 10,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.m4a",
@@ -2271,6 +2358,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://youtu.be/0JUN9aDxVmI",
+      "lec_num": 1,
       "audio": {
         "opus": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.opus",
         "m4a": "audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.m4a",
@@ -2296,6 +2384,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "http://people.seas.harvard.edu/~cs224/fall14/lec/lec14.pdf",
+      "lec_num": 14,
       "audio": {
         "opus": "audio/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.opus",
         "m4a": "audio/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.m4a",
