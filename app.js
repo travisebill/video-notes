@@ -237,20 +237,22 @@ document.addEventListener('alpine:init', () => {
       result.sort((a, b) => {
         switch (this.sort) {
           case 'date_desc':
+          case 'date_asc': {
             // 對同 date 影片（CS224 系列：同 2016-07-11 上傳），優先按 Lecture 編號 asc
-            if (a.date === b.date) {
+            // 用 note_date 優先（frontmatter 整理日期權威），fallback 到 date（filename 抽的）
+            // 修 2026-07-03：Lecture 23-26 filename 用 20160712_ prefix，但實際 frontmatter 寫 2016-07-11
+            // 如果用 date 會把 Lecture 23-26 排在 Lecture 1-22 前面（錯誤）
+            const dateA = a.note_date || a.date;
+            const dateB = b.note_date || b.date;
+            if (dateA === dateB) {
               if (a.lec_num != null && b.lec_num != null) return a.lec_num - b.lec_num;
               if (a.lec_num != null) return -1;
               if (b.lec_num != null) return 1;
             }
-            return b.date.localeCompare(a.date);
-          case 'date_asc':
-            if (a.date === b.date) {
-              if (a.lec_num != null && b.lec_num != null) return a.lec_num - b.lec_num;
-              if (a.lec_num != null) return -1;
-              if (b.lec_num != null) return 1;
-            }
-            return a.date.localeCompare(b.date);
+            return this.sort === 'date_desc'
+              ? dateB.localeCompare(dateA)
+              : dateA.localeCompare(dateB);
+          }
           case 'duration_desc': return (b.duration_seconds || 0) - (a.duration_seconds || 0);
           case 'duration_asc': return (a.duration_seconds || 0) - (b.duration_seconds || 0);
           default: return 0;
