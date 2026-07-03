@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **61 支內容** · 105 個音檔 · 61 個逐字稿 · 35 個口播稿
-> 最後更新：2026-06-30
+> **62 支內容** · 108 個音檔 · 62 個逐字稿 · 36 個口播稿
+> 最後更新：2026-07-03
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2016-07-11** | Jelani Nelson（Harvard CS 教授）| [Harvard CS224 高階演算法 — Lecture 1：Word RAM、Predecessor 問題、van Emde Boas 與 Y-Fast Tries](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md) · 88 分鐘（5299 秒）（YouTube 一般路徑，英文自動字幕 3741 cues + 繁中字幕 3033 cues 雙語對照）
 - **2026-06-27** | TVBS 文茜的世界周報（歐洲版）| [一紙停火備忘錄：美伊各取所需，川普表示戰爭結束了](國際局勢/20260627_TVBS_文茜_美伊停火.md) · 48 分 17 秒（YouTube 一般路徑，繁中 Whisper small CPU 聽寫 48 分鐘）
 - **2026-06-27** | TVBS 文茜的世界周報（歐洲版）| [英國脫歐公投十週年：脫歐後換七首相](國際局勢/20260627_TVBS_文茜_英國脫歐.md) · 48 分 11 秒（YouTube 一般路徑，繁中 Whisper small CPU 聽寫 48 分鐘）
 - **2026-06-19** | 馬臉姐 | [AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說](技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md) · 29 分 55 秒（YouTube 一般路徑，中文 30 分鐘 base 模型）
@@ -59,6 +60,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 1：Word RAM、Predecessor 問題、van Emde Boas 與 Y-Fast Tries](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md) | Jelani Nelson（Harvard CS 教授） | 88 分鐘（5299 秒，口播稿 4:41） | [📄 note](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md) · [📝 逐字稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1_逐字稿.txt) · [🎙️ 口播稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1_口播稿.txt) · [🔊 opus](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.opus) · [🔊 m4a](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.m4a) · [🔊 mp3](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.mp3) |
 | 2026-06-27 | [一紙停火備忘錄：美伊各取所需，川普表示戰爭結束了](國際局勢/20260627_TVBS_文茜_美伊停火.md) | TVBS 文茜的世界周報（歐洲版）| 48 分 17 秒（口播稿 4:35）| [📄 note](國際局勢/20260627_TVBS_文茜_美伊停火.md) · [📝 逐字稿](transcripts/20260627_TVBS_文茜_美伊停火_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260627_TVBS_文茜_美伊停火_口播稿.txt) · [🔊 opus](audio/20260627_TVBS_文茜_美伊停火.opus) · [🔊 m4a](audio/20260627_TVBS_文茜_美伊停火.m4a) · [🔊 mp3](audio/20260627_TVBS_文茜_美伊停火.mp3) |
 | 2026-06-27 | [英國脫歐公投十週年：脫歐後換七首相](國際局勢/20260627_TVBS_文茜_英國脫歐.md) | TVBS 文茜的世界周報（歐洲版）| 48 分 11 秒（口播稿 5:32）| [📄 note](國際局勢/20260627_TVBS_文茜_英國脫歐.md) · [📝 逐字稿](transcripts/20260627_TVBS_文茜_英國脫歐_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260627_TVBS_文茜_英國脫歐_口播稿.txt) · [🔊 opus](audio/20260627_TVBS_文茜_英國脫歐.opus) · [🔊 m4a](audio/20260627_TVBS_文茜_英國脫歐.m4a) · [🔊 mp3](audio/20260627_TVBS_文茜_英國脫歐.mp3) |
 | 2025-10-31 | [AI 2027 報告：兩種結局、6 段時間線，與台灣在 AI 晶片戰爭中的關鍵角色](技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md) | 馬臉姐 | 39 分 18 秒（口播稿 6:59）| [📄 note](技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md) · [📝 逐字稿](transcripts/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色_逐字稿.txt) · [🎙️ 口播稿](transcripts/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色_口播稿.txt) · [🔊 opus](audio/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.opus) · [🔊 m4a](audio/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.m4a) · [🔊 mp3](audio/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.mp3) |
@@ -218,8 +220,9 @@
 - 2026-06-19 | [AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說](技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md) · 馬臉姐 · 29 分 55 秒
 - 2025-10-31 | [AI 2027 報告：兩種結局、6 段時間線，與台灣在 AI 晶片戰爭中的關鍵角色](技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md) · 馬臉姐 · 39 分 18 秒
 
-### 📦 **其他**（2 支）
+### 📦 **其他**（3 支）
 
+- 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 1：Word RAM、Predecessor 問題、van Emde Boas 與 Y-Fast Tries](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md) · Jelani Nelson（Harvard CS 教授）· 88 分鐘（5299 秒）
 - 2026-06-08 | [Matt Pocock：Learn anything with the /teach skill](技術講座/20260608_MattPocock_teach_skill_個人化學習.md) · Matt Pocock · 13 分 04 秒
 - 2026-05-28 | [Software Engineering at the Tipping Point](技術講座/20260528_Adam_Bender_Software_Ecology_軟體生態學.md) · ? · ?
 
@@ -261,6 +264,7 @@
 - **Andrew Ng（Landing AI / DeepLearning.AI 創辦人）** · 2026-06-19 | [The Future of AI Agents — Andrew Ng × Harrison Chase @ LangChain Interrupt](技術講座/20260619_AndrewNg_FutureOfAIAgents.md) · 31 分 39 秒
 - **Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）** · 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · 75 分 32 秒
 - **Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長** · 2026-02-05 | [黃仁勳最新訪談：你不會輸給 AI，但你會輸給會用 AI 的人](技術講座/20260205_JensenHuang_不輸給AI_輸給會用AI的人.md) · 44 分鐘
+- **Jelani Nelson（Harvard CS 教授）** · 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 1：Word RAM、Predecessor 問題、van Emde Boas 與 Y-Fast Tries](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md) · 88 分鐘（5299 秒）
 - **Martin Fowler（martinfowler.com 軟體工程思想家）+ 中文摘要 doggy8088（Will 保哥）** · 2026-06-26 | [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) · 技術文章
 
 ---
@@ -271,8 +275,8 @@
 - 🎙️ **人物訪談**（9 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（3 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（4 支）→ [完整列表](財經分析/README.md)
-- 🛠️ **技術講座**（35 支）→ [完整列表](技術講座/README.md)
+- 🛠️ **技術講座**（36 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-06-29 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 60 支內容*
+*最後更新：2026-07-03 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 62 支內容*
