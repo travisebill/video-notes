@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_videos": 88,
-    "total_with_audio": 59,
+    "total_videos": 89,
+    "total_with_audio": 60,
     "total_with_transcript": 60,
-    "total_with_spoken_script": 59,
-    "speakers_count": 50,
+    "total_with_spoken_script": 60,
+    "speakers_count": 51,
     "categories_count": 4,
     "topics_count": 13,
-    "last_updated": "2026-07-03 16:56:52",
+    "last_updated": "2026-07-03 17:11:45",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -41,6 +41,7 @@
       "Moonshot",
       "Nick Hanauer（Amazon 第一位非家族投資人，創投） × Daniel Priestley（創業家 / 商業教練 /《Lifestyle Business Playbook》作者）",
       "OpenClaw 生態系的技術開發者，展示 OpenClaw 平台從底層的 Pi 框架一路到多代理商業應用的完整技術堆疊",
+      "PiotrIndyk",
       "Pooja Trivedi（Microsoft 架構師，主導 Windows on Linux 開發者體驗與 AI）／Craig（Microsoft PM，負責 WSL 與 Windows AI 工具）",
       "Ruben Casas（Postman Staff Engineer）",
       "RyanLopopolo",
@@ -2282,6 +2283,31 @@
       },
       "note_path": "技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md"
+    },
+    {
+      "id": "20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH",
+      "title": "【Harvard CS224 Advanced Algorithms — Lecture 14：最近鄰搜索與 Locality-Sensitive Hashing】",
+      "speaker": "PiotrIndyk",
+      "speaker_slug": "PiotrIndyk",
+      "category": "技術講座",
+      "primary_topic": "📚 算法 / 計算機科學理論",
+      "date": "2014-10-16",
+      "note_date": "2014-10-16",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "http://people.seas.harvard.edu/~cs224/fall14/lec/lec14.pdf",
+      "audio": {
+        "opus": "audio/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.opus",
+        "m4a": "audio/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.m4a",
+        "mp3": "audio/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH_口播稿.txt",
+        "spoken_script_tts": "transcripts/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.md"
     }
   ]
 }
