@@ -290,7 +290,10 @@ def main():
                 'speaker_slug': filename_meta['speaker_slug'],
                 'category': category,
                 'primary_topic': primary_topic,
-                'date': filename_meta['date'],
+                # 修 2026-07-03：note_date 優先（frontmatter 整理日期權威），
+                # Lecture 23-26 filename 用 20160712_ prefix 但實際 frontmatter 寫 2016-07-11，
+                # 不然前端 sort 會把 Lecture 23-26 排在 Lecture 1-22 前面
+                'date': fm.get('note_date', filename_meta['date']),
                 'note_date': fm.get('note_date', filename_meta['date']),
                 'duration_seconds': fm.get('duration_seconds'),
                 'duration_display': format_duration(fm.get('duration_seconds')),
