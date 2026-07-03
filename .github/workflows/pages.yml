@@ -65,24 +65,27 @@ jobs:
         uses: actions/deploy-pages@v5
 
       # 5. Post-deploy verify 步驟
-      # - 等 30 秒讓 deployment 完全 sync 到 CDN
-      # - 查 deployment status API（state: success/queued/in_progress/failure）
-      # - 對 gh-pages branch raw githubusercontent 做 curl 確認 fetch 沒問題
+      # - 用 polling loop 等 GitHub deployment 從 in_progress → success（最多 5 分鐘）
+      # - 確認 deployment state = success
+      # - fetch 網站確認 HTTP 200
+      # - fetch data/video-notes.json 確認內容 OK
       # - 全部 OK 才算 success，否則 fail
       - name: Verify deployment success + site reachable
         uses: actions/github-script@v7
-        timeout-minutes: 4
+        timeout-minutes: 8
         with:
           script: |
             const SITE = 'https://travisebill.github.io/video-notes/';
             const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+            const POLL_INTERVAL_MS = 15000; // 15 seconds
+            const MAX_WAIT_MS = 300000; // 5 minutes
             core.info(`[verify] deployment.outputs.page_url = ${{ steps.deployment.outputs.page_url }}`);
 
-            // --- A. 等 30 秒讓 deployment 同步到 CDN ---
-            core.info('[verify] waiting 30s for CDN sync...');
-            await sleep(30000);
+            // --- A. 先等 5 秒讓 deployment API 有時間註冊新 deployment ---
+            core.info('[verify] waiting 5s for deployment API registration...');
+            await sleep(5000);
 
-            // --- B. 查 GitHub deployment status API ---
+            // --- B. 查最新 GitHub deployment ---
             const deployments = await github.rest.repos.listDeployments({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -94,23 +97,37 @@ jobs:
               return;
             }
             const dep = deployments.data[0];
-            const statuses = await github.rest.repos.listDeploymentStatuses({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              deployment_id: dep.id,
-            });
-            const latestStatus = statuses.data[0];
-            const state = latestStatus.state;
-            core.info(`[verify] deployment ${dep.id} (sha ${dep.sha.slice(0, 7)}) state: ${state}`);
-            if (latestStatus.description) {
-              core.info(`[verify] description: ${latestStatus.description}`);
+            core.info(`[verify] tracking deployment ${dep.id} (sha ${dep.sha.slice(0, 7)})`);
+
+            // --- C. Polling loop: 等 state = success（最多 5 分鐘）---
+            let state = null;
+            let attempt = 0;
+            const startTime = Date.now();
+            while (Date.now() - startTime < MAX_WAIT_MS) {
+              attempt++;
+              const statuses = await github.rest.repos.listDeploymentStatuses({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                deployment_id: dep.id,
+              });
+              state = statuses.data[0].state;
+              const desc = statuses.data[0].description || '';
+              core.info(`[verify] attempt ${attempt}: state = ${state}${desc ? ' | ' + desc : ''}`);
+              if (state === 'success') break;
+              if (state === 'failure') {
+                core.setFailed(`[verify] ❌ deployment ${dep.id} 失敗: ${desc}`);
+                return;
+              }
+              // state 是 queued 或 in_progress，繼續等
+              await sleep(POLL_INTERVAL_MS);
             }
             if (state !== 'success') {
-              core.setFailed(`[verify] ❌ GitHub Pages deployment state = ${state} (期望 success)`);
+              core.setFailed(`[verify] ❌ 等了 ${MAX_WAIT_MS/1000}s deployment state 還是 ${state}`);
               return;
             }
+            core.info(`[verify] ✅ deployment ${dep.id} 成功（${attempt} 次檢查）`);
 
-            // --- C. 驗證 site HTTP 200 ---
+            // --- D. 驗證 site HTTP 200 ---
             core.info(`[verify] GET ${SITE}`);
             const resp = await fetch(SITE, { redirect: 'manual' });
             const status = resp.status;
@@ -120,7 +137,7 @@ jobs:
               return;
             }
 
-            // --- D. 驗證 data/video-notes.json 可以抓到（確認 fetch doc + data 都成功）---
+            // --- E. 驗證 data/video-notes.json 可以抓到 ---
             const dataUrl = SITE + 'data/video-notes.json';
             const dataResp = await fetch(dataUrl);
             if (!dataResp.ok) {
@@ -131,7 +148,7 @@ jobs:
             const videoCount = data.videos?.length || 0;
             core.info(`[verify] data/video-notes.json OK（${videoCount} 支影片）`);
 
-            // --- E. 全部 OK ---
+            // --- F. 全部 OK ---
             core.info(`[verify] ✅ deployment success + 網站 HTTP 200 + data ${videoCount} 支影片`);
             core.summary.addRaw(
                 `# GitHub Pages Deployment Verified ✅\n\n` +
@@ -139,5 +156,6 @@ jobs:
                 `- SHA: \`${dep.sha}\`\n` +
                 `- State: ${state}\n` +
                 `- Site: ${SITE}\n` +
-                `- Videos: ${videoCount}\n`
+                `- Videos: ${videoCount}\n` +
+                `- Verify attempts: ${attempt}\n`
             ).write();
