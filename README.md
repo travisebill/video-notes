@@ -127,13 +127,18 @@
 <a id="by-topic"></a>
 ## 🏷️ 按主題
 
-### 🤖 **AI 倫理 / 哲學 / 意識**（3 支）
+### 🤖 **AI 倫理 / 哲學 / 意識**（4 支）
+
+- 2026-06-02 | [Mo Gawdat 談 AI 倫理與人類未來 — 結構化筆記](人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md) · ? · ?
+- 2026-05-12 | [蔡康永深度對談：關於衰老、死亡、AI 與人生的終極提問](人物訪談/20260512_蔡康永_衰老死亡與AI.md) · 蔡康永（作家/主持人） × 羅永浩（訪談主持人）｜「十字路口」播客 · 3:36:18
+- 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
+- 2026-04-23 | [Stanford 神經科學家：記不住夢境可能是大腦在警告你！](人物訪談/20260423_Eagleman_DreamsWarningSignals.md) · Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者） × Steven Bartlett · 1 小時 33 分 18 秒（YouTube 英文自動字幕 → 繁中翻譯）
 
 - 2026-06-02 | [Mo Gawdat 談 AI 倫理與人類未來 — 結構化筆記](人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md) · ? · ?
 - 2026-05-12 | [蔡康永深度對談：關於衰老、死亡、AI 與人生的終極提問](人物訪談/20260512_蔡康永_衰老死亡與AI.md) · 蔡康永（作家/主持人） × 羅永浩（訪談主持人）｜「十字路口」播客 · 3:36:18
 - 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
 
-### 🧠 **AI / LLM 學術與方法論**（15 支）
+### 🧠 **AI / LLM 學術與方法論**（16 支）
 
 - ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · 進階上下文工程 · ?
 - 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · Ryan Lopopolo（OpenAI Member of Technical Staff）· 46 分 20 秒
@@ -150,6 +155,7 @@
 - 2026-05-07 | [DeepSeek V4 的槓桿機會與 Token Efficiency 工程實踐](技術講座/20260507_小天fotos_DeepSeekV4槓桿與TokenEfficiency.md) · ? · 19 分鐘
 - 2026-04-25 | [AI 能自我修正嗎？從 Decoding、Workflow 到 Reasoning 的技術發展整理](技術講座/20260425_李宏毅_AI自我修正Decoding到Reasoning.md) · ? · 88 分鐘
 - 2026-04-12 | [Harness Engineering：有時候語言模型不是不夠聰明，只是沒有人類好好引導](技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md) · Harness Engineering · 92 分鐘
+- 2026-06-27 | [Z.AI 與中國開源時刻：GLM 5.2、Anthropic 切斷風暴、企業 AI 採用新座標](技術講座/20260627_CNBC_ZAI_Chinese_OpenSourceMoment.md) · CNBC 主持人 + Gabe Pereyra（Harvey 共同創辦人，前 DeepMind/Meta）+ Aaron Pressman（CNBC 科技記者）+ Stacy Rasgot（Bernstein 半導體分析師）· 52 分 19 秒
 
 ### 🛠️ **編碼工具 / Agent 工程實踐**（14 支）
 
