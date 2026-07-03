@@ -1,0 +1,1522 @@
+So let's get started. Yeah. So first uh
+sorry about all the bug fixes on pet 7.
+So yeah. So um maybe not not a surprise.
+A lot of your homework problems I
+basically make you prove uh various
+lemas and results from you know old
+papers. And uh as it turns out one of
+these papers I drew a lema from wrote
+some stuff that was not quite right. and
+I sort of trusted them and then when I
+looked into it I was like this this is
+there's some mistakes here and I I
+emailed them and uh yeah so it seems
+that there were some small errors in
+their writing but yeah so like factors
+of m missing from places etc in problem
+two okay so I'll have to keep that in
+mind for the future
+um so today
+uh what what are we going to do so let
+me move this out of the
+Um we're going to finish link cut trees.
+Well, I'm just going to give you the
+analysis. Uh in class, I'm going to show
+you log squared n amvertised per
+operation. And uh on the p on pet set 8,
+which is out, there is a problem that
+asks you to improve this to login. Okay.
+Um, also notice on pet 8, I I I skimmed
+the pet 7, uh, you know, how much time
+did you spend on this pet? And the
+number seemed kind of high. So, right
+before I released pet 8, I thought, you
+know, maybe I should tone this down a
+little. And you can do one of problems
+two and three. You don't have to do
+both. Uh, finish link cut
+analysis. So, one, yeah, so getting the
+login is on the pet set. I'm going to
+show you log squared
+n and actually we're using spllay trees.
+If you remember in the auxiliary trees
+that we're using to store preferred
+paths we used uh spllay trees. So to get
+log squared n you don't really need to
+use play trees. Any kind of balanced BST
+is fine. But um when you try to get log
+n it's easiest to do it with spllay
+trees basically by using um the access
+lema we proved in lecture seven. If you
+remember we had a spec specific
+potential function for display trees and
+we showed a certain lema about its uh
+performance right do people remember
+this we defined a weight function on the
+vertices and based on various weight
+functions you can prove different
+properties so if you define the white
+the right weight uh weight function for
+trees and then pop that into the pet uh
+you'll get a login advertise analysis so
+so we'll show this in class login on the
+pet
+set and then uh we'll
+say some things about min cost max
+flow and there's a there's a problem on
+the petet related to this as well um and
+then today is going to be the last day
+when we do flow there only I think three
+lectures left after this so I'll tell
+you about some other
+things okay so if you
+remember
+Um last
+time right the way we implemented access
+we had this sub routine called access
+which was performed on a
+vertex. Basically it it this thing it
+makes the the
+root
+vertex of the
+root tree of ox
+trees. And it did this by repeatedly
+spllaying V and then connecting it to
+its preferred um to its path parent and
+then and then now spplaying again to
+make it the root of that. And I just
+kept explaining it upward, right? If
+people remember this. Um, and then we
+had a couple other
+operations. We had, well, let me just
+write cut and link again. So
+cut it and first did
+access, right? So now what's the picture
+here? Uh, V is in.
+V is here. If you remember when you're
+accessed, you have no preferred child,
+right? Because if you are the last
+vertex touched in your sub tree, you
+then you have no preferred
+child. Um this is V. So it has no right
+children here. It just has some maybe V
+is the
+path is the path parent of maybe some
+people, but in its ox tree, it doesn't
+have any right children. And then it had
+some left children.
+And then we we cut this right.
+So so at the end of a cut operation um v
+is in its own ox tree in a singleton ox
+tree right? So
+uh v.parent is
+none and then v. is
+none. And then let me write the last one
+link. I'm not going to write all the
+other ones. We'll just focus on these
+for the
+analysis. Link V to
+W. So V is the root of its represented
+tree and W is in a different represented
+tree. And now W is a parent is the
+parent of V. We draw an edge from V up
+to W. That's what link does. So the way
+we implemented this was we did
+access v access
+w. Now both of them are are uh the roots
+of their respective ox tree uh tree of
+ox trees. And then now we need to just
+um splice in v as a left child.
+[Music]
+So v.ft
+left equals W and W.AR is
+V.
+Um, remember that the OX trees are keyed
+by
+depth, right? So the fact that W is my
+parent in the represented tree means
+that its depth is one less than
+me. So he's on my left
+subree. Okay.
+Okay,
+so what we said last time is that um the
+runtime of
+access is proportional to
+um maybe something like one plus the
+number of
+preferred
+child changes.
+We call this
+PCC.
+Okay, because we keep spllaying V
+upwards in this tree of ox trees, right?
+And how many times do we have to do
+that?
+um uh number of not the runtime of
+access but the number of
+iterations of uh let's
+says
+performed during
+access is something like
+that. Right?
+Every time we every time we have a
+preferred child change um we have to
+welay V upward. We merge with that with
+that new preferred with that new parent
+in the preferred uh path and then we
+keep splitting upward until V is finally
+at the root ox tree.
+So what we have is
+um the
+runtime of m
+operations is at most
+uh the cost of the plays the the worst
+case cost of
+spllay times M plus uh the total number
+of preferred child changes across all M
+operations. And this is we know this is
+definitely at most login.
+I mean
+uh wait what's your question? Why why is
+there an M there? So I just summed over
+all operations. So this one became an M.
+Yeah. So let's say preferred child
+changes
+um in this
+access in this access call.
+whereas this is the total number of
+preferred child changes across the
+entire sequence of M
+operations. So what you're going to if
+you if you do that pet problem um you'll
+see that this is really the
+uh this is really kind of wasteful to
+say the worstase cost of a display times
+the number of preferred child changes.
+you're gonna see that um kind of the
+total the advertised cost of all
+displays combined is kind of on this
+order.
+Okay. Um good.
+So we just need to
+bound. Okay, we just need to bound the
+number of preferred child changes and
+we'll show
+that it's of m log
+n and that's where we get the m log
+square. Okay. So before I can do
+that I need to introduce one
+more kind of analysis tool.
+Okay. So before we bound
+PCC I want to define
+something. This is called the heavy
+light decomposition.
+So just like we had the preferred path
+decomposition, this is some other way to
+decompose trees. Okay, but we're only
+going to use this. So with the preferred
+path decomposition, we actually use that
+to design our data structure, right?
+Because our ox tree contains preferred
+paths. With the heavy light
+decomposition, we're just going to use
+this as an analysis tool. We're not
+actually going to maintain it in our
+data structure in any way. Okay. Um so
+you know with display trees we are
+getting amvertised bounds. If you want
+to get worstase bounds the ways that do
+that actually do maintain this
+explicitly in the data structure but um
+for us we're not going to we're just
+going to use it for
+analysis. Okay.
+So for a vertex
+V
+define size
+V is the uh size of its
+subree. The number
+of the number of vertices in its subree
+in the represented tree.
+And oh, do I have a scribe for today?
+Oh, okay. Great. Okay.
+Um, good. So, uh, if we have the
+represented tree here and there's some
+vertex that has
+some sub trees hanging off of
+it. Let's call this V. Let's call this
+U. So, U is a child of
+V. Okay.
+We
+say uh the edge
+UV
+is
+light. If the
+size of U is at most 1/2 the size of
+V and we call it heavy.
+If the
+size of U is bigger than a half the size
+of U is at least a half the size
+of
+okay so in our
+case each
+edge in the uh represented
+has one of four
+types, right? It can either be light or
+heavy or it can be and it can also be
+preferred or not
+preferred, right?
+So just to set up some
+language over the course of operations
+um we might create
+new well course of operations we might
+destroy some preferred ch preferred
+children and create some new preferred
+ed destroy some preferred edges and
+create some new preferred edges right
+meaning if we access something if we
+access a vertex V the route to V path
+path is now the preferred path, right?
+Which means that all uh some of the
+edges above which used to be preferred
+are no longer preferred if they were
+hanging off a different subree. So we we
+say that we destroyed those preferred
+edges and we created some new ones.
+Okay.
+So let's say if uh you know
+UV used to be
+preferred, let's call V. V is the
+parent of U. So if UV used to be
+preferred but now
+uh WV
+is then we say
+uh
+UV was
+destroyed and
+WV was created.
+Okay. So the first thing is so we want
+to bound PCC.
+claim is that
+PCC is at
+most I'll define these uh two LPCC + M
++N where this is
+light
+preferred
+edge creations
+Okay, so I want to show you that this is
+true and then we can then we just need
+to bound this. So questions about uh
+anything. Oh, why am I calling it
+preferred child
+creations? Just so it matches the
+acronym.
+Okay, so let's prove this.
+So first of all whenever we create a
+preferred
+child you know make a new preferred edge
+uh that preferred ch that new creation
+of this preferred child is either a
+heavy creation or a light creation right
+so this you know I just want to make
+sure we're all on the same page here so
+here's the
+root the root has some path
+down to W.
+Um, W used to
+have or I I guess I called it
+V. V used to have some preferred child
+U, but then we did an access then we did
+an access on
+W, right? And then
+now this is no longer the preferred
+child and then this is preferred. This
+is the new
+preferred, right? So, we're all on the
+same page
+here. So, I'm saying that this was a
+preferred child destruction or and this
+was a preferred child creation when we
+did an access. So, you know, we did we
+did an
+access somewhere in W subree.
+Right. Okay. So this thing that so uh
+this is a preferred child change. So we
+should count it here. Now it might
+either be this new edge that we just
+created could be either light or heavy.
+Right? That depends on the structure of
+the represented tree on the various
+sizes. Now if it's
+light okay so so
+proof if um if V if WV is
+light
+great because we count it right and it
+definitely gets counted here it is a
+preferred child creation and it gets
+counted here because it's a light
+creation
+now you know what
+If WV is
+heavy.
+Okay, there are two
+cases. In the first case,
+uh case
+one, I'll say W is null.
+It might be the case that V didn't have
+a preferred child
+before,
+right? And then now now that we touched
+now that we access something in W
+subree, now W is the preferred child.
+But how many times can this happen?
+Well, how can it be the case that V has
+no preferred
+child? Either this is the very first
+time we're ever touching V's
+subree, right?
+But that can happen at most end
+times. Right? So
+either this
+is first
+access in V's
+subree that happens at most n times
+across all v across all v across all
+time. This happens at most end
+times
+or the last access in V's
+subree was either to V itself that's why
+it has no prefer child or it had one and
+then we cut it off in a cut
+operation or
+uh
+last access
+uh in V
+subree was to
+V
+or we
+cut the
+previous preferred
+child. I guess actually now I think
+about it the way that cut is implemented
+um then it would also be the last access
+in V
+subree
+right V would be the last access in its
+subree so really it's only this case
+but then whenever we do an access on a
+vertex we could imagine uh after we
+finish doing the access on that vertex
+we hand that vertex a
+dollar Okay. And then the next time that
+vertex V is ever in this situation where
+there's a high where there's a heavy a
+heavy edge
+creation, then we can spend that dollar
+to pay for this. And and the amount of
+dollars we're spending is m one per
+operation, one per access. Does that
+make
+sense? Basically, we charge we charge
+this to the last access on V.
+Look, is there any question?
+So charging the last access to the last
+access. No, I'm charging. So we're doing
+this heavy we're in this case where
+we're creating a heavy preferred edge.
+And what I'm saying
+is if we're creating a a heavy preferred
+edge and
+uh and our parent doesn't already have a
+preferred child because its last access
+was to V itself, then we'll charge this
+heavy edge creation to the that last
+access to
+V. And each and each access will only be
+charged at most once in this way. Right?
+Because next time the next time we see
+V, it will have a preferred child,
+right? Namely uh namely W unless there
+was another
+access in which case that access would
+get
+charged. So So we actually didn't really
+need this because there's an access in
+there.
+So we charge
+to the
+last access on
+B. Okay.
+And case
+two, case two is again going to be
+discharging. U is not
+null. So it actually had a preferred
+child before. So this edge WV is heavy.
+What can you tell me about UV?
+Can a vertex have two heavy
+children? No. Right? Because what does
+it mean to be heavy? The size is
+strictly more than a half. This subree
+has strictly more than a half of the
+children of of of the descendants of B.
+So it can only have at most one heavy
+child. So this
+implies we
+destroyed some preferred light edge.
+uh
+UV children. Yeah, represented tree.
+That's right.
+No,
+it can have many light
+children, right? You can have lots and
+lots of light children, but you can only
+have one heavy
+child or you can have no heavy children.
+That's also
+possible, right? But how many times can
+you destroy a preferred light edge?
+Well, it had to have been created at
+some point for you to destroy it, right?
+So, you can charge it to the time when
+it was created. So, that's why I have a
+factor of two here. Do I have factor of
+two?
+Right? Okay. So, that's that. So now
+that we have that in hand, let's look at
+let's look at the cost of cut uh link
+and access.
+Oh
+um because I want
+to I want to charge to the last access
+right so in this way and okay so I want
+to charge the last access and then Now
+the question is um how many times can
+any particular access be charged in this
+way at most once it'll be charged by the
+next heavy edge creation heavy child
+heavy preferred child creation. So each
+each operation is being charged in this
+way at most once they're m operations.
+So that's an extra additive
+m. Is that is that okay?
+So now let's bound
+um LPCC
+across you know
+access
+link and
+cut.
+So
+access note access doesn't change the
+represented tree at all. Right? Access
+only changes what's preferred and what's
+not
+preferred. So what's light and what's
+heavy doesn't change. Only only
+preferred and not preferred
+changes. So, as we walk back up the
+tree, changing these preferred child
+pointers, we just need to count how many
+of those new preferred child pointers is
+light because we're only counting light
+light preferred child creations.
+Now on
+any
+root on any path on any but any on any
+root to v
+path in uh in the represented
+tree number of light
+edges is at most what? How many light
+edges can you have in a path from the
+root down to some vertex?
+Not log of the log of something. Log of
+what?
+But yeah, so log of something. So what's
+the point, right? So first of all, how
+big can the size of a sub tree be?
+What's the word? You know, what's the
+mean any upper bound?
+No. No, no, just in period. So you have
+this represented tree. You have a vertex
+in the represented tree. It has some
+size parameter, right? The size is is
+the size of its sub tree in the
+represented tree. What's an upper bound
+on that? That's always
+true. N, right? You can't have more than
+n people in your
+subree. And if you're following the
+light edge, the size is decreasing by a
+factor of two. So in any path from the
+root down to anything the number of
+light edges you traverse can never be
+more than log n right. So when you're
+doing an access and you're and you're
+changing you're changing preferred
+children going upward to toward the root
+you're changing it along this preferred
+path. Some of those are heavy creations
+some are light creations but the number
+of light creations is at most log n
+because there are only at most login
+light edges on a path.
+And okay, never let it just log in.
+And what's light versus what's heavy
+doesn't
+change during
+access. That's it.
+So, so you know there so that's giving
+us
+um remember the bound we're trying to
+get on PCC was m login right so we know
+that there are at most m accesses each
+one is having at most login uh light
+preferred child creations so that's our
+that's m login that's
+fine so now let's look at
+link okay
+So, so what does link do? The first
+thing link does is it does uh two
+accesses, right? It so let's say link on
+VW. It does access on V and access on W,
+right? So the LPCC's for the accesses
+are already covered by item one here. So
+we
+first do
+access
+V and access
+W. And then now what do we
+have?
+Um and
+then what do we do? We
+uh let's look at the represented
+tree.
+So W is
+somewhere in the represented tree.
+Let me uh actually write
+this. There's
+W. It has some sub trees hanging
+off. And then we also now hang off V.
+And what's the preferred what's the
+preferred
+um path here? So what are the preferred
+paths? This this path is preferred
+because we didn't access on
+W. And
+um that actually goes all the way down
+to
+V.
+Okay, good. So how many
+And so what I want to
+say
+um now what can we say about so so this
+so we already did the axis on V and
+already did the axis on W right that's
+already taken care of but then after we
+do those two accesses then what do we do
+we add this edge right here
+right okay so what is so what changes
+Now is light versus
+heavy,
+right? So in
+particular, the all the yellow edges
+here
+got
+heavier, right? And all all of the old
+preferred children that used to hang off
+here got
+lighter.
+Okay,
+so maybe because we maybe because they
+got lighter, you know, that counts as a
+you might say, does that count as a
+light edge creation? Well, it's not a
+preferred child.
+Right.
+So other other edges hanging
+off got
+lighter. But who cares because they're
+not
+preferred? They're not preferred.
+But the yellow edges that got heavier,
+that might result in some heavy edge
+creations. But we're not counting heavy
+edge creations anyway, so we don't care
+either. Okay,
+so that could So this bullet could be
+the source of heavy edge creations. We
+don't care. Heavy preferred edge
+creations, but we don't care about heavy
+preferred edge creations. This could
+result in light edge creations, but
+they're not preferred, so we also don't
+care about them.
+So this this final edge that we draw is
+basically free in terms of counting
+LPCC's. We only had to pay for the two
+accesses on VMW before we did that
+linking up before we add added the edge.
+Yeah. So you say all edges got heavier.
+Does that mean they're necessarily?
+No, they might not be heavy.
+Um, oh,
+so this this was already made preferred
+by the access. So the access paid for
+that. Okay. And
+um if it if it's if it's still light
+now, it was definitely light before when
+we did the access. So the access paid
+for
+it, right? Does that answer your
+question?
+Oh, so maybe there's one more, but
+that's an additive one. I don't
+um
+good. Actually, I guess technically the
+way that we implemented link was
+um how did we
+Yeah, actually technically the way that
+we implemented link this wasn't even in
+the preferred path
+either because we did an access on V
+then we didn't access on W. So um V
+might have some preferred child. Oh, so
+now V doesn't even have a preferred
+child because we the last access in V
+sub tree was to V itself.
+So that's actually the picture after a
+link. Does that make
+sense? So that's that. Now we just need
+to handle cut.
+Um, what does this do?
+Remember cuts
+off V
+from its
+parent W in the rep tree represent tree.
+Okay. So what's the picture
+there? So the first thing we did was you
+did an access to V. So let's let's again
+draw this uh let's draw this represented
+tree.
+Um, okay.
+So, that's
+W. V is hanging off. It used to hang off
+here. And V has a sub tree. and then we
+cut that
+off.
+Okay. So, so again after the access
+um we just
+change
+uh right after the access we change
+what's um what's light and heavy right
+by cutting this
+edge. Okay.
+So what changes? So some of the things
+here that hang off here.
+So, edges hanging
+off this this yellow preferred
+path got
+heavier, but they're not
+preferred, so we don't care.
+Even if they were preferred, I guess we
+wouldn't care because we don't care
+about heavy edge
+creations. But the edges in the yellow
+path now got lighter, right? They got
+lighter because we cut this
+out, right? So there might be some
+number of light preferred edge creations
+along this yellow
+path. Okay, are people believing me?
+But there can
+be how many can there
+be login? Because again it's a path.
+It's a root-to-leaf path.
+So in total
+uh the L number of
+LPCC's
+across M operations is
+of M log.
+Okay, so that's that's it for the uh log
+squared nvertized
+bound. Are there any questions about um
+about
+this? Yeah, technically I guess you
+should also there were a bunch of other
+operations. there was find root, find
+min, all those other things. Uh I mean
+there's not much to say for those. You
+can go through and look at it yourself
+if you want, but these are the three I
+think uh ones that require the most work
+and they weren't even that much work. So
+yeah.
+Yeah. So, so this
+implies m
+operations take
+time
+of m log 2
+n plus I guess n login because the
+number of pCCs was multiplying log
+n, right?
+Right. So I mean this is but this this
+is a kind of a sloppy alo it depends on
+how you're using your link cut trees.
+Right. If you're using them in say
+blocking
+flow then the very first step you're
+doing is you're doing n make trees
+anyway. So you know this is the dominant
+uh this is the dominant thing here right
+because in link in uh in blocking flow m
+is the number of edges so it's bigger
+than n so m log squ is going to be
+bigger than n login
+anyway but yeah it turns out as you see
+on the pet this log squar can get
+improved to login same data structure
+just better analysis of the of using
+display
+trees any other questions
+Okay. So that's all I wanted to say
+for for link countries. So um if there
+are no more questions then I'll switch
+to the second topic which is cost max
+flow.
+Yeah, you mentioned that like
+Yeah. So I didn't uh Yeah. Uh I mean
+I'll just mention you can do those
+things using basically by augmenting the
+the binary search tree you're using
+inside of ox trees. Right. So
+um right so uh how should I let me let
+me give
+you so for example. Yeah. So I yeah so
+um so so your question is how do you do
+things like add subtract
+flow? So maybe I'll just I'll say
+something about it and I won't go into
+all the details but
+um the heart of it is basically
+augmented
+BSTs which you'll use inside of your uh
+ox trees. your aux trees will be
+augmented augmented binary search
+trees. So suppose for example
+uh suppose I
+have n
+items which are you know key value
+pairs right and I want to support
+operations like
+operations like say sum sum of k
+uh
+returns
+sum of
+all
+values
+corresponding to keys that are all at
+most
+k
+right and you want going to support also
+insertion of key value pairs, deletion
+of them and these sum operations
+predecessor etc. So you can do this kind
+of thing with BSTs by basically
+augmenting the nodes to contain subree
+sums right um and then as you're walking
+down the tree you can you can use these
+subree sums to get answers for this. So
+using this kind of idea you can also
+implement um those operations in the ox
+trees. So uh the basic idea is it's not
+going to be sum like the thing that
+you're applying the operation you're
+applying is not sum it's like a min
+operation for example. Um so if you want
+to keep track of like min
+capacity so um kind of each node will
+contain the minimum capacity of all
+nodes in its subree and by manipulating
+these augmentations you can you can
+handle all that. So yeah, you can think
+about it as an exercise, but I don't
+want to spend too much time on
+it. Uh, any other questions?
+Yeah, good question because I completely
+skipped it.
+Okay, so min cost max
+flow. So that's it for basic flow, max
+flow, right? So remember we uh we got
+into this whole link country business
+because we were trying to speed up
+blocking flow.
+So how about um another twist on max
+flow which is minost max flow. So
+minost max flow
+uh each
+edge
+has not
+only not only a capacity
+I'll call it u of
+e but
+also a cost c of e which is possibly
+negative possib or
+zero. So it's any real number let's
+say actually I'm going to at some point
+so let's let's just write
+capacities are n
+one up to U, capital U, and
+costs are in minus C up to C. So let's
+just say they're integers from minus
+capital C to capital
+C.
+And the
+goal is to
+find a
+max ST
+flow which
+minimizes the cost. And what's the cost?
+Let's call this flow f, which minimizes
+the cost of
+f, which is the sum over all
+edges of the flow on that edge times the
+cost of the
+edge. So just just so we're
+clear, consider all flows f which are
+max flows. So we definitely want our
+flow to be a max flow and amongst those,
+choose the one whose cost is minimal.
+Okay. And let me just write a little
+note
+here in the residual graph.
+the
+reverse of edge
+e as cost. So remember what the residual
+remember I'll I'll fill this in right
+now but remember what the residual graph
+is supposed to represent to us when
+represent for us when we're doing flow
+computations it's representing to us
+that we can push flow uh we can augment
+flow along certain paths right so for
+example if we had an edge with capacity
+two and um so far in the flow we've
+built up we're pushing one flow along
+that edge then in the residual graph
+it's it's still left with capacity one
+and the reverse edge is also now there
+with capacity one because we can send
+back that flow that's currently on
+it. So when you're dealing with costs
+you have to you know be a little careful
+about costs in the residual graph. So
+what do you think the cost should be
+right? So if you have an edge E that's
+appearing in the original graph and
+there's still some residual capacity
+left on it, it'll still appear in the
+residual graph with that with the same
+capac with the capacity that's left as
+well as whatever the cost was. But the
+reverse edge will also appear, right?
+It'll appear with whatever amount of
+flow we're pushing on it because we can
+send that flow back. But with what cost?
+Yeah, the negative, right? Because if
+you push that flow back then you
+retrieve the cost that you paid. So just
+keep that in mind. It has cost minus
+C.
+Okay. So a related
+problem is a problem called
+minost circulation.
+What is a
+circulation? A circulation is a
+flow f such
+that flow in so let's say inflow of v
+equals
+outflow of v for all v. So there
+basically there's no source in sync.
+Okay, you're just pushing flow around in
+cycles. That's a circulation.
+So what do I want to say about these two
+problems?
+Um,
+so claim
+uh min cost max
+flow and minost circulation.
+efficiently reduce to each
+other. So you only really need to focus
+on
+one. So
+proof suppose you can do suppose you can
+do minost max
+flow. Why does that imply that you can
+do minost circulation? So this is this
+is an easy one.
+Maybe, right? I give you a graph with
+capacities and costs. I tell you, find
+me I tell you, find me a minimum cost
+circulation. If you have an algorithm
+that already solves minost max flow, why
+can you solve minost
+circulation? What would you
+do? So someone gives you a graph
+G and says find me the min cost
+circulation. What do you do?
+Yeah.
+So, okay. So, back to So, okay. So, let
+me let me make sure I'm using the right
+words for things. So, a flow a flow is
+just or let's say how do I say this?
+Yeah, but cost can be negative,
+right? So,
+they're capacities. Yeah. So, even if
+they're negative cost cycles, it doesn't
+mean it doesn't mean that the problem's
+minus infinity or something. There are
+capacities involved,
+right? So, okay. So, if you can solve
+min MCC, how would you solve min if you
+could solve minos max flow? How would
+you solve minimum cost
+circulation like in a how would you call
+a sub this as a subruine to solve
+this? First of all, this needs a source
+and a sync to call it. Right? The
+definition of the problem involves a
+source and a sync S&amp;T. There's no source
+and sync here. Right? So what do you do?
+You could or you could just add a source
+and not connect it to
+anything. And you could you could also
+add a sync and not connect it to
+anything
+either. So the max flow in this graph is
+zero, right? Any any ST flow in this
+graph is a
+circulation. And then you just find uh
+the minost max flow in this graph and
+it's a minost circulation.
+Okay. How about this one? If I could
+solve minost circulation, why does that
+mean I can solve minost max flow?
+Um, right. So, okay. So, yeah, you're
+saying add a add an edge from T to
+S and try to find a minost max flow.
+Uh, and then if you saturate that edge,
+it means you can achieve this flow. So
+I'll up the capacity by one. And if I
+keep if I keep being able to saturate
+it, I can just keep increasing the
+capacity, right? So so yeah, I think
+that's uh um a good answer. Uh so that
+says that if you can solve minost
+circulation, you can solve this by
+calling this subruine many times. the
+number of times we need to call it would
+be proportional to to the actual max
+flow value. But I claim there's a way to
+there's a way to do things where you
+only call it
+once. Yeah.
+Um yeah, I think that actually So yeah,
+maybe that's
+So add
+um Oh, is that actually what I want to
+do? So actually no. So actually I'm now
+I'm not now let me let me take back what
+I just said. So the problem is when
+you're calling this when you're calling
+the MCC algorithm, it doesn't really
+care about putting flow on that edge at
+all. It's just trying to find a
+circulation of minimum cost. So taking
+that taking that circulation which goes
+ST and comes back, right? It might end
+up having some
+uh positive value. So it might it might
+not want to use it at all. It might
+instead want to use some other cycle in
+the graph somewhere else. Right?
+I'm sorry.
+Yeah, I mean it might not want to use
+this edge back from TS. So yeah, there's
+no it has no incentive to create a max
+flow.
+Um now that might be fixable by
+basically making the T to S edge have a
+very negative cost so that it really
+likes to use it no matter what. Um I
+think that I think that can work. So uh
+another thing that you can do is you can
+say look the very first thing I'll do so
+maybe I should have
+written max flow plus MCC implies this.
+So the very first thing you do is look
+just find any max flow. Don't care about
+costs at all. Just find a max
+flow. Okay. And now in your residual
+graph find a minost
+circulation and when you do that add
+that back to the original flow you
+found. So one thing you could do
+is so
+uh add t to s
+edge with very negative
+cost and infinite
+capacity. That's one thing you do. Or
+another thing you could do
+is find
+any max
+flow f in
+g then
+find
+MCC F
+star.
+So notice
+that the difference of any two ST flows
+is a circulation.
+Okay.
+The same S&amp;T.
+Oh, the same flow value. Yeah, sorry.
+That's right. Any two ST flows of the
+same flow value, they're differences of
+circulation.
+So um that means if there's some other
+if there's some other flow far which is
+the actual minost max
+flow
+then far minus f will be a valid
+circulation
+um in the residual
+graph
+and and then you can find it and then
+add it back to this uh back to the left.
+So find so find
+MCC in residual
+graph then add it.
+Okay.
+So, okay. Good. So, now let me let me
+look at
+MCC. So, uh claim
+So we want to be able to now find MCC's
+minost
+circulations and one way to do it
+is you know find uh so let me propose an
+algorithm actually for
+MCC and we have to prove that it's
+correct.
+While there
+exists a negative cost
+cycle in the residual graph.
+augment along that
+cycle. That's the whole
+algorithm. How would you actually
+implement this algorithm? You need to
+figure out if there's a negative cost
+cycle and identify it. How would you do
+this?
+Do people
+remember some algorithm? Belman Ford.
+So you can
+implement negative
+cycle
+finding in
+time of uh
+MN. This is Bellman
+Ford. You can also do it even in O of
+time in O of M root n log C.
+essentially by some scaling algorithm.
+This is due to
+Goldberg in
+uh 95 I
+believe. So all the all the costs are
+between minus capital C and capital
+C. Believe it's a 95. Where did I write
+it?
+This is also uh with many hints. This is
+problem two on the current pet
+set actually. I mean this is what this
+is is a shortest this is a single source
+shortest paths in in in in graphs in
+general graphs where there might be
+negative edge weights. Okay. So Bellman
+for gives you mn Goldberg gives you m
+rootn log c by a scaling algorithm. It's
+a little tricky but I think I gave a lot
+of hints. So and there are many
+parts. Okay
+great. So the only question is okay. So
+this is the
+algorithm. So there's a question of how
+fast or slow is it and
+um what's the
+runtime? Uh that's the same thing. How
+fast or slow is it? And is it correct?
+Okay. Okay. So
+correctness.
+Okay. Say we have
+some circulation some current
+circulation F and optimal
+circulation in terms of cost is
+far.
+Okay.
+So, and let's say
+that
+suppose the cost of FAR is strictly
+better than the cost of
+F.
+Okay. Then what can you tell me about F
+minus FAR?
+Uh f sorry fstar minus f. What can you
+tell about far minus
+f? Oh what are two what are a couple
+things you can tell about far minus f?
+Yeah it's negative cost. So if we
+augment by
+it then we'll we'll decrease our cost
+right. And what else what else can you
+tell me about it? Well I'll just tell
+you it's a circulation. If you take two
+circulations and subtract them or add
+them, you get back a circulation, right?
+So is a
+negative
+cost
+circulation and it's feasible in our
+residual
+graph.
+Okay, great. So if we're not at the
+optimal thing, it means our residual
+graph has a negative cost. It has a
+negative cost
+circulation. Well, we're not just
+looking for negative cost circulations.
+We're looking for negative cost
+cycles, right? But I claim that any
+circulation
+decomposes into
+um kind of a m cycles basically
+basically just like you can decompose
+flows into paths.
+Right? You can decompose circulations
+into cycles. How? Start at any edge that
+has some positive flow on it and then
+follow it around in a
+cycle. Uh and then when you get back to
+the end of the cycle, record what the
+minimum capacity was on that cycle and
+then extract that cycle out with that
+minimum capacity. Now, what are you left
+with? You're left with again what you're
+left with is a circulation with one less
+edge because definitely at least one
+edge got saturated, right? So you can
+just keep doing this over and over again
+pulling out cycles. You're decreasing
+the number of edges by one each time. So
+you can decompose any
+circulation into a collection of m
+cycles. And if the circulation in total
+is negative, it means one of those
+cycles is
+negative, right? So if you search for a
+negative cost cycle, so there will be a
+negative cost cycle and you can augment
+by
+it. In fact, I mean they had better all
+be negative, right? Otherwise, there's
+no point in including it in your
+circulation.
+Circulation
+decomposes into M
+cycles. So, one of them is negative.
+We'll find it. Great.
+So what's our actually let me just write
+it right here. What's our
+runtime? So we need in each iteration we
+need to run say Bellman
+Ford or we could run the other one. How
+many iterations can there be?
+I mean give me any any valid bound
+MC uh let me think is that right?
+So yeah because you're saying
+uh we decrease the cost by at least
+one. So I think I think you need to add
+something else there. not just MC but MU
+maybe right so every time we do this
+augmentation we decrease the cost by at
+least
+one you know how how how low could the
+cost possibly be well there are m edges
+that each have capacity at most U and
+the cost is at least negative C so the
+number of times we can decrease the cost
+is at most mu so I think O of MN times
+MU so this is a pseudo polinomial time
+algorithm
+kind of like the Ford Fulkerson of Most
+circulation. So let's try to do
+better. Before I do
+better, I want to define something.
+So
+definition a price
+function
+really P which maps the vertices into
+the real numbers.
+uh induces a
+uh
+reduced
+cost
+function C. So let's say we have an edge
+UV.
+Okay. Its reduced
+cost is the old cost, the original cost
+of the edge plus the price of V minus
+the price of
+U. Okay.
+Um, what did I want to tell
+you? Oh, actually plus
+P minus P.
+So the way to think about this
+is let's say that we are buying gold at
+vertex
+U. Okay. So we have to pay to buy it.
+That costs whatever the price of gold is
+at vertex U. We have to pay to ship it
+to V. And then when we sell it at V, we
+we make money which is means negative
+cost. So that's how you should think of
+this
+and claim
+uh f is an
+optimal min cause circulation if and
+only if there exists a price
+function P in the residual graph let's
+call it the residual graph is G
+subf such that all reduced
+costs are non-
+negative. So
+proof so let's do one direction.
+Suppose there exists
+uh such a such a price function such
+that all the reduced costs are non-
+negative. I have a question for you.
+What's the cost of a
+cycle using the original cost function
+versus using the reduced cost
+function? It's the same because these
+PUS and PVs cancel along the cycle. So
+costs of cycles don't change when you
+use reduced costs. And we know from
+before that we're optimal when there are
+no more negative
+cycles, right, in the residual graph.
+So if there is such a P well every
+reduced cost is non- negative which
+means that the reduced cost of every
+cycle is non- negative which means that
+the cost of every cycle is non-
+negative. How about the other direction?
+Suppose GF has no negative
+cycles. So I'll just tell you what you
+would do here.
+Introduce a new
+vertex
+S with zero cost
+edges to everyone.
+Now
+define the price of U as just being the
+shortest path distance under the costs
+from S to
+U. This is the shortest shortest path
+length from
+SU. That's well defined because there
+are no negative
+cycles. You can show just by basically
+triangle inequality that this thing is a
+valid price function. I mean not valid
+but this thing as a price function will
+satisfy that all of these things are are
+non- negative that's that's the triangle
+inequality okay so I'll let you think
+about that
+offline triangle inequality implies CP
+is at least zero
+everywhere so you can work that
+Okay. So now
+um
+good. So now let's uh let's look at
+faster minost max flow.
+So a simple
+case let's say there are no negative
+cycles negative cost
+cycles and all
+capacities all edge
+capacities are one. So this u is
+what actually let me make it even
+simpler and let me just say there are no
+negative edges at all.
+Okay, here's an here's going to be an
+algorithm.
+Find the shortest ST path according to
+costs using costs as your edge lengths
+in the residual graph and augment along
+that
+path. Okay.
+So the claim is that this thing is
+correct.
+So first of all the
+runtime at most n
+iterations and you can use dystra in
+each iteration because edges are going
+to be non- negative. Well they're
+definitely non- negative in the
+beginning and we're going to see that
+even in future iterations they're going
+to remain non- negative even in the
+residual graph. Remember that we negate
+costs in the residual graph right? So
+it's not clear a priority that they
+remain non- negative in the residual
+graph but we're going to see that that
+is
+true of m login per
+iteration this is
+dystra so that implies that the total
+time is o of mn plus n^2 log
+n dyro with Fibonacci
+heaps
+So, so the
+claim is that there would never be
+um negative cost
+edges in the residual
+graph. What's the proof?
+Right? So remember this is a unit
+capacity
+graph. Right?
+So let's set prices.
+as PV is the shortest path distance from
+S to V in the residual
+graph. I should say negative negative
+cycles.
+Okay. Okay.
+Good. So
+So
+any
+edge we augment
+along is in a shortest
+path, right? We only augment along
+shortest
+paths.
+And in if an edge is part of a shortest
+path, if the edge UV is part of a
+shortest path, right? That means that
+the weight of the edge
+UV plus the distance to U is equal to
+the distance to
+V, right? That's the property of
+shortest paths, right? Let me let me
+basically move this over here. the the
+distance to V. If if if UV is part of
+the shortest path to V, then the
+distance to V is equal to the distance
+to U plus the the cost of the edge UV,
+which means that the reduced cost is
+zero. Right? So any edge we augment
+along is in the shortest path, which
+implies that its reduced cost is
+zero. And when we augment along it, that
+means that it's saturated because it's a
+unit capacity graph. and the reverse
+edge will be put in the residual graph
+with with negative
+cost but negative of zero is
+zero. Okay. So the edges that we
+introduce
+um the new edges that we introduce into
+the residual graph will never be
+negative. Right? So in fact um we'll
+never we'll never even have negative
+reduced
+cost. Negative reduced
+costs. That's what I really should say.
+We'll never have a negative reduced cost
+of residual graph. Implies
+that when we
+add any mu
+edge to the residual
+graph, it's the
+reverse of a saturated
+edge, which implies that its reduced
+cost was zero.
+So any edges we add in the residual
+graph will never be
+um will never be negative. And I think
+I'm I'm out of time. So um there's not
+much more to say, but I'll I'll I think
+I'll just augment a couple paragraphs at
+the end of this in the notes. Okay? And
+uh you can look you can look at the
+notes for the remaining part of the
+argument. But uh questions about
+anything I said up till this point. And
+then one of the pet problems is going to
+be using scaling to basically
+uh let you use not just unit capacities
+but arbitrary capacities.
+I'm sorry.
+Oh, you're saying what if the graph
+originally does have negative cycles. So
+if the graph originally does have
+negative cycles, basically what you
+do is um first you find any max flow.
+Okay. And then now you just need to find
+a minost circulation. Right? So that
+graph now you need to find a minost
+circulation. It might have some it might
+have some negative cycles in it. In
+fact, it better have negative cycles
+otherwise there's no point in finding
+min circulation. So what you're going to
+do is just look at any negative edge.
+Forget about cycles. Just look at any
+negative edge and just fully saturate
+that edge with
+flow. That's not going to be a valid
+circulation. So now you need to turn
+this into a valid circulation. But by
+fully saturating certain edges, what
+you've done is some flows have extra
+flow coming in and some flows have extra
+flow coming out. And you need to fix
+that. You need to basically send the
+flow back to where it came from. So what
+you'll do is you'll you'll create a new
+source in sync. Connect it to connect
+the source to everyone who needs to push
+flow out of them. And then everyone who
+needs to push everyone else you push you
+connect them to T.
+And you you set up the capacities in
+such a way that the capacity is equal to
+exactly how much flow I need to push out
+of me. And now you try to find a minost
+max flow in that graph. But that graph
+has all positive costs or non- negative
+costs. And then you can use basically
+this. So I know that went kind of fast,
+but you end up
+um no you'll end up
+with in unit capacity graphs you won't
+have you won't have this terrible muc
+kind of runtime.
+um you'll have something that's actually
+strongly
+polinomial but you can speed it up using
+scaling u but then you have like a log u
+dependence so the scaling by by u you'll
+see in the note you'll see in on the pet
+and I'll I'll complete this uh in in the
+notes I think we're we're very out of
+time so

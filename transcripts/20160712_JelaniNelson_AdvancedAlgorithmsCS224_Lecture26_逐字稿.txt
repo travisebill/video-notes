@@ -1,0 +1,1440 @@
+no takes
+okay so I think I'll just is this on
+okay I'm gonna get
+started so
+today well the last
+day uh we're just
+gonna finish uh
+streaming and
+I'll I'll just call today
+um the power of random
+signs so we're going to
+see uh L2 Norm
+estimation we're going to see um
+fast
+regression Point
+query uh dimensionality
+reduction so it might seem like uh many
+things um some of the things I well
+actually all these topics I covered uh
+in depth I Do cover in depth uh in
+algorithms for Big Data CS 229r so I'm
+not going to provide all proofs here but
+I wanted to give you a taste of uh some
+of this
+stuff
+okay so remember last
+time last
+time we had a vector X which was an RN
+and is
+huge right and we wanted to compute
+functions of X while X is updated in a
+stream without actually remembering the
+entire Vector X so
+receive
+updates XI goes to XI plus
+v in a string
+and we must
+answer
+queries to F
+ofx
+okay so last time I said that V was
+always
+one uh and it starts off I should say x
+starts as a zero
+Vector so last time I said V is always
+one uh let's say the query you want to
+answer is the support size of X that was
+the distinct elements problem I showed
+you that there's some non-trivial
+algorithm if you assume some idealized
+hash
+function okay so
+um good so what's a different uh but
+there are other functions that you might
+want to compute other types of queries
+so uh another f
+is f ofx equals say the L2 Norm Square
+Ro of X or just say the L2 Norm L2 Norm
+if you can compute this up to some 1
+plus Epsilon error you can compute uh
+the L2 Norm up to some one plus ep 1
+plus uh roughly Epsilon error just by
+taking the square root at the end
+okay um and the algori I'm going to show
+you is due to alone Ma
+okay
+so just like with uh support
+size you can't get little o of n
+space
+unless you settle for both randomization
+and approximation so you're not going to
+Output the true answer you're going to
+Output the answer up to 1 plus Epsilon
+let's say up to 1% error and it's going
+to be a randomized algorithm that fails
+with probability 1% or something unless
+you allow for
+both
+randomization and approximation
+okay
+and the AMS algorithm introduces an idea
+that gets used all over the place in in
+streaming
+algorithms um and it's particularly
+important when V can be not only
+positive but also
+negative okay
+so you know if you think about the
+algorithm we saw last time where V was
+always one in other words V was always
+positive um you couldn't support
+deletions in the stream right so I the
+number of distinct elements is support
+size if I later wanted to delete an
+element that I saw well I'm only storing
+the minimum hash value I ever saw so if
+the item corresponding to that minimum
+hash value gets deleted then you know my
+minimum hash value I'm storing is
+irrelevant now and I don't know the
+second minimum because I didn't store
+that so what can my algorithm do okay so
+linear sketching what I'm going to show
+you allows you to design streaming
+algorithms that that support deletions
+so linear
+sketching okay so lets
+you support
+deletions and in
+fact
+um if you have to support
+deletions uh it's known that essentially
+any algorithm can be converted into a
+linear sketch with at most a a small
+blow up in space complexity like a log n
+blow up in
+space for any for any query f
+the minor space BL if you want to see
+the details of
+that uh that's due to um
+Leu and Woodruff
+okay so let's go back
+to back to the problem I I stated so
+back to uh F ofx being the elorm
+squared so okay so what is a linear
+sketch I didn't actually uh oh you can
+you want you can I'll maybe I'll tell
+you now what the idea is so the idea is
+you
+pick some
+Matrix let's call it pi
+which is M
+byn and you
+store y equals pix in
+memory okay
+so
+initially let's say Y is zero right
+because Pi is z is zero and if Pi looks
+like this so Pi is some fat short Matrix
+let's say the columns are Pi
+1 up to Pi n and let's say this m
+dimensional uh has M rows if I see an
+update where I add V to XI what does
+that imply I have to do for my streaming
+algorithm that implies that y uh should
+be incremented as follows y should
+become uh
+y
++ V * pi
+I
+right so I can support arbitrary updates
+in the Stream just by updating my linear
+sketch like
+this and this holds whether or not
+whether I have deletions or
+insertions so what's the linear sketch
+going to be for
+RF we'll pick Pi J to be plus minus one
+over uh root
+n
+uniform so let's say it has independent
+entries and each one is a random sign
+over root
+n and and now we have to
+estimate we have to estimate FX based on
+the Y we have in memory right so we'll
+estimate the elorm
+squared as um just the elorm squ of what
+and let me just I want to call this
+random sign Sigma J from now on just
+when I get into the
+analysis okay so why does this
+work so the way that many algorithms get
+analyzed in streaming including this one
+is to first you know basically bound the
+expect B the Vari and then use chubby as
+equality so let me show you
+that so the
+expectation of y lorm
+squ That's equal to so here's my
+analysis um well actually let me before
+I say that
+what do I want to say I want to say look
+the
+probability
+that y lorm s minus x lorm s what's the
+probability that this thing deviates by
+more than Epsilon times what it should
+be I want to say this is small I want to
+say that it's at most a third or
+something or 100th one you know my my
+probability of failure is um 1% and by
+the way what is say this is the same
+thing as saying
+that y L2 Norm squ right is 1 plus orus
+Epsilon
+X which is what I want I want to get the
+answer up to this one plus Epsilon
+error okay is it clear what I mean by
+this notation I mean that it's at most
+one plus Epsilon times this and it's at
+least one minus Epsilon times
+this well this thing
+okay this thing is at most the
+expectation
+of yl2 Norm s minus the expectation of
+minus
+X L2 Norm s
+squar over Epsilon 2 * L2 Norm to
+4th this is chbby sh's
+inequality right
+yeah which is just marov after you
+square
+things so we just need to understand
+this expression up top
+so first of all I want to say that this
+ltor of X2 is just the expectation of
+that right
+so so the
+expectation of yl2 Norm
+squar so that's the uh sum over I let's
+say R from 1 to m
+expectation of y i squ y r
+squ that's just linearity of
+expectation so I want to understand what
+is this quantity
+here for any fixed
+R they're all the same for all
+R so what is yr yr is just uh one
+over root M oh did I yeah
+right what is my definition of Pi i j
+it's this
+right so y r is 1 root
+n sum I from 1 to
+n of Sigma r i x
+i which
+implies that y r
+2 is 1 over
+M sum
+over I from 1 to n
+Sigma r i 2 x i
+2 plus some of I not equal to
+J Sigma r i Sigma RJ X
+ixj so this implies that and this thing
+here is just one
+so this implies that the expectation of
+y r s is 1 m al of
+x^2 plus sum I not equal to
+J expectation Sigma r i Sigma
+RJ X ixj but if these things are
+independent this is equal to expectation
+of Sigma
+RI expectation of Sigma RJ
+which is just
+zero right so this thing goes
+away okay so this implies
+that expectation of y r squ is 1 M * l x
+which implies that expectation of
+y^2 which we said was 1 over M which was
+uh sorry sum over r
+expectation y r 2 is just L of
+X2 okay so we know that this thing
+here is just equal to now the
+variance of this random
+variable over Epsilon stimes
+X2 4 right we just showed that that
+thing is the
+expectation so that is the definition of
+variance and if this
+Matrix if the entries of Pi really are
+independent then that means that the
+entries of Y are independent right so
+now let's let's let me say what I want
+to say so the variance of this thing
+is the variance of the sum over R from 1
+to M of y r
+2 but if you have random variables that
+are independent of each
+other then
+um the Varian is just
+add so this is equal
+to uh
+sum R from 1 to
+M of the variance of y r 2
+so let's bound this
+thing so
+the variance of yr squ by definition is
+what it's the
+expectation
+of uh yr to 4th minus the expectation of
+yr
+squared
+squared and we just said this thing is X
+L2 Norm to the 4th
+how about this thing uh sorry and
+there's a one over uh m s here I
+guess right yeah so I just squared this
+thing so how about
+this well that we can expand out so
+um what's yr to the
+4th we wrote what yr is so that's that's
+1 m^ 2 times a
+sum uh I = 1 to n Sigma RI
+XI to the 4th
+okay so we want the expectation of this
+thing so you could imagine expanding
+this thing out to the fourth and having
+lots and lot having lots of monomials
+roughly end of the fourth
+monomials or exactly end of the fourth
+monomials and then you can use linear of
+expectation to push this expectation
+inside okay
+so some of the terms so what are you
+going to have you can have some terms
+which are like Sigma RI for sem I to the
+fourth
+power okay or you can have two different
+indices I and J and you can have Sigma r
+i squ and sigma RJ s you can have Sigma
+r i cubed and sigma RJ to the first
+Power basically these Powers have to add
+up to four right so let me let me let me
+just write this explicitly so this
+is 1 M
+squar and then expectation
+of su over I Sigma r i to 4th x i 4th
+plus Su over I not equal to
+J Sigma r i 2 Sigma RJ 2 x i^ 2
+xj2 plus some I not equal to J
+Sigma r i cubed Sigma RJ x i cubed
+XJ Etc right you can also have three
+different indices two of them get raised
+to the first Power one get squared you
+get lots of different things going
+on okay now when you push this
+expectation inside let's look at for
+example this monomial here I should be
+clear there are more things here that I
+didn't
+write well first of all all um these two
+things are independent of each other so
+the expectation of their product is the
+product of their expectations and the
+expectation of assign to an odd power is
+zero so whenever you have any odd Powers
+the terms just disappear so this is
+similar to I think way back I had you
+Prov the turnoff bound um using well by
+explicitly uh uh writing down all the
+monomials right so it was the same thing
+there that things with odd has
+disappeared so the same thing happens
+here and basically the only things
+you're left with are terms like this and
+terms like this everything else doesn't
+matter okay so this thing I claim is
+just um 1 m^ 2 times you have this
+term Su over
+i x i 4th plus you have the other term
+Su I not equal to J X i^ 2 xj^
+2 okay
+so
+conveniently uh is
+that right so this thing
+here is at most Su over ixi 2 squared
+which is equal to X2 to 4th
+so when you subtract out this thing
+right you're subtracting this out the
+overall thing is
+negative um I should be should I be a
+little bit more
+careful right oh yes yes good there's a
+constant here which I completely uh
+didn't write okay good I was like this
+is a little too good um yeah I think
+it's because I wrote I not equal to J I
+think it's three but whatever there's
+some constant
+here it's not so
+uh but okay so now overall this implies
+what what we have that the
+variance of y r
+squared oh and actually if I I can even
+be a little more uh I can optimize
+things a little bit more Let me let me
+not let me not do this let me just uh
+keep it like
+this and let me say this is equal
+to 1
+m^2 this this is a constant Factor
+doesn't really
+matter X2
+4th or at most uh no
+equal plus 2 Su I not equal to J X i^ 2
+xj^ 2
+right when you take one of these and add
+this in you get exactly this and then
+you have this
+here okay great and then now
+conveniently this thing cancels
+that so the variance of y r squ is at
+most
+um 2
+* uh the sum over I x i^ 2^
+s which is and there's a there's a
+there's division there's a division by m
+s which is 2 over
+m^2
+times X2
+so expectation oh so
+right so I said that the expectation
+basically kills all the terms with odd
+powers and then terms with even
+Powers um any a random sign squar is
+just one so the randomness
+disappears so we just showed is that
+well the variance is the sum of all of
+those so the variance is at most 2 over
+M * X2
+four I'm sorry
+uh but I summed it m
+times
+yeah okay and we said that the
+probability that we failed that was what
+I just erased here the probability that
+we failed was at most this quantity
+which was this so this is at
+most 2 over
+M time X2 4th this is the
+variance times 1 over Epsilon 2 * X2
+4 right
+so this thing is
+gone so um if we want this to be less
+than say a
+third we'll
+set uh M to be something
+like 6 over Epsilon s so that this is
+less than a third
+okay
+sorry there's an M squ
+where but it's the variance of this of
+this of this right which is
+that
+yeah
+okay okay great
+so the
+conclusion oh you're scribing right is
+it uh
+if we use like one over Epsilon squ
+words of
+space our
+estimate is 1 plus or minus Epsilon time
+L2 squ with probability at least
+2/3 one thing you can do to amplify this
+is just repeat the same basically let
+me you know to
+get um with probability at least one
+minus Delta what you can do
+is a common
+trick
+basically your linear sketch will be the
+concatenation of many independent copies
+of this linear sketch so you'll have Pi
+up here which has you know one over
+Epsilon the 6 over Epsilon squ
+rows and then you'll have another Pi
+Prime down
+here which has 6 over Epsilon squ
+rows okay
+and you'll have you know a k being
+something like
+log one over Delta
+independent
+copies of
+Pi so implies you will uh
+obtain K
+independent trials let's call them y1 up
+to
+YK and the
+algorithm will
+estimate y
+k or we'll
+estimate X lorm squ as the
+median of of all these
+things
+okay why does that work well the point
+is
+each one we know works with probability
+2/3 and for the median to fail strictly
+more than half of them have to
+fail right but you know we know that
+basically the expected number that work
+for us that give us a good estimate is K
+*
+2/3 and we fail with this procedure if
+the number that work is less than K
+over2 so there has to be a significant
+deviation from the expectation in terms
+of the number number of trials that
+worked and by a turnoff bound the
+probability that we get that kind of
+deviation decays exponentially in
+K and exponentially in K means like one
+over exponential in K is is Delta
+basically
+so expected number of
+Trials
+succeeding is is at least 2/3 of
+them we
+fail if less than K over2
+succeed probability that less than K
+over2
+succeed is exponentially small
+K this is turnoff bound
+okay okay
+great
+now so great so we know
+that implies
+space let's say 1 Epsilon 2 log 1 Delta
+for Success
+probability 1us
+Delta and it turns out that this is
+optimal so I mean there was quite a long
+line of work showing that this was
+optimal I mean
+initially
+um people could get the one over Upsilon
+squared but they couldn't get the
+product
+um well even before that people get one
+over Epsilon but not one over Epsilon
+squared uh there's quite a chain of
+papers I'll just site the most recent
+which which finally gets this which is
+due to
+jramm
+Woodruff um this is
+transactions and
+algorithms well that's the journal
+version anyway
+okay
+great so there are many things that I
+wanted to show you that was L2 Norm
+estimation one thing I wanted to say is
+so I guess here you already basically
+see it from the proof
+but you know you don't you're trying to
+get a low memory algorithm and this
+Matrix pi the number of columns of
+Pi is n right so if you actually were to
+store this Pi um you use more space than
+storing X by
+itself right which you don't want to do
+so what do you do well you look at the
+proof and you say look when I
+calculated I needed to calculate the
+variance and I need to calculate the
+expectation when I did those things here
+I need sorry I need to C the expectation
+of this thing and then and then the
+expectation of this whole thing okay if
+you expand this thing
+out you get at most kind of degree four
+pols in these random
+signs right and we only need to be able
+to say that the products of those four
+things behaved
+independently right those four things
+were independent so we just need four
+wise independent random signs and we saw
+earlier in the course that you can
+generate four- wise independent random
+signs using kind of log n Bits a hash
+function specified by Only log n Bits a
+four wise independent family okay so
+this entire Matrix Pi really well each
+one of the these things stacked only
+needs four yse
+Independence there are log one over
+Delta of them so the total space is log
+one over Delta Times log
+n okay so this whole Matrix this entire
+thing here is specified using very
+little
+space so login bits is like a word so
+each hash function for each one of these
+only needs a a sing like constant number
+of words of space and there are log one
+over Delta hash functions because you're
+repeating this log one over Delta times
+so log one Delta
+words okay so you um that's really I'm
+not hiding anything that's really the
+entire analysis of
+this
+okay
+um actually maybe
+I'll before I move to the next board let
+me just say one
+thing
+space is the space is this but how about
+the update
+time right I said that streaming
+algorithms are basically small space
+data structures in data structures we
+care about space update time and quer
+update time and uh query time right and
+dynamic data
+structures so what's the ignoring the
+time to evaluate the hash functions
+which which is constant anyway with the
+right uh hash function functions what is
+the update time in this
+algorithm if you see you update in the
+Stream how much time does it take to
+update your
+sketch I guess the hint really should be
+right when you see an update this is
+what you have to do you have you have to
+add this into your
+sketch order M right which
+is which is
+this so the update time
+is also 1on s log 1
+Delta and the reason for that is that
+when you're adding in some multiple of
+you know a column of this Matrix this is
+a completely dense Matrix right every
+single entry in this Matrix is some
+random
+sign so you have to touch every entry in
+y to perform an update
+so one way of one way of
+uh improving that is to make this make
+this thing
+sparse right and in fact you can do that
+so Thor up and
+Jong
+um let me not say the journal version
+because I might get the year wrong but
+the conference version of soda
+04 they just look at
+Pi being as
+follows this is again Theta 1 over
+Epsilon
+squ you have n
+columns and what's your Matrix in each
+column you pick a random location and
+you put a random sign there and the rest
+of that column is z
+ER and each column looks like this your
+other column you have a random location
+you put a random sign there everything
+else is
+zero the rest of their algorithm is the
+same you maintain Pi you maintain y
+equals
+pix and your estimate of the elorm
+square of X is just the elorm square of
+Y
+okay and you basically can show the same
+exact thing you can show that the
+expectation I'm not going to do it on
+the
+board the expectation of y^ 2 is still x
+s and the
+variance of y^2 you can
+show is
+still um o of 1 over M * X2
+4th that's a computation
+not very different from the computation
+you saw which implies that you can use
+this sketch
+instead
+okay no yeah yeah so this is just
+strictly
+better and you can do the same thing
+where you repeat this log one over Delta
+times take the median so this has update
+time
+what's the update time for this if you
+want success probability one minus
+Delta huh yeah log whatever
+Delta
+okay good so you get rid of this one
+squared in the update
+time and um It's actually an open
+problem that I myself am quite
+interested in as to whether or not you
+can do better than this okay is there an
+algorithm that achieves success probably
+1us Delta for L2 Norm estimation which
+gets the right space and gets update
+time which is say constant why not or
+you know root log whatever else
+something so we can show something we
+can show that if you use a linear sketch
+the update time has to be roughly root
+log one over
+Delta okay
+but
+um there's still room there's a gap
+there between log one over Delta and log
+one over
+Delta okay so
+that's that's L2 Norm estimation
+okay questions about
+it okay so you might ask you know
+motivations of this thing where does it
+get used so for
+example um I can tell you where Thor and
+Jang were using this thing so both of
+them were at AT&amp;T research which you
+know AT&amp;T has lots of routers and again
+their their Vector x n is the number of
+you know destination IP addresses and XI
+they didn't even care about deletions XI
+is just um uh how many packets did that
+place did that destination receive over
+some time
+window and you know the thing about the
+elorm squared is that it
+measures um kind of spikes right like if
+I mean the thing that measures spikes
+the most is the infinity Norm right in
+terms of is there an entry ey such that
+XI is very large right you really want
+the infinity norm and that will tell you
+what's the largest XI it turns out that
+unfortunately there is no efficient
+space efficient streaming algorithm for
+the L Infinity Norm but the largest
+value of P for which there is a space
+efficient algorithm for the lp Norm is p
+being
+two okay I'm not I'm not going to
+justify that but it's known there people
+have proven
+that so they were looking at that to
+basically estimate skewness in the
+distribution of packets going to various
+places um as part of a system for
+detecting denial of service attacks and
+they really cared about a faster
+algorithm because this this thing was
+sitting on the router right and network
+speeds are really fast they can't afford
+to spend you know let's say you want 1%
+1% error on your estimate so one over
+Epsilon squar is 100 squared which is
+10,000 so basically they just got rid of
+a factor of 10,000 in their running time
+okay which was very important for them
+okay so
+good so that's L2 Norm estimation it
+gets used in other places as well I mean
+one thing I can mention is um you saw on
+one of your pets jackard similarity
+where you wanted to estimate the
+similarity of two sets and used the the
+Min of of a hash function to do it
+another way of estimating similarity of
+of say
+documents um I think in the piece that I
+mentioned the history with like web
+pages estimating some similarity of web
+pages right another thing you can do to
+estimate similarity of web
+pages is cosine
+similarity so for
+example XI is number
+occurrences of word I
+in document
+X and you normalize the document you you
+wait so it's
+normalized and what do I mean normalized
+I mean once you once you define this
+Vector X you normalize it so that it has
+unit
+Norm so then now you have a bunch of
+documents right
+so so X lies on a circle you have one
+document
+X you have some document y you have
+another document Z Etc how do you
+estimate the similarity of two documents
+using coine similarity well it basically
+comes down to the angle between the two
+documents if the angle is small you say
+the documents are
+similar and how can you use this kind of
+streaming
+algorithm to estimate coine similarity
+well forget about streaming just think
+of it as a method of compressing the
+document instead of storing the document
+X you'll store the compression pix okay
+this compression is often called a
+sketch of the of
+X and you really
+want you really want XY which is say
+cosine of
+theta so you want to know some
+information about right cosine of theta
+um is large if if Theta is small right
+it's one if Theta is
+zero you really want to know this dot
+product and what you'll do is you'll
+estimate as pix do
+piy okay where Pi is exactly the same Pi
+okay and you know you can do an
+expectation variance analysis to
+basically say that this works it'll give
+you an additive s Epsilon with
+probability 1 minus Delta to the true do
+product by redoing this or you can just
+say
+look you can say
+pix minus Pi of xus y^
+2ar oh actually let me just write it
+like
+this a minus b^ 2 is a 2 + b
+2 minus 2
+A.B
+right that's just an identity
+which implies that a
+b is equal
+to
+a2+ b^
+2 minus a minus b^
+2 over
+2 right and what do we know about Pi we
+know Pi preserves lorm squares of
+vectors right so imagine imagine that a
+is now pix and B is pi y
+we want to understand what does pix do
+piy look
+like well it's pix lorm squ which is
+roughly X lorm
+squ plus pi Y lorm squ which is roughly
+y lorm squ plus pi of this Vector some
+other Vector but you know Pi preserves
+Norms of vector so it's roughly what it
+should be up to this Epsilon error right
+so the fact that you preserve L2 Norms
+of vectors means you preserve dot
+products which means you roughly
+Preserve cosin of angles so you can use
+you can use the same exact setup to do
+cosine similarity
+right does that make
+sense okay so let me show you
+some more power of random
+signs another
+example so let's say
+statistics let such as linear
+regression right so the idea here
+is we there's some
+parameter
+Vector X in
+Rd
+and given
+variables A1 up to
+um our system is linear
+and you know we should have that b is
+sum of I = 1 to D of a ixi
+so there's some other variable in our
+system
+B and it behaves as a linear
+function of other variables
+AI okay and the coefficients of that
+linear function are these XIs and we're
+imagining we don't know the XIs so we're
+doing experiments
+and based on our experiments we know a
+lot of AIS we know the resulting B we
+can observe all these variables but
+there are some hidden variables XI that
+we don't know and we want to solve for
+them and the way this is done is you
+write you write a matrix a which
+is really I should think as tall and
+skinny A1
+A2
+n so it's an N byd Matrix
+and you
+want to
+find X such that so let me let me call
+this uh you know B uh
+B1 such that ax is B where
+b b is also this nend dimensional vector
+now usually when you do linear
+regression statistics just to show of
+hands how many people have heard of
+linear
+regression okay so usually you assume
+that you don't actually observe the true
+variable But You observe the variable
+plus noise so we
+observe B which
+is uh a sum of I plus 1 D
+aixi plus
+noise noise in our experiment or there's
+some noise that's generated as as we do
+this so we want to find X such that ax
+is approximately B
+okay so to be
+specific want to
+compute xar oh you had a homework on
+this as well right so you want to
+compute xstar which is the
+argman of ax minus B so yeah I guess
+everyone should have heard of Le s
+regression unless you Dro that P set
+so
+okay um good
+and um as we I guess almost saw in the
+pet uh you can write that xar is equal
+to a uh transpose a pseudo inverse a
+transpose B so in the piece that I think
+I said that a has full column rank in
+which case the pseudo inverse is the
+inverse um I don't want to get into you
+know this is the pseudo inverse
+basically it's some generalization that
+Al also lets you uh handle the case when
+it's not full rank you can go look it up
+if you want it's not going to be
+important for what I
+say the thing that is important is how
+long does it take to compute a transpose
+a n squar right oh n squ uh not n squ so
+a is n by
+d n * d s actually right because so if
+you look at a transpose
+a a transpose a is a d byn
+Matrix times an N byd
+Matrix right so you have to keep doing
+these dot products like
+this okay
+um right every time you want to compute
+an entry so the resulting Matrix should
+be D byd
+right so for each one of these entries
+you have to take one of the rows here
+and a column here and take a DOT product
+so that's n time and they're D squ
+entries so this
+implies uh n * D2
+time and that turns out to be the
+bottleneck the pseudo inverse takes
+polyd time like roughly DCB time um so
+the bottleneck really is doing a
+transpose a
+I mean another way of
+solving as you saw in the
+pet
+um another way of solving this thing is
+using gradient descent you start off
+with a decent solution and then you keep
+refining it using gradient descent
+okay but let me stick to this for a
+second so can we speed this ND squ up
+using using uh this thorb Jong or using
+the AMS sketch this random sign sketch
+yes we can so let me make a definition
+so Saros
+um he says
+that Pi is
+an Epsilon Subspace
+embedding for a for
+a uh
+Subspace v a linear
+Subspace if for all vectors V in capital
+V we have that Pi v lorm
+s is 1 plus or minus Epsilon l
+s
+okay okay so it's sort of like you know
+what we were talking about preserving L2
+Norm squares of vectors but there are
+like infinitely many vectors here
+okay so claim
+if
+Pi
+is an Epsilon Subspace
+embedding for which Subspace the
+span of b as well as The Columns of
+a
+then if you look at
+uh X Tilda star which is the
+argman
+of Pi ax minus pi
+b it
+satisfies that ax tlda star minus
+B is at most 1 plus Epsilon over 1 minus
+Epsilon axar minus
+B right so a xarus b is the best you can
+possibly
+do and what I'm saying is if instead you
+use this as a substitute for the true
+optimal optimal Vector for regression uh
+you'll do almost as
+well what's what's the benefit of this
+what's the algorithmic benefit of
+this so I should say here hopefully
+is much less than n right so this is an
+M byn
+Matrix so what's the
+benefit so I mean yeah you do reduce
+space but you also reduce time right the
+bottleneck here was Computing a
+transpose a which we said was
+nd2 but now we don't have to compute a
+transpose a basically a is now Pi a so
+Pi a transpose Pi a takes M D2 time so
+if m is much less than n we just
+replaced an N with an m in the running
+time and it turns out we're going to see
+uh you can get M to depend only on D it
+doesn't have to depend on N at all so
+you got you got a running time at the
+end of the day which uh this n becomes
+some something function of
+D so let's just prove this
+so first of all XA star is the optimizer
+for this regression problem which means
+that Pi a x the star minus pi b I'm
+going to drop L2 Norms they're all L2
+Norms is at most Pi a xar minus pi b
+right because I said X star is the
+optimal vector for this regression
+problem and what is this this is just Pi
+* ax till the star minus
+B this Vector lives in that Subspace
+it's spanned by B in The Columns of a so
+it's
+preserved same thing here this thing
+lives in the Subspace so it's
+preserved that's it now you just move
+this over
+here okay questions about that
+yeah yeah so okay good so I slightly
+cheated I said everything is great
+because now this n is an M but I ignored
+that you have to actually spend time
+Computing pi times a right but as we're
+going to see you can choose pi to be
+like the Thor Jong sketch and then Pi is
+like super sparse so Pi a is uh really
+fast so now how do you get the pies good
+so you were asking
+about how do you multiply Pi *
+a so
+benefit bottleneck
+for
+computing XA
+star is uh Pi a transpose Pi
+a and this takes
+time okay but as you said what about the
+time to
+compute Pi a
+well to answer that I have to say what
+is
+pi okay yeah every is everyone still
+with
+us so let's think about what it means to
+a Subspace embedding Let's
+uh so what does it
+mean to be a Subspace
+embedding so let me say that so V is a
+linear Subspace let's say the dimension
+of
+V is d
+so every Subspace has a
+basis and we can take an orthonormal
+basis right so let's say that
+U is an N byd Matrix The Columns of
+U form an orthonormal
+basis for
+V which implies that for example U
+transpose U is the identity
+what are the what's the I entry of UT
+transpose U it's the I column of you
+dotted with the J column so that's only
+since it's an orthal basis that's one
+when I equals J and it's zero
+otherwise um
+okay so the definition of being a
+Subspace embedding is that for all V and
+V Pi
+V lorm squ is 1 plus or minus
+Epsilon um V elorm
+squ but what is what is
+v v is just the set of all vectors U ux
+where X is an
+RD right it's linear combinations of
+vectors in my orthal basis so this
+thing
+um this thing is the same as
+saying for all X and
+RD Pi u
+x is 1 plus or minus Epsilon
+ux but what is ux what is ux lorm squ
+this is X transpose U transpose
+ux and U transpose U as the identity so
+this is the same thing as 1 plus or
+minus Epsilon L2 Norm squ of
+X so what we're saying is that all the
+singular values of piu are between 1
+minus Epsilon and 1 plus Epsilon
+or the squared singular
+values so that this this is the same
+thing as
+saying all igen
+values of piu transpose
+piu are one plus or minus
+Epsilon which is the same thing as
+saying that the largest thing the
+largest I value in magnitude of Pi U
+transpose pi
+minus the identity Matrix is less than
+Epsilon
+okay
+questions this is the operator Norm
+which means take the largest value in
+absolute value take the absolute value
+of the largest
+value right and if you think about
+it pretend that pretend that U was not a
+matrix but it was actually a vector
+pretend D was
+one okay if D is one what is this thing
+here this is just the squared Norm of
+piu
+okay meanwhile what is this this is
+let's say let's say you has unit Norm
+this is UT transpose this is the square
+Norm of U so this is a square Norm of Pi
+U this is the square Norm of
+U and if U is a vector then these are
+just scalars and operator Norm is the
+same thing as absolute
+value so this is like a generalization
+of what we just saw preserving vectors
+instead of preserving vectors you're
+preserving orthonormal matrices under
+operator Norm so you could think about
+basically doing the same exact proof
+right do chubby shvs inequality the
+probability that Pi U over pi
+of ppose Pi minus the identity bigger
+than
+Epsilon is at most um the
+expectation of piu transpose piu minus
+identity squared over Epsilon
+squared what is this
+thing this is the largest igen value
+squared the largest IG value squared is
+definitely at most the sum of each IG
+value squared
+because when you square it everything's
+non- negative so this is at most the
+expectation of the
+trace of piu transpose piu minus the
+identity
+squared epon squ right the trace is the
+sum of the igen
+values the operator roomm is the biggest
+igen value when you square a symmetric
+Matrix the I values just get
+squared so this is the sum of the
+squared I values this is the largest I
+value squared so this is definitely
+bigger than
+this okay so this is like the Matrix
+analog of what we saw
+before and I'm not going to do the
+computation but what you can show is
+that this
+thing is 1/ Epsilon
+stimes o of d^2 over
+M so as long as you choose M to be d^2
+Epson
+squared you're
+done if you use say the Thorp zong
+sketch this
+Matrix this Matrix where you have one
+nonzero per
+column okay and you know this thing is
+due to so Clarks and Woodruff had some
+they had a more complicated way of doing
+it that got a slightly worse
+bound but they were the first to do
+it and then basically this sequence of
+inequalities I just showed you
+is from Mahoney and
+mang in the same conference as well as
+um myself and
+H
+right so now if you use the Thor up Jong
+sketch how long does it take to compute
+Pi
+a so pi
+has one non zero per
+column and zero is everywhere else and
+then you have a
+here
+so so you can prove that this thing is
+basically the support size of
+a and the reason
+right
+question
+okay um
+good yeah so let me just say so what's
+the reason basically think about a
+column by
+column and for every nonzero entry of
+a a non-zero entry of a means you add
+the corresponding column of Pi to your
+sketch but that column only has a single
+non-zero entry so you can do that in
+constant time so for each nonzero and a
+you're spending only constant time to
+add into Pi
+a maybe you can think about that offline
+but
+okay so there's that so showed you this
+and
+this how about Point query and
+dimensionality reduction maybe I'll
+actually switch the order of
+those so now I just want to show you
+basically applications of this Pi okay
+that's what I'm showing you uh over and
+over again in different
+areas so now I'm doing this
+one um the idea here is there's this
+johnin and stuss
+LMA it says that for All Points
+X1 um I'll say for all sets X and
+RN let's say that the size of X is
+capital n
+there exists a
+matrix Pi what do you
+know where m m is O of 1on squ log the
+size of
+X such
+that
+um for all XY and capital
+x pi x - Pi
+Y is 1 plus orus Epsilon x -
+Y and as I formulated where you want to
+use a linear
+sketch uh it's known that this is
+optimal
+so
+um uh M being
+Omega what let's say the
+Min of N and 1 Epsilon 2 log
+n is
+necessary in the sense that there exists
+a set of vectors capital x that really
+needs this number this target
+Dimension why did I have to put a Min of
+little n
+there just still around the same page
+yeah I mean I could always take pi to be
+the identity Matrix okay so you're not
+goingon to prove that you need you're
+never going to prove that you need more
+than little n Dimensions but we can show
+that you always need the Min of n in
+this which is basically the right thing
+because it says that you should use this
+until the identity Matrix is better
+so how do you prove this
+thing design a
+distribution such that let's let's call
+this
+D over
+matrices just like we designed
+distributions over
+pies such that for all X and RN of unit
+Norm
+the probability over Pi drawn from this
+distribution D that
+pix actually let me call it Z because I
+don't want to conflict with that X over
+there probably that Pi
+Z minus
+one is bigger than Epsilon is at most
+Delta suppose you could design such a
+distribution
+okay if you could design such a
+distribution you would set Delta to be
+one over basically n choose
+two where capital N is that capital
+N set Z to be some xus y over the norm
+of xus Y
+where X and Y are in this capital
+x right so what you're telling me is
+this random Matrix
+Pi preserves this Vector with high
+probability right so by a union bound it
+preserves all of these for all choices
+of x y and capital x with with good
+probability um so you're done
+okay so what do you think Pi should
+be random sign Matrix okay so
+um choose
+D to be
+uniform over random sign matrixes minus
+one over root M 1/ root
+m m by n Matrix
+where m is going to be 1 Epsilon s log 1
+Delta so this log whenever Delta is wow
+you get a log capital N still have some
+time okay
+and um I'm not going to show you the
+proof you know why why does this work if
+you choose M to be like this but I'll
+just say it in words so just now when we
+looked at the streaming application what
+did we do we did chubby shvs inequality
+right maybe I'll just write a little
+bit and the idea is just like in your
+homework where you analyze the the
+turnoff bound using moments instead of
+chubby shub's inequality which means the
+second moment you take a really big
+moment and if you take a big enough
+moment you can get the F you can get the
+error probability to be
+Delta so if you go back through your P
+set for the turnoff bound you'll find
+that
+if you wanted the right hand side of
+your final tail bound to be Delta and
+the turnoff bound the moment you ended
+up choosing was like log one over
+Delta okay so go back to your solution
+and look at look at why that's
+true and it's the same thing here you
+end up basically just analyzing exactly
+what I showed you at the beginning of
+lecture but instead of taking a second
+moment which is Chubby chub's inequality
+you take the log one over deltath moment
+okay and you could do a computation
+that's a little hairier than what you
+did in that pet problem there also like
+much simpler ways of doing it uh but in
+principle you know how to do it
+okay okay so that's dimensionality
+reduction in the very last
+minute that's Point query
+that's another streaming problem so
+again XI gets updated as XI plus v this
+is
+streaming and then we have a
+query fi now there are many query
+functions fi of X should be
+XI so people can query what is the I
+entry of x
+and again we'll settle for approximation
+we won't yeah we'll settle for
+approximation so we're allowed to Output
+x i plus orus Epsilon times the norm of
+of
+X so we're going to use a sketch Matrix
+pi as
+usual suppose we had a pi
+again M
+byn such
+that if you look at Pi
+being Pi 1 up to Pi n we have that first
+of all Pi I has unit norm and for all I
+not equal to J Pi I dotted with pi
+J is at most Epsilon
+so our sketch as usual sketch of
+X is pix let's call that Y and we
+estimate
+XI as Pi y Pi transpose y i coordinate
+which is pi transpose pix I coordinate
+now notice that let's call
+this XI Tilda and notice that XI Tilda
+is just if you go with this thing here
+this
+is x i plus the sum of J not equal to I
+of
+XJ Pi i. Pi
+J right and General pix is just the sum
+over J of Pi
+jxj right whenever you do a matrix times
+a vector that's just a linear
+combination of The Columns of that
+Matrix so this is this is what that is
+but these things are all plusus
+Epsilon so this is x i plus orus Epsilon
+time the L1 Norm
+Val so the only question is how do you
+get such a matrix
+how to get such a
+pi apply the JL LMA Johnson Len Strauss
+to X being zero and then the N standard
+basis vectors which implies that the
+number of rows you need is one over
+Epsilon s log in
+oh and uh I should say where's this
+from right and the point is look as we
+saw preserving L2 Norms means roughly
+preserving dot products right because I
+I had this identity the norm square of a
+minus B is the norm square of a plus the
+norm square of B Etc
+so if you if you preserve distances
+between these vectors it means you're
+preserving dot products between them but
+the dot products between all these
+vectors is zero so you're preserving it
+up to Epsilon that means the new DOT
+products are at most
+Epsilon that's
+that and you're preserving the distances
+of these vectors to zero which just
+means their Norms their Norms were
+originally one now their Norms are going
+to be roughly one they're going to be
+one plus Epsilon or something but you
+can normalize them to make actually won
+and that won't really change this by
+much so that's
+it okay
+so uh there are many more ways to use
+random side matrices but uh that's all I
+can fit into the time okay so yeah
+thanks and please have some
+[Applause]
+bu for

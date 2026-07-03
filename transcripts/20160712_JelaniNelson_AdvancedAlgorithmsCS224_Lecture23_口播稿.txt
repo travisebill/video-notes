@@ -1,0 +1,19 @@
+這是 Harvard CS224 高階演算法第二十三講，主題是 Link-Cut Trees 的平攤分析與最小成本最大流演算法。
+
+Section 1｜課程行政與 Pset 7 勘誤
+教授先為 Pset 7 第二題的錯誤致歉，因為他引用的一篇舊論文裡漏寫了 m 的因子，這次修正在 Pset 8 補上。Pset 8 的問題一是繼續 Link-Cut Trees 的分析，要從對數平方 n 改進到對數 n；問題二則是用 scaling 技巧處理任意容量的最小成本循環；問題三是 min-cost max-flow 相關。課程剩下三講，今天結束 flow，之後會介紹 streaming。
+
+Section 2｜Link-Cut Trees 的 access 與 PCC
+教授複習 access 操作：對頂點 v 反覆做 splay，把 v 推到 root 的 auxiliary tree 頂端，並更新 preferred path。access 的執行次數正比於一加偏好子改變的次數 PCC。對 m 個操作而言，總成本是 m 乘上 splay 最壞情況加上 m 次操作內的 PCC 總和，這個總和已知是對數 n。但用 splay 的最壞情況成本乘上 PCC 是鬆的，真正緊的分析要把 splay 的平攤成本算進去。
+
+Section 3｜Heavy-light 分解與 PCC 界定
+為分析 PCC，教授引入 heavy-light 分解：對頂點 v 定義 size 為子樹大小，當邊 uv 的子樹大小超過父節點一半時為 heavy，否則為 light。這個分解純粹作為分析工具，不在資料結構中維護。每個邊可以是 light 或 heavy、preferred 或 not preferred。當 access 觸碰一條邊時，可能會銷毀某些 preferred 邊並建立新的。PCC 的關鍵性質是 light 邊上的 preferred 改變是常數次，因此總 PCC 是 m 對數 n。
+
+Section 4｜Min-cost max-flow 問題定義
+教授轉到 flow 議題：給定有容量與成本的圖，找從源點 s 到匯點 t 流量最大的最低成本流。殘餘圖中正向邊保留剩餘容量與原始成本，反向邊帶負成本，允許撤回流量。相關問題是最小成本循環 MCC：流入等於流出且無源匯的循環流。教授證明兩者可以互相歸約，把 MCC 加上不連接的 s 與 t 就變成 max flow 等於零的特例，反之亦然。
+
+Section 5｜殘餘圖的負成本循環
+MCC 的直覺演算法是反覆尋找殘餘圖中的負成本循環並沿其擴充，直到沒有為止。如何找負成本循環？可用 Bellman-Ford 達成 m n 時間，或 Goldberg 1995 的 scaling 演算法達成 m 根號 n 對數 C 時間。正確性：若當前循環 f 不是最優 f 最佳，那麼 f 最佳減 f 就是殘餘圖中的負成本循環，因為兩個循環相減仍是循環，所以可以分解為 m 個循環且其中之一為負。每次擴充至少減少成本一單位，總迭代次數為 m C。
+
+Section 6｜Successive Shortest Paths 與結論
+教授最後簡介另一條思路：每次在殘餘圖中找最短成本路徑並擴充，最後會得到最短成本路徑的 reduced cost 為零，這意味著引入的反向邊成本非負，因此永遠不會有負 reduced cost，從而避免負循環。對單位容量圖這個演算法是強多項式時間；對一般容量則需加 scaling 得到對數 u 的相依性。這堂課把 Link-Cut Trees 的平攤分析收尾，並把 flow 演算法從純 max flow 推進到有成本的版本。
