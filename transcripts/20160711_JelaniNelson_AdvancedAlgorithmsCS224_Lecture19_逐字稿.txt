@@ -1,0 +1,1597 @@
+> 來源：YouTube 英文自動字幕（en auto-caption）
+> 影片網址：https://youtu.be/R9mT5CtdHLg
+> Lecture 19
+
+Okay.
+Um let me I think it's on. Okay. So, um
+Yes, we we finished
+a lot of stuff on linear programming.
+So, I covered simplex, ellipsoid,
+interior point.
+Um
+now I want to kind of transition into
+other stuff.
+So, it turns out the thing I'm going to
+cover today can also be applied for
+linear programming and I'll show you
+that, but it's more than just a tool to
+solve linear programs.
+And then once we're done with this,
+you're just not really going to see
+solving linear programs anymore, okay?
+Okay, good. So, today what you're going
+to see is uh kind of multiplicative
+weights.
+So, I'm doing today.
+I'm just curious have have have has
+anyone seen multiplicative weights
+before?
+Okay.
+Two.
+Okay, so or rather I should say um
+you know, how to know
+how to choose
+you know, which expert advice
+to listen to.
+Right? So, for example, you like to
+trade stocks. There are lots of so, you
+know, self-proclaimed experts who tell
+you
+uh
+what to buy so that you make money
+and you're not sure which one you listen
+to.
+So, you want to um
+you know, you want some strategy for
+deciding which one to listen to, okay?
+And what I'm going to say is going to
+remind you of competitive analysis.
+Well, actually first let's just look at
+competitive analysis. So,
+So, let's let's first before we get into
+multiplicative weights, let me just go
+into this listening to expert advice. So
+the setup
+Okay, is that
+there are T days
+and N experts.
+Okay.
+Each day
+each expert
+will say
+yes
+or no.
+Okay, so for example, will it rain
+today? Will this stock go up in value
+today? Okay, they're each going to tell
+you what they think.
+And then you have to decide
+what you think the reality is and then
+make a decision.
+Okay, so
+So we have to
+you know, we have access
+to all these expert opinions.
+Okay. And we have to make a decision.
+And then you know, what what we want we
+want that at the end of the T days the
+number of mistakes we've made is small.
+Okay.
+So,
+you know, we want to be able to
+you know, of course we want some
+provable guarantee on how small the
+number of mistakes is.
+But, you know, this is kind of a you
+know, if you don't define your uh
+measure of success appropriately, this
+is a hopeless problem, right? Because
+it might just be the case that none of
+the experts know anything. They're just
+saying random junk. And then, you're
+going to say something, and then reality
+can hit you and say, "Oh, actually, it's
+uh the opposite of what you said,
+right?" I mean, no one knows the future,
+so what are you going to do here?
+So, you know, what's the what's the kind
+of I guess I made a spilled the beans
+already. You know, in such situations,
+you know, what do you usually want to
+measure success as?
+Or you know, what's something that we've
+covered before
+that seems like a good way to maybe
+measure success.
+Yeah, sure. Competi- like so,
+competitive analysis, right? So, one
+thought.
+You know, be competitive
+with the best
+expert
+in hindsight.
+Right? So, at the end of the T days,
+you're going to look back, and you're
+going to look at each expert and see how
+many mistakes that expert made. And you
+want to make sure that
+you're not much worse than the best of
+them.
+Okay.
+So,
+what's one uh natural Oh, yeah.
+Yeah, so yeah, you So, you you have, you
+know, infinite memory. You can remember
+everything every expert has ever told
+you.
+And at the end of the day, you see what
+actually happened. You see whether or
+not it rained, for example.
+Okay, so
+I mean, what's the what's the simplest
+thing you can imagine doing in this
+model?
+Yeah.
+Be be even simpler.
+I mean, let's not even look at
+histories.
+So, I
+pull all the experts.
+Yeah, just vote. Like, take a majority
+vote, right? So, you know, simple one
+simple algorithm.
+Yeah, we are going to
+you know, over the lecture we are going
+to see how to
+get more complicated
+in terms of taking the history into
+account, but
+um yeah, first let me just start off
+with something really simple.
+It's a simple algorithm.
+Just take a majority vote.
+Okay, and then claim
+if there exists an expert I
+Wait, if there let me say if there
+exists an expert
+that never makes a mistake
+All right, let me actually let me uh
+I want to I want to make one
+modification to the simple algorithm.
+So, we're going to take a majority vote.
+I I I'm going to take history into
+account in a very minor way.
+I take the majority vote, and if anyone
+is wrong, you know, at the end of the
+day if I realize someone was wrong that
+day, I just kill them.
+Okay, or I stop listening to them. I
+take majority vote.
+At the end of the day
+you know, kill
+all uh
+wrong experts.
+Okay, so the claim
+is that if
+there exists a perfect expert
+then we make
+at most how many mistakes?
+Sorry?
+Yeah, wait, I heard something.
+I heard log log in though is what I
+thought I heard. That's why I was
+Okay, so it's log in.
+We make at most log in.
+mistakes
+Or maybe I heard C log in. Okay,
+that's
+Okay, right? So the proof
+Well,
+uh
+Yeah, so the point is every time we make
+a mistake
+most of the people were wrong.
+So we kill half the people.
+Okay, so right so uh
+Every day we're Every day we make a
+mistake
+you know, we kill half the people.
+At least half
+of the population
+of the experts.
+So uh
+that
+Right and
+We always have one person alive, namely
+the uh the perfect expert.
+So the number of killings we can do
+is uh at most
+uh log
+wrong days.
+Okay, but let's assume there's a perfect
+expert, right? So, normally in
+competitive analysis, I just want to say
+I'm competitive with the best expert,
+the one who had the fewest mistakes.
+Right? So,
+unfortunately, this algorithm
+you can't just you can't just analyze
+this algorithm in that model because
+it could just happen that on day one
+everybody was wrong.
+And then you killed everybody. Now, who
+do you listen to from then on, right?
+So, what what's a modification of this
+algorithm
+if you want to be competitive against
+the best expert?
+Kill the worst half.
+I mean, let's say day one everybody's
+wrong. What do you do day one?
+And then maybe the best expert is right
+from day two onward, right? But now you
+don't know cuz you killed him.
+I mean, he's he's not really dead,
+right? He's
+We're just ignoring him. So, he's not
+really Yeah, you can you can go back to
+him, but yeah, so what do you do?
+Hm?
+Kill at least half randomly. Yeah, I'd
+have to think about
+uh I don't know off the top of my head
+what that would do.
+But, um
+let me let me let me suggest lead you
+toward a different algorithm. So, what's
+the problem with this algorithm? It's
+what I just said, right? It's that
+everybody could be dead.
+So, what do you So, one thing you could
+do is
+if everybody if you're ever in a
+situation where everybody is dead, you
+just revive everyone.
+Okay.
+So,
+so, you know, do as before,
+I don't know, yeah. Sorry, I just
+thought I don't know if you people watch
+Naruto, this Edo Tensei.
+No, okay, never mind. So,
+uh do as before, uh but
+if everyone
+is dead
+uh then revive everyone.
+I mean the claim
+if the best expert
+makes uh
+e errors
+then we make
+at most um
+e plus one
+and
+I think log
+base two of n errors.
+Okay.
+Do you all believe this?
+And why why do you believe that?
+Yeah.
+And we kill the
+best expert e times that every time he
+makes an error in the worst case
+all the other experts we make log n
+Uh wait so wait so we kill the so the
+best guy we kill him at most e times we
+said. Okay.
+Yeah
+and he happens to be revived every time
+he makes an error.
+Right.
+him off.
+Right.
+we make at most that many mistakes
+before we kill everybody else. If the
+experts are wrong.
+Right. Yeah exactly right. So
+Right so the number of phases like
+revival phases is is e plus one
+including the first phase when we just
+start
+um
+right and uh then basically within that
+within that phase uh we make at most uh
+we can make at most log n errors before
+we kill everybody. Okay, so
+um
+phase ends
+when we kill
+the best expert.
+That's not really legible. When we kill
+the best expert
+and at most log base
+two of n
+errors per phase.
+Okay, good.
+Okay, so
+that's, you know, it's something, but
+it's like a logarithmic uh competitive
+ratio, right?
+So, well, I mean, there's also this
+additive one, but if you ignore the
+additive one, it's roughly a log n
+competitive ratio.
+So
+um
+I know, I want to do something better.
+The question is, how can we do something
+better? And the way we're going to allow
+The way we're going to do something
+better is we're going to allow for some
+some additive uh additive error in the
+competitive ratio as well.
+Okay. So
+Okay.
+So,
+I'm going to find some notation. Let
+uh
+MT
+equal number of our mistakes
+uh by
+the
+beginning
+of uh
+day T.
+And
+MI little MIT
+is the number of expert eyes
+mistakes by the beginning of day T.
+So, I'm going to show you
+we can get
+there is a strategy, there is an
+algorithm which allows us to get
+uh MT
+to be at most something like two times
+one plus epsilon
+uh
+the min over I
+from one to N, basically the best
+expert.
+Is this legible?
+One less than equal to I less than equal
+to T of MI.
+This is let's say T plus one.
+Uh
+let's say by the end of day T.
+Plus
+two log n
+over epsilon
+for any
+epsilon in the range from zero to a
+half.
+Okay.
+So on the one hand, we can make we can
+Right before we basically had So this is
+like E.
+Before we had roughly log n times E. Now
+we have roughly two times E, but then
+there's some additive error depending on
+how close we want to be to two as well
+as depending on this log n. Anyway, we
+already had an additive log n, so that's
+not
+so bad, right?
+Okay.
+Any questions?
+Okay, so
+You know, what's a natural thing to try?
+I I know at a very high level, right? So
+what What's What's the The thing we did
+here is pretty extreme, right? Which is
+once you're wrong ever,
+um you're just dead.
+Right?
+Okay.
+So
+Okay, good.
+So um
+Yeah, what's what's something you can do
+that's a little less extreme than just
+killing people when they're when they
+make a single mistake?
+Yeah, trust them according to their past
+performance, right? So here we said that
+we're taking a majority vote.
+Right? Majority vote usually means
+everybody has an equal vote.
+So we could
+weigh people's votes according to how
+much we trust them.
+Right? And if someone's been making
+mistakes a lot, we should trust them
+less. But, we'll still count them, just
+not as much.
+Okay?
+So, the idea
+is
+you know, never
+kill
+an expert just, you know, just for being
+wrong.
+You know, just uh
+trust
+them less.
+All right, so
+we're going to have a weight vector W
+which starts off as the all ones vector
+of dimension n. So, okay, so this is
+like the
+the weight in the majority.
+And um
+we will
+take a majority vote
+a weighted majority vote.
+Where expert I
+is weighted by WI.
+Okay?
+Okay, great. So, we can still be wrong.
+Now, what are we going to do when we're
+wrong?
+So, there's some there's some uh experts
+here who
+we trust less now because they made a
+mistake.
+And we're going to decrease their
+weights.
+At the end of the day
+for each
+wrong expert
+I
+we're going to set WI
+to be 1 minus epsilon
+times WI.
+Okay.
+Um I mean sort of we sort of implicitly
+are.
+Just because
+uh you I mean you could say
+you could say I'll decrease him by 1
+minus epsilon and increase the others by
+1 plus epsilon. But really that's the
+same thing as saying uh
+I'm increasing the other guys by the
+ratio 1 plus epsilon over 1 minus
+epsilon and I'm not changing them,
+right? So
+um
+Yeah, there's without loss of generality
+you can assume that you'll either
+increase the
+the correct people and leave the others
+the same or decrease the incorrect
+people and leave the others the same.
+Yeah.
+Okay.
+So
+So this is the algorithm that I claim is
+going to get this bound.
+Okay.
+Good.
+So let's prove it.
+So actually what I want to do is I want
+to I want to lay I want to let me
+introduce some new notation. So let's
+say WT
+is the weight vector
+at time T
+or on day T, at the beginning of day T.
+And I'm going to define a potential
+function
+phi of T
+is going to be the sum over all I from 1
+to N, the sum over all experts of their
+weights.
+So in particular on day 1 potential is
+N.
+Okay.
+Now
+you know, what can we say
+about
+um
+phi t
+phi t plus one versus phi t
+on days
+when we make a mistake?
+But, yeah.
+Decreases by n by 2. Wait, say it
+Oh, sorry. So, let me write down I just
+want to write down an equal quality. So,
+you're saying phi t plus one
+and what's the inequality?
+Actually, I want to I want to upper
+bound it.
+Or uh yeah, I want to upper bound it.
+So, what's Is there an upper bound you
+had in mind?
+You said
+So, I mean, I want to say So, for us
+I guess what I want to say is uh so, the
+weighted majority is wrong.
+Which means at least half of this weight
+has to be on the wrong uh thing, right?
+So, what I want to say is if you look at
+that if you look at that half of the
+weight
+that half of the weight decreased,
+right?
+By 1 minus epsilon.
+And the other half of the weight, I
+don't know. I mean, they could have been
+wrong, too. But, I'm saying at at least
+half was wrong.
+And the other half, it definitely didn't
+go up It definitely didn't uh
+uh
+go up.
+So, I can just say that that's just
+Let's say it stayed the same.
+as an upper bound.
+Right?
+Which is equal to
+um
+1 minus epsilon over 2
+times fee of t.
+Okay.
+So, now you could do an induction.
+And you can bound
+um
+You can bound
+fee of t plus Okay, so first of all,
+what I want to say
+This implies
+by induction
+that fee of t plus 1
+is at most the original fee
+um
+times
+1 minus epsilon
+over 2
+times the number of mistakes
+that we make by time capital T.
+Right?
+Which is equal to
+This is just N.
+Okay, and for what I'm going to do next,
+I also want to use the fact that
+1 - X is at most E to the
+uh - X.
+1 + X is at most E to the X. So, X is
+the my negative epsilon over 2. So, this
+is at most N
+times
+E to the minus epsilon M
+MT
+over 2.
+Okay.
+Are we good?
+So, this potential function is just
+going to serve as uh
+something that lets us get a bound,
+right? So, we've now upper bounded the
+potential.
+Now, I want to lower bound the
+potential.
+And I'm going to use kind of the weakest
+lower bound you can
+imagine. So,
+say I is some expert. In particular,
+maybe I is the best expert.
+What can you tell me about uh phi t + 1
+compared to
+um
+and compared to the weight of the best
+expert?
+Compared to the weight of the ith
+expert.
+We have phi t + 1.
+I want to say is at least
+something.
+Okay. Well, it's the sum of all the
+weights.
+And all these weights are non-negative.
+Um so, it's at least
+W I of T.
+But, what is W I of T?
+Yeah, it's 1 minus epsilon to the number
+of mistakes
+of the I'th expert by time T.
+So
+actually
+do I even want to do that
+exponential?
+Maybe not. But so now I want to I want
+to do one thing. I want to say this
+implies all together that
+this therefore is at most that upper
+bound.
+So this implies that 1 minus epsilon
+to the M I of T
+is at most
+and actually let me let me just stick
+with this one.
+Um
+N times 1 minus epsilon over 2
+times M T.
+Okay.
+And now I'm going to take lawn of both
+sides.
+Then I get M I of T
+times the lawn of 1 minus epsilon
+is at most
+M of T
+a lawn of 1 minus epsilon over 2
+plus lawn N.
+Okay.
+Now let's just remember
+a very small amount of calculus.
+Okay. So calculus tells us that
+if if you write some if you tailor
+expand some function, right? So, f of x
+around say say a, so f of a plus
+uh
+f prime of a
+times x
+plus and let's say you do it up to the
+linear term and you want to understand
+what the error is.
+The error is
+uh the second derivative at some point z
+over two
+times x squared
+for some
+z
+in uh the range from a to x.
+Or you know, x to a depending on which
+one's bigger.
+Yeah, thanks. Whoops.
+Okay.
+So,
+this tells us this implies
+that
+uh lawn
+of 1 minus epsilon
+right? Or lawn of say 1 minus x
+is equal to
+uh
+minus x
+uh plus an error term
+which is the largest derivative
+uh so you take the function lawn of
+1 minus z
+uh
+Okay, so
+times x squared. So, here I'm Taylor
+expanding about zero.
+And f of f of x is this lawn of 1 minus
+x.
+Uh
+actually, f of x is lawn of 1 plus x
+and then this is f prime of
+um
+some Z
+for Z in the in the range from uh let's
+say zero to a half.
+Okay.
+So
+um
+you can show that if you just bound the
+largest derivative of this function ln
+of 1 - X in this range then you can show
+that this thing well certainly
+you can show that this thing is
+certainly going to be um
+non-positive.
+Okay?
+And it's going to be at least
+uh what's the worst case? So
+I'm sorry.
+Yeah, I think I think you can say that
+you know
+you can show
+for X in the range from zero to a half
+ln of 1 - X
+is certainly at most minus X and it's at
+least um yeah, minus X minus X squared
+or something like that.
+Yeah.
+Basically just for this Taylor Taylor's
+theorem reason.
+Okay, so
+so now you go back to here
+and you say well this M of T
+ln of 1 minus epsilon over 2
+plus ln N
+well ln of 1 minus epsilon over 2 is at
+most
+um
+negative epsilon over 2.
+Yeah, I guess I could have just taken
+the log over there. But then for the
+other side, then you need to use this
+fact. Um
+And then on the other on the other hand,
+you have this is at least
+what we said m i of t
+log of 1 - epsilon
+which we said was at least
+m i of t well, negative epsilon
+minus epsilon squared over two.
+Uh m i of t
+Okay. And then now
+you multiply by the negative sign, you
+rearrange things, and you get the
+theorem.
+Okay.
+So
+So that's the that's it.
+Okay.
+So other questions about
+the algorithm or anything about its
+analysis?
+All right.
+Good.
+So now I want to go even further.
+I want to make some generalizations.
+Some
+let's say generalizations to the model.
+Okay.
+So,
+first of all,
+let's say uh
+at each step
+we want
+not let's say
+not to um
+not to not make a mistake, not to be
+correct,
+but
+to minimize
+the uh let's say the probability
+that we're incorrect.
+Okay.
+So, what I mean by that, I mean in every
+day, we're not going to we're not going
+to choose an expert to listen to.
+We're going to come up with a
+probability distribution over experts.
+i.e.
+uh on each day
+we output
+um probability distribution.
+PT
+over the experts.
+Okay.
+So, we want
+sum from T going from 1 to capital T
+of the dot product
+uh
+let's say
+M I of T
+dotted
+with PT.
+We want this to be small.
+So, that's our expected
+It'll the pres- the probability that we
+make an error. So, imagine that M I is
+zero if we're right and one if we're
+wrong.
+Okay.
+Also,
+we will assume
+that
+uh
+M I
+T, so before we said that it's in
+the it's either zero or one, right? The
+person was either right or wrong.
+Now, we're going to assume that this is
+actually in the interval from minus one
+to one.
+Oh, yes. Oh, good point. Uh
+whoops.
+Okay. So,
+yeah, this is
+M T
+is uh is now
+a
+mistake
+vector.
+at time t.
+So,
+m i So, let me
+So, let me write this over here. So,
+I'm imagining now that
+m i of t is equal to 1
+if expert i
+is wrong
+at time t
+and 0
+uh, otherwise, if he's right at time t.
+Yeah, so it's no longer the number of
+mistakes by time t.
+Yeah, sorry. I
+I should have uh, used a different
+letter before. Now, this is a kind of
+Okay.
+Also,
+we'll generalize
+to um,
+instead of just saying it's binary,
+we'll say that m t
+this vector m t is actually
+in -1 1 to the n
+and not just
+0 1 to the n.
+Okay.
+All right.
+So, you should think of a negative
+number as meaning uh,
+as being like a benefit.
+Right?
+We're so we're trying to make sure that
+this thing is small.
+So, negative numbers help us. So,
+um,
+it's like not only was he right, but he
+was right and gave us $100 or something.
+Okay.
+So,
+So, the multiplicative weights algorithm
+Right?
+So, we need to figure out what this
+probability vector is that we're going
+to output output it to on day t + 1.
+We're going to say that
+p
+t + 1
+sub i
+is equal to
+Okay.
+1 minus epsilon
+Um
+m i of t.
+p i of t
+Okay.
+And so, this is just a generalization of
+what we already saw, right?
+Before m i was either zero or one.
+If it was zero, then we didn't change
+this. Think of now this p as being the
+weight vector.
+Okay.
+Before if m i was zero, this was just
+one, so we didn't change the weight at
+all.
+And if m i was was one, meaning they
+made a mistake,
+then we decreased the weight by a factor
+of 1 minus epsilon.
+Okay. So, now you know, we can also
+increase weights because of uh the fact
+that MI can be negative.
+But, you could also imagine uh
+that's just ease of notation. Okay, you
+could also imagine not actually
+doing that and just keeping the ratios
+similar.
+Okay. So,
+um
+So, this algorithm, so I'm going to keep
+calling it the multiplicative weights MW
+algorithm.
+So, MW
+it has been
+you know, rediscovered
+over and over again
+by different people with different names
+in different fields even.
+So, like economics,
+theoretical computer science,
+uh when I say that, I mean, you know,
+like algorithms, let's say.
+Uh machine learning,
+etc. Okay, I'm not going to put all the
+references, but there's a book
+uh or monograph that
+goes into the history and also talks a
+lot about various applications of
+multiplicative weights.
+So, you can see a book uh see
+book
+uh by
+Arora.
+Hazan.
+Arora.
+Um
+Actually, this is the monograph right
+here. So, what year is that? 2012.
+Okay, so,
+yeah.
+I'm sorry?
+K O R
+This?
+Yeah. A.
+So again, we want to be competitive
+with the best
+expert.
+Before I start, you know, proving
+things. You have a question?
+Yeah, yeah. That's uh
+Yeah.
+So really what I maybe should have said
+is uh
+Yeah.
+I want it to also even be consistent of
+last time.
+And then I'll say
+uh p i of t is just the weight
+over the sum of all weights.
+Yeah.
+Okay.
+So uh theorem.
+Um
+I want to say that multiplicative
+weights does well compared to the best
+uh person in hindsight.
+So what I'm going to say here is that
+the sum from T goes from little one to
+capital T of this dot product M I
+of T dotted with
+P I of T where P is the thing that
+multiplicative weights outputs.
+Is at most
+Um
+This should be M of T.
+This should be P T. There's no I.
+Right, there's no I here.
+M is a vector indexed by I.
+Okay, so this sum of expected costs
+should be at most
+um the sum
+T goes from one
+to uh
+to capital T
+of the number of mistakes of person I.
+And then what we're also going to get is
+plus epsilon
+times
+the sum over T of the absolute value of
+M I of T
+plus
+ln over epsilon.
+Okay.
+Questions about the statement of it?
+So, let's just start proving it.
+So, proof.
+Right. So, again, we have this potential
+that I again said over there. So,
+remember fee of t
+is uh the sum
+uh over I from 1 to n of wti.
+Right. And again, we can say the same
+thing as last time.
+Right? So, I want to I want to
+bound I want to upper bound fee and also
+lower bound fee, and then I want to
+compare those two things, and then
+derive some inequality involving
+um
+involving how we do versus how
+uh
+versus how uh expert I does.
+Okay.
+So,
+let's see how these things relate. So,
+fee of
+t + 1
+is equal to by definition
+the sum I from 1 to n of wi t + 1.
+And then now we're just going to plug in
+the definition.
+All right. So, this is equal to
+the sum over I
+of wit
+* 1 - epsilon
+mi of t.
+Right?
+Which is equal to
+If I distribute this, the sum of WITs is
+just VT.
+And then here I have
+the sum of
+Uh
+what is going on here? This is epsilon.
+So here this is just
+um
+V of T
+minus the sum over I
+WI of T
+times MI of T
+Okay.
+But what's WI of T?
+Right?
+By definition relating it to P, this is
+just equal to
+PI of T
+times
+V of T, right?
+So this thing here
+Uh yeah, there's an epsilon.
+So this thing here
+is equal to
+uh
+V of T
+times
+1 minus epsilon
+um
+basically
+M MT dotted with PT.
+Okay.
+And now uh I'm going to use again my
+favorite trick.
+This is at most
+fee of t
+times e to the minus epsilon
+m of t
+dotted p of t.
+So, by induction
+this implies
+um
+that fee of t plus one
+is at most
+fee of one
+which is n
+times
+e to the minus epsilon sum over t from
+one to t
+m t dotted with p t.
+Yeah.
+Okay, good.
+And then now again we do the other side.
+And we're going to say
+also
+fee t plus one
+is at least
+uh w i
+um
+w i t
+Right.
+Which is equal to What's w i t?
+Right? That's right. So, this is equal
+to PI of T
+times
+Well, so let me first let me just write
+it in terms of
+um
+Yeah, so that's true.
+Uh
+But yeah, let me So, now I express in
+terms of P, but just in terms of kind of
+uh
+Basically, in terms of that. So, let me
+write
+uh
+So, I want to say what you get by
+induction, basically.
+Okay? So, this is equal to
+1 minus epsilon
+So, basically, the product
+T going from 1 to T
+of 1 minus epsilon
+MIT
+Right?
+I make sure I'm
+Okay.
+Hm.
+There we go.
+And then now I want to use um
+some calculus yet again.
+Oh.
+Uh yes.
+Yeah.
+Okay.
+Okay, and this thing is equal is at
+least uh
+Let me write this.
+1 - epsilon
+times um
+the sum over
+uh let's say the the less
+at least zero m i of t
+times the
+product 1 + epsilon sum of less than
+zero
+m i of t
+where
+sum of greater than equal to zero
+is over
+the i
+such that
+m i of t
+is greater than equal to zero.
+Sum over the t.
+Okay.
+And
+where does this come from?
+This again is somewhere
+calculus tricks basically, so
+I'm not going to actually do it. So,
+calculus claims
+Let me sure I write it down properly.
+So,
+1 - epsilon to the x is at most 1 -
+epsilon to the epsilon x
+if epsilon if x is in 0 1.
+And then also
+1 + epsilon to the minus x
+is at least
+at most 1 - epsilon x.
+And x is in minus one zero.
+Okay, so the way the way that you would
+prove these actually
+uh
+the way I I just realized the way I did
+it with Taylor's theorem is a little
+clumsy. You can just use the fact that
+for example
+so e.g. the first bullet
+you just use the fact that the function
+f of x which is one minus epsilon
+to the x is a convex function.
+Right?
+You just check its second derivative and
+it's positive.
+So that implies
+that you know f of
+x which is f of
+one minus x times zero
+plus x times one
+should be at most
+one minus x times f of zero
+plus x times f of one.
+Right? That's what it means to be a
+convex function.
+And then
+that's exactly that.
+Okay, so
+so you can verify these these things.
+And here I'm just uh applying that to
+right? So
+this is my x. This is my one minus
+epsilon x.
+Okay.
+And then I separated into cases
+either this thing I'm adding is positive
+or negative depending on the sign of m i
+of t. So this is the cases when m i of t
+is positive or non-negative and this is
+the case when m i of t is negative.
+Okay.
+So now you just put things together.
+You say well phi of t plus one is at
+most this quantity
+and also phi of t plus one is at least
+this quantity.
+So this implies
+that
+one minus epsilon
+uh
+some t
+some bigger than or equal to zero
+m i of t
+times 1 plus epsilon
+some of less than zero m i of t
+is at most
+n times e to the minus epsilon
+sum over t from 1 to capital T
+of m t dotted with
+p t.
+And then you just take logs
+and then rearrange things and okay.
+So
+So if you really want to see that
+calculation, I mean there's really
+nothing more going on
+after this. Um you can look at the the
+paper yourself, okay? So it'll be in the
+in the notes.
+Questions?
+So now
+uh what I want to finish and this will
+probably carry on into
+um the beginning of next lecture as well
+is I mentioned that
+this multiplicative weights thing is not
+only about uh the stock market and and
+weather.
+Uh you can also use it to solve linear
+programs or approximately solve linear
+programs.
+Okay, so
+um
+so plot can
+Schmoys
+Tardos
+I would say math operations research.
+So, use multiplicative weights
+to um
+approximately solve
+packing and covering LPs.
+Okay, so remember I defined packing and
+covering LPs
+um when we're doing
+I guess competitive analysis
+at some point.
+Uh don't worry though, I'll
+when it comes time, I will remind you.
+Um so
+So, now
+you know, we'll show
+um
+how to use MW
+you know, just for general LPs.
+Assuming that you have a certain kind of
+oracle
+that I will describe. Okay, so this this
+description is in is in that book as
+well uh in that monograph by Aurora and
+Hazan and Karger.
+So
+set up
+Okay.
+Is that we have
+we want to check
+if
+Ax is at least b
+and
+x is in some set p
+is feasible.
+Where
+p is a subset of Rn
+is convex.
+Just remember
+it just means that if you take two if
+you take
+a convex combination of points, that
+stays inside of p.
+Okay.
+And a
+is
+an m by n matrix.
+Okay.
+Now
+uh
+if not feasible
+we will we should say so.
+Otherwise
+we should find an x
+such that
+um
+x is in p
+and
+Ax
+is at least b minus epsilon times the
+all ones vector.
+Okay.
+Right, so we want ai.x to be at least
+bi. So, what I'm saying ai.x should be
+at least bi minus epsilon for all i.
+Okay.
+So, we're going to see that
+multiplicative weights
+assuming uh some other property of the
+set P. I mean, I didn't say anything
+about P, but
+assuming that P uh allows you to do some
+things efficiently,
+multiplicative weights will allow you to
+find such an X
+um
+quickly. By quickly, I mean in a small
+number of days.
+Okay. So, this capital T is So, they're
+they're no more days anymore, but
+yeah.
+Yes. So, yeah, that's a good point. So,
+I think we said before,
+you know, once you solve things up to
+really fine precision, like there was
+this L parameter before, right?
+Um
+then you basically solve the problem
+exactly. The problem is that in order to
+get this kind of guarantee in
+multiplicative weights,
+the number of iterations you'll need to
+do the updates, meaning this capital T
+parameter,
+is going to end up being something
+that's polynomial in one over epsilon,
+right? Whereas with interior point, we
+were getting away with something that
+was like log of
+log of one over epsilon.
+Yeah. So,
+yeah, it would just be extremely slow is
+the problem.
+Okay. Any other questions?
+Yeah, actually I I I should So, yeah,
+that epsilon should really be like
+exponentially small in L. That's the
+point.
+Okay.
+Okay. So, you know, let me just give an
+example before we actually uh
+talk about how to use this, you know,
+how to use multiplicative weights to
+solve this. So, example,
+let's say fractional set cover.
+So,
+let um
+L
+I mean, I don't want to use L. Let's say
+let's see uh
+alpha.
+Let alpha in R
+be such that
+alpha
+is uh
+at least opt.
+Then we're going to set P
+to be
+um
+Well, first of all,
+let's write the LP down. So, we want to
+minimize
+the sum over all sets S of XS
+such that for all
+for all elements E
+the sum over all sets containing E
+of XS should be
+at least one
+and XS
+should be at least zero
+for all S.
+Right? So, we have a set of elements we
+want to cover and we have a collection
+of sets S.
+Okay.
+So, in the integral program, you imagine
+each XS would either be zero or one
+telling you whether or not you took the
+set. But here we relax it to a linear
+constraint.
+Right? So, as I described it here,
+there's no there's no optimization.
+There's no minimize
+of linear forms. This is just a
+feasibility question,
+right? So, the way you would use it for
+a problem like this is you would assume
+that you know an alpha such that alpha
+is at least opt.
+And then you would set P
+I mean, I didn't tell you what, you
+know,
+what you really need from P, but
+you would set P
+as the set of X's such that
+say X is at least zero
+and
+um
+sum over S XS
+is at most alpha.
+Okay.
+So, we don't actually know opt, right?
+So,
+you know, what would you do? Suppose
+that you had a way of deciding now the
+feasibility question.
+Now, you want to now you want to figure
+out
+if let's say these constraints
+if the star constraints
+subject
+to X being in P
+is feasible.
+So, that's the that's the the way we're
+actually going to use multiplicative
+weights. But, you don't actually know
+this alpha, right?
+So, you know, what would you do?
+Suppose you had a way of deciding
+feasibility of this.
+What would you do to actually uh
+to figure out the optimal
+value now for
+Yeah, binary search, right? So, binary
+search on alpha.
+Right? And alpha is anything between
+let's say one and the number of sets.
+So, this is the number of sets in your
+collection.
+So, you could binary search.
+And then at the end of the day,
+you know, what would you get if it were
+feasible?
+You would actually you would be off by
+this uh
+by this epsilon, right?
+If feasible,
+you would get
+X such that for all E,
+the sum
+of XS is at least 1 minus epsilon.
+Right? So,
+I don't know if you people recall
+um
+one way to get an approximation
+algorithm for
+for set cover is to solve the LP
+relaxation
+and then do some randomized rounding of
+sets and choose them according to the
+probabilities X of S.
+Okay.
+So, that you know, that's one reason you
+might want to solve this LP to then feed
+it into that randomized rounding
+algorithm to approximate the actual
+integral set cover.
+But, the problem is
+um this is not a valid this is not a
+feasible solution for the for the
+relaxation. Right? So, so what would you
+do to make it a feasible solution?
+Yeah, you just rescale, right?
+So,
+final solution
+not feasible
+perhaps, right?
+But,
+X over 1 minus epsilon is feasible.
+And it achieves cost
+Well, the cost is this dot product.
+Well, the cost is this sum, sorry, the
+sum of the X's.
+And before it was in P, right? So, we
+knew it was at most alpha. It achieves
+cost sum over X's
+at most
+um
+over 1 minus epsilon is at most alpha
+over 1 minus epsilon,
+which is equal to, you know, 1 plus O of
+epsilon
+times alpha.
+So, you're getting an approximation
+algorithm anyway. You're getting a log n
+approximation.
+And now, if you use multiplicative
+weights to solve the LP, you would get a
+log n times 1 plus epsilon
+approximation.
+Right? And the point is you wouldn't
+have to run
+um So, we'll we'll see what you actually
+need to do
+in the multiplicative weights algorithm
+to
+to uh to get this
+to get this X hat to get this X vector
+here.
+But the point is that it's going to be a
+fast algorithm. Okay, it's not going to
+be as slow as, you know, ellipsoid or
+interior point, etc.
+Okay.
+So, are there other questions?
+So, this is this is the end of
+that set cover application.
+So, now let me get to the analogy.
+Okay.
+So,
+I'm going to set
+Um so,
+given some X,
+we'll define
+M I
+to be
+uh
+the cost vector
+to be
+uh
+A I
+. X
+- B I.
+Okay?
+Where
+Wait a second, what do I want to say?
+I want this to be in minus one
+So, uh
+Uh
+okay.
+So, uh let me think. I guess I'll get
+into this normalization next time. I did
+confuse myself about I want this to be
+in the in the interval from minus one to
+one.
+Um
+but the point is
+uh so this is going to be some positive
+or negative number. So, if it's if it's
+positive, that means the constraint is
+actually satisfied, right? So, each
+each constraint
+i.e. row of A
+is an expert.
+Okay.
+And
+so it looks weird because
+positive MIs were supposed to correspond
+to mistakes. Whereas here a positive MI
+means we're actually satisfying this
+constraint.
+Right? But the point is you should think
+of the experts as telling you whether or
+not they think constraint I is hard.
+Okay?
+I think that's the right way to think
+about it. So, then if it's positive,
+then you've satisfied the constraint.
+So, it's not really that hard.
+And the more you've satisfied it, the
+bigger the slack is, then the easier it
+is, which means the more wrong that
+expert was.
+Okay?
+But really what what matters more is
+think about how multiplicative weights
+treats experts who are wrong. It weights
+them less.
+Right? So, multiplicative weights is
+trying to figure out multiplicative So,
+eventually
+you know, we want
+this approximate feasibility up to this
+epsilon over there, right? Eventually we
+want approximate feasibility.
+So, multiplicative weights
+you know, wants to
+focus all its weight
+on constraints that are not yet
+satisfied.
+Right?
+So, the point is if something is very
+well satisfied, we're going to spend
+less effort on it from now you know in
+the in the future days, the future
+iterations. Whereas, if it's already
+satisfied if it's not satisfied, then
+we're going to pay more attention to it.
+So, um
+yeah.
+So, I guess next time I it's now four.
+Next time I'll actually give you an
+analysis to show you um
+the number of iterations you need on
+multiplicative weights to get this kind
+of approximate feasibility guarantee and
+also what property do you need from P,
+etc. Okay.
+So,
+that's Thursday.
+And I guess that should not take
+too much of the lecture and then we'll
+start something new, too.
+No more solving LPs at all.

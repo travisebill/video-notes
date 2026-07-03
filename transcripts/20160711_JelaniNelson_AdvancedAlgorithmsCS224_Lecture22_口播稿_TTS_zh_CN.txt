@@ -1,0 +1,19 @@
+这是 Harvard CS224 高阶演算法 Lecture 22， 主题是 link-cut trees——动态森林的强大资料结构， 由 Sleator 与 Tarjan 在 1983 年提出。
+
+Section 1｜Link-cut trees 的动机
+上堂课谈到 blocking flow 的一般容量情况：每次推送流量要走完整条路径， 并更新路径上所有边的残余容量。 如果重复走同一条路径， 会浪费大量工作。 Link-cut trees 的设计动机就是：能不能记住「曾经探索过的子树」， 下次直接跳过？ 这需要一个支援动态 link 与 cut 的资料结构， 传统的静态二元搜寻树做不到。 Link-cut trees 的本质是把树状结构拆成 preferred path 的链， 每条链用 splay 树维护， 从而把树上的路径操作转化为 splay 树上的 split 与 merge。
+
+Section 2｜Link-cut trees 支援的操作
+核心操作有四个：link(u, v) 把边 u-v 加入树中（前提是 u 与 v 分属不同树）； cut(u, v) 删除边 u-v； find-root(v) 找 v 所在树的根； 以及 path queries——对从某节点到根的路径做查询或更新。 所有操作的 amortized 时间为 O(log N)， 这是 link-cut trees 的核心保证。
+
+Section 3｜Preferred path 与 Splay 树的桥接
+Link-cut trees 用一个关键抽象：将树分解为若干 preferred path， 每条 path 用一棵平衡二元搜寻树（通常是 splay 树）储存。 Splay 树能支援 split 与 concatenate， 这正好对应 preferred path 的切割与合并。 每次操作后用 splay 的摊销分析保证整体 O(log N)。 这个桥接的妙处在于：原始树的动态性被吸收进 preferred path 的重组， 而 preferred path 本身的动态性又被 splay 树的摊销分析吸收——两层动态性互相补偿， 最终得到干净的对数时间保证。
+
+Section 4｜Auxiliary Tree 与 Access 操作
+Access(v) 是最关键的操作：把从 v 到根这条路径变成 preferred path， 并把 v 到根的左子树断开。 这个操作透过一系列 splay 与树旋转完成， 每次把上一层的 preferred child 切换到当前节点。 Access 后， find-root 就是 find-min（最左节点）， 因为 preferred path 已经变成从 v 到根的一条线。
+
+Section 5｜Link 与 Cut 的实作
+Link(u, v)：先 access(u) 让 u 到根的路径变成 preferred， 再把 u 的左子树设为 v（前提是 u 是根）。 Cut(u, v)：access(u) 后检查 u 的右子树是否就是 v， 若是则切断。 这两个操作都建立在 access 的正确性上， 因此 access 是 link-cut trees 的核心引擎。
+
+Section 6｜课程结论
+Link-cut trees 展示了动态资料结构的精妙：透过将树路径分解为 preferred path 的序列， 再用 splay 树的摊销分析， 最终达成所有操作的 O(log N) 摊销时间。 这个资料结构的最大价值在于它把「森林中的路径查询」变成可分解的问题， 让任何需要在动态树上做路径操作的演算法都能受益。 下一堂课将把 link-cut trees 真正接上 blocking flow 的查找， 展示完整的最强多项式最大流演算法是如何收尾的。 值得强调的是， link-cut trees 不只用于流问题——它还被应用到网路路由、 动态图连通性、 符号计算等领域， 是少数能跨越多个应用的基础资料结构。
