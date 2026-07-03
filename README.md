@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **62 支內容** · 108 個音檔 · 62 個逐字稿 · 36 個口播稿
+> **63 支內容** · 111 個音檔 · 63 個逐字稿 · 37 個口播稿
 > 最後更新：2026-07-03
 
 ---
@@ -18,6 +18,7 @@
 > 最近 5 支影片
 
 - **2016-07-11** | Jelani Nelson（Harvard CS 教授）| [Harvard CS224 高階演算法 — Lecture 1：Word RAM、Predecessor 問題、van Emde Boas 與 Y-Fast Tries](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md) · 88 分鐘（5299 秒）（YouTube 一般路徑，英文自動字幕 3741 cues + 繁中字幕 3033 cues 雙語對照）
+- **2014-10-16** | Piotr Indyk（MIT CSAIL 教授，LSH 共同發明人）| [Harvard CS224 高階演算法 — Lecture 14：最近鄰搜索與 Locality-Sensitive Hashing](技術講座/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.md) · Lecture notes + 29 slides（Article 路徑，PDF + PPTX 直接轉 markdown，無原始音檔）
 - **2026-06-27** | TVBS 文茜的世界周報（歐洲版）| [一紙停火備忘錄：美伊各取所需，川普表示戰爭結束了](國際局勢/20260627_TVBS_文茜_美伊停火.md) · 48 分 17 秒（YouTube 一般路徑，繁中 Whisper small CPU 聽寫 48 分鐘）
 - **2026-06-27** | TVBS 文茜的世界周報（歐洲版）| [英國脫歐公投十週年：脫歐後換七首相](國際局勢/20260627_TVBS_文茜_英國脫歐.md) · 48 分 11 秒（YouTube 一般路徑，繁中 Whisper small CPU 聽寫 48 分鐘）
 - **2026-06-19** | 馬臉姐 | [AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說](技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md) · 29 分 55 秒（YouTube 一般路徑，中文 30 分鐘 base 模型）
@@ -72,6 +73,7 @@
 | 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 10：Randomized e/(e-1) Ski Rental、Online Set Cover、Dual Fitting](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.md) | Jelani Nelson（Harvard CS 教授） | 84 分鐘（5073 秒）（口播稿 4:41） | [📄 note](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.md) · [📝 逐字稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10_逐字稿.txt) · [🎙️ 口播稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10_口播稿.txt) · [🔊 opus](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.opus) · [🔊 m4a](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.m4a) · [🔊 mp3](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.mp3) |
 | 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 11：Duel Fitting wrap-up、LP Integrality Gaps、PTAS for Knapsack](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.md) | Jelani Nelson（Harvard CS 教授） | 85 分鐘（5141 秒）（口播稿 4:41） | [📄 note](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.md) · [📝 逐字稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11_逐字稿.txt) · [🎙️ 口播稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11_口播稿.txt) · [🔊 opus](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.opus) · [🔊 m4a](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.m4a) · [🔊 mp3](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.mp3) |
 | 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 12：DNF 計數 FPRAS、半正定規畫與 Max-Cut 0.878 逼近](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.md) | Jelani Nelson（Harvard CS 教授） | 85 分鐘（5104 秒）（口播稿 4:41） | [📄 note](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.md) · [📝 逐字稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12_逐字稿.txt) · [🎙️ 口播稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12_口播稿.txt) · [🔊 opus](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.opus) · [🔊 m4a](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.m4a) · [🔊 mp3](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.mp3) |
+| 2014-10-16 | [Harvard CS224 高階演算法 — Lecture 14：最近鄰搜索與 Locality-Sensitive Hashing](技術講座/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.md) | Piotr Indyk（MIT CSAIL 教授，LSH 共同發明人） | Lecture notes + 29 slides（Article 路徑，PDF + PPTX，口播稿 4:34） | [📄 note](技術講座/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.md) · [📝 逐字稿](transcripts/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH_原文_notes.md) · [📂 slides](transcripts/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH_原文_slides.md) · [🎙️ 口播稿](transcripts/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH_口播稿.txt) · [🔊 opus](audio/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.opus) · [🔊 m4a](audio/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.m4a) · [🔊 mp3](audio/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.mp3) |
 | 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 13：主題模型學習（Guest Lecture by Runge, Microsoft Research）](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.md) | Runge（MSR 後博士，Jelani 主持） | 82 分鐘（4906 秒）（口播稿 4:41） | [📄 note](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.md) · [📝 逐字稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13_逐字稿.txt) · [🎙️ 口播稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13_口播稿.txt) · [🔊 opus](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.opus) · [🔊 m4a](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.m4a) · [🔊 mp3](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.mp3) |
 | 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 15：線性規畫與單體法](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.md) | Jelani Nelson（Harvard CS 教授） | 86 分鐘（5173 秒）（口播稿 4:41） | [📄 note](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.md) · [📝 逐字稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15_逐字稿.txt) · [🎙️ 口播稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15_口播稿.txt) · [🔊 opus](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.opus) · [🔊 m4a](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.m4a) · [🔊 mp3](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.mp3) |
 | 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 16：Bland 規則、互補鬆弛、平滑分析與橢球演算法](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.md) | Jelani Nelson（Harvard CS 教授） | 85 分鐘（5097 秒）（口播稿 4:41） | [📄 note](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.md) · [📝 逐字稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16_逐字稿.txt) · [🎙️ 口播稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16_口播稿.txt) · [🔊 opus](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.opus) · [🔊 m4a](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.m4a) · [🔊 mp3](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.mp3) |
@@ -240,8 +242,9 @@
 - 2026-06-19 | [AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說](技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md) · 馬臉姐 · 29 分 55 秒
 - 2025-10-31 | [AI 2027 報告：兩種結局、6 段時間線，與台灣在 AI 晶片戰爭中的關鍵角色](技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md) · 馬臉姐 · 39 分 18 秒
 
-### 📚 **算法 / 計算機科學理論**（25 支）
+### 📚 **算法 / 計算機科學理論**（26 支）
 
+- 2014-10-16 | [Harvard CS224 高階演算法 — Lecture 14：最近鄰搜索與 Locality-Sensitive Hashing](技術講座/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.md) · Piotr Indyk（MIT CSAIL）· Lecture notes + 29 slides（Article 路徑）
 - 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 1：Word RAM、Predecessor 問題、van Emde Boas 與 Y-Fast Tries](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md) · Jelani Nelson · 88 分鐘
 - 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 2：Fusion Trees 與 Word-RAM 下的靜態前驅問題](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.md) · Jelani Nelson · 85 分鐘
 - 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 3：Hashing 基礎、K-wise 獨立性與線性探測分析](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.md) · Jelani Nelson · 88 分鐘
@@ -336,6 +339,7 @@
 - **Jelani Nelson（Harvard CS 教授）** · 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 25：Inclusion-Exclusion、Zeta Transform 與 Möbius Inversion 應用於 K-Coloring](技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25.md) · 86 分鐘
 - **Jelani Nelson（Harvard CS 教授）** · 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 26：Streaming Algorithms 與 Linear Sketching — 從 F0 Distinct Elements 到 F2 L2 Norm 的 AMS 草圖](技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26.md) · 85 分鐘
 - **Runge（MSR 後博士，Jelani 主持）** · 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 13：主題模型學習（Guest Lecture by Runge, Microsoft Research）](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.md) · 82 分鐘
+- **Piotr Indyk（MIT CSAIL 教授，LSH 共同發明人）** · 2014-10-16 | [Harvard CS224 高階演算法 — Lecture 14：最近鄰搜索與 Locality-Sensitive Hashing](技術講座/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.md) · Lecture notes + 29 slides（Article 路徑）
 - **Martin Fowler（martinfowler.com 軟體工程思想家）+ 中文摘要 doggy8088（Will 保哥）** · 2026-06-26 | [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) · 技術文章
 
 ---
@@ -346,8 +350,8 @@
 - 🎙️ **人物訪談**（9 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（3 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（4 支）→ [完整列表](財經分析/README.md)
-- 🛠️ **技術講座**（60 支）→ [完整列表](技術講座/README.md)
+- 🛠️ **技術講座**（61 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-07-03 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 86 支內容*
+*最後更新：2026-07-03 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 87 支內容*
