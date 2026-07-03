@@ -93,7 +93,11 @@ jobs:
             core.info(`[verify] data/video-notes.json OK（${videoCount} 支影片）`);
 
             // --- D. 額外驗證：確認 Lecture 1-26 順序正確（用 lec_num）---
-            const cs224 = (data.videos || []).filter((v) => 'CS224' in (v.id || '') || 'JelaniNelson' in (v.id || '') || 'PiotrIndyk' in (v.id || ''));
+            // 用 .includes() 對 string 做 substring 檢查（不要用 'in' operator，會對 string throw TypeError）
+            const cs224 = (data.videos || []).filter((v) => {
+              const id = (v.id || '').toString();
+              return id.includes('CS224') || id.includes('JelaniNelson') || id.includes('PiotrIndyk');
+            });
             const lecNums = cs224.map((v) => v.lec_num).filter((n) => n != null).sort((a, b) => a - b);
             const lecNumStr = lecNums.join(',');
             core.info(`[verify] CS224 lec_num 順序: [${lecNumStr}]`);
