@@ -136,10 +136,6 @@
 - 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
 - 2026-04-23 | [Stanford 神經科學家：記不住夢境可能是大腦在警告你！](人物訪談/20260423_Eagleman_DreamsWarningSignals.md) · Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者） × Steven Bartlett · 1 小時 33 分 18 秒（YouTube 英文自動字幕 → 繁中翻譯）
 
-- 2026-06-02 | [Mo Gawdat 談 AI 倫理與人類未來 — 結構化筆記](人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md) · ? · ?
-- 2026-05-12 | [蔡康永深度對談：關於衰老、死亡、AI 與人生的終極提問](人物訪談/20260512_蔡康永_衰老死亡與AI.md) · 蔡康永（作家/主持人） × 羅永浩（訪談主持人）｜「十字路口」播客 · 3:36:18
-- 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
-
 ### 🧠 **AI / LLM 學術與方法論**（16 支）
 
 - ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · 進階上下文工程 · ?
@@ -220,9 +216,12 @@
 - 2026-06-19 | [AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說](技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md) · 馬臉姐 · 29 分 55 秒
 - 2025-10-31 | [AI 2027 報告：兩種結局、6 段時間線，與台灣在 AI 晶片戰爭中的關鍵角色](技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md) · 馬臉姐 · 39 分 18 秒
 
-### 📦 **其他**（3 支）
+### 📚 **算法 / 計算機科學理論**（1 支）
 
 - 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 1：Word RAM、Predecessor 問題、van Emde Boas 與 Y-Fast Tries](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md) · Jelani Nelson（Harvard CS 教授）· 88 分鐘（5299 秒）
+
+### 📦 **其他**（2 支）
+
 - 2026-06-08 | [Matt Pocock：Learn anything with the /teach skill](技術講座/20260608_MattPocock_teach_skill_個人化學習.md) · Matt Pocock · 13 分 04 秒
 - 2026-05-28 | [Software Engineering at the Tipping Point](技術講座/20260528_Adam_Bender_Software_Ecology_軟體生態學.md) · ? · ?
 

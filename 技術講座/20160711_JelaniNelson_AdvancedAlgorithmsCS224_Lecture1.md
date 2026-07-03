@@ -7,6 +7,7 @@
 > **影片連結**：https://youtu.be/0JUN9aDxVmI
 > **影片時長**：88 分鐘（5299 秒）
 > **分類**：技術講座
+> **主題**：📚 算法 / 計算機科學理論
 > **章節**：YouTube 無官方章節，由逐字稿分析整理
 > **字幕來源**：YouTube 英文自動字幕（en auto-caption，3741 cues）+ 繁體中文自動字幕（zh-Hant auto-caption，3033 cues）雙語交叉對照
 
