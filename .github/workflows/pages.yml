@@ -133,13 +133,11 @@ jobs:
 
             // --- E. 全部 OK ---
             core.info(`[verify] ✅ deployment success + 網站 HTTP 200 + data ${videoCount} 支影片`);
-            core.summary.addRaw(`# GitHub Pages Deployment Verified ✅
-
-| 項目 | 值 |
-|------|-----|
-| Deployment ID | ${dep.id} |
-| SHA | \`${dep.sha}\` |
-| State | ${state} |
-| Site | ${SITE} |
-| 影片數 | ${videoCount} |
-`).write();
+            core.summary.addRaw(
+                `# GitHub Pages Deployment Verified ✅\n\n` +
+                `- Deployment ID: ${dep.id}\n` +
+                `- SHA: \`${dep.sha}\`\n` +
+                `- State: ${state}\n` +
+                `- Site: ${SITE}\n` +
+                `- Videos: ${videoCount}\n`
+            ).write();
