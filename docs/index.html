@@ -113,7 +113,7 @@
       <!-- Course (B3 scheme 2026-07-05) -->
       <label x-show="meta.courses && meta.courses.length > 0">
         <small>課程</small>
-        <select x-model="filters.course" @change="applyFilters()">
+        <select x-model="filters.course" @change="onCourseChange()">
           <option value="">全部課程</option>
           <template x-for="c in meta.courses" :key="c">
             <option :value="c" x-text="c"></option>
@@ -129,6 +129,7 @@
         ｜ 排序：
         <button @click="setSort('date_desc')" :class="sort === 'date_desc' ? '' : 'secondary outline'" style="padding:0.2rem 0.5rem; font-size:0.8rem;">最新優先</button>
         <button @click="setSort('date_asc')" :class="sort === 'date_asc' ? '' : 'secondary outline'" style="padding:0.2rem 0.5rem; font-size:0.8rem;">最舊優先</button>
+        <button @click="setSort('lec_num_asc')" :class="sort === 'lec_num_asc' ? '' : 'secondary outline'" style="padding:0.2rem 0.5rem; font-size:0.8rem;">Lecture 編號</button>
         <button @click="setSort('duration_desc')" :class="sort === 'duration_desc' ? '' : 'secondary outline'" style="padding:0.2rem 0.5rem; font-size:0.8rem;">最長優先</button>
         <button @click="setSort('duration_asc')" :class="sort === 'duration_asc' ? '' : 'secondary outline'" style="padding:0.2rem 0.5rem; font-size:0.8rem;">最短優先</button>
       </small>

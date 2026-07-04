@@ -262,6 +262,16 @@ document.addEventListener('alpine:init', () => {
           }
           case 'duration_desc': return (b.duration_seconds || 0) - (a.duration_seconds || 0);
           case 'duration_asc': return (a.duration_seconds || 0) - (b.duration_seconds || 0);
+          case 'lec_num_asc': {
+            // Lecture 編號 asc（沒 lec_num 的排最後，如 guest lecture 或非課程影片）
+            const lecA = a.lec_num ?? 9999;
+            const lecB = b.lec_num ?? 9999;
+            if (lecA !== lecB) return lecA - lecB;
+            // tiebreaker: 用 date asc（同 lec_num 時舊的優先）
+            const dateA = a.note_date || a.date;
+            const dateB = b.note_date || b.date;
+            return dateA.localeCompare(dateB);
+          }
           default: return 0;
         }
       });
@@ -278,6 +288,17 @@ document.addEventListener('alpine:init', () => {
 
     setSort(s) {
       this.sort = s;
+      this.applyFilters();
+    },
+
+    // Course filter 變動時自動切 sort
+    // 選 CS224 / CS336 → sort = lec_num_asc（Lecture 順序）
+    // 切回「全部課程」→ sort 不變（保留 user 自己的選擇）
+    onCourseChange() {
+      const c = this.filters.course;
+      if (c === 'Stanford CS336' || c === 'Harvard CS224') {
+        this.sort = 'lec_num_asc';
+      }
       this.applyFilters();
     },
 
