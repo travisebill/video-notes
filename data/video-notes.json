@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_videos": 104,
-    "total_with_audio": 60,
+    "total_videos": 107,
+    "total_with_audio": 78,
     "total_with_transcript": 60,
-    "total_with_spoken_script": 75,
-    "speakers_count": 52,
+    "total_with_spoken_script": 78,
+    "speakers_count": 53,
     "categories_count": 4,
     "topics_count": 13,
-    "last_updated": "2026-07-05 03:25:20",
+    "last_updated": "2026-07-05 03:31:45",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -20,6 +20,7 @@
       "Boris，Claude Code 的創作者（被稱為「Claude Code 之父」），任職於 Anthropic。先前創辦過多間新創公司，經歷過 Y Combinator，編寫過程式設計和 TypeScript 教科書。自稱「過去一年幾乎沒親手寫過一行程式碼」",
       "CNBC",
       "Claude",
+      "Dan Fu（Stanford PhD） × Percy Liang, Tatsu Hashimoto",
       "Datadog AI 團隊",
       "Dex",
       "Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者）× Steven Bartlett（訪談主持人）",
@@ -1178,6 +1179,58 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260608_MattPocock_teach_skill_個人化學習.md"
     },
     {
+      "id": "20260605_StanfordCS336_Guest_DanFu",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Guest Lecture：Dan Fu — Inference Stack, Megakernels, Recurrent Transformers】",
+      "speaker": "Dan Fu（Stanford PhD） × Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-06-05",
+      "note_date": "2026-06-05",
+      "duration_seconds": 4300,
+      "duration_display": "1:11:40",
+      "video_url": "https://youtu.be/9EEm4iMAF5s",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260605_StanfordCS336_Guest_DanFu_口播稿.opus",
+        "m4a": "audio/20260605_StanfordCS336_Guest_DanFu_口播稿.m4a",
+        "mp3": "audio/20260605_StanfordCS336_Guest_DanFu_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260605_StanfordCS336_Guest_DanFu_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260605_StanfordCS336_Guest_DanFu_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260605_StanfordCS336_Guest_DanFu.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260605_StanfordCS336_Guest_DanFu.md"
+    },
+    {
+      "id": "20260604_StanfordCS336_Lecture17_AlignmentMultimodality",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 17：Alignment — Multimodality】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-06-04",
+      "note_date": "2026-06-04",
+      "duration_seconds": 4659,
+      "duration_display": "1:17:39",
+      "video_url": "https://youtu.be/26FtD08ZpOU",
+      "lec_num": 17,
+      "audio": {
+        "opus": "audio/20260604_StanfordCS336_Lecture17_AlignmentMultimodality_口播稿.opus",
+        "m4a": "audio/20260604_StanfordCS336_Lecture17_AlignmentMultimodality_口播稿.m4a",
+        "mp3": "audio/20260604_StanfordCS336_Lecture17_AlignmentMultimodality_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260604_StanfordCS336_Lecture17_AlignmentMultimodality_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260604_StanfordCS336_Lecture17_AlignmentMultimodality_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260604_StanfordCS336_Lecture17_AlignmentMultimodality.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260604_StanfordCS336_Lecture17_AlignmentMultimodality.md"
+    },
+    {
       "id": "20260531_Dex_12FactorAgents_NoVibesAllowed",
       "title": "【No Vibes Allowed: Solving Hard Problems in Complex Codebases】",
       "speaker": "Dex",
@@ -1282,6 +1335,32 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260528_Adam_Bender_Software_Ecology_軟體生態學.md"
     },
     {
+      "id": "20260527_StanfordCS336_Lecture16_RLVR",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 16：Post-Training — RLVR】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-05-27",
+      "note_date": "2026-05-27",
+      "duration_seconds": 4550,
+      "duration_display": "1:15:50",
+      "video_url": "https://youtu.be/dIFAi87Ws4E",
+      "lec_num": 16,
+      "audio": {
+        "opus": "audio/20260527_StanfordCS336_Lecture16_RLVR_口播稿.opus",
+        "m4a": "audio/20260527_StanfordCS336_Lecture16_RLVR_口播稿.m4a",
+        "mp3": "audio/20260527_StanfordCS336_Lecture16_RLVR_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260527_StanfordCS336_Lecture16_RLVR_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260527_StanfordCS336_Lecture16_RLVR_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260527_StanfordCS336_Lecture16_RLVR.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260527_StanfordCS336_Lecture16_RLVR.md"
+    },
+    {
       "id": "20260527_StanfordCS336_Lecture15_MidPostTraining",
       "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 15：Mid-Training 與 Post-Training — SFT、RLHF 與 Reward Model 設計】",
       "speaker": "Percy Liang, Tatsu Hashimoto",
@@ -1295,9 +1374,9 @@
       "video_url": "https://youtu.be/2oH6PWPrYFo",
       "lec_num": 15,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260527_StanfordCS336_Lecture15_MidPostTraining_口播稿.opus",
+        "m4a": "audio/20260527_StanfordCS336_Lecture15_MidPostTraining_口播稿.m4a",
+        "mp3": "audio/20260527_StanfordCS336_Lecture15_MidPostTraining_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1321,9 +1400,9 @@
       "video_url": "https://youtu.be/5sxHosTLPF8",
       "lec_num": 14,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260527_StanfordCS336_Lecture14_Data_口播稿.opus",
+        "m4a": "audio/20260527_StanfordCS336_Lecture14_Data_口播稿.m4a",
+        "mp3": "audio/20260527_StanfordCS336_Lecture14_Data_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1503,9 +1582,9 @@
       "video_url": "https://youtu.be/-qm0ln33G24",
       "lec_num": 13,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260519_StanfordCS336_Lecture13_DataSourcesDatasets_口播稿.opus",
+        "m4a": "audio/20260519_StanfordCS336_Lecture13_DataSourcesDatasets_口播稿.m4a",
+        "mp3": "audio/20260519_StanfordCS336_Lecture13_DataSourcesDatasets_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1529,9 +1608,9 @@
       "video_url": "https://youtu.be/JpAxdTWQJxM",
       "lec_num": 12,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260519_StanfordCS336_Lecture12_Evaluation_口播稿.opus",
+        "m4a": "audio/20260519_StanfordCS336_Lecture12_Evaluation_口播稿.m4a",
+        "mp3": "audio/20260519_StanfordCS336_Lecture12_Evaluation_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1555,9 +1634,9 @@
       "video_url": "https://youtu.be/vTfEyOyzV9E",
       "lec_num": 11,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260519_StanfordCS336_Lecture11_ScalingLaws_口播稿.opus",
+        "m4a": "audio/20260519_StanfordCS336_Lecture11_ScalingLaws_口播稿.m4a",
+        "mp3": "audio/20260519_StanfordCS336_Lecture11_ScalingLaws_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1711,9 +1790,9 @@
       "video_url": "https://youtu.be/EfM546A79aM",
       "lec_num": 10,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260511_StanfordCS336_Lecture10_Inference_口播稿.opus",
+        "m4a": "audio/20260511_StanfordCS336_Lecture10_Inference_口播稿.m4a",
+        "mp3": "audio/20260511_StanfordCS336_Lecture10_Inference_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1789,9 +1868,9 @@
       "video_url": "https://youtu.be/Q15rhEWZPQ4",
       "lec_num": 9,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260430_StanfordCS336_Lecture9_ScalingLaws_口播稿.opus",
+        "m4a": "audio/20260430_StanfordCS336_Lecture9_ScalingLaws_口播稿.m4a",
+        "mp3": "audio/20260430_StanfordCS336_Lecture9_ScalingLaws_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1815,9 +1894,9 @@
       "video_url": "https://youtu.be/6-cXp-aOmdg",
       "lec_num": 8,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline_口播稿.opus",
+        "m4a": "audio/20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline_口播稿.m4a",
+        "mp3": "audio/20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1841,9 +1920,9 @@
       "video_url": "https://youtu.be/SzpOcwdIL0Y",
       "lec_num": 7,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260428_StanfordCS336_Lecture7_ParallelismDataParallel_口播稿.opus",
+        "m4a": "audio/20260428_StanfordCS336_Lecture7_ParallelismDataParallel_口播稿.m4a",
+        "mp3": "audio/20260428_StanfordCS336_Lecture7_ParallelismDataParallel_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1867,9 +1946,9 @@
       "video_url": "https://youtu.be/xnDHaNUvHBg",
       "lec_num": 6,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260428_StanfordCS336_Lecture6_KernelsTritonXLA_口播稿.opus",
+        "m4a": "audio/20260428_StanfordCS336_Lecture6_KernelsTritonXLA_口播稿.m4a",
+        "mp3": "audio/20260428_StanfordCS336_Lecture6_KernelsTritonXLA_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1919,9 +1998,9 @@
       "video_url": "https://youtu.be/izZba4UA7iY",
       "lec_num": 5,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260420_StanfordCS336_Lecture5_GPUsTPUs_口播稿.opus",
+        "m4a": "audio/20260420_StanfordCS336_Lecture5_GPUsTPUs_口播稿.m4a",
+        "mp3": "audio/20260420_StanfordCS336_Lecture5_GPUsTPUs_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1945,9 +2024,9 @@
       "video_url": "https://youtu.be/cKSwj_qZ8Jg",
       "lec_num": 4,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260415_StanfordCS336_Lecture4_AttentionAlternatives_口播稿.opus",
+        "m4a": "audio/20260415_StanfordCS336_Lecture4_AttentionAlternatives_口播稿.m4a",
+        "mp3": "audio/20260415_StanfordCS336_Lecture4_AttentionAlternatives_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1971,9 +2050,9 @@
       "video_url": "https://youtu.be/lVynu4bo1rY",
       "lec_num": 3,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260415_StanfordCS336_Lecture3_Architectures_口播稿.opus",
+        "m4a": "audio/20260415_StanfordCS336_Lecture3_Architectures_口播稿.m4a",
+        "mp3": "audio/20260415_StanfordCS336_Lecture3_Architectures_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -1997,9 +2076,9 @@
       "video_url": "https://youtu.be/kuYAsz7zspQ",
       "lec_num": 2,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting_口播稿.opus",
+        "m4a": "audio/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting_口播稿.m4a",
+        "mp3": "audio/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
@@ -2023,9 +2102,9 @@
       "video_url": "https://youtu.be/JuoVZkPBiKk",
       "lec_num": 1,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260414_StanfordCS336_Lecture1_OverviewTokenization_口播稿.opus",
+        "m4a": "audio/20260414_StanfordCS336_Lecture1_OverviewTokenization_口播稿.m4a",
+        "mp3": "audio/20260414_StanfordCS336_Lecture1_OverviewTokenization_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,

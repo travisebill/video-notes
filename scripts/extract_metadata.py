@@ -239,12 +239,20 @@ def parse_readme_topics(readme: str) -> dict:
 
 
 def find_audio_files(base_name: str) -> dict:
-    """找對應音檔是否存在，回傳 {opus, m4a, mp3} 路徑"""
-    return {
-        'opus': f'audio/{base_name}.opus' if (AUDIO_DIR / f'{base_name}.opus').exists() else None,
-        'm4a': f'audio/{base_name}.m4a' if (AUDIO_DIR / f'{base_name}.m4a').exists() else None,
-        'mp3': f'audio/{base_name}.mp3' if (AUDIO_DIR / f'{base_name}.mp3').exists() else None,
-    }
+    """找對應音檔是否存在，回傳 {opus, m4a, mp3} 路徑
+    支援兩種命名：(1) base_name.ext  (2) base_name_口播稿.ext (CS336 系列)
+    """
+    # CS336 系列用「口播稿」後綴（2026-04-14 後所有 CS336 lecture 一致採用）
+    candidates = [base_name, f'{base_name}_口播稿']
+    out = {}
+    for ext in ('opus', 'm4a', 'mp3'):
+        out[ext] = None
+        for c in candidates:
+            p = AUDIO_DIR / f'{c}.{ext}'
+            if p.exists():
+                out[ext] = f'audio/{c}.{ext}'
+                break
+    return out
 
 
 def find_transcripts(base_name: str) -> dict:

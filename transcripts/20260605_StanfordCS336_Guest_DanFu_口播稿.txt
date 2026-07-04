@@ -1,0 +1,9 @@
+Stanford CS336 Guest Lecture 由 Dan Fu 主講,主題是 Inference Stack——模型訓練完成後的「另一面」。Dan 用 1902 曼哈頓 130,000 匹馬到 1912 汽車已超馬的 10 年工業革命類比 2025-2026 語言模型:他去年開始用 LLM 寫大部分程式碼,這就是 LLM 界的 1912 moment。Inference 是把 electricity 變 intelligence 的引擎,GPU 是新石油,inference engine 跟 GPU kernel 是把沙子變可用產品的關鍵。Dan 同時在 UCSD 跟 Together AI,展示三項 inference research。
+
+第一項是 Cache-aware Prefill-Decode Disaggregation。Inference 主要分兩階段:Prefill 處理整 prompt 算 activations,compute-bound 類似訓練;Decode 一次只生 1 token,memory-bandwidth bound,因為要 load 整個 model weights 但只生 1 token。兩者瓶頸完全相反,所以開始 disaggregate 到不同 GPU pool。新 request 與多輪對話也不該 share 同一 prefill GPU——前者是 cold long request 後者是 warm 短對話,前者會 block decoder。兩行 routing 邏輯把 cold 走 cold pool、warm 走 warm pool,實測可達 40% serving 提升。
+
+第二項是 Megakernels。Decode 是 memory-bound,但傳統寫 kernel 一個 operation 一個——大量 launch overhead 與 SM 空檔。Megakernels 把多 operation fuse 成 single kernel,類似 flash attention 但更積極,可以看到 weight load 跟 attention overlap、KV Cache load 跟 QKV 加 rope overlap。Dan 用 ThunderKittens library 達到 Llama-1B 一層 fuse 整個 layer,在 H100 達 72% bandwidth utilization——這是 near speed of light,H100 對這操作能跑多快的極限。代價是寫作成本極高:一位全職 kernel 工程師一年只能寫 1 硬體加 2 到 3 個 models 加 batch sizes 1 到 16,超過就要重寫。
+
+第三項是 Parcae——loop transformer 穩定版本。Loop transformer 概念是 transformer blocks 重複跑,FLOPs 可升但參數不變;naive training 改 LR 就爆炸。Dan 用 State Space Model 數學框架分析,寫下 active 等於 A 乘 previous 加 B 乘 initial,看到 A 的 spectral radius 決定是否爆炸——A 若 2,16 次後變 2 的 16 次方規模就炸。Parcae 把 A 改成 negative diagonal matrix,powered up 收斂到 0,B 加 linear norm,達 stable loss curve 且更高 quality。Scaling law 顯示 fixed model size 增大 data 時應同時增大 recurrence;目前所有 frontier model 都無 recurrent,都停在 scaling curve 最左,暗示還有改進空間。
+
+最後 Dan 強調 inference 與 architecture 必須共同設計:NVFP4 是 NVIDIA 鎖定格式、MXFP4 是 AMD,quantization 必須配硬體;DeepSeek MLA 是 KV cache 激進壓縮典型;bidirectional BERT 用於搜索,causal attention 用於 chat。Inference 研究非常早期,10 到 20 年後回頭看會覺得「這不是顯然嗎」,現在每個看似簡單的 routing、kernel、cache 設計都還有巨幅改進空間。理解 inference 與 GPU kernel 等於開啟 full-stack ML 創新。
