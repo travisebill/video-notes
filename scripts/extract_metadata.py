@@ -264,6 +264,19 @@ def find_transcripts(base_name: str) -> dict:
     }
 
 
+def derive_course_slug(filename_stem: str) -> str | None:
+    """從檔名推導 course slug（B3 scheme 2026-07-05）。
+
+    Returns:
+        'Stanford CS336' / 'Harvard CS224' / None
+    """
+    if 'StanfordCS336' in filename_stem:
+        return 'Stanford CS336'
+    if 'HarvardCS224' in filename_stem or 'AdvancedAlgorithmsCS224' in filename_stem or 'HarvardCS224AdvancedAlgorithms' in filename_stem:
+        return 'Harvard CS224'
+    return None
+
+
 def main():
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
@@ -296,6 +309,7 @@ def main():
                 'title': fm.get('title') or filename_meta['title_slug'].replace('_', ' '),
                 'speaker': fm.get('speaker_full') or filename_meta['speaker_slug'],
                 'speaker_slug': filename_meta['speaker_slug'],
+                'course_slug': derive_course_slug(md_path.stem),
                 'category': category,
                 'primary_topic': primary_topic,
                 # 修 2026-07-03：note_date 優先（frontmatter 整理日期權威），
@@ -333,6 +347,7 @@ def main():
             'speakers_count': len(speakers),
             'categories_count': len(categories),
             'topics_count': len(topics),
+            'courses': sorted({v['course_slug'] for v in videos if v.get('course_slug')}),
             'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             'speakers': speakers,
             'categories': categories,
