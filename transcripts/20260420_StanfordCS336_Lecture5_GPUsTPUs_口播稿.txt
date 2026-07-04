@@ -1,0 +1,21 @@
+CS336 第五講由 Percy Liang 主講,正式進入 systems module 的核心:GPU 程式設計與效能工程。開場 Percy 承諾,聽完這堂課學生會理解 matmul throughput plot 為什麼有那些奇怪波動,以及如何讓自己的程式碼跑在 roofline 飽和區。
+
+CPU 與 GPU 的哲學差異是理解一切的起點。CPU 是 latency 導向——大控制單元配少量 ALU,適合複雜 branching 與低延遲。GPU 是 throughput 導向——數百個 lightweight cores 換 aggregate throughput,適合大量平行運算。每個 task 在 GPU 上跑得久,但總吞吐量遠高於 CPU。
+
+GPU 硬體基本單元是 Streaming Multiprocessor(SM),H100 有 132 個 SM。每個 SM 有自己的 L1 cache 與 shared memory,latency 只要 20-30 cycle;L2 cache 跨 SM 共用,慢一點;HBM global memory 是 GPU 主流外部記憶體,H200 有 144GB 但 latency 是 L1 的十倍。這層 memory hierarchy 是現代 LLM optimization 的核心——memory bandwidth,不是 compute,才是真正瓶頸。為什麼不全用 SRAM?SRAM 貴幾百倍且耗電,memory hierarchy 是 cost 與 speed 的 trade-off。Grok(Nvidia 收購)是例外,用巨大 SRAM 設計 inference,證明特定 workload 下 SRAM 確實有效。
+
+Tensor Cores 是 GPU 的矩陣運算加速器。V100(2017)首次引入,接下來 structured sparsity、FP8 等低精度格式推動 FLOPs 持續成長。FP32 到 BF16 到 FP8 到 FP4 的精度演進,bits 減半意味著 memory 流量也減半,大幅緩解 memory bottleneck。
+
+TPUs 是 Google 的 GPU 替代方案,核心是 systolic array——streaming data through fixed circuit,強制 batch 大才有高效率。GPU 通常 132 個 SM 與 528 個矩陣運算單元,TPU 只有 2 個 tensor core 與 8 個 MXU。TPU 與 GPU 雖然架構不同但在 memory hierarchy 與 matrix multiply unit 這兩大核心上高度收斂——這是 convergent evolution 的結果。注意 TPU 與 GPU 都叫 tensor core,但意思不同——TPU 的 tensor core 是 processor,GPU 的 tensor core 是 matrix multiply unit。
+
+GPU 程式設計用 SIMD,threads 非常 lightweight——scheduler 可隨時 swap 停滯的 warp,換其他 warp 執行以保持 throughput 高。早期人們手寫 shader 做 matrix multiply,現在透過 Tensor Cores 與高階 kernel 語言如 Triton。
+
+Performance engineering 有六大策略:vectorization 用 SIMD 一次算多元素,parallelism 用多 thread 多 SM 並行,memory hierarchy exploitation 優先用 shared memory 與 register,operator fusion 把多 op 合成一個 kernel,loop transformations 如 tiling 改善 cache locality,low precision 用 BF16/FP8/FP4 減 bits。
+
+Operator fusion 是最關鍵的策略。原本 read 然後 compute A 然後 write 然後 read 然後 compute B 然後 write,兩輪 HBM 流量;改成 read 然後 compute A 加 B 然後 write,一輪 HBM 流量,直接省一半。Tiling 是 fusion 的進階版,把大矩陣切成 tile,每個 tile 在 shared memory 完成計算後再寫回。
+
+Flash Attention 是這套思維的極致展現。標準 attention 需要存完整的 n 乘 n attention matrix,記憶體 O(n²)。Flash Attention 透過 tiling 加 online softmax,不存完整 attention matrix,改用 block by block 計算,讓 attention 的 memory complexity 從 O(n²) 降到 O(n)。這是長 context 訓練的關鍵突破,也是 Assignment 2 的核心 kernel。
+
+Matmul throughput plot 的奇怪波動來自三個因素:matrix size 對齊 Tensor Core 要求與否、L2 cache 命中與否、warp scheduling 平衡。Roofline model 解釋了整體形狀——從 memory-bound 對角線成長,到 compute-bound 水平飽和。所有優化策略都是為了把 op 推到 roofline 飽和區。
+
+一句話總結:GPU 與 TPU 在 memory hierarchy 與 matrix multiply unit 高度收斂,所有 kernel 優化都圍繞最小化 data movement 展開,因為現代硬體瓶頸是 memory bandwidth。Flash Attention 把這套思維推到極致,讓 O(n²) memory 降到 O(n),是現代 LLM 長 context 訓練的基石。

@@ -1,0 +1,19 @@
+Stanford CS336「Language Modeling from Scratch」第三年正式开课。第一讲由 Percy Liang 与 Tatsu Hashimoto 共同主讲,搭配 Marcel、Herman、Steven 三位助教。Percy 在开场时自嘲,即便 coding agent 已经能 zero-shot 写出语言模型,仍有人坚持想理解底层如何运作——这正是这门课的存在理由。
+
+整堂课的核心论述可以拆成三层:机械、心态、直觉。机械指的是 transformer 结构、model parallelism 怎么运作——这层课堂可以教好。心态是怎么榨干硬体、严肃看待 scaling——也可以教。但直觉,也就是什么 modeling 与 data 决策会 work,必须实际跑大规模实验才学得到。Percy 引用 Noam Shazeer 的 SwiGLU 论文自嘲结论:「我们无法解释,只能把这些架构的成功归于神的恩宠。」这句话精准点出 LLM 研究的本质——很多设计选择来自实验而非理论。
+
+关于 bitter lesson 的常见误读,Percy 直接澄清:不是「scale alone matters」,而是「algorithms that scale are what matters」。效率与资源的乘积决定最终模型品质,而在大规模下,效率比小实验时更重要——五个百分点的演算法改进,在数亿美元等级的训练里是巨大金钱差距。OpenAI 2020 年的 ImageNet 研究显示,2012 至 2019 年间有 44 倍的演算法效率提升。
+
+历史轴线方面,2017 年 Transformer 引入 self-attention 与平行化,2020 年 GPT-3 用 175B 参数展示 in-context learning,接著 DeepMind 从 Google 独立时期已研究 compute-optimal scaling laws,催生后来的 Chinchilla。近三年则是开源军团追上闭源的关键期:Llama 系列、Mistral、DeepSeek、Qwen 等模型在多项 benchmark 上已逼近 GPT 等级。AI2、Nvidia、Marine 等联盟更进一步 release weights 加 paper 加 code 加 data,让学术界能拆解前沿模型。Percy 强调,如果没有这些开源生态,这门课根本不可能存在。
+
+五个 assignment 的设计逻辑清晰对应五个 pillar。第一是 tokenizer 与 transformer 实作,要求从零写 BPE、写 transformer、写 loss 与 optimizer,并在 TinyStories 与 OpenWebText 上冲 perplexity leaderboard。第二是 systems,用 Triton 写高效 kernel、跨 GPU 平行化、处理 inference,并用 roofline analysis 分析 B200 的 2.25 petaflops 与 8 TB/s memory bandwidth 配对。第三是 scaling laws,学生透过 training API 拿到 loss,拟合 scaling law 后外推到目标预算。第四是 data,从 raw web crawl 开始 filter、dedupe、合成——被 Percy 称为「脏但必要的工作」。第五是 alignment,实作 DPO 与 GRPO 在数学 benchmark 上跑通。
+
+Resource accounting 的核心公式是 6ND——训练一个 N 参数模型在 D tokens 上,大约消耗 6ND FLOPs。硬体瓶颈往往在 memory bandwidth 而非 compute,所以 operator fusion 与 tiling 成为 kernel 优化的核心技巧。Inference 阶段分 prefill(平行填 KV cache,类似训练)与 decode(一次一个 token,memory-bound),speculative decoding 是重要加速手段。
+
+Scaling laws 段落是本讲最反直觉的部分。Percy 强调,scaling laws 并非自然法则——必须透过仔细设计 scaling recipe「强迫」它存在。可预测性比最优性更重要,因为在大规模训练中,小 scale 的超参数必须能预测地延伸到 large scale。Chinchilla rule of thumb 是 token 数约等于 20 倍参数数——70B 模型配 1.4T tokens。但现代很多小模型刻意训练在远超 compute-optimal 的 token 量,以换取 inference 效率。
+
+Data 部分,Percy 提醒 raw web crawl 脏到必须主动清理——HTML、PDF、code 都需要 transformation,接著 filter、dedupe、mix。Synthetic data 越来越重要,可以从真实资料改写成下游任务格式。法律议题不容忽视,很多 GitHub code 没 license,该乐观假设 permissive 还是保守假设不可用,业界仍有争议。
+
+最后进入 tokenizer 本体。Percy 示范了 BPE 演算法:反复 merge 最常见的相邻 byte pair,直到 vocab 到达目标大小。BPE 是 1994 年的资料压缩演算法,2016 年引入神经机器翻译,GPT-2 首次用于语言模型。虽然是 30 年老方法,因为 frontier model 仍在用,今年仍教;但 Percy 预期明年可能可以跳过,因为 end-to-end byte-level 方案终将取代它。
+
+一句话总结:从零打造语言模型不是要重发明轮子,而是要在机械、心态、直觉三层都建立肌肉记忆——而这堂课就是机械与心态的起点,直觉则留给未来的大规模实验。

@@ -1,0 +1,19 @@
+CS336 第三讲由 Tatsu Hashimoto 主讲,主题是 architectures 与 hyperparameters。Tatsu 自嘲架构设计一直很 inscratable,所以这堂课走 survey 路线——快速走过所有现代重要 paper,从中归纳出哪些参数是固定的、哪些可以变动而不影响表现。学架构最好的方式是「自己 train 不同架构」,但 compute 与时间不够,次好方式就是「从别人的经验学起」。
+
+Layer norm 已高度标准化。现代 transformer 几乎都用 pre-norm 搭配 RMSNorm,并且移除 bias terms。为什么 RMSNorm 比 Layer norm 好?因为 Layer norm 的 arithmetic intensity 极低,大部分 workload 是 memory movement 而非 contraction——RMSNorm 省掉 mean-centering 步骤,运算量略减,Google 2020 论文实证换 RMSNorm 后 steps per second 提升,效能还不降。Bias terms 同样道理——memory intensive 而非 arithmetic intense——移除是免费的 systems win。Layer norm 在 residual stream 内外位置不同也有差异,在 transformer 内会有 gradient attenuation 问题,深度增加时尤其严重,所以大家选择把 norm 移到外面。
+
+Activation 从 ReLU 到 GELU 到 SwiGLU 的演进也很清楚。Chinchilla 用 ReLU、GPT-3 用 GELU,这两个选择都 perfectly fine。但现代主流是 SwiGLU 与 GeGLU 等 gated linear unit 系列。GLU 概念简单:output = X W1 通过 activation 后再用 X V element-wise 乘以 gate——modulate 原始 output。Tatsu 自嘲以前在统计 ML 训练时以「永远不学 SwiGLU」为傲,现在发现超重要。Gating 提供额外 capacity,且不大幅牺牲 arithmetic intensity。
+
+Positional encoding 是本讲最重要的部分。Attention 本身位置独立,没有 encoding 就分不出 dog bites man 与 man bites dog 的差异。从原始 transformer 的 sine cosine 到 absolute embeddings 再到 T5 与 Chinchilla 的 relative embeddings,都没真正满足「inner product 只跟位置差有关」这个数学性质。RoPE 做到了——透过把 D 维向量切成 D/2 个 2D pairs,每个 pair 按位置旋转。低频旋转捕捉 long-range dependence,高频旋转捕捉邻接关系。RoPE 起源相当传奇——出自一篇 not very well known 的 GPT-J 时代 paper,作者在中国,Tatsu 形容「came out of nowhere 但数学上极漂亮」。RoPE 是 2024 后模型的事实标准。
+
+架构设计表视觉化展示了现代 LLM 的高度收敛——Llama 2、Mistral、Qwen2、GPT-NeoX、DeepSeek-V3、Phi-3、Gemma 全部用 RMSNorm 与 GLU 变体,只有 Falcon 是用普通 GLU 而非 SwiGLU,以及有些模型是 parallel layers 而非 serial layers。共同选择是:RMSNorm + serial + pre-norm + SwiGLU。
+
+超参数的弹性带是另一个关键主题。Head dim ratio 约 1:1——大部分模型 head dim 等于模型 dim 除以 head 数。Aspect ratio 约 100——模型 dim 除以 layer 数。Kaplan et al. 与 ETA 等人的 ablation 显示,不管模型大小,最佳 aspect ratio 都约 100。这是 forgiving hyperparameter——偏离一点不影响表现,但 scaling 时必须保持比例。
+
+为什么 aspect ratio 约 100?Deep model 的 pipeline parallel 处理极难——大部分人不愿碰——所以模型不能太深。Width 容易 parallelize 但 expressiveness 可能不够。换言之,expressiveness 与 hardware 取舍收敛在 100:1。ETA 的 variation experiments 结论更激进:真正重要的只有 FLOPs,aspect ratio 在宽广 band 内变动影响不大。
+
+Vocabulary size 则是另一个故事。早期 open-source 多为 English-only,vocab 约 30K。Post-Llama 开始 multilingual,vocab 100K 到 200K。模型越大,vocab 可越大——小模型 vocab 过大会 over-parameterize embedding layer。Multimodal 模型图片 token 需要独立 vocab,大小更大。
+
+最后呼应 Lecture 1 的 hyperparameter transfer 概念:Scale up 不是「重新 tune 所有东西」,而是**保持比例**。换言之,架构选择的 forgiving band 很宽,但在宽广 band 内的选择不能跨 scale 变化无常——那会破坏可预测性,比选错更糟。
+
+一句话总结:现代 transformer 已高度标准化,真正的设计空间在架构细节差 1%、FLOPs 规模差 10 倍这个层级;scale 时保持比例比重新 tune 更重要,因为 hyperparameter transfer 才是大模型时代的真正入场券。

@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **63 支內容** · 111 個音檔 · 63 個逐字稿 · 37 個口播稿
-> 最後更新：2026-07-03
+> **68 支內容** · 126 個音檔 · 68 個逐字稿 · 42 個口播稿
+> 最後更新：2026-07-04
 
 ---
 
@@ -61,6 +61,11 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-04-20 | [Stanford CS336 Language Modeling from Scratch — Lecture 5：GPUs、TPUs 與 Flash Attention 加速](技術講座/20260420_StanfordCS336_Lecture5_GPUsTPUs.md) | Percy Liang & Tatsu Hashimoto（Stanford CS 教授） | 1 小時 18 分 39 秒（4719s） | [📄 note](技術講座/20260420_StanfordCS336_Lecture5_GPUsTPUs.md) · [📝 逐字稿](transcripts/20260420_StanfordCS336_Lecture5_GPUsTPUs_逐字稿_en.txt) · [🎙️ 口播稿](transcripts/20260420_StanfordCS336_Lecture5_GPUsTPUs_口播稿.txt) · [🔊 opus](audio/20260420_StanfordCS336_Lecture5_GPUsTPUs_口播稿.opus) · [🔊 m4a](audio/20260420_StanfordCS336_Lecture5_GPUsTPUs_口播稿.m4a) · [🔊 mp3](audio/20260420_StanfordCS336_Lecture5_GPUsTPUs_口播稿.mp3) |
+| 2026-04-15 | [Stanford CS336 Language Modeling from Scratch — Lecture 4：線性 Attention、Mamba 與 Gated DeltaNet](技術講座/20260415_StanfordCS336_Lecture4_AttentionAlternatives.md) | Percy Liang & Tatsu Hashimoto（Stanford CS 教授） | 1 小時 26 分 20 秒（5180s） | [📄 note](技術講座/20260415_StanfordCS336_Lecture4_AttentionAlternatives.md) · [📝 逐字稿](transcripts/20260415_StanfordCS336_Lecture4_AttentionAlternatives_逐字稿_en.txt) · [🎙️ 口播稿](transcripts/20260415_StanfordCS336_Lecture4_AttentionAlternatives_口播稿.txt) · [🔊 opus](audio/20260415_StanfordCS336_Lecture4_AttentionAlternatives_口播稿.opus) · [🔊 m4a](audio/20260415_StanfordCS336_Lecture4_AttentionAlternatives_口播稿.m4a) · [🔊 mp3](audio/20260415_StanfordCS336_Lecture4_AttentionAlternatives_口播稿.mp3) |
+| 2026-04-15 | [Stanford CS336 Language Modeling from Scratch — Lecture 3：Transformer Architectures（RMSNorm、SwiGLU、RoPE）](技術講座/20260415_StanfordCS336_Lecture3_Architectures.md) | Percy Liang & Tatsu Hashimoto（Stanford CS 教授） | 1 小時 29 分 14 秒（5354s） | [📄 note](技術講座/20260415_StanfordCS336_Lecture3_Architectures.md) · [📝 逐字稿](transcripts/20260415_StanfordCS336_Lecture3_Architectures_逐字稿_en.txt) · [🎙️ 口播稿](transcripts/20260415_StanfordCS336_Lecture3_Architectures_口播稿.txt) · [🔊 opus](audio/20260415_StanfordCS336_Lecture3_Architectures_口播稿.opus) · [🔊 m4a](audio/20260415_StanfordCS336_Lecture3_Architectures_口播稿.m4a) · [🔊 mp3](audio/20260415_StanfordCS336_Lecture3_Architectures_口播稿.mp3) |
+| 2026-04-14 | [Stanford CS336 Language Modeling from Scratch — Lecture 2：PyTorch 資源帳戶與 Roofline 模型](技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md) | Percy Liang & Tatsu Hashimoto（Stanford CS 教授） | 1 小時 17 分 25 秒（4645s） | [📄 note](技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md) · [📝 逐字稿](transcripts/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting_逐字稿_en.txt) · [🎙️ 口播稿](transcripts/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting_口播稿.txt) · [🔊 opus](audio/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting_口播稿.opus) · [🔊 m4a](audio/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting_口播稿.m4a) · [🔊 mp3](audio/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting_口播稿.mp3) |
+| 2026-04-14 | [Stanford CS336 Language Modeling from Scratch — Lecture 1：Roadmap 與 BPE Tokenization](技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md) | Percy Liang & Tatsu Hashimoto（Stanford CS 教授） | 1 小時 19 分 22 秒（4762s） | [📄 note](技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md) · [📝 逐字稿](transcripts/20260414_StanfordCS336_Lecture1_OverviewTokenization_逐字稿_en.txt) · [🎙️ 口播稿](transcripts/20260414_StanfordCS336_Lecture1_OverviewTokenization_口播稿.txt) · [🔊 opus](audio/20260414_StanfordCS336_Lecture1_OverviewTokenization_口播稿.opus) · [🔊 m4a](audio/20260414_StanfordCS336_Lecture1_OverviewTokenization_口播稿.m4a) · [🔊 mp3](audio/20260414_StanfordCS336_Lecture1_OverviewTokenization_口播稿.mp3) |
 | 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 1：Word RAM、Predecessor 問題、van Emde Boas 與 Y-Fast Tries](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md) | Jelani Nelson（Harvard CS 教授） | 88 分鐘（5299 秒，口播稿 4:41） | [📄 note](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md) · [📝 逐字稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1_逐字稿.txt) · [🎙️ 口播稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1_口播稿.txt) · [🔊 opus](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.opus) · [🔊 m4a](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.m4a) · [🔊 mp3](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.mp3) |
 | 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 2：Fusion Trees 與 Word-RAM 下的靜態前驅問題](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.md) | Jelani Nelson（Harvard CS 教授） | 85 分鐘（5139 秒）（口播稿 4:41） | [📄 note](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.md) · [📝 逐字稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2_逐字稿.txt) · [🎙️ 口播稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2_口播稿.txt) · [🔊 opus](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.opus) · [🔊 m4a](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.m4a) · [🔊 mp3](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.mp3) |
 | 2016-07-11 | [Harvard CS224 高階演算法 — Lecture 3：Hashing 基礎、K-wise 獨立性與線性探測分析](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.md) | Jelani Nelson（Harvard CS 教授） | 88 分鐘（5326 秒）（口播稿 4:41） | [📄 note](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.md) · [📝 逐字稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3_逐字稿.txt) · [🎙️ 口播稿](transcripts/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3_口播稿.txt) · [🔊 opus](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.opus) · [🔊 m4a](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.m4a) · [🔊 mp3](audio/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.mp3) |
@@ -162,7 +167,7 @@
 - 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
 - 2026-04-23 | [Stanford 神經科學家：記不住夢境可能是大腦在警告你！](人物訪談/20260423_Eagleman_DreamsWarningSignals.md) · Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者） × Steven Bartlett · 1 小時 33 分 18 秒（YouTube 英文自動字幕 → 繁中翻譯）
 
-### 🧠 **AI / LLM 學術與方法論**（16 支）
+### 🧠 **AI / LLM 學術與方法論**（21 支）
 
 - ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · 進階上下文工程 · ?
 - 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · Ryan Lopopolo（OpenAI Member of Technical Staff）· 46 分 20 秒
@@ -180,6 +185,12 @@
 - 2026-04-25 | [AI 能自我修正嗎？從 Decoding、Workflow 到 Reasoning 的技術發展整理](技術講座/20260425_李宏毅_AI自我修正Decoding到Reasoning.md) · ? · 88 分鐘
 - 2026-04-12 | [Harness Engineering：有時候語言模型不是不夠聰明，只是沒有人類好好引導](技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md) · Harness Engineering · 92 分鐘
 - 2026-06-27 | [Z.AI 與中國開源時刻：GLM 5.2、Anthropic 切斷風暴、企業 AI 採用新座標](技術講座/20260627_CNBC_ZAI_Chinese_OpenSourceMoment.md) · CNBC 主持人 + Gabe Pereyra（Harvey 共同創辦人，前 DeepMind/Meta）+ Aaron Pressman（CNBC 科技記者）+ Stacy Rasgot（Bernstein 半導體分析師）· 52 分 19 秒
+
+- 2026-04-20 | [Stanford CS336 Language Modeling from Scratch — Lecture 5：GPUs、TPUs 與 Flash Attention 加速](技術講座/20260420_StanfordCS336_Lecture5_GPUsTPUs.md) · Percy Liang & Tatsu Hashimoto（Stanford CS 教授） · 1 小時 18 分 39 秒（4719s）
+- 2026-04-15 | [Stanford CS336 Language Modeling from Scratch — Lecture 4：線性 Attention、Mamba 與 Gated DeltaNet](技術講座/20260415_StanfordCS336_Lecture4_AttentionAlternatives.md) · Percy Liang & Tatsu Hashimoto（Stanford CS 教授） · 1 小時 26 分 20 秒（5180s）
+- 2026-04-15 | [Stanford CS336 Language Modeling from Scratch — Lecture 3：Transformer Architectures（RMSNorm、SwiGLU、RoPE）](技術講座/20260415_StanfordCS336_Lecture3_Architectures.md) · Percy Liang & Tatsu Hashimoto（Stanford CS 教授） · 1 小時 29 分 14 秒（5354s）
+- 2026-04-14 | [Stanford CS336 Language Modeling from Scratch — Lecture 2：PyTorch 資源帳戶與 Roofline 模型](技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md) · Percy Liang & Tatsu Hashimoto（Stanford CS 教授） · 1 小時 17 分 25 秒（4645s）
+- 2026-04-14 | [Stanford CS336 Language Modeling from Scratch — Lecture 1：Roadmap 與 BPE Tokenization](技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md) · Percy Liang & Tatsu Hashimoto（Stanford CS 教授） · 1 小時 19 分 22 秒（4762s）
 
 ### 🛠️ **編碼工具 / Agent 工程實踐**（14 支）
 
@@ -281,6 +292,12 @@
 <a id="by-speaker"></a>
 ## 👥 按講者
 
+- **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-20 | [Lecture 5：GPUs、TPUs 與 Flash Attention 加速](技術講座/20260420_StanfordCS336_Lecture5_GPUsTPUs.md) · 1 小時 18 分 39 秒（4719s）
+- **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-15 | [Lecture 4：線性 Attention、Mamba 與 Gated DeltaNet](技術講座/20260415_StanfordCS336_Lecture4_AttentionAlternatives.md) · 1 小時 26 分 20 秒（5180s）
+- **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-15 | [Lecture 3：Transformer Architectures（RMSNorm、SwiGLU、RoPE）](技術講座/20260415_StanfordCS336_Lecture3_Architectures.md) · 1 小時 29 分 14 秒（5354s）
+- **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-14 | [Lecture 2：PyTorch 資源帳戶與 Roofline 模型](技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md) · 1 小時 17 分 25 秒（4645s）
+- **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-14 | [Lecture 1：Roadmap 與 BPE Tokenization](技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md) · 1 小時 19 分 22 秒（4762s）
+
 - **陳文茜** · 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 48 分 36 秒
 - **陳文茜** · 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒
 - **Angelos（Apple MLX team 工程師）** · 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · 13 分 26 秒（HTML-Video-Page）
@@ -354,4 +371,4 @@
 
 ---
 
-*最後更新：2026-07-03 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 87 支內容*
+*最後更新：2026-07-04 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 87 支內容*

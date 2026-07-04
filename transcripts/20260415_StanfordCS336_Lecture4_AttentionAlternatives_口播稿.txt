@@ -1,0 +1,23 @@
+CS336 第四講由 Tatsu Hashimoto 主講,深入兩個進階主題:Attention Alternatives 與 Mixture of Experts。開場 Tatsu 點出現代 LLM 的核心矛盾:人們想要更長 context——agentic coding、多輪對話、長文件處理——但標準 softmax attention 是 n 平方計算量,sequence 越長成本越高。所以業界嘗試各種線性時間 attention 方案;然而沒有任何純線性方案在 frontier scale 證明 standalone work,所有大規模成功的方案都是 hybrid。
+
+線性注意力的基本想法是用 kernel trick 把 softmax 改掉。原本的 softmax(QK transpose)V 是 n 平方;線性版本透過把 softmax 換成 element-wise 的 phi(Q) phi(K) transpose,然後用矩陣乘法結合律改成 phi(Q) 乘 phi(K) transpose V,計算量降到 O(n)。問題是沒有 softmax 的尖峰銳化,attention scores 變得太平滑,表達力下降。MiniMax M1 用 7:1 hybrid——七層線性加一層 softmax——證明純線性方案在 frontier 規模還不行。
+
+Mamba 系列由 Albert Gu 與 Tri Dao 提出,核心是把線性 attention 加上一個 input-dependent gate γ_t。γ_t 不是 state-dependent,只依賴當前輸入,決定要保留多少 state 到下一步。這個設計受 LSTM 啟發,但因為 gate 不依賴 state,所以保留了 parallel 與 recurrent 形式的 duality——訓練用 parallel form 跑快,inference 用 recurrent form 省 KV cache。NeMo Tron 3 用 Mamba 2 與 softmax attention 交替,在 large context 下 throughput 表現優異。
+
+Gated DeltaNet 是 Mamba 2 的進化版,加了第二個 input gate β_t。β_t 是 no input gate,若為零代表當前 token 不寫入 state。兩個 gate 的設計哲學與 LSTM 一致,差別在 DeltaNet 的 update 不是簡單的 1 減 β_t,而是投影掉當前 key 方向,避免重複寫入。Qwen 3.5 大規模 scale up 驗證了 Gated DeltaNet 在 production 可用。
+
+進入 MoE 主題。Tatsu 一句話總結:MoE 是更高效的 MLP。具體做法是把一個大 FFN 切成 N 個相同大小的小 FFN,router 動態選 K 個。每個 forward backward 只用 K 個 FFN,active parameters 維持小,但 total parameters 增加數倍。為什麼流行?因為同樣 FLOPs 下模型明顯更強。Fedus et al. 2022 的 Switch Transformer 證明 experts 越多 test loss 越低;Olmo paper 顯示同樣 training compute,MoE 訓練時間約兩倍快於 dense。DeepSeek V2 是 dense 轉 MoE 的典範,active parameters 更少但 MMLU 更強。
+
+Routing 機制方面,Top-K 是業界事實標準——每個 expert 一個 weight vector,用內積算分數,softmax 後取最高的 K 個。Switch Transformer、GShard、Grok、Mistral、DeepSeek 全部用這個機制。Hash-based routing 是早期 baseline,但 deployment 罕用;RL 學 routing 啟發性大但 overhead 過高;linear assignment 計算太貴未在 scale 上驗證。
+
+DeepSeek MoE 還加入 shared experts 設計——一組 expert 永遠啟動、bypass router,處理通用模式;另一組 routed experts 動態選擇。把大 expert 切成更細粒度,搭配 shared expert,ablation 顯示在 TriviaQA、NQ 等任務有顯著提升。
+
+Expert parallel 是 MoE 提供的第四個平行化軸。把不同 expert 放不同 device,token 透過 router 分派,等於多一個維度可以切模型。但 trade-off 是要付 communication cost——activation 在 device 間傳輸。是否 net win 取決於 topology 與 workload。
+
+MoE 訓練的最大問題是 expert collapse。Router 用 gradient descent 會 rich gets richer,被選中的 expert 拿到更多 gradient,權重變強,更容易被選中,最後跑贏全部。Switch Transformer 用 auxiliary loss 解決:L 等於 F 乘 P,F 是 fraction of tokens,P 是 total probability mass。直觀理解是對熱門 expert 施加負 gradient,推下 probability mass。雖不是 first-principles 推導,但 penalty proportional to fraction 邏輯清晰。
+
+DeepSeek 進一步加入 per-device balance,確保每張 device 都滿載。DeepSeek V3 用 per-expert bias term 加 online learning trick 取代部分 auxiliary loss,但仍需 balance loss 防 extreme imbalance。Olmo paper 做了精彩 ablation——移除 load balancing loss 後 loss 顯著上升、expert utilization 崩盤,幾乎所有 token 跑到兩個 expert。這證實 load balancing loss 是必要之惡,目前沒有 fully differentiable 的替代方案。
+
+中國 MoE 生態值得關注。Qwen 1.5 MoE 早期成功——2.7B active parameters 超越許多 7B dense;DeepSeek MoE 系列持續引領;Qwen 3.5 用 Gated DeltaNet 推進架構。西方 open-source MoE 主要是 Llama 4 與 GPT-OSS,但整體而言西方 open-source MoE 進展放緩。
+
+一句話總結:線性 attention 在 frontier scale 上無法 standalone work,hybrid 是唯一實戰方案。MoE 是更高效的 MLP,但訓練必須靠 load balancing loss 等啟發式技巧防止 expert collapse,沒有 silver bullet,只有 carefully tuned heuristics。
