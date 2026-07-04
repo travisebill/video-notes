@@ -1,0 +1,19 @@
+Stanford CS336「Language Modeling from Scratch」Lecture 6 由共同授课教授 Tatsu Hashimoto 单独主讲，是 Lecture 5「GPUs、TPUs 概论」的延伸,深入 GPU kernel 编程的实作细节。本讲的轴心是 Triton 这套 Pythonic kernel 编程框架,以及它如何让研究者跳过 CUDA 的硬体细节、直接写高效能运算。
+
+开场 Tatsu 先回顾 Lecture 5 的重点——GPU 高阶概览、roofline model、Flash Attention 的 FlashAttention-2 细节——然后指出 Lecture 6 与 Lecture 7 是 Lecture 5 的延伸:本周讲单 GPU 的 kernel 编程,下周进入多 GPU 程式设计。Stanford CS336 把 systems 部分集中成「连续三堂」,Lecture 5 概论、Lecture 6 单 GPU、Lecture 7 多 GPU,显示这是整门课的 systems 主轴。
+
+Lecture 6 第一个主题是 GPU architecture 深入,特别是 memory hierarchy。NVIDIA GPU 从 A100 到 H100 到 B200 演进,但 SM 数量大致维持在 100 到 200 个,真正的改进在每个 SM 变强。每个 SM 内含约 65000 个 registers、L1 cache、以及 shared memory——其中 shared memory 与 L1 cache 是同一块硬体的不同 view,程式设计师可以控制 shared memory 的使用方式,但不能控制 L1。这种「同一硬体、两个 view」的设计是 CUDA 编程的核心抽象。
+
+Tatsu 接著把 memory hierarchy 从最快到最慢排成四个层级:registers 最快,每个 SM 约 65000 个;L1 cache 略慢,与 shared memory 共用;L2 cache 更慢,但整个 chip 共享;HBM(High Bandwidth Memory)最慢,容量最大(GB 等级)。频宽与容量呈反比——HBM 虽最慢,但 8 TB/s 的频宽仍是高速记忆体。Tatsu 强调,写高效 GPU kernel 的关键不是「记忆体大」,而是「对的资料放在对的记忆体层级」。
+
+Lecture 6 第二个主题是为什么选 Triton。Tatsu 直接点明:Triton 是由训练 transformer 的人设计的,所以任何涉及 transformer 的运算——attention、matmul、layer norm——都会比通用 DSL 更容易上手。这是一种「inductive bias」:每个语言都有自己的设计偏见,让某些事情简单、某些事情困难。CUDA 的 inductive bias 是「给系统程式设计师最大控制权」,所以 thread block 设计、shared memory 同步都要手写;Triton 的 inductive bias 是「给研究者抽象但保留效能」,所以这些细节自动处理掉。
+
+Triton 的替代方案是 Lecture 6 的 Q&A 主题之一。Tatsu 列举 PTX(NVIDIA 的 assembly 指令集,极致效能但极难写)、ThunderKittens、CUTE 等其他 DSL。他强调每个语言有不同的 inductive bias,没有绝对好坏——研究者应该根据自己的需求选择。
+
+Lecture 6 第三个主题是 Triton kernel 编程的五个由简入难范例。第一个是 element-wise kernel,每个 thread 处理一个元素,不需要 shared memory 同步,纯粹从 HBM 读、计算、写回 HBM。第二个是 reduction over a row,把一列元素 reduce 成一个值,需要 thread block 内的同步,开始用到 shared memory。第三个是 reduction 但跨多列,thread block 配置更复杂,并开始讨论 occupancy(每个 SM 同时能跑几个 thread block)。第四个是 baby tiling,第一次引入 tile 概念,把矩阵切成小块配合 shared memory 提升 cache locality,为 matmul 做准备。第五个是 matmul——Tatsu 称之为「the canonical example」,双层 tiling 是高效 GPU matmul 的标准模式。
+
+Lecture 6 结尾 Tatsu 做单 GPU 程式设计的小结,强调 Triton 把 CUDA 的 thread block / shared memory / tiling 抽象成 Pythonic 操作,让研究者聚焦在演算法层级的权衡;但仍要懂 memory hierarchy 才能写出真正高效的核心。下周 Lecture 7 进入 multi-GPU programming。
+
+Q&A 还触及一个常见问题:高维 tensor 应该一次 load 全部,还是分批处理?Tatsu 给的答案很开放——「看 computation 性质,没有 abstract 答案」,建议 offline 讨论。这种「看情况」的答案在 systems topic 很常见,因为硬体效能高度依赖 access pattern 与 cache locality,没有 free lunch。
+
+整堂 Lecture 6 显示 Tatsu 的教学风格:不回避硬体细节(SM、register、shared memory 都明确谈),但用 Triton 把这些细节抽象化,让学生可以在「不写 CUDA」的前提下,理解高效 GPU kernel 的设计原理。这种「抽象 + 透明」的平衡,是 CS336 systems 主轴的核心方法论。

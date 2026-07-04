@@ -1,0 +1,11 @@
+Stanford CS336「Language Modeling from Scratch」Lecture 7 由共同授課教授 Tatsu Hashimoto 主講,延續 Lecture 6 的單 GPU Triton kernel 編程,正式進入多 GPU 程式設計的第一個主題——Data Parallel 與 ZeRO。
+
+開場 Tatsu 先點出現代 LLM 規模帶來的硬限制:70B 模型以 fp16 表示需要約 140GB 記憶體,單張 NVIDIA H100 的 80GB 根本裝不下。這不是「以後會更好」的問題,而是「現在就需要解法」的工程現實。Tatsu 介紹三種主要的平行策略:Data Parallel、Tensor Parallel、Pipeline Parallel,並指出本週 Lecture 7 與下週 Lecture 8 將分兩次講完——本週講 Data Parallel,下週講 Tensor / Pipeline Parallel。
+
+Data Parallel 是最直觀的多 GPU 訓練策略:每個 GPU 持有完整模型副本,分別處理不同的 mini-batch,各自計算 local gradient,然後透過 all-reduce 通訊原語同步所有 GPU 的 gradient。每個 GPU 用同步後的 gradient 更新本地參數,完成一輪訓練。從程式設計視角看,Data Parallel 與單 GPU 訓練幾乎相同,只多了一個 all-reduce 通訊——這是它最大的優勢,也是它被廣泛採用的原因。
+
+但 Data Parallel 有明顯的劣勢:每個 GPU 都要儲存完整的模型參數、optimizer state(Adam 的兩個狀態量)、gradient。對一個 7B 模型來說,單是 Adam 的兩個狀態量就需要 28GB,這在訓練時極為浪費。ZeRO——Zero Redundancy Optimizer——就是為了解決這個冗餘問題而設計的。
+
+ZeRO 把訓練狀態分成三個 stage 逐步消除冗餘。Stage 1 只對 optimizer state 做分區,每個 GPU 只持有 1/N 的 Adam states,記憶體立刻節省約 2x。Stage 2 加上 gradient 分區,再多節省 1x。Stage 3 連 parameter 也分區,每個 GPU 只持有 1/N 的全部狀態——但每次 forward 與 backward 都需要 all-gather 參數,trade 一部分通訊成本換來最大的記憶體節省。實務上,ZeRO Stage 3 + FSDP(Fully Sharded Data Parallel)是 PyTorch 訓練 13B 以上模型的標準配置;DeepSpeed 的 ZeRO-Infinity 更進一步把狀態卸載到 NVMe,讓訓練 32B、70B 甚至更大模型成為可能。
+
+Lecture 7 的核心 takeaway 是:Data Parallel 是最簡單、最通用的多 GPU 訓練策略,但它的記憶體冗餘會隨模型大小快速成長;ZeRO 三個 stage 是消除冗餘的漸進方案,Stage 3 + FSDP 是現代 PyTorch 訓練大型模型的事實標準。下週 Lecture 8 將進入更進階的策略——當 ZeRO 仍然不夠時,如何把單個模型本身切到多個 GPU。

@@ -1,0 +1,15 @@
+Stanford CS336「Language Modeling from Scratch」Lecture 9 由 Percy Liang 与 Tatsu Hashimoto 共同主讲,是整门课从「systems 主题」转向「设计权衡主题」的关键节点。本讲的轴心是 Scaling Laws——一套用幂律函数描述 LLM loss 随模型大小与训练资料量变化的数学模型,以及它对现代 LLM 训练策略的深远影响。
+
+开场 Tatsu 点出 Scaling Laws 的实务价值:LLM 训练成本极高,单一个 70B 模型的完整训练可能要花费 100M USD,绝对不能靠 trial and error 来决定模型大小与训练资料量的配置。Scaling Laws 提供一个「事前设计指南」——从小模型推算大模型表现,在动工之前就能预测哪种配置最划算。这是 LLM 研究的关键方法论。
+
+Kaplan et al.(OpenAI)2020 是 Scaling Laws 的开山之作。他们训练了一系列不同大小、不同训练资料量的模型,用 regression 拟合出 L(N, D) = (N_c/N)^α + (D_c/D)^β + L_∞ 的幂律关系——loss 是模型大小 N 与训练 tokens D 各自幂律贡献的加总。Kaplan 的核心结论是:给定训练算力,模型大小 N 应该快速 scaling,而训练 tokens D 相对不重要。具体来说,Kaplan 建议 70B 模型应该训练在 280B tokens 上——这个建议影响了 GPT-3 等模型的训练策略。
+
+但 Hoffmann et al.(DeepMind)2022 的 Chinchilla paper 重新检验了 Kaplan 的结论,并提出重大修正。Chinchilla 更严格地控制了训练算力 C = 6ND 的变化范围,在更广泛的 N × D combinations 上跑实验,得出截然不同的结论:N_opt ∝ C^0.5, D_opt ∝ C^0.5——模型大小与训练 tokens 同等重要 scaling,每 2x 算力应该分配为模型 1.41x、tokens 1.41x。应用到 70B 模型,Chinchilla 建议训练资料应该是 ~1.4T tokens——大约是 Kaplan 建议的 4.5 倍。
+
+Chinchilla 的结论震撼了整个 LLM 社群,所有主要实验室都重新调整训练策略——更多资料、更小模型、更长训练。Kaplan 2020 的「scale 模型优先」被 Chinchilla 2022 的「等比 scale」取代,成为现代 LLM 训练的共识。
+
+Lecture 9 也讨论 Scaling Laws 的设计含义。Compute-optimal frontier 是给定算力 C 下,能最小化 loss 的 (N, D) 组合——落在 frontier 上的模型是 chinchilla-optimal。但 inference-optimal 模型——例如 GPT-4——可能选择 over-parameterization(模型远大于 compute-optimal 点),原因是推论成本会被大量使用者 amortize,过参数化换来的 emergent abilities 值得多花的训练算力。
+
+Scaling Laws 也有例外:Loss 下降不代表所有能力都 gain——few-shot learning、chain-of-thought reasoning 等 emergent abilities 只在特定 scale 才会出现。资料品质也影响 scaling:过滤后的高品质资料 scaling 表现优于未过滤的资料,这让 Scaling Laws 的纯粹幂律关系变得复杂。
+
+整堂 Lecture 9 的核心 takeaway:Kaplan 2020 开创了 Scaling Laws,Chinchilla 2022 修正并重新定义了模型大小与训练资料的最佳分配——同等算力下,小模型加多资料永远胜过大模型加少资料。Compute-optimal frontier 是训练设计的指南,但 inference-optimal 可能选择 over-parameterization 做为 trade-off。Scaling Laws 不是完美的预测,而是用于做粗略的 capacity planning——理解它的极限,比把它当真理更重要。

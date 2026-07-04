@@ -1,0 +1,17 @@
+Stanford CS336「Language Modeling from Scratch」Lecture 10 由 Percy Liang 與 Tatsu Hashimoto 共同主講,是 Lecture 5-9 systems 主題的延伸,從「模型如何訓練」轉向「模型如何使用」——Inference。LLM inference 有獨特的工程權衡:訓練算力是一次性 amortized over 整個 training run,但 inference 算力是 per-request,必須在「單一請求的延遲」與「每秒能處理多少請求」之間權衡。
+
+開場 Tatsu 點出 inference 與 training 的關鍵差異。Training 算力是事前一次性投入,即使一個 run 燒掉 100M USD 也是「過去式」,可以承受高算力配置。但 inference 算力是 per-request——使用者每發一個 prompt,提供者就要付 GPU time,因此必須極度優化。三個核心指標主導 inference 的設計:Latency(單一請求的 time-to-first-token + per-token latency)、Throughput(每秒能處理多少 requests 或 tokens)、Memory(GPU 記憶體被 KV cache 吃掉的比例)。
+
+LLM 生成 token 的標準方式是 autoregressive decoding——給定已生成的 token 序列,模型計算下一個 token 的機率分布,然後取樣或取 argmax,加到序列尾端,再重複這個過程。每次 forward 都要跑完整個 sequence,但事實上 K/V projection 在每一步都可以重用——這就是 KV Cache 的核心想法。實務上,KV Cache 的記憶體佔用是 inference 的主要瓶頸:一個 70B 模型加上 8K context 加上 batch 等於 32,KV Cache 可能吃掉 100GB 以上的 GPU 記憶體,甚至比模型本身還大。
+
+Speculative Decoding 是另一個 inference 加速技術:用一個小模型(例如 7B)先生成 K 個 draft tokens,然後用大模型(例如 70B)一次 forward 驗證 K 個 draft tokens 是否接受。當 draft model 的接受率高時,可以一次生成多個 token,加速 2 到 3 倍。但這個方法的限制是:hard reasoning task 的 draft 接受率較低,加速效果有限;此外還需要額外的小模型部署成本。
+
+Continuous Batching 是現代 inference engine 的關鍵技術。傳統的 Static Batching 把多個 requests 包成一個 batch,等所有 requests 都完成才釋放 GPU——長 request 會卡住整個 batch,造成 GPU 閒置浪費。Continuous Batching 反過來:每個 decode step 都接新 requests、或換掉完成的 requests,GPU 永遠有工作。vLLM(UC Berkeley 開源 inference engine)把這個概念推到 production,基準測試顯示相比 static batching 可提升 10 到 24 倍 throughput。
+
+PagedAttention 進一步優化 KV Cache 的記憶體使用。KV Cache 的問題是每個 request 的 seq_len 動態變化——生成過程中不斷增長,連續記憶體配置會造成 fragmentation。PagedAttention 把 KV Cache 切成 fixed-size pages,借鑑作業系統的 virtual memory paging 機制——block manager 追蹤每個 request 的 logical-to-physical page mapping。Beam search 與 parallel sampling 還可以共享 KV Cache pages,進一步節省記憶體。
+
+實務上,現代 inference framework 大多採用 continuous batching + PagedAttention 的組合。vLLM 是開創者,TGI(HuggingFace Text Generation Inference)偏向 production deployment, TensorRT-LLM(NVIDIA) 追求極致效能但彈性較低, SGLang(Stanford 本身) 透過 RadixAttention 提供更進階的 KV cache reuse。
+
+整堂 Lecture 10 的核心 takeaway:Inference 的核心問題是 autoregressive decoding + KV Cache 記憶體瓶頸。Speculative Decoding 用小模型 draft + 大模型 verify 加速 2 到 3 倍;Continuous Batching 把 GPU 利用率從靜態提升到動態;PagedAttention 借鑑 OS paging 消除 KV Cache fragmentation。三者組合——vLLM 風格——相比 naive inference 可提升 20 到 30 倍 throughput,讓 LLM 的商業部署成為可能。
+
+Lecture 11 將進入 Evaluation——如何評估一個 LLM 的能力,以及 lm-evaluation-harness、HELM 等 benchmark 的設計理念。

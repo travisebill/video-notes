@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_videos": 94,
+    "total_videos": 99,
     "total_with_audio": 60,
     "total_with_transcript": 60,
-    "total_with_spoken_script": 65,
+    "total_with_spoken_script": 70,
     "speakers_count": 52,
     "categories_count": 4,
     "topics_count": 13,
-    "last_updated": "2026-07-04 21:43:37",
+    "last_updated": "2026-07-05 02:38:11",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -1568,6 +1568,32 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260512_Boris_Claude_Code創作者訪談.md"
     },
     {
+      "id": "20260511_StanfordCS336_Lecture10_Inference",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 10：Inference — KV Cache、Speculative Decoding 與 Continuous Batching】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 5130,
+      "duration_display": "1:25:30",
+      "video_url": "https://youtu.be/EfM546A79aM",
+      "lec_num": 10,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260511_StanfordCS336_Lecture10_Inference_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260511_StanfordCS336_Lecture10_Inference_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260511_StanfordCS336_Lecture10_Inference.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260511_StanfordCS336_Lecture10_Inference.md"
+    },
+    {
       "id": "20260510_李宏毅_AI跨越盧比孔河自我成長",
       "title": "【AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？】",
       "speaker": "李宏毅",
@@ -1618,6 +1644,110 @@
       },
       "note_path": "技術講座/20260507_小天fotos_DeepSeekV4槓桿與TokenEfficiency.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260507_小天fotos_DeepSeekV4槓桿與TokenEfficiency.md"
+    },
+    {
+      "id": "20260430_StanfordCS336_Lecture9_ScalingLaws",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 9：Scaling Laws — Kaplan、Chinchilla 與 Compute-Optimal Frontier】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 4677,
+      "duration_display": "1:17:57",
+      "video_url": "https://youtu.be/Q15rhEWZPQ4",
+      "lec_num": 9,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260430_StanfordCS336_Lecture9_ScalingLaws_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260430_StanfordCS336_Lecture9_ScalingLaws_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260430_StanfordCS336_Lecture9_ScalingLaws.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260430_StanfordCS336_Lecture9_ScalingLaws.md"
+    },
+    {
+      "id": "20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 8：Parallelism — Tensor、Pipeline 與 3D Parallelism】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 4810,
+      "duration_display": "1:20:10",
+      "video_url": "https://youtu.be/6-cXp-aOmdg",
+      "lec_num": 8,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline.md"
+    },
+    {
+      "id": "20260428_StanfordCS336_Lecture7_ParallelismDataParallel",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 7：Parallelism — Data Parallel 與 ZeRO】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 4862,
+      "duration_display": "1:21:02",
+      "video_url": "https://youtu.be/SzpOcwdIL0Y",
+      "lec_num": 7,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260428_StanfordCS336_Lecture7_ParallelismDataParallel_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260428_StanfordCS336_Lecture7_ParallelismDataParallel_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260428_StanfordCS336_Lecture7_ParallelismDataParallel.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260428_StanfordCS336_Lecture7_ParallelismDataParallel.md"
+    },
+    {
+      "id": "20260428_StanfordCS336_Lecture6_KernelsTritonXLA",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 6：Kernels、Triton 與 XLA】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 5201,
+      "duration_display": "1:26:41",
+      "video_url": "https://youtu.be/xnDHaNUvHBg",
+      "lec_num": 6,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260428_StanfordCS336_Lecture6_KernelsTritonXLA_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260428_StanfordCS336_Lecture6_KernelsTritonXLA_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260428_StanfordCS336_Lecture6_KernelsTritonXLA.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260428_StanfordCS336_Lecture6_KernelsTritonXLA.md"
     },
     {
       "id": "20260425_李宏毅_AI自我修正Decoding到Reasoning",
