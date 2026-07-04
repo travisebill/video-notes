@@ -1,0 +1,15 @@
+Stanford CS336 Lecture 15 由 Percy Liang 主講,是從 pre-training 進入 post-training 的轉折點。主題是「從 GPT-3 到 ChatGPT」的旅程。Pre-training 可以做 souped-up GPT-3,但 GPT-3 的 utility 有限。ChatGPT 是 amazing——能處理 long programmatic prompts、instruction following;後者是 remarkable 的能力,GPT-3 時代 fine-grained control 幾乎不可能。
+
+Lecture 15 強調 algorithms 不 secret;secret 是 data。Scale AI 內部 leak 顯示 competitive dynamics——為什麼 GPT-4 比較好?Need to reverse engineer, get annotators to produce responses more detailed than GPT-4。
+
+第一個主題是 SFT data 演進。FLAN(2021)是早期 instruction tuning dataset,概念聰明——把 NLP benchmarks(Enron emails、CNN/Daily Mail summarization)轉成 instruction format;Dataset 是 enormous。但 drawback 是 unnatural——summaries 很短、常 hallucinated。後來發現不需要那麼多 data——strong pre-trained model 可以用 very few high quality examples。
+
+Alpaca(2023)蒸餾 ChatGPT traces 為 input-output pairs;數量從 FLAN 的 huge 變 small 但 still works。Open Assistant、HelpSteer 是高 quality human-collected data;風格差異大——ChatGPT 太 chatty,有些偏 formal concise。AlpacaEval 顯示 stylistic preferences 大幅變化但 standard benchmarks 變化小,style control 不等於 capability control。
+
+Two-phase training(MiniCPM 為例)是 modern 趨勢:First phase 是 standard pre-training;Second phase(decay/mid-training)切換到 high quality 與 chatty data(Stack Exchange QA、Ultra Chat、SFT data)。Base model 概念已模糊化——現在 release 的「base model」其實是 pre-trained on ultra chat 與各種 chat data sets。Pre-training 與 instruction tuning 的 boundaries「blurred very much」。
+
+第二個主題是 RLHF 兩階段。第一階段 SFT:demonstration data,fine-tune。第二階段 RL:shape behavior aligned with human preferences。Reward model 訓練在 pairwise human preferences 上——Bradley-Terry model:P(A preferred over B) = sigmoid(r(A) - r(B))。Algorithm 複雜度高:PPO 很 difficult,有 simpler variant(GRPO)在 assignments 用。
+
+第三個主題是 RLHF 的常見問題。第一是 over-optimization:Reward 越高不等於真實表現越好,模型 exploit reward holes;需要 early stopping 或 KL penalty。第二是 mode collapse:RL models 集中於少數 outputs,RLHF 模型 no longer modeling a distribution。第三是 calibration 問題:RLHF 後 models are uncalibrated,OpenAI 在 GPT-4 era 公開 plot 顯示。這些對下週的 RLVR(entropy 與 exploration critical)很重要。
+
+Lecture 15 最終總結:post-training data collection 很 hard——a lot of it is getting good data。RLHF algorithms 複雜,PPO especially difficult,GRPO simpler variant works pretty well。Over-optimization 是大問題,從 RLHF 過渡到 RLVR 的原因——is there rewards where we won't over optimize,where we can dump compute and performance monotonically improves?Percy 的 punchline:RLVR 為什麼 so impactful——下一講會談。

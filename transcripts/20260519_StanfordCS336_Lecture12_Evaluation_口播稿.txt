@@ -1,0 +1,13 @@
+Stanford CS336 Lecture 12 由 Percy Liang 主講,是 Lecture 5 到 11 涵蓋 architecture、optimizer、kernels、parallelism、scaling laws、inference 後的主題轉進——從「如何訓練」轉向「訓練完怎麼知道模型好」。本週講 evaluation,下週講 data。Percy 開宗明義強調 evaluation 不只是機械化的送 prompt、看 accuracy——它形塑 AI 發展方向,是 deep topic 也是 important topic。Evaluation 設定 North Stars,所有模型開發者(無論 open 或 closed)都用 evaluation 衡量進度。Evaluation 的核心難題是把「模型應有的對話或推理行為」這個抽象概念,轉化成 concrete metric。
+
+Lecture 12 第一個主題是 perplexity。Perplexity 是 language model 在 test set 上的 geometric mean of inverse probability,是最 classical 的 metric,常被用於 scaling laws 因為它 smoothly varying with scale。但 perplexity 有 trust 問題——perplexity leaderboard 需要信任模型回傳的 logprob 是 valid distribution;下游任務就沒這問題,因為黑盒 LM 給 prompt 得 response 可以直接計算 accuracy。Perplexity summary:仍被廣泛使用,特別是 scaling laws;但要小心「模型可能給出 1 的機率永遠得 perplexity 0」的攻擊。
+
+第二個主題是 exam benchmarks,以 MMLU 與 HLE 為代表。MMLU 是 Massive Multitask Language Understanding,Hendrycks 2020 提出,涵蓋 57 個 subject 從高中到大學程度。Hendrycks 團隊「ahead of the curve」,在 GPT-3 時代就押 LM 是 general-purpose task solver,設計了這套 few-shot prompting 的評估。多年後 MMLU 已 saturated 到 90% 以上,驅動研究者設計更難的 benchmark。HLE 全名 Humanity's Last Exam,frontier 級 benchmark,2026 仍只約 64.7% best models。Percy 指出 multiple choice 即使飽和也可以變難,但「multiple choice 限制可以問的問題種類」;exam-based benchmark 主要限制是沒捕捉 real-world usage——除了作弊,沒人會拿 HLE 問題給 LM。
+
+第三個主題是 chat benchmarks,核心是 Chatbot Arena。開放式問題(例如 beet salad 配什麼 herbs)沒有 ground truth,無法用 exact match。Chatbot Arena 的設計巧思:隨機訪客與兩個匿名模型對話,選出 A 較好 / B 較好 / 都好 / 都差,透過 pairwise comparison 數據計算 ELO rankings。但 human evaluator 有 stylistic bias:偏好 bullet-pointed lists 與 longer detail,這誘導 chatbot 學會特定語氣。更關鍵的是 engagement signals 不等於 capability improvement——可能 fool 自己以為模型變好。Percy 強調 style control 與 capability control 應該分開。
+
+第四個主題是 agentic benchmarks,以 Terminal-Bench、CyBench、MLE-bench 為代表。Terminal-Bench 是通用 computer terminal tasks,89 個 crowdsourced tasks 任務時間從 1 小時到 1 週;frontier 模型 top,agent scaffold 顯著影響 accuracy。CyBench 是 40 個 Capture-The-Flag 任務,agent 攻擊 server 拿 flag,早期最好模型約 10%,現在已 solved。MLE-bench 用 Kaggle competitions,處理 data、train models、submit。Percy 強調 agent scaffolds 非常重要,包含 explicit planning(不要 stream of consciousness)、to-do list with checking off、hierarchical delegation(master agent + sub-agents)、memory management(讀寫 file)、context engineering。
+
+第五個主題是 reasoning 與 safety benchmarks。Reasoning benchmarks 包含 math olympiad、theorem proving,評估方式包含 verifiable rewards(math 答案對錯)與 process-based evaluation。Safety benchmarks 涵蓋 harm categories、bias、toxicity、jailbreak resistance。
+
+Lecture 12 的最終結論非常務實:沒有 one evaluation to rule them all。使用者必須根據目標(用戶購買決策、研究者 policy、開發者回饋)選擇對應的 benchmark,並在 difficulty、realism、ecological validity、無 contamination 之間做取捨。Percy 的 punchline:永遠要明確宣告你的目標是什麼,選 trade-off。

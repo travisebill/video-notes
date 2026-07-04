@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_videos": 99,
+    "total_videos": 104,
     "total_with_audio": 60,
     "total_with_transcript": 60,
-    "total_with_spoken_script": 70,
+    "total_with_spoken_script": 75,
     "speakers_count": 52,
     "categories_count": 4,
     "topics_count": 13,
-    "last_updated": "2026-07-05 02:38:11",
+    "last_updated": "2026-07-05 03:25:20",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -1282,6 +1282,58 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260528_Adam_Bender_Software_Ecology_軟體生態學.md"
     },
     {
+      "id": "20260527_StanfordCS336_Lecture15_MidPostTraining",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 15：Mid-Training 與 Post-Training — SFT、RLHF 與 Reward Model 設計】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-05-27",
+      "note_date": "2026-05-27",
+      "duration_seconds": 4794,
+      "duration_display": "1:19:54",
+      "video_url": "https://youtu.be/2oH6PWPrYFo",
+      "lec_num": 15,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260527_StanfordCS336_Lecture15_MidPostTraining_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260527_StanfordCS336_Lecture15_MidPostTraining_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260527_StanfordCS336_Lecture15_MidPostTraining.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260527_StanfordCS336_Lecture15_MidPostTraining.md"
+    },
+    {
+      "id": "20260527_StanfordCS336_Lecture14_Data",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 14：Data — Filtering、Deduplication、Mixing 與 Synthetic Data】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-05-27",
+      "note_date": "2026-05-27",
+      "duration_seconds": 5086,
+      "duration_display": "1:24:46",
+      "video_url": "https://youtu.be/5sxHosTLPF8",
+      "lec_num": 14,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260527_StanfordCS336_Lecture14_Data_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260527_StanfordCS336_Lecture14_Data_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260527_StanfordCS336_Lecture14_Data.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260527_StanfordCS336_Lecture14_Data.md"
+    },
+    {
       "id": "20260526_開發者對談_AI代理Spec-Driven與GuardRails",
       "title": "【AI 代理開發實踐：Spec-Driven、Guard Rails 與軟體品質】",
       "speaker": "兩位資深軟體工程師，進行一場關於 AI Agent 開發工具與流程的深度技術對談",
@@ -1436,6 +1488,84 @@
       },
       "note_path": "技術講座/20260522_Tejas_AI_Harness.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260522_Tejas_AI_Harness.md"
+    },
+    {
+      "id": "20260519_StanfordCS336_Lecture13_DataSourcesDatasets",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 13：Data (Sources, Datasets) — 從網路到 Copyright 的完整 Pipeline】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-05-19",
+      "note_date": "2026-05-19",
+      "duration_seconds": 4921,
+      "duration_display": "1:22:01",
+      "video_url": "https://youtu.be/-qm0ln33G24",
+      "lec_num": 13,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260519_StanfordCS336_Lecture13_DataSourcesDatasets_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260519_StanfordCS336_Lecture13_DataSourcesDatasets_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260519_StanfordCS336_Lecture13_DataSourcesDatasets.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260519_StanfordCS336_Lecture13_DataSourcesDatasets.md"
+    },
+    {
+      "id": "20260519_StanfordCS336_Lecture12_Evaluation",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 12：Evaluation — 從 Perplexity 到 Agent Benchmarks】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-05-19",
+      "note_date": "2026-05-19",
+      "duration_seconds": 4714,
+      "duration_display": "1:18:34",
+      "video_url": "https://youtu.be/JpAxdTWQJxM",
+      "lec_num": 12,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260519_StanfordCS336_Lecture12_Evaluation_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260519_StanfordCS336_Lecture12_Evaluation_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260519_StanfordCS336_Lecture12_Evaluation.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260519_StanfordCS336_Lecture12_Evaluation.md"
+    },
+    {
+      "id": "20260519_StanfordCS336_Lecture11_ScalingLaws",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 11：Scaling Laws（進階） — Open-Source Frontier 與 Optimizer 細節】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-05-19",
+      "note_date": "2026-05-19",
+      "duration_seconds": 4623,
+      "duration_display": "1:17:03",
+      "video_url": "https://youtu.be/vTfEyOyzV9E",
+      "lec_num": 11,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260519_StanfordCS336_Lecture11_ScalingLaws_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260519_StanfordCS336_Lecture11_ScalingLaws_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260519_StanfordCS336_Lecture11_ScalingLaws.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260519_StanfordCS336_Lecture11_ScalingLaws.md"
     },
     {
       "id": "20260513_OpenClaw_Multi_Agent商業應用",
