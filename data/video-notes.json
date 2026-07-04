@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_videos": 89,
+    "total_videos": 99,
     "total_with_audio": 60,
     "total_with_transcript": 60,
-    "total_with_spoken_script": 60,
-    "speakers_count": 51,
+    "total_with_spoken_script": 70,
+    "speakers_count": 52,
     "categories_count": 4,
     "topics_count": 13,
-    "last_updated": "2026-07-03 22:04:54",
+    "last_updated": "2026-07-05 02:38:11",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -41,6 +41,7 @@
       "Moonshot",
       "Nick Hanauer（Amazon 第一位非家族投資人，創投） × Daniel Priestley（創業家 / 商業教練 /《Lifestyle Business Playbook》作者）",
       "OpenClaw 生態系的技術開發者，展示 OpenClaw 平台從底層的 Pi 框架一路到多代理商業應用的完整技術堆疊",
+      "Percy Liang, Tatsu Hashimoto",
       "PiotrIndyk",
       "Pooja Trivedi（Microsoft 架構師，主導 Windows on Linux 開發者體驗與 AI）／Craig（Microsoft PM，負責 WSL 與 Windows AI 工具）",
       "Ruben Casas（Postman Staff Engineer）",
@@ -1567,6 +1568,32 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260512_Boris_Claude_Code創作者訪談.md"
     },
     {
+      "id": "20260511_StanfordCS336_Lecture10_Inference",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 10：Inference — KV Cache、Speculative Decoding 與 Continuous Batching】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 5130,
+      "duration_display": "1:25:30",
+      "video_url": "https://youtu.be/EfM546A79aM",
+      "lec_num": 10,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260511_StanfordCS336_Lecture10_Inference_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260511_StanfordCS336_Lecture10_Inference_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260511_StanfordCS336_Lecture10_Inference.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260511_StanfordCS336_Lecture10_Inference.md"
+    },
+    {
       "id": "20260510_李宏毅_AI跨越盧比孔河自我成長",
       "title": "【AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？】",
       "speaker": "李宏毅",
@@ -1619,6 +1646,110 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260507_小天fotos_DeepSeekV4槓桿與TokenEfficiency.md"
     },
     {
+      "id": "20260430_StanfordCS336_Lecture9_ScalingLaws",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 9：Scaling Laws — Kaplan、Chinchilla 與 Compute-Optimal Frontier】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 4677,
+      "duration_display": "1:17:57",
+      "video_url": "https://youtu.be/Q15rhEWZPQ4",
+      "lec_num": 9,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260430_StanfordCS336_Lecture9_ScalingLaws_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260430_StanfordCS336_Lecture9_ScalingLaws_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260430_StanfordCS336_Lecture9_ScalingLaws.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260430_StanfordCS336_Lecture9_ScalingLaws.md"
+    },
+    {
+      "id": "20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 8：Parallelism — Tensor、Pipeline 與 3D Parallelism】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 4810,
+      "duration_display": "1:20:10",
+      "video_url": "https://youtu.be/6-cXp-aOmdg",
+      "lec_num": 8,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline.md"
+    },
+    {
+      "id": "20260428_StanfordCS336_Lecture7_ParallelismDataParallel",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 7：Parallelism — Data Parallel 與 ZeRO】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 4862,
+      "duration_display": "1:21:02",
+      "video_url": "https://youtu.be/SzpOcwdIL0Y",
+      "lec_num": 7,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260428_StanfordCS336_Lecture7_ParallelismDataParallel_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260428_StanfordCS336_Lecture7_ParallelismDataParallel_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260428_StanfordCS336_Lecture7_ParallelismDataParallel.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260428_StanfordCS336_Lecture7_ParallelismDataParallel.md"
+    },
+    {
+      "id": "20260428_StanfordCS336_Lecture6_KernelsTritonXLA",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 6：Kernels、Triton 與 XLA】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 5201,
+      "duration_display": "1:26:41",
+      "video_url": "https://youtu.be/xnDHaNUvHBg",
+      "lec_num": 6,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260428_StanfordCS336_Lecture6_KernelsTritonXLA_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260428_StanfordCS336_Lecture6_KernelsTritonXLA_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260428_StanfordCS336_Lecture6_KernelsTritonXLA.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260428_StanfordCS336_Lecture6_KernelsTritonXLA.md"
+    },
+    {
       "id": "20260425_李宏毅_AI自我修正Decoding到Reasoning",
       "title": "【AI 能自我修正嗎？從 Decoding、Workflow 到 Reasoning 的技術發展整理】",
       "speaker": "李宏毅",
@@ -1643,6 +1774,136 @@
       },
       "note_path": "技術講座/20260425_李宏毅_AI自我修正Decoding到Reasoning.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260425_李宏毅_AI自我修正Decoding到Reasoning.md"
+    },
+    {
+      "id": "20260420_StanfordCS336_Lecture5_GPUsTPUs",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 5: GPUs, TPUs & Performance Engineering】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 4719,
+      "duration_display": "1:18:39",
+      "video_url": "https://youtu.be/izZba4UA7iY",
+      "lec_num": 5,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260420_StanfordCS336_Lecture5_GPUsTPUs_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260420_StanfordCS336_Lecture5_GPUsTPUs_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260420_StanfordCS336_Lecture5_GPUsTPUs.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260420_StanfordCS336_Lecture5_GPUsTPUs.md"
+    },
+    {
+      "id": "20260415_StanfordCS336_Lecture4_AttentionAlternatives",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 4: Attention Alternatives & Mixture of Experts】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 5180,
+      "duration_display": "1:26:20",
+      "video_url": "https://youtu.be/cKSwj_qZ8Jg",
+      "lec_num": 4,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260415_StanfordCS336_Lecture4_AttentionAlternatives_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260415_StanfordCS336_Lecture4_AttentionAlternatives_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260415_StanfordCS336_Lecture4_AttentionAlternatives.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260415_StanfordCS336_Lecture4_AttentionAlternatives.md"
+    },
+    {
+      "id": "20260415_StanfordCS336_Lecture3_Architectures",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 3: Architectures & Hyperparameters】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 5354,
+      "duration_display": "1:29:14",
+      "video_url": "https://youtu.be/lVynu4bo1rY",
+      "lec_num": 3,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260415_StanfordCS336_Lecture3_Architectures_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260415_StanfordCS336_Lecture3_Architectures_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260415_StanfordCS336_Lecture3_Architectures.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260415_StanfordCS336_Lecture3_Architectures.md"
+    },
+    {
+      "id": "20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 2: PyTorch (einops) & Resource Accounting】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 4645,
+      "duration_display": "1:17:25",
+      "video_url": "https://youtu.be/kuYAsz7zspQ",
+      "lec_num": 2,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md"
+    },
+    {
+      "id": "20260414_StanfordCS336_Lecture1_OverviewTokenization",
+      "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 1: Overview & Tokenization】",
+      "speaker": "Percy Liang, Tatsu Hashimoto",
+      "speaker_slug": "StanfordCS336",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-04-07",
+      "note_date": "2026-04-07",
+      "duration_seconds": 4762,
+      "duration_display": "1:19:22",
+      "video_url": "https://youtu.be/JuoVZkPBiKk",
+      "lec_num": 1,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260414_StanfordCS336_Lecture1_OverviewTokenization_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260414_StanfordCS336_Lecture1_OverviewTokenization_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md"
     },
     {
       "id": "20260412_李宏毅_Harness_Engineering駕馭工程",
