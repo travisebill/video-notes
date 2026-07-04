@@ -109,6 +109,17 @@
           <option value="1y">最近 1 年</option>
         </select>
       </label>
+
+      <!-- Course (B3 scheme 2026-07-05) -->
+      <label x-show="meta.courses && meta.courses.length > 0">
+        <small>課程</small>
+        <select x-model="filters.course" @change="applyFilters()">
+          <option value="">全部課程</option>
+          <template x-for="c in meta.courses" :key="c">
+            <option :value="c" x-text="c"></option>
+          </template>
+        </select>
+      </label>
     </section>
 
     <!-- Stats Bar -->
@@ -147,6 +158,12 @@
               <h4 style="margin:0;" x-text="video.title"></h4>
               <span class="duration-badge" x-show="video.duration_display" x-text="video.duration_display"></span>
             </div>
+            <p>
+              <small x-show="video.course_slug">
+                <span class="course-badge" x-text="video.course_slug"></span>
+              </small>
+              <span x-show="video.course_slug && video.lec_num"> ｜ Lecture <strong x-text="video.lec_num"></strong></span>
+            </p>
             <p>
               <small>
                 🎤 <span x-text="formatSpeaker(video.speaker_slug, video.speaker)"></span>
