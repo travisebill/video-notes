@@ -1,0 +1,13 @@
+台大資訊工程學系 2026 年春季「人工智慧導論」正式開課，這是 FAI 1.1 第一講「監督式機器學習之線性模型」。本影片由林軒田教授主講，約 10 分鐘，是整個 Machine Learning 章節的起點。
+
+從課程定位角度，這門課是上半學期 AI 基礎（Tree Search、Knowledge Representation）的延伸。下半學期將進入「現在比較主流」的 Data-Driven 方法——也就是 Machine Learning。整學期 schedule 規劃從 Linear Model 開始，依序進入 Deep Learning Model、Generative AI、Reasoning Model 與 Advanced Topic；本系 Final Project 在期末週展示。教科書採用兩本書：林軒田老師撰寫的《Learning from Data》是前半 ML 章節主要教材，後半 Data-Driven 為主的章節則用第二本。
+
+從 Lib-SVM Demo 角度，林軒田教授用一個經典的 2D 互動 Demo 切入。Lib-SVM 是林軒田老師與 Chih-Chung Chang 共同開發的 SVM 函式庫，知名程度類似今天的 PyTorch，是 SVM 領域使用最廣的工具之一。Demo 流程是在黑底畫面上點不同顏色的點（黃、藍、紅），Lib-SVM 會即時畫出分類邊界。
+
+從 Overfitting 直覺角度，Demo 刻意展示兩種對比。把模型複雜度調高，得到的分類線雖然把所有訓練點都分對，但形狀非常不自然——這就像學生死背考古題，相同題目會對但變形題就錯。把模型複雜度調回 0（Linear），分類線變成一條直線，雖然有幾個點分錯，反而更接近「通用」的真實分佈。這個對比預示了整個 ML 章節的核心張力：bias-variance tradeoff、overfitting 與 generalization。
+
+從 Linear Model 優勢角度，2D 平面上一條直線就是 Linear Model，n 維空間則是 hyperplane。線性模型的優點是：簡單、可解釋、計算快速、可當作 baseline。林軒田教授強調：業界 ML 實踐永遠從最簡單的 Linear 開始——先試 Linear，不行再升級到 non-linear。這與「先求有再求好」的工程哲學一致。
+
+值得注意的歷史細節：libSVM 是 2000 年代初台大資訊系林軒田老師實驗室的開源貢獻，至今仍是學術界與工業界 SVM 應用的標準工具之一。從教科書設計角度，《Learning from Data》由林軒田與 Caltech 的 Abu-Mostafa、Magdon-Ismail 合著，是少數能跨越學界與業界的 ML 入門教科書。
+
+一句話總結：FAI 1.1 用一個 10 分鐘的 libSVM Demo，把「為什麼簡單的 Linear Model 比複雜模型更接近真實分佈」這個 ML 核心直覺，刻進學生的腦海——這也是林軒田教授一貫的教學風格：先讓學生「看見」再讓學生「理解」，最後才進入數學推導。

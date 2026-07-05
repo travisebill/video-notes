@@ -268,12 +268,15 @@ def derive_course_slug(filename_stem: str) -> str | None:
     """從檔名推導 course slug（B3 scheme 2026-07-05）。
 
     Returns:
-        'Stanford CS336' / 'Harvard CS224' / None
+        'Stanford CS336' / 'Harvard CS224' / 'NTU 人工智慧導論' / None
     """
     if 'StanfordCS336' in filename_stem:
         return 'Stanford CS336'
     if 'HarvardCS224' in filename_stem or 'AdvancedAlgorithmsCS224' in filename_stem or 'HarvardCS224AdvancedAlgorithms' in filename_stem:
         return 'Harvard CS224'
+    # NTU FAI (2026-07-05)：用 '林軒田' / '陳玉農' 等 NTU 教授 + FAI 章節編號
+    if '林軒田' in filename_stem or '陳玉農' in filename_stem or '陳上則' in filename_stem or 'NTUFAI' in filename_stem:
+        return 'NTU 人工智慧導論'
     return None
 
 

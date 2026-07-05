@@ -180,7 +180,7 @@
 - 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
 - 2026-04-23 | [Stanford 神經科學家：記不住夢境可能是大腦在警告你！](人物訪談/20260423_Eagleman_DreamsWarningSignals.md) · Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者） × Steven Bartlett · 1 小時 33 分 18 秒（YouTube 英文自動字幕 → 繁中翻譯）
 
-### 🧠 **AI / LLM 學術與方法論**（21 支）
+### 🧠 **AI / LLM 學術與方法論**（41 支）
 
 - ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · 進階上下文工程 · ?
 - 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · Ryan Lopopolo（OpenAI Member of Technical Staff）· 46 分 20 秒
@@ -217,6 +217,13 @@
 - 2026-04-15 | [Stanford CS336 Language Modeling from Scratch — Lecture 3：Transformer Architectures（RMSNorm、SwiGLU、RoPE）](技術講座/20260415_StanfordCS336_Lecture3_Architectures.md) · Percy Liang & Tatsu Hashimoto（Stanford CS 教授） · 1 小時 29 分 14 秒（5354s）
 - 2026-04-14 | [Stanford CS336 Language Modeling from Scratch — Lecture 2：PyTorch 資源帳戶與 Roofline 模型](技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md) · Percy Liang & Tatsu Hashimoto（Stanford CS 教授） · 1 小時 17 分 25 秒（4645s）
 - 2026-04-14 | [Stanford CS336 Language Modeling from Scratch — Lecture 1：Roadmap 與 BPE Tokenization](技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md) · Percy Liang & Tatsu Hashimoto（Stanford CS 教授） · 1 小時 19 分 22 秒（4762s）
+- 2026-04-29 | [NTU 人工智慧導論 — FAI 1.6：Logistic Regression 超實用的邏輯迴歸你真的懂嗎](技術講座/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎.md) · 林軒田（NTU CSIE 教授） · 23:14
+- 2026-04-29 | [NTU 人工智慧導論 — FAI 1.5：Linear Regression 國中就學過的線性迴歸你還記得嗎](技術講座/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎.md) · 林軒田（NTU CSIE 教授） · 18:24
+- 2026-04-29 | [NTU 人工智慧導論 — FAI 1.4：Execution of Machine Learning 機器要開始學習囉](技術講座/20260429_NTUFAI_FAI1.4_機器要開始學習囉.md) · 林軒田（NTU CSIE 教授） · 13:34
+- 2026-04-29 | [NTU 人工智慧導論 — FAI 1.3：Machine Learning Recipe 請按照步驟來用機器學習](技術講座/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.md) · 林軒田（NTU CSIE 教授） · 24:52
+- 2026-04-29 | [NTU 人工智慧導論 — FAI 1.2：What is Machine Learning? 你不能到現在還不懂甚麼是機器學習](技術講座/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.md) · 林軒田（NTU CSIE 教授） · 26:19
+- 2026-04-29 | [NTU 人工智慧導論 — FAI 1.1：Linear Models for Supervised ML 監督式機器學習之線性模型](技術講座/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.md) · 林軒田（NTU CSIE 教授） · 9:49
+- 2026-03-11 | [NTU 人工智慧導論 — FAI 0：課程介紹與規定](技術講座/20260311_NTUFAI_FAI0_課程介紹與規定.md) · 陳玉農 + 陳上則（NTU CSIE 教授共同授課） · 17:48
 
 ### 🛠️ **編碼工具 / Agent 工程實踐**（14 支）
 

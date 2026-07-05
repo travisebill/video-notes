@@ -1,0 +1,15 @@
+台大資訊工程學系 2026 年春季「人工智慧導論」FAI 1.5「國中就學過的線性迴歸你還記得嗎」，由林軒田教授主講，約 18.5 分鐘。本講正式進入 Linear Regression 的詳細推導，把 Binary Classification 升級為連續值預測。
+
+從 Classification 到 Regression 角度，林軒田教授指出兩者的關鍵差異。Classification 的 Output 是 binary（yes / no），用 Sign function 切兩邊；Regression 的 Output 是連續值（0~100 分），直接用 $\mathbf{w}^T \mathbf{x}$ 輸出。Linear Model 兩者通用——$\mathbf{w}^T \mathbf{x}$ 是 score，sign($\mathbf{w}^T \mathbf{x}$) 是 classification。Linear Regression 在工業界最常用，從預測股價、預測銷售、預測房價到預測點擊率無所不包。給申請者履歷輸出 0~100 分，比 binary 適合 / 不適合實用得多——可以排名、可以 threshold 切換。
+
+從 Error Measure 角度，Regression 用 Squared Error——預測值減真實值的平方。為什麼是 Squared 而不是 Absolute？因為 squared 可微、好處理、放大差距。Pointwise Error 對每個樣本算 error 加起來平均，In-Sample Error $E_{in}$ 就是 training data 上的 average squared error，目標是 minimize $E_{in}$ 找出最佳 $\mathbf{w}^*$。
+
+從 Closed-form Solution 角度，Linear Regression 是 ML 中少數有 Closed-form Solution 的模型。把 $E_{in}$ 寫成 $\mathbf{w}$ 的二次式，對 $\mathbf{w}$ 微分等於零，解得 $\mathbf{w}^* = (X^T X)^{-1} X^T \mathbf{y}$——這是 pseudo-inverse 形式。數學步驟是：把 N 個樣本的 $(\mathbf{x}_n, y_n)$ 排成矩陣 X（N 乘 d）和 y（N 乘 1），$E_{in}(\mathbf{w})$ 等於 $\frac{1}{N}$ 乘上 $X\mathbf{w}$ 減 y 的範數平方；對 $\mathbf{w}$ 取梯度等於零，解得最佳 $\mathbf{w}^*$。優點是「一步到位」，不需要 PLA 那樣疊代微調；缺點是 $X^T X$ 可能 singular（當 features linearly dependent 時），需要 pseudo-inverse 處理。這也是統計學中最小平方法的標準解——國中數學就學過。
+
+從 Linear Regression 與 Linear Classification 關係角度，兩者 Hypotheses Set 都是所有 hyperplane 集合。差別只在 Error Measure（Squared vs 0/1）與最後切分方式（連續 vs sign）。注意：用 Squared Error 訓練 Regression 後的 $\mathbf{w}$ 也可以用在 Classification 做 sign——這個 connection 顯示兩者其實是同一個 Hypotheses Set 下的不同任務。業界實務上很多 Classification 任務先用 Linear Regression 快速收斂到接近最佳解，再用 Logistic Regression 微調。
+
+從 ML 與統計的關係角度，Linear Regression 是國中數學的最小平方法、統計學的線性模型、ML 的基礎——三個領域在這個模型上交會。統計學觀點給定資料假設找出 $\mathbf{w}$ 的估計與信賴區間，強調 inference；ML 觀點找 $g$ minimize $E_{out}$，強調 prediction。兩者用相同的數學工具——最小平方、線性代數、機率——但目標不同。統計學的 model assumption 嚴格，必須常態分布、獨立同分布；ML 的假設較寬鬆。ML 從統計借用很多工具，但也發展出新的方法如 SVM、Neural Network；統計從 ML 獲得真實應用場景的靈感。兩者相輔相成。
+
+從工程實踐角度，Linear Regression 的 Closed-form Solution 在中小型資料集上非常實用——不需要 Learning Algorithm 的疊代收斂，計算成本可控。但對於大規模資料（百萬級樣本、高維度特徵），Closed-form 的 $X^T X$ inverse 計算成本太高，這時就需要 SGD（隨機梯度下降）或其他近似演算法。這也是 FAI 1.6 Logistic Regression 要用 Gradient Descent 的原因——Logistic 沒有 Closed-form Solution。
+
+一句話總結：FAI 1.5 用 Linear Regression 把 ML Recipe 完整跑一遍——從 Classification 升級為 Regression、用 Squared Error 量化誤差、用 Closed-form Solution 算出最佳 $\mathbf{w}^*$，最後用 ML 與統計的關係收束——這是 ML 從「算法」升級為「學科」的關鍵轉折。
