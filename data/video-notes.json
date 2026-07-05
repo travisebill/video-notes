@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 138,
-    "total_with_audio": 109,
-    "total_with_transcript": 83,
-    "total_with_spoken_script": 109,
-    "speakers_count": 56,
+    "total_videos": 140,
+    "total_with_audio": 111,
+    "total_with_transcript": 85,
+    "total_with_spoken_script": 111,
+    "speakers_count": 58,
     "categories_count": 4,
     "topics_count": 13,
     "courses": [
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-05 22:31:58",
+    "last_updated": "2026-07-06 00:11:52",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -45,6 +45,7 @@
       "Maya，Anthropic Applied AI 團隊成員。一半時間開發自家產品功能，一半時間協助客戶基於 Anthropic 模型建構產品與代理。",
       "Mo Gawdat — 前 Google X 首席商務長、《Scary Smart》《Solve for Happy》作者",
       "Moonshot",
+      "NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs；具體姓名影片未完整提及，需後續確認）",
       "Nick Hanauer（Amazon 第一位非家族投資人，創投） × Daniel Priestley（創業家 / 商業教練 /《Lifestyle Business Playbook》作者）",
       "OpenClaw 生態系的技術開發者，展示 OpenClaw 平台從底層的 Pi 框架一路到多代理商業應用的完整技術堆疊",
       "Percy Liang, Tatsu Hashimoto",
@@ -63,6 +64,7 @@
       "李宏毅",
       "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
       "林軒田（NTU CSIE 教授, Machine Learning Foundations Coursera 系列授課者）",
+      "林軒田（NTU CSIE 教授，Coursera《Machine Learning Foundations》系列授課者、《Learning from Data》共同作者）",
       "歐麗娟，台灣大學中文系教授，全台最受歡迎的中國古典文學課程講師之一",
       "自說自話的總裁",
       "蔡康永",
@@ -1470,6 +1472,33 @@
       },
       "note_path": "技術講座/20260608_MattPocock_teach_skill_個人化學習.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260608_MattPocock_teach_skill_個人化學習.md"
+    },
+    {
+      "id": "20260606_NTUFAI_Sharing",
+      "title": "【NTU 人工智慧導論（FAI 2026）— Sharing 分享】",
+      "speaker": "林軒田（NTU CSIE 教授，Coursera《Machine Learning Foundations》系列授課者、《Learning from Data》共同作者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1798,
+      "duration_display": "29:58",
+      "video_url": "https://youtu.be/D_v8lW-JcHo",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260606_NTUFAI_Sharing_口播稿.opus",
+        "m4a": "audio/20260606_NTUFAI_Sharing_口播稿.m4a",
+        "mp3": "audio/20260606_NTUFAI_Sharing_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260606_NTUFAI_Sharing_逐字稿.txt",
+        "spoken_script": "transcripts/20260606_NTUFAI_Sharing_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260606_NTUFAI_Sharing_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260606_NTUFAI_Sharing.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260606_NTUFAI_Sharing.md"
     },
     {
       "id": "20260605_StanfordCS336_Guest_DanFu",
@@ -3036,6 +3065,33 @@
       },
       "note_path": "技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md"
+    },
+    {
+      "id": "20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王",
+      "title": "【NTU 人工智慧導論（FAI 2026）— Final Project：Game Agent 誰是牛頭王】",
+      "speaker": "NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs；具體姓名影片未完整提及，需後續確認）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1991,
+      "duration_display": "33:11",
+      "video_url": "https://youtu.be/ZwPdq140EKQ",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.opus",
+        "m4a": "audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.m4a",
+        "mp3": "audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_逐字稿.txt",
+        "spoken_script": "transcripts/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md"
     },
     {
       "id": "20260311_NTUFAI_FAI0_課程介紹與規定",
