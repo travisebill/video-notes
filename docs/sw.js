@@ -1,9 +1,11 @@
 // Video Notes PWA Service Worker
 // 策略：app shell (HTML/CSS/JS/icons) cache-first；JSON 資料 network-first 帶 fallback cache
 //
-// v1.0-pwa: bump cache version to flush stale CSS after video card overlap fix (2026-07-06)
-//           — 詳見 README + AGENTS.md「SW cache 永久教訓」
-const CACHE_VERSION = 'v1.0-pwa';
+// v1.1-pwa: bump cache version to flush stale video-notes.json after speaker cleanup
+//           — 2026-07-06: 把 speaker 從 'name（description）' 拆成 name + description，
+//             filter dropdown 從 58 個選項降到 53 個（合併林軒田 3→1、Matt Pocock 3→1、陳文茜 2→1）
+//           — 詳見 AGENTS.md「speaker 選項整理」章節
+const CACHE_VERSION = 'v1.1-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 

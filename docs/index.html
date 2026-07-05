@@ -167,7 +167,7 @@
             </p>
             <p>
               <small>
-                🎤 <span x-text="formatSpeaker(video.speaker_slug, video.speaker)"></span>
+                🎤 <span x-html="formatSpeaker(video.speaker_slug, video.speaker, video.speaker_description)"></span>
                 ｜ 📅 <time x-text="video.date"></time>
                 ｜ 📂 <span x-text="video.category"></span>
               </small>

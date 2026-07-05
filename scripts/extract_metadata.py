@@ -28,6 +28,85 @@ TRANSCRIPTS_DIR = REPO_ROOT / 'transcripts'
 README_PATH = REPO_ROOT / 'README.md'
 OUTPUT_PATH = REPO_ROOT / 'data' / 'video-notes.json'
 
+# 講者 slug → 展開後的顯示名稱（針對無 frontmatter「講者」欄位的影片）
+# 2026-07-06 整理：把 "MattPocock" 展開成 "Matt Pocock"，避免 filter dropdown 出現
+# slug 形式（"AndrewNg"、"MarieHaynes" 等）的選項，跟 frontmatter 寫的展開形式重複
+SPEAKER_NAME_OVERRIDES = {
+    'MattPocock': 'Matt Pocock',
+    'DrDarrenCandow': 'Dr. Darren Candow',
+    'AndrewNg': 'Andrew Ng',
+    'MarieHaynes': 'Marie Haynes',
+    'MartinFowler': 'Martin Fowler',
+    'YannLeCun': 'Yann LeCun',
+    'RyanLopopolo': 'Ryan Lopopolo',
+    'PiotrIndyk': 'Piotr Indyk',
+    'JelaniNelson': 'Jelani Nelson',
+    'TaraAgyemang': 'Tara Agyemang',
+}
+
+
+def parse_speaker_field(speaker_full: str, speaker_slug: str) -> tuple[str, str | None]:
+    """解析講者欄位 → (clean_name, description)
+
+    2026-07-06 新增：把 'name（description）' / 'name，description' 拆成 name + description，
+    避免同一個講者因為描述文字不同而出現在 filter dropdown 好幾次
+    （例：林軒田原來有 3 個變體 → 合併為 1 個「林軒田」）。
+
+    處理順序：
+    1. 多位講者（含 ' × ' 或 '／'）→ 保持原樣（拆 multi-speaker 太複雜）
+    2. 'name（desc）' / 'name(desc)' → 用 regex 切
+    3. 'name，desc' 或 'name, desc' → rest 含中文才視為描述
+    4. 無 frontmatter 時用 SPEAKER_NAME_OVERRIDES 或 CamelCase split
+
+    Examples:
+        ('Matt Pocock（TypeScript 教育者...）', 'MattPocock') → ('Matt Pocock', 'TypeScript 教育者...')
+        ('Matt Pocock，知名 TypeScript 教育者...', 'Matt') → ('Matt Pocock', '知名 TypeScript 教育者...')
+        ('陳文茜（TVBS 文茜的世界周報主持人）', 'TVBS') → ('陳文茜', 'TVBS 文茜的世界周報主持人')
+        ('', 'MattPocock') → ('Matt Pocock', None)
+        ('Percy Liang, Tatsu Hashimoto', 'CS336') → ('Percy Liang, Tatsu Hashimoto', None)  # 英文逗號兩位講者，不切
+    """
+    if not speaker_full:
+        if speaker_slug in SPEAKER_NAME_OVERRIDES:
+            return (SPEAKER_NAME_OVERRIDES[speaker_slug], None)
+        # CamelCase split: MattPocock → Matt Pocock
+        name = re.sub(r'([a-z])([A-Z])', r'\1 \2', speaker_slug)
+        return (name, None)
+
+    text = speaker_full.strip()
+
+    # 1. 多位講者：任何形式的 '×' 都視為 multi-speaker（保持原樣）
+    # 例：'Dr. X（desc）× Steven Y（desc）'、'Nick A（desc） × Daniel B（desc）'
+    if '×' in text:
+        return (text, None)
+    # 也處理 '／'（Pooja Trivedi ／Craig 形式）
+    if '／' in text:
+        return (text, None)
+
+    # 2. 嘗試在中/全形括號處切 'name（description）'
+    m = re.match(r'^(.+?)\s*([（(])(.+?)([)）])\s*$', text)
+    if m:
+        name = m.group(1).strip()
+        description = m.group(3).strip()
+        # sanity check: name 不應太長（< 30 字元），description 至少 2 字元
+        if 0 < len(name) <= 30 and len(description) >= 2:
+            return (name, description)
+
+    # 3. 嘗試「，」或 ', ' 切（必須 rest 含中文 → 視為描述）
+    # 排除條件（multi-speaker）：rest 含 '；' / '×' / '（' → 表示還有另一位講者，不要切
+    # 不排除 '，'（Anne Applebaum 描述本身含多個「，」逗號，應讓它能切）
+    for sep_char, sep_len in [('，', 1), (', ', 2)]:
+        idx = text.find(sep_char)
+        if 0 < idx <= 30:
+            name = text[:idx].strip()
+            rest = text[idx + sep_len:].strip()
+            if (len(name) >= 2 and len(rest) >= 5
+                    and re.search(r'[\u4e00-\u9fff]', rest)
+                    and not re.search(r'[；×(（]', rest)):
+                return (name, rest)
+
+    # 4. 整個當 name（單一講者、沒有 description）
+    return (text, None)
+
 
 def parse_filename(stem: str) -> dict:
     """從檔名 <date>_<speaker>_<title> 抽出 metadata"""
@@ -324,10 +403,17 @@ def main():
             note_rel_path = f'{category}/{md_path.name}'
             primary_topic = fm.get('topic') or topics_map.get(note_rel_path)
 
+            # 2026-07-06：用 parse_speaker_field 拆解 'name（description）'，
+            # 把同一個講者的不同描述變體合併成一個 clean name
+            speaker_name, speaker_description = parse_speaker_field(
+                fm.get('speaker_full', ''),
+                filename_meta['speaker_slug'],
+            )
             video = {
                 'id': base_name,
                 'title': fm.get('title') or filename_meta['title_slug'].replace('_', ' '),
-                'speaker': fm.get('speaker_full') or filename_meta['speaker_slug'],
+                'speaker': speaker_name,
+                'speaker_description': speaker_description,
                 'speaker_slug': filename_meta['speaker_slug'],
                 'course_slug': derive_course_slug(md_path.stem),
                 'category': category,
