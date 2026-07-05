@@ -371,7 +371,8 @@ def derive_course_slug(filename_stem: str) -> str | None:
     if 'HarvardCS224' in filename_stem or 'AdvancedAlgorithmsCS224' in filename_stem or 'HarvardCS224AdvancedAlgorithms' in filename_stem:
         return 'Harvard CS224'
     # NTU FAI (2026-07-05)：用 '林軒田' / '陳縕儂' 等 NTU 教授 + FAI 章節編號
-    if '林軒田' in filename_stem or '陳縕儂' in filename_stem or '陳上則' in filename_stem or 'NTUFAI' in filename_stem:
+    # 2026-07-06：移除 '陳上則' — 陳上則不是 FAI 系列授課者，是講者提到的 reference 教授
+    if '林軒田' in filename_stem or '陳縕儂' in filename_stem or 'NTUFAI' in filename_stem:
         return 'NTU 人工智慧導論'
     return None
 
