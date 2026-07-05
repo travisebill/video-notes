@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 118,
-    "total_with_audio": 89,
-    "total_with_transcript": 71,
-    "total_with_spoken_script": 89,
+    "total_videos": 123,
+    "total_with_audio": 94,
+    "total_with_transcript": 76,
+    "total_with_spoken_script": 94,
     "speakers_count": 55,
     "categories_count": 4,
     "topics_count": 13,
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-05 18:06:34",
+    "last_updated": "2026-07-05 19:04:46",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -605,6 +605,141 @@
       },
       "note_path": "財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md"
+    },
+    {
+      "id": "20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 3.5 訓練深度學習模型需要很多小撇步】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1799,
+      "duration_display": "29:59",
+      "video_url": "https://youtu.be/cGWJd-cHdCc",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.opus",
+        "m4a": "audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.m4a",
+        "mp3": "audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_逐字稿.txt",
+        "spoken_script": "transcripts/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md"
+    },
+    {
+      "id": "20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 3.4 甚麼才叫「好」模型呢？Loss Function Design】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 257,
+      "duration_display": "4:17",
+      "video_url": "https://youtu.be/ERK7wOgHThg",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.opus",
+        "m4a": "audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.m4a",
+        "mp3": "audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_逐字稿.txt",
+        "spoken_script": "transcripts/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md"
+    },
+    {
+      "id": "20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 3.3 如何建構深度學習的類神經網路】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1199,
+      "duration_display": "19:59",
+      "video_url": "https://youtu.be/speDkBn6jqo",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.opus",
+        "m4a": "audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.m4a",
+        "mp3": "audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_逐字稿.txt",
+        "spoken_script": "transcripts/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md"
+    },
+    {
+      "id": "20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 3.2 類神經網路改名為深度學習才能一飛衝天？】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1395,
+      "duration_display": "23:15",
+      "video_url": "https://youtu.be/orO0W7kEClA",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天.opus",
+        "m4a": "audio/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天_口播稿.m4a",
+        "mp3": "audio/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天_逐字稿.txt",
+        "spoken_script": "transcripts/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天.md"
+    },
+    {
+      "id": "20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 3.1 機器學習必問問題：如何挑選模型】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1995,
+      "duration_display": "33:15",
+      "video_url": "https://youtu.be/AAK7tyk7Q2k",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型.opus",
+        "m4a": "audio/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型_口播稿.m4a",
+        "mp3": "audio/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型_逐字稿.txt",
+        "spoken_script": "transcripts/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型.md"
     },
     {
       "id": "20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度",

@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **118 支內容** · 174 個音檔 · 118 個逐字稿 · 118 個口播稿
+> **123 支內容** · 189 個音檔 · 123 個逐字稿 · 123 個口播稿
 > 最後更新：2026-07-05
 
 ---
@@ -17,6 +17,11 @@
 
 > 最近 5 支影片
 
+- **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 3.5：Deep Learning Optimization 訓練深度學習模型需要很多小撇步](技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md) · 29 分 59 秒
+- **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 3.4：Loss Function Design 甚麼才叫「好」模型呢？](技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md) · 4 分 17 秒
+- **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 3.3：Neural Network Hypothesis 如何建構深度學習的類神經網路](技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md) · 19 分 59 秒
+- **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 3.2：Deep Learning 類神經網路改名為深度學習才能一飛衝天？](技術講座/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天.md) · 23 分 15 秒
+- **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 3.1：Validation 機器學習必問問題 - 如何挑選模型](技術講座/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型.md) · 33 分 15 秒
 - **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 2.4：Ensemble Bagging - Random Forest 樹木擴展成森林來提升穩定度](技術講座/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度.md) · 18 分 47 秒
 - **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 2.3：Decision Tree 自動學習模擬人類決策過程的模型](技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md) · 36 分 08 秒
 - **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 2.2：Overfitting 機器學習最令人聞之色變的情況為何會發生](技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md) · 15 分 52 秒
@@ -65,6 +70,11 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-07-05 | [NTU 人工智慧導論 — FAI 3.5：Deep Learning Optimization 訓練深度學習模型需要很多小撇步](技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md) | 林軒田（NTU CSIE 教授） | 29 分 59 秒（1799s） | [📄 note](技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI3.5_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.mp3) |
+| 2026-07-05 | [NTU 人工智慧導論 — FAI 3.4：Loss Function Design 甚麼才叫「好」模型呢？](技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md) | 林軒田（NTU CSIE 教授） | 4 分 17 秒（257s） | [📄 note](技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI3.4_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.mp3) |
+| 2026-07-05 | [NTU 人工智慧導論 — FAI 3.3：Neural Network Hypothesis 如何建構深度學習的類神經網路](技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md) | 林軒田（NTU CSIE 教授） | 19 分 59 秒（1199s） | [📄 note](技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI3.3_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.mp3) |
+| 2026-07-05 | [NTU 人工智慧導論 — FAI 3.2：Deep Learning 類神經網路改名為深度學習才能一飛衝天？](技術講座/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天.md) | 林軒田（NTU CSIE 教授） | 23 分 15 秒（1395s） | [📄 note](技術講座/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI3.2_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天_口播稿.mp3) |
+| 2026-07-05 | [NTU 人工智慧導論 — FAI 3.1：Validation 機器學習必問問題 - 如何挑選模型](技術講座/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型.md) | 林軒田（NTU CSIE 教授） | 33 分 15 秒（1995s） | [📄 note](技術講座/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI3.1_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型_口播稿.mp3) |
 | 2026-07-05 | [NTU 人工智慧導論 — FAI 2.4：Ensemble Bagging - Random Forest 樹木擴展成森林來提升穩定度](技術講座/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度.md) | 林軒田（NTU CSIE 教授） | 18 分 47 秒（1127s） | [📄 note](技術講座/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI2.4_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.mp3) |
 | 2026-07-05 | [NTU 人工智慧導論 — FAI 2.3：Decision Tree 自動學習模擬人類決策過程的模型](技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md) | 林軒田（NTU CSIE 教授） | 36 分 08 秒（2168s） | [📄 note](技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI2.3_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.mp3) |
 | 2026-07-05 | [NTU 人工智慧導論 — FAI 2.2：Overfitting 機器學習最令人聞之色變的情況為何會發生](技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md) | 林軒田（NTU CSIE 教授） | 15 分 52 秒（952s） | [📄 note](技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI2.2_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.mp3) |
@@ -188,7 +198,7 @@
 - 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
 - 2026-04-23 | [Stanford 神經科學家：記不住夢境可能是大腦在警告你！](人物訪談/20260423_Eagleman_DreamsWarningSignals.md) · Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者） × Steven Bartlett · 1 小時 33 分 18 秒（YouTube 英文自動字幕 → 繁中翻譯）
 
-### 🧠 **AI / LLM 學術與方法論**（45 支）
+### 🧠 **AI / LLM 學術與方法論**（50 支）
 
 - ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · 進階上下文工程 · ?
 - 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · Ryan Lopopolo（OpenAI Member of Technical Staff）· 46 分 20 秒
@@ -235,6 +245,11 @@
 - 2026-07-05 | [NTU 人工智慧導論 — FAI 2.3：Decision Tree 自動學習模擬人類決策過程的模型](技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md) · 林軒田（NTU CSIE 教授） · 36:08
 - 2026-07-05 | [NTU 人工智慧導論 — FAI 2.2：Overfitting 機器學習最令人聞之色變的情況為何會發生](技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md) · 林軒田（NTU CSIE 教授） · 15:52
 - 2026-07-05 | [NTU 人工智慧導論 — FAI 2.1：Nonlinear Transform 為什麼需要非線性的模型呢？](技術講座/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢.md) · 林軒田（NTU CSIE 教授） · 40:11
+- 2026-07-05 | [NTU 人工智慧導論 — FAI 3.5：Deep Learning Optimization 訓練深度學習模型需要很多小撇步](技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md) · 林軒田（NTU CSIE 教授） · 29:59
+- 2026-07-05 | [NTU 人工智慧導論 — FAI 3.4：Loss Function Design 甚麼才叫「好」模型呢？](技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md) · 林軒田（NTU CSIE 教授） · 4:17
+- 2026-07-05 | [NTU 人工智慧導論 — FAI 3.3：Neural Network Hypothesis 如何建構深度學習的類神經網路](技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md) · 林軒田（NTU CSIE 教授） · 19:59
+- 2026-07-05 | [NTU 人工智慧導論 — FAI 3.2：Deep Learning 類神經網路改名為深度學習才能一飛衝天？](技術講座/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天.md) · 林軒田（NTU CSIE 教授） · 23:15
+- 2026-07-05 | [NTU 人工智慧導論 — FAI 3.1：Validation 機器學習必問問題 - 如何挑選模型](技術講座/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型.md) · 林軒田（NTU CSIE 教授） · 33:15
 - 2026-03-11 | [NTU 人工智慧導論 — FAI 0：課程介紹與規定](技術講座/20260311_NTUFAI_FAI0_課程介紹與規定.md) · 陳玉農 + 陳上則（NTU CSIE 教授共同授課） · 17:48
 
 ### 🛠️ **編碼工具 / Agent 工程實踐**（14 支）
@@ -343,6 +358,11 @@
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-14 | [Lecture 2：PyTorch 資源帳戶與 Roofline 模型](技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md) · 1 小時 17 分 25 秒（4645s）
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-14 | [Lecture 1：Roadmap 與 BPE Tokenization](技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md) · 1 小時 19 分 22 秒（4762s）
 
+- **林軒田（NTU CSIE 教授）** · 2026-07-05 | [FAI 3.5：Deep Learning Optimization 訓練深度學習模型需要很多小撇步](技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md) · 29 分 59 秒
+- **林軒田（NTU CSIE 教授）** · 2026-07-05 | [FAI 3.4：Loss Function Design 甚麼才叫「好」模型呢？](技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md) · 4 分 17 秒
+- **林軒田（NTU CSIE 教授）** · 2026-07-05 | [FAI 3.3：Neural Network Hypothesis 如何建構深度學習的類神經網路](技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md) · 19 分 59 秒
+- **林軒田（NTU CSIE 教授）** · 2026-07-05 | [FAI 3.2：Deep Learning 類神經網路改名為深度學習才能一飛衝天？](技術講座/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天.md) · 23 分 15 秒
+- **林軒田（NTU CSIE 教授）** · 2026-07-05 | [FAI 3.1：Validation 機器學習必問問題 - 如何挑選模型](技術講座/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型.md) · 33 分 15 秒
 - **林軒田（NTU CSIE 教授）** · 2026-07-05 | [FAI 2.4：Ensemble Bagging - Random Forest 樹木擴展成森林來提升穩定度](技術講座/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度.md) · 18 分 47 秒
 - **林軒田（NTU CSIE 教授）** · 2026-07-05 | [FAI 2.3：Decision Tree 自動學習模擬人類決策過程的模型](技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md) · 36 分 08 秒
 - **林軒田（NTU CSIE 教授）** · 2026-07-05 | [FAI 2.2：Overfitting 機器學習最令人聞之色變的情況為何會發生](技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md) · 15 分 52 秒
