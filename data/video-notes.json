@@ -1,8 +1,8 @@
 {
   "meta": {
     "total_videos": 118,
-    "total_with_audio": 85,
-    "total_with_transcript": 67,
+    "total_with_audio": 89,
+    "total_with_transcript": 71,
     "total_with_spoken_script": 89,
     "speakers_count": 55,
     "categories_count": 4,
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-05 14:24:59",
+    "last_updated": "2026-07-05 18:06:34",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -621,12 +621,12 @@
       "video_url": "https://youtu.be/jWLAMrdrvtg",
       "lec_num": null,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.opus",
+        "m4a": "audio/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.m4a",
+        "mp3": "audio/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.mp3"
       },
       "transcripts": {
-        "transcript": null,
+        "transcript": "transcripts/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_逐字稿.txt",
         "spoken_script": "transcripts/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.txt",
         "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿_TTS_zh_CN.txt"
       },
@@ -648,12 +648,12 @@
       "video_url": "https://youtu.be/C-Pzmd-mfvk",
       "lec_num": null,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.opus",
+        "m4a": "audio/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.m4a",
+        "mp3": "audio/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.mp3"
       },
       "transcripts": {
-        "transcript": null,
+        "transcript": "transcripts/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_逐字稿.txt",
         "spoken_script": "transcripts/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.txt",
         "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿_TTS_zh_CN.txt"
       },
@@ -675,12 +675,12 @@
       "video_url": "https://youtu.be/us6-znCoeZA",
       "lec_num": null,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.opus",
+        "m4a": "audio/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.m4a",
+        "mp3": "audio/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.mp3"
       },
       "transcripts": {
-        "transcript": null,
+        "transcript": "transcripts/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_逐字稿.txt",
         "spoken_script": "transcripts/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.txt",
         "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿_TTS_zh_CN.txt"
       },
@@ -702,12 +702,12 @@
       "video_url": "https://youtu.be/YLRkX2nxOf4",
       "lec_num": null,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿.opus",
+        "m4a": "audio/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿.m4a",
+        "mp3": "audio/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿.mp3"
       },
       "transcripts": {
-        "transcript": null,
+        "transcript": "transcripts/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_逐字稿.txt",
         "spoken_script": "transcripts/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿.txt",
         "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿_TTS_zh_CN.txt"
       },
@@ -2079,9 +2079,9 @@
       "video_url": "https://youtu.be/jtU7Bj6ztDA",
       "lec_num": null,
       "audio": {
-        "opus": "audio/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎.opus",
-        "m4a": "audio/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎.m4a",
-        "mp3": "audio/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎.mp3"
+        "opus": "audio/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎_口播稿.opus",
+        "m4a": "audio/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎_口播稿.m4a",
+        "mp3": "audio/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎_口播稿.mp3"
       },
       "transcripts": {
         "transcript": "transcripts/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎_逐字稿.txt",
@@ -2106,9 +2106,9 @@
       "video_url": "https://youtu.be/qmIz-LiluRM",
       "lec_num": null,
       "audio": {
-        "opus": "audio/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎.opus",
-        "m4a": "audio/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎.m4a",
-        "mp3": "audio/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎.mp3"
+        "opus": "audio/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎_口播稿.opus",
+        "m4a": "audio/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎_口播稿.m4a",
+        "mp3": "audio/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎_口播稿.mp3"
       },
       "transcripts": {
         "transcript": "transcripts/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎_逐字稿.txt",
@@ -2133,9 +2133,9 @@
       "video_url": "https://youtu.be/K99dTKVGIj8",
       "lec_num": null,
       "audio": {
-        "opus": "audio/20260429_NTUFAI_FAI1.4_機器要開始學習囉.opus",
-        "m4a": "audio/20260429_NTUFAI_FAI1.4_機器要開始學習囉.m4a",
-        "mp3": "audio/20260429_NTUFAI_FAI1.4_機器要開始學習囉.mp3"
+        "opus": "audio/20260429_NTUFAI_FAI1.4_機器要開始學習囉_口播稿.opus",
+        "m4a": "audio/20260429_NTUFAI_FAI1.4_機器要開始學習囉_口播稿.m4a",
+        "mp3": "audio/20260429_NTUFAI_FAI1.4_機器要開始學習囉_口播稿.mp3"
       },
       "transcripts": {
         "transcript": "transcripts/20260429_NTUFAI_FAI1.4_機器要開始學習囉_逐字稿.txt",
@@ -2160,9 +2160,9 @@
       "video_url": "https://youtu.be/LHJNy4KbYcs",
       "lec_num": null,
       "audio": {
-        "opus": "audio/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.opus",
-        "m4a": "audio/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.m4a",
-        "mp3": "audio/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.mp3"
+        "opus": "audio/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習_口播稿.opus",
+        "m4a": "audio/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習_口播稿.m4a",
+        "mp3": "audio/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習_口播稿.mp3"
       },
       "transcripts": {
         "transcript": "transcripts/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習_逐字稿.txt",
@@ -2187,9 +2187,9 @@
       "video_url": "https://youtu.be/H8gX4TIYKmg",
       "lec_num": null,
       "audio": {
-        "opus": "audio/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.opus",
-        "m4a": "audio/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.m4a",
-        "mp3": "audio/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.mp3"
+        "opus": "audio/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習_口播稿.opus",
+        "m4a": "audio/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習_口播稿.m4a",
+        "mp3": "audio/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習_口播稿.mp3"
       },
       "transcripts": {
         "transcript": "transcripts/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習_逐字稿.txt",
@@ -2214,9 +2214,9 @@
       "video_url": "https://youtu.be/ArSDpRmzVls",
       "lec_num": null,
       "audio": {
-        "opus": "audio/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.opus",
-        "m4a": "audio/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.m4a",
-        "mp3": "audio/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.mp3"
+        "opus": "audio/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型_口播稿.opus",
+        "m4a": "audio/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型_口播稿.m4a",
+        "mp3": "audio/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型_口播稿.mp3"
       },
       "transcripts": {
         "transcript": "transcripts/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型_逐字稿.txt",
@@ -2511,9 +2511,9 @@
       "video_url": "https://youtu.be/DsyvgC51t2E",
       "lec_num": null,
       "audio": {
-        "opus": "audio/20260311_NTUFAI_FAI0_課程介紹與規定.opus",
-        "m4a": "audio/20260311_NTUFAI_FAI0_課程介紹與規定.m4a",
-        "mp3": "audio/20260311_NTUFAI_FAI0_課程介紹與規定.mp3"
+        "opus": "audio/20260311_NTUFAI_FAI0_課程介紹與規定_口播稿.opus",
+        "m4a": "audio/20260311_NTUFAI_FAI0_課程介紹與規定_口播稿.m4a",
+        "mp3": "audio/20260311_NTUFAI_FAI0_課程介紹與規定_口播稿.mp3"
       },
       "transcripts": {
         "transcript": "transcripts/20260311_NTUFAI_FAI0_課程介紹與規定_逐字稿.txt",
