@@ -1,9 +1,9 @@
 // Video Notes PWA Service Worker
 // 策略：app shell (HTML/CSS/JS/icons) cache-first；JSON 資料 network-first 帶 fallback cache
 //
-// v0.8-pwa: bump cache version to flush stale CSS after video card overlap fix (2026-07-06)
+// v0.9-pwa: bump cache version to flush stale CSS after video card overlap fix (2026-07-06)
 //           — 詳見 README + AGENTS.md「SW cache 永久教訓」
-const CACHE_VERSION = 'v0.8-pwa';
+const CACHE_VERSION = 'v0.9-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
