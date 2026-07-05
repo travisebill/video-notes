@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **138 支內容** · 234 個音檔 · 138 個逐字稿 · 138 個口播稿
-> 最後更新：2026-07-05
+> **140 支內容** · 240 個音檔 · 140 個逐字稿 · 140 個口播稿
+> 最後更新：2026-07-06
 
 ---
 
@@ -17,6 +17,8 @@
 
 > 最近 5 支影片
 
+- **2026-06-06** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) · 29 分 58 秒
+- **2026-03-11** | NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs）| [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · 33 分 11 秒
 - **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 6.3：Agents 可以動手的代理人真的要來了?](技術講座/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了.md) · 38 分 26 秒
 - **2026-06-03** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 6.1：Generative AI - Large Language Models 生成式人工智慧之大型語言模型](技術講座/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型.md) · 25 分 02 秒
 - **2026-06-03** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 6.2：Multimodal LLMs 如何讓語言模型也可以理解與生成影像聲音等資訊呢?](技術講座/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢.md) · 13 分 00 秒
@@ -77,6 +79,8 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-06 | [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) | 林軒田（NTU CSIE 教授） | 29 分 58 秒（1798s） | [📄 note](技術講座/20260606_NTUFAI_Sharing.md) · [📝 逐字稿](transcripts/20260606_D_v8lW-JcHo_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260606_NTUFAI_Sharing_口播稿.txt) · [🔊 opus](audio/20260606_NTUFAI_Sharing_口播稿.opus) · [🔊 m4a](audio/20260606_NTUFAI_Sharing_口播稿.m4a) · [🔊 mp3](audio/20260606_NTUFAI_Sharing_口播稿.mp3) |
+| 2026-03-11 | [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) | NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs） | 33 分 11 秒（1991s） | [📄 note](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · [📝 逐字稿](transcripts/20260311_ZwPdq140EKQ_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.txt) · [🔊 opus](audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.opus) · [🔊 m4a](audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.m4a) · [🔊 mp3](audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.mp3) |
 | 2026-07-05 | [NTU 人工智慧導論 — FAI 3.5：Deep Learning Optimization 訓練深度學習模型需要很多小撇步](技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md) | 林軒田（NTU CSIE 教授） | 29 分 59 秒（1799s） | [📄 note](技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI3.5_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.mp3) |
 | 2026-07-05 | [NTU 人工智慧導論 — FAI 3.4：Loss Function Design 甚麼才叫「好」模型呢？](技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md) | 林軒田（NTU CSIE 教授） | 4 分 17 秒（257s） | [📄 note](技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI3.4_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.mp3) |
 | 2026-07-05 | [NTU 人工智慧導論 — FAI 3.3：Neural Network Hypothesis 如何建構深度學習的類神經網路](技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md) | 林軒田（NTU CSIE 教授） | 19 分 59 秒（1199s） | [📄 note](技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI3.3_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.mp3) |
@@ -220,7 +224,7 @@
 - 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
 - 2026-04-23 | [Stanford 神經科學家：記不住夢境可能是大腦在警告你！](人物訪談/20260423_Eagleman_DreamsWarningSignals.md) · Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者） × Steven Bartlett · 1 小時 33 分 18 秒（YouTube 英文自動字幕 → 繁中翻譯）
 
-### 🧠 **AI / LLM 學術與方法論**（65 支）
+### 🧠 **AI / LLM 學術與方法論**（67 支）
 
 - ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · 進階上下文工程 · ?
 - 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · Ryan Lopopolo（OpenAI Member of Technical Staff）· 46 分 20 秒
@@ -288,6 +292,8 @@
 - 2026-05-27 | [NTU 人工智慧導論 — FAI 5.2：K-Means Clustering 怎麼能不知道的 K 平均演算法](技術講座/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法.md) · 林軒田（NTU CSIE 教授） · 16:17
 - 2026-05-27 | [NTU 人工智慧導論 — FAI 5.1：Unsupervised Machine Learning 非監督式機器學習](技術講座/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習.md) · 林軒田（NTU CSIE 教授） · 39:44
 - 2026-05-25 | [NTU 人工智慧導論 — FAI 4.8：When to Deep? 甚麼時候適合用深度學習呢](技術講座/20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢.md) · 林軒田（NTU CSIE 教授） · 2:15
+- 2026-06-06 | [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) · 林軒田（NTU CSIE 教授） · 29 分 58 秒（1798s）
+- 2026-03-11 | [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs） · 33 分 11 秒（1991s）
 
 ### 🛠️ **編碼工具 / Agent 工程實踐**（14 支）
 
@@ -395,6 +401,7 @@
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-14 | [Lecture 2：PyTorch 資源帳戶與 Roofline 模型](技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md) · 1 小時 17 分 25 秒（4645s）
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-14 | [Lecture 1：Roadmap 與 BPE Tokenization](技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md) · 1 小時 19 分 22 秒（4762s）
 
+- **林軒田（NTU CSIE 教授）** · 2026-06-06 | [Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) · 29 分 58 秒（1798s）
 - **林軒田（NTU CSIE 教授）** · 2026-06-04 | [FAI 6.3：Agents 可以動手的代理人真的要來了?](技術講座/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了.md) · 38:26
 - **林軒田（NTU CSIE 教授）** · 2026-06-03 | [FAI 6.1：Generative AI - Large Language Models 生成式人工智慧之大型語言模型](技術講座/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型.md) · 25:02
 - **林軒田（NTU CSIE 教授）** · 2026-06-03 | [FAI 6.2：Multimodal LLMs 如何讓語言模型也可以理解與生成影像聲音等資訊呢?](技術講座/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢.md) · 13:00
@@ -417,6 +424,8 @@
 - **林軒田（NTU CSIE 教授）** · 2026-04-29 | [FAI 1.3：Machine Learning Recipe 請按照步驟來用機器學習](技術講座/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.md) · 24:52
 - **林軒田（NTU CSIE 教授）** · 2026-04-29 | [FAI 1.2：What is Machine Learning? 你不能到現在還不懂甚麼是機器學習](技術講座/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.md) · 26:19
 - **林軒田（NTU CSIE 教授）** · 2026-04-29 | [FAI 1.1：Linear Models for Supervised ML 監督式機器學習之線性模型](技術講座/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.md) · 9:49
+
+- **NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs）** · 2026-03-11 | [Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · 33 分 11 秒（1991s）
 
 - **陳文茜** · 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 48 分 36 秒
 - **陳文茜** · 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒
@@ -487,8 +496,8 @@
 - 🎙️ **人物訪談**（9 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（3 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（4 支）→ [完整列表](財經分析/README.md)
-- 🛠️ **技術講座**（61 支）→ [完整列表](技術講座/README.md)
+- 🛠️ **技術講座**（63 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-07-04 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 87 支內容*
+*最後更新：2026-07-06 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 140 支內容*
