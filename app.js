@@ -334,9 +334,20 @@ document.addEventListener('alpine:init', () => {
     },
 
     // 講者顯示（將 slug 中的底線轉空格）
-    formatSpeaker(slug, full) {
-      if (full && full.length < 60) return full;
-      return (slug || '').replace(/_/g, ' ');
+    // 2026-07-06：speaker 已經是 clean name（不再含括號描述），所以直接回傳
+    // 但如果有 speaker_description（如 "Google 軟體工程師"），用 title 顯示為 tooltip
+    formatSpeaker(slug, full, description) {
+      let name;
+      if (full) {
+        name = full;
+      } else {
+        name = (slug || '').replace(/_/g, ' ');
+      }
+      if (description && description.length > 2 && description.length < 100) {
+        const escaped = description.replace(/"/g, '&quot;').replace(/</g, '&lt;');
+        return `<span title="${escaped}">${name}</span>`;
+      }
+      return name;
     },
 
     // ===== Inline Expand =====
