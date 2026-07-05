@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 123,
-    "total_with_audio": 94,
+    "total_videos": 131,
+    "total_with_audio": 102,
     "total_with_transcript": 76,
-    "total_with_spoken_script": 94,
+    "total_with_spoken_script": 102,
     "speakers_count": 55,
     "categories_count": 4,
     "topics_count": 13,
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-05 19:04:46",
+    "last_updated": "2026-07-05 20:03:16",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -1741,6 +1741,87 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260526_開發者對談_AI代理Spec-Driven與GuardRails.md"
     },
     {
+      "id": "20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 4.8 甚麼時候適合用深度學習呢 — When to Deep?】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 135,
+      "duration_display": "2:15",
+      "video_url": "https://youtu.be/2l4Ns2kZrZo",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢_口播稿.opus",
+        "m4a": "audio/20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢_口播稿.m4a",
+        "mp3": "audio/20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢.md"
+    },
+    {
+      "id": "20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 4.7 訓練模型時不能不知道的小撇步 — Regularization Techniques for Deep Learning】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 890,
+      "duration_display": "14:50",
+      "video_url": "https://youtu.be/MlmTsFkBMBo",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步_口播稿.opus",
+        "m4a": "audio/20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步_口播稿.m4a",
+        "mp3": "audio/20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步.md"
+    },
+    {
+      "id": "20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 4.6 處理序列資料你不能不知道的 RNN — Recurrent Neural Network】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 377,
+      "duration_display": "6:17",
+      "video_url": "https://youtu.be/UUNwqY7i-hA",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN_口播稿.opus",
+        "m4a": "audio/20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN_口播稿.m4a",
+        "mp3": "audio/20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN.md"
+    },
+    {
       "id": "20260525_Datadog_從零到數百Agent規模化",
       "title": "從零到數百個 AI Agent：Datadog 的規模化經驗",
       "speaker": "Datadog AI 團隊",
@@ -1793,6 +1874,141 @@
       },
       "note_path": "技術講座/20260525_Andrew_Ng_AI編碼未來.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260525_Andrew_Ng_AI編碼未來.md"
+    },
+    {
+      "id": "20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 4.5 處理影像你不能不知道的 CNN — Convolutional Neural Network】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1270,
+      "duration_display": "21:10",
+      "video_url": "https://youtu.be/iskDC5zih9s",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN_口播稿.opus",
+        "m4a": "audio/20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN_口播稿.m4a",
+        "mp3": "audio/20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN.md"
+    },
+    {
+      "id": "20260524_NTUFAI_FAI4.4_VanishingGradient訓練模型跟人生一樣不順怎麼辦",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 4.4 訓練模型跟人生一樣不順怎麼辦 — Vanishing Gradient】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 716,
+      "duration_display": "11:56",
+      "video_url": "https://youtu.be/LILjirWi-yg",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260524_NTUFAI_FAI4.4_VanishingGradient訓練模型跟人生一樣不順怎麼辦_口播稿.opus",
+        "m4a": "audio/20260524_NTUFAI_FAI4.4_VanishingGradient訓練模型跟人生一樣不順怎麼辦_口播稿.m4a",
+        "mp3": "audio/20260524_NTUFAI_FAI4.4_VanishingGradient訓練模型跟人生一樣不順怎麼辦_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260524_NTUFAI_FAI4.4_VanishingGradient訓練模型跟人生一樣不順怎麼辦_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260524_NTUFAI_FAI4.4_VanishingGradient訓練模型跟人生一樣不順怎麼辦_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260524_NTUFAI_FAI4.4_VanishingGradient訓練模型跟人生一樣不順怎麼辦.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260524_NTUFAI_FAI4.4_VanishingGradient訓練模型跟人生一樣不順怎麼辦.md"
+    },
+    {
+      "id": "20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 4.3 好的開始是成功的一半 — Representation Learning / Pre-Training】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 2357,
+      "duration_display": "39:17",
+      "video_url": "https://youtu.be/nBi9EfCNrNs",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半_口播稿.opus",
+        "m4a": "audio/20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半_口播稿.m4a",
+        "mp3": "audio/20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半.md"
+    },
+    {
+      "id": "20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 4.2 參數這麼多到底怎麼有效率算出來的呢 — Backpropagation】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1600,
+      "duration_display": "26:40",
+      "video_url": "https://youtu.be/jAE6ScoUX6I",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢_口播稿.opus",
+        "m4a": "audio/20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢_口播稿.m4a",
+        "mp3": "audio/20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢.md"
+    },
+    {
+      "id": "20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 4.1 使用深度學習會遇到的各個難題】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1080,
+      "duration_display": "18:00",
+      "video_url": "https://youtu.be/bf6P46Po8yo",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題_口播稿.opus",
+        "m4a": "audio/20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題_口播稿.m4a",
+        "mp3": "audio/20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題.md"
     },
     {
       "id": "20260524_Moonshot_Kimi_K2_5_技術解析",
