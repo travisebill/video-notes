@@ -42,6 +42,23 @@ def parse_filename(stem: str) -> dict:
     # 例如：AdvancedAlgorithmsCS224_Lecture12 → 12
     lec_match = re.search(r'Lecture(\d+)', title)
     lec_num = int(lec_match.group(1)) if lec_match else None
+
+    # 抽 NTU FAI 編號（2026-07-06 加）：FAI 0 → 0, FAI 1.1 → 11, FAI 6.3 → 63
+    # 例如：20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型 → 11
+    # 課程排序順序：FAI 0 (0), FAI 1.1-1.6 (11-16), FAI 2.1-2.4 (21-24), FAI 3.1-3.5 (31-35),
+    #              FAI 4.1-4.8 (41-48), FAI 5.1-5.4 (51-54), FAI 6.1-6.3 (61-63),
+    #              Sharing (700, course 收尾), Final Project (800, 學生 showcase)
+    if lec_num is None:
+        fai_match = re.search(r'FAI(\d+)(?:\.(\d+))?', title)
+        if fai_match:
+            major = int(fai_match.group(1))
+            minor = int(fai_match.group(2) or 0)
+            lec_num = major * 10 + minor
+        elif 'Sharing' in title:
+            lec_num = 700
+        elif 'FinalProject' in title:
+            lec_num = 800
+
     return {'date': date_iso, 'speaker_slug': speaker, 'title_slug': title, 'lec_num': lec_num}
 
 
