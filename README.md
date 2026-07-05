@@ -276,7 +276,7 @@
 - 2026-07-05 | [NTU 人工智慧導論 — FAI 3.3：Neural Network Hypothesis 如何建構深度學習的類神經網路](技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md) · 林軒田（NTU CSIE 教授） · 19:59
 - 2026-07-05 | [NTU 人工智慧導論 — FAI 3.2：Deep Learning 類神經網路改名為深度學習才能一飛衝天？](技術講座/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天.md) · 林軒田（NTU CSIE 教授） · 23:15
 - 2026-07-05 | [NTU 人工智慧導論 — FAI 3.1：Validation 機器學習必問問題 - 如何挑選模型](技術講座/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型.md) · 林軒田（NTU CSIE 教授） · 33:15
-- 2026-03-11 | [NTU 人工智慧導論 — FAI 0：課程介紹與規定](技術講座/20260311_NTUFAI_FAI0_課程介紹與規定.md) · 陳玉農 + 陳上則（NTU CSIE 教授共同授課） · 17:48
+- 2026-03-11 | [NTU 人工智慧導論 — FAI 0：課程介紹與規定](技術講座/20260311_NTUFAI_FAI0_課程介紹與規定.md) · 陳縕儂 + 陳上則（NTU CSIE 教授共同授課） · 17:48
 - 2026-05-24 | [NTU 人工智慧導論 — FAI 4.1：Deep Learning Challenges Recap 使用深度學習會遇到的各個難題](技術講座/20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題.md) · 林軒田（NTU CSIE 教授） · 18:00
 - 2026-05-24 | [NTU 人工智慧導論 — FAI 4.2：Backpropagation 參數這麼多到底怎麼有效率算出來的呢](技術講座/20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢.md) · 林軒田（NTU CSIE 教授） · 26:40
 - 2026-05-24 | [NTU 人工智慧導論 — FAI 4.3：Representation Learning / Pre-Training 好的開始是成功的一半](技術講座/20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半.md) · 林軒田（NTU CSIE 教授） · 39:17
