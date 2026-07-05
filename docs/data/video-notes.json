@@ -1,17 +1,18 @@
 {
   "meta": {
-    "total_videos": 107,
-    "total_with_audio": 78,
-    "total_with_transcript": 60,
-    "total_with_spoken_script": 78,
-    "speakers_count": 53,
+    "total_videos": 114,
+    "total_with_audio": 85,
+    "total_with_transcript": 67,
+    "total_with_spoken_script": 85,
+    "speakers_count": 55,
     "categories_count": 4,
     "topics_count": 13,
     "courses": [
       "Harvard CS224",
+      "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-05 03:34:15",
+    "last_updated": "2026-07-05 08:45:49",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -60,11 +61,13 @@
       "兩位資深軟體工程師，進行一場關於 AI Agent 開發工具與流程的深度技術對談",
       "小天fotos",
       "李宏毅",
+      "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
       "歐麗娟，台灣大學中文系教授，全台最受歡迎的中國古典文學課程講師之一",
       "自說自話的總裁",
       "蔡康永",
       "陳文茜",
       "陳文茜（TVBS 文茜的世界周報主持人）",
+      "陳玉農, 陳上則（前半段 / 後半段分開授課）",
       "馬臉姐"
     ],
     "categories": [
@@ -1954,6 +1957,168 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260430_StanfordCS336_Lecture9_ScalingLaws.md"
     },
     {
+      "id": "20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 1.6 超實用的邏輯迴歸你真的懂嗎】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1394,
+      "duration_display": "23:14",
+      "video_url": "https://youtu.be/jtU7Bj6ztDA",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎.opus",
+        "m4a": "audio/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎.m4a",
+        "mp3": "audio/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎_逐字稿.txt",
+        "spoken_script": "transcripts/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎.md"
+    },
+    {
+      "id": "20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 1.5 國中就學過的線性迴歸你還記得嗎】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1104,
+      "duration_display": "18:24",
+      "video_url": "https://youtu.be/qmIz-LiluRM",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎.opus",
+        "m4a": "audio/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎.m4a",
+        "mp3": "audio/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎_逐字稿.txt",
+        "spoken_script": "transcripts/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎.md"
+    },
+    {
+      "id": "20260429_NTUFAI_FAI1.4_機器要開始學習囉",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 1.4 機器要開始學習囉~】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 814,
+      "duration_display": "13:34",
+      "video_url": "https://youtu.be/K99dTKVGIj8",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260429_NTUFAI_FAI1.4_機器要開始學習囉.opus",
+        "m4a": "audio/20260429_NTUFAI_FAI1.4_機器要開始學習囉.m4a",
+        "mp3": "audio/20260429_NTUFAI_FAI1.4_機器要開始學習囉.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260429_NTUFAI_FAI1.4_機器要開始學習囉_逐字稿.txt",
+        "spoken_script": "transcripts/20260429_NTUFAI_FAI1.4_機器要開始學習囉_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260429_NTUFAI_FAI1.4_機器要開始學習囉_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260429_NTUFAI_FAI1.4_機器要開始學習囉.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260429_NTUFAI_FAI1.4_機器要開始學習囉.md"
+    },
+    {
+      "id": "20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 1.3 請按照步驟來用機器學習】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1492,
+      "duration_display": "24:52",
+      "video_url": "https://youtu.be/LHJNy4KbYcs",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.opus",
+        "m4a": "audio/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.m4a",
+        "mp3": "audio/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習_逐字稿.txt",
+        "spoken_script": "transcripts/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.md"
+    },
+    {
+      "id": "20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 1.2 你不能到現在還不懂甚麼是機器學習】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1579,
+      "duration_display": "26:19",
+      "video_url": "https://youtu.be/H8gX4TIYKmg",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.opus",
+        "m4a": "audio/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.m4a",
+        "mp3": "audio/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習_逐字稿.txt",
+        "spoken_script": "transcripts/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.md"
+    },
+    {
+      "id": "20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 1.1 監督式機器學習之線性模型】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 589,
+      "duration_display": "9:49",
+      "video_url": "https://youtu.be/ArSDpRmzVls",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.opus",
+        "m4a": "audio/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.m4a",
+        "mp3": "audio/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型_逐字稿.txt",
+        "spoken_script": "transcripts/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.md"
+    },
+    {
       "id": "20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline",
       "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 8：Parallelism — Tensor、Pipeline 與 3D Parallelism】",
       "speaker": "Percy Liang, Tatsu Hashimoto",
@@ -2222,6 +2387,33 @@
       },
       "note_path": "技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md"
+    },
+    {
+      "id": "20260311_NTUFAI_FAI0_課程介紹與規定",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 課程介紹與規定】",
+      "speaker": "陳玉農, 陳上則（前半段 / 後半段分開授課）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1068,
+      "duration_display": "17:48",
+      "video_url": "https://youtu.be/DsyvgC51t2E",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260311_NTUFAI_FAI0_課程介紹與規定.opus",
+        "m4a": "audio/20260311_NTUFAI_FAI0_課程介紹與規定.m4a",
+        "mp3": "audio/20260311_NTUFAI_FAI0_課程介紹與規定.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260311_NTUFAI_FAI0_課程介紹與規定_逐字稿.txt",
+        "spoken_script": "transcripts/20260311_NTUFAI_FAI0_課程介紹與規定_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260311_NTUFAI_FAI0_課程介紹與規定_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260311_NTUFAI_FAI0_課程介紹與規定.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260311_NTUFAI_FAI0_課程介紹與規定.md"
     },
     {
       "id": "20260205_JensenHuang_不輸給AI_輸給會用AI的人",
