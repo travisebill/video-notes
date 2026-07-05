@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 114,
+    "total_videos": 118,
     "total_with_audio": 85,
     "total_with_transcript": 67,
-    "total_with_spoken_script": 85,
+    "total_with_spoken_script": 89,
     "speakers_count": 55,
     "categories_count": 4,
     "topics_count": 13,
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-05 08:45:49",
+    "last_updated": "2026-07-05 14:24:59",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -605,6 +605,114 @@
       },
       "note_path": "財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md"
+    },
+    {
+      "id": "20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 2.4 樹木擴展成森林來提升穩定度】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1127,
+      "duration_display": "18:47",
+      "video_url": "https://youtu.be/jWLAMrdrvtg",
+      "lec_num": null,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度.md"
+    },
+    {
+      "id": "20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 2.3 自動學習模擬人類決策過程的模型】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 2168,
+      "duration_display": "36:08",
+      "video_url": "https://youtu.be/C-Pzmd-mfvk",
+      "lec_num": null,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md"
+    },
+    {
+      "id": "20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 2.2 機器學習最令人聞之色變的情況為何會發生？】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 952,
+      "duration_display": "15:52",
+      "video_url": "https://youtu.be/us6-znCoeZA",
+      "lec_num": null,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md"
+    },
+    {
+      "id": "20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 2.1 為什麼需要非線性的模型呢？】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 2411,
+      "duration_display": "40:11",
+      "video_url": "https://youtu.be/YLRkX2nxOf4",
+      "lec_num": null,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢.md"
     },
     {
       "id": "20260627_CNBC_ZAI_Chinese_OpenSourceMoment",
