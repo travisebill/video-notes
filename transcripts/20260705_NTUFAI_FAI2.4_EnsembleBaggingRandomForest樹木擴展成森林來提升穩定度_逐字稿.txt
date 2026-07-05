@@ -1,0 +1,383 @@
+好,大家我們最後一堂課要講的是 ensemble
+這裡有一個非常非常老梗的句子
+就是三個臭皮這樣勝過一個諸葛亮
+其實這還是一個非常非常好用
+跟現在有非常多應用
+其實都還是可以借由 ensemble 再繼續 improve
+我記得在之前有一個另外一門課的 final project 上面
+那就是最後就是 performance 最好的那個組
+他其實就是用了蠻多簡單的 model
+但是借由 ensemble 的厲害
+能夠把他最後的 prediction performance 衝到非常的高
+所以 ensemble 是一個簡單但是卻非常好用的方法
+那我們接著就要講幾個 ensemble 的方法
+一個叫做 bagging
+bagging 是什麼意思呢
+他試用的情境是
+你的模型有點容易 overfit 的狀況
+你就很適合用 bagging 來做 ensemble
+那剛剛說到 overfitting 大部分的狀況就是
+你的模型比較 complex
+你才能 overfit 對不對
+那對應的這個圖就會長這樣子
+就是你是有包含到這個理想上的 effort
+但是因為你的模型很 complex
+所以你其實是學的你的彈性是非常大的
+所以你的 variance 可能是很高
+就長這樣子
+那既然這樣子的狀況發生 overfitting
+你這邊還是有這個 variance
+我們的目標就是下降 variance 對不對
+怎麼下降 variance 很簡單嘛
+你看在這一個圖上面你打了 5 次
+雖然都離準心有偏離
+但是如果我們把這 5 次平均起來
+說不定其實就很接近這個 function f 的樣子
+所以他的 bagging 他的概念就是
+把大家都放到同一個袋子裡面
+所以我如果可以把這些藍色的點平均起來
+算一個平均的期望值
+我希望他就可以比較接近這個 f
+所以我找出來非常多變異可能很大的這個 g
+但是我們期待說他平均起來後
+他的 variance 就會下降嘛
+所以 variance 比較大的這些 data point
+他的 distribution 你平均起來
+平均值他的 variance 一定會下降
+所以他的目標概念就是 reduce 他的 variance
+那適用於很容易 overfitting 的狀況
+那怎麼做呢
+其實有很多不太一樣的做法
+一個很常見的做法就是
+我們直接把 data 分成不同的 set
+這邊是原本完全完整的 data
+第一假設說這個 data 是 1000 個 data point 好了
+那我們就 random sample
+比如說每一個 set sample 800 個出來
+然後接著呢
+第二個 set 也 sample 800 個
+所以這邊每一個 set 其實都是 800 個
+但是他可能會是不同的 data points
+然後我們會根據這些 t 個 set
+各自去學我們的這個 model 嘛
+我們就得到 T 個 g
+那我們的目標就是把它平均起來
+然後就會得到一個比較好的 function
+透過 reduce variance 之後呢
+希望這一個 complex model 他會比較 robust
+所以他的 variance 就不會那麼高
+因為你想象中
+如果很容易 overfitting 的話
+是不是代表他很容易 focus 在一些小的 noise 上面
+那如果我做了這麼多的 random sample
+那這個小的 noise 它會去影響到所有 t 個那麼多
+他的 model 的幾率就比較不高
+因為如果他是一個 noise 的話
+他不可能會一直影響一直影響
+然後 t 個全部都會被 sample 到
+而且都會被他所影響
+所以想象中如果我們把它切成 t 個
+然後各自去做的話
+這個小的 noise 就可能會在其中被我們抵消
+所以就會得到比較好的 robustness
+我的 variance 就可以下降
+於是就很自然而然
+延續上面我們講的 decision tree
+我們就要講 random forest
+剛剛講到 decision tree 他有一個缺點是什麼
+很容易 overfit 嘛對不對
+因為我們就是這樣切切切切切
+所以你有可能會在切的過程中
+因為他就是目標想要找一個 dimension 這樣切開
+然後另外一邊就同類的嘛
+所以他有可能這邊的一些 noise 就影響
+他就決定這邊要 branch 開來
+所以 decision tree 是一個很容易 overfitting 的一個 model
+所以要解決這個
+improve 這個 complex overfitting 的 model
+剛剛說到 bagging 就是一個方法
+所以我們把 decision tree 用 bagging 的方法來 ensemble
+就有一個新的 algorithm 叫做 random forest
+random forest 是什麼呢
+forest 是森林嘛
+剛剛說到 decision tree 他是一棵樹
+所以很多棵樹他就會是森林
+那為什麼是隨機森林呢
+因為剛剛前面我們是要 random 做一些 sample
+然後變成很多組
+就變成這個有很多 random 的樹
+每一棵樹很多組合而成
+每一棵樹雖然會 overfitting
+但在一起就可以 improve 他的 robustness
+下降他的 variance
+可能就會是一個更好的 model
+所以這邊的 random forest 就是 random sampling
+加上 decision tree
+因為很多棵樹就變成一個森林
+那我們就看一下他的演算法
+這邊是剛剛的 decision tree 的 algorithm
+那 random forest 做的事情很簡單
+就是把這個 data 拿過來
+我們把它 random sample 出
+N' 的 data set
+然後就變成 Dt 這樣子的一組
+所以總共有 T 組不同的這個 set
+然後各自會去跑這個 decision tree
+然後會得到這個 gt
+然後最後我們 output 的這個模型
+就是所有的 gt 平均起來
+uniform 起來的結果
+那這邊怎麼 unify 呢
+就是怎麼合起來
+其實也有一些不同的做法
+比如說如果是做分類的話
+那我現在假如說我把它分成十棵樹
+那我就是把現在的 data
+新的 data testing data 過來
+然後我就丟進這十棵樹
+各自都會得到一個 label 嘛
+比如說這十棵裡面有八棵都說
+我是 San Francisco 房子
+兩棵說我是紐約的房子
+那我們就投票多的獲勝
+所以既然八棵都說是 San Francisco
+那我們就說這個是 San Francisco 房子
+那如果是一個 regression 的問題
+我最後是要 output 一個值的話
+這十棵樹可能都會各自 output 一個值
+可能都不太一樣
+沒關系我最後的這個值就是平均的這個值
+非常的簡單
+所以 voting average 就是在 decision tree 上面
+不管是 classification 或是 regression
+都可以用同樣的方法
+來得到這個非常簡單 bagging
+把它 ensemble 起來的方法
+那它有什麼好處呢?
+首先它是一個非常容易 parallel 的一個模型
+為什麼?
+因為現在我們每一棵樹都可以獨立生長嘛
+我們 sample 出不同的 subset 的 data 以後
+我們是不是就直接
+個別的 call 這個 decision tree 的這個 function
+所以我們既然可以每一個獨立的話
+就代表它非常容易的平行
+所以我們的 learning 其實是非常 efficient 的
+就跟你再跑一個 decision tree 其實差不多時間
+再來所有 CART 裡面的這些好處
+其實都可以被沿用在 random forest 裡面
+因為它基本上它其實就是一個 decision tree
+比如說它可以具有很好的可解釋性
+那這些好處其實都還是會在 random forest 裡面保留下來
+那當然在之前 decision tree 裡面的一些缺點
+舉例來說它很容易 overfit 嘛
+因為當我們把這個 tree 整個已經長完 fully-grown 的這個 tree 之後
+它每一個樹的尾端 leaf 上面其實都只剩下一個 sample
+所以它當然就是太 fine grain 了
+所以這樣子它的確就很容易 overfit 在少量的這些 noise 上面
+那如果我們用 random forest 其實我們就是 reduce 這樣子的 variance
+所以可以讓這些這個缺點因此而減緩
+那因為我們等於是考慮了 voting 或 average 這樣子不同
+非常多棵樹集中起來的一個結果
+那帶來的意思其實就像是有一個 noise
+它其實可能很難 consistent 的一直影響著所有的每一棵樹
+所以我們只要大量的把這些樹 sample 出多個
+那全部如果都還是保有這樣子的學到這些 pattern
+當然這些 pattern 可能就比較不是一個 noise
+那如果只有少數的一些 noise
+它其實就不會 consistent 的影響在所有的 tree 上面
+所以它其實就可以某種程度上減緩這種 overfitting 的狀況
+那當然做這個 sampling
+像我們這邊的例子是從 data 的成績做 random sample
+但其實不一定是只能從 data 的成績
+我們也可以從 feature 的層級來做
+就是一開始可能有這麼多的 feature
+我們能不能夠 sample 數個 feature 然後來做這樣子的一個資料
+然後再去做下面的 decision tree 也是可以的
+有的時候甚至在 feature 的成績去做 sampling 可能會更有效
+接著我們要來看一下 random forest illustration
+左邊的話是單一個 classifier
+就是我們的跑一個 decision tree 之後的結果
+那這邊怎麼看呢?
+首先這邊有被圈起來的
+其實就是我們有被 sample 到的資料
+那這邊的叉叉就是我們有
+這邊的圈圈跟這邊的叉叉是我們有被 sample 到的資料
+那很多的點點就是所有所有的資料
+那我們做了一次 sample 之後呢
+我們會產生一個 decision tree
+那 decision tree 你可以把它想象成
+有了一個數我們可以把資料然後丟進這個數裡面
+然後這個數是不是就會告訴我們說
+根據現在這個 decision tree 我要標這個資料為圈圈還是叉叉
+然後就可以根據這樣子標出來的結果
+然後去推測說這個學出來的這個
+有點像是這個 boundary 大概在什麼位置
+所以右邊的這張圖是跟左邊的是一樣的
+因為我們現在假設說考慮一棵樹的情況
+那其實考慮一棵樹的情況其實就是一般的 decision tree
+但是當我們的這個 tree 的數量上升到 6
+也就是我們現在森林裡面有 6 棵樹
+我們 sample 6 個不同的 subset
+那這些 subset 然後各自會得到一棵樹
+然後最後我們可以把這個結果 aggregate 起來
+得到了 final random forest 它的 decision
+那大家可能會想知道說
+那這個 curve 是怎麼畫出來的
+這 boundary 是怎麼畫出來的呢
+其實就是現在不是有 6 棵樹嗎
+那我們把 data 各自丟進這 6 棵樹裡面
+那它是不是就會 predict 出現在這一棵樹
+它要給它圈圈還叉叉
+所以我們總共有 6 棵樹嘛
+所以比如說如果我們用 majority 的話
+我們就看 majority 它給它是圈還是給它是叉
+然後就把這個 data 上面顯示是圈還是叉
+然後根據這樣子顯示出來的 data distribution 的結果
+我們可以大概念的可以想象說
+它的 boundary 可能就是長在這個地方
+所以如果你比較左邊單一一個 classifier
+跟右邊其實 aggregate 多個 tree
+它的不一樣的地方是什麼
+你看它的 boundary 其實就從原本單一一個 decision tree
+它是這種很尖銳的
+漸漸就會變得平緩
+為什麼呢
+因為你看原本 decision tree 是不是就某個地方切開某個地方切開
+當然這個是一個就是投影到 2D 空間的示意圖
+所以實際上你可能不是只有橫跟直
+因為它是投影過來的
+所以它其實有斜的
+但大部分都是這樣直線嘛
+那這是因為它是單一個 decision tree
+但是當你有多個 decision tree 的時候
+你有一些在這個 boundary 可能第二個 decision tree 它可能會切在這個位置
+第三個可能切在這個位置
+所以你整個一起 aggregate 起來之後
+你會發現這個 boundary 其實變得比較 smooth
+對吧
+因為每一個 tree 它切的位置其實是不一樣的
+而且也根據它 sample 到的資料不一樣
+可能會切出不一樣的結果
+那當然當你的數越來越多的時候
+你的這一個 curve 它的 smoothness 就會上升
+你看它就會更加 smooth
+那就會跟單一的一個 classifier 比起來
+其實就是很有顯著的差異
+那當然上升越多
+你就可以更看出這樣子的這個效果
+所以我們的概念呢
+其實就是透過大量的這一個 decision tree
+那它是一個比較 complex 的 model
+那因為它比較 complex
+所以它很容易 over fitting
+很容易受到少量的這些 noise 影響
+那我們因為多 sample 了幾次
+所以我們可以 reduce 這樣子 variance
+讓我們最後的結果是一個比較多
+不同的 complex model 都同意的情況
+那這樣子結果就會比較 robust
+所以 random forest 其實它就符合我們今天的這個章節
+就是一個 non-linear 的 model
+因為 decision tree 它就是一個 non-linear model
+所以 random forest 當然也是 non-linear model
+那它是一個 首先非常簡單
+而且呢 相較於 decision tree
+它其實比較 robust 的一個模型
+tutorial 上面
+它也有視覺化
+跟剛剛的這個 tab 的是一樣的
+然後它就視覺化告訴你說
+要如何 balance
+它也沒有說 balance
+它就是有點像是
+你可以從這個過程中
+知道 bias 跟 variance
+它其實是一個 trade off
+有的時候你希望 bias 小一點嘛
+biase 小一點的意思就是
+你希望你的準心是有涵蓋到
+就是你希望你可以瞄准中間的那個靶心
+所以你希望你的 model 是可以
+在 in-sample 上面分得好的
+可是呢 要在 in-sample 上面分得好
+你有可能你的 model 太 complex
+然後就造成 variance 很大
+所以要如何取得一個好平衡
+其實是不容易的
+然後它這邊就舉了
+剛剛的那個分
+San Francisco 房跟
+紐約房的例子
+看一下喔
+它說如果你每次分下去
+它都一定要分到
+在最後的 leaf 全部的房子
+在這個這一個 leaf 上面的 data
+turning data 都屬於同一個 label
+也就是都屬於同樣綠色的
+或同屬於藍色的
+這樣子其實是
+有一點太 complex 了
+就是你的模型有點分到太細
+所以就很容易 overfitting
+所以在 你看喔
+剛剛雖然在 training data 上百分之百
+但是 testing 上面的 error rate
+就是有 12%
+所以其實 training 跟 testing 是差有點多的
+所以這就有一點像是 overfitting 的情況
+然後它這邊就是示意那個
+它學出來的那個 decision tree 的
+每一個 criteria 它各自這樣分下去
+會長什麼樣子
+就是在 testing 上面的結果
+所以這邊就是
+剛剛說到 random forest
+如果把它先切成
+比如說四組
+然後各自去做 decision tree
+然後希望它再合起來以後
+你看這四個 decision tree
+各自的 performance 是
+在 testing 上面的 performance 長這樣
+然後我希望它合起來之後
+是可以下降它的 variance
+讓它變得比較好的
+它這邊就把它畫出來說
+這邊的這個 bias 就是當你的
+越右邊就是模型越復雜嘛
+所以越右邊就是你可以分得越細
+每一個 leaf 可能都可以把它直接分開
+那越中間可能就稍微有一點分得沒有那麼好
+越左邊就是非常的粗
+這就是 bias
+所以你希望你可以分
+你在 training data 上面可能希望可以分得越好
+在 training data 上面的 performance 就是 bias
+它就是根據你的 model的 complexity 會遞減
+但是 variance 會增大
+因為你的 model 越復雜的情況下
+你的彈性比較多嘛
+所以就更容易 over fitting
+所以最理想的這個點其實在這邊
+就是 error 最低
+variance 跟 bias 取得一個適當的平衡
+這邊其實才是最理想的
+你選擇 model 復雜程度的地方
+就是大概分到這樣就行了
+所以這邊就取決於你要什麼時候讓這個數停下來
+什麼時候 terminate
+好像就不要全部都分到同一個 label
+或是它這邊的比例多少你可能就可以讓它停止
+所以調整這個停止的 criteria 也是某種程度
+讓它不要太過右邊一直分下去的一個策略
+那沒有了
+總之這邊的 takeaway 就是
+在選擇的時候
+其實需要做很多不同的 strategy
+去讓我們可以找到這一個
+在真實情況下面
+error rate 最低的
+就是在 testing 情況下面 error rate 最低的這個 point
+就是去 balance bias 跟 variance

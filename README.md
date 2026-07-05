@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **68 支內容** · 126 個音檔 · 68 個逐字稿 · 42 個口播稿
-> 最後更新：2026-07-04
+> **118 支內容** · 174 個音檔 · 118 個逐字稿 · 118 個口播稿
+> 最後更新：2026-07-05
 
 ---
 
@@ -17,6 +17,10 @@
 
 > 最近 5 支影片
 
+- **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 2.4：Ensemble Bagging - Random Forest 樹木擴展成森林來提升穩定度](技術講座/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度.md) · 18 分 47 秒
+- **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 2.3：Decision Tree 自動學習模擬人類決策過程的模型](技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md) · 36 分 08 秒
+- **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 2.2：Overfitting 機器學習最令人聞之色變的情況為何會發生](技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md) · 15 分 52 秒
+- **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 2.1：Nonlinear Transform 為什麼需要非線性的模型呢？](技術講座/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢.md) · 40 分 11 秒
 - **2016-07-11** | Jelani Nelson（Harvard CS 教授）| [Harvard CS224 高階演算法 — Lecture 1：Word RAM、Predecessor 問題、van Emde Boas 與 Y-Fast Tries](技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md) · 88 分鐘（5299 秒）（YouTube 一般路徑，英文自動字幕 3741 cues + 繁中字幕 3033 cues 雙語對照）
 - **2014-10-16** | Piotr Indyk（MIT CSAIL 教授，LSH 共同發明人）| [Harvard CS224 高階演算法 — Lecture 14：最近鄰搜索與 Locality-Sensitive Hashing](技術講座/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.md) · Lecture notes + 29 slides（Article 路徑，PDF + PPTX 直接轉 markdown，無原始音檔）
 - **2026-06-27** | TVBS 文茜的世界周報（歐洲版）| [一紙停火備忘錄：美伊各取所需，川普表示戰爭結束了](國際局勢/20260627_TVBS_文茜_美伊停火.md) · 48 分 17 秒（YouTube 一般路徑，繁中 Whisper small CPU 聽寫 48 分鐘）
@@ -61,6 +65,10 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-07-05 | [NTU 人工智慧導論 — FAI 2.4：Ensemble Bagging - Random Forest 樹木擴展成森林來提升穩定度](技術講座/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度.md) | 林軒田（NTU CSIE 教授） | 18 分 47 秒（1127s） | [📄 note](技術講座/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI2.4_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.mp3) |
+| 2026-07-05 | [NTU 人工智慧導論 — FAI 2.3：Decision Tree 自動學習模擬人類決策過程的模型](技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md) | 林軒田（NTU CSIE 教授） | 36 分 08 秒（2168s） | [📄 note](技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI2.3_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.mp3) |
+| 2026-07-05 | [NTU 人工智慧導論 — FAI 2.2：Overfitting 機器學習最令人聞之色變的情況為何會發生](技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md) | 林軒田（NTU CSIE 教授） | 15 分 52 秒（952s） | [📄 note](技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI2.2_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.mp3) |
+| 2026-07-05 | [NTU 人工智慧導論 — FAI 2.1：Nonlinear Transform 為什麼需要非線性的模型呢？](技術講座/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢.md) | 林軒田（NTU CSIE 教授） | 40 分 11 秒（2411s） | [📄 note](技術講座/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI2.1_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿.mp3) |
 | 2026-06-05 | [Stanford CS336 Language Modeling from Scratch — Guest Lecture：Dan Fu — Inference Stack, Megakernels, Recurrent Transformers](技術講座/20260605_StanfordCS336_Guest_DanFu.md) | Dan Fu（Stanford PhD）× Percy Liang, Tatsu Hashimoto | 1 小時 11 分 40 秒（4300s） | [📄 note](技術講座/20260605_StanfordCS336_Guest_DanFu.md) · [📝 逐字稿](transcripts/20260605_StanfordCS336_Guest_DanFu_逐字稿_en.txt) · [🎙️ 口播稿](transcripts/20260605_StanfordCS336_Guest_DanFu_口播稿.txt) · [🔊 opus](audio/20260605_StanfordCS336_Guest_DanFu_口播稿.opus) · [🔊 m4a](audio/20260605_StanfordCS336_Guest_DanFu_口播稿.m4a) · [🔊 mp3](audio/20260605_StanfordCS336_Guest_DanFu_口播稿.mp3) |
 | 2026-06-04 | [Stanford CS336 Language Modeling from Scratch — Lecture 17：Alignment — Multimodality](技術講座/20260604_StanfordCS336_Lecture17_AlignmentMultimodality.md) | Percy Liang & Tatsu Hashimoto（Stanford CS 教授） | 1 小時 17 分 39 秒（4659s） | [📄 note](技術講座/20260604_StanfordCS336_Lecture17_AlignmentMultimodality.md) · [📝 逐字稿](transcripts/20260604_StanfordCS336_Lecture17_AlignmentMultimodality_逐字稿_en.txt) · [🎙️ 口播稿](transcripts/20260604_StanfordCS336_Lecture17_AlignmentMultimodality_口播稿.txt) · [🔊 opus](audio/20260604_StanfordCS336_Lecture17_AlignmentMultimodality_口播稿.opus) · [🔊 m4a](audio/20260604_StanfordCS336_Lecture17_AlignmentMultimodality_口播稿.m4a) · [🔊 mp3](audio/20260604_StanfordCS336_Lecture17_AlignmentMultimodality_口播稿.mp3) |
 | 2026-05-27 | [Stanford CS336 Language Modeling from Scratch — Lecture 16：Post-Training — RLVR](技術講座/20260527_StanfordCS336_Lecture16_RLVR.md) | Percy Liang & Tatsu Hashimoto（Stanford CS 教授） | 1 小時 15 分 50 秒（4550s） | [📄 note](技術講座/20260527_StanfordCS336_Lecture16_RLVR.md) · [📝 逐字稿](transcripts/20260527_StanfordCS336_Lecture16_RLVR_逐字稿_en.txt) · [🎙️ 口播稿](transcripts/20260527_StanfordCS336_Lecture16_RLVR_口播稿.txt) · [🔊 opus](audio/20260527_StanfordCS336_Lecture16_RLVR_口播稿.opus) · [🔊 m4a](audio/20260527_StanfordCS336_Lecture16_RLVR_口播稿.m4a) · [🔊 mp3](audio/20260527_StanfordCS336_Lecture16_RLVR_口播稿.mp3) |
@@ -180,7 +188,7 @@
 - 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
 - 2026-04-23 | [Stanford 神經科學家：記不住夢境可能是大腦在警告你！](人物訪談/20260423_Eagleman_DreamsWarningSignals.md) · Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者） × Steven Bartlett · 1 小時 33 分 18 秒（YouTube 英文自動字幕 → 繁中翻譯）
 
-### 🧠 **AI / LLM 學術與方法論**（41 支）
+### 🧠 **AI / LLM 學術與方法論**（45 支）
 
 - ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · 進階上下文工程 · ?
 - 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · Ryan Lopopolo（OpenAI Member of Technical Staff）· 46 分 20 秒
@@ -223,6 +231,10 @@
 - 2026-04-29 | [NTU 人工智慧導論 — FAI 1.3：Machine Learning Recipe 請按照步驟來用機器學習](技術講座/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.md) · 林軒田（NTU CSIE 教授） · 24:52
 - 2026-04-29 | [NTU 人工智慧導論 — FAI 1.2：What is Machine Learning? 你不能到現在還不懂甚麼是機器學習](技術講座/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.md) · 林軒田（NTU CSIE 教授） · 26:19
 - 2026-04-29 | [NTU 人工智慧導論 — FAI 1.1：Linear Models for Supervised ML 監督式機器學習之線性模型](技術講座/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.md) · 林軒田（NTU CSIE 教授） · 9:49
+- 2026-07-05 | [NTU 人工智慧導論 — FAI 2.4：Ensemble Bagging - Random Forest 樹木擴展成森林來提升穩定度](技術講座/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度.md) · 林軒田（NTU CSIE 教授） · 18:47
+- 2026-07-05 | [NTU 人工智慧導論 — FAI 2.3：Decision Tree 自動學習模擬人類決策過程的模型](技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md) · 林軒田（NTU CSIE 教授） · 36:08
+- 2026-07-05 | [NTU 人工智慧導論 — FAI 2.2：Overfitting 機器學習最令人聞之色變的情況為何會發生](技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md) · 林軒田（NTU CSIE 教授） · 15:52
+- 2026-07-05 | [NTU 人工智慧導論 — FAI 2.1：Nonlinear Transform 為什麼需要非線性的模型呢？](技術講座/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢.md) · 林軒田（NTU CSIE 教授） · 40:11
 - 2026-03-11 | [NTU 人工智慧導論 — FAI 0：課程介紹與規定](技術講座/20260311_NTUFAI_FAI0_課程介紹與規定.md) · 陳玉農 + 陳上則（NTU CSIE 教授共同授課） · 17:48
 
 ### 🛠️ **編碼工具 / Agent 工程實踐**（14 支）
@@ -330,6 +342,17 @@
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-15 | [Lecture 3：Transformer Architectures（RMSNorm、SwiGLU、RoPE）](技術講座/20260415_StanfordCS336_Lecture3_Architectures.md) · 1 小時 29 分 14 秒（5354s）
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-14 | [Lecture 2：PyTorch 資源帳戶與 Roofline 模型](技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md) · 1 小時 17 分 25 秒（4645s）
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-14 | [Lecture 1：Roadmap 與 BPE Tokenization](技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md) · 1 小時 19 分 22 秒（4762s）
+
+- **林軒田（NTU CSIE 教授）** · 2026-07-05 | [FAI 2.4：Ensemble Bagging - Random Forest 樹木擴展成森林來提升穩定度](技術講座/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度.md) · 18 分 47 秒
+- **林軒田（NTU CSIE 教授）** · 2026-07-05 | [FAI 2.3：Decision Tree 自動學習模擬人類決策過程的模型](技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md) · 36 分 08 秒
+- **林軒田（NTU CSIE 教授）** · 2026-07-05 | [FAI 2.2：Overfitting 機器學習最令人聞之色變的情況為何會發生](技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md) · 15 分 52 秒
+- **林軒田（NTU CSIE 教授）** · 2026-07-05 | [FAI 2.1：Nonlinear Transform 為什麼需要非線性的模型呢？](技術講座/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢.md) · 40 分 11 秒
+- **林軒田（NTU CSIE 教授）** · 2026-04-29 | [FAI 1.6：Logistic Regression 超實用的邏輯迴歸你真的懂嗎](技術講座/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎.md) · 23:14
+- **林軒田（NTU CSIE 教授）** · 2026-04-29 | [FAI 1.5：Linear Regression 國中就學過的線性迴歸你還記得嗎](技術講座/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎.md) · 18:24
+- **林軒田（NTU CSIE 教授）** · 2026-04-29 | [FAI 1.4：Execution of Machine Learning 機器要開始學習囉](技術講座/20260429_NTUFAI_FAI1.4_機器要開始學習囉.md) · 13:34
+- **林軒田（NTU CSIE 教授）** · 2026-04-29 | [FAI 1.3：Machine Learning Recipe 請按照步驟來用機器學習](技術講座/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.md) · 24:52
+- **林軒田（NTU CSIE 教授）** · 2026-04-29 | [FAI 1.2：What is Machine Learning? 你不能到現在還不懂甚麼是機器學習](技術講座/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.md) · 26:19
+- **林軒田（NTU CSIE 教授）** · 2026-04-29 | [FAI 1.1：Linear Models for Supervised ML 監督式機器學習之線性模型](技術講座/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.md) · 9:49
 
 - **陳文茜** · 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 48 分 36 秒
 - **陳文茜** · 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒

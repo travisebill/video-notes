@@ -1,0 +1,845 @@
+接著我們就要來看一下一個演算法
+叫做decision tree
+它是一個non-linear模型它的方法
+那我們後面就會講到說
+怎麼透過一些不同的策略
+然後去減緩剛剛說到的這種
+overfitting的狀況或是underfitting
+那我們就要先講這個decision tree
+它是怎麼做的
+在講decision tree的時候
+我們就再來看一下
+這邊有一個上個禮拜也有給大家看過
+這個AI的history
+那你會看到說
+在AI有一個高峰在這裡
+就是expert system
+expert system之前稍微有提過
+就是如果你是一個這個領域的專家
+你可能會知道說
+現在這個任務可能可以訂出一些可能的SOP
+一些if and else的入侵
+然後你就可以把這些if and else
+寫在你的程式裡面
+就根據這些if and else做判斷
+那這就是專家系統
+那在那個時候就有一個還蠻大的
+就是AI的浪潮
+大家就想說專家系統做起來行為
+好像真的很像專家
+好像很不錯
+但後來大家就發現說它不太通用
+因為你其實很難把所有的情況都寫入SOP
+所以就有一些情況它就沒有辦法handle到
+所以實際上還是沒有辦法完全的自動化
+你還是需要一個真人去handle
+那些沒有在SOP裡面的case
+所以後面就有第二個winter出現
+那雖然直接找這一個專家
+就直接讓專家去寫這個if and else
+好像不夠通用
+好像有點困難
+但有沒有辦法用一個machine learning的方法
+讓他去學
+我們專家通常是怎麼在裡面做判斷的
+所以decision tree它其實是一個很類似專家系統的
+就它學出來的結果
+其實就有點像是一個專家系統
+只是在這個過程中
+我們不知道應該從哪邊做決策
+我們讓選擇怎麼做決策這件事情讓機器來學
+所以它其實在模擬專家系統思考的邏輯
+因為我們人類思考其實就是
+比如說我現在要判斷我要不要貸款給你
+我可能就會說你的年收入超過多少的話就可以
+或者是年收入少於多少的話
+就進入下一個條件的判斷
+那可能就會有一些這樣子規則式的條件
+那我們也希望如果能夠讓機器自動從資料裡面學出
+怎麼做這些每一個決策的判斷
+那就是這個decision tree
+那用decision tree它有一個很重要的好處
+就是它的可解釋性是非常高的
+因為它的決策就是根據某一個dimension
+然後我就做一個就是這樣切開
+那代表說如果它最後找出來的第一個條件
+是你的年收入
+那這樣子我是不是就會知道說
+所以從資料裡面發現說年收入大於多少的
+它的緩緩的情況都很不錯
+繳餘多少都不太好
+所以我就這是一個很好的
+年收入是一個很好的條件去判斷我要不要貸款給你
+所以它是對於很多比如說business上面是非常重要的
+因為我要做哪一些business的決策
+其實我希望你可以解釋給我聽
+如果裡面reasonable那我可能才會做
+就是我會覺得比較安心
+對所以在data mining啊
+operation research啊
+跟一些business的intelligence
+都很常會用這種decision tree的方式
+來當成你machine learning的模型
+那在這個second winter的時候
+就是因為之前專家系統出現
+然後後來發現專家系統還不夠好
+就掉下來
+然後來透過資料裡面去學模擬這個專家系統
+但是它又是從資料裡面學
+所以它是可以更加的general更加的全面
+所以漸漸的它就從second winter的時候開始崛起
+你看這是大概1986年是大概second winter左右
+然後後來就開始上升
+現在就exponential成長
+那當然它其實等於是讓大家克服了這個第二個winter
+因為從專家系統變成是machine learning based的方法
+只是這個machine learning based的方法
+就是在模擬專家的思考
+這邊舉一個例子
+跟大家切身相關
+像我們今天就要出作業三
+大家要回去寫
+然後我們有三週的寫的時間
+deadline
+同學在決定現在你要不要寫作業
+你可能在腦中就會有一個decision tree
+你的decision tree可能會長這樣子
+dayline是何時呢
+如果大於兩週的話
+還早先不用寫就no
+那如果一週到兩週之間
+要再進行下一個條件的判斷
+我們就看看裡面有幾題呢
+題目的數量
+如果題目數量大於十
+天哪好多題要早點開始寫不然寫不完
+開始寫yes
+如果小於十題
+想說好像可能還蠻少的
+那還有一到兩週的時間應該還蠻充裕的吧
+先不寫
+那如果小於一週
+非常非常的趕怎麼辦
+不確定寫不寫得完
+到底該寫還不寫呢
+先看看有沒有朋友已經寫完了
+如果有的話太好了
+我有人可以問
+我就yes 開始寫
+那如果也沒有朋友寫完沒救了
+應該不可能完成不寫了
+這就是你腦中可能
+某些人腦中
+判斷你要不要寫作業的一些決策數
+但你有可能沒有辦法把它解釋出來
+但根據你要不要寫作業這些data
+說不定我們是可以學出這一個decision tree的
+而且學出來這個decision tree之後
+它就像是一個專家系統
+你就可以把這些學出來的條件
+變成是一個if else判斷
+然後之後就直接跑這個if and else
+然後就可以在testing data上面
+分出它對你的label了
+所以這就是在模擬這個專家系統
+但是你一開始有可能
+你也說不出來你到底是怎麼做的
+但如果我們把這些資料收集起來就會發現
+好像有這樣子的pattern
+可以學出這棵樹
+在這個樹上面我們就要先定義一個叫做
+Base hypothesis
+Base hypothesis其實就是在這裡面的這些leaf
+這些leaf代表什麼意思呢
+這些leaf代表的意思就是
+滿足某一個條件的狀況
+比如說這個leaf就是代表
+dayline大於兩週的狀況
+這個leaf就是代表dayline是一週到兩週之間
+而且題目的數量小於等於十
+所以每一個leaf
+其實都是一個條件的狀況
+我們把它稱作gt
+這個t就是這一條path的意思
+接著我們還會有一個叫做condition
+因為這是一條path
+在這條path上面其實就是滿足某一個condition
+而得到的這條path
+所以q就是condition
+就是這個qt(x)就是這個x值
+這個x是不是滿足這條path呢
+如果是的話這邊就會是1不然就會是0
+這個是path的hypothesis
+這個是是否滿足就是1跟0
+你現在這個資料有沒有滿足這一條path的condition
+是的話這個就是1不是就是0
+其實這個就是一個每一條path的transform
+所以我們可以簡單的把它把這一個模型
+這個decision tree寫成這個樣子
+大家會想說這怎麼長得有點複雜
+沒有這邊這個gt就是每一條下面的hypothesis
+就是一個這邊的base hypothesis
+然後這邊的這個就是現在這個x
+有沒有滿足這一條path
+如果有的話我就會用gt的label
+如果沒有的話就不會用
+因為沒有就是0
+那有的話就是1
+然後就會用這個x代進去
+對應的這個path出來的這個值
+所以總共有T條path
+所以它其實就是這整個東西加在一起
+把所有x帶進去
+然後看它滿足哪一條path
+滿足的那條path它對應的這個值
+就會是我們x要output的值
+所以這個decision tree就是在模擬人類思考的這些條件決策
+那其實這個過程
+我們可以把剛剛的這個模型的式子
+想成它其實就是一個recursive的view
+這個大家在演唱法的時候都學過
+recursion
+比如說像剛剛的這一個
+我們從每一條path來考慮的話
+它其實就是這邊就是每一條path
+然後這邊就是這一個x
+是不是在這條path上面的一個indicator
+是的話就1不是是0
+是這樣子
+但是我們可以把剛剛的這個東西轉換成這樣
+這是什麼東西呢
+這個GX是原本的這個GX
+就是整棵樹
+那下面的這個是什麼呢
+這邊就是我現在在某一個條件下
+它要不要分開
+如果要分開
+如果branching的criteria滿足的話
+就是branching的criteria等於c
+這個條件滿足的話
+我就要把下面的這個樹給展開
+就等於是我從一開始
+這一個root開始
+我會決定說
+我滿不滿足這一個condition
+這個condition就是大於兩週
+如果滿足大於兩週的話
+我就會把剩下的東西
+再去recursive code這個function
+recursive call這個function叫做Gc(x)
+就是滿足這一條的下面的這個subtree
+然後呢
+一週到兩週之間的這一條root
+下面的這些x
+也可以recursive code這個function
+然後下面再繼續去長它的tree
+所以這個的話
+有可能它就會這邊長一顆
+這邊長一顆
+就有三顆subtree
+然後這邊的這個C的數量就是三
+所以如果我們用recursive的方式來思考的話
+G(x)是什麼
+G(x)就是整棵樹
+就是我們目標想要學的整棵樹
+然後我們的b(x)就是
+什麼狀況
+哪一個條件上面我要分出來分開
+像第一個條件就是
+dayline有剩幾天
+第二個條件可能這邊是問題的數量
+那這邊可能是有沒有朋友完成
+這就是branching的criteria
+這就是B
+接著Gc就是subtree
+就是這邊長開來之後
+剩下的第C個branch它的subtree
+所以如果我分成三個branch
+那它就會長了三個subtree
+那如果我分成像這個分成兩個
+那就是長兩個subtree
+所以這邊的想法就是
+recursive tree
+然後就是從root的開始
+然後變成它的subtree一個一個這樣長開
+所以這個algorithm
+我們大家應該都學過recursion
+在function上面
+如果我們要學要寫一個recursive的call
+這個function一開始進來有data
+data就是很多X跟Y
+大家還記得recursive最多要停止
+如果你沒有terminate的話
+它就會segmentation fault
+所以一定base case一定要寫出來
+如果termination的criteria meet的話
+這邊也是我們之後要決定的
+什麼叫做要停止
+不要再繼續長開subtree了
+如果meet這個criteria的話
+我們就把我們最下面
+就是這個leaf上面的hypothesis穿回去
+就是leaf上面的這個X值
+然後直接代進hypothesis的function
+得出來的值就是我們要給X的label
+如果沒有meet terminate的criteria
+我們是不是就要recursive
+所以在recursive的過程中
+我們就要先去決定這個branching criteria是什麼
+就是我們要學說
+要從哪一個條件開始去展開
+我們找到了這個branching criteria之後
+我們就可以把data D分成C個部分
+C就是分成幾顆樹
+就是分成幾塊C個part
+然後就會變成3
+比如說C如果等於3的話
+就會有3組D1 D2 D3
+然後就是各自滿足不同的condition
+接著我們就把對應的每一組
+在recursive的丟進這個function裡面
+然後長出它的subtree
+然後接著就return回來
+這就是一個recursive的algorithm
+我們在最後玩terminate criteria meet的時候
+我們就直接傳回base的
+反之如果還沒有terminate的話
+我就一直不斷的branch然後展開branch展開
+所以在這個演算法當中
+有四個重要的choice
+一個就是我要展開幾個branch就在這邊C
+剛剛說到我一開始是展開成3個
+還是我要展開成2個
+直接這樣左右切開
+這個是你可以去決定的
+還有branching criteria是要從哪邊開始做branch呢
+到底第一個
+到底條件應該要設在哪一個才是reasonable的
+這邊也是要學的
+再來什麼時候要terminate
+就是應該要切到多少的時候
+我就可以結束了
+還是要繼續再長數下去呢
+如果我決定要terminate了
+那我的這個base的hypothesis
+到底要給什麼樣子的值
+我們也要決定
+這個base hypothesis我們也是需要掌握的
+所以這就是decision tree這整個category
+decision tree不是某一個演算法
+而是有很多演算法
+只要符合這樣子的概念
+它都是叫做decision tree
+那你實際上去implement不同的做法
+去決定怎麼branch啊怎麼terminate
+其實是不同的明確的演算法
+所以在這邊就分享一個很有名的
+叫做CART
+它是classification and regression tree
+那也有人這邊這個a
+不會用這個a
+它是直接用這個and就是那個符號的and
+然後就變成C&amp;RT
+但我覺得那樣很難念啦
+所以我還是比較習慣看到這個CART
+那這是剛剛的那個演算法
+把它列在這邊
+那這個CART的這個實際上這個algorithm
+它在剛剛的那幾個choice上面
+第一個choice要決定
+要分成幾個subtree
+它這邊是設定成2
+就是每次就是分成2個
+就是一個binary的tree
+所以這個tree它的branch一定是2
+這樣子
+所以每一次branch就是分成兩邊這樣切開
+再來gt(x)就是這個base的hyposis
+是怎麼決定的呢
+它這邊是用是直接等於一個constant
+假如說
+這邊
+我們要怎麼決定現在這個
+假設說這邊已經到了這個leaf的node
+那我要怎麼決定這個base hypothesis
+它要輸出哪一個值呢
+如果現在是一個分類問題的話
+我就在這邊
+落在這邊的所有的資料
+就去看它大部分的class是哪一個
+那我們就用
+y的majority當成是這一個點它的gt(x)
+這就是base hypothesis要給的值
+那這個值怎麼決定呢
+就是落在這邊的這些data
+大部分屬於哪一類
+屬於那一類的話
+我就把這個值assign那一類
+比如說它都是第二類
+那我們就把這個值assign 2
+只要最後你落在這邊
+我就是給你2的label
+那如果是regression呢
+regression不是一個label
+不是一個分類
+所以它會是一個數值
+那沒關係更簡單
+落在這邊會有很多x
+那它的y值可能不一樣
+那我就用一個平均的y就好了
+在training data上面
+落在這一區的y值的平均
+等於是這個你落在這個位置上面
+我就直接assign這個值給你
+所以根據classification或是regression
+它都有一個非常naive
+非常直覺的一個對應的gt
+就是如果你已經走到最後了
+然後你要assign值給它
+到底要assign什麼值呢
+就是這樣的決定
+接著要怎麼找這個branching criteria
+這裡也是非常的直覺
+就是你的input
+是不是有非常多個dimension
+那每個dimension就是一個feature
+所以它要做的branching就是
+選擇一個dimension
+然後找一個threshold
+然後把它分開
+就這樣子
+所以假如說你input進來
+你有10個dimension
+那我們其實就會在這10個dimension中
+決定一個dimension
+然後決定一個中間的切點
+然後這個切點把它切開
+那當然待會就會講說
+怎麼找這個dimension
+我們當然是想像中
+希望先找到一個dimension
+然後是可以最有效率的
+把不同的分類先分開的
+後面再慢慢分
+那什麼時候會決定它要terminate呢
+有兩種狀況
+就是這都可以自己去定義
+一個叫做fully-grown
+就是它已經全部長完了
+全部長完了的意思是什麼
+全部長完的意思就是
+一個data point
+每一個x都已經
+最後就只剩它一個人了
+沒有其他人跟它在同一個點了
+這時候就是全部都已經
+每一個都各自有一個leaf
+全部長完了
+就是一個非常大的樹
+或者是不一定要分到那麼的細
+因為你有可能
+你會覺得如果每一個都要有一個pass
+要全部分開的話
+有可能太過overfit在那些nodes上面了
+所以說不定不要長到那麼的完整
+可能是一個比較好的
+比如說有人就會定義說
+可能這裡面的performance到達某個程度
+比如說現在這裡面
+具體在這個位置的data
+可能80%都是同一個label
+或90%都是同一個label的話
+那我就不長了
+你可以自己設定這個terminate的criteria
+那我們就來示意一下這個CART
+在這個簡單的二維空間中
+是怎麼去分的
+這邊一樣是一個binary classification的問題
+因為它現在只有二維
+所以它是不是dimension只有兩個dimension
+那現在這個剛剛的那個algorithm
+是不是就是決定
+我要先選一個dimension
+然後找一個threshold
+把它大於跟小於的切開
+所以等於是在這一個圖上面
+我只能找橫的線
+或者是直的線
+不能斜的
+一定要橫的或直的
+因為我就是找一個dimension
+那我就是要找一個dimension
+然後可以把XX跟OO
+最有效率的分開
+所以它第一個找到的會是這樣
+左邊都是圈圈
+右邊還沒分沒關係
+我們就再繼續recursive
+所以它就會看到右邊的這個recursive下去
+再決定要怎麼切
+要橫的切還是直的切
+接著它可能就會找到這個
+這樣切
+在這邊的
+小於這個threshold的這邊
+就在剛剛的這個subtree上面
+小於這個threshold的這一塊
+都是XX嘛
+右邊還沒繼續切
+它就右切
+又是切直的
+然後發現在這個subset上面
+左半邊這邊都是圈圈
+後面就繼續切
+看到可以切橫的
+在這個dimension上面
+高於這邊的直是圈圈
+低於這邊的直是XX
+這就是它最後切完了
+所以它等於是有四個條件
+用了四次
+然後你的這個binary tree這樣長長長長
+長了四次
+subtree
+然後最後我就 assign這邊的label
+這邊的label就是圈圈嘛
+所以是藍色
+下面就是紅色
+然後這一塊藍色
+紅色
+藍色一次雷推
+大家應該覺得看這個過程
+如果你有修演算法的話
+應該會覺得它非常的直覺
+就是一個devine and conquer的algorithm
+就是切了以後
+剩下的部分是不是要再recursive的扣下去
+然後再切
+這就是一個devine and conquer的algorithm
+這個decision tree有什麼好處呢
+像剛剛的這個
+我們有提到
+它是一個可解釋性非常高的
+因為我們就會知道
+你這邊切下去
+比如說從這個圖來看
+我這邊切下去
+我就知道在這個dimension
+低於這個直的
+比如說低於這個直
+我就全部都是圈圈了
+那剩下的我就再考慮
+所以我知道這邊XX的
+我最後給它XXlabel的這些人
+就是它的這個dimension是介於
+直是介於這個到這個直之間的
+它就會得到這樣子的label
+所以我是可以解釋給大家聽說
+為什麼我分給你XX
+因為你這邊的這個直
+是介於這個到這個之間
+所以我給你XX
+就是我可以解釋
+然後你也可以讓人類看一下
+它是不是一個reasonable的
+再來它有另外一個很重要的好處就是
+對於categorical feature
+什麼叫做categorical feature
+categorical feature就是
+我現在有一個feature
+它可能不是數字
+比如說剛剛我們說到的那幾個例子
+你做作業可能我說
+現在Delta還有幾天
+它就是一個數字
+所以我們就可以把天數變成很多很多數字
+變成這個dimension它的feature
+可是有一些東西
+好像不一定能夠變成數字
+比如說現在這個作業
+它是計算題的還是證明題的
+或是程式題的
+它可能就是有三種不同的類別
+那這種是類別類的
+我們也可能很重要
+因為你出如果是程式作業
+可能跟你出證明作業
+需要時間不同
+所以這可能也是一個
+很重要的feature
+但是如果它是categorical
+就是這種類別型的
+很多其他的演算法
+好像不知道要怎麼去處理
+但是像這種decision tree
+就算是類別型也很好處理
+因為我就是對它來講
+它就是這個feature
+它屬於某一個category
+我就這樣切開
+所以如果是categorical feature
+它也可以直接的handle
+跟其他微差異很大也沒關係
+因為它本來就是每一個dimension
+獨立去考慮的
+而且還有另外一個好處
+就有的時候你有些資料
+某一些feature就是沒收集到
+那如果大家有用一些
+其他的machine learning的方法
+可能我們都會討論要怎麼補值
+這邊到底是要補0
+還是要補一個平均
+還是要怎樣
+這其實也是一個需要討論的東西
+但是如果你是用decision tree
+你完全不用管它這邊missing
+沒差因為你每一個dimension
+是各自獨立判斷的
+所以如果現在有一個data
+它在某一個dimension
+這邊沒有feature沒關係
+它就不會被這個feature做分類而已
+所以是完全沒有關係的
+所以missing feature
+也可以很容易的處理
+是它一個很重要的好處
+那它是一個在nonlinear的training上面
+因為你可以看到
+最後train出來的這個分類
+它就是有直的跟橫的這樣切切切
+所以它其實也不是
+合起來後也不是一個linear的線
+所以它其實最後分出來
+會是一個非線性的分類器
+那它是一個非常有效率的
+非線性的training
+那當然testing會非常有效率
+因為你訓練完了之後
+你其實就可以知道這個if/else
+那就直接if/else判斷就可以了
+所以非常非常的快
+但是它的缺點是什麼
+它的缺點就是
+蠻容易overfitting的
+因為你這樣切切切切
+你就會長出一個很大的樹
+如果這個樹太深的話
+可能就會focus在太多
+可能知微末節這些noise上面
+而且如果你有一個feature
+它這個feature是它的category
+就是剛剛說到類別的這種feature
+它的category如果很多的話
+它可能就會傾向說
+既然這個類別很多
+我就可以利用這個類別
+一直用這個類別來分分分分分
+所以它可能會有一些
+比較傾向用這個類別很多
+這些feature來分的這種行為
+可能不一定reasonable
+然後還有一個很大的問題就是
+這個feature
+因為它是每一個dimension
+是不是各自切開
+所以每一個dimension
+它是獨立判斷的
+所以它其實沒有辦法model說
+feature跟feature之間的資訊
+就像是如果你有一個feature A
+跟一個feature B
+它們兩個就是要成在一起
+才會有重要的資訊
+但是你這樣每一尾各自去判斷
+你就是沒有辦法model到
+它成在一起的狀況
+所以這是它的缺點
+那我們來看一個蠻有趣的示意圖
+這個示意圖就是大家可以點這個連結
+首先它前面是先簡單的
+用人的方式去視覺化一下
+可能可以用的feature
+舉例來說
+我們會拿到很多房子的資料
+那它可能可以用一些直覺
+然後去抽取一些feature
+比如說我們知道
+San Francisco它其實是在一個
+高度比較高的地方
+所以我們會認為說
+房子它的高度可能就會
+某種程度上可以告訴我們說
+這個房子是不是在San Francisco
+所以如果我們光看
+這個維度的feature
+綠色這邊的房子
+很明顯的都是比藍色這邊的房子
+只要高到一定的數值以上
+就一定是San Francisco的
+當然以下的我們就可能可以再
+用recursive的方式
+然後再去做後面的詳細的切分
+所以第一個重要的feature可能就是
+我會覺得會把這個
+高度的資訊拿進來用
+那前面都是在解釋這些
+可能有的人類的直覺
+比較符合人類在做決策的時候
+做的事情
+就像是我們人類可能就會知道說
+只要高度大於239.5的話
+可能就一定是舊金山的房子
+但是如果小於的話
+我們可以看到它的價格
+per screant fit的價格
+如果是超過1776
+那就是很貴嘛
+那這一區其實是紐約的房子
+非常都市非常市中心的
+這些很貴
+所以如果是比較低
+然後又價格超過一定的數值
+那這樣子它可能就會是
+屬於紐約的房子
+所以我這邊可能又會在這邊切開
+然後再去做第二次branching的
+這個criteria
+那剩下這邊我們在之後繼續細分
+所以我會知道每一
+per sq ft的價格
+其實是重要的feature
+我們會把它拿進來用
+那概念上就是這樣子
+我們放了非常多個feature
+像是高度啊
+哪一年建造的
+bathroom的數量等等的
+利用machine learning這樣子
+decision tree的方式
+它自己去找適合的這些boundary
+那你會發現喔
+比如說它first work
+這個decision tree它的概念
+就跟我們平常在寫
+程式的時候一樣
+就是它是一個if and else的statement
+就是有點像是我們進入了這個branch
+if符合某一個條件的狀況的時候
+我就走這條路
+符合另外一個條件狀況
+所以我就走另外一條路
+所以當我們 learn出來這樣子的branching的
+criteria之後
+剛剛有說到它其實就變成
+某種程度的專家系統
+我們可以把這個結論
+直接寫成是一個寫死的program
+然後直接去做後面的這個預測
+那我們可以直接來看一下
+它最後 learn出來的
+這個decision tree的結果
+它的做法就是一樣
+剛剛說到我們要找第一個重要的
+criteria然後把它切開嘛
+然後它可能就發現說elevation
+它大於某一個值的
+全部都是San Francisco的
+小於某一個值的大部分都是紐約的
+所以我可以把它切開
+那第二個我可以找到的可能是
+哪一個年份build
+然後我可以把它切開
+以此類推
+所以每一個feature上面
+可能都可以找到一些重要的資訊
+那利用recursive的概念
+讓機器自己去選擇
+要怎麼切開裡面的feature
+然後把它分成兩個部分
+所以這邊有一個重要的點是
+我要怎麼決定要做branch
+我這個branch要符合某種程度的criteria
+像這裡我可能可以說
+我希望它怎麼決定去分
+我的這個切點希望它能夠
+切分開來之後
+左右兩邊的performance
+可能平均是要最高的
+那performance的定義可能是
+左邊背面是錯誤的
+跟右邊背面是錯誤的整個數量
+可能是要越小越好
+那這樣就是一個還不錯的切點
+我就把它切開
+然後兩邊各自recursive的code
+所以第一個它找到的切點就是
+elevation它要高於某一個值
+可能都是San Francisco的
+那低於的話可能比較多是紐約的
+那這兩邊我們還可以再次細分
+比如說它左半邊小於這一個elevation的
+它可能就會再根據
+每一個square ft它的price
+然後再去分
+比較高價位的可能比較多是紐約的
+比較低價位的可能還再繼續細分
+所以你可以看到
+經過第二次的recursive的code
+細分開來之後
+比較高價位這邊紐約的佔比就比較高了
+那這邊因為還不太確定
+還幫confuse可以繼續切分
+那右邊雖然說大部分都是San Francisco居多
+但是還是有可能會有一些參雜在裡面
+我還是可以再次的細分
+然後把它這個數一直一直長到
+全部分下去的branch
+所有leaf node裡面全部都屬於同一個類別
+所以如果用這種方式一直長下去的話
+可以看到它這邊的這個點
+最後走到最底下
+全部都是同樣顏色的
+接著我就會算一下我的performance
+把這些training data的點放進來之後
+它有沒有都落在正確的位置
+那它的training accuracy是可以到達100%的
+然而我在testing就是我沒看過這些資料上面
+可以到達多少的performance呢
+在這個例子上面它的performance是89.7
+所以它其實是有一點點overfit
+因為它在training上面可以做到100%
+但是testing它的performance少了10多%
+那這個差異這個error來自於哪裡呢
+這個error其實就是overfitting
+就是來自於我們可能已經切到太細
+它已經focus太多可能是太noise的狀況
+它並沒有辦法generalize到沒看過這些testing的scenario
+所以這是另外一個問題
+於是我們之後就要來講一些方法
+可能某種程度上可以減緩我們overfitting的狀況
+那overfitting會發生就代表我們這一個model
+可能太過conplex太過focus在特定的這些小noise上面
+那當然有很多種可能可以調整的方式
+比如說我可以不要讓它最下面一定要切到每一個leaf
+都完全是同樣顏色
+我可能切到一定的performance
+我就不再繼續切了也是可以的
+那這樣子它可能就可以某種程度上避免overfit一些
+不過它的biased就會增加
+因為我在trending上面可能就沒有辦法做到那麼的高
+所以在這裡你可以視覺化的玩玩看
+比如說你可以看到這一條path
+它就是前面這邊高度是小於等於91.9
+然後走這一條路就是它的價格是小於1056per scrypthit
+然後它的年份是在1973年之後的
+然後如果往這邊走的話全部就會是綠色的
+它就覺得是舊金3的
+因為可能紐約房子比較多是比較老的
+easily推
+所以這個的差異跟training上面的差異跟testing差異
+如果training可以到100%
+那這個就是overfitting
+也就是我們的model太conplex
+我們可以在trending上面fit很好
+可是generalize的能力其實是還有待加強的

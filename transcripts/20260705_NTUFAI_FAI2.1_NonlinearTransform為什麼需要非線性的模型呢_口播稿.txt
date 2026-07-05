@@ -1,0 +1,17 @@
+台大資訊工程學系 2026 年春季「人工智慧導論」FAI 2.1「為什麼需要非線性的模型呢？」，由林軒田教授主講，約 40 分鐘，是 Machine Learning 章節進入 Nonlinear Models 的開篇。
+
+從 Linear Model 限制角度，林軒田教授點出 FAI 1.x 系列一直迴避的關鍵問題：Linear Model $h(x) = w^T x$ 在 2D 平面就是一條直線。Linear Model 有 Generalization 強的好處——簡單模型只記 high-level 大概念，不會死背資料。但 Linear Model 也有不可逾越的限制：當資料是「圈圈包圍叉叉」、「橢圓」等形狀時，任何直線都切不開，$E_{in}$ 永遠大；$E_{in}$ 大通常代表 $E_{out}$ 也大——Generalization 再強也救不回來。所以「什麼時候 Linear Model 夠用」要根據資料決定。
+
+從 Quadratic Hypothesis 角度，林軒田教授用「圈圈包圍叉叉」示範 Hypothesis Set 升級。圓的多項式 $h(x) = (x_1^2 + x_2^2 - r)$ 對 $x$ 不是線性，但 General 化成 Quadratic Hypothesis $a_1 x_1^2 + a_2 x_2^2 + a_3 x_1 x_2 + a_4 x_1 + a_5 x_2 + a_6$ 涵蓋所有二次曲線（圓、橢圓、拋物線、雙曲線、旋轉後的橢圓）。Linear Model 是 Quadratic 的 special case（二次項係數為 0）。Quadratic Hypothesis Set 比 Linear 強很多——這也是 FAI 2.x 開始討論的核心：Hypothesis 越複雜表示力越強。
+
+從 Feature Transform 角度，林軒田教授展示核心 trick——把 $X$ 映射到 $Z$ 空間。定義 $\Phi: X \rightarrow Z$，其中 $z_0 = 1$、$z_1 = x_1^2$、$z_2 = x_2^2$。在 $Z$ 空間，Linear Model $\tilde{w}^T z$ 學出來一條 hyperplane；對應回 $X$ 空間就是圓（二次曲線）。也就是說：在 $X$ 不可分 ≠ 在 $Z$ 不可分；找到合適的 $\Phi$ 後，剩下的工作就跟 FAI 1.x 一模一樣。這個「Reduction: Circular Learning → Linear Learning」是整個非線性 ML 的起點，也是 1990 年代 Kernel Methods（SVM with RBF kernel）、2000 年代 Deep Learning（Convolutional Layers）的共同祖先。
+
+從 Recap 與 Reduction 思路角度，林軒田教授提醒同學演算法課學過的 reduction——把 Circular Learning reduce 到 Linear Learning 用解 Linear 的方式解。關鍵是找到好的 $\Phi$——「看到資料就知道要用什麼轉換」需要經驗，這也開啟了 ML 中「特徵工程」的整個領域。
+
+從 Spam Email Classification 應用角度，林軒田教授引用 1990 年代經典論文：Linear Model 在 Spam Detection 上的 testing error rate 約 7%；升級到 Quadratic Model（nonlinear）後降到 1.68%。原因是 $f(x)$ 本身可能就是二次的——Linear Model 跟 $f$ 差距大；Quadratic Model 接近 $f$。但我們永遠不知道 $f$ 是什麼，這是 ML 的根本難題。
+
+從 Digit Recognition 應用角度，林軒田教授提到 Yann LeCun 1989 年的開創工作（CNN 起源之一）：手寫數字/郵遞區號自動辨識。從 raw pixel 設計 feature（對稱性、筆劃密度、孔洞數量等）→ 丟入 Linear/Quadratic Model → 預測。這就是 Manual Feature Engineering 的經典做法。Deep Learning 的差異在於模型自己學 feature——對影像、文字、語音效果特別好，因為資料量大且難以 manual feature。
+
+從 Higher Order Polynomial 與 Computational Cost 角度，General Polynomial Order $Q$ 包含所有 $Q$ 次以下的項，維度 $1+d+d^2+\dots+d^Q$ 隨 $Q$ 指數增長。trade-off：表示力 ↑ vs 計算成本 ↑ vs Overfitting 風險 ↑。$Q$ 怎麼選？需要 Model Selection——這也是 FAI 2.2 將要探討的主題。
+
+一句話總結：FAI 2.1 把 Machine Learning 從 Linear 推進到 Nonlinear——用 Feature Transform 把 $X$ 映射到 $Z$，使 $Z$ 空間線性可分，這是 Kernel Methods 與 Deep Learning 的共同祖先；但 Hypothesis 越複雜表示力越強也越容易 Overfitting——Model Selection 是 ML 最困難的核心難題。

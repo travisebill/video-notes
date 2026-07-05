@@ -1,0 +1,19 @@
+台大資訊工程學系 2026 年春季「人工智慧導論」FAI 2.3「自動學習模擬人類決策過程的模型」，由林軒田教授主講，約 36 分鐘，是 Machine Learning 章節介紹 Decision Tree 的第一講。
+
+從 AI 歷史與 Expert System 限制角度，1960-70 年代 Expert System 曾是 AI 頂峰——領域專家把 if-and-else 規則寫進程式。但 Expert System 不夠通用，因為人類很難把所有情況都寫進 SOP；寫不完的 case 還是需要真人處理，於是 1980 年代進入第二次 AI 寒冬。Decision Tree 從這個寒冬崛起——「從資料裡學出 if-and-else 規則」，既像專家系統（學出來可以寫成 if-else），又從資料學（比人手寫更 general、更全面），於是逐漸取代傳統 Expert System，從第二次寒冬 Exponential 成長到現在。
+
+從寫作業 Decision Tree 範例角度，林軒田教授用同學決定要不要寫作業的決策樹開場：deadline 大於兩週 → 不寫；一到兩週看題目數量（大於 10 題開始寫，否則不寫）；小於一週看朋友進度（有朋友寫完就寫，否則不寫）。這棵樹的每個 internal node 都是條件、每個 leaf 都是決定。如果收集到「學生寫作業 / 不寫作業」的歷史資料，就能從資料學出這棵樹——人說不出自己怎麼決策，但 data 學得出來。
+
+從 Path-based 數學式角度，每個 leaf 是 base hypothesis $g_t(x)$（分類用 majority、回歸用 average）；path condition $q_t(x)$ = 0/1 indicator 決定 $x$ 是否滿足這條 path。整個 tree = $G(x) = \sum_t q_t(x) \cdot g_t(x)$，是所有 path 的加總。每個 leaf 都是「滿足某一組條件」的 $x$ 集合。
+
+從 Recursive 數學式角度，$G(x)$ 從 root 開始；$b(x)$ 是 branching criteria；如果 $b(x, c)$ 滿足就展開成 subtree $G_c(x)$。整棵 tree = $b(x)$ + 多個 subtree 加總。這是 divide-and-conquer 的 recursive 演算法——對應到程式：recursive function，base case 要寫出來（否則 segmentation fault）。
+
+從 CART 演算法的四個關鍵決定角度，整個 Decision Tree algorithm 包含四個 choice：(1) 每次切幾個 branch（CART 用 2, binary）；(2) base hypothesis $g_t(x)$（分類 majority、回歸 average）；(3) branching criteria（dimension + threshold）；(4) terminate criteria（fully-grown 或 performance threshold）。不同的 choice 對應不同演算法（CART、C4.5、ID3 等）——所以 Decision Tree 不是單一演算法而是一個 category。
+
+從 CART 在 2D 空間示意角度，2D 二元分類只能找橫線或直線切（不能斜切）。過程：找 dimension + threshold 切一刀 → 分開後對 subset recursive 再切 → 完全分開為止。例如 San Francisco vs New York 房價分類：先切直的把高 elevation 的舊金山分開 → 再對剩下的切橫的把高價位的紐約分開 → 總共四次 branching、四個 condition。
+
+從 Decision Tree 優點角度，可解釋性高（學出來看哪些 dimension 重要、threshold 多少）、對 categorical feature 友善（不需 encoding 直接處理類別型 feature）、對 missing feature 友善（某 dimension 沒值跳過就好）、訓練與測試都快（divide-and-conquer 訓練、if-else 測試）。
+
+從 Decision Tree 缺點角度，容易 Overfitting（切太細把 noise 學進去）、對類別多的 categorical feature 有偏誤（傾向用該 feature 切）、不能 model feature 間 interaction（每個 dimension 獨立切）。San Francisco vs New York 房價分類實例：training accuracy 100% 但 testing 89.7%——Overfit 約 10%，這為 FAI 2.4 Random Forest 埋下伏筆。
+
+一句話總結：FAI 2.3 介紹第一個具體的非線性模型 Decision Tree——模擬人類 if-and-else 決策邏輯，從資料自動學出；用 CART 演算法的 recursive formulation，可解釋性強、可處理 categorical/missing feature，但容易 Overfitting；FAI 2.4 將用 Random Forest（ensemble 多棵 tree）解決 Overfitting 問題。
