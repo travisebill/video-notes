@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 135,
-    "total_with_audio": 106,
-    "total_with_transcript": 80,
-    "total_with_spoken_script": 106,
+    "total_videos": 138,
+    "total_with_audio": 109,
+    "total_with_transcript": 83,
+    "total_with_spoken_script": 109,
     "speakers_count": 56,
     "categories_count": 4,
     "topics_count": 13,
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-05 20:38:36",
+    "last_updated": "2026-07-05 22:31:58",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -1524,6 +1524,87 @@
       },
       "note_path": "技術講座/20260604_StanfordCS336_Lecture17_AlignmentMultimodality.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260604_StanfordCS336_Lecture17_AlignmentMultimodality.md"
+    },
+    {
+      "id": "20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 6.3 Agents 可以動手的代理人真的要來了?】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 2306,
+      "duration_display": "38:26",
+      "video_url": "https://youtu.be/L81ueoIUXTg",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_口播稿.opus",
+        "m4a": "audio/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_口播稿.m4a",
+        "mp3": "audio/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_逐字稿.txt",
+        "spoken_script": "transcripts/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了.md"
+    },
+    {
+      "id": "20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 6.2 Multimodal LLMs 如何讓語言模型也可以理解與生成影像聲音等資訊呢?】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 780,
+      "duration_display": "13:00",
+      "video_url": "https://youtu.be/c0hHSsb7b5Y",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_口播稿.opus",
+        "m4a": "audio/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_口播稿.m4a",
+        "mp3": "audio/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_逐字稿.txt",
+        "spoken_script": "transcripts/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢.md"
+    },
+    {
+      "id": "20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 6.1 Generative AI: Large Language Models】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1502,
+      "duration_display": "25:02",
+      "video_url": "https://youtu.be/rjIFxHB_H3o",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_口播稿.opus",
+        "m4a": "audio/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_口播稿.m4a",
+        "mp3": "audio/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_逐字稿.txt",
+        "spoken_script": "transcripts/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型.md"
     },
     {
       "id": "20260531_Dex_12FactorAgents_NoVibesAllowed",

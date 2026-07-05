@@ -1,0 +1,21 @@
+# FAI 6.3 口播稿｜AI Agents 代理人
+
+> 送 TTS 前會 OpenCC t2s 預轉繁→簡
+> 主題：Agent 定義、Planning、Reasoning（CoT + ReAct）、Memory 短期與長期、Tool use、Multi-agent 編曲、Human-in-the-Loop、Harness Engineering
+> 字數目標：~1700 chars 純內文（38 分鐘影片）
+
+## 口播稿（繁中）
+
+原模型只能「出一張嘴」——表面上答應訂 101 餐廳、看起來像專業客服，最後卻沒做任何動作。Agent 的出現正是為了解決這個落差：讓模型具備 take action 的能力，可以呼叫 API、實際下單、執行指令，而不僅僅是產出文字描述。
+
+從強化學習的角度定義 Agent，是一個能感知環境、做出動作、影響環境的實體。Rational Agent 會選擇能最大化效用函數的動作。當代語言 Agent 通常透過文字作為介面，與瀏覽器、作業系統、檔案系統、使用者等外部環境互動，核心仍是大型語言模型，外層則包覆感知、規劃、推理、記憶、工具呼叫等機制。
+
+Agent 的四大核心能力。第一是 Planning：把高階目標拆解成可執行的小步驟。例如「去舊金山旅行」可拆成訂機票、訂飯店、安排行程，每個小任務再分配給對應的 Agent 或工具執行。第二是 Reasoning：Chain-of-Thought 思維鏈讓模型在回答前先寫下思考過程；ReAct 更進一步，要求模型先行動、觀察結果、再決定下一步，這對需要查詢或實作的任務特別關鍵——以 Apple Remote 為例，標準模型直接猜答案會錯，加入 search action 後正確率明顯提升。
+
+第三是 Memory，分短期與長期。短期記憶放在 context window 內，但長度有限，任務複雜時容易遺忘開頭；長期記憶則寫入外部儲存，透過 retrieval 機制在需要時取回。開源框架 Letta 展示了 Agent 如何累積生活經驗、跨日保留記憶。第四是 Tool Use：Toolformer 論文證明模型可以學會在適當時機呼叫外部工具，例如計算機、QA 系統、維基百科 API——但前提是要有人工整理的訓練資料教模型正確的 API 呼叫格式，否則連 GPT-4 都會給出錯誤參數。
+
+多 Agent 系統則引入 orchestrator 概念，由一個總指揮 Agent 拆分任務、分派給多個專責 Agent 執行，如同交響樂團指揮。Human-in-the-Loop 是當前重要的安全設計：在關鍵決策點要求人類確認，避免錯誤自動化執行。Claude Code 偏向高度確認、安全優先；OpenHands 偏向自主執行、效率優先但風險較高。這中間的安全與便利權衡，是 Agent 落地最核心的實務問題。
+
+## 字數統計
+
+純內文：1648 chars

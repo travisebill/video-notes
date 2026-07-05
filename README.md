@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **135 支內容** · 225 個音檔 · 135 個逐字稿 · 135 個口播稿
+> **138 支內容** · 234 個音檔 · 138 個逐字稿 · 138 個口播稿
 > 最後更新：2026-07-05
 
 ---
@@ -17,6 +17,9 @@
 
 > 最近 5 支影片
 
+- **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 6.3：Agents 可以動手的代理人真的要來了?](技術講座/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了.md) · 38 分 26 秒
+- **2026-06-03** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 6.1：Generative AI - Large Language Models 生成式人工智慧之大型語言模型](技術講座/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型.md) · 25 分 02 秒
+- **2026-06-03** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 6.2：Multimodal LLMs 如何讓語言模型也可以理解與生成影像聲音等資訊呢?](技術講座/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢.md) · 13 分 00 秒
 - **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 3.5：Deep Learning Optimization 訓練深度學習模型需要很多小撇步](技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md) · 29 分 59 秒
 - **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 3.4：Loss Function Design 甚麼才叫「好」模型呢？](技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md) · 4 分 17 秒
 - **2026-07-05** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 3.3：Neural Network Hypothesis 如何建構深度學習的類神經網路](技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md) · 19 分 59 秒
@@ -88,6 +91,9 @@
 | 2026-05-27 | [Stanford CS336 Language Modeling from Scratch — Lecture 16：Post-Training — RLVR](技術講座/20260527_StanfordCS336_Lecture16_RLVR.md) | Percy Liang & Tatsu Hashimoto（Stanford CS 教授） | 1 小時 15 分 50 秒（4550s） | [📄 note](技術講座/20260527_StanfordCS336_Lecture16_RLVR.md) · [📝 逐字稿](transcripts/20260527_StanfordCS336_Lecture16_RLVR_逐字稿_en.txt) · [🎙️ 口播稿](transcripts/20260527_StanfordCS336_Lecture16_RLVR_口播稿.txt) · [🔊 opus](audio/20260527_StanfordCS336_Lecture16_RLVR_口播稿.opus) · [🔊 m4a](audio/20260527_StanfordCS336_Lecture16_RLVR_口播稿.m4a) · [🔊 mp3](audio/20260527_StanfordCS336_Lecture16_RLVR_口播稿.mp3) |
 | 2026-05-27 | [Stanford CS336 Language Modeling from Scratch — Lecture 15：Mid-Training 與 Post-Training — SFT、RLHF 與 Reward Model 設計](技術講座/20260527_StanfordCS336_Lecture15_MidPostTraining.md) | Percy Liang & Tatsu Hashimoto（Stanford CS 教授） | 1 小時 19 分 54 秒（4794s） | [📄 note](技術講座/20260527_StanfordCS336_Lecture15_MidPostTraining.md) · [📝 逐字稿](transcripts/20260527_StanfordCS336_Lecture15_MidPostTraining_逐字稿_en.txt) · [🎙️ 口播稿](transcripts/20260527_StanfordCS336_Lecture15_MidPostTraining_口播稿.txt) · [🔊 opus](audio/20260527_StanfordCS336_Lecture15_MidPostTraining_口播稿.opus) · [🔊 m4a](audio/20260527_StanfordCS336_Lecture15_MidPostTraining_口播稿.m4a) · [🔊 mp3](audio/20260527_StanfordCS336_Lecture15_MidPostTraining_口播稿.mp3) |
 | 2026-05-30 | [NTU 人工智慧導論 — FAI 5.4：Density Estimation with RBF Networks 了解資料的整體分布](技術講座/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布.md) | 林軒田（NTU CSIE 教授） | 28 分 30 秒（1710s） | [📄 note](技術講座/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布.md) · [📝 逐字稿](transcripts/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_口播稿.txt) · [🔊 opus](audio/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_口播稿.opus) · [🔊 m4a](audio/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_口播稿.m4a) · [🔊 mp3](audio/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_口播稿.mp3) |
+| 2026-06-04 | [NTU 人工智慧導論 — FAI 6.3：Agents 可以動手的代理人真的要來了?](技術講座/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了.md) | 林軒田（NTU CSIE 教授） | 38 分 26 秒（2306s） | [📄 note](技術講座/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了.md) · [📝 逐字稿](transcripts/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_口播稿.txt) · [🔊 opus](audio/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_口播稿.opus) · [🔊 m4a](audio/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_口播稿.m4a) · [🔊 mp3](audio/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_口播稿.mp3) |
+| 2026-06-03 | [NTU 人工智慧導論 — FAI 6.1：Generative AI - Large Language Models 生成式人工智慧之大型語言模型](技術講座/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型.md) | 林軒田（NTU CSIE 教授） | 25 分 02 秒（1502s） | [📄 note](技術講座/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型.md) · [📝 逐字稿](transcripts/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_口播稿.txt) · [🔊 opus](audio/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_口播稿.opus) · [🔊 m4a](audio/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_口播稿.m4a) · [🔊 mp3](audio/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_口播稿.mp3) |
+| 2026-06-03 | [NTU 人工智慧導論 — FAI 6.2：Multimodal LLMs 如何讓語言模型也可以理解與生成影像聲音等資訊呢?](技術講座/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢.md) | 林軒田（NTU CSIE 教授） | 13 分 00 秒（780s） | [📄 note](技術講座/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢.md) · [📝 逐字稿](transcripts/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_口播稿.txt) · [🔊 opus](audio/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_口播稿.opus) · [🔊 m4a](audio/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_口播稿.m4a) · [🔊 mp3](audio/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_口播稿.mp3) |
 | 2026-05-28 | [NTU 人工智慧導論 — FAI 5.3：Representation Learning with Autoencoder 學習好的資料表徵](技術講座/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵.md) | 林軒田（NTU CSIE 教授） | 14 分 36 秒（876s） | [📄 note](技術講座/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵.md) · [📝 逐字稿](transcripts/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_口播稿.txt) · [🔊 opus](audio/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_口播稿.opus) · [🔊 m4a](audio/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_口播稿.m4a) · [🔊 mp3](audio/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_口播稿.mp3) |
 | 2026-05-27 | [NTU 人工智慧導論 — FAI 5.2：K-Means Clustering 怎麼能不知道的 K 平均演算法](技術講座/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法.md) | 林軒田（NTU CSIE 教授） | 16 分 17 秒（977s） | [📄 note](技術講座/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法.md) · [📝 逐字稿](transcripts/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_口播稿.txt) · [🔊 opus](audio/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_口播稿.opus) · [🔊 m4a](audio/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_口播稿.m4a) · [🔊 mp3](audio/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_口播稿.mp3) |
 | 2026-05-27 | [NTU 人工智慧導論 — FAI 5.1：Unsupervised Machine Learning 非監督式機器學習](技術講座/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習.md) | 林軒田（NTU CSIE 教授） | 39 分 44 秒（2384s） | [📄 note](技術講座/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習.md) · [📝 逐字稿](transcripts/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_口播稿.txt) · [🔊 opus](audio/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_口播稿.opus) · [🔊 m4a](audio/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_口播稿.m4a) · [🔊 mp3](audio/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_口播稿.mp3) |
@@ -214,7 +220,7 @@
 - 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
 - 2026-04-23 | [Stanford 神經科學家：記不住夢境可能是大腦在警告你！](人物訪談/20260423_Eagleman_DreamsWarningSignals.md) · Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者） × Steven Bartlett · 1 小時 33 分 18 秒（YouTube 英文自動字幕 → 繁中翻譯）
 
-### 🧠 **AI / LLM 學術與方法論**（62 支）
+### 🧠 **AI / LLM 學術與方法論**（65 支）
 
 - ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · 進階上下文工程 · ?
 - 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · Ryan Lopopolo（OpenAI Member of Technical Staff）· 46 分 20 秒
@@ -274,6 +280,9 @@
 - 2026-05-24 | [NTU 人工智慧導論 — FAI 4.5：Convolutional Neural Network 處理影像你不能不知道的 CNN](技術講座/20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN.md) · 林軒田（NTU CSIE 教授） · 21:10
 - 2026-05-25 | [NTU 人工智慧導論 — FAI 4.6：Recurrent Neural Network 處理序列資料你不能不知道的 RNN](技術講座/20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN.md) · 林軒田（NTU CSIE 教授） · 6:17
 - 2026-05-25 | [NTU 人工智慧導論 — FAI 4.7：Regularization Techniques for Deep Learning 訓練模型時不能不知道的小撇步](技術講座/20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步.md) · 林軒田（NTU CSIE 教授） · 14:50
+- 2026-06-04 | [NTU 人工智慧導論 — FAI 6.3：Agents 可以動手的代理人真的要來了?](技術講座/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了.md) · 林軒田（NTU CSIE 教授） · 38:26
+- 2026-06-03 | [NTU 人工智慧導論 — FAI 6.1：Generative AI - Large Language Models 生成式人工智慧之大型語言模型](技術講座/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型.md) · 林軒田（NTU CSIE 教授） · 25:02
+- 2026-06-03 | [NTU 人工智慧導論 — FAI 6.2：Multimodal LLMs 如何讓語言模型也可以理解與生成影像聲音等資訊呢?](技術講座/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢.md) · 林軒田（NTU CSIE 教授） · 13:00
 - 2026-05-30 | [NTU 人工智慧導論 — FAI 5.4：Density Estimation with RBF Networks 了解資料的整體分布](技術講座/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布.md) · 林軒田（NTU CSIE 教授） · 28:30
 - 2026-05-28 | [NTU 人工智慧導論 — FAI 5.3：Representation Learning with Autoencoder 學習好的資料表徵](技術講座/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵.md) · 林軒田（NTU CSIE 教授） · 14:36
 - 2026-05-27 | [NTU 人工智慧導論 — FAI 5.2：K-Means Clustering 怎麼能不知道的 K 平均演算法](技術講座/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法.md) · 林軒田（NTU CSIE 教授） · 16:17
@@ -386,6 +395,9 @@
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-14 | [Lecture 2：PyTorch 資源帳戶與 Roofline 模型](技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md) · 1 小時 17 分 25 秒（4645s）
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-14 | [Lecture 1：Roadmap 與 BPE Tokenization](技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md) · 1 小時 19 分 22 秒（4762s）
 
+- **林軒田（NTU CSIE 教授）** · 2026-06-04 | [FAI 6.3：Agents 可以動手的代理人真的要來了?](技術講座/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了.md) · 38:26
+- **林軒田（NTU CSIE 教授）** · 2026-06-03 | [FAI 6.1：Generative AI - Large Language Models 生成式人工智慧之大型語言模型](技術講座/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型.md) · 25:02
+- **林軒田（NTU CSIE 教授）** · 2026-06-03 | [FAI 6.2：Multimodal LLMs 如何讓語言模型也可以理解與生成影像聲音等資訊呢?](技術講座/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢.md) · 13:00
 - **林軒田（NTU CSIE 教授）** · 2026-05-30 | [FAI 5.4：Density Estimation with RBF Networks 了解資料的整體分布](技術講座/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布.md) · 28:30
 - **林軒田（NTU CSIE 教授）** · 2026-05-28 | [FAI 5.3：Representation Learning with Autoencoder 學習好的資料表徵](技術講座/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵.md) · 14:36
 - **林軒田（NTU CSIE 教授）** · 2026-05-27 | [FAI 5.2：K-Means Clustering 怎麼能不知道的 K 平均演算法](技術講座/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法.md) · 16:17
