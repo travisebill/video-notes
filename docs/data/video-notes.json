@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 131,
-    "total_with_audio": 102,
-    "total_with_transcript": 76,
-    "total_with_spoken_script": 102,
-    "speakers_count": 55,
+    "total_videos": 135,
+    "total_with_audio": 106,
+    "total_with_transcript": 80,
+    "total_with_spoken_script": 106,
+    "speakers_count": 56,
     "categories_count": 4,
     "topics_count": 13,
     "courses": [
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-05 20:03:16",
+    "last_updated": "2026-07-05 22:12:52",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -62,6 +62,7 @@
       "小天fotos",
       "李宏毅",
       "林軒田（NTU CSIE 教授, Machine Learning Foundations  Coursera 系列授課者）",
+      "林軒田（NTU CSIE 教授, Machine Learning Foundations Coursera 系列授課者）",
       "歐麗娟，台灣大學中文系教授，全台最受歡迎的中國古典文學課程講師之一",
       "自說自話的總裁",
       "蔡康永",
@@ -1552,6 +1553,60 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260531_Dex_12FactorAgents_NoVibesAllowed.md"
     },
     {
+      "id": "20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 5.4 RBF 網路與密度估計】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 1710,
+      "duration_display": "28:30",
+      "video_url": "https://youtu.be/Ak7fyNU4M5o",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_口播稿.opus",
+        "m4a": "audio/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_口播稿.m4a",
+        "mp3": "audio/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_逐字稿.txt",
+        "spoken_script": "transcripts/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布.md"
+    },
+    {
+      "id": "20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 5.3 表示學習與自編碼器】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 876,
+      "duration_display": "14:36",
+      "video_url": "https://youtu.be/hVaV3cSA5Nk",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_口播稿.opus",
+        "m4a": "audio/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_口播稿.m4a",
+        "mp3": "audio/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_逐字稿.txt",
+        "spoken_script": "transcripts/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵.md"
+    },
+    {
       "id": "20260528_Maya_Claude_Code_Routines_主動代理工作流",
       "title": "【Building Proactive Agent Workflows with Claude Code】",
       "speaker": "Maya，Anthropic Applied AI 團隊成員。一半時間開發自家產品功能，一半時間協助客戶基於 Anthropic 模型建構產品與代理。",
@@ -1712,6 +1767,60 @@
       },
       "note_path": "技術講座/20260527_StanfordCS336_Lecture14_Data.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260527_StanfordCS336_Lecture14_Data.md"
+    },
+    {
+      "id": "20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 5.2 K 平均分群演算法】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 977,
+      "duration_display": "16:17",
+      "video_url": "https://youtu.be/YZg4GKLduV4",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_口播稿.opus",
+        "m4a": "audio/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_口播稿.m4a",
+        "mp3": "audio/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_逐字稿.txt",
+        "spoken_script": "transcripts/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法.md"
+    },
+    {
+      "id": "20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習",
+      "title": "【NTU 人工智慧導論（FAI 2026）— 5.1 非監督式機器學習】",
+      "speaker": "林軒田（NTU CSIE 教授, Machine Learning Foundations Coursera 系列授課者）",
+      "speaker_slug": "NTUFAI",
+      "course_slug": "NTU 人工智慧導論",
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-05",
+      "note_date": "2026-07-05",
+      "duration_seconds": 2384,
+      "duration_display": "39:44",
+      "video_url": "https://youtu.be/djqhfM4Nr8g",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_口播稿.opus",
+        "m4a": "audio/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_口播稿.m4a",
+        "mp3": "audio/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_逐字稿.txt",
+        "spoken_script": "transcripts/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習.md"
     },
     {
       "id": "20260526_開發者對談_AI代理Spec-Driven與GuardRails",
