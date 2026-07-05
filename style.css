@@ -53,11 +53,15 @@ body.modal-open {
   overflow: hidden;
   background: var(--pico-background-color);
   line-height: 0;
+  aspect-ratio: 16 / 9;  /* 明確 aspect ratio on container（避免 img 撐高）*/
+  width: calc(100% + 1.6rem);  /* 補回 negative margin 撐出去 */
 }
 
 .video-thumbnail {
+  position: absolute;  /* 絕對定位避免 img 撐高 container */
+  inset: 0;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.25s ease, filter 0.25s ease;
