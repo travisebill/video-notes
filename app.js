@@ -292,11 +292,11 @@ document.addEventListener('alpine:init', () => {
     },
 
     // Course filter 變動時自動切 sort
-    // 選 CS224 / CS336 → sort = lec_num_asc（Lecture 順序）
+    // 選 CS224 / CS336 / NTU FAI → sort = lec_num_asc（Lecture/FAI 順序）
     // 切回「全部課程」→ sort 不變（保留 user 自己的選擇）
     onCourseChange() {
       const c = this.filters.course;
-      if (c === 'Stanford CS336' || c === 'Harvard CS224') {
+      if (c === 'Stanford CS336' || c === 'Harvard CS224' || c === 'NTU 人工智慧導論') {
         this.sort = 'lec_num_asc';
       }
       this.applyFilters();

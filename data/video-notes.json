@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-06 00:11:52",
+    "last_updated": "2026-07-06 00:42:35",
     "speakers": [
       "AI 評估與代理系統領域的技術專家，專注於將 AI 從「靜態基準測試」推向「動態、自適應的意圖導向系統」",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群（超過 4,000 名成員）",
@@ -622,7 +622,7 @@
       "duration_seconds": 1799,
       "duration_display": "29:59",
       "video_url": "https://youtu.be/cGWJd-cHdCc",
-      "lec_num": null,
+      "lec_num": 35,
       "audio": {
         "opus": "audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.opus",
         "m4a": "audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.m4a",
@@ -649,7 +649,7 @@
       "duration_seconds": 257,
       "duration_display": "4:17",
       "video_url": "https://youtu.be/ERK7wOgHThg",
-      "lec_num": null,
+      "lec_num": 34,
       "audio": {
         "opus": "audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.opus",
         "m4a": "audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.m4a",
@@ -676,7 +676,7 @@
       "duration_seconds": 1199,
       "duration_display": "19:59",
       "video_url": "https://youtu.be/speDkBn6jqo",
-      "lec_num": null,
+      "lec_num": 33,
       "audio": {
         "opus": "audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.opus",
         "m4a": "audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.m4a",
@@ -703,7 +703,7 @@
       "duration_seconds": 1395,
       "duration_display": "23:15",
       "video_url": "https://youtu.be/orO0W7kEClA",
-      "lec_num": null,
+      "lec_num": 32,
       "audio": {
         "opus": "audio/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天.opus",
         "m4a": "audio/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天_口播稿.m4a",
@@ -730,7 +730,7 @@
       "duration_seconds": 1995,
       "duration_display": "33:15",
       "video_url": "https://youtu.be/AAK7tyk7Q2k",
-      "lec_num": null,
+      "lec_num": 31,
       "audio": {
         "opus": "audio/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型.opus",
         "m4a": "audio/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型_口播稿.m4a",
@@ -757,7 +757,7 @@
       "duration_seconds": 1127,
       "duration_display": "18:47",
       "video_url": "https://youtu.be/jWLAMrdrvtg",
-      "lec_num": null,
+      "lec_num": 24,
       "audio": {
         "opus": "audio/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.opus",
         "m4a": "audio/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度_口播稿.m4a",
@@ -784,7 +784,7 @@
       "duration_seconds": 2168,
       "duration_display": "36:08",
       "video_url": "https://youtu.be/C-Pzmd-mfvk",
-      "lec_num": null,
+      "lec_num": 23,
       "audio": {
         "opus": "audio/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.opus",
         "m4a": "audio/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型_口播稿.m4a",
@@ -811,7 +811,7 @@
       "duration_seconds": 952,
       "duration_display": "15:52",
       "video_url": "https://youtu.be/us6-znCoeZA",
-      "lec_num": null,
+      "lec_num": 22,
       "audio": {
         "opus": "audio/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.opus",
         "m4a": "audio/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生_口播稿.m4a",
@@ -838,7 +838,7 @@
       "duration_seconds": 2411,
       "duration_display": "40:11",
       "video_url": "https://youtu.be/YLRkX2nxOf4",
-      "lec_num": null,
+      "lec_num": 21,
       "audio": {
         "opus": "audio/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿.opus",
         "m4a": "audio/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢_口播稿.m4a",
@@ -1486,7 +1486,7 @@
       "duration_seconds": 1798,
       "duration_display": "29:58",
       "video_url": "https://youtu.be/D_v8lW-JcHo",
-      "lec_num": null,
+      "lec_num": 700,
       "audio": {
         "opus": "audio/20260606_NTUFAI_Sharing_口播稿.opus",
         "m4a": "audio/20260606_NTUFAI_Sharing_口播稿.m4a",
@@ -1567,7 +1567,7 @@
       "duration_seconds": 2306,
       "duration_display": "38:26",
       "video_url": "https://youtu.be/L81ueoIUXTg",
-      "lec_num": null,
+      "lec_num": 63,
       "audio": {
         "opus": "audio/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_口播稿.opus",
         "m4a": "audio/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了_口播稿.m4a",
@@ -1594,7 +1594,7 @@
       "duration_seconds": 780,
       "duration_display": "13:00",
       "video_url": "https://youtu.be/c0hHSsb7b5Y",
-      "lec_num": null,
+      "lec_num": 62,
       "audio": {
         "opus": "audio/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_口播稿.opus",
         "m4a": "audio/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢_口播稿.m4a",
@@ -1621,7 +1621,7 @@
       "duration_seconds": 1502,
       "duration_display": "25:02",
       "video_url": "https://youtu.be/rjIFxHB_H3o",
-      "lec_num": null,
+      "lec_num": 61,
       "audio": {
         "opus": "audio/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_口播稿.opus",
         "m4a": "audio/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型_口播稿.m4a",
@@ -1675,7 +1675,7 @@
       "duration_seconds": 1710,
       "duration_display": "28:30",
       "video_url": "https://youtu.be/Ak7fyNU4M5o",
-      "lec_num": null,
+      "lec_num": 54,
       "audio": {
         "opus": "audio/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_口播稿.opus",
         "m4a": "audio/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布_口播稿.m4a",
@@ -1702,7 +1702,7 @@
       "duration_seconds": 876,
       "duration_display": "14:36",
       "video_url": "https://youtu.be/hVaV3cSA5Nk",
-      "lec_num": null,
+      "lec_num": 53,
       "audio": {
         "opus": "audio/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_口播稿.opus",
         "m4a": "audio/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵_口播稿.m4a",
@@ -1891,7 +1891,7 @@
       "duration_seconds": 977,
       "duration_display": "16:17",
       "video_url": "https://youtu.be/YZg4GKLduV4",
-      "lec_num": null,
+      "lec_num": 52,
       "audio": {
         "opus": "audio/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_口播稿.opus",
         "m4a": "audio/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法_口播稿.m4a",
@@ -1918,7 +1918,7 @@
       "duration_seconds": 2384,
       "duration_display": "39:44",
       "video_url": "https://youtu.be/djqhfM4Nr8g",
-      "lec_num": null,
+      "lec_num": 51,
       "audio": {
         "opus": "audio/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_口播稿.opus",
         "m4a": "audio/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習_口播稿.m4a",
@@ -1972,7 +1972,7 @@
       "duration_seconds": 135,
       "duration_display": "2:15",
       "video_url": "https://youtu.be/2l4Ns2kZrZo",
-      "lec_num": null,
+      "lec_num": 48,
       "audio": {
         "opus": "audio/20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢_口播稿.opus",
         "m4a": "audio/20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢_口播稿.m4a",
@@ -1999,7 +1999,7 @@
       "duration_seconds": 890,
       "duration_display": "14:50",
       "video_url": "https://youtu.be/MlmTsFkBMBo",
-      "lec_num": null,
+      "lec_num": 47,
       "audio": {
         "opus": "audio/20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步_口播稿.opus",
         "m4a": "audio/20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步_口播稿.m4a",
@@ -2026,7 +2026,7 @@
       "duration_seconds": 377,
       "duration_display": "6:17",
       "video_url": "https://youtu.be/UUNwqY7i-hA",
-      "lec_num": null,
+      "lec_num": 46,
       "audio": {
         "opus": "audio/20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN_口播稿.opus",
         "m4a": "audio/20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN_口播稿.m4a",
@@ -2107,7 +2107,7 @@
       "duration_seconds": 1270,
       "duration_display": "21:10",
       "video_url": "https://youtu.be/iskDC5zih9s",
-      "lec_num": null,
+      "lec_num": 45,
       "audio": {
         "opus": "audio/20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN_口播稿.opus",
         "m4a": "audio/20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN_口播稿.m4a",
@@ -2134,7 +2134,7 @@
       "duration_seconds": 716,
       "duration_display": "11:56",
       "video_url": "https://youtu.be/LILjirWi-yg",
-      "lec_num": null,
+      "lec_num": 44,
       "audio": {
         "opus": "audio/20260524_NTUFAI_FAI4.4_VanishingGradient訓練模型跟人生一樣不順怎麼辦_口播稿.opus",
         "m4a": "audio/20260524_NTUFAI_FAI4.4_VanishingGradient訓練模型跟人生一樣不順怎麼辦_口播稿.m4a",
@@ -2161,7 +2161,7 @@
       "duration_seconds": 2357,
       "duration_display": "39:17",
       "video_url": "https://youtu.be/nBi9EfCNrNs",
-      "lec_num": null,
+      "lec_num": 43,
       "audio": {
         "opus": "audio/20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半_口播稿.opus",
         "m4a": "audio/20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半_口播稿.m4a",
@@ -2188,7 +2188,7 @@
       "duration_seconds": 1600,
       "duration_display": "26:40",
       "video_url": "https://youtu.be/jAE6ScoUX6I",
-      "lec_num": null,
+      "lec_num": 42,
       "audio": {
         "opus": "audio/20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢_口播稿.opus",
         "m4a": "audio/20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢_口播稿.m4a",
@@ -2215,7 +2215,7 @@
       "duration_seconds": 1080,
       "duration_display": "18:00",
       "video_url": "https://youtu.be/bf6P46Po8yo",
-      "lec_num": null,
+      "lec_num": 41,
       "audio": {
         "opus": "audio/20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題_口播稿.opus",
         "m4a": "audio/20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題_口播稿.m4a",
@@ -2647,7 +2647,7 @@
       "duration_seconds": 1394,
       "duration_display": "23:14",
       "video_url": "https://youtu.be/jtU7Bj6ztDA",
-      "lec_num": null,
+      "lec_num": 16,
       "audio": {
         "opus": "audio/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎_口播稿.opus",
         "m4a": "audio/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎_口播稿.m4a",
@@ -2674,7 +2674,7 @@
       "duration_seconds": 1104,
       "duration_display": "18:24",
       "video_url": "https://youtu.be/qmIz-LiluRM",
-      "lec_num": null,
+      "lec_num": 15,
       "audio": {
         "opus": "audio/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎_口播稿.opus",
         "m4a": "audio/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎_口播稿.m4a",
@@ -2701,7 +2701,7 @@
       "duration_seconds": 814,
       "duration_display": "13:34",
       "video_url": "https://youtu.be/K99dTKVGIj8",
-      "lec_num": null,
+      "lec_num": 14,
       "audio": {
         "opus": "audio/20260429_NTUFAI_FAI1.4_機器要開始學習囉_口播稿.opus",
         "m4a": "audio/20260429_NTUFAI_FAI1.4_機器要開始學習囉_口播稿.m4a",
@@ -2728,7 +2728,7 @@
       "duration_seconds": 1492,
       "duration_display": "24:52",
       "video_url": "https://youtu.be/LHJNy4KbYcs",
-      "lec_num": null,
+      "lec_num": 13,
       "audio": {
         "opus": "audio/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習_口播稿.opus",
         "m4a": "audio/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習_口播稿.m4a",
@@ -2755,7 +2755,7 @@
       "duration_seconds": 1579,
       "duration_display": "26:19",
       "video_url": "https://youtu.be/H8gX4TIYKmg",
-      "lec_num": null,
+      "lec_num": 12,
       "audio": {
         "opus": "audio/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習_口播稿.opus",
         "m4a": "audio/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習_口播稿.m4a",
@@ -2782,7 +2782,7 @@
       "duration_seconds": 589,
       "duration_display": "9:49",
       "video_url": "https://youtu.be/ArSDpRmzVls",
-      "lec_num": null,
+      "lec_num": 11,
       "audio": {
         "opus": "audio/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型_口播稿.opus",
         "m4a": "audio/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型_口播稿.m4a",
@@ -3079,7 +3079,7 @@
       "duration_seconds": 1991,
       "duration_display": "33:11",
       "video_url": "https://youtu.be/ZwPdq140EKQ",
-      "lec_num": null,
+      "lec_num": 800,
       "audio": {
         "opus": "audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.opus",
         "m4a": "audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.m4a",
@@ -3106,7 +3106,7 @@
       "duration_seconds": 1068,
       "duration_display": "17:48",
       "video_url": "https://youtu.be/DsyvgC51t2E",
-      "lec_num": null,
+      "lec_num": 0,
       "audio": {
         "opus": "audio/20260311_NTUFAI_FAI0_課程介紹與規定_口播稿.opus",
         "m4a": "audio/20260311_NTUFAI_FAI0_課程介紹與規定_口播稿.m4a",
