@@ -1,6 +1,7 @@
 # 【NTU 人工智慧導論（FAI 2026）— Sharing 分享】
 
-**主講｜林軒田（Hsuan-Tien Lin，台大資訊工程學系教授，《Learning from Data》教科書作者）｜2026 / 06 / 06（學期第十六週）**
+**主講｜陳縕儂（Yun-Nung Chen，台大資訊工程學系教授）｜2026 / 06 / 06（學期第十六週）**
+> **備註**：本講為 FAI 系列收尾「Sharing」單元，影片實際由 **林軒田教授**（Hsuan-Tien Lin）主講，分享其個人求學、研究、職涯旅程。講者欄位統一記為「陳縕儂」以維持 FAI 系列 speaker metadata 一致性（禮士指示 2026-07-07）。
 
 > 影片連結：https://youtu.be/D_v8lW-JcHo
 > 影片時長：29 分 58 秒（1798s）
@@ -9,7 +10,7 @@
 > 逐字稿：transcripts/20260606_D_v8lW-JcHo_逐字稿.txt
 > **整理日期**：2026-07-05
 > **課程**：NTU 人工智慧導論（FAI 2026, Foundation of AI）
-> **講者**：林軒田（NTU CSIE 教授，Coursera《Machine Learning Foundations》系列授課者、《Learning from Data》共同作者）
+> **講者**：陳縕儂（Yun-Nung Chen，台大資訊工程學系教授）
 > **本講位置**：FAI 系列收尾「Sharing」單元（無 FAI 編號），非技術講題，是教授個人經驗分享
 
 ---
@@ -154,11 +155,13 @@
 
 ## 四、人物 / 角色分析
 
-### 林軒田教授（講者）
+### 影片實際講者：林軒田教授（Hsuan-Tien Lin，NTU CSIE 教授）
 - **背景**：NTU CSIE 教授，《Learning from Data》共同作者（與 Yaser S. Abu-Mostafa、Malik Magdon-Ismail 合著），Coursera《Machine Learning Foundations》系列授課者
 - **生涯軌跡**：NTU CSIE 大學 → 大三進入語音 lab → 托福 5 次挫折後赴 CMU → Master 兩年再轉 PhD → CMU 博士後 → 美國業界 → 回台任教
 - **本講角色**：以自身故事回應 AI 焦慮、用 exploitation vs exploration 框架鼓勵學生探索
 - **代表觀點**：「走自己的路（Take a Way）」、「好奇心才是研究動力」、「每個人的 value weighting 不同」
+
+> **講者欄位說明**：本影片的 speaker metadata 統一記為「陳縕儂」（與 FAI 系列其他 32 部影片一致）。影片實際由林軒田教授主講，內容為其個人經驗分享——文稿中所有「林軒田」皆為影片實際講者本人，不是主講者欄位錯置。
 
 ### 林軒田大學時代的指導教授（語音 lab 教授）
 - 影片中稱「林善老師」或「林山老師」（Whisper 聽寫，原名待考證）

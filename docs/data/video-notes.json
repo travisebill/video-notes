@@ -4,7 +4,7 @@
     "total_with_audio": 111,
     "total_with_transcript": 85,
     "total_with_spoken_script": 111,
-    "speakers_count": 53,
+    "speakers_count": 52,
     "categories_count": 4,
     "topics_count": 13,
     "courses": [
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-07 13:52:09",
+    "last_updated": "2026-07-07 14:21:22",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -60,7 +60,6 @@
       "兩位資深軟體工程師",
       "小天fotos",
       "李宏毅",
-      "林軒田",
       "歐麗娟",
       "自說自話的總裁",
       "蔡康永",
@@ -1522,8 +1521,8 @@
     {
       "id": "20260606_NTUFAI_Sharing",
       "title": "【NTU 人工智慧導論（FAI 2026）— Sharing 分享】",
-      "speaker": "林軒田",
-      "speaker_description": "NTU CSIE 教授，Coursera《Machine Learning Foundations》系列授課者、《Learning from Data》共同作者",
+      "speaker": "陳縕儂",
+      "speaker_description": "Yun-Nung Chen，台大資訊工程學系教授",
       "speaker_slug": "NTUFAI",
       "course_slug": "NTU 人工智慧導論",
       "category": "技術講座",
