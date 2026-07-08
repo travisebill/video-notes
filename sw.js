@@ -1,11 +1,11 @@
 // Video Notes PWA Service Worker
 // 策略：app shell (HTML/CSS/JS/icons) cache-first；JSON 資料 network-first 帶 fallback cache
 //
-// v1.2-pwa: bump cache version to flush stale video-notes.json after adding Harari lecture
-//           — 2026-07-08: 新增 Yuval Noah Harari Oxford 2026 Tanner Lecture (47 min)
+// v1.3-pwa: bump cache version to flush stale video-notes.json after adding Harari EZ Show
+//           — 2026-07-08: 新增 Yuval Noah Harari × Ezra Klein (1h55m, Trumpian vision × cooperation × AI intimacy)
 //             + SW bump to force reload new JSON
 //           — 詳見 AGENTS.md「speaker 選項整理」章節
-const CACHE_VERSION = 'v1.2-pwa';
+const CACHE_VERSION = 'v1.3-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
