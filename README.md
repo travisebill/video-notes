@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **141 支內容** · 243 個音檔 · 141 個逐字稿 · 141 個口播稿
+> **142 支內容** · 246 個音檔 · 141 個逐字稿 · 142 個口播稿
 > 最後更新：2026-07-08
 
 ---
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-05-26** | Yuval Noah Harari（希伯來大學歷史系教授）| [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · 1 小時 55 分 36 秒（6936s）
 - **2026-06-30** | Yuval Noah Harari（歷史學家、《人類大歷史》作者）| [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · 47 分鐘（2812s）
 - **2026-06-06** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) · 29 分 58 秒
 - **2026-03-11** | NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs）| [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · 33 分 11 秒
@@ -80,6 +81,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) | Yuval Noah Harari（希伯來大學歷史系教授） | 1 小時 55 分 36 秒（口播稿 4:39） | [📄 note](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · [🎙️ 口播稿](transcripts/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion_口播稿.txt) · [🔊 opus](audio/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion_口播稿.opus) · [🔊 m4a](audio/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion_口播稿.m4a) · [🔊 mp3](audio/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion_口播稿.mp3) |
 | 2026-06-30 | [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) | Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》作者） | 47 分鐘（2812s）（口播稿 4:39） | [📄 note](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · [📝 逐字稿](transcripts/20260630_YuvalNoahHarari_AIHackedHumanCivilization_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.txt) · [🔊 opus](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.opus) · [🔊 m4a](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.m4a) · [🔊 mp3](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.mp3) |
 | 2026-06-06 | [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) | 林軒田（NTU CSIE 教授） | 29 分 58 秒（1798s） | [📄 note](技術講座/20260606_NTUFAI_Sharing.md) · [📝 逐字稿](transcripts/20260606_D_v8lW-JcHo_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260606_NTUFAI_Sharing_口播稿.txt) · [🔊 opus](audio/20260606_NTUFAI_Sharing_口播稿.opus) · [🔊 m4a](audio/20260606_NTUFAI_Sharing_口播稿.m4a) · [🔊 mp3](audio/20260606_NTUFAI_Sharing_口播稿.mp3) |
 | 2026-03-11 | [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) | NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs） | 33 分 11 秒（1991s） | [📄 note](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · [📝 逐字稿](transcripts/20260311_ZwPdq140EKQ_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.txt) · [🔊 opus](audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.opus) · [🔊 m4a](audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.m4a) · [🔊 mp3](audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.mp3) |
@@ -219,8 +221,9 @@
 <a id="by-topic"></a>
 ## 🏷️ 按主題
 
-### 🤖 **AI 倫理 / 哲學 / 意識**（5 支）
+### 🤖 **AI 倫理 / 哲學 / 意識**（6 支）
 
+- 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · Yuval Noah Harari（希伯來大學歷史系教授、《Sapiens》作者） × Ezra Klein（Vox）· 1 小時 55 分 36 秒（6936s）
 - 2026-06-30 | [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》作者） × Linacre College, Oxford University · 47 分鐘（口播稿 4:39）
 - 2026-06-02 | [Mo Gawdat 談 AI 倫理與人類未來 — 結構化筆記](人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md) · ? · ?
 - 2026-05-12 | [蔡康永深度對談：關於衰老、死亡、AI 與人生的終極提問](人物訪談/20260512_蔡康永_衰老死亡與AI.md) · 蔡康永（作家/主持人） × 羅永浩（訪談主持人）｜「十字路口」播客 · 3:36:18
@@ -316,8 +319,9 @@
 - 2026-05-13 | [免費 AI 網頁爬蟲實戰：用 DeepSeek + Grok + Crawl4AI 抓取任何網站](技術講座/20260513_AI_Web_Scraper_免費爬蟲實戰.md) · AI 開發領域的技術教學者，經營免費 AI 開發者社群 · 22:45
 - 2026-05-12 | [Claude Code 創作者 Boris：軟體的未來、AI 民主化與 SaaS 末日](技術講座/20260512_Boris_Claude_Code創作者訪談.md) · Boris，Claude Code 的創作者 · 24:35
 
-### 🏛️ **政治 / 國際局勢**（6 支）
+### 🏛️ **政治 / 國際局勢**（7 支）
 
+- 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · Yuval Noah Harari（希伯來大學歷史系教授、《Sapiens》作者） × Ezra Klein（Vox）· 1 小時 55 分 36 秒（口播稿 4:39）
 - 2026-06-27 | [【完整版上集20260627】一紙停火備忘錄 美伊各取所需 川普表示戰爭結束了 — TVBS 文茜的世界周報](國際局勢/20260627_TVBS_文茜_美伊停火.md) · TVBS 文茜的世界周報（歐洲版） · 48:17（口播稿 4:35）
 - 2026-06-27 | [【完整版下集20260627】英國脫歐公投十週年 脫歐後換七首相 — TVBS 文茜的世界周報（歐洲版）](國際局勢/20260627_TVBS_文茜_英國脫歐.md) · TVBS 文茜的世界周報（歐洲版） · 48:11（口播稿 5:32）
 - 2026-05-17 | [【完整版上集 20260517】法英美日看待習川會 兩大強權暫時休兵 — TVBS 文茜的世界周報](國際局勢/20260517_陳文茜_法英美日看待習川會.md) · ? · ?
@@ -433,6 +437,7 @@
 - **陳文茜** · 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 48 分 36 秒
 - **陳文茜** · 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒
 - **Angelos（Apple MLX team 工程師）** · 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · 13 分 26 秒（HTML-Video-Page）
+- **Yuval Noah Harari（希伯來大學歷史系教授、《Sapiens》《Homo Deus》《Nexus》作者）** · 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein × Harari](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · 1 小時 55 分 36 秒
 - **Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》《人類大命運》作者）** · 2026-06-30 | [AI has hacked the code of human civilization — Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · 47 分鐘
 - **Y Combinator Paper Club** · 2026-06-12 | [5 篇 AI 論文告訴我們研究正往哪裡走 — YC Paper Club 全景](技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md) · 1 小時 16 分 55 秒
 - **Yann LeCun** · 2026 | [World Models 將開啟下一場 AI 革命 — 從 LLMs 的死路到 AMILabs](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) · 58 分 54 秒
@@ -498,10 +503,10 @@
 ## 📂 按分類
 
 - 🎙️ **人物訪談**（9 支）→ [完整列表](人物訪談/README.md)
-- 🌐 **國際局勢**（4 支）→ [完整列表](國際局勢/README.md)
+- 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（4 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（63 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-07-08 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 141 支內容*
+*最後更新：2026-07-08 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 142 支內容*
