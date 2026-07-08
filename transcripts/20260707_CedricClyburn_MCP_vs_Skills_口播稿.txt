@@ -1,0 +1,9 @@
+IBM Technology 的 Cedric Clyburn 在這部 8 分鐘短片裡，切入 AI Agent 開發最常被問的核心問題：當 LLM 本身缺少領域知識、即時資料或專屬工具時，應該怎麼「擴充」？他用一個乾淨的框架 — Context Engineering，把兩種主流擴充機制擺上談判桌：MCP 與 Skills。Cedric 先用「水晶球預測機」的比喻定位 LLM：模型經過書、雜誌、網路文章等大量文本訓練後，學會模式識別與問答，但要得到正確答案，仍需要在 prompt 之外提供正確的 context。
+
+從技術架構的角度，MCP（Model Context Protocol）是 Anthropic 在二〇二四年十一月提出的標準化協議，扮演 LLM 與外部資料來源之間的中介層。它把 REST API 抽象成 LLM 可直接發出的 JSON 請求，同時處理身份驗證與 scoped token。MCP server 通常掛在 IDE 或 AI app 上，把 LLM 的查詢轉成 POST 或 GET，再把回應塞回 context window。Cedric 用 CRM 案例說明：與其把 API 文件加 token 複製貼上給 LLM 祈禱好運，MCP 提供的是規範化、可追蹤、可撤銷的整合通道，同時具備獨特作用域的讀寫權限控管。
+
+從開發者體驗的角度，Skills 走的是完全不同的路線。它把可重複使用的 prompt 與腳本打包成 Markdown 檔與資料夾，透過 frontmatter 描述標題、使用時機與實際 prompt，模型會在相關提問時自動載入到 context window。Cedric 列舉幾個典型應用：清理 Excel 檔案、偵錯時固定執行 Maven verify、跑合規檢查，以及把 CRM 客戶資料統一格式化輸出 — 即使其中包含「最喜歡的 cookie 類型」這種固定欄位。Skills 的價值在於把團隊的隱性慣例變成可攜的指令封包 — 一旦寫好，全公司所有 LLM 使用者都能共享，省下每次重寫 prompt 的成本。
+
+從選型決策的角度，Cedric 給的原則相當直接：需要即時資料（例如查詢目前運行的虛擬機器、叢集狀態或特定客戶資料）、嚴格權限控管、雙向 API 呼叫時選 MCP；只需要輕量、可重複、自訂的功能擴充時，Skills 是更經濟的選項；如果兩個需求同時存在，就讓 MCP 拉資料、Skills 格式化輸出 — 兩者並行而非互斥。影片尾聲他特別強調，MCP 與 Skills 都是開源標準，多數主流 AI 工具都已採用，且當天就能在本機環境跑起來，開發者不需等供應商支援。他也預告下集會談 CLI 工具建構代理的進階應用，邀請觀眾在留言區許願。對企業團隊而言，這意味著不必再為每個工具單獨客製 LLM 介面，能把心力放在業務邏輯本身。
+
+回到 Context Engineering 這個母題，Cedric Clyburn 的論點呼應了業界從 Prompt Engineering 轉向 Context Engineering 的整體趨勢 — 當應用從單次對話演進為多輪工具呼叫與多源資料整合，光靠好的 prompt 已不夠，還需要把正確的上下文在正確的時機送進模型。Cedric 在影片裡留下一句值得記住的結論：「如果你只需要為 AI 添加可重複使用和自訂功能，那麼設定 MCP 可能就有點大材小用 — 這就是 Skills 的優勢所在，因為它們輕巧，可以教導你的模型如何做某事。」這句話也提醒開發者：擴充 LLM 之前，先想清楚任務的本質是「資料整合」還是「流程封裝」，選對機制比選熱門技術重要。

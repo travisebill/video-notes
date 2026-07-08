@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **142 支內容** · 246 個音檔 · 141 個逐字稿 · 142 個口播稿
+> **143 支內容** · 247 個音檔 · 142 個逐字稿 · 143 個口播稿
 > 最後更新：2026-07-08
 
 ---
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-07-07** | Cedric Clyburn（IBM Technology 開發者倡導者）| [MCP vs Skills：哪一個適合你的 AI Agent 與 LLM？](技術講座/20260707_CedricClyburn_MCP_vs_Skills.md) · 8 分 2 秒（482s）
 - **2026-05-26** | Yuval Noah Harari（希伯來大學歷史系教授）| [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · 1 小時 55 分 36 秒（6936s）
 - **2026-06-30** | Yuval Noah Harari（歷史學家、《人類大歷史》作者）| [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · 47 分鐘（2812s）
 - **2026-06-06** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) · 29 分 58 秒
@@ -85,6 +86,7 @@
 | 2026-06-30 | [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) | Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》作者） | 47 分鐘（2812s）（口播稿 4:39） | [📄 note](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · [📝 逐字稿](transcripts/20260630_YuvalNoahHarari_AIHackedHumanCivilization_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.txt) · [🔊 opus](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.opus) · [🔊 m4a](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.m4a) · [🔊 mp3](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.mp3) |
 | 2026-06-06 | [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) | 林軒田（NTU CSIE 教授） | 29 分 58 秒（1798s） | [📄 note](技術講座/20260606_NTUFAI_Sharing.md) · [📝 逐字稿](transcripts/20260606_D_v8lW-JcHo_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260606_NTUFAI_Sharing_口播稿.txt) · [🔊 opus](audio/20260606_NTUFAI_Sharing_口播稿.opus) · [🔊 m4a](audio/20260606_NTUFAI_Sharing_口播稿.m4a) · [🔊 mp3](audio/20260606_NTUFAI_Sharing_口播稿.mp3) |
 | 2026-03-11 | [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) | NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs） | 33 分 11 秒（1991s） | [📄 note](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · [📝 逐字稿](transcripts/20260311_ZwPdq140EKQ_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.txt) · [🔊 opus](audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.opus) · [🔊 m4a](audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.m4a) · [🔊 mp3](audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.mp3) |
+| 2026-07-07 | [MCP vs Skills：哪一個適合你的 AI Agent 與 LLM？](技術講座/20260707_CedricClyburn_MCP_vs_Skills.md) | Cedric Clyburn（IBM Technology 開發者倡導者） | 8 分 2 秒（482s） | [📄 note](技術講座/20260707_CedricClyburn_MCP_vs_Skills.md) · [📝 逐字稿](transcripts/20260707_CedricClyburn_MCP_vs_Skills_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260707_CedricClyburn_MCP_vs_Skills_口播稿.txt) · [🔊 opus](audio/20260707_CedricClyburn_MCP_vs_Skills.opus) · [🔊 m4a](audio/20260707_CedricClyburn_MCP_vs_Skills.m4a) · [🔊 mp3](audio/20260707_CedricClyburn_MCP_vs_Skills.mp3) |
 | 2026-07-05 | [NTU 人工智慧導論 — FAI 3.5：Deep Learning Optimization 訓練深度學習模型需要很多小撇步](技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md) | 陳縕儂（NTU CSIE 教授） | 29 分 59 秒（1799s） | [📄 note](技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI3.5_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.mp3) |
 | 2026-07-05 | [NTU 人工智慧導論 — FAI 3.4：Loss Function Design 甚麼才叫「好」模型呢？](技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md) | 陳縕儂（NTU CSIE 教授） | 4 分 17 秒（257s） | [📄 note](技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI3.4_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢_口播稿.mp3) |
 | 2026-07-05 | [NTU 人工智慧導論 — FAI 3.3：Neural Network Hypothesis 如何建構深度學習的類神經網路](技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md) | 陳縕儂（NTU CSIE 教授） | 19 分 59 秒（1199s） | [📄 note](技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI3.3_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路_口播稿.mp3) |
@@ -301,8 +303,9 @@
 - 2026-06-06 | [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) · 林軒田（NTU CSIE 教授） · 29 分 58 秒（1798s）
 - 2026-03-11 | [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs） · 33 分 11 秒（1991s）
 
-### 🛠️ **編碼工具 / Agent 工程實踐**（14 支）
+### 🛠️ **編碼工具 / Agent 工程實踐**（15 支）
 
+- 2026-07-07 | [MCP vs Skills：哪一個適合你的 AI Agent 與 LLM？](技術講座/20260707_CedricClyburn_MCP_vs_Skills.md) · Cedric Clyburn（IBM Technology 開發者倡導者）· 8 分 2 秒（YouTube 一般路徑，zh-Hant 自動字幕 + 英文自動字幕雙語對照）
 - 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · Angelos（Apple MLX team 工程師）· 13 分 26 秒（HTML-Video-Page 路徑）
 - 2026-06-26 | [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) · Martin Fowler（martinfowler.com）+ 中文摘要 doggy8088（Will 保哥）· 技術文章
 - 2026-06-19 | [The Future of AI Agents — Andrew Ng × Harrison Chase @ LangChain Interrupt](技術講座/20260619_AndrewNg_FutureOfAIAgents.md) · Andrew Ng（Landing AI / DeepLearning.AI 創辦人）· 31 分 39 秒
@@ -436,6 +439,7 @@
 
 - **陳文茜** · 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 48 分 36 秒
 - **陳文茜** · 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒
+- **Cedric Clyburn（IBM Technology 開發者倡導者）** · 2026-07-07 | [MCP vs Skills：哪一個適合你的 AI Agent 與 LLM？](技術講座/20260707_CedricClyburn_MCP_vs_Skills.md) · 8 分 2 秒（482s）
 - **Angelos（Apple MLX team 工程師）** · 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · 13 分 26 秒（HTML-Video-Page）
 - **Yuval Noah Harari（希伯來大學歷史系教授、《Sapiens》《Homo Deus》《Nexus》作者）** · 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein × Harari](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · 1 小時 55 分 36 秒
 - **Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》《人類大命運》作者）** · 2026-06-30 | [AI has hacked the code of human civilization — Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · 47 分鐘
@@ -505,7 +509,7 @@
 - 🎙️ **人物訪談**（9 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（4 支）→ [完整列表](財經分析/README.md)
-- 🛠️ **技術講座**（63 支）→ [完整列表](技術講座/README.md)
+- 🛠️ **技術講座**（64 支）→ [完整列表](技術講座/README.md)
 
 ---
 

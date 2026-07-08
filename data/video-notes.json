@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 142,
-    "total_with_audio": 113,
-    "total_with_transcript": 86,
-    "total_with_spoken_script": 113,
-    "speakers_count": 53,
+    "total_videos": 143,
+    "total_with_audio": 114,
+    "total_with_transcript": 87,
+    "total_with_spoken_script": 114,
+    "speakers_count": 54,
     "categories_count": 4,
     "topics_count": 13,
     "courses": [
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-08 18:42:23",
+    "last_updated": "2026-07-08 22:23:15",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -24,6 +24,7 @@
       "Anne Applebaum",
       "Boris，Claude Code 的創作者（被稱為「Claude Code 之父」），任職於 Anthropic。先前創辦過多間新創公司，經歷過 Y Combinator，編寫過程式設計和 TypeScript 教科書。自稱「過去一年幾乎沒親手寫過一行程式碼」",
       "CNBC",
+      "Cedric Clyburn",
       "Claude",
       "Dan Fu（Stanford PhD） × Percy Liang, Tatsu Hashimoto",
       "Datadog AI 團隊",
@@ -678,6 +679,34 @@
       },
       "note_path": "財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md"
+    },
+    {
+      "id": "20260707_CedricClyburn_MCP_vs_Skills",
+      "title": "MCP vs Skills：哪一個適合你的 AI Agent 與 LLM？",
+      "speaker": "Cedric Clyburn",
+      "speaker_description": "IBM Technology",
+      "speaker_slug": "CedricClyburn",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": "🛠️ 編碼工具 / Agent 工程實踐",
+      "date": "2026-07-08",
+      "note_date": "2026-07-08",
+      "duration_seconds": 482,
+      "duration_display": "8:02",
+      "video_url": "https://youtu.be/goU9VIXA8II",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260707_CedricClyburn_MCP_vs_Skills.opus",
+        "m4a": "audio/20260707_CedricClyburn_MCP_vs_Skills.m4a",
+        "mp3": "audio/20260707_CedricClyburn_MCP_vs_Skills.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260707_CedricClyburn_MCP_vs_Skills_逐字稿.txt",
+        "spoken_script": "transcripts/20260707_CedricClyburn_MCP_vs_Skills_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260707_CedricClyburn_MCP_vs_Skills_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260707_CedricClyburn_MCP_vs_Skills.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260707_CedricClyburn_MCP_vs_Skills.md"
     },
     {
       "id": "20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步",
