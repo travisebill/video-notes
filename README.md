@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **140 支內容** · 240 個音檔 · 140 個逐字稿 · 140 個口播稿
-> 最後更新：2026-07-06
+> **141 支內容** · 243 個音檔 · 141 個逐字稿 · 141 個口播稿
+> 最後更新：2026-07-08
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-06-30** | Yuval Noah Harari（歷史學家、《人類大歷史》作者）| [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · 47 分鐘（2812s）
 - **2026-06-06** | 林軒田（NTU CSIE 教授）| [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) · 29 分 58 秒
 - **2026-03-11** | NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs）| [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · 33 分 11 秒
 - **2026-07-05** | 陳縕儂（NTU CSIE 教授）| [NTU 人工智慧導論 — FAI 6.3：Agents 可以動手的代理人真的要來了?](技術講座/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了.md) · 38 分 26 秒
@@ -79,6 +80,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-06-30 | [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) | Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》作者） | 47 分鐘（2812s）（口播稿 4:39） | [📄 note](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · [📝 逐字稿](transcripts/20260630_YuvalNoahHarari_AIHackedHumanCivilization_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.txt) · [🔊 opus](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.opus) · [🔊 m4a](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.m4a) · [🔊 mp3](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.mp3) |
 | 2026-06-06 | [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) | 林軒田（NTU CSIE 教授） | 29 分 58 秒（1798s） | [📄 note](技術講座/20260606_NTUFAI_Sharing.md) · [📝 逐字稿](transcripts/20260606_D_v8lW-JcHo_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260606_NTUFAI_Sharing_口播稿.txt) · [🔊 opus](audio/20260606_NTUFAI_Sharing_口播稿.opus) · [🔊 m4a](audio/20260606_NTUFAI_Sharing_口播稿.m4a) · [🔊 mp3](audio/20260606_NTUFAI_Sharing_口播稿.mp3) |
 | 2026-03-11 | [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) | NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs） | 33 分 11 秒（1991s） | [📄 note](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · [📝 逐字稿](transcripts/20260311_ZwPdq140EKQ_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.txt) · [🔊 opus](audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.opus) · [🔊 m4a](audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.m4a) · [🔊 mp3](audio/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王_口播稿.mp3) |
 | 2026-07-05 | [NTU 人工智慧導論 — FAI 3.5：Deep Learning Optimization 訓練深度學習模型需要很多小撇步](技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md) | 陳縕儂（NTU CSIE 教授） | 29 分 59 秒（1799s） | [📄 note](技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md) · [📝 逐字稿](transcripts/20260705_NTUFAI_FAI3.5_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.txt) · [🔊 opus](audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.opus) · [🔊 m4a](audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.m4a) · [🔊 mp3](audio/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步_口播稿.mp3) |
@@ -217,8 +219,9 @@
 <a id="by-topic"></a>
 ## 🏷️ 按主題
 
-### 🤖 **AI 倫理 / 哲學 / 意識**（4 支）
+### 🤖 **AI 倫理 / 哲學 / 意識**（5 支）
 
+- 2026-06-30 | [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》作者） × Linacre College, Oxford University · 47 分鐘（口播稿 4:39）
 - 2026-06-02 | [Mo Gawdat 談 AI 倫理與人類未來 — 結構化筆記](人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md) · ? · ?
 - 2026-05-12 | [蔡康永深度對談：關於衰老、死亡、AI 與人生的終極提問](人物訪談/20260512_蔡康永_衰老死亡與AI.md) · 蔡康永（作家/主持人） × 羅永浩（訪談主持人）｜「十字路口」播客 · 3:36:18
 - 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
@@ -430,6 +433,7 @@
 - **陳文茜** · 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 48 分 36 秒
 - **陳文茜** · 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒
 - **Angelos（Apple MLX team 工程師）** · 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · 13 分 26 秒（HTML-Video-Page）
+- **Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》《人類大命運》作者）** · 2026-06-30 | [AI has hacked the code of human civilization — Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · 47 分鐘
 - **Y Combinator Paper Club** · 2026-06-12 | [5 篇 AI 論文告訴我們研究正往哪裡走 — YC Paper Club 全景](技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md) · 1 小時 16 分 55 秒
 - **Yann LeCun** · 2026 | [World Models 將開啟下一場 AI 革命 — 從 LLMs 的死路到 AMILabs](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) · 58 分 54 秒
 - **馬臉姐** · 2026-06-19 | [AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說](技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md) · 29 分 55 秒
@@ -494,10 +498,10 @@
 ## 📂 按分類
 
 - 🎙️ **人物訪談**（9 支）→ [完整列表](人物訪談/README.md)
-- 🌐 **國際局勢**（3 支）→ [完整列表](國際局勢/README.md)
+- 🌐 **國際局勢**（4 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（4 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（63 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-07-06 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 140 支內容*
+*最後更新：2026-07-08 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 141 支內容*
