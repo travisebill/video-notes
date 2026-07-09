@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 143,
-    "total_with_audio": 114,
+    "total_videos": 144,
+    "total_with_audio": 115,
     "total_with_transcript": 87,
-    "total_with_spoken_script": 114,
-    "speakers_count": 54,
+    "total_with_spoken_script": 115,
+    "speakers_count": 55,
     "categories_count": 4,
     "topics_count": 13,
     "courses": [
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-08 22:23:37",
+    "last_updated": "2026-07-09 18:59:11",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -32,6 +32,7 @@
       "Dr. Darren Candow",
       "Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者）× Steven Bartlett（訪談主持人）",
       "Graham Hancock × Steven Bartlett",
+      "Jarred Sumner",
       "Jelani Nelson",
       "Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長",
       "Kaggle",
@@ -1043,6 +1044,34 @@
       },
       "note_path": "技術講座/20260626_MartinFowler_HarnessEngineering.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260626_MartinFowler_HarnessEngineering.md"
+    },
+    {
+      "id": "20260625_JarredSumner_BunInRust",
+      "title": "Rewriting Bun in Rust：Bun 從 Zig 改寫成 Rust 的工程紀實",
+      "speaker": "Jarred Sumner",
+      "speaker_description": "Bun 創辦人、Anthropic 工程師",
+      "speaker_slug": "JarredSumner",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": "🛠️ 編碼工具 / Agent 工程實踐",
+      "date": "2026-07-09",
+      "note_date": "2026-07-09",
+      "duration_seconds": 207,
+      "duration_display": "3:27",
+      "video_url": "https://bun.com/blog/bun-in-rust",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260625_JarredSumner_BunInRust_口播稿.opus",
+        "m4a": "audio/20260625_JarredSumner_BunInRust_口播稿.m4a",
+        "mp3": "audio/20260625_JarredSumner_BunInRust_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260625_JarredSumner_BunInRust_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260625_JarredSumner_BunInRust_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260625_JarredSumner_BunInRust.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260625_JarredSumner_BunInRust.md"
     },
     {
       "id": "20260620_Kaggle_5DayGenAI_Day5",

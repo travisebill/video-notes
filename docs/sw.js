@@ -5,7 +5,7 @@
 //           — 2026-07-08: 新增 Yuval Noah Harari × Ezra Klein (1h55m, Trumpian vision × cooperation × AI intimacy)
 //             + SW bump to force reload new JSON
 //           — 詳見 AGENTS.md「speaker 選項整理」章節
-const CACHE_VERSION = 'v1.4-pwa';
+const CACHE_VERSION = 'v1.5-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
