@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 144,
-    "total_with_audio": 115,
-    "total_with_transcript": 87,
-    "total_with_spoken_script": 115,
-    "speakers_count": 55,
+    "total_videos": 145,
+    "total_with_audio": 116,
+    "total_with_transcript": 88,
+    "total_with_spoken_script": 116,
+    "speakers_count": 56,
     "categories_count": 4,
     "topics_count": 13,
     "courses": [
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-09 18:59:11",
+    "last_updated": "2026-07-14 03:16:55",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -27,6 +27,7 @@
       "Cedric Clyburn",
       "Claude",
       "Dan Fu（Stanford PhD） × Percy Liang, Tatsu Hashimoto",
+      "Daniel Kokotajlo",
       "Datadog AI 團隊",
       "Dex",
       "Dr. Darren Candow",
@@ -93,6 +94,34 @@
     ]
   },
   "videos": [
+    {
+      "id": "20260713_DanielKokotajlo_AI2027_70PctExtinction",
+      "title": "【He Risked Everything To Warn You — Daniel Kokotajlo on AI's 70% Extinction Risk & Plan A】",
+      "speaker": "Daniel Kokotajlo",
+      "speaker_description": "前 OpenAI 研究員、AI Futures Project 創辦人、《AI 2027》主要作者",
+      "speaker_slug": "DanielKokotajlo",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🤖 AI 安全 / 末日論 / 政策",
+      "date": "2026-07-13",
+      "note_date": "2026-07-13",
+      "duration_seconds": 7250,
+      "duration_display": "2:00:50",
+      "video_url": "https://youtu.be/_g4l7YkDQwA",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260713_DanielKokotajlo_AI2027_70PctExtinction_口播稿.opus",
+        "m4a": "audio/20260713_DanielKokotajlo_AI2027_70PctExtinction_口播稿.m4a",
+        "mp3": "audio/20260713_DanielKokotajlo_AI2027_70PctExtinction_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260713_DanielKokotajlo_AI2027_70PctExtinction_逐字稿.txt",
+        "spoken_script": "transcripts/20260713_DanielKokotajlo_AI2027_70PctExtinction_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260713_DanielKokotajlo_AI2027_70PctExtinction_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20260713_DanielKokotajlo_AI2027_70PctExtinction.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260713_DanielKokotajlo_AI2027_70PctExtinction.md"
+    },
     {
       "id": "20260627_自說自話的總裁_煤與Starship與2100年的地球",
       "title": "煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明",
