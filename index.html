@@ -110,6 +110,16 @@
         </select>
       </label>
 
+      <!-- v1.8 2026-07-14: 無影片篩選 (filter for missing video_url) -->
+      <label>
+        <small>影片連結</small>
+        <select x-model="filters.linkStatus" @change="applyFilters()">
+          <option value="all">全部</option>
+          <option value="with_link">✓ 有 YouTube 連結</option>
+          <option value="no_link">⚠️ 無 YouTube 連結</option>
+        </select>
+      </label>
+
       <!-- Course (B3 scheme 2026-07-05) -->
       <label x-show="meta.courses && meta.courses.length > 0">
         <small>課程</small>
