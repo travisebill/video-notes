@@ -1,4 +1,8 @@
 # 【DeepSeek V4 的槓桿機會與 Token Efficiency 工程實踐】
+## 影片基本資訊
+
+> **影片連結：** https://youtu.be/1P10bPzJRUc
+> **影片長度：** 19:27
 
 **主講｜小天 fotos / 2026年5月7日 / 19分鐘**
 

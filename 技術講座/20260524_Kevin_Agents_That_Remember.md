@@ -1,4 +1,8 @@
 # 【Agents That Remember】
+## 影片基本資訊
+
+> **影片連結：** https://youtu.be/BacJ6sEhqMo
+> **影片長度：** 10:41
 **講者｜Kevin（Anthropic Engineer）｜—**
 > 本影片使用 Whisper 英語聽寫（base 模型），經轉換為繁體中文逐字稿後整理成結構化筆記。
 

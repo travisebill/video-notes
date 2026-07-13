@@ -1,4 +1,8 @@
 # 【No Vibes Allowed: Solving Hard Problems in Complex Codebases】
+## 影片基本資訊
+
+> **影片連結：** https://youtu.be/rmvDxxNubIg
+> **影片長度：** 20:31
 **Dex Horthy（HumanLayer）｜2025-05｜AI Engineer Conf**
 
 ---

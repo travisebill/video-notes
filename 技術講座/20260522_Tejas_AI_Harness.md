@@ -1,4 +1,8 @@
 # 【AI Harnesses: Building Reliable AI Agents】
+## 影片基本資訊
+
+> **影片連結：** https://youtu.be/C_GG5g38vLU
+> **影片長度：** 20:27
 **Tejas（IBM AI Developer Advocate）｜2025（演講時長：18 分鐘）**
 
 ---

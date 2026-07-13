@@ -1,4 +1,8 @@
 # 【Claude Code 創作者 Boris：軟體的未來、AI 民主化與 SaaS 末日】
+## 影片基本資訊
+
+> **影片連結：** https://youtu.be/julbw1JuAz0
+> **影片長度：** 1:37:59
 **主講：Boris（Claude Code 創作者 / Anthropic） × Lauren Reader（訪談主持人）｜Square 開發者大會**
 **影片時長：24:35**
 

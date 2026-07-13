@@ -1,5 +1,6 @@
 # WSL Containers — 架構摘要筆記
-
+> **影片連結：** https://youtu.be/4QQ7yn37Ipk
+> **影片長度：** 23:14
 > **影片**：WSL 的改進以及新的 Containers CLI 與 APIs #DEM346 // MS Build 2026
 > **講者**：Pooja Trivedi（Microsoft 架構師，主導 Windows on Linux 開發者體驗與 AI）／Craig（Microsoft PM，負責 WSL 與 Windows AI 工具）
 > **來源**：Microsoft Build 2026（DEM346 議程）

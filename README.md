@@ -17,6 +17,8 @@
 
 > 最近 5 支影片
 
+- **2026-07-13** | Daniel Kokotajlo（前 OpenAI 研究員、AI 2027 主要作者）| [He Risked Everything To Warn You — 70% 人類滅絕機率、AI 2027 與 Plan A](人物訪談/20260713_DanielKokotajlo_AI2027_70PctExtinction.md) · 2 小時 00 分 50 秒（7250s）· 《The Diary Of A CEO》深度訪談
+- **2026-06-25** | Jarred Sumner（Bun 創辦人、Anthropic 工程師）| [Rewriting Bun in Rust：Bun 從 Zig 改寫成 Rust 的工程紀實](技術講座/20260625_JarredSumner_BunInRust.md) · 技術文章（Article 路徑）
 - **2026-07-07** | Cedric Clyburn（IBM Technology 開發者倡導者）| [MCP vs Skills：哪一個適合你的 AI Agent 與 LLM？](技術講座/20260707_CedricClyburn_MCP_vs_Skills.md) · 8 分 2 秒（482s）
 - **2026-05-26** | Yuval Noah Harari（希伯來大學歷史系教授）| [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · 1 小時 55 分 36 秒（6936s）
 - **2026-06-30** | Yuval Noah Harari（歷史學家、《人類大歷史》作者）| [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · 47 分鐘（2812s）
@@ -303,8 +305,9 @@
 - 2026-06-06 | [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) · 林軒田（NTU CSIE 教授） · 29 分 58 秒（1798s）
 - 2026-03-11 | [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs） · 33 分 11 秒（1991s）
 
-### 🛠️ **編碼工具 / Agent 工程實踐**（15 支）
+### 🛠️ **編碼工具 / Agent 工程實踐**（16 支）
 
+- 2026-06-25 | [Rewriting Bun in Rust：Bun 從 Zig 改寫成 Rust 的工程紀實](技術講座/20260625_JarredSumner_BunInRust.md) · Jarred Sumner（Bun 創辦人、Anthropic 工程師）· 技術文章（Article 路徑，bun.com 官方 blog；Claude Fable 5 + 64 Claudes × 11 天 機械移植 535K LOC Zig → Rust）
 - 2026-07-07 | [MCP vs Skills：哪一個適合你的 AI Agent 與 LLM？](技術講座/20260707_CedricClyburn_MCP_vs_Skills.md) · Cedric Clyburn（IBM Technology 開發者倡導者）· 8 分 2 秒（YouTube 一般路徑，zh-Hant 自動字幕 + 英文自動字幕雙語對照）
 - 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · Angelos（Apple MLX team 工程師）· 13 分 26 秒（HTML-Video-Page 路徑）
 - 2026-06-26 | [Harness Engineering：模型之外，讓 Coding Agent 真正可靠的整套控制系統](技術講座/20260626_MartinFowler_HarnessEngineering.md) · Martin Fowler（martinfowler.com）+ 中文摘要 doggy8088（Will 保哥）· 技術文章
@@ -361,8 +364,9 @@
 
 - 2026-06-28 | [煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明](人物訪談/20260627_自說自話的總裁_煤與Starship與2100年的地球.md) · 自說自話的總裁 · 30 分 54 秒
 
-### 🤖 **AI 安全 / 末日論 / 政策**（2 支）
+### 🤖 **AI 安全 / 末日論 / 政策**（3 支）
 
+- 2026-07-13 | [He Risked Everything To Warn You — 70% 人類滅絕機率、AI 2027 與 Plan A](人物訪談/20260713_DanielKokotajlo_AI2027_70PctExtinction.md) · Daniel Kokotajlo（前 OpenAI 研究員、AI 2027 主要作者）· 2 小時 00 分 50 秒（The Diary Of A CEO 訪談，拒簽反詆毀條款放棄 200 萬美元）
 - 2026-06-19 | [AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說](技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md) · 馬臉姐 · 29 分 55 秒
 - 2025-10-31 | [AI 2027 報告：兩種結局、6 段時間線，與台灣在 AI 晶片戰爭中的關鍵角色](技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md) · 馬臉姐 · 39 分 18 秒
 

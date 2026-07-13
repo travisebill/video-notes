@@ -1,4 +1,8 @@
 # 【Software Engineering at the Tipping Point】
+## 影片基本資訊
+
+> **影片連結：** https://youtu.be/2n41YjR5QfU
+> **影片長度：** 39:39
 **Adam Bender（Google）｜2026-05-28**
 
 > 本影片使用 YouTube 英文 CC 字幕（en-j3PyPqV-e1s），經清除時間碼與格式標籤後得到逐字稿，AI 整理為繁體中文結構化筆記。

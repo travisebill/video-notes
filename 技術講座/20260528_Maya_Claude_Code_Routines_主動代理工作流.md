@@ -1,4 +1,8 @@
 # 【Building Proactive Agent Workflows with Claude Code】
+## 影片基本資訊
+
+> **影片連結：** https://youtu.be/eSP7PLTXNy8
+> **影片長度：** 22:04
 **Maya (Anthropic Applied AI Team)｜2026-05-28**
 
 > 本影片使用 Whisper (base model, auto-detect English) 深度聽寫，經 AI 整理為繁體中文結構化筆記。

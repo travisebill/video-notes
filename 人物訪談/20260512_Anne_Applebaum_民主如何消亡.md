@@ -1,4 +1,8 @@
 # 【民主如何消亡——以及我們如何阻止它發生】
+## 影片基本資訊
+
+> **影片連結：** https://youtu.be/kwEtOyaFhCA
+> **影片長度：** 1:48:15
 **主講：Anne Applebaum（普立茲獎得主／歷史學家） × Steven Bartlett（訪談主持人）｜《The Diary Of A CEO》播客**
 **影片時長：1:48:14**
 

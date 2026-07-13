@@ -1,4 +1,8 @@
 # 【The agent-ready web: Simplify user actions with WebMCP】
+## 影片基本資訊
+
+> **影片連結：** https://youtu.be/ghJmWQCIHRM
+> **影片長度：** 21:34
 
 **Tara Agyemang（Google Chrome DevRel, AI Engineer）｜2026/06/11｜約 21 分 36 秒**
 

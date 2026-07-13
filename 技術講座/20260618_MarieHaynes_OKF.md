@@ -1,4 +1,8 @@
 # 【Google 推出 Open Knowledge Format — 結構化你的知識給 AI Agent】
+## 影片基本資訊
+
+> **影片連結：** https://youtu.be/MY9F9K7wWX4
+> **影片長度：** 18:10
 
 **Marie Haynes｜2026/06/16（影片發布日）｜約 18 分鐘**
 

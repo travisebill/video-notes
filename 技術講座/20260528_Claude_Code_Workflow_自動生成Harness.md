@@ -1,4 +1,8 @@
 # 【🚀AI編程革命！Claude Code Workflow 自動生成 Harness！徹底抹平 Harness Engineering 技術鴻溝！】
+## 影片基本資訊
+
+> **影片連結：** https://youtu.be/6bs5b4FltCU
+> **影片長度：** 2:51
 **主講/講者｜未知（2026-05-27）**
 
 ---

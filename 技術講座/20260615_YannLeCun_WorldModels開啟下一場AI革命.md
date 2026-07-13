@@ -1,5 +1,6 @@
 # 【Yann LeCun: World Models 將開啟下一場 AI 革命 — 從 LLMs 的死路到 AMILabs】
-
+> **影片連結：** https://youtu.be/72Xj8k5WQX4
+> **影片長度：** 58:54
 > **主題**：🧠 AI / LLM 學術與方法論
 
 **主講｜Yann LeCun / 紐約大學教授、Meta 首席 AI 科學家（已離任）、Turing 獎得主 / ETH Zürich "Frontiers of Embodied AI" / 2026 年**

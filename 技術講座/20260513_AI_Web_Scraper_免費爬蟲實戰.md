@@ -1,4 +1,8 @@
 # 【免費 AI 網頁爬蟲實戰：用 DeepSeek + Grok + Crawl4AI 抓取任何網站】
+## 影片基本資訊
+
+> **影片連結：** https://youtu.be/Osl4NgAXvRk
+> **影片長度：** 22:46
 **主講：AI 開發教學 YouTuber｜教學影片**
 **影片時長：22:45**
 
