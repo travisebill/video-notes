@@ -139,28 +139,31 @@
     <div class="video-grid" x-show="filteredVideos.length > 0">
       <template x-for="video in filteredVideos" :key="video.id">
         <article class="video-card">
-          <!-- Thumbnail: YouTube when yt_id, otherwise inline SVG placeholder (v1.7 2026-07-14) -->
+          <!-- Thumbnail: YouTube when video_url, otherwise inline SVG placeholder (v1.7.1 2026-07-14) -->
+          <!-- 用 <template x-if> 而非 x-show，避免 CSS display: block !important 蓋掉 inline display: none -->
           <div class="video-thumbnail-wrap">
-            <a x-show="video.video_url"
-               :href="video.video_url"
-               target="_blank"
-               class="video-thumbnail-link"
-               :aria-label="'在 YouTube 開啟：' + video.title">
-              <img class="video-thumbnail"
-                   :src="thumbnailUrl(video)"
-                   :alt="video.title"
-                   loading="lazy"
-                   @error="onThumbnailError($event, video)">
-              <span class="video-thumbnail-play" aria-hidden="true" x-show="video.yt_id">▶</span>
-            </a>
-            <div class="video-thumbnail-link no-thumbnail"
-                 x-show="!video.video_url"
-                 :aria-label="'此筆記尚未補 YouTube 連結：' + video.title">
-              <img class="video-thumbnail"
-                   :src="thumbnailUrl(video)"
-                   :alt="video.title">
-              <span class="no-thumbnail-badge">無影片</span>
-            </div>
+            <template x-if="video.video_url">
+              <a :href="video.video_url"
+                 target="_blank"
+                 class="video-thumbnail-link"
+                 :aria-label="'在 YouTube 開啟：' + video.title">
+                <img class="video-thumbnail"
+                     :src="thumbnailUrl(video)"
+                     :alt="video.title"
+                     loading="lazy"
+                     @error="onThumbnailError($event, video)">
+                <span class="video-thumbnail-play" aria-hidden="true">▶</span>
+              </a>
+            </template>
+            <template x-if="!video.video_url">
+              <div class="video-thumbnail-link no-thumbnail"
+                   :aria-label="'此筆記尚未補 YouTube 連結：' + video.title">
+                <img class="video-thumbnail"
+                     :src="thumbnailUrl(video)"
+                     :alt="video.title">
+                <span class="no-thumbnail-badge">無影片</span>
+              </div>
+            </template>
           </div>
 
           <!-- Header -->
