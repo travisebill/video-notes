@@ -1,11 +1,13 @@
 // Video Notes PWA Service Worker
 // 策略：app shell (HTML/CSS/JS/icons) cache-first；JSON 資料 network-first 帶 fallback cache
 //
-// v1.3-pwa: bump cache version to flush stale video-notes.json after adding Harari EZ Show
-//           — 2026-07-08: 新增 Yuval Noah Harari × Ezra Klein (1h55m, Trumpian vision × cooperation × AI intimacy)
-//             + SW bump to force reload new JSON
-//           — 詳見 AGENTS.md「speaker 選項整理」章節
-const CACHE_VERSION = 'v1.5-pwa';
+// v1.6-pwa: bump cache version to flush stale app shell after fixing Telegram WebView crash
+//           — 2026-07-14: 修 YouTube iframe 預載導致 145 個 WebGL context 超過 mobile 上限
+//             + Telegram WebView 崩潰重整 → 改 lazy binding `:src="expanded[video.id] ? getYouTubeEmbedUrl(video) : ''"`
+//             + 加 `loading="lazy"` 確保 scroll 內才 load iframe
+//             + SW bump 強制所有使用者重抓新 index.html
+//           — 詳見 AGENTS.md「Telegram WebView 崩潰」章節
+const CACHE_VERSION = 'v1.6-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 

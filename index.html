@@ -227,11 +227,12 @@
                    class="youtube-embed"
                    :class="videoCollapsed[video.id] ? 'collapsed' : ''">
                 <iframe :id="'youtube-iframe-' + video.id"
-                        :src="getYouTubeEmbedUrl(video)"
+                        :src="expanded[video.id] ? getYouTubeEmbedUrl(video) : ''"
                         allowfullscreen
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         frameborder="0"
-                        referrerpolicy="strict-origin-when-cross-origin">
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        loading="lazy">
                 </iframe>
               </div>
 
