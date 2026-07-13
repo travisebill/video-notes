@@ -495,6 +495,76 @@ document.addEventListener('alpine:init', () => {
       return null;
     },
 
+    // ===== Thumbnail fallback (v1.7 2026-07-14) =====
+    // 對於 article / podcast / 暫缺 YouTube URL 的影片，產生 inline SVG 縮圖，
+    // 用 category 對應 emoji + speaker 名字，避免 404 request + 純黑卡片
+    _thumbnailPlaceholderCache: new Map(),
+    thumbnailUrl(video) {
+      const ytId = video?.yt_id;
+      if (ytId) {
+        return `https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`;
+      }
+      // SVG fallback — 區分 category 給不同 icon & 背景
+      const cat = video?.category || '';
+      const speaker = (video?.speaker || '').substring(0, 14);
+      const date = video?.date || '';
+      let bgGrad = '#1f2937';
+      let icon = '🎬';
+      let label = cat || '文章 / 訪談';
+      if (cat.includes('訪談')) {
+        bgGrad = '#312e81';
+        icon = '🎙';
+        label = 'Podcast / 訪談';
+      } else if (cat.includes('財經')) {
+        bgGrad = '#7c2d12';
+        icon = '📰';
+        label = '財經分析';
+      } else if (cat.includes('國際') || cat.includes('歷史') || cat.includes('政治')) {
+        bgGrad = '#0c4a6e';
+        icon = '🌐';
+        label = cat;
+      } else if (cat.includes('技術')) {
+        bgGrad = '#064e3b';
+        icon = '⚙️';
+        label = '技術筆記';
+      }
+      // cache: key by category+speaker+date (避免每次 render 重算 SVG)
+      const cacheKey = `${bgGrad}|${icon}|${label}|${speaker}|${date}`;
+      if (this._thumbnailPlaceholderCache.has(cacheKey)) {
+        return this._thumbnailPlaceholderCache.get(cacheKey);
+      }
+      const safeSpeaker = speaker.replace(/[<>&"']/g, c =>
+        ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[c]));
+      const safeLabel = label.replace(/[<>&"']/g, c =>
+        ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[c]));
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">` +
+        `<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">` +
+        `<stop offset="0%" stop-color="${bgGrad}"/>` +
+        `<stop offset="100%" stop-color="#0f172a"/>` +
+        `</linearGradient></defs>` +
+        `<rect width="320" height="180" fill="url(#g)"/>` +
+        `<text x="160" y="80" text-anchor="middle" font-size="56" fill="#fff" opacity="0.85">${icon}</text>` +
+        `<text x="160" y="125" text-anchor="middle" font-size="16" fill="#cbd5e1" font-family="sans-serif">${safeLabel}</text>` +
+        `<text x="160" y="148" text-anchor="middle" font-size="13" fill="#94a3b8" font-family="sans-serif">${safeSpeaker}</text>` +
+        (date ? `<text x="160" y="167" text-anchor="middle" font-size="11" fill="#64748b" font-family="sans-serif">${date}</text>` : '') +
+        `</svg>`;
+      const dataUri = 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+      this._thumbnailPlaceholderCache.set(cacheKey, dataUri);
+      return dataUri;
+    },
+
+    onThumbnailError(event, video) {
+      // 當 YouTube maxresdefault/hqdefault 都 404（例如 video 已被刪），
+      // fallback 到 inline SVG placeholder，避免 console 紅字 + 黑卡
+      try {
+        event.target.src = this.thumbnailUrl(video);
+        event.onerror = null;
+      } catch (e) {
+        // silent fail
+      }
+    },
+
     // ===== 章節 hover preview popup（v0.5 2026-06-29）=====
     _chapterPreviewEl: null,  // singleton popup element
 
