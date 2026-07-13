@@ -23,6 +23,7 @@ document.addEventListener('alpine:init', () => {
       topic: '',
       course: '',
       dateRange: 'all',
+      linkStatus: 'all',  // v1.8 2026-07-14: 'all' | 'with_link' | 'no_link'
     },
     sort: 'date_desc',
     theme: localStorage.getItem('theme') || 'auto',
@@ -238,6 +239,13 @@ document.addEventListener('alpine:init', () => {
         const days = { '30d': 30, '90d': 90, '6m': 180, '1y': 365 }[this.filters.dateRange];
         const cutoff = new Date(now.getTime() - days * 86400 * 1000);
         result = result.filter(v => new Date(v.date) >= cutoff);
+      }
+
+      // 5b. Link Status (v1.8 2026-07-14) — filter 有/無 YouTube URL 的影片
+      if (this.filters.linkStatus === 'with_link') {
+        result = result.filter(v => !!v.video_url);
+      } else if (this.filters.linkStatus === 'no_link') {
+        result = result.filter(v => !v.video_url);
       }
 
       // 6. Sort
