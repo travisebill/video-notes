@@ -7,7 +7,7 @@
 //             + 加 `loading="lazy"` 確保 scroll 內才 load iframe
 //             + SW bump 強制所有使用者重抓新 index.html
 //           — 詳見 AGENTS.md「Telegram WebView 崩潰」章節
-const CACHE_VERSION = 'v1.7-pwa';
+const CACHE_VERSION = 'v1.7.1-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
