@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 145,
-    "total_with_audio": 116,
-    "total_with_transcript": 88,
-    "total_with_spoken_script": 116,
-    "speakers_count": 56,
+    "total_videos": 146,
+    "total_with_audio": 117,
+    "total_with_transcript": 89,
+    "total_with_spoken_script": 117,
+    "speakers_count": 57,
     "categories_count": 4,
     "topics_count": 13,
     "courses": [
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-14 05:40:28",
+    "last_updated": "2026-07-15 19:35:27",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -32,6 +32,7 @@
       "Dex",
       "Dr. Darren Candow",
       "Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者）× Steven Bartlett（訪談主持人）",
+      "Google Cloud Tech",
       "Graham Hancock × Steven Bartlett",
       "Jarred Sumner",
       "Jelani Nelson",
@@ -989,6 +990,34 @@
       },
       "note_path": "技術講座/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢.md"
+    },
+    {
+      "id": "20260701_GoogleCloudTech_MCP_vs_API",
+      "title": "【MCP vs API — 為什麼傳統 API 在 AI agent 時代不夠用？】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": "@googlecloudtech），講者是 Smitha Kolan（Google Cloud AI/ML Developer Advocate",
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": "🛠️ 編碼工具 / Agent 工程實踐",
+      "date": "2026-07-01",
+      "note_date": "2026-07-01",
+      "duration_seconds": 745,
+      "duration_display": "12:25",
+      "video_url": "https://youtu.be/185XGEMefgc?si=-jXndcSG4FubTQtN",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260701_GoogleCloudTech_MCP_vs_API.opus",
+        "m4a": "audio/20260701_GoogleCloudTech_MCP_vs_API.m4a",
+        "mp3": "audio/20260701_GoogleCloudTech_MCP_vs_API.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260701_GoogleCloudTech_MCP_vs_API_逐字稿.txt",
+        "spoken_script": "transcripts/20260701_GoogleCloudTech_MCP_vs_API_口播稿.txt",
+        "spoken_script_tts": null
+      },
+      "note_path": "技術講座/20260701_GoogleCloudTech_MCP_vs_API.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260701_GoogleCloudTech_MCP_vs_API.md"
     },
     {
       "id": "20260627_CNBC_ZAI_Chinese_OpenSourceMoment",
