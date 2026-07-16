@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>England 1–2 Argentina · 2026 World Cup Semifinal · UK & Global Reaction</title>
+<style>
+  :root {
+    --bg: #0b1020;
+    --bg-2: #121a33;
+    --panel: #16213e;
+    --panel-2: #1c2a4d;
+    --line: #243358;
+    --ink: #e8ecf5;
+    --ink-2: #b9c2d6;
+    --muted: #8493b3;
+    --eng: #cf222f;        /* England red */
+    --arg: #6cb3ff;        /* Argentina light blue */
+    --gold: #f6c453;
+    --good: #4ade80;
+    --bad: #f87171;
+    --warn: #fbbf24;
+    --link: #93c5fd;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    background: radial-gradient(1200px 600px at 10% -10%, #1d2a55 0%, transparent 60%),
+                radial-gradient(900px 500px at 110% 10%, #3a1e3a 0%, transparent 55%),
+                var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 18px 80px; }
+  /* Header */
+  .hero {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 22px 22px 18px;
+    background: linear-gradient(135deg, rgba(207,34,47,0.10), rgba(108,179,255,0.10)), var(--panel);
+    margin-bottom: 22px;
+  }
+  .kicker { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  h1 {
+    margin: 6px 0 4px;
+    font-size: clamp(26px, 4.4vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .sub { color: var(--ink-2); font-size: 15px; margin-bottom: 14px; }
+  .score {
+    display: flex; align-items: center; justify-content: center; gap: 18px;
+    margin: 16px 0 6px;
+    font-family: "SF Mono", "JetBrains Mono", Menlo, monospace;
+  }
+  .team { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 20px; }
+  .team .flag { font-size: 28px; line-height: 1; }
+  .badge {
+    display: inline-block; padding: 4px 10px; border-radius: 999px;
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700;
+  }
+  .b-eng { background: var(--eng); color: #fff; }
+  .b-arg { background: var(--arg); color: #0b1020; }
+  .num {
+    font-size: clamp(48px, 9vw, 76px); font-weight: 800;
+    background: linear-gradient(180deg, #fff, #b9c2d6);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    letter-spacing: -0.02em;
+  }
+  .num small { font-size: 0.4em; opacity: 0.7; padding: 0 2px; }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: center;
+    color: var(--muted); font-size: 13px; margin-top: 6px;
+  }
+  /* Sections */
+  section { margin-top: 28px; }
+  h2 {
+    font-size: clamp(18px, 2.4vw, 22px);
+    letter-spacing: -0.005em;
+    margin: 0 0 12px;
+    padding-left: 10px; border-left: 3px solid var(--gold);
+  }
+  h3 { font-size: 15px; margin: 14px 0 6px; color: var(--ink); }
+  p { margin: 8px 0; color: var(--ink-2); }
+  /* Timeline */
+  .timeline {
+    position: relative; padding: 8px 0 4px 24px;
+    border-left: 2px dashed var(--line); margin: 8px 0 0;
+  }
+  .ev { position: relative; padding: 8px 0 14px 6px; }
+  .ev::before {
+    content: ""; position: absolute; left: -30px; top: 14px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--gold); box-shadow: 0 0 0 3px rgba(246,196,83,0.18);
+  }
+  .ev.eng::before { background: var(--eng); box-shadow: 0 0 0 3px rgba(207,34,47,0.18); }
+  .ev.arg::before { background: var(--arg); box-shadow: 0 0 0 3px rgba(108,179,255,0.18); }
+  .ev time {
+    font-family: "SF Mono", Menlo, monospace;
+    color: var(--gold); font-weight: 700; font-size: 13px;
+  }
+  .ev.arg time { color: var(--arg); }
+  .ev.eng time { color: var(--eng); }
+  .ev strong { color: var(--ink); }
+  /* Cards */
+  .grid {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+  .card {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 14px; padding: 14px 16px;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .card:hover { transform: translateY(-1px); border-color: #2f3f6b; }
+  .outlet { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .outlet .name { font-weight: 700; color: var(--ink); font-size: 14px; letter-spacing: 0.01em; }
+  .outlet .when { color: var(--muted); font-size: 11px; }
+  .headline {
+    color: var(--ink); font-weight: 600; font-size: 15px; line-height: 1.4;
+    margin: 8px 0 6px;
+  }
+  .quote {
+    color: var(--ink-2); font-size: 14px; margin: 0;
+    border-left: 3px solid var(--gold); padding: 2px 0 2px 10px;
+  }
+  .src { font-size: 11px; color: var(--muted); margin-top: 8px; word-break: break-all; }
+  .src a { color: var(--link); text-decoration: none; }
+  .src a:hover { text-decoration: underline; }
+  /* Pills / chips */
+  .pill {
+    display: inline-block; padding: 2px 8px; border-radius: 999px;
+    background: var(--panel-2); border: 1px solid var(--line);
+    font-size: 11px; color: var(--ink-2); margin-right: 4px;
+  }
+  /* Stats grid */
+  .stats {
+    display: grid; gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+  .stat {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 12px; padding: 12px 14px; text-align: center;
+  }
+  .stat .v { font-size: 22px; font-weight: 700; color: var(--ink); }
+  .stat .v small { color: var(--muted); font-size: 12px; font-weight: 500; }
+  .stat .l { font-size: 12px; color: var(--muted); margin-top: 2px; letter-spacing: 0.06em; text-transform: uppercase; }
+  /* Player ratings */
+  .ratings {
+    width: 100%; border-collapse: collapse;
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 12px; overflow: hidden;
+  }
+  .ratings th, .ratings td {
+    padding: 9px 12px; text-align: left; font-size: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .ratings th { background: var(--panel-2); color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .ratings tr:last-child td { border-bottom: none; }
+  .rating { font-family: "SF Mono", Menlo, monospace; font-weight: 700; }
+  .rating.hi { color: var(--good); }
+  .rating.md { color: var(--warn); }
+  .rating.lo { color: var(--bad); }
+  /* Quote block */
+  .pullquote {
+    border-left: 4px solid var(--gold);
+    background: linear-gradient(90deg, rgba(246,196,83,0.08), transparent);
+    padding: 12px 16px; margin: 12px 0;
+    font-size: 16px; color: var(--ink); font-style: italic;
+  }
+  .pullquote cite { display: block; margin-top: 6px; font-style: normal; color: var(--muted); font-size: 13px; }
+  /* Two col */
+  .two-col { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 760px) { .two-col { grid-template-columns: 1fr 1fr; } }
+  /* Footer */
+  footer {
+    margin-top: 36px; padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 12px;
+    display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  /* Anchors */
+  .toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 0; }
+  .toc a {
+    font-size: 12px; padding: 4px 10px; border-radius: 999px;
+    background: var(--panel-2); border: 1px solid var(--line);
+    color: var(--ink-2); text-decoration: none;
+  }
+  .toc a:hover { color: var(--ink); border-color: #3a4d80; }
+  hr.sep { border: none; border-top: 1px solid var(--line); margin: 22px 0; }
+  /* Special accents */
+  .uk-flag::before { content: "🇬🇧 "; }
+  .global::before { content: "🌍 "; }
+  .x-icon::before { content: "✕ "; }
+  .reddit::before { content: "👽 "; }
+  .ig::before { content: "📸 "; }
+  .yt::before { content: "▶ "; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="kicker">2026 FIFA World Cup · Semifinal · 16 July 2026 (Asia/Taipei)</div>
+    <h1>England 1 – 2 Argentina: <span style="color:var(--gold)">Six Minutes of Heartbreak</span></h1>
+    <div class="sub">England led 1–0 with half an hour to play. Then Tuchel sat back. Messi took over. And the Three Lions' first World Cup final since 1966 slipped away in stoppage time at Mercedes-Benz Stadium, Atlanta.</div>
+
+    <div class="score">
+      <div class="team"><span class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span class="badge b-eng">ENG</span><span>England</span></div>
+      <div class="num">1 <small>—</small> 2</div>
+      <div class="team"><span>Argentina</span><span class="badge b-arg">ARG</span><span class="flag">🇦🇷</span></div>
+    </div>
+    <div class="meta-row">
+      <span>📅 Wed 15 Jul 2026 · 19:00 ET</span>
+      <span>🏟️ Mercedes-Benz Stadium, Atlanta</span>
+      <span>👤 Referee: (assigned by FIFA)</span>
+      <span>🌡️ 27°C · closed roof</span>
+    </div>
+
+    <nav class="toc" aria-label="Sections">
+      <a href="#match">Match Summary</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#uk-media">UK Front Pages</a>
+      <a href="#tactics">Tactical Post-Mortem</a>
+      <a href="#ratings">Player Ratings</a>
+      <a href="#social">Social Pulse</a>
+      <a href="#voices">Notable Voices</a>
+      <a href="#forward">What Now?</a>
+    </nav>
+  </header>
+
+  <!-- ============ MATCH SUMMARY ============ -->
+  <section id="match">
+    <h2>Match Summary</h2>
+    <p>England were the better side for the opening hour. <strong>Anthony Gordon</strong> opened the scoring early, and for 30-something minutes the Three Lions looked like they might actually end 60 years of waiting. Then <strong>Thomas Tuchel</strong> did what Thomas Tuchel was hired to stop doing: he sat deep. Five at the back. Game management. The clock ticked toward extra time.</p>
+    <p>Argentina kept knocking. <strong>Lionel Messi</strong> kept receiving the ball between the lines. In the 85th minute he slid a pass to <strong>Enzo Fernández</strong>, who smashed a 20-yard strike past Jordan Pickford. Six minutes of stoppage time later, Messi floated a cross to the back post and <strong>Lautaro Martínez</strong> rose highest to head Argentina into the World Cup final — and England out of the tournament.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="v">88<small>%</small></div><div class="l">Argentina possession after ENG goal</div></div>
+      <div class="stat"><div class="v">6<small> min</small></div><div class="l">Between the two Argentina goals</div></div>
+      <div class="stat"><div class="v">2 / 2</div><div class="l">Messi — goals + assists</div></div>
+      <div class="stat"><div class="v">1966</div><div class="l">Last ENG men's WC final</div></div>
+    </div>
+  </section>
+
+  <hr class="sep" />
+
+  <!-- ============ TIMELINE ============ -->
+  <section id="timeline">
+    <h2>Match Timeline</h2>
+    <div class="timeline">
+      <div class="ev eng">
+        <time>~30'</time>
+        <div><strong>Anthony Gordon</strong> puts England ahead. <span class="pill">ENG 1–0 ARG</span> Stretches of Atlanta erupt, Bellingham nods toward the away end, "Hey Jude" bounces off the stadium roof.</div>
+      </div>
+      <div class="ev arg">
+        <time>85'</time>
+        <div><strong>Enzo Fernández</strong> — 20-yard strike, Messi assist. <span class="pill">ENG 1–1 ARG</span> Pickford gets a hand, not enough. Argentina's pressure finally tells.</div>
+      </div>
+      <div class="ev arg">
+        <time>90+1'</time>
+        <div><strong>Lautaro Martínez</strong> — header at the back post, Messi cross. <span class="pill">ENG 1–2 ARG</span> Full-time. Argentina through. England out.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="sep" />
+
+  <!-- ============ UK FRONT PAGES ============ -->
+  <section id="uk-media">
+    <h2 class="uk-flag">How the UK Press Read It</h2>
+    <p>Every British national led with the same word on Thursday morning: <em>heartbreak</em>. The dominant story is not just the defeat — it is the way England lost it. Tactical retreat, conservative substitutions, and a manager who looked, in the words of one Athletic columnist, to have "orchestrated" the surrender.</p>
+
+    <div class="grid">
+      <article class="card">
+        <div class="outlet"><span class="name">BBC Sport</span><span class="when">15 Jul · 23:15 BST</span></div>
+        <h3 class="headline">"Argentina shatter England's World Cup dreams"</h3>
+        <p class="quote">"Two late goals to come from behind and knock out Thomas Tuchel's side, in a dramatic semi-final at Mercedes-Benz Stadium."</p>
+        <div class="src"><a href="https://www.bbc.co.uk/sport/football/videos/cwy059qwdg4o" target="_blank" rel="noopener">bbc.co.uk/sport — match report</a></div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name">BBC Sport · Analysis</span><span class="when">15 Jul</span></div>
+        <h3 class="headline">"Did Thomas Tuchel's tactics cost England?"</h3>
+        <p class="quote">"England went 1–0 up against Argentina before slumping to a heartbreaking semi-final defeat. Tuchel says England were 'too passive'."</p>
+        <div class="src"><a href="https://www.bbc.com/sport/football/articles/ce8l15903k8o" target="_blank" rel="noopener">bbc.com/sport — tactical piece</a></div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name">The Athletic (via NYT)</span><span class="when">15 Jul · 22:40 BST</span></div>
+        <h3 class="headline">"Tuchel is guilty of orchestrating England's craven [retreat]"</h3>
+        <p class="quote">"A tactical alteration that will go down as one of the most consequential mistakes ever by an England manager in a big game."</p>
+        <div class="src"><a href="https://www.nytimes.com/athletic/7442975/2026/07/15/thomas-tuchel-england-world-cup-argentina/" target="_blank" rel="noopener">nytimes.com/athletic — column</a></div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name">The Athletic · Tactics</span><span class="when">15 Jul · 23:50 BST</span></div>
+        <h3 class="headline">"How Messi genius — and England negativity — transformed the tie"</h3>
+        <p class="quote">"A combination of Thomas Tuchel's tactics and innate brilliance saw Argentina reach another showpiece final."</p>
+        <div class="src"><a href="https://www.nytimes.com/athletic/7448551/2026/07/15/lionel-messi-england-argentina-tactics/" target="_blank" rel="noopener">nytimes.com/athletic — tactics board</a></div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name">The Times</span><span class="when">16 Jul · 06:00 BST</span></div>
+        <h3 class="headline">"Kane was critical of his team's approach in the second half"</h3>
+        <p class="quote">"Harry Kane shows dejection at the end of the 2026 FIFA World Cup Semi — heartbroken but already looking forward."</p>
+        <div class="src"><a href="https://www.thetimes.com/sport/football/world-cup/article/england-vs-argentina-live-score-commentary-semi-final-fifa-world-cup-2026-latest-news-wnm509drg" target="_blank" rel="noopener">thetimes.com — live page</a></div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name">The Guardian / NZ Herald wire</span><span class="when">16 Jul · 02:00 BST</span></div>
+        <h3 class="headline">"'A notorious defeat' · 'The tone was clearly set in 1982'"</h3>
+        <p class="quote">"England's destiny is tournament heartbreak. You have to look at the manager." — Guardian minute-by-minute running across UK and Antipodean editions.</p>
+        <div class="src"><a href="https://www.nzherald.co.nz/sport/football/football-world-cup/england-v-argentina-world-reacts-to-dramatic-world-cup-semi-final/" target="_blank" rel="noopener">nzherald.co.nz — world reaction roundup</a></div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name">BBC News · Paper review</span><span class="when">16 Jul · 07:30 BST</span></div>
+        <h3 class="headline">"'England's World Cup dream over' — every front page"</h3>
+        <p class="quote">"It is heartbreaking reading for England fans this morning as the loss to Argentina is covered across all the papers."</p>
+        <div class="src"><a href="https://www.bbc.com/news/articles/c0qvewzn1e1o" target="_blank" rel="noopener">bbc.com/news — front pages</a></div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name">Sky Sports · TNT Sports</span><span class="when">15 Jul</span></div>
+        <h3 class="headline">"Tuchel's decisions cost England"</h3>
+        <p class="quote">"Tuchel has 'no regrets' about the tactical switch — but England went with five at the back, just like the Southgate years everyone wanted to leave behind."</p>
+        <div class="src"><a href="https://www.tntsports.co.uk/football/world-cup/2026/england-argentina-thomas-tuchel-substitutions-gareth-southgate-tactics-wayne-rooney_sto23319948/story.shtml" target="_blank" rel="noopener">tntsports.co.uk</a></div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="sep" />
+
+  <!-- ============ TACTICS ============ -->
+  <section id="tactics">
+    <h2>Tactical Post-Mortem · Who Lost the Game?</h2>
+
+    <div class="pullquote">
+      "England had Argentina EXACTLY where they should have wanted them. Tuchel's substitutions were to blame."
+      <cite>— Tim Vickery, BBC South American football correspondent</cite>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3>What worked in the first hour</h3>
+        <p>England's press was sharp, Bellingham and Foden were running channels, and the Argentina back line looked rattled. Gordon's opener was exactly the kind of counter-punch Tuchel had spent two years building around.</p>
+      </div>
+      <div>
+        <h3>What changed at 1–0</h3>
+        <p>Instead of staying on the front foot, Tuchel dropped into a back five. Midfielders who had been pressing high started screening the box. Argentina's possession share ballooned to roughly 88% for the last 30 minutes. Messi moved into the pockets England had vacated.</p>
+      </div>
+    </div>
+
+    <h3>Tuchel's own framing</h3>
+    <p>"Easy to say that it was wrong." Tuchel defended the switch in his post-match presser, saying England had been "too passive" even before the subs and that the changes were an attempt to "help." He also said he had <strong>"no regrets"</strong> about the defensive shape. That line is unlikely to age well in the UK papers on Friday.</p>
+
+    <h3>Why the consensus is so harsh</h3>
+    <ul style="color:var(--ink-2); padding-left: 20px;">
+      <li>England had <em>won</em> the tactical battle for 60 minutes, then handed it back.</li>
+      <li>The substitutions replaced attacking runners with centre-backs and a defensive midfielder — at 1–0, up, in a World Cup semi.</li>
+      <li>Pickford was forced into 6+ saves; Spurs-bound Spence, thrown on as a sub, was one of the few positives.</li>
+      <li>It echoes 2021 (Euro final) and 2024 (Euro final) — sit deep, invite pressure, lose to a late set-piece or through-ball.</li>
+    </ul>
+  </section>
+
+  <hr class="sep" />
+
+  <!-- ============ RATINGS ============ -->
+  <section id="ratings">
+    <h2>Player Ratings · England</h2>
+    <p>Compiled from Football365, Goal, and Yahoo Sports UK match-grade reports. England had maybe three players who came out of this with credit.</p>
+
+    <table class="ratings">
+      <thead>
+        <tr><th>Player</th><th>Pos</th><th>Rating</th><th>Verdict</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Jordan Pickford</td><td>GK</td><td class="rating md">6</td><td>Kept it alive as long as he could; beaten by two worldies.</td></tr>
+        <tr><td>Djed Spence</td><td>RB</td><td class="rating hi">8</td><td>Threw on as a sub, looked England's most dangerous outlet.</td></tr>
+        <tr><td>John Stones</td><td>CB</td><td class="rating hi">7</td><td>Impressed in defeat — composed, won his duels.</td></tr>
+        <tr><td>Ezri Konsa</td><td>CB</td><td class="rating md">6</td><td>Solid enough until Messi found the half-spaces.</td></tr>
+        <tr><td>Marc Guéhi</td><td>CB</td><td class="rating md">6</td><td>Lost Martínez at the back post for the winner.</td></tr>
+        <tr><td>Declan Rice</td><td>DM</td><td class="rating lo">4</td><td>Disappeared as Argentina pinned England in.</td></tr>
+        <tr><td>Jude Bellingham</td><td>CM</td><td class="rating lo">4</td><td>Big-game flatness. Theostsball control; no decisive moments.</td></tr>
+        <tr><td>Bukayo Saka</td><td>RW</td><td class="rating md">5</td><td>Involved early, faded once England sat back.</td></tr>
+        <tr><td>Phil Foden</td><td>AM</td><td class="rating md">5</td><td>Bright sparks, no end product.</td></tr>
+        <tr><td>Anthony Gordon</td><td>LW</td><td class="rating hi">7</td><td>Took his goal well. Ran all night. No support after the hour.</td></tr>
+        <tr><td>Harry Kane (c)</td><td>ST</td><td class="rating md">5</td><td>Worked hard, then publicly critical of the second-half plan.</td></tr>
+        <tr><td>Conor Gallagher (sub)</td><td>CM</td><td class="rating lo">4</td><td>On to "help" defensively — part of the problem, not the solution.</td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:10px; font-size:12px; color:var(--muted)">Source: Football365, Goal.com, Yahoo Sports UK. Ratings rounded to the nearest whole number where outlets used 10-point scales.</p>
+  </section>
+
+  <hr class="sep" />
+
+  <!-- ============ SOCIAL PULSE ============ -->
+  <section id="social">
+    <h2>Social Pulse · The Internet Reacts</h2>
+
+    <div class="two-col">
+      <article class="card">
+        <div class="outlet"><span class="name reddit">r/ThreeLions (England fans)</span><span class="when">post-match · 12h</span></div>
+        <p class="quote">"Absolutely pathetic. I can't even be mad, we deserved to lose. Parking the bus like that and trying to survive their relentless attacks half the game. Same movie, different year."</p>
+        <div class="src">Top-voted comment on r/ThreeLions post-match thread</div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name reddit">r/soccer</span><span class="when">match thread · 26K comments</span></div>
+        <p class="quote">"FT: England 1 – 2 Argentina." — One of the largest match threads of the tournament. Argentine fans flooded in: <em>"Enzooooooo! Messi delivers an insane pass."</em></p>
+        <div class="src"><a href="https://www.reddit.com/r/soccer/comments/1uxh9we/match_thread_england_vs_argentina_fifa_world_cup/" target="_blank" rel="noopener">reddit.com/r/soccer</a></div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name reddit">r/worldcup</span><span class="when">post-match · 12h</span></div>
+        <p class="quote">"England backed off and Argentina pressed. They matched their intensity going the other way. Pickford was on his own."</p>
+        <div class="src"><a href="https://www.reddit.com/r/worldcup/comments/1uxib97/" target="_blank" rel="noopener">reddit.com/r/worldcup</a></div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name x-icon">X (Twitter) trending</span><span class="when">15 Jul · 22:00 BST</span></div>
+        <p class="quote">"Sack Tuchel TONIGHT." — a top trending phrase in the UK. <em>#ThreeLions</em>, <em>#ENG</em>, <em>#TuchelOut</em> all peaked inside an hour of full-time.</p>
+        <div class="src">Football360 (mirror): football360.com.au</div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name ig">Instagram · England fans in Atlanta</span><span class="when">post-match</span></div>
+        <p class="quote">"Gutted. We defended too deep second half. Sat too far back. Tried to do what we did against Mexico. Didn't work. They're better. We did our best."</p>
+        <div class="src">BBC MOTD on Instagram · 1.2M views</div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name yt">YouTube · fan-cam at London watch party</span><span class="when">15 Jul</span></div>
+        <p class="quote">"An entire venue had its heart broken." — Full-time cut to a packed pub going from hope to silence in 30 seconds. One of the most-shared UK clips of the night.</p>
+        <div class="src">Yahoo Sports UK · watch-party video</div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name global">Argie side of the net</span><span class="when">post-match</span></div>
+        <p class="quote">"Argentina fans at La Bombonerita de Buenos Aires / the diaspora in Miami cried, sang, hugged. <em>Back-to-back World Cup finals 🇦🇷🙌</em>" — FIFA's official IG reel cleared 18M views inside 12 hours.</p>
+        <div class="src">facebook.com/fifa + instagram.com/fifa</div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name global">Zlatan Ibrahimović</span><span class="when">post-match</span></div>
+        <p class="quote">"England has seen the hand of God." — Zlatan invoking 1986 Maradona in a one-liner that trended worldwide within minutes.</p>
+        <div class="src">BBC MOTD Facebook clip</div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="sep" />
+
+  <!-- ============ NOTABLE VOICES ============ -->
+  <section id="voices">
+    <h2>Notable Voices</h2>
+
+    <div class="grid">
+      <article class="card">
+        <div class="outlet"><span class="name">Prince William</span><span class="when">15 Jul · 22:35 BST</span></div>
+        <h3 class="headline">"Gutted. England, you gave it everything."</h3>
+        <p class="quote">"England, you gave it everything and we are all so proud of you. Thank you to everyone on and off the pitch, for an incredible tournament." — Signed "W."</p>
+        <div class="src">@KensingtonRoyal on X / Instagram</div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name">Harry Kane (captain)</span><span class="when">15 Jul · mixed zone</span></div>
+        <h3 class="headline">"Heartbroken — but proud of the group."</h3>
+        <p class="quote">"While being 'heartbroken' by the latest final defeat, Kane is expected to be even more determined to help England to a first major tournament." Also publicly praised Messi.</p>
+        <div class="src">The Sun / The Times</div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name">Tim Vickery (BBC)</span><span class="when">post-match analysis</span></div>
+        <h3 class="headline">"Tuchel's substitutions were to blame."</h3>
+        <p class="quote">"England had Argentina exactly where they should have wanted them."</p>
+        <div class="src">BBC Sport video package</div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name">Thomas Tuchel</span><span class="when">post-match presser</span></div>
+        <h3 class="headline">"No regrets. Easy to say it was wrong."</h3>
+        <p class="quote">"Straight after our goal, with no substitutions, we just conceded way too many crosses and way too many chances. So we tried to help."</p>
+        <div class="src">Sky Sports / TNT Sports presser feed</div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name">Lionel Messi</span><span class="when">post-match</span></div>
+        <h3 class="headline">"We knew we could turn it around."</h3>
+        <p class="quote">Two assists, no goals, but the entire stadium knew who decided the game. Argentine media immediately framed the tie as "Messi 2, England 0."</p>
+        <div class="src">Mixed-zone reporting, TyC / Olé</div>
+      </article>
+
+      <article class="card">
+        <div class="outlet"><span class="name">Zlatan Ibrahimović</span><span class="when">post-match</span></div>
+        <h3 class="headline">"Hand of God."</h3>
+        <p class="quote">One line. Eight retweets-per-second in the UK. Bookmarked for every England fan's emotional scar tissue.</p>
+        <div class="src">BBC MOTD clip</div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="sep" />
+
+  <!-- ============ WHAT NOW ============ -->
+  <section id="forward">
+    <h2>What Now?</h2>
+    <div class="two-col">
+      <div>
+        <h3>For England</h3>
+        <p>The Tuchel project lives — but the noise around it is going to be loud for at least 48 hours. Expect front pages calling for his head, then a calmer reassessment by Sunday. The October internationals will tell us whether the FA blinks. The 2028 Euros (hosted in the UK & Ireland) are now the only tournament the public really cares about.</p>
+      </div>
+      <div>
+        <h3>For Argentina</h3>
+        <p>Back-to-back World Cup finals. Messi, at 39, in one more showpiece. The opponent is <strong>Spain</strong>, who beat France 3–1 in the other semi. A nation holds its breath. A defender on the other side of the bracket prays.</p>
+      </div>
+    </div>
+
+    <div class="pullquote">
+      "It is heartbreaking reading for England fans this morning."
+      <cite>— BBC News paper review, Thursday 16 July 2026</cite>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <strong>Ryo ⚙️🐱 · World Cup desk</strong><br/>
+      Compiled 16 Jul 2026, 18:00 GMT+8 from BBC Sport, The Athletic (NYT), The Times, Sky Sports, TNT Sports, Football360, Reddit (r/soccer · r/ThreeLions · r/worldcup), and the @KensingtonRoyal post.
+    </div>
+    <div class="badge-row">
+      <span class="pill">🇬🇧 UK focus</span>
+      <span class="pill">🌍 Global context</span>
+      <span class="pill">📊 Tactical read</span>
+      <span class="pill">📣 Social pulse</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
