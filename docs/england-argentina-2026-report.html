@@ -199,13 +199,31 @@
   .reddit::before { content: "👽 "; }
   .ig::before { content: "📸 "; }
   .yt::before { content: "▶ "; }
+  .lang-switcher { display: flex; gap: 6px; justify-content: flex-end; margin-bottom: 12px; flex-wrap: wrap; }
+  .lang-switcher button {
+    background: var(--panel-2); border: 1px solid var(--line); color: var(--ink-2);
+    font-size: 12px; padding: 5px 12px; border-radius: 999px; cursor: pointer;
+    transition: all 0.15s; font-family: inherit;
+  }
+  .lang-switcher button:hover { color: var(--ink); border-color: #3a4d80; }
+  .lang-switcher button.active { background: var(--gold); color: #0b1020; border-color: var(--gold); font-weight: 700; }
+  .lang-block { display: none; }
+  body[data-lang="en"] .lang-block[data-lang="en"] { display: block; }
+  body[data-lang="zh-TW"] .lang-block[data-lang="zh-TW"] { display: block; }
+  body[data-lang="zh-HK"] .lang-block[data-lang="zh-HK"] { display: block; }
 </style>
 </head>
 <body>
 <div class="wrap">
+  <div class="lang-block" data-lang="en">
 
   <!-- ============ HERO ============ -->
   <header class="hero">
+    <div class="lang-switcher" aria-label="Language switcher">
+      <button type="button" data-set-lang="en" class="active">English</button>
+      <button type="button" data-set-lang="zh-TW">繁體中文</button>
+      <button type="button" data-set-lang="zh-HK">廣東話</button>
+    </div>
     <div class="kicker">2026 FIFA World Cup · Semifinal · 16 July 2026 (Asia/Taipei)</div>
     <h1>England 1 – 2 Argentina: <span style="color:var(--gold)">Six Minutes of Heartbreak</span></h1>
     <div class="sub">England led 1–0 with half an hour to play. Then Tuchel sat back. Messi took over. And the Three Lions' first World Cup final since 1966 slipped away in stoppage time at Mercedes-Benz Stadium, Atlanta.</div>
@@ -542,6 +560,46 @@
     </div>
   </footer>
 
+</div><!-- /lang-block[en] -->
+
+<div class="lang-block" data-lang="zh-TW" style="padding:60px 20px;text-align:center;color:var(--muted);">
+  <div style="max-width:480px;margin:0 auto;padding:28px;border:1px dashed var(--line);border-radius:14px;background:var(--panel);">
+    <p style="font-size:18px;color:var(--ink);margin:0 0 8px;font-weight:600;">繁體中文版 · 準備中</p>
+    <p style="margin:0;font-size:13px;line-height:1.6;">下個 session 會分段載入完整翻譯內容，請稍候。</p>
+  </div>
 </div>
+
+<div class="lang-block" data-lang="zh-HK" style="padding:60px 20px;text-align:center;color:var(--muted);">
+  <div style="max-width:480px;margin:0 auto;padding:28px;border:1px dashed var(--line);border-radius:14px;background:var(--panel);">
+    <p style="font-size:18px;color:var(--ink);margin:0 0 8px;font-weight:600;">廣東話版 · 準備中</p>
+    <p style="margin:0;font-size:13px;line-height:1.6;">下個 session 會分段載入完整翻譯內容，請稍候。</p>
+  </div>
+</div>
+
+</div>
+<script>
+(function(){
+  var K = 'ryo-england-arg-2026-lang';
+  var stored = null;
+  try { stored = localStorage.getItem(K); } catch(e){}
+  var nav = (navigator.language || '').toLowerCase();
+  var initial = stored || (nav.indexOf('zh-hk') === 0 ? 'zh-HK' : (nav.indexOf('zh') === 0 ? 'zh-TW' : 'en'));
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    var btns = document.querySelectorAll('.lang-switcher button');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].classList.toggle('active', btns[i].getAttribute('data-set-lang') === l);
+    }
+    try { localStorage.setItem(K, l); } catch(e){}
+  }
+  var btns = document.querySelectorAll('.lang-switcher button');
+  for (var i = 0; i < btns.length; i++) {
+    (function(b){
+      b.addEventListener('click', function(){ setLang(b.getAttribute('data-set-lang')); });
+    })(btns[i]);
+  }
+  setLang(initial);
+})();
+</script>
 </body>
 </html>
