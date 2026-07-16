@@ -305,8 +305,9 @@
 - 2026-06-06 | [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) · 林軒田（NTU CSIE 教授） · 29 分 58 秒（1798s）
 - 2026-03-11 | [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs） · 33 分 11 秒（1991s）
 
-### 🛠️ **編碼工具 / Agent 工程實踐**（16 支）
+### 🛠️ **編碼工具 / Agent 工程實踐**（17 支）
 
+- 2026-07-01 | [MCP vs API — 為什麼傳統 API 在 AI agent 時代不夠用？](技術講座/20260701_GoogleCloudTech_MCP_vs_API.md) · Google Cloud Tech · 12:25 | [📄 note](技術講座/20260701_GoogleCloudTech_MCP_vs_API.md) · [📝 逐字稿](transcripts/20260701_GoogleCloudTech_MCP_vs_API_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260701_GoogleCloudTech_MCP_vs_API_口播稿.txt) · [🔊 opus](audio/20260701_GoogleCloudTech_MCP_vs_API.opus) · [🔊 m4a](audio/20260701_GoogleCloudTech_MCP_vs_API.m4a) · [🔊 mp3](audio/20260701_GoogleCloudTech_MCP_vs_API.mp3)
 - 2026-06-25 | [Rewriting Bun in Rust：Bun 從 Zig 改寫成 Rust 的工程紀實](技術講座/20260625_JarredSumner_BunInRust.md) · Jarred Sumner（Bun 創辦人、Anthropic 工程師）· 技術文章（Article 路徑，bun.com 官方 blog；Claude Fable 5 + 64 Claudes × 11 天 機械移植 535K LOC Zig → Rust）
 - 2026-07-07 | [MCP vs Skills：哪一個適合你的 AI Agent 與 LLM？](技術講座/20260707_CedricClyburn_MCP_vs_Skills.md) · Cedric Clyburn（IBM Technology 開發者倡導者）· 8 分 2 秒（YouTube 一般路徑，zh-Hant 自動字幕 + 英文自動字幕雙語對照）
 - 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · Angelos（Apple MLX team 工程師）· 13 分 26 秒（HTML-Video-Page 路徑）
