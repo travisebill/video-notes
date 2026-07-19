@@ -1,0 +1,191 @@
+{
+  "spec": "docs/superpowers/specs/2026-07-20-offline-mode-design.md",
+  "spec_title": "Video Notes PWA — Offline Mode Design",
+  "review": {
+    "date": "2026-07-20",
+    "reviewer": "Mame QA Agent",
+    "reviewer_role": "QA Engineer (sub-agent spawn, first-class configured agent agentId=\"mame\")",
+    "review_methodology": "Mame fact-check style — skeptical, evidence-based, ruthless, focused on consistency + spec/UX completeness + edge case",
+    "review_flow": "sub-agent spawn Mame (auto-announce) → mame review spec → ryo 修 spec → commit 4e00533",
+    "reviewer_subagent_session": "[gap: not recorded — sub-agent childSessionKey not captured during review run; recommend pre-capture in future reviews]",
+    "review_completed_by": "Ryo (post-fix reconstruction from commit 4e00533)"
+  },
+  "fixes": {
+    "commit": "4e00533b77c71c4960695954893462b0314ecf63",
+    "commit_title": "fix(spec): Mame design review — 修 5 critical + 6 major issues",
+    "diff_stats": "1 file changed, 212 insertions, 52 deletions",
+    "spec_lines_before": 557,
+    "spec_lines_after": 717
+  },
+  "issues_count": {
+    "critical": 5,
+    "major": 6,
+    "minor": 0,
+    "total": 11
+  },
+  "issues": [
+    {
+      "id": "C-1",
+      "severity": "critical",
+      "title": "Auto cache 會沉默失敗 — 缺 SEED_INDEXEDDB message + SOP",
+      "spec_section": "5.3 Message API + 5.4 Background Tasks + 7.1 影片卡片 ⬇️ 按鈕",
+      "problem": "原始 spec 沒定義 video-notes.json → IndexedDB videos table 的寫入 message 或 SOP。Auto cache trigger pre-condition 模糊（只看『video-notes.json fetch 完成』），沒保證 IndexedDB videos 真的有資料。結果：SW 看起來 activated 但 IndexedDB 永遠空 → auto cache 沉默失敗、無錯誤、無進度、無視覺反饋，user 完全不知道為什麼 ⬇️ 按下去沒反應。",
+      "suggestion": "新增 SEED_INDEXEDDB(videos[]) message type + 完整 SOP：frontend init() 讀 video-notes.json 後 postMessage 給 SW → SW upsert 到 IndexedDB videos store + 更新 meta.last_seeded_at → 回應 {written, updated} → frontend 才啟用 ⬇️ 按鈕。",
+      "fix_summary": "Section 5.3 加 SEED_INDEXEDDB message type + 7-step 內部流程。Section 5.4 auto cache Pre-condition: IndexedDB videos 不為空 + meta.last_seeded_at 1h 內不重 seed。Section 6.1 新增 meta object store 含 last_seeded_at / last_auto_cache_notification / sw_version keys。Section 7.1 加 'initializing' 狀態 + Frontend 啟用 ⬇️ 按鈕 SOP。",
+      "status": "fixed",
+      "fixed_in": "4e00533"
+    },
+    {
+      "id": "C-2",
+      "severity": "critical",
+      "title": "批次下載無法取消 — 缺 CANCEL_BATCH message + AbortController race condition",
+      "spec_section": "5.3 Message API (CANCEL_BATCH + CACHE_BATCH 內部流程) + 6.1 IndexedDB Schema (sync_queue.batch_id)",
+      "problem": "原始 CACHE_BATCH 沒定義取消機制。User 按 toolbar 全域 ⬇️ 後想中斷（例如發現選錯分類了），沒辦法中斷 — 批次會繼續跑到完。實作 fetches 同時也沒有 AbortController 處理 in-flight fetch 的 race condition，會 leak 完成通知或寫入。",
+      "suggestion": "加 CANCEL_BATCH(batchId) message + 內部維護 current_batch = {batchId, cancel_token, abort_controller} map。對 in-flight fetch 用 AbortController.abort()。sync_queue 內 batch_id 屬於此 batch 的 entries 標記 'cancelled' status。Frontend postMessage {type: 'BATCH_DONE', batchId, cancelled: N}。",
+      "fix_summary": "Section 5.3 加 CANCEL_BATCH message type + 4-step 內部流程含 AbortController.abort() 處理。Section 5.3 加 CACHE_BATCH message signature 升級：options.batchId 由前端產生（UUID）。Section 6.1 sync_queue schema 加 batch_id 欄位 (CANCEL_BATCH 用)。Section 5.3 Frontend message format 加 BATCH_DONE schema 含 cancelled: number。",
+      "status": "fixed",
+      "fixed_in": "4e00533"
+    },
+    {
+      "id": "C-3",
+      "severity": "critical",
+      "title": "Rollback plan 假 ✅ — 缺 sentinel key 偵測 stale cache state",
+      "spec_section": "Section 6.1 IndexedDB Schema (videos.last_verified_cache_state + meta.sw_version) + Section 7 UI 狀態判斷",
+      "problem": "原始 rollback plan 只說「SW version mismatch → 砍掉整個 IndexedDB + Cache Storage」但沒定義 (a) 什麼算 SW version mismatch（缺 sentinel key 比對機制）— 沒 sw_version 在 IndexedDB meta 就沒辦法比對當前 SW spec 是哪版；(b) 砍掉後 user UI 是不是會看到 stale「✅ 已離線」徽章（false positive — 點影片內容可能 404 但 UI 還說已離線，因為只看 cache_status.status 沒看 last_verified_cache_state）。User 用久了 cache 狀態越來越不可信，就放棄 ⬇️ 按鈕。",
+      "suggestion": "加 IndexedDB sentinel key 處理 rollback：meta.sw_version 紀錄 SW 啟用的當前 spec version。每次 SW activate 對比 registered version spec，相符就通過，不符就清 cache 重建。videos.last_verified_cache_state 欄位（'verified' | 'evicted' | null）讓前端 UI 能精準判斷『這個影片的離線狀態是真的』。",
+      "fix_summary": "Section 6.1 IndexedDB videos schema 加 last_verified_cache_state 欄位 ('verified' | 'evicted' | null)。Section 6.1 meta object store 加 sw_version key 用於 rollback detection。前端 Sections 7.1/7.2 狀態判斷依 last_verified_cache_state 為 'verified' 才顯示 ✅ 已離線。",
+      "status": "fixed",
+      "fixed_in": "4e00533"
+    },
+    {
+      "id": "C-4",
+      "severity": "critical",
+      "title": "CACHE_VIDEO progress 只有 0-100%，沒分 stage — user 看不到 markdown 跟 thumbnail 個別狀態",
+      "spec_section": "5.3 CACHE_VIDEO 內部流程 + 7.1 影片卡片 ⬇️ 按鈕狀態顯示",
+      "problem": "原始 CACHE_VIDEO 回應 `{progress: 0..100, status}` 是單調的 0-100%，user 看不出 markdown 跟 thumbnail 個別的狀態（markdown 50% done, thumbnail 0% started 跟 markdown 100% done, thumbnail 50% done 都是 50%，但失敗覆蓋面差很多）。Markdown 失敗時 thumbnail 還會繼續跑也沒分段追蹤，導致 partial 狀態沒 machine-readable 表示。",
+      "suggestion": "改用 stage events: 每個 stage 開始/結束 postMessage `CACHE_PROGRESS` {id, stage: 'markdown'|'thumbnail', status: 'start'|'done'|'failed'}。markdown done → 50%, thumbnail done → 100%。cache_status.status 區分 'ready' | 'partial' | 'failed'。CACHE_DONE message 加 partial: boolean 欄位。",
+      "fix_summary": "Section 5.3 CACHE_VIDEO 內部流程從 9 步擴充為 13 步含 stage events。Section 5.3 新增 CACHE_PROGRESS message schema。Section 6.1 cache_status.status enum 從 'ready'/'failed' 擴充為 'pending'/'in_progress'/'ready'/'partial'/'failed'。Section 7.1 ⬇️ 按鈕狀態表加 'partial' 標籤 + thumbnail 失敗時顯示 ⚠️ 部分離線 + Progress 計算規則（markdown start = 0%, done = 50%, thumbnail start = 50%, done = 100%）。",
+      "status": "fixed",
+      "fixed_in": "4e00533"
+    },
+    {
+      "id": "C-5",
+      "severity": "critical",
+      "title": "iOS Safari 7-day eviction 只清 cache 不查狀態 — user 看到 ✅ 但內容已蒸發",
+      "spec_section": "5.4 Background Tasks + 6.1 IndexedDB schema + Section 7 UI 狀態判斷",
+      "problem": "iOS Safari WebKit 有 7-day eviction policy，超過 7 天沒 user interaction 就會砍 Cache Storage 跟 IndexedDB。原始 spec 沒定義 eviction detection — 假設 cache 一直在。User 打開 app 看到 ✅ 已離線 (因為 IndexedDB cache_status.status 還記 'ready') 但內容實際已蒸發，點下去 404 / 看到假成功狀態。",
+      "suggestion": "改兩件事：(1) 整包清掉 strategy — 偵測到 7-day 後主動清 cache（不要依賴 iOS 默默清）並把狀態歸 'pending'。(2) 每次 cache hit 時更新 last_verified_cache_state 為 'verified'，hit miss 時為 'evicted'。UI 讀 last_verified_cache_state（不是 cache_status.status）來判斷 ✅ / ⚠️ / ❌。",
+      "fix_summary": "Section 5.4 iOS 7-day 偵測 + 主動整包清。Section 6.1 videos schema 加 last_verified_cache_state 欄位 ('verified' | 'evicted' | null)。Section 7.1/7.2 UI 狀態判斷從 cache_status.status 改為 last_verified_cache_state，evicted 顯示 ⚠️ 標籤 + 重新下載建議。",
+      "status": "fixed",
+      "fixed_in": "4e00533"
+    },
+    {
+      "id": "M-1",
+      "severity": "major",
+      "title": "LRU 設定 toggle 模糊 — 永遠啟用其實更安全",
+      "spec_section": "5.4 Background Tasks (LRU 淘汰) + 7.3 儲存空間指示器 + 7.7 設定面板",
+      "problem": "原始 spec 把 LRU 設成可 toggle（設定面板 7.7 checkbox「自動清理」，儲存空間指示器 7.3 也有「清理」按鈕）。但 LRU 規則不明確：toggle 關掉時 LRU 也跑？還是 user 完全掌控？iOS 50MB quota 滿了 PWA 直接壞，user 不知情就壞了。",
+      "suggestion": "LRU 永遠啟用不可關（規則：只刪 auto_cached=true 且 status ∈ {ready, partial} 的影片；manual_cached=true 神聖不可侵犯；auto_cached + pending 也保留）。拿掉 Section 7.3 清理按鈕 + Section 7.7 checkbox。",
+      "fix_summary": "Section 5.4 LRU 演算法明確化：永遠啟用 + LRU rule 列點明確（manual_cached 不可刪, auto_cached + pending 不刪）。移除 Section 7.3/7.7 LRU toggle UI。",
+      "status": "fixed",
+      "fixed_in": "4e00533"
+    },
+    {
+      "id": "M-2",
+      "severity": "major",
+      "title": "LRU race condition — in-progress batch 下載會被 LRU 刪掉",
+      "spec_section": "5.4 Background Tasks (LRU 演算法)",
+      "problem": "LRU 觸發時不看 in-progress CACHE_BATCH。如果 LRU 跟批次下載同時跑，且影片正在 fetch 中，LRU 可能挑到該影片進 cache.delete(markdown_url) + IndexedDB auto_cached=true 標記，導致下次 fetch 同一個 URL 命中 stale 空 entry 或寫入 race condition。",
+      "suggestion": "LRU mutex：觸發 LRU 前檢查 current_batch map，若有任何 in-flight batch 就 skip LRU（等 batch 完成後下次 idle 再評估）。Pre-condition 在 spec 內明示。",
+      "fix_summary": "Section 5.4 LRU 演算法加 Pre-condition: 無 in-progress batch（LRU mutex）。演算法 step 1: 檢查 current_batch → 若有任何 in-flight batch → skip LRU。",
+      "status": "fixed",
+      "fixed_in": "4e00533"
+    },
+    {
+      "id": "M-3",
+      "severity": "major",
+      "title": "json-v1 cache key 用 raw.githubusercontent URL 導致 canonicalization 衝突",
+      "spec_section": "6.2 Cache Storage Key Rules + 5.2 Fetch Handler",
+      "problem": "原始 json-v1 cache key 用 `https://raw.githubusercontent.com/.../video-notes.json`，但 SW 邏輯判斷 `url.pathname.endsWith('/data/video-notes.json')` 沒限制 host。這種 URL canonicalization（raw / jsDelivr / 本地 localhost）會導致 key collision：本地 fetch 跟 raw fetch 視為同一個 cache key 但其實是不同 response 內容。",
+      "suggestion": "json-v1 cache key 只 cache LOCAL_JSON_URL（相對路徑 `./data/video-notes.json` → 絕對 URL 比對）。Raw/jsDelivr fallback URL 跟跨 hostname 一律 pass-through 不 cache。前端統一透過 SW 拿 json（透過 GET_CACHE_STATUS 或新 FETCH_JSON message），避免前端自己 fetch 三次（CDN fallback path）。",
+      "fix_summary": "Section 5.2 Fetch Handler: video-notes.json 路由加嚴格判斷 `url.href === localJsonAbsolute || (url.pathname endsWith /data/video-notes.json && url.hostname === self.location.hostname)`。Section 6.2 json-v1 cache key 改為『只有 LOCAL_JSON_URL』+ 備註避免 canonicalization。",
+      "status": "fixed",
+      "fixed_in": "4e00533"
+    },
+    {
+      "id": "M-4",
+      "severity": "major",
+      "title": "Auto cache 完成通知疲勞 — 沒 dedupe 機制",
+      "spec_section": "5.4 Background Tasks (Auto cache) + 7.6 Auto cache 完成通知",
+      "problem": "Auto cache 完成時一律 postMessage {type: 'AUTO_CACHE_DONE', count: X}，user 每次打開 PWA 都收到通知（即使沒新影片），造成通知疲勞。應該 dedupe — 24h cooldown 且 newVideos > 0 才通知。",
+      "suggestion": "IndexedDB meta.last_auto_cache_notification 紀錄上次通知 timestamp。ShouldNotify 規則: 距離上次 < 24h → false; 距離 >= 24h 且 newVideos > 0 → true; 沒新影片 → false（不管多久）。AUTO_CACHE_DONE message 加 shouldNotify + newVideos 欄位。",
+      "fix_summary": "Section 5.4 Auto cache ShouldNotify 規則明文化（dedupe, 24h cooldown）+ AUTO_CACHE_DONE message 升級加 shouldNotify + newVideos 欄位。Section 6.1 meta object store 加 last_auto_cache_notification key。",
+      "status": "fixed",
+      "fixed_in": "4e00533"
+    },
+    {
+      "id": "M-5",
+      "severity": "major",
+      "title": "⬇️ 按鈕在 SW ready 前可按 — silent failure",
+      "spec_section": "7.1 影片卡片 ⬇️ 按鈕 + 7.2 全域 ⬇️ 按鈕",
+      "problem": "User 載入 PWA 立刻按 ⬇️，但 SW controller 還沒 ready（PostMessage 沒 queue），指令會 silently drop。Section 7.1 'initializing' 狀態沒定義，按鈕在 disabled 跟 active 之間沒顯式 transition。",
+      "suggestion": "⬇️ 按鈕加 'initializing' 狀態：'[⏳ 初始化中...]' 灰色 disabled。Frontend init() SOP: await navigator.serviceWorker.ready → await seedIndexedDB(videos) → 完成後才啟用 ⬇️ 按鈕。",
+      "fix_summary": "Section 7.1 加 'initializing' 狀態 + Section 7.1 Frontend 啟用 ⬇️ 按鈕 SOP (await sw ready + await seedIndexedDB)。",
+      "status": "fixed",
+      "fixed_in": "4e00533"
+    },
+    {
+      "id": "M-6",
+      "severity": "major",
+      "title": "⬇️ 按鈕沒 partial 狀態 — markdown OK 但 thumbnail 404 時 user 困惑",
+      "spec_section": "7.1 影片卡片 ⬇️ 按鈕 + 7.2 全域 ⬇️ 按鈕",
+      "problem": "Markdown 抓得到（cached 文字內容可看），但 thumbnail 404（YouTube hqdefault.jpg 失效或 videoId 不存在）。Section 7.1 狀態表只列 '成功 / 失敗' 兩種，partial 狀態（即 markdown 可看但 thumbnail 缺）沒顯示。",
+      "suggestion": "⬇️ 按鈕加 'partial' 狀態：'[⚠️ 部分離線]' 黃色標籤。hover 顯示 '[🔄 重試縮圖]'。對應 cache_status.status === 'partial'。",
+      "fix_summary": "Section 7.1 加 'partial' 狀態 + Section 7.1 Progress 計算規則明定：thumbnail failed → 100% 但 partial 狀態。",
+      "status": "fixed",
+      "fixed_in": "4e00533"
+    }
+  ],
+  "verified_correct_after_fix": [
+    "Message API 從 4 種擴充到 7 種 (SEED_INDEXEDDB / CACHE_VIDEO + stage events / CANCEL_BATCH / CACHE_DONE + partial / BATCH_DONE + cancelled / AUTO_CACHE_DONE + shouldNotify / LRU_EVICTED)",
+    "LRU 永遠啟用 + manual_cached 神聖不可侵犯 + mutex (skip when batch in progress)",
+    "Frontend ⬇️ button 狀態機 6 個 state (initializing / pending / downloading / ready / partial / failed)",
+    "IndexedDB schema 新增 meta object store + videos.last_verified_cache_state + sync_queue.batch_id",
+    "json-v1 cache key 限定 LOCAL_JSON_URL (避免 canonicalization)",
+    "Frontend init() SOP: await sw ready → await seedIndexedDB → 才啟用 ⬇️"
+  ],
+  "review_workflow_gaps_identified": [
+    {
+      "gap": "reviewer_subagent_session 沒記錄到 audit JSON",
+      "impact": "無法從 audit JSON 追溯到原始 sub-agent transcript 確認 review 過程",
+      "recommendation": "Future Mame review 第一步 spawn sub-agent 拿到 childSessionKey 立即寫入 audit JSON 的 review.reviewer_subagent_session field"
+    },
+    {
+      "gap": "review_workflow 是 spawn-and-fix 同步流程，不是 spawn-report-then-fix",
+      "impact": "無法 review 比對『Mame 原本說了什麼』跟『ryo 實際修了什麼』是否 100% 對應 (minor issues 可能漏修但 commit msg 沒列)",
+      "recommendation": "Future review workflow 分兩階段：(1) spawn Mame review-only sub-agent 拿回 report JSON (2) ryo 對 report 逐 issue 修 + commit msg 列對應 issue id"
+    },
+    {
+      "gap": "11 issues 全部是 critical + major，沒 minor — 可能是 review pass 漏看 minor polish 也可能是 spec 設計本來就嚴謹",
+      "impact": "medium — minor polish item (e.g. doc clarity, error message wording) 可能沒被 capture",
+      "recommendation": "Future review 中明列『minor: 0』並解釋為什麼 (e.g. 『spec 設計嚴謹無 minor』或『review pass 跳過 minor』)"
+    },
+    {
+      "gap": "spec 沒 versioning (e.g. v1.0 vs v1.1)",
+      "impact": "後續 spec 修補沒明確 version bump，導致 sw_version sentinel key 在 production 可能 mismatch",
+      "recommendation": "spec 頂部加 version frontmatter (v1.0 → v1.1 bump on breaking fix)"
+    }
+  ],
+  "summary": {
+    "total_facts_reviewed": 11,
+    "issues_found": 11,
+    "critical_issues": 5,
+    "major_issues": 6,
+    "minor_issues": 0,
+    "hallucinations": 0,
+    "all_addressed": true,
+    "fix_commit": "4e00533"
+  },
+  "generated_by": "Ryo",
+  "generated_at": "2026-07-20T06:05:00Z (post-follow-up audit trail)"
+}
