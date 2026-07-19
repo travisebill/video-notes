@@ -1,0 +1,246 @@
+{
+  "issues": [
+    {
+      "section": "Match Summary / Timeline",
+      "field": "Anthony Gordon goal time",
+      "original": "~30' (timeline) — \"opened the scoring early\" (summary)",
+      "issue": "Factually WRONG. Gordon scored in the **55th minute** (early in the 2nd half), not ~30'. This is confirmed by BBC Sport, TNT Sports, Irish Examiner, Yahoo Sports, Fox Sports, Heavy.com, multiple Instagram/Facebook posts with on-screen OCR showing '54:31 GORDON PUTS ENGLAND AHEAD!!' Sources include: BBC article '55th minute', TNT Sports '55th minute', Irish Examiner 'Gordon 55'.",
+      "severity": "critical",
+      "suggestion": "Change timeline to '~55'' (or 55') and update summary to 'opened the scoring early in the second half'. The tactical narrative (Tuchel had 30+ minutes to react) is still valid because he switched to 5-4-1 after the 55' goal (Konsa came on in 72')."
+    },
+    {
+      "section": "Match Timeline",
+      "field": "Lautaro Martínez goal time",
+      "original": "90+1'",
+      "issue": "Minor error. Most reliable sources (BBC, TNT Sports, Fox Sports, Instagram OCR) record Martínez's winner at **90+2' / 92nd minute**. BBC article: 'Lautaro Martinez headed a 92nd-minute winner'. r/worldcup post title: 'L. Martínez 90+2''. TNT: 'winner in the 92nd minute'.",
+      "severity": "minor",
+      "suggestion": "Change to '90+2'' (or '92'')."
+    },
+    {
+      "section": "What Now? — Spain vs France other semi",
+      "field": "Spain vs France score",
+      "original": "Spain, who beat France 3–1 in the other semi",
+      "issue": "Factually WRONG. Spain beat France **2–0**, not 3–1. Confirmed by NYT Athletic, Al Jazeera, Yahoo Sports, The Independent, YouTube highlights: 'Spain 2-0 France'.",
+      "severity": "critical",
+      "suggestion": "Change to 'Spain, who beat France 2–0 in the other semi'."
+    },
+    {
+      "section": "Player Ratings table — implied XI",
+      "field": "Saka, Foden, Konsa listed as starters (no 'sub' label)",
+      "original": "Bukayo Saka | RW | 5 (no sub label); Phil Foden | AM | 5; Ezri Konsa | CB | 6",
+      "issue": "Misleading. Per multiple sources (Standard, Facebook XI posts), the **actual starting XI** was: Pickford; **James**, Spence, Stones, Guéhi; Rice, **Anderson**; **Rogers**, Bellingham, Gordon; Kane. Saka, Foden were NOT starters; Konsa was a SUB (came on 72' per BBC/TNT). Konsa replaced Gordon; Burn came on; O'Reilly came on; Rashford and Toney were sent on deep in stoppage. The HTML ratings table lists them as if they played the full match.",
+      "severity": "critical",
+      "suggestion": "Either: (a) clearly mark subs with a 'sub' badge/column, or (b) separate 'Starter ratings' from 'Sub ratings'. Also consider: did Gallagher actually come on? BBC lists Konsa/Burn/O'Reilly/Rashford/Toney but not Gallagher."
+    },
+    {
+      "section": "Player Ratings — Djed Spence verdict",
+      "field": "Spence described as 'sub' with rating 8",
+      "original": "Djed Spence | RB | 8 — \"Threw on as a sub, looked England's most dangerous outlet.\"",
+      "issue": "WRONG. Spence was a **STARTER** per Standard XI and Facebook confirmed XI. He played from kickoff at left-back/right-back, not as a substitute. Calling him a 'sub' is incorrect.",
+      "severity": "major",
+      "suggestion": "Revise verdict to reflect he started the match and played 90+ minutes."
+    },
+    {
+      "section": "Player Ratings — Conor Gallagher",
+      "field": "Gallagher listed as a sub with rating 4",
+      "original": "Conor Gallagher (sub) | CM | 4",
+      "issue": "UNVERIFIED. BBC article's listed substitutes after Gordon's goal are: Konsa, Dan Burn, Nico O'Reilly, Marcus Rashford, Ivan Toney. Gallagher is NOT mentioned as a sub. Could be a hallucination.",
+      "severity": "major",
+      "suggestion": "Verify Gallagher actually came on; if not, remove this row entirely."
+    },
+    {
+      "section": "r/worldcup Reddit link",
+      "field": "Reddit thread ID",
+      "original": "https://www.reddit.com/r/worldcup/comments/1uxib97/",
+      "issue": "WRONG post ID. The actual r/worldcup match thread for this game is `/r/worldcup/comments/1uxi1ez/` (verified via search result: 'England 1-[2] Argentina - L. Martínez 90+2' - World Cup 2026, Semifinal'). The HTML's ID '1uxib97' appears fabricated or wrong.",
+      "severity": "major",
+      "suggestion": "Replace with the correct URL: https://www.reddit.com/r/worldcup/comments/1uxi1ez/"
+    },
+    {
+      "section": "UK Front Pages — The Athletic column headline",
+      "field": "Headline truncation",
+      "original": "\"Tuchel is guilty of orchestrating England's craven [retreat]\"",
+      "issue": "Headline misquote. The actual verified headline is **'Thomas Tuchel is guilty of orchestrating England's craven World Cup demise'** (full title confirmed via web_fetch of NYT/Athletic URL 7442975). HTML's '[retreat]' bracket suggests fabrication of the missing word.",
+      "severity": "major",
+      "suggestion": "Change to: 'Tuchel is guilty of orchestrating England's craven World Cup demise' (drop the [retreat] placeholder)."
+    },
+    {
+      "section": "UK Front Pages — The Athletic tactics article subhead",
+      "field": "Subhead text",
+      "original": "\"A combination of Thomas Tuchel's tactics and innate brilliance saw Argentina reach another showpiece final.\"",
+      "issue": "Cannot verify as exact quote. Verified actual article title is 'How Messi genius, and England negativity, transformed a World Cup semi-final in 40 mad minutes' (NYT Athletic URL 7448551, fetched and confirmed). The subhead text may be a paraphrased editorial summary rather than a verbatim line — flag as unverified quote.",
+      "severity": "minor",
+      "suggestion": "If presenting as a quote, mark it as 'paraphrased summary' or remove the quotation marks."
+    },
+    {
+      "section": "UK Front Pages — NZ Herald URL",
+      "field": "URL: nzherald.co.nz/sport/football/football-world-cup/england-v-argentina-world-reacts-to-dramatic-world-cup-semi-final/",
+      "original": "Same as above",
+      "issue": "URL **returns 404** when fetched. Cannot find this specific article via search. Either fabricated URL or the article has been pulled/never existed at this path.",
+      "severity": "major",
+      "suggestion": "Either find a working NZ Herald URL for this story, replace with Guardian direct URL (which is more reliable — guardian.com/football/2026/jul/16/thomas-tuchel-accepts-responsibility-...), or remove the NZ Herald card."
+    },
+    {
+      "section": "Notable Voices — Zlatan Ibrahimović quote",
+      "field": "Zlatan quote",
+      "original": "\"England has seen the hand of God.\"",
+      "issue": "Quote is REAL but **incomplete/truncated**. The full quote (verified across Facebook, Instagram, multiple sources): **'England has seen the Hand of God. Today, they will witness the Left Foot of God.'** or 'England saw the hand of God; now they'll see the left foot of God.' HTML omits the second half, losing the Messi/LFoG punchline.",
+      "severity": "minor",
+      "suggestion": "Use the full quote: 'England has seen the Hand of God. Today, they will witness the Left Foot of God.'"
+    },
+    {
+      "section": "Match Timeline — 'Hey Jude' / 'Stretches of Atlanta erupt'",
+      "field": "Hey Jude placement + grammar",
+      "original": "Stretches of Atlanta erupt, Bellingham nods toward the away end, \"Hey Jude\" bounces off the stadium roof.",
+      "issue": "Two issues: (1) **'Stretches of Atlanta erupt'** — grammatically odd; usually 'Stands', 'Sections', or 'Sections of Atlanta erupt'. 'Stretches' is a strange word choice for a stadium crowd. (2) **Hey Jude placement** — multiple verified sources say 'Hey Jude' was sung after the LOSS (Bellingham crying on pitch, 'entire stadium joined in a unified rendition'). Placing it at the Gordon goal moment may conflate two different moments.",
+      "severity": "minor",
+      "suggestion": "Either rewrite as 'Stands of Atlanta erupt' or 'Sections of the stadium erupt', and move the Hey Jude line to the post-match context (e.g., '90+2' — full time — Bellingham in tears, 'Hey Jude' ringing around the stadium')."
+    },
+    {
+      "section": "Player Ratings — 'Spurs-bound Spence'",
+      "field": "Club / transfer status",
+      "original": "tactics section: 'Spurs-bound Spence'",
+      "issue": "Transfer status of Djed Spence as of July 2026 unverified. He was on Tottenham's books through prior seasons and loaned to various clubs (Rennes, Leeds, Genoa). HTML's claim he is 'Spurs-bound' could be inaccurate or speculative.",
+      "severity": "minor",
+      "suggestion": "Verify Spence's current club/contract status. If unverified, drop the descriptor."
+    },
+    {
+      "section": "Notable Voices — Harry Kane quote",
+      "field": "Kane quote text",
+      "original": "\"While being 'heartbroken' by the latest final defeat, Kane is expected to be even more determined to help England to a first major tournament.\" Also publicly praised Messi.",
+      "issue": "Cannot verify the exact wording as a direct quote. BBC confirmed Kane is 'heartbroken' and he 'hailed Messi', but the phrasing 'even more determined to help England to a first major tournament' may be paraphrased editorial rather than verbatim. Flag as paraphrase, not quote.",
+      "severity": "minor",
+      "suggestion": "If only part of the line is verified, mark the rest as paraphrase, or find the exact Kane quote."
+    },
+    {
+      "section": "Notable Voices — Messi quote",
+      "field": "Headline 'We knew we could turn it around'",
+      "original": "Headline: \"We knew we could turn it around.\" — attributed to Messi, sourced as 'Mixed-zone reporting, TyC / Olé'",
+      "issue": "UNVERIFIED. Could not find an exact Messi quote with this wording via search. BBC headline 'never doubted Argentina would go far again' exists, but the exact phrase 'we knew we could turn it around' cannot be confirmed. Possibly a paraphrase or fabricated headline.",
+      "severity": "minor",
+      "suggestion": "Verify exact Messi post-match quote from TyC or Olé. If cannot, soften attribution to 'reported to have said'."
+    },
+    {
+      "section": "Social Pulse — Instagram Atlanta fans quote",
+      "field": "Quote text",
+      "original": "\"Gutted. We defended too deep second half. Sat too far back. Tried to do what we did against Mexico. Didn't work. They're better. We did our best.\"",
+      "issue": "UNVERIFIED — specific quote cannot be linked to a verified BBC MOTD Instagram post or video. Specific 'Mexico' reference is plausibly accurate (BBC mentions Mexico in earlier round), but the exact quote wording is fabricated-sounding.",
+      "severity": "minor",
+      "suggestion": "Mark as 'paraphrased from BBC MOTD IG coverage' rather than direct quote, or find the exact BBC MOTD Instagram clip."
+    },
+    {
+      "section": "Social Pulse — r/ThreeLions top comment",
+      "field": "Quote text",
+      "original": "\"Absolutely pathetic. I can't even be mad, we deserved to lose. Parking the bus like that and trying to survive their relentless attacks half the game. Same movie, different year.\"",
+      "issue": "UNVERIFIED. Cannot find this specific top-voted comment. Reddit's anti-scraping blocks direct verification, but the quote reads like a plausible Reddit comment. Flag as unverified — likely fabricated or paraphrased.",
+      "severity": "minor",
+      "suggestion": "Remove specific quote, replace with 'Top-voted comment criticized Tuchel's decision to sit deep, comparing it to past tournament failures' (no verbatim text)."
+    },
+    {
+      "section": "Social Pulse — Yahoo Sports UK watch party video",
+      "field": "Yahoo Sports UK fan-cam video",
+      "original": "\"An entire venue had its heart broken.\" — Yahoo Sports UK · watch-party video",
+      "issue": "UNVERIFIED. Cannot confirm this specific quote or that Yahoo Sports UK produced a watch-party fan-cam video.",
+      "severity": "minor",
+      "suggestion": "Find the actual Yahoo Sports UK video URL or remove."
+    },
+    {
+      "section": "Social Pulse — FIFA IG reel '18M views in 12 hours'",
+      "field": "Engagement metrics",
+      "original": "FIFA's official IG reel cleared 18M views inside 12 hours.",
+      "issue": "UNVERIFIED specific metric. Plausible but cannot confirm 18M/12h figure.",
+      "severity": "minor",
+      "suggestion": "Drop the specific numbers or attribute to a specific source."
+    },
+    {
+      "section": "Social Pulse — '26K comments' on r/soccer",
+      "field": "Comment count",
+      "original": "match thread · 26K comments",
+      "issue": "UNVERIFIED. Comment counts evolve rapidly; 26K is plausible for a WC semifinal match thread but not specifically confirmed.",
+      "severity": "minor",
+      "suggestion": "Either drop the count or mark as 'as of [time]' with a real snapshot."
+    },
+    {
+      "section": "Social Pulse — X trending 'Sack Tuchel TONIGHT'",
+      "field": "Trending phrase",
+      "original": "\"Sack Tuchel TONIGHT.\" — a top trending phrase in the UK.",
+      "issue": "UNVERIFIED specific phrase. talkSPORT's Agbonlahor/Stelling did call for Tuchel's sacking (per Facebook talkSPORT video), and #TuchelOut trended is plausible, but the exact phrase 'Sack Tuchel TONIGHT' cannot be confirmed.",
+      "severity": "minor",
+      "suggestion": "Soften to 'Calls for Tuchel's sacking trended on X (e.g., #TuchelOut)'."
+    },
+    {
+      "section": "Social Pulse — Zlatan '8 retweets-per-second'",
+      "field": "Engagement metric",
+      "original": "One line. Eight retweets-per-second in the UK.",
+      "issue": "UNVERIFIED specific metric. Plausible for a viral post but the exact '8 retweets-per-second' figure is suspiciously precise and unverifiable.",
+      "severity": "minor",
+      "suggestion": "Drop the specific rate or replace with a more general 'viral in the UK'."
+    },
+    {
+      "section": "Hero / Stats — '88% Argentina possession'",
+      "field": "Possession stat",
+      "original": "88% — Argentina possession after ENG goal",
+      "issue": "VERIFIED REAL. Multiple sources confirm 'Argentina 88% / England 12% possession after Gordon's goal'. BBC article: 'only 12% of possession from going ahead to conceding the second goal'. ✓",
+      "severity": "verified",
+      "suggestion": "No change needed."
+    },
+    {
+      "section": "Tactical Post-Mortem — '5 at the back'",
+      "field": "Tactical claim",
+      "original": "Five at the back. Game management.",
+      "issue": "VERIFIED. TNT Sports: 'manager Thomas Tuchel opted to then switch to a 5-4-1 formation'. Multiple sources confirm Tuchel switched to 5-4-1 / 5 at the back after Gordon's goal. ✓",
+      "severity": "verified",
+      "suggestion": "Could be more specific: '5-4-1' rather than just '5 at the back'."
+    }
+  ],
+  "verified": [
+    "Match result: England 1-2 Argentina ✓",
+    "Date: Wed 15 Jul 2026, 19:00 ET ✓",
+    "Venue: Mercedes-Benz Stadium, Atlanta ✓",
+    "Anthony Gordon scorer ✓ (but time was 55', not 30')",
+    "Enzo Fernández 85' goal, Messi assist ✓",
+    "Lautaro Martínez winner, Messi cross/assist ✓ (time 90+2'/92', not 90+1')",
+    "Tuchel switched to 5-4-1 / 5 at the back ✓",
+    "88% Argentina possession after Gordon's goal ✓ (BBC, Facebook, multiple sources)",
+    "Messi 2 assists, 0 goals ✓",
+    "England's last WC final: 1966 ✓",
+    "Thomas Tuchel = England manager ✓",
+    "Pickford / Stones / Guéhi / Rice / Bellingham / Gordon / Kane all in squad ✓",
+    "The Athletic URL 7442975 article exists and title is 'Thomas Tuchel is guilty of orchestrating England's craven World Cup demise' (verified via web_fetch)",
+    "The Athletic URL 7448551 article exists and title is 'How Messi genius, and England negativity, transformed a World Cup semi-final in 40 mad minutes' (verified via web_fetch)",
+    "BBC Sport URL cwy059qwdg4o: 'Argentina shatter England's World Cup dreams' ✓",
+    "BBC Sport URL ce8l15903k8o: 'England 1-2 Argentina: Did Thomas Tuchel's tactics cost England?' ✓",
+    "BBC News URL c0qvewzn1e1o: 'Newspaper headlines: England's World Cup dream over...' ✓",
+    "TNT Sports URL: 'Thomas Tuchel's decisions cost England in 2026 FIFA World Cup semi-final loss to Argentina, says Wayne Rooney' ✓",
+    "Tim Vickery quote 'England had Argentina EXACTLY where they should have wanted them. Tuchel's substitutions were to blame' ✓ (verified BBC Radio 5 Live, talkSPORT, IG)",
+    "Tuchel 'no regrets' ✓",
+    "Tuchel 'It's easy to say my decisions were wrong' / 'easy to say that it was wrong' ✓",
+    "Tuchel 'Straight after our goal, with no substitutions, we just conceded way too many crosses and way too many chances. So we tried to help.' ✓ (verified across BBC, Fox Sports, FieldLevelMedia)",
+    "Prince William quote 'Gutted. England, you gave it everything and we are all so proud of you. Thank you to everyone on and off the pitch, for an incredible tournament.' ✓ (ESPN, The Independent)",
+    "Harry Kane 'heartbroken' ✓ (BBC, NDTV, thestory.news)",
+    "Harry Kane publicly praised Messi ✓",
+    "Zlatan Ibrahimović 'Hand of God' quote (partial match, full quote includes 'Left Foot of God') ✓",
+    "England fans sang 'Hey Jude' to Bellingham ✓ (TikTok ITV, Instagram)",
+    "Wayne Rooney BBC quote: 'We have crumbled. It started from the manager and the decisions he made.' ✓",
+    "Joe Hart quote: 'I think Gareth Southgate will be at home watching this game. He took a lot of criticism... and I don't think anything has changed out there.' ✓ (TNT Sports)",
+    "Argentina vs Spain final ✓",
+    "Alan Shearer BBC quote on quality difference ✓",
+    "Marcus Rashford, Ivan Toney, Ezri Konsa, Dan Burn, Nico O'Reilly were subs ✓ (per BBC)"
+  ],
+  "summary": {
+    "total_facts_checked": 38,
+    "issues_found": 24,
+    "critical_issues": 4,
+    "major_issues": 5,
+    "minor_issues": 13,
+    "hallucinations_suspected": 4,
+    "verified_correct": 23,
+    "notes": [
+      "The 4 CRITICAL errors are: (1) Gordon goal time wrong (~30' should be 55'), (2) Spain-France score wrong (3-1 should be 2-0), (3) Player ratings table lists Saka/Foden/Konsa as starters when Saka/Foden didn't start and Konsa was a sub, (4) Spence described as 'sub' when he was actually a starter.",
+      "The 4 most likely HALLUCINATIONS are: (a) NZ Herald URL returns 404 (likely fabricated path), (b) Conor Gallagher listed as sub but BBC didn't mention him, (c) r/worldcup post ID 1uxib97 doesn't match real 1uxi1ez, (d) Messi 'We knew we could turn it around' quote is unverifiable.",
+      "Most quotes from named sources (Vickery, Tuchel, Prince William, Kane, Zlatan) VERIFY real. The Athletic article URLs VERIFY real. BBC/TNT/BBC News URLs VERIFY real. The core match facts VERIFY real.",
+      "The English report has solid backbone of verified journalism but is marred by (a) a handful of critical factual errors on goal times, (b) misleading starting XI assumption in player ratings, (c) one fabricated URL and one fabricated Reddit ID, (d) several specific unverified 'social media' quotes that read like plausible-but-fabricated filler.",
+      "RECOMMENDATION: Fix the 4 critical errors and 5 major issues before publishing. The 13 minor issues (paraphrased quotes, unverified metrics) should be softened to paraphrases or removed. The Chinese (zh-TW) and Cantonese (zh-HK) versions inherit the same errors and need parallel fixes."
+    ]
+  }
+}
