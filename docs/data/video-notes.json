@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 146,
-    "total_with_audio": 117,
-    "total_with_transcript": 89,
-    "total_with_spoken_script": 117,
+    "total_videos": 147,
+    "total_with_audio": 118,
+    "total_with_transcript": 90,
+    "total_with_spoken_script": 118,
     "speakers_count": 57,
     "categories_count": 4,
     "topics_count": 13,
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-15 19:35:27",
+    "last_updated": "2026-07-19 23:47:38",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -95,6 +95,34 @@
     ]
   },
   "videos": [
+    {
+      "id": "20260718_自說自話的總裁_人類並不孤單",
+      "title": "人類並不孤單：科學家發現身邊正隱藏著一個平行文明⋯⋯鸚鵡 Alex 30 年研究、鳥類智慧與意識的兩條平行進化線",
+      "speaker": "自說自話的總裁",
+      "speaker_description": null,
+      "speaker_slug": "自說自話的總裁",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🤖 AI 倫理 / 哲學 / 意識",
+      "date": "2026-07-19",
+      "note_date": "2026-07-19",
+      "duration_seconds": 1875,
+      "duration_display": "31:15",
+      "video_url": "https://youtu.be/mpFFy_W6IWY",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260718_自說自話的總裁_人類並不孤單.opus",
+        "m4a": "audio/20260718_自說自話的總裁_人類並不孤單.m4a",
+        "mp3": "audio/20260718_自說自話的總裁_人類並不孤單.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260718_自說自話的總裁_人類並不孤單_逐字稿.txt",
+        "spoken_script": "transcripts/20260718_自說自話的總裁_人類並不孤單_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260718_自說自話的總裁_人類並不孤單_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20260718_自說自話的總裁_人類並不孤單.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260718_自說自話的總裁_人類並不孤單.md"
+    },
     {
       "id": "20260713_DanielKokotajlo_AI2027_70PctExtinction",
       "title": "【He Risked Everything To Warn You — Daniel Kokotajlo on AI's 70% Extinction Risk & Plan A】",
