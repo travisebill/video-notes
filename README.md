@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **143 支內容** · 247 個音檔 · 142 個逐字稿 · 143 個口播稿
-> 最後更新：2026-07-08
+> **144 支內容** · 250 個音檔 · 143 個逐字稿 · 144 個口播稿
+> 最後更新：2026-07-19
 
 ---
 
@@ -225,7 +225,7 @@
 <a id="by-topic"></a>
 ## 🏷️ 按主題
 
-### 🤖 **AI 倫理 / 哲學 / 意識**（6 支）
+### 🤖 **AI 倫理 / 哲學 / 意識**（7 支）
 
 - 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · Yuval Noah Harari（希伯來大學歷史系教授、《Sapiens》作者） × Ezra Klein（Vox）· 1 小時 55 分 36 秒（6936s）
 - 2026-06-30 | [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》作者） × Linacre College, Oxford University · 47 分鐘（口播稿 4:39）
@@ -233,6 +233,7 @@
 - 2026-05-12 | [蔡康永深度對談：關於衰老、死亡、AI 與人生的終極提問](人物訪談/20260512_蔡康永_衰老死亡與AI.md) · 蔡康永（作家/主持人） × 羅永浩（訪談主持人）｜「十字路口」播客 · 3:36:18
 - 2026-05-10 | [AI 要跨越盧比孔河了嗎？自我成長的 AI 離我們多遠？](技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md) · ? · 63 分鐘
 - 2026-04-23 | [Stanford 神經科學家：記不住夢境可能是大腦在警告你！](人物訪談/20260423_Eagleman_DreamsWarningSignals.md) · Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者） × Steven Bartlett · 1 小時 33 分 18 秒（YouTube 英文自動字幕 → 繁中翻譯）
+- 2026-07-18 | [人類並不孤單：科學家發現身邊正隱藏著一個平行文明⋯⋯鸚鵡 Alex 30 年研究、鳥類智慧與意識的兩條平行進化線](人物訪談/20260718_自說自話的總裁_人類並不孤單.md) · 自說自話的總裁 · 31 分 15 秒（1875s）｜Whisper `base` 中文聽寫 + Pepperberg Alex 30 年研究 + 微型麥克風田野觀察 signature calls
 
 ### 🧠 **AI / LLM 學術與方法論**（67 支）
 
