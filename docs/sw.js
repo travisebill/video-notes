@@ -15,6 +15,36 @@ const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 // importScripts loads synchronously and exposes SW_MESSAGES as global var in SW scope
 importScripts('./types/sw-message.js');
 
+// ════════════════════════════════════════════════════════════════════════════
+// IDB helpers (Phase 1) — cached DB instance + meta key-value access
+// ════════════════════════════════════════════════════════════════════════════
+
+let _dbInstance = null;
+async function getDB() {
+  if (!_dbInstance) _dbInstance = await openVideoNotesDB();
+  return _dbInstance;
+}
+
+async function getMetaValue(key) {
+  const db = await getDB();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction('meta', 'readonly');
+    const req = tx.objectStore('meta').get(key);
+    req.onsuccess = () => resolve(req.result?.value ?? null);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+async function setMetaValue(key, value) {
+  const db = await getDB();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction('meta', 'readwrite');
+    tx.objectStore('meta').put({ key, value, updated_at: new Date().toISOString() });
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+}
+
 // Phase 0 P0-T1: IndexedDB schema v2 (initial setup — pre-existing sw.js had no IDB code)
 const DB_NAME = 'video-notes';
 const DB_VERSION = 2;
