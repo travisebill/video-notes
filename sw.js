@@ -11,6 +11,50 @@ const CACHE_VERSION = 'v1.8-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
+// Phase 0 P0-T1: IndexedDB schema v2 (initial setup — pre-existing sw.js had no IDB code)
+const DB_NAME = 'video-notes';
+const DB_VERSION = 2;
+const LOCAL_JSON_URL = './data/video-notes.json';
+
+function openVideoNotesDB() {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(DB_NAME, DB_VERSION);
+    req.onupgradeneeded = (event) => {
+      const db = req.result;
+      const oldVersion = event.oldVersion;
+      // v0 → v2: initial schema setup
+      if (oldVersion < 1) {
+        // meta store (key-value) — Phase 1 SEED_INDEXEDDB + SW activate sentinel (P1-T8)
+        if (!db.objectStoreNames.contains('meta')) {
+          db.createObjectStore('meta', { keyPath: 'key' });
+        }
+        // settings store (key-value) — Phase 5 Settings Panel persistence (T5e)
+        if (!db.objectStoreNames.contains('settings')) {
+          db.createObjectStore('settings', { keyPath: 'key' });
+        }
+        // videos store — Phase 1 SEED_INDEXEDDB upserts here
+        if (!db.objectStoreNames.contains('videos')) {
+          const videosStore = db.createObjectStore('videos', { keyPath: 'id' });
+          videosStore.createIndex('upload_date', 'upload_date', { unique: false });
+          videosStore.createIndex('last_accessed', 'last_accessed', { unique: false });
+        }
+        // cache_status store — Phase 1 CACHE_VIDEO updates
+        if (!db.objectStoreNames.contains('cache_status')) {
+          db.createObjectStore('cache_status', { keyPath: 'id' });
+        }
+        // sync_queue store — Phase 1 CACHE_BATCH + CANCEL_BATCH scheduler
+        if (!db.objectStoreNames.contains('sync_queue')) {
+          const syncQueue = db.createObjectStore('sync_queue', { keyPath: 'id' });
+          syncQueue.createIndex('batch_id', 'batch_id', { unique: false });
+        }
+      }
+      // v1 → v2 migration reserved for future v1.0 → v2 schema upgrade
+    };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
 const APP_SHELL_URLS = [
   './',
   './index.html',
@@ -53,7 +97,8 @@ self.addEventListener('activate', (event) => {
           .filter((name) => name !== APP_SHELL_CACHE && name !== RUNTIME_CACHE)
           .map((name) => caches.delete(name))
       );
-    }).then(() => self.clients.claim())
+    }).then(() => openVideoNotesDB())
+     .then(() => self.clients.claim())
   );
 });
 
@@ -64,8 +109,10 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(request.url);
 
-  // 1. JSON metadata（video-notes.json）：network-first，失敗 fallback cache
-  if (url.pathname.endsWith('/data/video-notes.json')) {
+  // 1. JSON metadata：network-first，只 cache LOCAL_JSON_URL（避免 canonicalization — P0-T2 + P0-T3 fix）
+  const localJsonAbsolute = new URL(LOCAL_JSON_URL, self.location.href).href;
+  if (url.href === localJsonAbsolute ||
+      (url.pathname.endsWith('/data/video-notes.json') && url.hostname === self.location.hostname)) {
     event.respondWith(
       fetch(request)
         .then((response) => {
