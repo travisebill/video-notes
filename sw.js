@@ -132,6 +132,23 @@ self.addEventListener('activate', (event) => {
           .map((name) => caches.delete(name))
       );
     }).then(() => openVideoNotesDB())
+     .then(async () => {
+       // Phase 1 P1-T9: SW activate sentinel check (per M-11, moved from P6)
+       // First activation (previousVersion === null): skip mismatch check
+       // Mismatch (previousVersion !== SENTINEL_VERSION): clear cache buckets
+       // (Phase 6 recoverFromStaleState() will own IDB reset + re-SEED)
+       const SENTINEL_VERSION = 'v2.0-offline';
+       const previousVersion = await getMetaValue('sw_version');
+       if (previousVersion !== null && previousVersion !== SENTINEL_VERSION) {
+         console.warn('[SW P1-T9] sw_version mismatch detected, clearing cache buckets');
+         for (const name of await caches.keys()) {
+           if (name === 'markdown-v1' || name === 'thumbnails-v1') {
+             await caches.delete(name);
+           }
+         }
+       }
+     })
+
      .then(() => setMetaValue('sw_version', 'v2.0-offline'))  // P1-T8
      .then(() => self.clients.claim())
   );
