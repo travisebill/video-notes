@@ -102,6 +102,7 @@ self.addEventListener('activate', (event) => {
           .map((name) => caches.delete(name))
       );
     }).then(() => openVideoNotesDB())
+     .then(() => setMetaValue('sw_version', 'v2.0-offline'))  // P1-T8
      .then(() => self.clients.claim())
   );
 });
@@ -181,4 +182,131 @@ self.addEventListener('fetch', (event) => {
       return cached || networkFetch;
     })
   );
+});
+
+// ════════════════════════════════════════════════════════════════════════════
+// Message handlers — Phase 1 P1-T1 (SEED_INDEXEDDB)
+// ════════════════════════════════════════════════════════════════════════════
+
+/**
+ * Phase 1 P1-T1: SEED_INDEXEDDB handler
+ * Spec §5.3 — 7-step SOP:
+ *   1. Frontend init() loads video-notes.json + postMessage SEED_INDEXEDDB(videos[])
+ *   2. SW: upsert videos[] to IDB videos store (id as primary key)
+ *   3. SW: backfill cache_status for new entries (status: 'pending')
+ *   4. SW: update meta.last_seeded_at = now
+ *   5. SW: respond with {written, updated}
+ *   6. SW: if videos non-empty → trigger auto cache (Phase 2 follow-up)
+ *   7. Frontend: ⬇️ button enable only after SEED_DONE response
+ *
+ * @param {Object} payload
+ * @param {Array<VideoMetadata>} payload.videos
+ * @returns {Promise<{written: number, updated: number}>}
+ */
+async function handleSeedIndexedDB({ videos }) {
+  if (!Array.isArray(videos)) {
+    throw new Error('handleSeedIndexedDB: videos must be an array');
+  }
+
+  const db = await getDB();
+  let written = 0;
+  let updated = 0;
+
+  // 7-step SOP as a single readwrite transaction (atomic)
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction(['videos', 'cache_status', 'meta'], 'readwrite');
+    const videosStore = tx.objectStore('videos');
+    const cacheStatusStore = tx.objectStore('cache_status');
+    const metaStore = tx.objectStore('meta');
+
+    for (const video of videos) {
+      // Normalize: ensure last_verified_cache_state defaults to null
+      const videoRecord = { ...video, last_verified_cache_state: null };
+
+      // Step 2+3: upsert videos + backfill cache_status
+      const getReq = videosStore.get(video.id);
+      getReq.onsuccess = () => {
+        if (getReq.result) {
+          // Existing video — update (preserve last_verified_cache_state if not provided)
+          const existing = getReq.result;
+          const merged = {
+            ...existing,
+            ...videoRecord,
+            last_verified_cache_state: videoRecord.last_verified_cache_state ?? existing.last_verified_cache_state,
+          };
+          videosStore.put(merged);
+          updated++;
+        } else {
+          // New video — insert + create pending cache_status
+          videosStore.put(videoRecord);
+          cacheStatusStore.put({
+            id: video.id,
+            status: 'pending',
+            markdown_status: 'pending',
+            thumbnail_status: 'pending',
+          });
+          written++;
+        }
+      };
+    }
+
+    // Step 4: update meta.last_seeded_at
+    metaStore.put({
+      key: 'last_seeded_at',
+      value: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+    });
+
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+    tx.onabort = () => reject(new Error('Transaction aborted'));
+  });
+
+  // Step 5: respond (caller postMessage)
+  // Step 6: trigger auto-cache (Phase 2 follow-up — for now just log)
+  // Step 7: ⬇️ button enable handled by frontend upon SEED_DONE
+  if ((written + updated) > 0) {
+    console.log(`[SW] SEED_INDEXEDDB: ${written} written, ${updated} updated — auto-cache trigger will follow in Phase 2`);
+  }
+
+  return { written, updated };
+}
+
+self.addEventListener('message', (event) => {
+  const data = event.data || {};
+  const { type, ...payload } = data;
+
+  if (!type) {
+    console.warn('[SW] Message missing type:', data);
+    return;
+  }
+
+  switch (type) {
+    case SW_MESSAGES.SEED_INDEXEDDB:
+      handleSeedIndexedDB(payload)
+        .then((result) => {
+          event.source.postMessage({
+            type: 'SEED_INDEXEDDB_DONE',
+            written: result.written,
+            updated: result.updated,
+          });
+        })
+        .catch((err) => {
+          console.error('[SW] SEED_INDEXEDDB failed:', err);
+          event.source.postMessage({
+            type: 'SEED_INDEXEDDB_ERROR',
+            error: err.message || String(err),
+          });
+        });
+      break;
+
+    // TODO next turn (P1-T2): case SW_MESSAGES.CACHE_VIDEO
+    // TODO next turn (P1-T3): case SW_MESSAGES.CACHE_BATCH + CANCEL_BATCH
+    // TODO next turn (P1-T4): case SW_MESSAGES.UNCACHE_VIDEO + GET_CACHE_STATUS + CLEAR_ALL_CACHE
+    // TODO next turn (P1-T5): emit AUTO_CACHE_DONE event
+    // TODO next turn (P1-T6): emit LRU_EVICTED event
+
+    default:
+      console.warn('[SW] Unknown message type:', type);
+  }
 });
