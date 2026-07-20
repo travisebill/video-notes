@@ -97,7 +97,7 @@ All downstream message handlers depend on new schema fields. Need schema baselin
 
 | ID | Task | 估時 | Fixed in v2 |
 |---|---|---|---|
-| P0-T1 | IndexedDB schema migration v1→v2 in `onupgradeneeded`：<br>• 新增 `meta` object store (key-value: `last_seeded_at`, `last_auto_cache_notification`, `sw_version`, `last_lru_at`)<br>• 新增 `videos.last_verified_cache_state` field (init: `null`)<br>• 新增 `sync_queue.batch_id` field (init: `null`)<br>• **必須** data-preserving (既有 records 不能掉) | 1.5-2 hr | unchanged |
+| P0-T1 | IndexedDB schema migration v1→v2 in `onupgradeneeded`：<br>• 新增 `meta` object store (key-value: `last_seeded_at`, `last_auto_cache_notification`, `sw_version`, `last_lru_at`)<br>• 新增 `settings` object store (key-value: `notification_cooldown_ms`, auto_cache prefs `{auto_cache_30: bool, auto_cache_viewed: bool, auto_cache_entire_category: bool, offline_mode: bool}`) — for Settings Panel persistence per spec §7.7 T5e<br>• 新增 `videos.last_verified_cache_state` field (init: `null`)<br>• 新增 `sync_queue.batch_id` field (init: `null`)<br>• **必須** data-preserving (既有 records 不能掉) | 2-2.5 hr | **v3.1 fix**: `settings` store added for Settings Panel persistence |
 | P0-T2 | Cache Storage `json-v1` key rename — only `LOCAL_JSON_URL`, old key 自然 expire | 0.5 hr | unchanged |
 | P0-T3 | Fetch handler route update (Section 5.2 strict hostname check) | 0.5 hr | unchanged |
 
