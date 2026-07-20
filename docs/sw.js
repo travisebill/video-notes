@@ -420,6 +420,25 @@ async function handleClearAllCache() {
   return { ok: true, clearedBuckets: cleared };
 }
 
+/**
+ * Phase 1 P1-T6: LRU_EVICTED event emit helper
+ * Actual LRU eviction logic (running LRU + clearing caches) is in Phase 2.
+ * This helper defines how SW broadcasts the event to all clients.
+ *
+ * @param {number} count - number of videos evicted
+ * @param {number} freed_bytes - bytes freed from cache storage
+ */
+async function emitLRUEvicted(count, freed_bytes) {
+  const clients = await self.clients.matchAll({ includeUncontrolled: true });
+  for (const client of clients) {
+    client.postMessage({
+      type: SW_MESSAGES.LRU_EVICTED,
+      count,
+      freed_bytes,
+    });
+  }
+}
+
 self.addEventListener('message', (event) => {
   const data = event.data || {};
   const { type, ...payload } = data;
