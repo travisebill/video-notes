@@ -1,0 +1,359 @@
+{
+  "spec": "docs/plan/2026-07-20-offline-mode-impl-plan.md",
+  "spec_title": "Video Notes PWA — Offline Mode Implementation Plan",
+  "source_spec": "docs/superpowers/specs/2026-07-20-offline-mode-design.md",
+  "source_spec_review_audit": "docs/qa-offline-mode-design-spec.json",
+  "review": {
+    "date": "2026-07-20",
+    "reviewer": "Mame QA Agent (sub-agent spawn)",
+    "reviewer_role": "QA Engineer (first-class configured agent agentId=\"mame\")",
+    "review_methodology": "Mame fact-check style — skeptical, evidence-based, ruthless, focused on plan-level issues (not spec-level), phase coverage, ordering, time realism, cross-platform test adequacy, rollback robustness, carry-over handling from spec review audit",
+    "review_flow": "sub-agent spawn Mame (auto-announce) → mame review plan → ryo 修 plan (per gap #2 spawn-report-then-fix 兩階段 workflow)",
+    "reviewer_subagent_session": "agent:mame:subagent:5bcc3304-b6d7-4bf7-800b-2e26582d4cea (captured per gap #1 lesson learned)",
+    "plan_status_at_review": "Draft — pending Mame review",
+    "plan_estimated_hours": "28-40 hr"
+  },
+  "issues": [
+    {
+      "section": "Phase Overview (table) — Phase 7 dependency column",
+      "field": "Phase 7 依賴前 phase: 'Phase 1-6'",
+      "original": "| 7. Testing + Deploy | SW unit / SW integration Playwright / Frontend state machine unit / E2E Playwright headless / Manual PWA + Lighthouse / Pages deploy verify | 4-6 hr | Phase 1-6 |",
+      "issue": "Phase 7 is missing dependency on Phase 8. Plan §Phase 8 includes '解決 spec §12 每個開放問題' + '若 spec 有變動，回頭 commit + push + re-run Mame review'. If spec changes during Phase 8, Phase 7 (testing + deploy) cannot complete against a stale spec. Diagram also shows Phase 8 AFTER Phase 7 (`Phase 8 ←┘` on Phase 7), which means spec changes happen post-deploy — deployed code may not match finalized spec. **Wrong dependency direction.** Phase 7 should depend on Phase 0-8, and Phase 8 should run BEFORE Phase 7 (or at minimum Phase 8 must explicitly precede the deploy portion of Phase 7).",
+      "severity": "critical",
+      "suggestion": "Fix dependency graph: Phase 8 → Phase 7 (or split Phase 7 into '7a Testing' depends on Phase 1-6, '7b Deploy' depends on Phase 7a + Phase 8). Update Phase Overview table column '依賴前 phase' for both Phase 7 and Phase 8. Update Implementation Order Diagram to reflect."
+    },
+    {
+      "section": "Phase 0 P0-T1 vs Phase 6 P6-T1",
+      "field": "Duplicate IndexedDB migration task",
+      "original": "Phase 0 P0-T1: 'IndexedDB schema migration v1→v2 在 onupgradeneeded: 新增 meta object store... 新增 videos.last_verified_cache_state field... 新增 sync_queue.batch_id field... 必須 data-preserving'\n\nPhase 6 P6-T1: 'IndexedDB onupgradeneeded migration path data-preserving — schema v1 → v2, preserve existing videos + cache_status records'",
+      "issue": "Same task defined twice. Both phases say 'IndexedDB onupgradeneeded migration data-preserving v1→v2'. P0-T1 is more detailed (lists all the new fields); P6-T1 is broader (says 'preserve existing videos + cache_status records'). Without explicit cross-reference, an implementer will wonder which to do and whether to do it twice. Plan-level duplication = risk of (a) one phase gets skipped, (b) migration logic implemented twice with drift.",
+      "severity": "critical",
+      "suggestion": "Pick one home: either remove P6-T1 and have Phase 6 only cover migration TESTING/VALIDATION (rename to 'P6-T1 Verify Phase 0 migration is data-preserving on real data fixture'), or move all migration concerns to Phase 6 and have Phase 0 only define schema fields as constants (no onupgradeneeded code). Recommended: keep P0-T1 as the IMPLEMENTATION task, redefine P6-T1 as 'P6-T1 Migration validation: E2E test that pre-existing IndexedDB v1 data survives v2 migration'."
+    },
+    {
+      "section": "Phase coverage — spec §7.7 設定面板 (Settings Panel)",
+      "field": "Entire §7.7 has no phase assignment",
+      "original": "Plan has no task or phase referencing '設定面板', 'Settings panel', '⚙️ 離線設定', 'auto cache toggle', 'notification cooldown selector', or 'storage management buttons'",
+      "issue": "Spec §7.7 defines a substantial settings panel UI with: (a) toggles for offline mode + auto cache 30 + auto cache viewed + auto cache entire category + notification opt-in, (b) Notification cooldown selector (6h/12h/24h/48h), (c) Storage management buttons (清空 markdown / 縮圖 / 全部), (d) Advanced diagnostics (SW 狀態 / IndexedDB / Cache Storage). This is a multi-component UI feature with backend dependencies (notification cooldown must write to meta; storage buttons call UNCACHE_VIDEO / CLEAR_ALL_CACHE). **Estimated 3-5 hr of work.** No plan task covers it. If shipped without settings panel, users can't toggle auto-cache behavior, can't adjust notification frequency, can't manually clear caches — direct regression of v1 spec functionality.",
+      "severity": "critical",
+      "suggestion": "Add new Phase 4.5 (or extend Phase 5) with task: 'P5-T5 設定面板 UI (§7.7) — toggles wired to IndexedDB meta (last_auto_cache_notification cooldown + auto_cache settings) + Storage management buttons calling CLEAR_ALL_CACHE / UNCACHE_VIDEO + Advanced diagnostics (read-only SW/IndexedDB/Cache Storage inspector)'. Estimated 3-5 hr."
+    },
+    {
+      "section": "Phase coverage — spec §7.3 儲存空間指示器 + §7.4 離線狀態 banner + §7.6 Auto cache 完成通知 UI",
+      "field": "Three UI components missing from any phase",
+      "original": "Plan has no task or phase referencing '儲存空間指示器', '離線 banner', 'online/offline', 'AUTO_CACHE_DONE handler', or '✨ 自動下載 12 支新影片' notification banner UI",
+      "issue": "Three spec UI components have no plan assignment: (1) §7.3 儲存空間指示器 — toolbar progress bar '📊 12.3 MB / 已離線 72 支' with click-expand storage usage panel — 2-3 hr of UI + data binding to navigator.storage.estimate() + IndexedDB size aggregation. (2) §7.4 離線狀態 banner — online/offline event listeners + banner '✈️ 離線模式 — 列表 / 結構化筆記 / 縮圖可用' — 0.5-1 hr. (3) §7.6 Auto cache 完成通知 UI — frontend AUTO_CACHE_DONE message handler that shows banner '✨ 自動下載 N 支新影片' gated by shouldNotify — 1-2 hr. **Combined missing: 4-6 hr.** Without these, the '離線 UX' feels broken even when SW is working correctly.",
+      "severity": "critical",
+      "suggestion": "Add explicit tasks: P4-T5 '儲存空間指示器 (§7.3) — toolbar indicator + expandable panel wired to navigator.storage.estimate() + IndexedDB size aggregation' (2 hr); P3-T4 '離線狀態 banner (§7.4) — online/offline event listeners + banner UI' (0.5 hr); P4-T6 'Auto cache 完成通知 UI (§7.6) — AUTO_CACHE_DONE message handler + banner gated by shouldNotify flag' (1 hr)."
+    },
+    {
+      "section": "Phase 1 P1-T7 — shared types/sw-message.ts",
+      "field": "TypeScript file extension but project is vanilla JS",
+      "original": "P1-T7: 'Frontend TypeScript types 統一 — SWMessage union type (7 種 message format)'\n\nP1-T7 risk mitigation: 'shared types/sw-message.ts file，SW build runtime + Frontend build runtime 都 import'",
+      "issue": "Existing project is **vanilla JS with no build step**: app.js (678 lines), sw.js (132 lines), all dependencies (Alpine.js / Fuse.js / marked.js / DOMPurify / Pico.css) loaded via CDN script tags in index.html. There is no tsconfig.json, no bundler, no package.json build script visible. Introducing a `.ts` file with 'SW build runtime + Frontend build runtime 都 import' requires: (a) TypeScript toolchain (npm + tsc or esbuild), (b) build step in deploy pipeline (`subtree push --prefix=docs` would now need compiled output), (c) module resolution for SW (which can't use ES modules in classic SW). This is a **major project restructure** not flagged anywhere in the plan. Ryo's AGENTS.md confirms no build step exists. If implementer naively creates a `.ts` file expecting SW to import it, it will fail at runtime.",
+      "severity": "critical",
+      "suggestion": "Two options: (a) Rename P1-T7 to 'shared message types file using JSDoc typedef — types/sw-message.d.ts or types/sw-message.js with JSDoc @typedef union' — zero build cost, IDE support works in JS files via // @ts-check. (b) If TS is genuinely wanted, add a sub-task 'P0-T4 Add TypeScript build toolchain (tsc or esbuild), update deploy SOP to compile .ts → .js before subtree push'. **Recommended: (a)** for minimal blast radius — keep project vanilla, just add type hints."
+    },
+    {
+      "section": "Phase 6 P6-T5 — Rollback procedure",
+      "field": "Rollback strategy decision missing (mixes option a + b from spec §10.1)",
+      "original": "P6-T5: 'Rollback procedure — version mismatch / eviction 都走：frontend 偵測 SW version 變化 → 主動 reset cache_status UI + IndexedDB → 重新 trigger SEED'",
+      "issue": "Spec §10.1 presents two rollback options: (a) SW-side sentinel check — v1.8-pwa SW detects unknown meta key in IndexedDB → wipes IndexedDB; (b) Frontend-side — frontend detects SW version change via meta.sw_version comparison → resets cache_status UI + IndexedDB. Plan P6-T3 ('SW activate 時 sentinel check') implements option (a) SW-side. Plan P6-T5 ('frontend 偵測 SW version 變化') implements option (b) frontend-side. Plan does both without explicit decision on which is canonical or whether both are needed. Risk: if both run, double-wipe; if only one runs, the other side has stale state. Also: P6-T5 is **frontend behavior** (frontend reset UI) — wrong phase boundary; belongs in Phase 3 or Phase 4 frontend phases.",
+      "severity": "major",
+      "suggestion": "Decide in spec §10.1 or Phase 8: pick (a) or (b) as primary, with the other as defense-in-depth. Recommended: keep P6-T3 as primary (SW-side) since it's more reliable (runs even if user closes tab); make P6-T5 a frontend safety net that listens for `controllerchange` event and re-reads SW CACHE_VERSION + clears localStorage. Move P6-T5 to Phase 3 or Phase 4 (frontend phases)."
+    },
+    {
+      "section": "Phase 6 P6-T4 + P6-T5 — iOS 7-day eviction + rollback",
+      "field": "Two tasks for unified 'detect state mismatch + reset' flow",
+      "original": "P6-T4: 'iOS 7-day eviction 偵測 — SW activate 偵測 IndexedDB 存在但 Cache Storage 空 → 標記 last_verified_cache_state = evicted + 重新 trigger frontend SEED'\n\nP6-T5: 'Rollback procedure — version mismatch / eviction 都走：frontend 偵測 SW version 變化 → 主動 reset cache_status UI + IndexedDB → 重新 trigger SEED'",
+      "issue": "Both P6-T4 (iOS eviction detection) and P6-T5 (rollback) are essentially the same flow: (1) detect state mismatch, (2) reset UI + IndexedDB, (3) re-trigger SEED. Spec §8 + §10.1 list them as separate concerns but the **implementation is identical**: detect-and-reset routine. Splitting them creates two parallel implementations of the same routine with different trigger conditions. High risk of drift. Also P6-T5 description uses 'frontend 偵測' but eviction detection (P6-T4) should happen on SW activate (frontend may not be loaded yet).",
+      "severity": "major",
+      "suggestion": "Unify into one task: 'P6-T4 Stale-state recovery routine — single function `recoverFromStaleState()` callable from (a) SW activate (covers iOS 7-day eviction + version rollback), (b) frontend controllerchange listener (defense-in-depth). Routine: detect mismatch (Cache Storage empty for known-cached video / IndexedDB meta.sw_version mismatch / last_verified_cache_state === 'evicted') → reset cache_status + sync_queue + videos.markdown_status/thumbnail_status to 'pending' → notify frontend to re-trigger SEED'. Remove P6-T5 (fold into P6-T4)."
+    },
+    {
+      "section": "Phase 7 — Spec §10 Rollout (Staging + Monitor + Iterate)",
+      "field": "Plan covers only Phase 10.3 Production; missing Staging / Monitor / Iterate",
+      "original": "Plan P7-T7: 'Pages deploy + post-deploy smoke test — git subtree push --prefix=docs origin gh-pages, curl 200, qa JSON reachable, navigation OK'\n\nSpec §10: 1. Dev / 2. Staging / 3. Production / 4. Monitor（1 週） / 5. Iterate",
+      "issue": "Spec §10 has 5 rollout phases. Plan only covers #1 (Dev, implicit in Phase 0-7 implementation) and #3 (Production, P7-T7). Missing: (a) **§10.2 Staging**: Deploy to `gh-pages-staging` branch before production — no mention of staging branch workflow in plan. Risk: shipping untested code straight to production. (b) **§10.4 Monitor (1 週)**: 觀察 cache hit rate / download 失敗率 / iOS eviction 率 — no plan task for metrics collection or monitoring dashboard. (c) **§10.5 Iterate**: 依使用體驗調整 UX — out of scope for v1 but should at least be acknowledged as next-step.",
+      "severity": "major",
+      "suggestion": "Add: (a) P7-T8 'Staging deploy — push to `gh-pages-staging` branch + manual smoke test on staging URL + Lighthouse on staging' (1 hr, gates production deploy). (b) P7-T9 'Production monitoring setup — define metrics (cache hit rate via storage.estimate diff, fetch failure count via console capture, eviction rate via IndexedDB last_verified_cache_state count) + 1-week observation window before Iterate phase' (0.5 hr setup + async observation). (c) Add 'Open Items' note: 'Phase 10.5 Iterate → v1.1 backlog ticket, not in v1 scope'."
+    },
+    {
+      "section": "Phase 2 P2-T1 — Auto cache triggers incomplete",
+      "field": "Only covers SEED_INDEXEDDB trigger; missing 2 of 3 triggers from spec §5.4",
+      "original": "P2-T1: 'Auto cache triggered by SEED_INDEXEDDB completion — Pre-condition: IndexedDB.videos non-empty + meta.last_seeded_at 1h 內不重 seed'",
+      "issue": "Spec §5.4 lists 3 auto cache triggers: (1) SEED_INDEXEDDB 完成後, (2) video-notes.json fetch 完成後 (with meta.last_seeded_at 1h dedupe), (3) SW activate 後第一次 idle. Plan P2-T1 only covers trigger #1. Trigger #2 is implicitly covered (P3-T2 calls SEED every loadData, so SEED → auto cache), but not explicit. Trigger #3 (SW activate idle) is missing — relevant when: SW updates and re-activates with new code, want to opportunistically auto-cache even before user opens data-loading screen (e.g., background pre-cache).",
+      "severity": "major",
+      "suggestion": "Update P2-T1: 'Auto cache triggered by: (a) SEED_INDEXEDDB completion (Phase 1 P1-T1), (b) meta.last_seeded_at check on SW activate (idle callback) — if last_seeded_at > 1h ago AND IndexedDB videos non-empty, re-run SEED + auto cache'. Trigger (b) handles SW update case + ensures freshness without waiting for user to open data view. Document trigger (c) video-notes.json fetch as alias of (a)."
+    },
+    {
+      "section": "Phase 3 P3-T2 — SEED_INDEXEDDB retry policy (spec §12 Q9) unresolved",
+      "field": "try/catch but no retry strategy",
+      "original": "P3-T2: 'seedIndexedDB(videos) call (從 loadData() 拿 videos[]) + await response'\n\nP3-T3 risk: 'loadData() 失敗 → init hang — try/catch + SEED skip 但 SW controller still ready → ⬇️ button 仍 enable (但 cache miss)'",
+      "issue": "Spec §12 Q9 explicitly lists as OPEN: 'SEED_INDEXEDDB 失敗時 frontend 怎麼 retry？（3 attempts + UI banner 提示？）'. Plan P3-T2 has no retry policy, P3-T3 risk mentions try/catch but no retry logic. If SEED fails once (e.g., transient SW message channel error), ⬇️ button enables but every CACHE_VIDEO fails because IndexedDB videos table is empty. Silent partial-broken state for user.",
+      "severity": "major",
+      "suggestion": "Resolve in Phase 8 (P8-T4): 'Decide SEED_INDEXEDDB retry policy per spec §12 Q9 — recommended: 3 attempts with exponential backoff (1s/3s/9s) + UI banner '正在初始化離線功能... (第 N/3 次)' on each retry + hard fail banner with manual reload button after 3rd failure'. Add P3-T2 retry implementation as concrete task."
+    },
+    {
+      "section": "Phase 7 P7-T2 — SW integration tests time estimate",
+      "field": "0.5 hr for 7 handlers + 4 background tasks integration tests",
+      "original": "P7-T2: 'SW integration tests — Playwright + real SW registration, mock network via route() — 0.5 hr'",
+      "issue": "Plan defines 7 message handlers (SEED_INDEXEDDB / CACHE_VIDEO 13-step / CACHE_BATCH+CANCEL_BATCH AbortController / UNCACHE_VIDEO / GET_CACHE_STATUS / CLEAR_ALL_CACHE / AUTO_CACHE_DONE emit / LRU_EVICTED emit) + 4 background tasks (auto cache trigger x3 / LRU mutex / manual_cached preservation / ShouldNotify dedupe / last_seeded_at dedupe). Each needs: SW activation, mock network, assert IndexedDB state, assert Cache Storage state, assert postMessage events received by frontend. **Realistic: 2-3 hr**, not 0.5 hr. At 0.5 hr, implementer will write happy-path-only tests, missing race conditions and edge cases that are the entire reason for spec fixes C-1 through M-6.",
+      "severity": "major",
+      "suggestion": "Increase P7-T2 to 2-3 hr. Break into sub-tasks: P7-T2a 'SW integration: SEED_INDEXEDDB roundtrip' (0.5 hr), P7-T2b 'SW integration: CACHE_VIDEO 13-step with partial failure simulation' (0.5 hr), P7-T2c 'SW integration: CACHE_BATCH concurrency + CANCEL_BATCH race' (0.5 hr), P7-T2d 'SW integration: LRU mutex concurrent with batch' (0.5 hr), P7-T2e 'SW integration: ShouldNotify dedupe + last_seeded_at dedupe' (0.5 hr)."
+    },
+    {
+      "section": "Phase 7 P7-T4 — E2E tests time estimate",
+      "field": "1 hr for 5 spec §9.3 scenarios",
+      "original": "P7-T4: 'E2E — Playwright headless offline simulation (disable network) — SEED + CACHE_VIDEO + state transitions — 1 hr'",
+      "issue": "Spec §9.3 lists 5 E2E scenarios: (1) 首次打開 → 自動 cache「最近 30」完成, (2) 按 ⬇️ → cache 完成 → UI 顯示 ✅, (3) 離線模式 (network throttle offline) → 讀 cache 內容, (4) 批次下載主題 → 進度條 → 完成, (5) 離線後影片 metadata 更新 → 重新打開 sync 流程. Each scenario needs: test setup (PWA install + IndexedDB seed), action sequence, assertion (UI state + IndexedDB + Cache Storage), teardown. **Realistic: 2-3 hr**. At 1 hr, will likely write 2-3 happy-path scenarios and skip the more important offline-read + sync scenarios.",
+      "severity": "major",
+      "suggestion": "Increase P7-T4 to 2-3 hr. Break into sub-scenarios: P7-T4a 'E2E: 首次打開 + 自動 cache 最近 30 完成' (0.5 hr), P7-T4b 'E2E: 單支 ⬇️ → ✅ ready UI' (0.5 hr), P7-T4c 'E2E: 離線讀 cache (network throttle disable)' (0.5 hr), P7-T4d 'E2E: 批次下載 + 進度條 + 完成' (0.5 hr), P7-T4e 'E2E: 離線後 metadata 更新 → 重新打開 sync' (0.5 hr)."
+    },
+    {
+      "section": "Phase 8 P8-T1 — 10 open questions in 1-2 hr",
+      "field": "6-12 min per question is too tight",
+      "original": "P8-T1: '解決 spec §12 每個開放問題 — 可能在實作中釐清，可能需回頭修 spec — 0.5-1.5 hr'\n\nTotal Phase 8: 1-2 hr",
+      "issue": "Spec §12 has 10 open questions (Q1: 最近 30 by upload_date or note_date, Q2: LRU 80%→60% adaptive, Q3: auto cache access_count threshold, Q4: 分類下載 sync 進度, Q5: schema 升級策略, Q6: 批次併發數, Q7: CACHE_VERSION bump v2.0-offline vs v1.9-pwa, Q8: CANCEL_BATCH AbortController vs polling, Q9: SEED retry policy, Q10: LRU adaptive quota). Each requires: (a) investigate code/data context (5-15 min for code-grounded Q1/Q3/Q6/Q10; less for already-decided Q5/Q8), (b) decide, (c) update spec, (d) potentially re-run review. At 1-2 hr / 10 questions = 6-12 min/question, implementer will batch-decide without real investigation, OR skip the spec updates, OR skip re-review. Already-decided questions (Q5 → onupgradeneeded, Q8 → AbortController) should be marked 'already decided, just confirm' to free budget for unresolved ones (Q1, Q2, Q3, Q6, Q9, Q10).",
+      "severity": "major",
+      "suggestion": "Increase Phase 8 to 3-5 hr. Pre-classify questions: (a) Already decided in plan/implementation (Q5, Q7 in P7-T7, Q8 in P1-T3) — confirm in 5 min each. (b) Needs code investigation (Q1 upload_date vs note_date check data structure, Q3 access_count check filter logic, Q6 concurrency test with rate limit) — 20-30 min each. (c) Needs spec decision + update (Q2 LRU adaptive, Q9 SEED retry, Q10 LRU adaptive quota) — 30-45 min each. Total: ~3-4 hr."
+    },
+    {
+      "section": "Open Items (carry-over #4) — spec version frontmatter",
+      "field": "Carry-over noted but no explicit plan task to execute it",
+      "original": "Carry-over #4: 'spec lacks version frontmatter — Phase 6 P6-T2 加 meta.sw_version 後，spec 也需補 version: frontmatter'\n\nNo corresponding task ID in any phase",
+      "issue": "Carry-over gap #4 from spec review audit is mentioned in 'Open Items' section but is not mapped to an executable task. It's a passive note ('spec 也需補') not a 'P8-T3: add version frontmatter to spec' task. If unassigned, spec will continue to lack versioning, breaking the very gap #4 was supposed to fix. Plan-level issue: carry-overs should become concrete tasks, not just narrative notes.",
+      "severity": "major",
+      "suggestion": "Add explicit task: 'P8-T3 Add version: frontmatter to spec (v1.0 → v1.1 on breaking fix) — gap #4 from spec review audit'. Estimated 0.25 hr. Include the updated version string in the spec change commit."
+    },
+    {
+      "section": "Phase 1 P1-T7 risk — TypeScript build infra (cross-reference with critical issue above)",
+      "field": "Risk mitigation assumes TS toolchain exists",
+      "original": "P1-T7 risk: 'Frontend TS types 跟 SW runtime message format drift — medium — shared types/sw-message.ts file，SW build runtime + Frontend build runtime 都 import'",
+      "issue": "Same issue as critical #5 above from a different angle. Risk mitigation statement ('SW build runtime + Frontend build runtime 都 import') confirms TS build is intended, but plan has zero tasks to set up TS build toolchain (tsconfig, tsc in package.json, compiled output before subtree push). Ryo's AGENTS.md confirms no existing build infrastructure. This is a 4-8 hr hidden cost not in the 28-40 hr estimate.",
+      "severity": "major",
+      "suggestion": "See critical #5. Switch to JSDoc typedef approach for zero build cost. If TS genuinely wanted, add 'P0-T0 Evaluate TS build toolchain (tsc vs esbuild vs no TS) and add setup tasks'."
+    },
+    {
+      "section": "Phase 6 P6-T2 + P6-T3 — SW lifecycle behavior in wrong phase",
+      "field": "Phase 6 is 'Migration + Rollback' but P6-T2/T3 are SW activate behavior",
+      "original": "P6-T2: 'meta.sw_version initialization — 新 SW activate 寫 meta.sw_version = current_version'\n\nP6-T3: 'SW activate 時 sentinel check — 比對 meta.sw_version vs current version, 若 mismatch → 清 cache + 重新 SEED'",
+      "issue": "P6-T2 and P6-T3 are pure SW lifecycle behavior (run on SW activate event). They're not 'Migration + Rollback' concerns — they're SW version-detection concerns that any SW update would implement. Plan §Phase 6 says 'Why after Phase 1-5 (frontend + SW 都穩定)' implying this is a stabilization phase, but P6-T2/T3 are foundational SW behavior that should sit alongside Phase 1 (SW Message API). Wrong phase boundary = harder to test in isolation, harder to identify when implementation happens.",
+      "severity": "major",
+      "suggestion": "Move P6-T2 → Phase 1 as 'P1-T8 meta.sw_version initialization on SW install/activate'. Move P6-T3 → Phase 1 as 'P1-T9 SW activate sentinel check (rollback detection)'. Keep P6-T1 (renamed) + P6-T4 (unified with P6-T5) in Phase 6 as actual Migration + Recovery concerns."
+    },
+    {
+      "section": "Phase 1 risk — CACHE_VIDEO 9→13 step breaking change",
+      "field": "Risk statement mischaracterizes the actual concern",
+      "original": "Phase 1 risk: 'CACHE_VIDEO 9→13 step 是 breaking change — 舊 client 不認 stage events — high — 11-step 內 CACHE_DONE 仍 emit 給 fallback；後端加 SW version flag 處理舊 client（升級時 reload）'",
+      "issue": "CACHE_VIDEO is a SW-internal flow. The '9 → 13 step' expansion is internal to the SW handler — frontend never sees the 9-step version. The actual breaking-change concern is: (a) In-flight CACHE_VIDEO during SW update — old SW's fetch is mid-flight, new SW activates, frontend connects to new SW mid-stream, may lose CACHE_DONE event for that video. (b) Frontend message handlers added in P4-T2 / P5-T4 must handle backward compat for SW that hasn't been updated yet (rare but possible with slow SW update + aggressive user). Risk statement confuses SW internals with wire compatibility, making mitigation vague.",
+      "severity": "major",
+      "suggestion": "Rewrite risk: 'CACHE_VIDEO stage events not backward-compat with pre-v2 frontend — high — Mitigation: (a) SW update waits for in-flight CACHE_VIDEO to complete before activating new SW (use `event.waitUntil` in activate handler for `caches.keys` cleanup + pending message queue drain), (b) frontend version-check on SW controllerchange: if SW version higher than frontend-known version, force reload page to pick up new message handlers'. Reference web.dev/service-worker-lifecycle docs."
+    },
+    {
+      "section": "Risks Summary — missing spec §11 risks",
+      "field": "Plan risks table missing YouTube CORS, jsDelivr 24h cache, QuotaExceededError post-LRU",
+      "original": "Plan Risks Summary table:\n| Phase | Risk | Severity |\n| 0 | Migration data loss | high |\n| 1 | CACHE_VIDEO 9→13 step breaking | high |\n| 2 | LRU mutex race with batch | high |\n| 2 | manual_cached accidentally deleted | high (trust) |\n| 4 | Cross-platform UI inconsistency | medium |\n| 6 | iOS 7-day detection manual test only | medium |\n| 7 | SW auto-update race with Pages deploy | high |",
+      "issue": "Spec §11 lists 5 risks. Plan covers 4 of them (iOS 50MB limit implicit in LRU, iOS 7-day eviction, Pages build stuck, YouTube CORS partially via P0-T3 mitigation, jsDelivr 24h cache — wait actually only Pages build stuck and YouTube CORS are partially mentioned). Missing from plan Risks Summary: (a) **YouTube CORS** — spec §11 + §8 calls out `fetch().blob()` may fail on CORS, mitigation is `<img>` fallback. No risk row + no plan task to implement `<img>` fallback for thumbnails. (b) **QuotaExceededError post-LRU** — spec §8 lists this. If LRU can't free enough space, what does UI show? Plan P2-T2 doesn't mention post-LRU failure path. (c) **Concurrent CACHE_VIDEO without batch_id** — not in spec §11 but a real risk: 2 simultaneous single ⬇️ button clicks on same video → race on sync_queue writes.",
+      "severity": "major",
+      "suggestion": "Add to Risks Summary: '| All | YouTube thumbnail CORS — fetch().blob() fail on cross-origin — medium — Mitigation: thumbnail load via <img> element + cache via Cache API on load event (no CORS call)' + corresponding Phase 4 / P0-T3 sub-task. '| 2 | QuotaExceededError after LRU — user storage still over quota — medium — Mitigation: post-LRU check, if still over → emit `QUOTA_EXHAUSTED` message + UI banner 儲存空間不足, 請手動清空' + corresponding Phase 2 task."
+    },
+    {
+      "section": "Phase 5 P5-T1 — crypto.randomUUID() availability",
+      "field": "Safari support missing",
+      "original": "P5-T1: 'batch_id UUID generation (frontend 用 crypto.randomUUID() or uuid lib)'",
+      "issue": "crypto.randomUUID() is available in Chrome 92+, Firefox 95+, Safari 15.4+. iOS Safari 15.4 was released March 2022, so very recent devices support it. But spec §1.1 + §11 mentions iOS Safari as a primary platform — no minimum iOS version stated. If any user is on iOS 15.0-15.3 (released Sep-Dec 2021), batch_id generation will fail and CACHE_BATCH won't work. No fallback in plan.",
+      "severity": "minor",
+      "suggestion": "Update P5-T1: 'batch_id UUID generation — primary: crypto.randomUUID() (Safari 15.4+, Chrome 92+, Firefox 95+); fallback: uuid v4 npm lib OR self-implemented UUID v4 (crypto.getRandomValues) for older Safari'. Or use crypto.getRandomValues polyfill. Either way, add Safari version check + fallback path."
+    },
+    {
+      "section": "Phase 4 P4-T4 — partial state retry behavior underspecified",
+      "field": "What happens when user clicks [🔄 重試縮圖]?",
+      "original": "P4-T4: 'Partial state handling — markdown OK + thumbnail 404 → ⚠️ 部分離線 + [🔄 重試縮圖] hover'",
+      "issue": "Plan says UI shows '[🔄 重試縮圖]' on hover but doesn't specify: (a) What message does frontend send? CACHE_VIDEO again? UNCACHE_VIDEO first? (b) Does it reset sync_queue entry? (c) Does it transition state back to 'downloading' or stay in 'partial' until thumbnail succeeds? (d) What if retry also fails? State stays 'partial' forever? Without this, implementer will guess and likely create inconsistent state machine.",
+      "severity": "minor",
+      "suggestion": "Expand P4-T4: 'Partial state retry: (1) user clicks [🔄 重試縮圖] → frontend SW.postMessage({type: 'CACHE_VIDEO', id}) — SW re-runs only thumbnail step (markdown_status preserved), (2) sync_queue new entry for thumbnail only, (3) state transition: partial → downloading (re-using markdown done stage), (4) thumbnail fail again → state returns to partial (no infinite loop), (5) success → state transitions to ready'. Also: UNCACHE_VIDEO before retry is unnecessary (overwrites anyway)."
+    },
+    {
+      "section": "Phase 5 P5-T2 — CACHE_BATCH concurrency: 3 is open question",
+      "field": "Plan picks 3 but spec §12 Q6 defers this",
+      "original": "P5-T2: 'CACHE_BATCH(ids[], options) message with options.batchId + concurrency: number (default 3)'",
+      "issue": "Spec §12 Q6 lists concurrency as open question: '批次下載併發數：3 個還是更多？（jsDelivr rate limit 風險）'. Plan P5-T2 picks 3 as default without resolving Q6. Plan should defer this to Phase 8 (or explicitly note 'concurrency default 3, will revisit in Phase 8 per spec Q6'). Hard-coding 3 in implementation before Q6 is decided risks rework.",
+      "severity": "minor",
+      "suggestion": "Update P5-T2: 'concurrency: number (default 3, will be re-evaluated in Phase 8 per spec §12 Q6 — jsDelivr rate limit empirical test)'. Add to Phase 8 P8-T1: 'Resolve Q6 concurrency: run 5/10/20 concurrent requests against jsDelivr, measure 429 rate, decide final concurrency cap'."
+    },
+    {
+      "section": "Phase 4 + Phase 5 concurrent — merge conflict risk",
+      "field": "Concurrent phases share SW message protocol + frontend init code",
+      "original": "Diagram: 'Phase 3 ──┬──→ Phase 4 ──┐'\n'              │              ├──→ Phase 7'\n'              └──→ Phase 5 ──┘'\n\nP4-T2: 'Stage events listener — CACHE_PROGRESS × 2 + CACHE_DONE'\n\nP5-T2: 'CACHE_BATCH(ids[], options) message with options.batchId'\n\nP5-T4: 'BATCH_DONE event handler + progress bar (Section 7.5)'",
+      "issue": "Phase 4 and Phase 5 are concurrent per diagram and both: (a) register message listeners on navigator.serviceWorker (Phase 4: CACHE_PROGRESS + CACHE_DONE; Phase 5: BATCH_DONE), (b) modify the shared SWMessage types file (P1-T7), (c) touch the toolbar/button area. No coordination plan: which branch, which commit ordering, who owns types/sw-message.ts. Plan also doesn't specify if both can be implemented on same branch (likely yes) or need feature flags (overkill for this size). For a single-developer project this is OK if acknowledged, but plan should say so.",
+      "severity": "minor",
+      "suggestion": "Add note in Phase 4 + Phase 5 sections: 'Both phases modify the same SW message listener setup (Phase 4 in app.js init or Alpine component; Phase 5 in toolbar). Implementer should: (a) complete Phase 4 first (single ⬇️ + stage events), (b) then Phase 5 (adds batch listeners without touching Phase 4 code), (c) shared types file (P1-T7) is written once and not edited in either phase'. Update diagram to show Phase 4 → Phase 5 sequential, not concurrent."
+    },
+    {
+      "section": "Phase 0 P0-T3 — LOCAL_JSON_URL source of truth",
+      "field": "Plan uses LOCAL_JSON_URL but doesn't say where it's defined for SW",
+      "original": "P0-T3: 'Fetch handler route update (Section 5.2 嚴格 hostname check): url.href === localJsonAbsolute || (url.pathname endsWith /data/video-notes.json && url.hostname === self.location.hostname)'\n\nP0-T2: 'New: 只有 LOCAL_JSON_URL (relative ./data/video-notes.json → absolute URL 比較)'",
+      "issue": "Current app.js line 11 defines `LOCAL_JSON_URL = './data/video-notes.json'`. Current sw.js has no such constant. Plan P0-T2/P0-T3 use LOCAL_JSON_URL but doesn't specify: (a) SW needs its own LOCAL_JSON_URL constant (since SW can't import from app.js), (b) drift risk: if frontend changes LOCAL_JSON_URL, SW won't auto-sync. Spec §5.2 example shows SW computing it inline (`const localJsonAbsolute = new URL(LOCAL_JSON_URL, self.location.href).href;`) but the literal string `./data/video-notes.json` needs to exist in both places.",
+      "severity": "minor",
+      "suggestion": "Update P0-T3 to specify: 'SW file (sw.js) declares `const LOCAL_JSON_URL = ./data/video-notes.json;` at top. Fetch handler compares against this. Drift mitigation: SW build script (or manual discipline) keeps SW LOCAL_JSON_URL in sync with app.js LOCAL_JSON_URL'. Alternative: hard-code the literal in SW comment with reference to app.js source."
+    },
+    {
+      "section": "Phase 1 P1-T7 — IndexedDB schema types not shared",
+      "field": "SWMessage types planned but videos / cache_status / sync_queue / meta interfaces not",
+      "original": "P1-T7: 'Frontend TypeScript types 統一 — SWMessage union type (7 種 message format)'\n\nNo task for IndexedDB schema types (videos / cache_status / sync_queue / meta interfaces per spec §6.1)",
+      "issue": "Plan introduces shared message types via P1-T7 but doesn't introduce shared IndexedDB schema types. Spec §6.1 defines 4 object stores (videos, cache_status, sync_queue, meta) with many fields each. SW writes to them, frontend reads from them (cache_status for UI badges, meta for settings). Without shared types, frontend reading IndexedDB will have ad-hoc field access with no type safety — same drift risk that P1-T7 was meant to prevent for messages.",
+      "severity": "minor",
+      "suggestion": "Extend P1-T7: 'Frontend TypeScript types 統一 — SWMessage union type (7 種 message format) + IndexedDB schema types (videos, cache_status, sync_queue, meta) per spec §6.1'. Both SW and frontend use the same types file for IndexedDB CRUD."
+    },
+    {
+      "section": "Phase 7 P7-T6 — Lighthouse score in production",
+      "field": "Dev vs prod parity assumption",
+      "original": "P7-T6: 'Lighthouse check — perf >= 90, a11y >= 95, PWA badge, offline-capable verified — 0.5 hr'\n\nP7-T6 risk: 'Lighthouse score 在 production 跟 dev 不同 — low — Production smoke test'",
+      "issue": "P7-T6 doesn't specify where to run Lighthouse — local dev server? Pages production? Both? Risk acknowledged but mitigation is vague ('Production smoke test'). For offline-mode PWA, Lighthouse PWA badge specifically requires: (a) HTTPS, (b) valid manifest.webmanifest with icons, (c) registered SW with fetch handler, (d) start_url responds 200. If PWA badge isn't met, the 'offline-capable' criterion fails. Recommend running Lighthouse against production Pages URL (not localhost).",
+      "severity": "minor",
+      "suggestion": "Update P7-T6: 'Lighthouse check on production Pages URL (https://travisebill.github.io/video-notes/) — perf ≥ 90, a11y ≥ 95, PWA badge verified, offline-capable verified'. Local Lighthouse not relevant — Pages is the production target. Use Chrome DevTools Lighthouse panel or `lighthouse-cli --view https://travisebill.github.io/video-notes/`."
+    },
+    {
+      "section": "Phase 7 P7-T5 — Manual PWA test scope underspecified",
+      "field": "Manual test missing iOS Safari / Android Chrome / Edge breakdown",
+      "original": "P7-T5: 'Manual PWA install + offline + cache flow (Section 9.4 layer) — 1 hr'",
+      "issue": "Spec §9.4 lists: iOS Safari PWA / Android Chrome PWA / Lighthouse / 跨瀏覽器 smoke (Safari / Chrome / Edge). Plan P7-T5 generic 'Manual PWA install + offline + cache flow' doesn't break out: (a) iOS Safari PWA install (Add to Home Screen) + 7-day eviction manual sim (via Safari Web Inspector → Application → IndexedDB delete), (b) Android Chrome PWA install + background fetch verification, (c) Edge PWA install + offline mode. 1 hr is tight if all three platforms need real-device testing.",
+      "severity": "minor",
+      "suggestion": "Expand P7-T5 into explicit checklist: P7-T5a 'Manual iOS Safari PWA: install + offline read + simulated 7-day eviction' (0.5 hr), P7-T5b 'Manual Android Chrome PWA: install + offline + auto cache' (0.5 hr), P7-T5c 'Manual Edge PWA: install + smoke' (0.5 hr, optional for v1 if time-constrained). Increase P7-T5 to 1-2 hr."
+    },
+    {
+      "section": "Phase 7 P7-T3 — Frontend state machine unit tests",
+      "field": "0.5 hr for 9 events × 6 states is OK but missing edge case tests",
+      "original": "P7-T3: 'Frontend state machine unit tests — 6 states transitions, all events — 0.5 hr'\n\nP4-T2: 'Stage events listener — CACHE_PROGRESS × 2 + CACHE_DONE with success + partial flags'",
+      "issue": "Plan P4-T2 says stage events listener has CACHE_PROGRESS × 2 (markdown + thumbnail) + CACHE_DONE (success/partial). That's 2 events × 2 stages × 2 statuses (start/done) + CACHE_DONE × 2 (success/fail) + BATCH_DONE (separate phase) = many combinations. 0.5 hr OK for happy-path 6×6 matrix but missing: (a) race condition (thumbnail done arrives before markdown done due to out-of-order), (b) duplicate events (same CACHE_PROGRESS fired twice due to SW retry), (c) state machine called before SW ready (Phase 3 init issue). These are the kinds of edge cases that become flaky tests in CI.",
+      "severity": "minor",
+      "suggestion": "Expand P7-T3 to 1 hr with explicit test cases: happy path 6×6 + out-of-order events + duplicate events + pre-ready events. List 9 specific test cases so implementer doesn't ship happy-path-only."
+    },
+    {
+      "section": "Carry-over audit trail workflow (gap #2) — partial application",
+      "field": "Plan uses spawn-report-then-fix for THIS review but plan's own fixes won't use it",
+      "original": "Open Items #2: '此次 plan review 採 spawn-report-then-fix 兩階段（先 spawn mame sub-agent → 拿回 JSON report → 再修 plan）'\n\nPlan Phase 8 P8-T2: '若 spec 有變動，回頭 commit + push + re-run Mame review'",
+      "issue": "Gap #2 lesson says 'Future review workflow 分兩階段: spawn review-only sub-agent → 拿回 report JSON → 對 report 逐 issue 修 + commit msg 列對應 issue id'. Plan applies this to the CURRENT plan review (good) but doesn't require it for future spec reviews (Phase 8 P8-T2 just says 're-run Mame review' without specifying spawn-report-then-fix workflow or commit msg structure). Risk: same lesson gets re-learned every review cycle.",
+      "severity": "minor",
+      "suggestion": "Update P8-T2: '若 spec 有變動，採 spawn-report-then-fix 兩階段：先 spawn Mame review-only sub-agent → 拿回 JSON report (含 reviewer_subagent_session per gap #1) → 對 report 逐 issue 修 + commit msg 列對應 issue id (per gap #2)'. Apply gap #1 (capture childSessionKey) and gap #2 (two-stage workflow) explicitly to future review cycles."
+    },
+    {
+      "section": "Carry-over audit trail workflow (gap #1) — THIS review's session not yet recorded",
+      "field": "Plan review audit JSON should pre-capture reviewer_subagent_session",
+      "original": "Open Items #1: 'reviewer_subagent_session not captured — Plan review 必須 pre-capture childSessionKey 到 audit JSON 的 review.reviewer_subagent_session field'\n\nNo 'qa-offline-mode-impl-plan.json' audit file exists in docs/ yet",
+      "issue": "Gap #1 lesson learned: 'Future Mame review 第一步 spawn sub-agent 拿到 childSessionKey 立即寫入 audit JSON 的 review.reviewer_subagent_session field'. This plan review is happening NOW (I'm a sub-agent, sessionKey = 'agent:mame:subagent:5bcc3304-...'), but plan doesn't say where the audit JSON for THIS plan review will be written. Likely target: docs/qa-offline-mode-impl-plan-2026-07-20.json. Without explicit task, audit JSON may be written post-hoc (re-creating gap #1 same as spec review).",
+      "severity": "minor",
+      "suggestion": "Add explicit task in Phase 8 P8-T2 or as a pre-step in Plan review workflow: 'Create docs/qa-offline-mode-impl-plan-2026-07-20.json with reviewer_subagent_session = this plan review's childSessionKey pre-captured (per gap #1 lesson)'. Or as Mame workflow: Mame writes audit JSON in same turn as this report. (Per gap #1 fix, this current report includes the childSessionKey in the 'review.reviewer_subagent_session' field.)"
+    },
+    {
+      "section": "Phase 6 P6-T5 — Rollback 'frontend 偵測 SW version 變化' implementation detail",
+      "field": "Missing controllerchange event listener placement",
+      "original": "P6-T5: 'frontend 偵測 SW version 變化 → 主動 reset cache_status UI + IndexedDB → 重新 trigger SEED'",
+      "issue": "'Frontend 偵測 SW version 變化' is vague about implementation. Options: (a) navigator.serviceWorker.addEventListener('controllerchange', ...) — fires when SW controller changes (e.g., SW update activated), (b) compare current SW CACHE_VERSION to a known previous version stored in localStorage / meta.sw_version on every page load. Plan doesn't specify which. controllerchange is more robust (fires only on real changes); localStorage comparison is simpler but stale. Also: 'reset cache_status UI + IndexedDB' — clearing IndexedDB from frontend requires SW cooperation (frontend can't directly delete IndexedDB without going through SW or using IndexedDB API directly, which would conflict with SW's active connection).",
+      "severity": "minor",
+      "suggestion": "Expand P6-T5 (if kept): 'Frontend rollback detection: (1) listen `navigator.serviceWorker.addEventListener('controllerchange', ...)` — fires on SW update activate, (2) on event, postMessage {type: 'GET_SW_VERSION'} to new SW, compare response to meta.sw_version, if mismatch → postMessage {type: 'RESET_ALL_STATE'} (new SW-side handler that wipes + re-SEEDs)'. Don't delete IndexedDB directly from frontend — go through SW."
+    },
+    {
+      "section": "Phase 0 P0-T2 — json-v1 cache key migration",
+      "field": "'對已 cache 的舊 key 走 pass-through' is implementation-ambiguous",
+      "original": "P0-T2: '對已 cache 的舊 key 走 pass-through (不主動清，user access 時 miss → 重新 fetch latest) — 0.5 hr'",
+      "issue": "Plan says don't proactively clear old json-v1 cache keys (which used `https://raw.githubusercontent.com/.../video-notes.json`). Instead let them 'naturally expire' on access miss. But (a) Cache Storage doesn't auto-expire — old keys persist until manually deleted, taking up quota that counts against iOS 50MB limit. (b) Old key will never be 'accessed' anymore because new code only requests LOCAL_JSON_URL — so old key sits in cache forever, eating quota silently. (c) LRU doesn't touch json-v1 (spec §5.4 only evicts markdown + thumbnail), so LRU won't free this space.",
+      "severity": "minor",
+      "suggestion": "Update P0-T2: '對已 cache 的舊 key — SW activate handler scans for any `json-v1` entries NOT matching LOCAL_JSON_URL → caches.delete() them proactively + add to new key set if same content fetched recently (network-first fallback handles this naturally)'. Or: 'add cleanup logic to LRU routine — include stale json-v1 keys in LRU eviction criteria'. Otherwise iOS users lose quota forever to phantom cache."
+    },
+    {
+      "section": "Phase 5 P5-T4 — BATCH_DONE progress bar reference",
+      "field": "Cross-reference check OK but spec §7.5 has more detail than captured",
+      "original": "P5-T4: 'BATCH_DONE event handler + progress bar (Section 7.5)'\n\nSpec §7.5: '當 CACHE_BATCH 進行中: [████████████████░░░░░░░░] 60% — 下載 42 / 70 支（主題：AI / LLM） ⏱️ 預估剩餘 30 秒 [取消]'",
+      "issue": "Plan P5-T4 references spec §7.5 but doesn't capture: (a) progress bar format ('[████░░░░] 60% — 下載 N / M 支'), (b) ETA calculation ('預估剩餘 30 秒' — needs avg-per-item timing), (c) [取消] button — already in P5-T3 but progress bar should embed it. Implementer reading P5-T4 may miss these UI details and produce bare progress bar without ETA or cancel button placement.",
+      "severity": "minor",
+      "suggestion": "Expand P5-T4: 'BATCH_DONE event handler + progress bar per spec §7.5 — UI format: `[████████░░░░] 60% — 下載 42 / 70 支（主題：AI / LLM） ⏱️ 預估剩餘 30 秒 [取消]`. ETA calculation: avg(per-item duration from start of batch) × items_remaining. Cancel button in P5-T3 mounted inside progress bar container, hidden when batch completes.'"
+    },
+    {
+      "section": "Phase 7 P7-T7 — CACHE_VERSION bump not explicit",
+      "field": "Spec §10 says 'v1.8-pwa → v2.0-offline' but plan doesn't have CACHE_VERSION bump task",
+      "original": "Spec §10.3: 'CACHE_VERSION bump（v1.8-pwa → v2.0-offline）+ deploy main + Pages build'\n\nPlan P7-T7: 'Pages deploy + post-deploy smoke test — git subtree push --prefix=docs origin gh-pages, curl 200, qa JSON reachable, navigation OK'",
+      "issue": "Spec §10 explicitly says CACHE_VERSION bump from v1.8-pwa to v2.0-offline as part of production deploy. Plan P7-T7 skips this — just deploys. Per Ryo's AGENTS.md '規則 5: 每次改 CSS / JS 都要 bump SW CACHE_VERSION' — this is mandatory PWA practice. Without bump, users will get stale app-shell cache, new SW message handlers won't activate, ⬇️ button will use old code. This is the #1 most common PWA deploy bug per AGENTS.md.",
+      "severity": "minor",
+      "suggestion": "Update P7-T7: 'Pages deploy + post-deploy smoke test — STEP 1: bump CACHE_VERSION in docs/sw.js from `v1.8-pwa` to `v2.0-offline` (matches spec §10.3). STEP 2: git subtree push --prefix=docs origin gh-pages. STEP 3: post-deploy smoke (curl 200, qa JSON reachable, navigation OK). STEP 4: verify on real iOS Safari that new SW activates (manifest, message handlers work)'. Bump is the first step, not afterthought."
+    }
+  ],
+  "verified": [
+    "Phase Overview table captures all 8 phases (0-8) with time estimates summing to 28-40 hr (close to stated range)",
+    "Phase ordering mostly sound: Phase 0 (schema) → Phase 1 (SW API) → Phase 2 (background tasks) → Phase 3 (frontend init) → Phase 4 + 5 (frontend UI) → Phase 6 (migration/rollback) → Phase 7 (test/deploy)",
+    "Phase 0 P0-T1 covers spec §6.1 schema additions (meta store + videos.last_verified_cache_state + sync_queue.batch_id) + data-preserving requirement — correct",
+    "Phase 0 P0-T2 addresses spec M-3 fix: json-v1 cache key limited to LOCAL_JSON_URL (avoids canonicalization collision)",
+    "Phase 0 P0-T3 implements spec §5.2 strict hostname check (url.href === localJsonAbsolute || hostname === self.location.hostname) — correct",
+    "Phase 1 P1-T1 SEED_INDEXEDDB 7-step SOP matches spec §5.3 — correct",
+    "Phase 1 P1-T2 CACHE_VIDEO 13-step refactor with stage events (CACHE_PROGRESS × 2 + CACHE_DONE with partial flag) matches spec C-4 fix — correct",
+    "Phase 1 P1-T3 CACHE_BATCH + CANCEL_BATCH with AbortController race handling matches spec C-2 fix — correct",
+    "Phase 1 P1-T5 / P1-T6 define AUTO_CACHE_DONE + LRU_EVICTED message schemas upfront so Phase 2 can emit them — good forward planning",
+    "Phase 2 P2-T2 LRU always-on + mutex (skip when batch in-flight) matches spec M-2 fix — correct",
+    "Phase 2 P2-T3 manual_cached sacred (LRU excludes manual_cached=true) matches spec M-1 fix — correct",
+    "Phase 2 P2-T4 ShouldNotify 24h dedupe + last_auto_cache_notification meta key matches spec M-4 fix — correct",
+    "Phase 2 P2-T5 last_seeded_at 1h dedupe matches spec §5.4 + §5.3 trigger logic — correct",
+    "Phase 3 P3-T1 + P3-T2 + P3-T3 capture spec §7.1 'initializing' state + Frontend SOP (await sw.ready → await seedIndexedDB → enable ⬇️) matches spec M-5 fix — correct",
+    "Phase 4 P4-T1 6 states UI table matches spec §7.1 (initializing / pending / downloading / ready / partial / failed) — correct",
+    "Phase 4 P4-T2 stage events listener (CACHE_PROGRESS × 2 + CACHE_DONE with success + partial) matches spec §7.1 + §5.3 — correct",
+    "Phase 4 P4-T3 progress calculation (markdown done = 50%, thumbnail done = 100%) matches spec §7.1 — correct",
+    "Phase 4 P4-T4 partial state handling (⚠️ 部分離線 + [🔄 重試縮圖]) matches spec M-6 fix — correct",
+    "Phase 5 P5-T1 batch_id UUID generation correct",
+    "Phase 5 P5-T3 CANCEL_BATCH button with AbortController UX matches spec §7.5 [取消] behavior — correct",
+    "Phase 6 P6-T4 iOS 7-day eviction detection (IndexedDB exists but Cache Storage empty → mark last_verified_cache_state = evicted) matches spec C-5 fix — correct",
+    "Phase 7 P7-T1 + P7-T2 + P7-T3 + P7-T4 + P7-T5 + P7-T6 cover spec §9.1 + §9.2 + §9.3 + §9.4 testing layers — correct",
+    "Phase 7 P7-T6 Lighthouse targets (perf ≥90, a11y ≥95, PWA badge) match spec §10.2 — correct",
+    "Risks Summary captures main risks: migration data loss, CACHE_VIDEO breaking, LRU mutex race, manual_cached preservation, cross-platform UI, iOS 7-day, SW auto-update race",
+    "Verification Gate: re-run Mame review at Phase 6 → 7 boundary matches sister'spec review pattern (commit 4e00533) — good",
+    "Phase 8 P8-T1 resolves spec §12 open questions + P8-T2 re-runs Mame review on any spec changes — correct",
+    "Open Items section correctly captures all 4 carry-overs from spec review audit (reviewer_subagent_session / spawn-report-then-fix / minor: 0 explanation / spec version frontmatter)",
+    "Plan format (id, task, estimate, risk, mitigation, acceptance criteria) is Mame-friendly and traceable",
+    "Total time estimate 28-40 hr is in realistic ballpark for 8 phases of PWA offline mode (excluding critical gaps flagged above)",
+    "Spec fixed issues (C-1 to M-6) are all reflected in corresponding plan tasks — no spec fixes lost in plan translation"
+  ],
+  "summary": {
+    "total_facts_checked": 38,
+    "issues_found": 31,
+    "critical_issues": 5,
+    "major_issues": 12,
+    "minor_issues": 14,
+    "hallucinations_suspected": 0,
+    "verified_correct": 30,
+    "missing_phase_coverage": [
+      "spec §7.3 儲存空間指示器 — no phase assignment",
+      "spec §7.4 離線狀態 banner — no phase assignment",
+      "spec §7.6 Auto cache 完成通知 UI — no phase assignment",
+      "spec §7.7 設定面板 (settings panel) — no phase assignment (entire feature)",
+      "spec §10.2 Staging deploy to gh-pages-staging — not in any phase",
+      "spec §10.4 Monitor (1 週) — not in any phase"
+    ],
+    "duplicate_tasks": [
+      "Phase 0 P0-T1 = Phase 6 P6-T1 (IndexedDB onupgradeneeded migration data-preserving)"
+    ],
+    "phase_boundary_issues": [
+      "P6-T2 + P6-T3 are SW lifecycle behavior, should be in Phase 1 (SW Message API / Lifecycle)",
+      "P6-T5 is frontend behavior (frontend 偵測 SW version), should be in Phase 3 or 4 (frontend)",
+      "P6-T4 + P6-T5 are unified 'detect state mismatch + reset' flow but listed as 2 separate tasks"
+    ],
+    "time_estimate_gaps": [
+      "Phase 5 + missing §7.7 settings panel likely needs 3-5 additional hours",
+      "Missing §7.3 + §7.4 + §7.6 likely needs 4-6 additional hours",
+      "Phase 7 P7-T2 (0.5 hr) likely needs 2-3 hr",
+      "Phase 7 P7-T4 (1 hr) likely needs 2-3 hr",
+      "Phase 8 (1-2 hr for 10 questions) likely needs 3-5 hr",
+      "Total realistic estimate: 35-54 hr, not 28-40 hr"
+    ],
+    "notes": [
+      "The 5 CRITICAL issues are: (1) Phase 7/Phase 8 dependency direction wrong (spec changes must precede deploy, not follow), (2) Phase 0 P0-T1 = Phase 6 P6-T1 duplicate IndexedDB migration task, (3) spec §7.7 Settings Panel has no phase assignment (entire feature), (4) Three UI components (§7.3 storage indicator / §7.4 offline banner / §7.6 auto cache notification UI) have no phase assignment, (5) Phase 1 P1-T7 introduces TS files but project is vanilla JS with no build toolchain — major project restructure not flagged.",
+      "The 12 MAJOR issues are: (6) P6-T5 rollback strategy mixes spec §10.1 options a/b without decision, (7) P6-T4 + P6-T5 should be unified 'stale-state recovery routine', (8) P2-T1 missing 2 of 3 auto cache triggers from spec §5.4, (9) spec §12 Q9 SEED retry policy unaddressed, (10) P7-T2 SW integration tests 0.5 hr is 4-6x underestimate, (11) P7-T4 E2E tests 1 hr is 2-3x underestimate, (12) Phase 8 1-2 hr for 10 questions is 2-3x underestimate, (13) carry-over #4 spec version frontmatter not mapped to plan task, (14) P1-T7 TS build infra not in plan (cross-ref with critical #5), (15) P6-T2/P6-T3 wrong phase boundary, (16) P1 risk statement mischaracterizes CACHE_VIDEO 9→13 step as 'breaking for old client' when it's actually SW-internal + frontend backward compat issue, (17) Risks Summary missing YouTube CORS / QuotaExceededError post-LRU.",
+      "The 14 MINOR issues are mostly detail-level: crypto.randomUUID() Safari support, P4-T4 partial retry underspecified, P5-T2 concurrency 3 hardcoded before Q6 resolved, Phase 4/5 concurrent merge coordination missing, LOCAL_JSON_URL source of truth not specified, IndexedDB schema types not in shared types file, Lighthouse where-to-run, P7-T5 manual test platform breakdown, P7-T3 state machine edge cases, carry-over #2 future review workflow not specified for Phase 8, carry-over #1 THIS review's audit JSON not pre-created, P6-T5 frontend detection implementation detail, P0-T2 old json-v1 key cleanup leaves phantom quota, P5-T4 progress bar format not captured, P7-T7 CACHE_VERSION bump not first step.",
+      "No HALLUCINATIONS detected — all tasks in plan map to spec sections. Issues are all 'missing' or 'underspecified' rather than 'fabricated'.",
+      "Plan correctly translates all spec fixes (C-1 through M-6) into corresponding phase tasks — no spec fixes lost.",
+      "Phase ordering is mostly correct; the only structural issue is Phase 7/8 dependency direction (critical #1) and Phase 6 SW lifecycle tasks in wrong phase (major #15).",
+      "RECOMMENDATION: Address the 5 CRITICAL + 12 MAJOR issues before Phase 0 starts. The 14 minor issues can be folded into Phase 8 (spec finalization) or accepted as known gaps during implementation. Time estimate should be revised to 35-54 hr to reflect missing UI features + underestimated testing tasks.",
+      "POST-FIX: Re-run Mame plan review (second pass) per gap #2 spawn-report-then-fix workflow before Phase 0 implementation begins."
+    ]
+  },
+  "generated_by": "Mame QA Agent (sub-agent)",
+  "generated_at": "2026-07-20T16:04:00+08:00"
+}
