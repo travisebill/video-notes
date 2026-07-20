@@ -11,6 +11,10 @@ const CACHE_VERSION = 'v1.8-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
+// Phase 1 P1-T7: Import shared SW message type constants + JSDoc typedef companion file
+// importScripts loads synchronously and exposes SW_MESSAGES as global var in SW scope
+importScripts('./types/sw-message.js');
+
 // Phase 0 P0-T1: IndexedDB schema v2 (initial setup — pre-existing sw.js had no IDB code)
 const DB_NAME = 'video-notes';
 const DB_VERSION = 2;
