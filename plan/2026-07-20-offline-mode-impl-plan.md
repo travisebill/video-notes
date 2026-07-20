@@ -7,6 +7,14 @@
 > Status: v2 ready for Mame plan review pass 2
 > Audit JSON (pass 1): [`qa-offline-mode-impl-plan-2026-07-20.json`](./qa-offline-mode-impl-plan-2026-07-20.json) — 31 issues (5 critical / 12 major / 14 minor)
 
+
+> **v3 revision (2026-07-20)**: Walked Plan C (per Mame pass-2 review):
+> - **Critical**: P5-T5a notification opt-in toggle removed (contradicts spec §7.7)
+> - **Major linked**: P0-T1 added `settings` object store for Settings Panel persistence
+> - **Major linked**: P5-T5c storage management expanded from 2 → 4 buttons (WIPE_MARKDOWN / WIPE_THUMBNAILS / WIPE_ALL_CACHE / WIPE_INDEXEDDB), with corresponding SW message types defined in Phase 1
+> - **Folded into phases**: Remaining 4 majors + 15 minors from pass-2 review tracked in `docs/qa-offline-mode-impl-plan-2026-07-20-pass2.json` and addressed during corresponding phase implementation
+> - **Time estimate**: 35-54 hr → 37-58 hr (slightly expanded per realistic total)
+
 ---
 
 ## Revision v1 → v2 (post audit pass 1)
@@ -195,7 +203,7 @@ All downstream message handlers depend on new schema fields. Need schema baselin
 | P5-T2 | `CACHE_BATCH` message with options.batchId + concurrency: 3 (default) | 1 hr | unchanged |
 | P5-T3 | `CANCEL_BATCH` button during batch in progress | 1 hr | unchanged |
 | P5-T4 | `BATCH_DONE` handler + progress bar (Section 7.5) | 0.5 hr | unchanged |
-| P5-T5 | **Settings Panel UI (§7.7)** (C-3 fixed) — 5 sub-tasks:<br>• P5-T5a: Toggles for offline mode / auto cache 30 / auto cache viewed / auto cache entire category / notification opt-in (4-5 toggles total)<br>• P5-T5b: Notification cooldown selector (6h/12h/24h/48h) wired to `meta.last_auto_cache_notification` reset<br>• P5-T5c: Storage management buttons (clear cache / clear IndexedDB) → call SW messages<br>• P5-T5d: Diagnostics pane (show IndexedDB size, cache size, last SW version, last sync timestamp)<br>• P5-T5e: Settings persistence (IndexedDB `settings` object store) | 3.5-5 hr | **C-3 fixed**: §7.7 fully covered |
+| P5-T5 | **Settings Panel UI (§7.7)** (C-3 fixed) — 5 sub-tasks:<br>• P5-T5a: Toggles for offline mode / auto cache 30 / auto cache viewed / auto cache entire category (4 toggles total — **notification opt-in removed per spec §7.7 '不可關但可調頻率' constraint**; T5b cooldown selector handles spec-compliant frequency)<br>• P5-T5b: Notification cooldown selector (6h/12h/24h/48h) wired to `meta.last_auto_cache_notification` reset<br>• P5-T5c: Storage management buttons (4-button granular: **WIPE_MARKDOWN** / **WIPE_THUMBNAILS** / **WIPE_ALL_CACHE** for cache buckets, **WIPE_INDEXEDDB** for full reset) — each button calls dedicated SW message handler (must define WIPE_MARKDOWN / WIPE_THUMBNAILS / WIPE_ALL_CACHE / WIPE_INDEXEDDB message types in Phase 1; WIPE_INDEXEDDB re-triggers SEED_INDEXEDDB after completion)<br>• P5-T5d: Diagnostics pane (show IndexedDB size, cache size, last SW version, last sync timestamp)<br>• P5-T5e: Settings persistence (IndexedDB `settings` object store) | 3.5-5 hr | **C-3 fixed**: §7.7 fully covered |
 | P5-T6 | **Storage Indicator (§7.3)** (C-4 fixed): toolbar corner indicator "📊 12.3 MB / 已離線 72 支" + click-expand panel showing IndexedDB size aggregation + Cache Storage per-bucket size | 2-3 hr | **C-4 fixed**: §7.3 covered |
 
 **Total**: 8-10 hr (up from 2-3 hr)
