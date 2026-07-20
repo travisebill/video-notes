@@ -302,6 +302,107 @@ async function handleSeedIndexedDB({ videos }) {
   return { written, updated };
 }
 
+/**
+ * Phase 1 P1-T4: UNCACHE_VIDEO handler
+ * @param {Object} payload
+ * @param {string} payload.id - video ID to remove from cache
+ */
+async function handleUncacheVideo({ id }) {
+  if (!id) throw new Error('UNCACHE_VIDEO: id required');
+  const db = await getDB();
+
+  // Find video record (for cache URLs)
+  const video = await new Promise((resolve, reject) => {
+    const tx = db.transaction('videos', 'readonly');
+    const req = tx.objectStore('videos').get(id);
+    req.onsuccess = () => resolve(req.result || null);
+    req.onerror = () => reject(req.error);
+  });
+
+  // Delete from cache buckets (markdown-v1 + thumbnails-v1 — created by P1-T2)
+  const cacheNames = await caches.keys();
+  const targetBuckets = ['markdown-v1', 'thumbnails-v1'];
+  await Promise.all(
+    targetBuckets
+      .filter((name) => cacheNames.includes(name))
+      .map((name) => caches.open(name).then((cache) =>
+        cache.keys().then((reqs) => Promise.all(
+          reqs.map((r) => r.url.includes(id) ? cache.delete(r) : Promise.resolve(false))
+        ))
+      ))
+  );
+
+  // Update videos store (reset cache_status fields to 'pending')
+  if (video) {
+    video.markdown_status = 'pending';
+    video.thumbnail_status = 'pending';
+    await new Promise((resolve, reject) => {
+      const tx = db.transaction('videos', 'readwrite');
+      tx.objectStore('videos').put(video);
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+    });
+  }
+
+  // Remove cache_status entry (so it doesn't appear in GET_CACHE_STATUS)
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction('cache_status', 'readwrite');
+    tx.objectStore('cache_status').delete(id);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+
+  return { ok: true, id };
+}
+
+/**
+ * Phase 1 P1-T4: GET_CACHE_STATUS handler
+ * @returns {Promise<{videos: Array<Object>}>}
+ */
+async function handleGetCacheStatus() {
+  const db = await getDB();
+  return await new Promise((resolve, reject) => {
+    const tx = db.transaction('cache_status', 'readonly');
+    const req = tx.objectStore('cache_status').getAll();
+    req.onsuccess = () => resolve({ videos: req.result || [] });
+    req.onerror = () => reject(req.error);
+  });
+}
+
+/**
+ * Phase 1 P1-T4: CLEAR_ALL_CACHE handler
+ * Clears markdown + thumbnails cache buckets (keep json cache).
+ * Marks all cache_status entries back to 'pending'.
+ * @returns {Promise<{ok: boolean, clearedBuckets: string[]}>}
+ */
+async function handleClearAllCache() {
+  // Delete only markdown + thumbnails cache buckets (keep json-v1)
+  const cacheNames = await caches.keys();
+  const targetBuckets = ['markdown-v1', 'thumbnails-v1'];
+  const cleared = targetBuckets.filter((name) => cacheNames.includes(name));
+  await Promise.all(cleared.map((name) => caches.delete(name)));
+
+  // Mark all cache_status entries back to 'pending'
+  const db = await getDB();
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction('cache_status', 'readwrite');
+    const store = tx.objectStore('cache_status');
+    const getAllReq = store.getAll();
+    getAllReq.onsuccess = () => {
+      for (const entry of getAllReq.result) {
+        entry.status = 'pending';
+        entry.markdown_status = 'pending';
+        entry.thumbnail_status = 'pending';
+        store.put(entry);
+      }
+    };
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+
+  return { ok: true, clearedBuckets: cleared };
+}
+
 self.addEventListener('message', (event) => {
   const data = event.data || {};
   const { type, ...payload } = data;
@@ -328,6 +429,36 @@ self.addEventListener('message', (event) => {
             error: err.message || String(err),
           });
         });
+      break;
+
+    case SW_MESSAGES.UNCACHE_VIDEO:
+      handleUncacheVideo(payload)
+        .then((result) => {
+          event.source.postMessage({ type: 'UNCACHE_VIDEO_DONE', ...result });
+        })
+        .catch((err) => event.source.postMessage({
+          type: 'UNCACHE_VIDEO_ERROR', error: err.message || String(err),
+        }));
+      break;
+
+    case SW_MESSAGES.GET_CACHE_STATUS:
+      handleGetCacheStatus()
+        .then((result) => {
+          event.source.postMessage({ type: 'GET_CACHE_STATUS_DONE', videos: result.videos });
+        })
+        .catch((err) => event.source.postMessage({
+          type: 'GET_CACHE_STATUS_ERROR', error: err.message || String(err),
+        }));
+      break;
+
+    case SW_MESSAGES.CLEAR_ALL_CACHE:
+      handleClearAllCache()
+        .then((result) => {
+          event.source.postMessage({ type: 'CLEAR_ALL_CACHE_DONE', ...result });
+        })
+        .catch((err) => event.source.postMessage({
+          type: 'CLEAR_ALL_CACHE_ERROR', error: err.message || String(err),
+        }));
       break;
 
     // TODO next turn (P1-T2): case SW_MESSAGES.CACHE_VIDEO
