@@ -1,0 +1,267 @@
+{
+  "spec": "docs/plan/2026-07-20-offline-mode-impl-plan.md",
+  "spec_title": "Video Notes PWA — Offline Mode Implementation Plan",
+  "spec_version_reviewed": "v2 (commit 60f9796)",
+  "pass1_audit_json": "docs/qa-offline-mode-impl-plan-2026-07-20.json",
+  "pass1_issues_count": 31,
+  "review": {
+    "date": "2026-07-20",
+    "reviewer": "Mame QA Agent (sub-agent spawn)",
+    "reviewer_role": "QA Engineer (first-class configured agent agentId=\"mame\")",
+    "review_methodology": "Pass 2 verification — verify all 17 v2 fixes correctly address original issues + look for NEW issues introduced by v2 changes + sanity-check time estimates + check for any remaining gap that blocks Phase 0 implementation",
+    "review_flow": "sub-agent spawn Mame (auto-announce) → mame review plan v2 → produce pass 2 audit JSON → main agent (Ryo) iterates if needed",
+    "pass_2_session_key": "agent:mame:subagent:b17d1d83-2126-48b3-b468-1d7f6c482c5a",
+    "plan_status_at_review": "v2 — post pass 1 fixes, pending Mame review pass 2"
+  },
+  "issues": [
+    {
+      "section": "Phase 5 P5-T5c — Storage management buttons",
+      "field": "Spec §7.7 lists 3 buttons (markdown / thumbnails / all); plan lists 2 (cache / IndexedDB)",
+      "original": "P5-T5c: 'Storage management buttons (clear cache / clear IndexedDB) → call SW messages'",
+      "issue": "Spec §7.7 'Storage 管理' explicitly lists THREE separate buttons: '[🗑️ 清空 markdown cache] / [🗑️ 清空縮圖 cache] / [🗑️ 清空全部離線資料]'. Per-bucket distinction matters — user may want to clear thumbnails (taking ~5MB on 72 videos) while keeping markdown (still readable offline). Plan T5c collapses to 'clear cache / clear IndexedDB' — loses granularity. Implementer reading T5c will wire 2 buttons, user can't selectively clear thumbnails when quota tight on iOS 50MB limit (spec M-1 mitigation context).",
+      "severity": "major",
+      "suggestion": "Expand P5-T5c to 3 distinct buttons matching spec §7.7: 'P5-T5c: Storage management buttons (3 actions): (c1) [🗑️ 清空 markdown cache] → SW message {type: 'CLEAR_ALL_CACHE', bucket: 'markdown'} (new SW handler or extend CLEAR_ALL_CACHE), (c2) [🗑️ 清空縮圖 cache] → {type: 'CLEAR_ALL_CACHE', bucket: 'thumbnail'}, (c3) [🗑️ 清空全部離線資料] → {type: 'CLEAR_ALL_CACHE', bucket: 'all'} + IndexedDB videos/cache_status/sync_queue wipe'. Add to Phase 1 P1-T4 (or new P1-T10) the bucket parameter for CLEAR_ALL_CACHE."
+    },
+    {
+      "section": "Phase 5 P5-T5a — 'notification opt-in' toggle contradicts spec §7.7",
+      "field": "T5a lists 'notification opt-in' as a toggle; spec §7.7 says '不可關'",
+      "original": "P5-T5a: 'Toggles for offline mode / auto cache 30 / auto cache viewed / auto cache entire category / notification opt-in (4-5 toggles total)'",
+      "issue": "Spec §7.7 explicitly says: 'Auto cache 通知（24h cooldown，不可關但可調頻率）' — notification cannot be turned OFF, only frequency adjusted. Plan P5-T5a adds a 'notification opt-in' toggle which CONTRADICTS spec. If implemented, user could disable AUTO_CACHE_DONE notifications entirely — this is not spec-compliant. Additionally, this is inconsistent with M-4 fix (ShouldNotify dedupe logic is server-side, not toggle-based). M-4 is correctly addressed by P5-T5b (cooldown selector), but P5-T5a's 'opt-in' toggle should not exist.",
+      "severity": "critical",
+      "suggestion": "Remove 'notification opt-in' from P5-T5a. Reduce to 4 toggles: offline mode / auto cache 30 / auto cache viewed / auto cache entire category. Spec §7.7 notification frequency is handled by P5-T5b (cooldown selector 6h/12h/24h/48h) — this is the spec-compliant mechanism."
+    },
+    {
+      "section": "Phase 0 P0-T1 — IndexedDB schema migration missing `settings` object store",
+      "field": "P5-T5e creates new `settings` object store but P0-T1 v1→v2 migration doesn't include it",
+      "original": "P0-T1: 'IndexedDB schema migration v1→v2 in onupgradeneeded：• 新增 meta object store... 新增 videos.last_verified_cache_state field... 新增 sync_queue.batch_id field...'\n\nP5-T5e: 'Settings persistence (IndexedDB `settings` object store)'",
+      "issue": "P5-T5e creates a NEW IndexedDB object store called `settings`. IndexedDB does NOT auto-create object stores — they MUST be created in onupgradeneeded with a version bump. P0-T1 only bumps v1→v2 and creates `meta` store. If P5-T5e is implemented after P0-T1 ships, frontend calling `db.transaction('settings', 'readwrite')` will fail with NotFoundError because the store doesn't exist. Plan needs either: (a) add `settings` store to P0-T1 migration, OR (b) plan a v2→v3 migration in Phase 5. Neither is addressed. Phase 5 Risks row mentions 'Settings Panel IndexedDB schema conflict with existing `meta` store — new `settings` object store, separate from `meta`' but doesn't address the missing migration.",
+      "severity": "major",
+      "suggestion": "Update P0-T1: '新增 `settings` object store (key-value: offline_mode_enabled / auto_cache_recent_30_enabled / auto_cache_viewed_enabled / auto_cache_category_enabled / notification_cooldown_hours) — used by P5-T5e for settings persistence'. Add P0-T1 task description note that `settings` store schema is forward-compatible with future toggle additions."
+    },
+    {
+      "section": "Phase 5 P5-T5c — Storage management IndexedDB delete has no SW message handler",
+      "field": "'clear IndexedDB' button calls SW messages but no message handler exists in Phase 1",
+      "original": "P5-T5c: 'Storage management buttons (clear cache / clear IndexedDB) → call SW messages'\n\nP1-T4: 'UNCACHE_VIDEO(id) / GET_CACHE_STATUS() / CLEAR_ALL_CACHE() — verify unchanged'",
+      "issue": "P5-T5c says 'clear IndexedDB → call SW messages' but Phase 1 P1-T4 only defines UNCACHE_VIDEO (single video), GET_CACHE_STATUS, and CLEAR_ALL_CACHE (cache storage, not IndexedDB). There is NO SW message handler for clearing IndexedDB. Implementer will discover this gap when wiring the button. Frontend cannot directly delete IndexedDB without conflicting with SW's active connection (per pass 1 minor #29 best practice).",
+      "severity": "major",
+      "suggestion": "Either: (a) Add new Phase 1 task 'P1-T10 WIPE_INDEXEDDB() message handler — SW-side wipe of videos/cache_status/sync_queue/meta object stores + frontend postMessage ack' to support P5-T5c. (b) Add WIPE_INDEXEDDB message to P1-T4 scope. Update P5-T5c: 'clear IndexedDB button → SW.postMessage({type: 'WIPE_INDEXEDDB'}) → SW clears + emits WIPE_INDEXEDDB_DONE → frontend triggers SEED_INDEXEDDB reload'."
+    },
+    {
+      "section": "Phase Overview table — Phase 3 estimate inconsistent with Phase 3 task sum",
+      "field": "Overview says Phase 3 = 2-3 hr; Phase 3 internal summary says '3-3.5 hr'",
+      "original": "Phase Overview table line 67: '| **3. Frontend Init + Offline Banner** | ... | 2-3 hr | Phase 1 |'\n\nPhase 3 summary line 169: '**Total**: 3-3.5 hr'\n\nPhase 3 task sum: P3-T1 (0.5) + P3-T2 (1.5) + P3-T3 (0.5) + P3-T4 (1) = 3.5 hr",
+      "issue": "Phase Overview (master table used for total time estimate) shows Phase 3 as 2-3 hr. Phase 3's own summary correctly states 3-3.5 hr. The 0.5-1 hr difference was likely overlooked when adding P3-T4 in v2. Same issue propagates to the master '35-54 hr' total estimate — Phase 3 contributes 2-3 hr to the lower bound but actually needs 3-3.5 hr. This makes the lower bound optimistic by ~1 hr.",
+      "severity": "major",
+      "suggestion": "Update Phase Overview table line 67: '| **3. Frontend Init + Offline Banner** | ... | 3-3.5 hr | Phase 1 |'. Recompute total: sum new estimates and update master 35-54 hr to realistic 37-58 hr."
+    },
+    {
+      "section": "Phase Overview table — Phase 4 estimate inconsistent with Phase 4 task sum",
+      "field": "Overview says Phase 4 = 4-5 hr; Phase 4 internal summary says '5-6 hr'",
+      "original": "Phase Overview table line 68: '| **4. ⬇️ State Machine + Notification UI** | ... | 4-5 hr | Phase 1 + 3 |'\n\nPhase 4 summary line 184: '**Total**: 5-6 hr'\n\nPhase 4 task sum: P4-T1 (1) + P4-T2 (1.5) + P4-T3 (0.5) + P4-T4 (1) + P4-T5 (1) + P4-T6 (1) = 6 hr",
+      "issue": "Same inconsistency pattern as Phase 3. Phase Overview table underestimates Phase 4 by 1 hr. Phase 4 was extended with P4-T6 (auto cache notification UI per C-4 fix) but the Overview table wasn't updated. Lower bound of 35-54 hr estimate is optimistic by another 1 hr.",
+      "severity": "major",
+      "suggestion": "Update Phase Overview table line 68: '| **4. ⬇️ State Machine + Notification UI** | ... | 5-6 hr | Phase 1 + 3 |'. Recompute total estimate: 37-58 hr realistic."
+    },
+    {
+      "section": "Phase 1 P1-T8 — `meta.sw_version` write timing ambiguous",
+      "field": "'on SW install/activate' — when exactly does meta.sw_version get written?",
+      "original": "P1-T8: '`meta.sw_version` initialization on SW install/activate (moved from P6-T2 per M-11) — write `meta.sw_version = current_version` (e.g. `v2.0-offline`)'",
+      "issue": "P1-T8 says 'on SW install/activate' but doesn't disambiguate: (a) on `install` event (first SW install only — subsequent updates don't write), OR (b) on `activate` event (every SW activation, including updates). The two semantics behave very differently on v1.8-pwa → v2.0-offline upgrade: (a) If only on install: new SW installs, writes v2.0-offline to IndexedDB, then activates — sentinel check in P1-T9 reads v2.0-offline (matches!) → no reset. Good for normal upgrade. But if v1.8-pwa was the previous version and meta.sw_version didn't exist (schema v1), P1-T9 sees missing key → treats as fresh install → clears cache + re-SEED. Unnecessary on legit upgrade. (b) If only on activate: new SW activates (after old SW clients close), reads current meta.sw_version (v1.8-pwa? or missing?), compares to new version (v2.0-offline), mismatch → sentinel fires. Different behavior on upgrade vs fresh install. Plan doesn't pick. Implementer will guess.",
+      "severity": "major",
+      "suggestion": "Disambiguate in P1-T8: 'on SW `install` event (NOT activate) — write `meta.sw_version = current_version` to IndexedDB. This handles: (1) fresh install: writes new version, (2) SW update: writes new version, replacing old. Idempotent on version match.' Update P1-T9 to check both install-write and activate-sentinel: 'on SW `activate` event, check `meta.sw_version` — if missing (fresh install with no pre-existing data) OR value !== current_version, run recoverFromStaleState()'."
+    },
+    {
+      "section": "Phase 7b P7-T9 — Production monitoring metrics collection underspecified",
+      "field": "Plan only captures build status; spec §10.4 lists cache hit rate / download failure rate / iOS eviction rate",
+      "original": "P7-T9: 'Production monitoring setup (§10.4) (M-3 added): (a) add pages_builds telemetry check (already in pages.yml workflow), (b) add weekly Pages build status report (cron job?), (c) document \"1 週 monitor\" plan + owner (禮士) — review Pages builds daily for 7 days post-deploy'",
+      "issue": "Spec §10.4 lists 3 metrics: cache hit rate / download failure rate / iOS eviction rate. Plan P7-T9 only sets up build status monitoring (pages_builds workflow). Cache hit rate, download failure rate, and iOS eviction rate are NOT collected because there's no instrumentation plan. To collect these: SW needs to emit telemetry events (e.g., new CACHE_HIT, CACHE_MISS, DOWNLOAD_FAIL events) or write counters to IndexedDB that can be aggregated. None of this is in Phase 1 P1-T1 to P1-T9 message API. Without instrumentation, '1 週 monitor' only observes Pages build status, not actual user-facing offline UX metrics.",
+      "severity": "major",
+      "suggestion": "Add to Phase 1 or Phase 7a: 'P1-T10 / P7-T10: Telemetry instrumentation — SW emits {type: 'CACHE_HIT'} on cache hit, {type: 'DOWNLOAD_FAIL', id, reason} on fetch failure, writes `meta.cache_hit_count` + `meta.download_fail_count` counters. P7-T9 reads these via diagnostics pane (P5-T5d) for manual collection + sets up auto-report workflow'. Or accept limitation: 'spec §10.4 metrics deferred to v1.1 backlog — Phase 7b monitoring covers build health only, UX metrics require v2.1 instrumentation'."
+    },
+    {
+      "section": "Phase 3 P3-T4 — Offline banner text deviates from spec",
+      "field": "Plan banner text '你目前離線，部分功能可能受限' vs spec §7.4 '✈️ 離線模式 — 列表 / 結構化筆記 / 縮圖可用     逐字稿 / 口播稿 / 音檔需要網路'",
+      "original": "P3-T4: 'Offline status banner UI (§7.4) (C-4 fixed): \"online / offline\" indicator driven by `navigator.onLine` + SW message channel events. Offline: red banner \"你目前離線，部分功能可能受限\".'",
+      "issue": "Spec §7.4 specifies the EXACT banner text with specific 'what works / what doesn't' granularity: '✈️ 離線模式 — 列表 / 結構化筆記 / 縮圖可用     逐字稿 / 口播稿 / 音檔需要網路'. Plan P3-T4 uses generic '你目前離線，部分功能可能受限' — loses the granular info. This is a UX regression — user sees '部分功能受限' (vague) instead of learning specifically that '列表 / 結構化筆記 / 縮圖' are usable but '逐字稿 / 口播稿 / 音檔' need network. The whole point of offline mode UX is to tell user what they CAN do.",
+      "severity": "minor",
+      "suggestion": "Update P3-T4 to use spec verbatim text: 'Offline status banner UI (§7.4): `window.addEventListener(\"online\", hideOfflineBanner)` + `window.addEventListener(\"offline\", showOfflineBanner)`. Offline banner: ✈️ 離線模式 — 列表 / 結構化筆記 / 縮圖可用     逐字稿 / 口播稿 / 音檔需要網路'. Recommend red banner (per current plan) but text MUST match spec."
+    },
+    {
+      "section": "Phase 4 P4-T6 — AUTO_CACHE_DONE notification missing [查看] [關閉] buttons",
+      "field": "Plan only mentions banner text; spec §7.6 has [查看] [關閉] action buttons",
+      "original": "P4-T6: 'Auto cache complete notification UI (§7.6) (C-4 fixed): receive AUTO_CACHE_DONE message, dispatch banner \"✨ 自動下載 N 支新影片\" (only if shouldNotify === true per P2-T4 dedupe logic)'\n\nSpec §7.6: '✨ 自動下載 12 支新影片供離線使用   [查看] [關閉]'",
+      "issue": "Spec §7.6 shows TWO action buttons on the notification banner: [查看] (likely opens the new videos list) and [關閉] (dismisses banner). Plan P4-T6 mentions only the banner text but no action buttons. Without [查看], user has no quick way to navigate to the new videos. Without [關閉], banner may persist longer than expected. Minor UX regression vs spec.",
+      "severity": "minor",
+      "suggestion": "Update P4-T6: 'Auto cache complete notification UI (§7.6) — banner \"✨ 自動下載 N 支新影片供離線使用\" with [查看] button (scrolls to / highlights new videos in main list) + [關閉] button (dismisses banner + updates meta.last_auto_cache_notification). shouldNotify gating per P2-T4'."
+    },
+    {
+      "section": "Risks Summary — 'CORS preflight on CACHE_BATCH POST' is hallucinated/incorrect",
+      "field": "Risk row claims CACHE_BATCH uses HTTP POST; CACHE_BATCH is postMessage, not HTTP",
+      "original": "Risks Summary line 304: '| All | CORS preflight on CACHE_BATCH POST (M-13) | low | batch uses POST but preflight cached |'",
+      "issue": "CACHE_BATCH is a postMessage between frontend and ServiceWorker (SW-internal message API per spec §5.3). It is NOT an HTTP POST. The CORS preflight concern applies to HTTP requests with non-simple content-types/headers, not to postMessage. This risk row is a hallucination / misunderstanding of the CACHE_BATCH mechanism. Adding it to the risks table indicates reviewer confusion or template copy-paste from a different architecture.",
+      "severity": "minor",
+      "suggestion": "Remove this row from Risks Summary. If the intent was to capture a real CORS concern, replace with a meaningful risk: '| All | CORS preflight on JSON fetch (fallback) — low — video-notes.json fetched via SW fetch handler, falls under same-origin policy; jsDelivr/raw.githubusercontent fallbacks add preflight but Cache API caches the preflight response'."
+    },
+    {
+      "section": "Risks Summary — jsDelivr 24h cache mitigation may defeat caching",
+      "field": "Mitigation says 'add cache-bust param on fetch' — would always bypass cache",
+      "original": "Risks Summary line 302: '| All | jsDelivr 24h cache (M-13) — medium — add cache-bust param on fetch + UX hint \"正在更新…\" during transition'",
+      "issue": "Cache-bust param on fetch means ALWAYS bypass cache (e.g., `?t=${Date.now()}`). This defeats the purpose of Cache API for jsDelivr responses — every request becomes a network request. The actual mitigation should be: (a) on user-triggered refresh, add cache-bust, (b) on auto-detect of metadata version mismatch, invalidate cache, (c) for first load, use cache-as-is. 'Add cache-bust param on fetch' as blanket mitigation will burn quota and break offline read.",
+      "severity": "minor",
+      "suggestion": "Update mitigation: 'On user-triggered \"Check for updates\" action: add cache-bust param to force fresh fetch. On metadata version detection (e.g., server returns new `last_updated` timestamp): invalidate jsDelivr cache entry. For first load + no update signal: use cached response. UX hint: \"正在更新…\" only during explicit refresh action.'"
+    },
+    {
+      "section": "Phase 7a P7-T7 — CACHE_VERSION bump + 'Pages deploy smoke test' scope ambiguity",
+      "field": "P7-T7 in Testing phase includes 'Pages deploy smoke test' but actual deploy is Phase 7b P7-T10",
+      "original": "P7-T7: 'CACHE_VERSION bump (v1.9-pwa → v2.0-offline) + Pages deploy smoke test'\n\nP7-T10 (Phase 7b): 'Production deploy: git subtree push --prefix=docs origin gh-pages + post-deploy smoke test (curl 200, qa JSON reachable, navigation OK)'",
+      "issue": "P7-T7 is in Phase 7a (Testing) and includes 'Pages deploy smoke test'. But P7-T10 (Phase 7b) is the actual production deploy with `git subtree push` + post-deploy smoke test. P7-T7's 'Pages deploy smoke test' is ambiguous — does it mean: (a) local verification that the bumped CACHE_VERSION string is correct in docs/sw.js, (b) local serve + Playwright test that the bump didn't break SW registration, (c) actual git push? Reader will be confused. Recommend narrowing P7-T7 to the version bump code change + local verification, leaving actual deploy to Phase 7b.",
+      "severity": "minor",
+      "suggestion": "Clarify P7-T7 scope: 'CACHE_VERSION bump (v1.9-pwa → v2.0-offline) — STEP 1: edit docs/sw.js `const CACHE_VERSION = 'v2.0-offline'`, STEP 2: update app-shell cache name from `app-shell-v1.8-pwa` to `app-shell-v2.0-offline` (forces fresh SW install on user devices), STEP 3: local smoke test (npm start → verify SW registers with new version). Actual production push deferred to P7-T10 (Phase 7b).'"
+    },
+    {
+      "section": "Revision notes line 19 — task ID mismatch with actual plan",
+      "field": "Revision notes say 'P5-T5 to P5-T8' but actual plan only has P5-T5 (with 5 sub-tasks) + P5-T6",
+      "original": "Revision notes line 19: 'C-3: Spec §7.7 Settings Panel added as Phase 5 extension (P5-T5 to P5-T8)'\n\nRevision notes line 20: 'C-4: Spec §7.3 / §7.4 / §7.6 UIs assigned: §7.3 storage indicator → Phase 5 (P5-T9), §7.4 offline banner → Phase 3 (P3-T4), §7.6 auto cache notification → Phase 4 (P4-T6)'",
+      "issue": "Internal documentation inconsistency in v2 revision notes vs actual implementation: (a) Line 19 says Settings Panel added as 'P5-T5 to P5-T8' (4 tasks: T5, T6, T7, T8) but actual plan has P5-T5 (Settings Panel with 5 sub-tasks T5a-T5e) + P5-T6 (Storage Indicator). (b) Line 20 says §7.3 storage indicator assigned to P5-T9, but actual plan uses P5-T6. Reader following revision notes will look for tasks that don't exist.",
+      "severity": "minor",
+      "suggestion": "Update revision notes to match actual plan: 'C-3: Spec §7.7 Settings Panel added as Phase 5 P5-T5 (5 sub-tasks T5a-T5e for toggles, cooldown selector, storage mgmt, diagnostics, persistence)'. 'C-4: ... §7.3 storage indicator → Phase 5 (P5-T6), §7.4 offline banner → Phase 3 (P3-T4), §7.6 auto cache notification → Phase 4 (P4-T6)'."
+    },
+    {
+      "section": "Phase 1 P1-T9 — forward reference to Phase 6 routine",
+      "field": "P1-T9 references 'stale-state recovery (Phase 6 routine)' but P1 is before P6 in implementation order",
+      "original": "P1-T9: 'if `meta.sw_version` missing or mismatched → clear cache + trigger re-SEED via stale-state recovery (Phase 6 routine)'",
+      "issue": "P1-T9 is in Phase 1. Phase 6 routine `recoverFromStaleState()` is defined in P6-T2 (later phase). P1-T9 code needs to CALL this routine — but the routine doesn't exist yet when implementing Phase 1. Options for implementer: (a) write Phase 6 routine stub in Phase 1, (b) implement Phase 6 first then come back to P1-T9 wiring, (c) inline the logic in P1-T9 (then P6-T2 becomes duplicate). Plan doesn't disambiguate the implementation order for these cross-phase dependencies.",
+      "severity": "minor",
+      "suggestion": "Update P1-T9 to inline the sentinel logic directly: 'on SW `activate` event, check `meta.sw_version` — if missing or mismatch, run inline: cache.delete(markdown-v1) + cache.delete(thumbnails-v1) + meta.last_verified_cache_state = 'evicted' + postMessage to frontend controller `{type: 'STALE_STATE_DETECTED'}`'. Then P6-T2's `recoverFromStaleState()` routine is a generalized version that calls the same logic from both SW and frontend. Document the inline implementation in P1-T9 to avoid duplication with P6-T2."
+    },
+    {
+      "section": "Phase 4 P4-T5 — state machine test count carries over from pass 1 minor",
+      "field": "P4-T5 says 'unit test 9 events → 6 states'; P7-T3 unit tests are 0.5 hr — too tight for 54 combinations",
+      "original": "P4-T5: 'State machine reducer — unit test 9 events → 6 states'\n\nP7-T3: 'Frontend state machine unit tests — 6 states transitions, all events — 0.5 hr'",
+      "issue": "Pass 1 minor #27 flagged: 9 events × 6 states = 54 combinations, plus edge cases (out-of-order, duplicate, pre-ready events) is much more than 0.5 hr can cover. v2 didn't expand P7-T3 estimate. Carry-over from pass 1.",
+      "severity": "minor",
+      "suggestion": "Expand P7-T3 to 1 hr with explicit test case list: happy path 6×6 + 3 edge cases (out-of-order stage events, duplicate CACHE_PROGRESS, pre-ready event handling). Or: 0.5 hr for happy-path only + acknowledge edge cases in Phase 8 P8-T1 if they surface as open questions."
+    },
+    {
+      "section": "Phase 5 P5-T5a — 'offline mode toggle' implementation detail missing",
+      "field": "T5a lists 'offline mode' toggle; spec §7.7 says '啟用離線模式（SEED_INDEXEDDB 自動跑）' — what does toggling off do?",
+      "original": "P5-T5a: 'Toggles for offline mode / auto cache 30 / auto cache viewed / auto cache entire category / notification opt-in (4-5 toggles total)'\n\nSpec §7.7: '[✓] 啟用離線模式（SEED_INDEXEDDB 自動跑）'",
+      "issue": "T5a's 'offline mode' toggle is described as controlling SEED_INDEXEDDB automation. If toggled OFF: does SEED still run once on first PWA open? Or never? If never: IndexedDB stays empty, ⬇️ button stays disabled, offline mode non-functional. If toggling off disables auto cache but allows manual SEED on first install? Spec §7.7 doesn't clarify. Plan doesn't either. Implementer will guess.",
+      "severity": "minor",
+      "suggestion": "Add to P5-T5a: 'Toggles: offline mode (when OFF, skip SEED_INDEXEDDB call in app.js init() — IndexedDB videos stays empty, ⬇️ button stays disabled permanently, PWA becomes online-only mode). When ON (default), SEED runs in init(). State persists in IndexedDB `settings` store key `offline_mode_enabled = true|false`'. Auto cache 30 / auto cache viewed / auto cache category toggles: when OFF, skip corresponding step in spec §5.4 auto cache logic (step 1/3/4).'"
+    },
+    {
+      "section": "Phase 6 P6-T2 — frontend version mismatch detection trigger unclear",
+      "field": "'Frontend controller (after SEED failure + after explicit version mismatch detection)' — what IS the detection mechanism?",
+      "original": "P6-T2: '`recoverFromStaleState()` unified routine... callable from: (b) Frontend controller (after SEED failure + after explicit version mismatch detection) — defense-in-depth'",
+      "issue": "P6-T2 mentions frontend invokes recoverFromStaleState on 'explicit version mismatch detection'. But: (a) what fires 'explicit version mismatch detection'? `controllerchange` event? Periodic poll? Spec §10.1 option (b) says 'frontend 偵測 SW 版本變化（compare meta['sw_version']）'. (b) 'after SEED failure' — what defines SEED failure? P3-T2 retry policy says 3 attempts then hard fail. Is SEED failure defined as 3 failed attempts? Plan doesn't tie this together.",
+      "severity": "minor",
+      "suggestion": "Expand P6-T2 frontend invocation: '(b) Frontend controller calls recoverFromStaleState() under two conditions: (b1) on `navigator.serviceWorker.addEventListener('controllerchange', ...)` — fires when SW controller changes (SW update activated) — postMessage {type: 'GET_SW_VERSION'} to new SW, compare to `meta.sw_version` cached in settings store, mismatch → recoverFromStaleState(), (b2) on SEED_INDEXEDDB hard fail (P3-T2 after 3 attempts) — invoke recoverFromStaleState which calls SEED again after cache wipe'."
+    },
+    {
+      "section": "Phase 7a P7-T7 — CACHE_VERSION bump task in wrong phase per pass 1 minor #33",
+      "field": "Pass 1 noted CACHE_VERSION bump should be FIRST step of deploy, not afterthought — v2 places it in Testing phase",
+      "original": "P7-T7: 'CACHE_VERSION bump (v1.9-pwa → v2.0-offline) + Pages deploy smoke test' (in Phase 7a Testing)",
+      "issue": "Pass 1 minor #33: 'Bump is the first step, not afterthought. ... Per Ryo's AGENTS.md 規則 5: 每次改 CSS / JS 都要 bump SW CACHE_VERSION — this is mandatory PWA practice.' Pass 1 suggested placing bump as STEP 1 of production deploy. v2 placed it as part of Testing phase P7-T7 — but as a code change (edit docs/sw.js), it should ideally be at the START of deployment, not in Testing. Better placement: P7-T10 (Phase 7b) as STEP 1 of 'git subtree push' SOP.",
+      "severity": "minor",
+      "suggestion": "Move CACHE_VERSION bump from P7-T7 to P7-T10 (Phase 7b production deploy) as STEP 1: 'STEP 1: bump CACHE_VERSION in docs/sw.js from v1.9-pwa to v2.0-offline (matches spec §10.3). STEP 2: git subtree push. STEP 3: post-deploy smoke'. P7-T7 (Phase 7a) becomes 'Local SW registration smoke test' (verify SW registers with new version string on localhost) without the actual version bump — that's a deploy-time concern."
+    },
+    {
+      "section": "Phase 5 P5-T5c — settings object store schema unspecified",
+      "field": "P5-T5e says 'IndexedDB settings object store' but doesn't define schema (key-value? single record? per-toggle fields?)",
+      "original": "P5-T5e: 'Settings persistence (IndexedDB `settings` object store)'\n\nSpec §7.7: 4 toggles + 1 cooldown selector",
+      "issue": "P5-T5e mentions a `settings` object store but doesn't specify schema: key-value (e.g., `settings['offline_mode_enabled'] = true`)? Single record (`settings.settings = {offline_mode_enabled: true, ...}`)? Per-toggle fields (each toggle = separate key)? Cooldown selector — is `notification_cooldown_hours` a key in settings or a separate meta key? Phase 5 Risks row mentions 'IndexedDB schema conflict with existing `meta` store — new `settings` object store, separate from `meta`' but doesn't define schema. Implementer will design ad-hoc.",
+      "severity": "minor",
+      "suggestion": "Update P5-T5e with schema spec: 'IndexedDB `settings` object store (key-value): keys = ['offline_mode_enabled', 'auto_cache_recent_30_enabled', 'auto_cache_viewed_enabled', 'auto_cache_category_enabled', 'notification_cooldown_hours'], values = boolean (toggles) | number (cooldown: 6/12/24/48). Default values: all enabled + cooldown=24h. Read on app init; write on toggle change. Add to P0-T1 migration: create `settings` store + initialize defaults'."
+    },
+    {
+      "section": "Phase 5 P5-T5c — 'clear IndexedDB' button semantics conflict with manual_cached preservation",
+      "field": "'Clear all 離線資料' should also wipe manual_cached videos — clarify behavior",
+      "original": "P5-T5c: 'Storage management buttons (clear cache / clear IndexedDB) → call SW messages'\n\nSpec M-1: 'manual_cached=true 神聖不可侵犯'",
+      "issue": "Spec M-1 says manual_cached videos cannot be deleted by LRU. But [🗑️ 清空全部離線資料] button is a USER-EXPLICIT action — should it respect manual_cached or clear it too? User clicked the button deliberately, so they presumably want everything cleared. Plan doesn't disambiguate. Implementer might preserve manual_cached (consistent with M-1) → user clicks 'clear all' and sees some videos still cached → confusion. Or might not preserve (clears all per user intent) → violates M-1 spirit.",
+      "severity": "minor",
+      "suggestion": "Update P5-T5c with confirmation dialog: '[🗑️ 清空全部離線資料] button → click triggers confirmation modal \"即將清空 N 支離線影片（含手動下載的 M 支）。繼續？\" [確認清空] [取消]. On confirm: WIPE_INDEXEDDB + CLEAR_ALL_CACHE — ALL videos removed regardless of manual_cached. Per user-explicit action, overrides M-1 preservation'."
+    },
+    {
+      "section": "Phase 1 P1-T7 risk — JSDoc import claim is technically wrong",
+      "field": "Risk mitigation says 'SW imports via dynamic `import()` for IDE support'",
+      "original": "P1-T7 risk: 'Frontend JSDoc types drift from SW runtime message format — medium — `types/sw-message.js` shared file; SW imports via dynamic `import()` for IDE support; CI lint check'",
+      "issue": "Classic Service Workers (the project's setup per current sw.js — no module type declaration) cannot use `import()` (dynamic or static). Only `importScripts()` works. The actual mechanism for shared JSDoc typedefs in vanilla JS projects is: (1) put `@typedef` in a shared .js file (e.g., `types/sw-message.js`), (2) consumers reference it via `/** @typedef {import('./types/sw-message').SWMessage} */` in JSDoc comments or via `/// <reference path=\"types/sw-message.js\" />` at top of file. No runtime import needed — JSDoc is comment-only. Risk mitigation overcomplicates with 'dynamic import()' which is impossible in SW context.",
+      "severity": "minor",
+      "suggestion": "Update P1-T7 risk mitigation: 'types/sw-message.js shared file with @typedef SWMessage union; both sw.js and app.js reference via `/// <reference path=\"./types/sw-message.js\" />` directive (no runtime import needed — JSDoc is comment-only, IDE reads comments for type hints); CI lint check via `// @ts-check` directive + eslint with jsdoc plugin to validate typedef references'."
+    },
+    {
+      "section": "Phase 6 — confusing task renumbering documentation",
+      "field": "Phase 6 'rebuilt' section describes complex renumbering that may confuse implementer",
+      "original": "Phase 6 'rebuilt per C-2, M-1, M-2, M-11':\n- P6-T1 (was T2) moved to Phase 1 as P1-T8\n- P6-T2 (was T3) moved to Phase 1 as P1-T9\n- P6-T1 original (duplicate of P0-T1) DROPPED (C-2 fix)\n- P6-T4 original + P6-T5 original UNIFIED (M-1/M-2 fix)",
+      "issue": "The Phase 6 'rebuilt' section has confusing logic: 'P6-T1 (was T2) moved' implies T1 was the new ID and T2 was the original — but then 'P6-T1 original ... DROPPED' implies P6-T1 was the original. So: original Phase 6 had 5 tasks (T1-T5), where T1 was the dup of P0-T1. After fixes: T2 → Phase 1 P1-T8, T3 → Phase 1 P1-T9, T1 (dup) dropped, T4+T5 unified. New Phase 6 has T1 (validation), T2 (unified routine), T3 (test). Reader has to mentally reconstruct which old ID maps to which new ID + which was dropped. This is a documentation smell.",
+      "severity": "minor",
+      "suggestion": "Replace Phase 6 'rebuilt' section with a cleaner mapping table: 'Original Phase 6 tasks: P6-T1 (dropped — dup of P0-T1) | P6-T2 (→ P1-T8) | P6-T3 (→ P1-T9) | P6-T4 (unified into P6-T2 below) | P6-T5 (unified into P6-T2 below). New Phase 6: P6-T1 (validation, replaces dropped T1) | P6-T2 (unified recoverFromStaleState, from T4+T5) | P6-T3 (test for P6-T2).' Or simply: show old IDs alongside new IDs in the task table."
+    }
+  ],
+  "verified": [
+    "C-1 fixed correctly: Phase 7 split into 7a (Testing) + 7b (Deploy), Phase 8 inserted between them — implementation order diagram now shows 'Phase 7a → Phase 8 → Phase 7b' correctly. Spec changes can no longer be applied post-deploy.",
+    "C-2 fixed correctly: P0-T1 retained as canonical IndexedDB migration task. Original P6-T1 dropped. New P6-T1 created with validation-only role (different task, same ID — minor numbering smell but functionally clear via 'renamed role' note).",
+    "C-3 fixed correctly: Spec §7.7 Settings Panel added as P5-T5 with 5 sub-tasks (T5a toggles, T5b cooldown, T5c storage mgmt, T5d diagnostics, T5e persistence). All 4 spec §7.7 sections (toggles / cooldown / storage mgmt / diagnostics) addressed. (NEW ISSUE found: T5a 'notification opt-in' toggle contradicts spec '不可關' — see critical issue above.)",
+    "C-4 fixed correctly: §7.3 storage indicator → P5-T6 (Phase 5), §7.4 offline banner → P3-T4 (Phase 3), §7.6 auto cache notification → P4-T6 (Phase 4). All 3 missing UIs now have explicit tasks.",
+    "C-5 fixed correctly: P1-T7 switched from TypeScript to JSDoc typedef. 'types/sw-message.js exported @typedef SWMessage union + SW runtime imports for IDE support. Zero build cost — works in vanilla JS project.' Aligns with project architecture.",
+    "M-1/M-2 fixed correctly: P6-T2 is now `recoverFromStaleState()` unified routine with (a) SW-side primary (activate event for iOS 7-day eviction + version rollback) + (b) frontend-side defense-in-depth (after SEED failure + version mismatch detection). Function description: detect state mismatch → mark last_verified_cache_state='evicted' → clear cache + reset UI → re-SEED.",
+    "M-3 fixed correctly: Phase 7 extended with §10.2 Staging (P7-T8: push to gh-pages-staging + manual smoke + Lighthouse + verify install/offline flow) + §10.4 Monitor (P7-T9: pages_builds telemetry + weekly report + 1 週 monitor plan with owner 禮士). (NEW ISSUE: P7-T9 monitoring only captures build status, not actual cache hit rate / download failure rate / iOS eviction rate metrics from spec §10.4.)",
+    "M-4 fixed correctly: P2-T1 expanded to 3 auto cache triggers — (a) SEED_INDEXEDDB completion, (b) video-notes.json fetch with meta.last_seeded_at 1h dedupe, (c) SW activate → first idle callback. Matches spec §5.4 triggers exactly.",
+    "M-5 fixed correctly: P3-T2 SEED retry policy added — 3 attempts + exponential backoff (1s/3s/9s) + UI banner '正在初始化離線功能... (第 N/3 次)' on each retry + hard fail after 3 with persistent error banner.",
+    "M-6 fixed correctly: P7-T2 (SW integration tests) expanded from 0.5 hr → 2.5-3 hr with 5 sub-tasks T2a (SEED roundtrip), T2b (CACHE_VIDEO 13-step with partial failure), T2c (CACHE_BATCH + CANCEL_BATCH race), T2d (LRU mutex during in-flight batch), T2e (AUTO_CACHE_DONE + LRU_EVICTED observed).",
+    "M-7 fixed correctly: P7-T4 (E2E tests) expanded from 1 hr → 2.5-3 hr with 5 sub-scenarios T4a (first open + auto cache 最近 30), T4b (single ⬇️ → ✅ ready), T4c (offline read cache), T4d (batch download theme + progress bar), T4e (offline + metadata update + sync).",
+    "M-8 fixed correctly: Phase 8 expanded from 1-2 hr → 3-5 hr. P8-T1 pre-classifies 10 open questions into 3 categories (a) already decided [15 min], (b) code investigation [2 hr], (c) product decision [1 hr] = 3-4 hr. Plus P8-T2 (re-run Mame review on spec changes) + P8-T3 (spec version frontmatter).",
+    "M-9 fixed correctly: P8-T3 explicit task added — 'spec version frontmatter — add version: v1.0 (current) → bump to v1.1 on any breaking spec change. Update meta.sw_version (Phase 1 P1-T8) when version bumped.' 0.25 hr.",
+    "M-10 fixed correctly: P1-T7 task description cross-references C-5 fix in 'Fixed in v2' column ('C-5 fixed: TS → JSDoc').",
+    "M-11 fixed correctly: P6-T2 + P6-T3 (SW lifecycle) moved to Phase 1 as P1-T8 (sw_version init on SW install/activate) + P1-T9 (activate sentinel check, triggers recoverFromStaleState from Phase 6).",
+    "M-12 fixed correctly: P1 risk rewritten — risk is now about CACHE_VIDEO stage events + frontend backward compat (not the misleading '9 → 13 step breaking for old client'). Mitigation: (a) event.waitUntil() for in-flight CACHE_VIDEO, (b) coupled SW/frontend upgrade in same git commit, (c) stage events emitted in addition to old progress event for one release.",
+    "M-13 fixed correctly: Risks Summary extended with YouTube CORS (thumbnail via <img> fallback), QuotaExceededError post-LRU (LRU unit test simulates full quota), jsDelivr 24h cache (cache-bust + UX hint), CORS preflight on CACHE_BATCH POST, IndexedDB quota on batch. (NEW ISSUE: 'CACHE_BATCH POST' is hallucinated — CACHE_BATCH is postMessage, not HTTP POST. See minor issue above.)",
+    "Phase 1 P1-T8 + P1-T9 verify: SW lifecycle behavior now correctly placed in Phase 1 (SW Message API + Lifecycle). Sentinel check via recoverFromStaleState. (NEW ISSUE: write timing on install vs activate is ambiguous. See major issue above.)",
+    "Phase 5 storage indicator (P5-T6) verify: toolbar corner indicator + click-expand panel with IndexedDB size + Cache Storage per-bucket size. navigator.storage.estimate() fallback noted in Phase 5 Risks row.",
+    "Phase 3 offline banner (P3-T4) verify: online/offline event listeners + SW message channel events. (NEW ISSUE: banner text deviates from spec verbatim. See minor issue above.)",
+    "Phase 4 AUTO_CACHE_DONE notification (P4-T6) verify: receive AUTO_CACHE_DONE message, dispatch banner gated by shouldNotify per P2-T4 dedupe logic. (NEW ISSUE: missing [查看] [關閉] action buttons per spec §7.6.)",
+    "Phase 7a/7b/8 dependency ordering: Plan correctly orders 7a (testing) → 8 (open questions + spec finalization) → 7b (staging + production + monitor). Verification gate at 7a→8 boundary re-runs Mame plan review (this pass 2).",
+    "Phase 0 P0-T1 verifies IndexedDB migration to v2: adds meta object store (last_seeded_at, last_auto_cache_notification, sw_version, last_lru_at) + videos.last_verified_cache_state field + sync_queue.batch_id field. Data-preserving. (NEW ISSUE: missing `settings` object store for P5-T5e. See major issue above.)",
+    "Phase 2 P2-T1 3 triggers verify: matches spec §5.4 exactly.",
+    "Phase 6 P6-T2 unified routine verify: combines iOS 7-day eviction + version rollback + frontend defense-in-depth into single recoverFromStaleState() function. Avoids drift from parallel implementations.",
+    "Carry-over #4 (spec version frontmatter) verify: P8-T3 explicit task. gap #4 closed.",
+    "Carry-over #3 (minor issues explicit listing) verify: 14 minor issues folded into P8-T4 'minor coverage' note. gap #3 partially closed (acknowledged but not explicitly listed in P8-T4).",
+    "Total time estimate 35-54 hr verify: spans upper bound includes all v2 expansions. Lower bound 35 hr achievable only if all phases hit minimum estimates. Realistic total ~37-58 hr based on Phase 3/4/5 internal summary mismatches with Overview table."
+  ],
+  "summary": {
+    "total_facts_checked": 50,
+    "issues_found": 23,
+    "critical_issues": 1,
+    "major_issues": 7,
+    "minor_issues": 15,
+    "hallucinations_suspected": 1,
+    "verified_correct": 28,
+    "pass1_fixes_verified": "all 17 critical/major fixes addressed (some with secondary issues requiring follow-up)",
+    "blocking_issues_for_phase_0": [
+      "P5-T5a 'notification opt-in' toggle contradicts spec §7.7 '不可關' (CRITICAL — must remove before Phase 5)",
+      "P5-T5c storage management buttons missing per-bucket distinction (markdown/thumbnails/all) per spec §7.7 (MAJOR)",
+      "P0-T1 IndexedDB migration missing `settings` object store needed by P5-T5e (MAJOR — must add to P0-T1 before Phase 5)",
+      "P5-T5c 'clear IndexedDB' button has no SW message handler (no WIPE_INDEXEDDB in Phase 1) (MAJOR)",
+      "Phase 3 / Phase 4 Overview table estimates inconsistent with task sums (MAJOR — affects total time estimate)"
+    ],
+    "recommendations": {
+      "ready_for_phase_0": "CONDITIONAL — Phase 0 can start (P0-T1, P0-T2, P0-T3 are independent of blocking issues). However, P0-T1 needs UPDATE to include `settings` object store in migration (to avoid rework in Phase 5).",
+      "must_fix_before_phase_5": "P5-T5a notification opt-in toggle removal + P5-T5c 3-button expansion + WIPE_INDEXEDDB SW message addition",
+      "must_fix_before_phase_7b": "P1-T8 install vs activate timing disambiguation + P7-T9 monitoring instrumentation (or accept build-status-only monitoring)",
+      "fix_in_phase_8_or_post_launch": "Banner text matching, [查看][關閉] buttons, CACHE_VERSION bump placement, state machine edge case tests, settings store schema spec"
+    },
+    "notes": [
+      "Pass 1 found 31 issues (5 critical + 12 major + 14 minor). v2 addressed all 5 critical + all 12 major. v2's pass 2 introduces 23 new issues (1 critical + 7 major + 15 minor) — most are due to v2's own expansions revealing previously hidden gaps (e.g., adding Settings Panel exposed that `settings` object store was never in migration; adding 3-button storage mgmt exposed missing SW WIPE_INDEXEDDB handler).",
+      "The 1 new CRITICAL issue (P5-T5a notification opt-in toggle) is a spec-vs-plan conflict introduced BY the v2 fix — the implementer should remove this toggle. Easy fix.",
+      "The 7 new MAJOR issues cluster around: (1) P5-T5c storage mgmt incompleteness — both per-bucket buttons missing AND IndexedDB clear has no SW handler; (2) P0-T1 schema migration incompleteness for new P5-T5e `settings` store; (3) P1-T8 timing ambiguity for sentinel write; (4) P7-T9 monitoring metrics instrumentation gap vs spec §10.4; (5) Phase 3/4/5 Overview table estimate mismatches (~3-4 hr lower bound optimism).",
+      "Net assessment: v2 is 80% ready for Phase 0 implementation. The critical fix (P5-T5a notification opt-in) and the 4 MAJOR fixes (P5-T5c buttons + WIPE_INDEXEDDB handler + P0-T1 settings store + Phase 3/4 estimates) should be addressed before Phase 5 starts. Phase 0 can proceed with the caveat that P0-T1 should be expanded to include `settings` object store.",
+      "Time estimate 35-54 hr is slightly optimistic on the lower bound. Realistic total: 37-58 hr. Adjust master estimate to 38-58 hr or accept 35-54 hr with the understanding that lower bound requires hitting minimum estimates on every task.",
+      "No regressions detected in v2 fixes — all 17 pass-1 critical/major fixes correctly address their original concerns. Some fixes introduced secondary gaps (the 23 new issues), but the primary fix work is solid.",
+      "Plan is NOT ready for Phase 5/6/7b implementation until P5-T5a critical + P5-T5c major + P0-T1 settings store + WIPE_INDEXEDDB SW handler are addressed. Phase 0/1/2/3/4 can start as-is (with P0-T1 update to add settings store recommended).",
+      "POST-FIX RECOMMENDATION: Iterate once more (pass 3) to address the 1 critical + 4-7 major issues, then start Phase 0."
+    ]
+  },
+  "generated_by": "Mame QA Agent (sub-agent)",
+  "generated_at": "2026-07-20T16:39:00+08:00"
+}
