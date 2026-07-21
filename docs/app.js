@@ -42,6 +42,8 @@ document.addEventListener('alpine:init', () => {
     seedBanner: null,        // string|null — current banner message (idempotent render)
     seedError: null,         // string|null — hard fail after 3 attempts; triggers retry button
     swReady: false,          // boolean — SW controller active AND SEED done (gates ⬇ button in P3-T3)
+    navigatorOnline: navigator.onLine,  // P3-T4: navigator.onLine mirror; updated by online/offline events
+    downloadEnabled: false,  // P3-T3: gates ⬇ button; mirrors swReady but separate for future granular control
 
     // ===== Computed =====
     get sortedSpeakers() {
@@ -51,11 +53,39 @@ document.addEventListener('alpine:init', () => {
       return [...this.meta.topics].sort((a, b) => a.localeCompare(b, 'zh-TW'));
     },
 
+    // ===== Phase 3 P3-T3: download gating computed =====
+    // Per plan P3-T3: gates ⬇ button until SW + SEED ready. Mirrors swReady now
+    // but kept as a separate getter so future spec changes (e.g., user-toggled
+    // offline-mode) can decouple without affecting SW lifecycle state.
+    get downloadEnabled() {
+      return this.swReady;
+    },
+
     // ===== Init =====
     async init() {
       // Phase 3 P3-T1: await navigator.serviceWorker.ready before posting SEED
       // (must wait for active controller so SEED_INDEXEDDB postMessage targets a real SW)
       await this.registerServiceWorkerAsync();
+
+      // Phase 3 P3-T4: online/offline detection (per spec §7.4) — updates navigatorOnline state
+      // which gates the red offline banner in index.html
+      this.navigatorOnline = navigator.onLine;
+      window.addEventListener('online', () => {
+        this.navigatorOnline = true;
+        console.log('✅ Network online');
+      });
+      window.addEventListener('offline', () => {
+        this.navigatorOnline = false;
+        console.warn('⚠️ Network offline — 部分功能可能受限');
+      });
+      // SW controllerchange (per spec §7.4 SW update 期間的 controller 切換)
+      // Gate swReady during SW update to avoid races with new controller
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          console.log('🔄 SW controller changing — gating interactions');
+          this.swReady = false;
+        });
+      }
 
       // 註冊 marked 章節時間戳 extension（MM:SS → chapter-link）
       this.registerChapterLinkExtension();
@@ -226,6 +256,38 @@ document.addEventListener('alpine:init', () => {
       } catch (err) {
         // seedIndexedDB already updated state to error
         console.warn('retrySeed failed:', err);
+      }
+    },
+
+    // ===== Phase 3 P3-T3: downloadVideo — fires SW CACHE_VIDEO handler (P1-T2) =====
+    // Per plan P3-T3 + spec §7.1: ⬇ button enable gating until SW + SEED ready.
+    // Called from future button (P5 Toolbar) via @click="downloadVideo(video.id)"
+    // and gated via :disabled="!downloadEnabled".
+    // Uses MessageChannel correlation via sendSWMessage (Phase 3 helper, see above).
+    async downloadVideo(id) {
+      if (!this.swReady) {
+        console.warn('Download disabled: SW not ready yet');
+        return;
+      }
+      if (!id) {
+        console.warn('downloadVideo: id required');
+        return;
+      }
+      try {
+        const controller = navigator.serviceWorker.controller;
+        if (!controller) throw new Error('SW controller not ready');
+        const result = await this.sendSWMessage(
+          controller,
+          { type: 'CACHE_VIDEO', id },
+          60000  // 60s for markdown + thumbnail fetch (per handleCacheVideo 13-step)
+        );
+        if (result.ok) {
+          console.log(`✅ Downloaded ${id}: markdownOk=${result.markdownOk}, thumbnailOk=${result.thumbnailOk}`);
+        } else {
+          console.warn(`⚠️ Partial download for ${id}:`, result);
+        }
+      } catch (err) {
+        console.error(`❌ Download ${id} failed:`, err);
       }
     },
 
