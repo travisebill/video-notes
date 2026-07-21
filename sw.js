@@ -130,9 +130,17 @@ async function runAutoCache(source) {
 
     const duration_ms = Date.now() - start;
     await setMetaValue('last_seeded_at', new Date().toISOString());
-    await emitAutoCacheDone(cached, bytes, duration_ms, failed > 0);
 
-    console.log(`[SW P2-T1] auto-cache done (source=${source}, ${cached}/${eligible.length} cached, ${failed} failed, ~${bytes}B, ${duration_ms}ms)`);
+    // Phase 2 P2-T4: ShouldNotify 24h dedupe (per spec §5.4)
+    const newVideosCount = cached;
+    const should_notify = await shouldNotify(newVideosCount);
+    await emitAutoCacheDone(cached, bytes, duration_ms, failed > 0, should_notify);
+    if (should_notify) {
+      await markNotified();
+      console.log(`[SW P2-T4] notification stamped (newVideos=${newVideosCount})`);
+    }
+
+    console.log(`[SW P2-T1] auto-cache done (source=${source}, ${cached}/${eligible.length} cached, ${failed} failed, shouldNotify=${should_notify}, ~${bytes}B, ${duration_ms}ms)`);
     return { cached, eligible: eligible.length, failed, bytes, duration_ms };
   } catch (err) {
     console.error(`[SW P2-T1] auto-cache error (source=${source}):`, err);
@@ -200,6 +208,11 @@ async function tryLRU() {
         for (const e of (statusReq.result || [])) statusMap[e.id] = e;
         const result = [];
         for (const v of (videosReq.result || [])) {
+          // Phase 2 P2-T3 contract (by-design verification, honored in P2-T2):
+          //   manual_cached=true videos are SACRED and NEVER evicted by LRU.
+          //   Combined with !v.auto_cached check, only auto-cached videos
+          //   whose status is 'cached' or 'partial' are eligible — manual ⬇️
+          //   videos are preserved even under storage pressure.
           if (!v || !v.auto_cached || v.manual_cached) continue;
           const cs = statusMap[v.id];
           if (cs && (cs.status === 'cached' || cs.status === 'partial')) {
@@ -276,6 +289,38 @@ async function tryLRU() {
     console.error('[SW P2-T2] LRU error:', err);
     return { error: String(err) };
   }
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// Phase 2 P2-T3: manual_cached contract (by-design verification)
+// Phase 2 P2-T4: ShouldNotify 24h cooldown + meta.last_auto_cache_notification
+// ════════════════════════════════════════════════════════════════════════════
+
+/**
+ * Phase 2 P2-T4: shouldNotify(newVideosCount) — per spec §5.4 notification dedupe rule:
+ *   1. newVideosCount === 0 → false  (no notification if nothing new, regardless of time)
+ *   2. last notif < 24h ago → false  (dedupe fatigue prevention)
+ *   3. last notif >= 24h ago AND newVideos > 0 → true
+ *
+ * Used by runAutoCache to decide whether the frontend should show
+ * the "✨ 自動下載 N 支新影片" banner (Phase 4 P4-T6 consumer).
+ *
+ * @param {number} newVideosCount - count of videos cached in this run
+ * @returns {Promise<boolean>}
+ */
+async function shouldNotify(newVideosCount) {
+  if (!newVideosCount || newVideosCount === 0) return false;
+  const last = await getMetaValue('last_auto_cache_notification');
+  if (last) {
+    const ageMs = Date.now() - new Date(last).getTime();
+    if (ageMs < 24 * 60 * 60 * 1000) return false; // < 24h: still in dedupe window
+  }
+  return true;
+}
+
+/** Stamp meta.last_auto_cache_notification = now (call after a true shouldNotify). */
+async function markNotified() {
+  await setMetaValue('last_auto_cache_notification', new Date().toISOString());
 }
 
 // Phase 0 P0-T1: IndexedDB schema v2 (initial setup — pre-existing sw.js had no IDB code)
@@ -691,8 +736,9 @@ async function handleClearAllCache() {
  * @param {number} total_bytes - total bytes cached (markdown + thumbnails)
  * @param {number} duration_ms - how long the auto cache took (wall-clock)
  * @param {boolean} dedup_skipped - whether some videos were skipped due to dedupe
+ * @param {boolean} [should_notify=false] - per spec §5.4 + P2-T4: 24h dedupe + newVideos>0; tells frontend whether to show banner
  */
-async function emitAutoCacheDone(cached_count, total_bytes, duration_ms, dedup_skipped) {
+async function emitAutoCacheDone(cached_count, total_bytes, duration_ms, dedup_skipped, should_notify = false) {
   const clients = await self.clients.matchAll({ includeUncontrolled: true });
   for (const client of clients) {
     client.postMessage({
@@ -701,6 +747,7 @@ async function emitAutoCacheDone(cached_count, total_bytes, duration_ms, dedup_s
       total_bytes,
       duration_ms,
       dedup_skipped,
+      should_notify: !!should_notify,
     });
   }
 }
