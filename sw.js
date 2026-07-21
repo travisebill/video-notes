@@ -462,6 +462,204 @@ async function emitLRUEvicted(count, freed_bytes) {
   }
 }
 
+// ════════════════════════════════════════════════════════════════════════════
+// Phase 1 P1-T3: CACHE_BATCH + CANCEL_BATCH (AbortController race protection)
+// ════════════════════════════════════════════════════════════════════════════
+
+// Map<batchId, { controller, startedAt, total, status }>
+// Per spec §5.3 + plan P1-T3 — AbortController race protection.
+const _batchRegistry = new Map();
+
+/**
+ * Phase 1 P1-T3: per-video work inside batch (TEMPORARY STUB — replaced by P1-T2).
+ *
+ * P1-T2 will refactor this into the full 13-step handleCacheVideo flow
+ * (markdown fetch → thumbnail fetch → IDB cache_status update → cache buckets → events).
+ * For now P1-T3 only exercises the AbortController + IDB plumbing path.
+ *
+ * @param {string} id - video ID
+ * @param {AbortSignal} signal
+ * @returns {Promise<{ok: boolean, cached: boolean}>}
+ */
+async function cacheOneVideoInBatch(id, signal) {
+  if (signal?.aborted) {
+    const err = new Error('cancelled');
+    err.name = 'AbortError';
+    throw err;
+  }
+
+  // Mark cache_status[id].status = 'caching'
+  const db = await getDB();
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction('cache_status', 'readwrite');
+    tx.objectStore('cache_status').put({
+      id,
+      status: 'caching',
+      started_at: new Date().toISOString(),
+    });
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+
+  // TODO P1-T2: replace this stub with full 13-step handleCacheVideo
+  //   1. fetch markdown via fetch(videoMarkdownUrl(id))
+  //   2. validate markdown response (status 200, content-type text/markdown)
+  //   3. open markdown-v1 cache
+  //   4. cache.put(markdownUrl, response.clone())
+  //   5. fetch thumbnail (i.ytimg.com/vi/{id}/hqdefault.jpg)
+  //   6. validate thumbnail
+  //   7. open thumbnails-v1 cache
+  //   8. cache.put(thumbnailUrl, response.clone())
+  //   9. update cache_status[id].markdown_status = 'cached'
+  //  10. update cache_status[id].thumbnail_status = 'cached'
+  //  11. update cache_status[id].cached_at = now
+  //  12. emit CACHE_PROGRESS × 4 events (markdown start/done, thumbnail start/done)
+  //  13. emit CACHE_DONE (success or partial flag if thumbnail 404)
+
+  // Simulate per-video work with periodic abort check
+  await new Promise((resolve, reject) => {
+    const interval = setInterval(() => {
+      if (signal?.aborted) {
+        clearInterval(interval);
+        const err = new Error('cancelled');
+        err.name = 'AbortError';
+        reject(err);
+      }
+    }, 50);
+    setTimeout(() => { clearInterval(interval); resolve(); }, 200);
+  });
+
+  // Mark cache_status[id].status = 'cached'
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction('cache_status', 'readwrite');
+    tx.objectStore('cache_status').put({
+      id,
+      status: 'cached',
+      cached_at: new Date().toISOString(),
+    });
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+
+  return { ok: true, cached: true };
+}
+
+/**
+ * Phase 1 P1-T3: CACHE_BATCH handler.
+ *
+ * Runs cacheOneVideoInBatch for each video with concurrency limit + abort support.
+ * Frontend sends batchId (crypto.randomUUID()) so CANCEL_BATCH can target this run.
+ *
+ * @param {Object} payload
+ * @param {string} payload.batchId - unique batch ID
+ * @param {string[]} payload.videoIds
+ * @param {number} [payload.concurrency=3] - max concurrent fetches
+ */
+async function handleCacheBatch(payload) {
+  const { batchId, videoIds, concurrency = 3 } = payload;
+
+  if (!batchId || typeof batchId !== 'string') {
+    throw new Error('CACHE_BATCH: batchId required (string)');
+  }
+  if (!Array.isArray(videoIds) || videoIds.length === 0) {
+    throw new Error('CACHE_BATCH: videoIds required (non-empty array)');
+  }
+  if (_batchRegistry.has(batchId)) {
+    throw new Error(`CACHE_BATCH: batchId ${batchId} already running`);
+  }
+
+  const controller = new AbortController();
+  const startedAt = Date.now();
+  _batchRegistry.set(batchId, {
+    controller,
+    startedAt,
+    total: videoIds.length,
+    status: 'running',
+  });
+
+  // Worker pool — concurrency-limited iterator pattern
+  let cursor = 0;
+  let done = 0;
+  let cancelled = 0;
+  const failed = [];
+
+  async function worker() {
+    while (cursor < videoIds.length) {
+      if (controller.signal.aborted) return;
+      const idx = cursor++;
+      const id = videoIds[idx];
+      try {
+        await cacheOneVideoInBatch(id, controller.signal);
+        done++;
+      } catch (err) {
+        if (err.name === 'AbortError' || controller.signal.aborted) {
+          // Count remaining videos as cancelled (worker stopped early)
+          cancelled = videoIds.length - idx;
+          return;
+        }
+        console.warn(`[SW] CACHE_BATCH video ${id} failed:`, err);
+        failed.push(id);
+      }
+    }
+  }
+
+  const workerCount = Math.min(concurrency, videoIds.length);
+  const workers = Array.from({ length: workerCount }, () => worker());
+  await Promise.all(workers);
+
+  // Cleanup registry + broadcast BATCH_DONE to clients
+  _batchRegistry.delete(batchId);
+  await emitBatchDone(batchId, done, failed, cancelled);
+
+  return {
+    ok: true,
+    batchId,
+    done,
+    failed,
+    cancelled,
+    duration_ms: Date.now() - startedAt,
+  };
+}
+
+/**
+ * Phase 1 P1-T3: CANCEL_BATCH handler.
+ * Aborts an in-progress batch via AbortController.
+ *
+ * @param {Object} payload
+ * @param {string} payload.batchId
+ * @returns {Promise<{ok: boolean, batchId: string, wasRunning: boolean}>}
+ */
+async function handleCancelBatch(payload) {
+  const { batchId } = payload;
+  if (!batchId) {
+    throw new Error('CANCEL_BATCH: batchId required');
+  }
+  const entry = _batchRegistry.get(batchId);
+  if (!entry) {
+    return { ok: true, batchId, wasRunning: false };
+  }
+  entry.controller.abort();
+  entry.status = 'cancelling';
+  return { ok: true, batchId, wasRunning: true };
+}
+
+/**
+ * Phase 1 P1-T3: BATCH_DONE event emit helper.
+ * Broadcasts batch completion to all clients.
+ */
+async function emitBatchDone(batchId, done, failed, cancelled) {
+  const clients = await self.clients.matchAll({ includeUncontrolled: true });
+  for (const client of clients) {
+    client.postMessage({
+      type: SW_MESSAGES.BATCH_DONE,
+      batchId,
+      done,
+      failed,
+      cancelled,
+    });
+  }
+}
+
 self.addEventListener('message', (event) => {
   const data = event.data || {};
   const { type, ...payload } = data;
@@ -520,9 +718,36 @@ self.addEventListener('message', (event) => {
         }));
       break;
 
+    case SW_MESSAGES.CACHE_BATCH:
+      handleCacheBatch(payload)
+        .then((result) => {
+          event.source.postMessage({
+            type: 'CACHE_BATCH_DONE',
+            batchId: result.batchId,
+            done: result.done,
+            failed: result.failed,
+            cancelled: result.cancelled,
+            duration_ms: result.duration_ms,
+          });
+        })
+        .catch((err) => event.source.postMessage({
+          type: 'CACHE_BATCH_ERROR',
+          error: err.message || String(err),
+        }));
+      break;
+
+    case SW_MESSAGES.CANCEL_BATCH:
+      handleCancelBatch(payload)
+        .then((result) => {
+          event.source.postMessage({ type: 'CANCEL_BATCH_DONE', ...result });
+        })
+        .catch((err) => event.source.postMessage({
+          type: 'CANCEL_BATCH_ERROR',
+          error: err.message || String(err),
+        }));
+      break;
+
     // TODO next turn (P1-T2): case SW_MESSAGES.CACHE_VIDEO
-    // TODO next turn (P1-T3): case SW_MESSAGES.CACHE_BATCH + CANCEL_BATCH
-    // TODO next turn (P1-T4): case SW_MESSAGES.UNCACHE_VIDEO + GET_CACHE_STATUS + CLEAR_ALL_CACHE
     // Phase 1 P1-T6: emit LRU_EVICTED event (helper at top of file)
 
     default:
