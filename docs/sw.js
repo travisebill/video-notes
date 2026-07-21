@@ -140,6 +140,144 @@ async function runAutoCache(source) {
   }
 }
 
+// ════════════════════════════════════════════════════════════════════════════
+// Phase 2 P2-T2: LRU eviction + mutex (always-on per spec §5.4/§5.5)
+// ════════════════════════════════════════════════════════════════════════════
+
+// Module-level mutex — set true while a batch is in-flight so LRU skips
+// (avoids racing deletes with videos currently being cached).
+let _lruMutex = false;
+
+/**
+ * Phase 2 P2-T2: LRU eviction with always-on trigger + mutex.
+ * Per spec §5.5:
+ *   Pre-condition 1: no in-progress batch (mutex)
+ *   Pre-condition 2: usage > 80% of quota
+ *   LRU rule:
+ *     - Only evict auto_cached=true AND status in ('cached', 'partial')
+ *     - Never touch manual_cached=true videos (P2-T3 invariant)
+ *   Algorithm:
+ *     1. Skip if batch in flight
+ *     2. storage.estimate() — skip if usage < 80%
+ *     3. Build candidate list (videos join cache_status)
+ *     4. Sort by last_accessed ascending (oldest first)
+ *     5. Delete from cache buckets + reset cache_status to 'pending'
+ *        until usage < 60% of quota
+ *     6. emitLRUEvicted(count, freed_bytes) (P1-T6 helper)
+ *
+ * Fire-and-forget callers: handleCacheVideo (standalone), handleCacheBatch
+ * (after batch finishes). Errors logged but never thrown.
+ *
+ * @returns {Promise<{skipped?: boolean, reason?: string, count?: number, freed?: number, error?: string}>}
+ */
+async function tryLRU() {
+  if (_lruMutex) {
+    return { skipped: true, reason: 'batch_in_progress' };
+  }
+
+  try {
+    if (!navigator.storage || !navigator.storage.estimate) {
+      return { skipped: true, reason: 'no_storage_api' };
+    }
+    const { usage = 0, quota = Infinity } = await navigator.storage.estimate();
+    if (quota === Infinity || quota === 0) {
+      return { skipped: true, reason: 'no_quota_info' };
+    }
+    const usageRatio = usage / quota;
+    if (usageRatio < 0.8) {
+      return { skipped: true, reason: 'under_threshold', usage, quota, ratio: usageRatio };
+    }
+
+    const db = await getDB();
+
+    // Build candidate list via videos + cache_status join
+    const candidates = await new Promise((resolve, reject) => {
+      const tx = db.transaction(['videos', 'cache_status'], 'readonly');
+      const videosReq = tx.objectStore('videos').getAll();
+      const statusReq = tx.objectStore('cache_status').getAll();
+      tx.oncomplete = () => {
+        const statusMap = {};
+        for (const e of (statusReq.result || [])) statusMap[e.id] = e;
+        const result = [];
+        for (const v of (videosReq.result || [])) {
+          if (!v || !v.auto_cached || v.manual_cached) continue;
+          const cs = statusMap[v.id];
+          if (cs && (cs.status === 'cached' || cs.status === 'partial')) {
+            result.push(v);
+          }
+        }
+        resolve(result);
+      };
+      tx.onerror = () => reject(tx.error);
+    });
+
+    // Sort ascending by last_accessed (oldest first; missing → epoch 0)
+    candidates.sort((a, b) => (a.last_accessed || 0) - (b.last_accessed || 0));
+
+    const cacheNames = await caches.keys();
+    const targetBuckets = cacheNames.filter((n) => n === 'markdown-v1' || n === 'thumbnails-v1');
+    let count = 0;
+    let freed = 0;
+
+    for (const v of candidates) {
+      // Re-check quota after each eviction (stop when under 60%)
+      const cur = await navigator.storage.estimate();
+      if (cur.usage / cur.quota < 0.6) break;
+
+      const urls = [];
+      if (v.note_path) urls.push(new URL(v.note_path, self.location.href).href);
+      const ytId = extractYouTubeId(v.video_url);
+      if (ytId) urls.push(`https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`);
+
+      for (const cn of targetBuckets) {
+        const cache = await caches.open(cn);
+        for (const u of urls) {
+          const resp = await cache.match(u);
+          if (resp) {
+            try {
+              const blob = await resp.blob();
+              freed += blob.size;
+            } catch (_) { /* size unknown; continue */ }
+            await cache.delete(u);
+          }
+        }
+      }
+      count++;
+
+      // Reset cache_status entry to 'pending' so UI shows it as cacheable again
+      await new Promise((res, rej) => {
+        const tx = db.transaction('cache_status', 'readwrite');
+        const store = tx.objectStore('cache_status');
+        const getReq = store.get(v.id);
+        getReq.onsuccess = () => {
+          const entry = getReq.result || { id: v.id };
+          entry.id = v.id;
+          entry.status = 'pending';
+          entry.markdown_status = 'pending';
+          entry.thumbnail_status = 'pending';
+          store.put(entry);
+        };
+        tx.oncomplete = () => res();
+        tx.onerror = () => rej(tx.error);
+      });
+    }
+
+    // P2-T2: stamp last_lru_at for debug (per IDB meta schema v2)
+    await setMetaValue('last_lru_at', new Date().toISOString());
+
+    if (count > 0) {
+      await emitLRUEvicted(count, freed);
+      console.log(`[SW P2-T2] LRU evicted ${count}, ~${freed}B freed (start ratio ${(usageRatio * 100).toFixed(1)}%)`);
+    } else {
+      console.log(`[SW P2-T2] LRU no-op: 0 evicted (start ratio ${(usageRatio * 100).toFixed(1)}%)`);
+    }
+    return { count, freed, startRatio: usageRatio };
+  } catch (err) {
+    console.error('[SW P2-T2] LRU error:', err);
+    return { error: String(err) };
+  }
+}
+
 // Phase 0 P0-T1: IndexedDB schema v2 (initial setup — pre-existing sw.js had no IDB code)
 const DB_NAME = 'video-notes';
 const DB_VERSION = 2;
@@ -770,6 +908,10 @@ async function handleCacheVideo(payload) {
   const partial = markdownOk && !thumbnailOk;
   await emitCacheDone(id, success, partial, partial ? (thumbnailError || 'thumbnail fetch failed') : null);
 
+  // Phase 2 P2-T2: fire-and-forget LRU after standalone cache write
+  // (skipped silently if batch is in progress via _lruMutex check)
+  tryLRU().catch((err) => console.warn('[SW P2-T2] post-cache LRU failed:', err));
+
   return { ok: success, id, markdownOk, thumbnailOk, partial };
 }
 
@@ -835,6 +977,8 @@ async function handleCacheBatch(payload) {
     total: videoIds.length,
     status: 'running',
   });
+  // Phase 2 P2-T2: LRU mutex — hold while batch in flight so LRU skips
+  _lruMutex = true;
 
   // Worker pool — concurrency-limited iterator pattern
   let cursor = 0;
@@ -869,6 +1013,10 @@ async function handleCacheBatch(payload) {
   // Cleanup registry + broadcast BATCH_DONE to clients
   _batchRegistry.delete(batchId);
   await emitBatchDone(batchId, done, failed, cancelled);
+
+  // Phase 2 P2-T2: release LRU mutex + fire-and-forget LRU after mutex released
+  _lruMutex = false;
+  tryLRU().catch((err) => console.warn('[SW P2-T2] post-batch LRU failed:', err));
 
   return {
     ok: true,
