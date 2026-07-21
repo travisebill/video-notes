@@ -63,6 +63,83 @@ async function shouldSkipSeed() {
   return ageMs < 60 * 60 * 1000; // 1 hour
 }
 
+// ════════════════════════════════════════════════════════════════════════════
+// Phase 2 P2-T1: Auto-cache 3-source trigger orchestration
+// ════════════════════════════════════════════════════════════════════════════
+
+/**
+ * Run auto-cache with 1h dedupe via shouldSkipSeed() (P2-T5).
+ * 3 trigger sources fire this with `source` label:
+ *   (a) 'seed'       — at end of handleSeedIndexedDB
+ *   (b) 'json_fetch' — at end of fetch handler JSON route
+ *   (c) 'activate'   — from SW activate → requestIdleCallback
+ *
+ * Per plan §Phase 2 P2-T1 + spec §5.4.
+ * Uses handleCacheVideo({id}) (P1-T2) inner cache path; rejects if any
+ * uncaught error so 1h stamp updates and emitAutoCacheDone() still run.
+ *
+ * @param {string} source
+ * @returns {Promise<{cached?:number, eligible?:number, failed?:number, skipped?:boolean, reason?:string, bytes?:number, duration_ms?:number, error?:string}>}
+ */
+async function runAutoCache(source) {
+  if (await shouldSkipSeed()) {
+    console.log(`[SW P2-T1] auto-cache skipped (source=${source}) — 1h dedupe via last_seeded_at`);
+    return { skipped: true, reason: '1h_dedupe' };
+  }
+
+  const start = Date.now();
+  let cached = 0;
+  let failed = 0;
+  let bytes = 0;
+
+  try {
+    const db = await getDB();
+    const videos = await new Promise((resolve, reject) => {
+      const req = db.transaction('videos', 'readonly').objectStore('videos').getAll();
+      req.onsuccess = () => resolve(req.result || []);
+      req.onerror = () => reject(req.error);
+    });
+
+    // Eligible: 有 video_url（或 id fallback）+ auto_cached !== false（預設全部 eligible）
+    const eligible = videos.filter((v) =>
+      v && v.id && (v.video_url || v.id) && v.auto_cached !== false
+    );
+
+    if (!eligible.length) {
+      console.log(`[SW P2-T1] no eligible videos (source=${source})`);
+      // Still stamp last_seeded_at — avoids re-scanning every fetch
+      await setMetaValue('last_seeded_at', new Date().toISOString());
+      return { skipped: true, reason: 'no_eligible' };
+    }
+
+    for (const v of eligible) {
+      try {
+        const result = await handleCacheVideo({ id: v.id });
+        if (result.ok) {
+          cached++;
+          // rough byte estimate: markdown ~20KB + thumbnail ~10KB
+          bytes += 30000;
+        } else {
+          failed++;
+        }
+      } catch (err) {
+        failed++;
+        console.warn(`[SW P2-T1] ${v.id} cache failed:`, err);
+      }
+    }
+
+    const duration_ms = Date.now() - start;
+    await setMetaValue('last_seeded_at', new Date().toISOString());
+    await emitAutoCacheDone(cached, bytes, duration_ms, failed > 0);
+
+    console.log(`[SW P2-T1] auto-cache done (source=${source}, ${cached}/${eligible.length} cached, ${failed} failed, ~${bytes}B, ${duration_ms}ms)`);
+    return { cached, eligible: eligible.length, failed, bytes, duration_ms };
+  } catch (err) {
+    console.error(`[SW P2-T1] auto-cache error (source=${source}):`, err);
+    return { error: String(err) };
+  }
+}
+
 // Phase 0 P0-T1: IndexedDB schema v2 (initial setup — pre-existing sw.js had no IDB code)
 const DB_NAME = 'video-notes';
 const DB_VERSION = 2;
@@ -169,6 +246,17 @@ self.addEventListener('activate', (event) => {
 
      .then(() => setMetaValue('sw_version', 'v2.0-offline'))  // P1-T8
      .then(() => self.clients.claim())
+     .then(() => {
+       // Phase 2 P2-T1 hook (c): trigger auto-cache on SW activate idle — fire-and-forget; doesn't block activate event
+       const triggerIdle = () => runAutoCache('activate').catch((err) =>
+         console.warn('[SW P2-T1] activate trigger failed:', err)
+       );
+       if ('requestIdleCallback' in self) {
+         self.requestIdleCallback(triggerIdle, { timeout: 5000 });
+       } else {
+         setTimeout(triggerIdle, 1000);
+       }
+     })
   );
 });
 
@@ -188,6 +276,10 @@ self.addEventListener('fetch', (event) => {
         .then((response) => {
           const clone = response.clone();
           caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, clone));
+          // Phase 2 P2-T1 hook (b): trigger auto-cache after JSON fetch — fire-and-forget; doesn't block client response
+          runAutoCache('json_fetch').catch((err) =>
+            console.warn('[SW P2-T1] json_fetch trigger failed:', err)
+          );
           return response;
         })
         .catch(() => caches.match(request).then((cached) => cached || new Response('{}', {
@@ -332,6 +424,10 @@ async function handleSeedIndexedDB({ videos }) {
   // Step 7: ⬇️ button enable handled by frontend upon SEED_DONE
   if ((written + updated) > 0) {
     console.log(`[SW] SEED_INDEXEDDB: ${written} written, ${updated} updated — auto-cache trigger will follow in Phase 2`);
+    // Phase 2 P2-T1 hook (a): trigger auto-cache after SEED — fire-and-forget; doesn't block client response
+    runAutoCache('seed').catch((err) =>
+      console.warn('[SW P2-T1] seed trigger failed:', err)
+    );
   }
 
   return { written, updated };
