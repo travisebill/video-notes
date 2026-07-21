@@ -463,6 +463,193 @@ async function emitLRUEvicted(count, freed_bytes) {
 }
 
 // ════════════════════════════════════════════════════════════════════════════
+// Phase 1 P1-T2: CACHE_VIDEO 13-step refactor (stage events)
+// ════════════════════════════════════════════════════════════════════════════
+
+/**
+ * Look up video record by ID in IDB videos store.
+ * @param {string} id
+ * @returns {Promise<Object|null>}
+ */
+async function getVideo(id) {
+  const db = await getDB();
+  return await new Promise((resolve, reject) => {
+    const tx = db.transaction('videos', 'readonly');
+    const req = tx.objectStore('videos').get(id);
+    req.onsuccess = () => resolve(req.result || null);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+/**
+ * Extract YouTube video ID from various URL formats.
+ * Supports: youtu.be/{id}, youtube.com/watch?v={id}, youtube.com/live/{id},
+ *           youtube.com/embed/{id}, youtube.com/shorts/{id}
+ * @param {string} videoUrl
+ * @returns {string|null}
+ */
+function extractYouTubeId(videoUrl) {
+  if (!videoUrl || typeof videoUrl !== 'string') return null;
+  try {
+    const u = new URL(videoUrl);
+    if (u.hostname === 'youtu.be') {
+      return u.pathname.replace(/^\//, '').split('/')[0] || null;
+    }
+    if (u.hostname === 'www.youtube.com' || u.hostname === 'youtube.com' || u.hostname === 'm.youtube.com') {
+      if (u.searchParams.has('v')) return u.searchParams.get('v');
+      const m = u.pathname.match(/^\/(?:live|embed|shorts)\/([^/?]+)/);
+      if (m) return m[1];
+    }
+  } catch (_) {
+    // fallthrough
+  }
+  return null;
+}
+
+/**
+ * Phase 1 P1-T2: CACHE_PROGRESS event emit helper.
+ * Broadcasts per-stage progress (markdown/thumbnail × start/done/failed).
+ */
+async function emitCacheProgress(id, stage, status) {
+  const clients = await self.clients.matchAll({ includeUncontrolled: true });
+  for (const client of clients) {
+    client.postMessage({
+      type: SW_MESSAGES.CACHE_PROGRESS,
+      id, stage, status,
+    });
+  }
+}
+
+/**
+ * Phase 1 P1-T2: CACHE_DONE event emit helper.
+ * Broadcasts single-video completion (success + partial flag if thumbnail 404).
+ */
+async function emitCacheDone(id, success, partial, error) {
+  const clients = await self.clients.matchAll({ includeUncontrolled: true });
+  for (const client of clients) {
+    client.postMessage({
+      type: SW_MESSAGES.CACHE_DONE,
+      id, success, partial,
+      error: error || undefined,
+    });
+  }
+}
+
+/**
+ * Phase 1 P1-T2: CACHE_VIDEO handler — 13-step flow with stage events.
+ *
+ * Steps:
+ *   1. fetch markdown via fetch(markdownUrl)
+ *   2. validate markdown response (status 200)
+ *   3. open markdown-v1 cache
+ *   4. cache.put(markdownUrl, response.clone())
+ *   5. fetch thumbnail via fetch(thumbnailUrl)
+ *   6. validate thumbnail response
+ *   7. open thumbnails-v1 cache
+ *   8. cache.put(thumbnailUrl, response.clone())
+ *   9. update cache_status[id].markdown_status = 'cached' | 'failed'
+ *  10. update cache_status[id].thumbnail_status = 'cached' | 'failed' | 'skipped'
+ *  11. update cache_status[id].cached_at = now + status = 'cached' | 'partial' | 'failed'
+ *  12. emit CACHE_PROGRESS × 4 events (markdown start/done, thumbnail start/done)
+ *  13. emit CACHE_DONE (success | partial if thumbnail 404)
+ *
+ * @param {Object} payload
+ * @param {string} payload.id
+ * @param {AbortSignal} [payload.signal] - optional abort signal (P1-T3 batch integration)
+ */
+async function handleCacheVideo(payload) {
+  const { id, signal } = payload;
+  if (!id) throw new Error('CACHE_VIDEO: id required');
+
+  if (signal?.aborted) {
+    const err = new Error('cancelled');
+    err.name = 'AbortError';
+    throw err;
+  }
+
+  // Look up video metadata for URL construction
+  const video = await getVideo(id);
+  if (!video) throw new Error(`CACHE_VIDEO: video ${id} not found in IDB`);
+
+  // Build markdown + thumbnail URLs
+  const markdownUrl = video.note_path
+    ? new URL(video.note_path, self.location.href).href
+    : null;
+  const ytId = extractYouTubeId(video.video_url);
+  const thumbnailUrl = ytId ? `https://i.ytimg.com/vi/${ytId}/hqdefault.jpg` : null;
+
+  if (!markdownUrl) {
+    throw new Error(`CACHE_VIDEO: video ${id} has no note_path`);
+  }
+
+  let markdownOk = false;
+  let thumbnailOk = false;
+  let thumbnailError = null;
+
+  // Step 1-4: fetch + cache markdown
+  try {
+    await emitCacheProgress(id, 'markdown', 'start');
+    const resp = await fetch(markdownUrl);
+    if (!resp.ok) throw new Error(`markdown HTTP ${resp.status}`);
+    const cache = await caches.open('markdown-v1');
+    await cache.put(markdownUrl, resp.clone());
+    markdownOk = true;
+    await emitCacheProgress(id, 'markdown', 'done');
+  } catch (err) {
+    console.warn(`[SW] CACHE_VIDEO ${id} markdown failed:`, err);
+    await emitCacheProgress(id, 'markdown', 'failed');
+  }
+
+  // Step 5-8: fetch + cache thumbnail
+  if (thumbnailUrl) {
+    try {
+      await emitCacheProgress(id, 'thumbnail', 'start');
+      const resp = await fetch(thumbnailUrl);
+      if (!resp.ok) throw new Error(`thumbnail HTTP ${resp.status}`);
+      const cache = await caches.open('thumbnails-v1');
+      await cache.put(thumbnailUrl, resp.clone());
+      thumbnailOk = true;
+      await emitCacheProgress(id, 'thumbnail', 'done');
+    } catch (err) {
+      console.warn(`[SW] CACHE_VIDEO ${id} thumbnail failed:`, err);
+      thumbnailError = err.message || String(err);
+      await emitCacheProgress(id, 'thumbnail', 'failed');
+    }
+  } else {
+    // No video_url → skip thumbnail (not a failure, just unsupported)
+    await emitCacheProgress(id, 'thumbnail', 'failed');
+  }
+
+  // Step 9-11: update cache_status[id]
+  const db = await getDB();
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction('cache_status', 'readwrite');
+    const store = tx.objectStore('cache_status');
+    const getReq = store.get(id);
+    getReq.onsuccess = () => {
+      const entry = getReq.result || { id };
+      entry.id = id;
+      entry.markdown_status = markdownOk ? 'cached' : 'failed';
+      entry.thumbnail_status = thumbnailOk ? 'cached' : (thumbnailUrl ? 'failed' : 'skipped');
+      entry.status = markdownOk && thumbnailOk ? 'cached'
+                   : markdownOk ? 'partial'
+                   : 'failed';
+      entry.cached_at = new Date().toISOString();
+      store.put(entry);
+    };
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+
+  // Step 13: emit CACHE_DONE (Step 12 covered by 4× emitCacheProgress above)
+  const success = markdownOk;
+  const partial = markdownOk && !thumbnailOk;
+  await emitCacheDone(id, success, partial, partial ? (thumbnailError || 'thumbnail fetch failed') : null);
+
+  return { ok: success, id, markdownOk, thumbnailOk, partial };
+}
+
+// ════════════════════════════════════════════════════════════════════════════
 // Phase 1 P1-T3: CACHE_BATCH + CANCEL_BATCH (AbortController race protection)
 // ════════════════════════════════════════════════════════════════════════════
 
@@ -482,66 +669,14 @@ const _batchRegistry = new Map();
  * @returns {Promise<{ok: boolean, cached: boolean}>}
  */
 async function cacheOneVideoInBatch(id, signal) {
+  // P1-T3 batch worker delegates to P1-T2's 13-step handleCacheVideo.
+  // Per-video IDB writes + cache bucket fills + stage events all happen inside handleCacheVideo.
   if (signal?.aborted) {
     const err = new Error('cancelled');
     err.name = 'AbortError';
     throw err;
   }
-
-  // Mark cache_status[id].status = 'caching'
-  const db = await getDB();
-  await new Promise((resolve, reject) => {
-    const tx = db.transaction('cache_status', 'readwrite');
-    tx.objectStore('cache_status').put({
-      id,
-      status: 'caching',
-      started_at: new Date().toISOString(),
-    });
-    tx.oncomplete = () => resolve();
-    tx.onerror = () => reject(tx.error);
-  });
-
-  // TODO P1-T2: replace this stub with full 13-step handleCacheVideo
-  //   1. fetch markdown via fetch(videoMarkdownUrl(id))
-  //   2. validate markdown response (status 200, content-type text/markdown)
-  //   3. open markdown-v1 cache
-  //   4. cache.put(markdownUrl, response.clone())
-  //   5. fetch thumbnail (i.ytimg.com/vi/{id}/hqdefault.jpg)
-  //   6. validate thumbnail
-  //   7. open thumbnails-v1 cache
-  //   8. cache.put(thumbnailUrl, response.clone())
-  //   9. update cache_status[id].markdown_status = 'cached'
-  //  10. update cache_status[id].thumbnail_status = 'cached'
-  //  11. update cache_status[id].cached_at = now
-  //  12. emit CACHE_PROGRESS × 4 events (markdown start/done, thumbnail start/done)
-  //  13. emit CACHE_DONE (success or partial flag if thumbnail 404)
-
-  // Simulate per-video work with periodic abort check
-  await new Promise((resolve, reject) => {
-    const interval = setInterval(() => {
-      if (signal?.aborted) {
-        clearInterval(interval);
-        const err = new Error('cancelled');
-        err.name = 'AbortError';
-        reject(err);
-      }
-    }, 50);
-    setTimeout(() => { clearInterval(interval); resolve(); }, 200);
-  });
-
-  // Mark cache_status[id].status = 'cached'
-  await new Promise((resolve, reject) => {
-    const tx = db.transaction('cache_status', 'readwrite');
-    tx.objectStore('cache_status').put({
-      id,
-      status: 'cached',
-      cached_at: new Date().toISOString(),
-    });
-    tx.oncomplete = () => resolve();
-    tx.onerror = () => reject(tx.error);
-  });
-
-  return { ok: true, cached: true };
+  return await handleCacheVideo({ id }, signal);
 }
 
 /**
@@ -747,7 +882,24 @@ self.addEventListener('message', (event) => {
         }));
       break;
 
-    // TODO next turn (P1-T2): case SW_MESSAGES.CACHE_VIDEO
+    case SW_MESSAGES.CACHE_VIDEO:
+      handleCacheVideo(payload)
+        .then((result) => {
+          event.source.postMessage({
+            type: 'CACHE_VIDEO_DONE',
+            id: result.id,
+            ok: result.ok,
+            markdownOk: result.markdownOk,
+            thumbnailOk: result.thumbnailOk,
+            partial: result.partial,
+          });
+        })
+        .catch((err) => event.source.postMessage({
+          type: 'CACHE_VIDEO_ERROR',
+          error: err.message || String(err),
+        }));
+      break;
+
     // Phase 1 P1-T6: emit LRU_EVICTED event (helper at top of file)
 
     default:
