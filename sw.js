@@ -336,6 +336,18 @@ async function handleUncacheVideo({ id }) {
     req.onerror = () => reject(req.error);
   });
 
+  // Compute exact cache URLs (markdown from note_path, thumbnail from YouTube ID)
+  // — thumbnail URL uses YouTube ID, NOT the video record ID, so url.includes(id)
+  //   would never match. Use exact URL lookup instead.
+  const targetUrls = [];
+  if (video?.note_path) {
+    targetUrls.push(new URL(video.note_path, self.location.href).href);
+  }
+  const ytId = extractYouTubeId(video?.video_url);
+  if (ytId) {
+    targetUrls.push(`https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`);
+  }
+
   // Delete from cache buckets (markdown-v1 + thumbnails-v1 — created by P1-T2)
   const cacheNames = await caches.keys();
   const targetBuckets = ['markdown-v1', 'thumbnails-v1'];
@@ -343,9 +355,7 @@ async function handleUncacheVideo({ id }) {
     targetBuckets
       .filter((name) => cacheNames.includes(name))
       .map((name) => caches.open(name).then((cache) =>
-        cache.keys().then((reqs) => Promise.all(
-          reqs.map((r) => r.url.includes(id) ? cache.delete(r) : Promise.resolve(false))
-        ))
+        Promise.all(targetUrls.map((url) => cache.delete(url)))
       ))
   );
 
