@@ -36,6 +36,13 @@ document.addEventListener('alpine:init', () => {
     loadingContent: {},  // { videoId: bool }
     videoCollapsed: {},  // { videoId: bool } 影片收合狀態（桌面上讓右欄 notes 佔滿寬度）
 
+    // ===== Phase 3 P3-T1+P3-T2 state — SW ready + SEED retry banner =====
+    initProgress: 'idle',    // 'idle' | 'registering_sw' | 'seeding' | 'done' | 'error'
+    initAttempt: 0,          // current retry attempt (1..3)
+    seedBanner: null,        // string|null — current banner message (idempotent render)
+    seedError: null,         // string|null — hard fail after 3 attempts; triggers retry button
+    swReady: false,          // boolean — SW controller active AND SEED done (gates ⬇ button in P3-T3)
+
     // ===== Computed =====
     get sortedSpeakers() {
       return [...this.meta.speakers].sort((a, b) => a.localeCompare(b, 'zh-TW'));
@@ -46,14 +53,20 @@ document.addEventListener('alpine:init', () => {
 
     // ===== Init =====
     async init() {
-      // 註冊 Service Worker（PWA 安裝 + 離線快取）
-      this.registerServiceWorker();
+      // Phase 3 P3-T1: await navigator.serviceWorker.ready before posting SEED
+      // (must wait for active controller so SEED_INDEXEDDB postMessage targets a real SW)
+      await this.registerServiceWorkerAsync();
 
       // 註冊 marked 章節時間戳 extension（MM:SS → chapter-link）
       this.registerChapterLinkExtension();
 
       this.applyTheme();
       await this.loadData();
+
+      // Phase 3 P3-T2: SEED with retry policy (3 attempts + 1s/3s/9s exp backoff)
+      // Per plan P3-T2 (M-5 fixed): UI banner shows "正在初始化離線功能... (第 N/3 次)" each retry
+      await this.seedIndexedDB(this.videos);
+
       this.applyFilters();
 
       // ESC 鍵關閉所有展開面板
@@ -87,20 +100,133 @@ document.addEventListener('alpine:init', () => {
       this.setupChapterPreview();
     },
 
-    // ===== Service Worker 註冊（PWA 2026-06-29）=====
-    registerServiceWorker() {
-      if (!('serviceWorker' in navigator)) return;
+    // ===== Phase 3 P3-T1: Service Worker 註冊 + await ready =====
+    // Per spec §5.3 + plan P3-T1: frontend must await navigator.serviceWorker.ready
+    // before posting SEED_INDEXEDDB (avoid race with SW first activation).
+    // Returns Promise that resolves when SW controller is ready.
+    async registerServiceWorkerAsync() {
+      if (!('serviceWorker' in navigator)) return null;
       // 只在 HTTPS 或 localhost 註冊（GitHub Pages 是 HTTPS）
-      if (location.protocol !== 'https:' && location.hostname !== 'localhost') return;
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then((reg) => {
-            console.log('✅ SW registered:', reg.scope);
-          })
-          .catch((err) => {
-            console.warn('SW registration failed:', err);
-          });
+      if (location.protocol !== 'https:' && location.hostname !== 'localhost') return null;
+      try {
+        this.initProgress = 'registering_sw';
+        const reg = await navigator.serviceWorker.register('./sw.js');
+        // Wait for active controller (handles SW install + activate lifecycle)
+        await navigator.serviceWorker.ready;
+        console.log('✅ SW registered and ready:', reg.scope);
+        return reg;
+      } catch (err) {
+        console.warn('⚠️ SW registration failed:', err);
+        throw err;
+      }
+    },
+
+    // ===== Phase 3 P3-T2: SEED with retry policy =====
+    // Per plan P3-T2 (M-5 fixed) + spec §5.3:
+    //   - 3 attempts with exponential backoff (1s / 3s / 9s)
+    //   - UI banner shows "正在初始化離線功能... (第 N/3 次)" each retry
+    //   - Hard fail after 3 attempts → persistent error banner with "重試" button
+    //   - Times out each individual attempt at 15s
+    //   - Resolves with {written, updated} on success; throws on hard fail
+    async seedIndexedDB(videos) {
+      const MAX_ATTEMPTS = 3;
+      const BACKOFF_MS = [1000, 3000, 9000]; // exponential
+      const ATTEMPT_TIMEOUT_MS = 15000;
+
+      this.initProgress = 'seeding';
+      let lastErr = null;
+
+      for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+        this.initAttempt = attempt;
+        this.seedBanner = `正在初始化離線功能...（第 ${attempt}/${MAX_ATTEMPTS} 次）`;
+
+        try {
+          const controller = navigator.serviceWorker.controller;
+          if (!controller) {
+            throw new Error('SW controller 還沒 ready（serviceWorker.ready 尚未 resolve）');
+          }
+          const result = await this.sendSWMessage(
+            controller,
+            { type: 'SEED_INDEXEDDB', videos: videos || [] },
+            ATTEMPT_TIMEOUT_MS
+          );
+          // Success — clear banner + set state
+          this.seedBanner = null;
+          this.seedError = null;
+          this.swReady = true;
+          this.initProgress = 'done';
+          console.log(`✅ SEED success (attempt ${attempt}): written=${result.written}, updated=${result.updated}`);
+          return result;
+        } catch (err) {
+          lastErr = err;
+          console.warn(`⚠️ SEED attempt ${attempt}/${MAX_ATTEMPTS} failed:`, err.message || err);
+          if (attempt < MAX_ATTEMPTS) {
+            await new Promise((r) => setTimeout(r, BACKOFF_MS[attempt - 1]));
+          }
+        }
+      }
+
+      // Hard fail after 3 attempts
+      this.seedBanner = `❌ 離線功能初始化失敗（已嘗試 ${MAX_ATTEMPTS} 次）`;
+      this.seedError = lastErr?.message || String(lastErr) || 'unknown error';
+      this.initProgress = 'error';
+      throw lastErr;
+    },
+
+    // ===== Phase 3 helper: send SW message with reply (MessageChannel correlation) =====
+    // Per spec §5.3: SW responds with 'SEED_INDEXEDDB_DONE' (success) or 'SEED_INDEXEDDB_ERROR' (fail).
+    //
+    // @param {ServiceWorker} controller
+    // @param {Object} payload — {type, ...data}
+    // @param {number} timeoutMs
+    // @returns {Promise<{written:number, updated:number}>}
+    sendSWMessage(controller, payload, timeoutMs = 15000) {
+      return new Promise((resolve, reject) => {
+        const channel = new MessageChannel();
+        const tmo = setTimeout(() => {
+          reject(new Error(`SW message timeout after ${timeoutMs}ms`));
+        }, timeoutMs);
+
+        channel.port1.onmessage = (e) => {
+          clearTimeout(tmo);
+          const data = e.data || {};
+          if (data.type === 'SEED_INDEXEDDB_DONE') {
+            resolve({ written: data.written, updated: data.updated });
+          } else if (data.type === 'SEED_INDEXEDDB_ERROR') {
+            reject(new Error(data.error || 'SEED unknown error'));
+          } else {
+            reject(new Error(`Unexpected SW reply type: ${data.type}`));
+          }
+        };
+
+        try {
+          controller.postMessage(payload, [channel.port2]);
+        } catch (err) {
+          clearTimeout(tmo);
+          reject(err);
+        }
       });
+    },
+
+    // ===== Phase 3 helper: getInitMessage for banner UI =====
+    getInitMessage() {
+      if (this.initProgress === 'registering_sw') return '⏳ 註冊 Service Worker...';
+      if (this.initProgress === 'seeding' && this.seedBanner) return this.seedBanner;
+      if (this.initProgress === 'seeding') return '⏳ 初始化離線功能...';
+      if (this.initProgress === 'error') return this.seedBanner || '❌ 初始化失敗';
+      return '';
+    },
+
+    // ===== Phase 3 helper: retrySeed — user-triggered retry on hard fail =====
+    async retrySeed() {
+      this.seedError = null;
+      this.seedBanner = null;
+      try {
+        await this.seedIndexedDB(this.videos);
+      } catch (err) {
+        // seedIndexedDB already updated state to error
+        console.warn('retrySeed failed:', err);
+      }
     },
 
     // ===== Marked extension: 章節時間戳 MM:SS → chapter-link =====
