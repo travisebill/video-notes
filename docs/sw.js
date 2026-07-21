@@ -421,6 +421,29 @@ async function handleClearAllCache() {
 }
 
 /**
+ * Phase 1 P1-T5: AUTO_CACHE_DONE event emit helper
+ * Actual auto cache logic (running AUTO_CACHE + video scoring) is in Phase 2.
+ * This helper defines how SW broadcasts the event to all clients.
+ *
+ * @param {number} cached_count - number of videos cached in this run
+ * @param {number} total_bytes - total bytes cached (markdown + thumbnails)
+ * @param {number} duration_ms - how long the auto cache took (wall-clock)
+ * @param {boolean} dedup_skipped - whether some videos were skipped due to dedupe
+ */
+async function emitAutoCacheDone(cached_count, total_bytes, duration_ms, dedup_skipped) {
+  const clients = await self.clients.matchAll({ includeUncontrolled: true });
+  for (const client of clients) {
+    client.postMessage({
+      type: SW_MESSAGES.AUTO_CACHE_DONE,
+      cached_count,
+      total_bytes,
+      duration_ms,
+      dedup_skipped,
+    });
+  }
+}
+
+/**
  * Phase 1 P1-T6: LRU_EVICTED event emit helper
  * Actual LRU eviction logic (running LRU + clearing caches) is in Phase 2.
  * This helper defines how SW broadcasts the event to all clients.
@@ -500,8 +523,7 @@ self.addEventListener('message', (event) => {
     // TODO next turn (P1-T2): case SW_MESSAGES.CACHE_VIDEO
     // TODO next turn (P1-T3): case SW_MESSAGES.CACHE_BATCH + CANCEL_BATCH
     // TODO next turn (P1-T4): case SW_MESSAGES.UNCACHE_VIDEO + GET_CACHE_STATUS + CLEAR_ALL_CACHE
-    // TODO next turn (P1-T5): emit AUTO_CACHE_DONE event
-    // TODO next turn (P1-T6): emit LRU_EVICTED event
+    // Phase 1 P1-T6: emit LRU_EVICTED event (helper at top of file)
 
     default:
       console.warn('[SW] Unknown message type:', type);
