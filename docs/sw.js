@@ -45,6 +45,24 @@ async function setMetaValue(key, value) {
   });
 }
 
+// ════════════════════════════════════════════════════════════════════════════
+// Phase 2 P2-T5: shouldSkipSeed() 1h dedupe
+// ════════════════════════════════════════════════════════════════════════════
+
+/**
+ * Returns true if meta.last_seeded_at exists and is < 1h old.
+ * Per spec §5.3 + plan P2-T1b — 1h dedupe for auto-cache trigger.
+ * Used by Phase 2 P2-T1 to avoid re-seeding on every json fetch.
+ *
+ * @returns {Promise<boolean>}
+ */
+async function shouldSkipSeed() {
+  const last = await getMetaValue('last_seeded_at');
+  if (!last) return false;
+  const ageMs = Date.now() - new Date(last).getTime();
+  return ageMs < 60 * 60 * 1000; // 1 hour
+}
+
 // Phase 0 P0-T1: IndexedDB schema v2 (initial setup — pre-existing sw.js had no IDB code)
 const DB_NAME = 'video-notes';
 const DB_VERSION = 2;
