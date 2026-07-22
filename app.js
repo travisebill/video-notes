@@ -46,6 +46,8 @@ document.addEventListener('alpine:init', () => {
     downloadEnabled: false,  // P3-T3: gates ⬇ button; mirrors swReady but separate for future granular control
     autoCacheBanner: null,    // P4-T6: {message, count, bytes}|null — AUTO_CACHE_DONE notif banner UX (24h-deduped via P2-T4)
     autoCacheLastDoneAt: null, // ISO timestamp of last AUTO_CACHE_DONE (debug)
+    cacheStatus: {},           // P5-T1: { [videoId]: {status, markdown_status, thumbnail_status, cached_at} } — loaded from IDB cache_status store
+    downloadProgress: {},      // P5-T1: { [videoId]: 0|50|100 } — current download progress percentage (cleared on CACHE_DONE)
 
     // ===== Computed =====
     get sortedSpeakers() {
@@ -100,8 +102,17 @@ document.addEventListener('alpine:init', () => {
           } else if (data.type === 'LRU_EVICTED') {
             console.log(`[LRU_EVICTED] ${data.count} evicted (~${data.freed_bytes}B freed)`);
           } else if (data.type === 'CACHE_PROGRESS') {
-            // Future: drive progress bar UI in Phase 5 toolbar
-            // console.log('[CACHE_PROGRESS]', data.id, data.stage, data.status);
+            // Phase 5 P5-T1: drive per-video download progress (markdown done=50%, thumbnail done=100%)
+            if (data.id) {
+              this.updateDownloadProgress(data.id, data.stage, data.status);
+            }
+          } else if (data.type === 'CACHE_DONE') {
+            // Phase 5 P5-T1: clear progress + reload cache_status from IDB
+            if (data.id) {
+              delete this.downloadProgress[data.id];
+              this.downloadProgress = { ...this.downloadProgress };
+              this.loadCacheStatus();
+            }
           }
         });
       }
@@ -115,6 +126,9 @@ document.addEventListener('alpine:init', () => {
       // Phase 3 P3-T2: SEED with retry policy (3 attempts + 1s/3s/9s exp backoff)
       // Per plan P3-T2 (M-5 fixed): UI banner shows "正在初始化離線功能... (第 N/3 次)" each retry
       await this.seedIndexedDB(this.videos);
+
+      // Phase 5 P5-T1: load cache_status from IDB so per-video ⬇ button has correct state
+      await this.loadCacheStatus();
 
       this.applyFilters();
 
@@ -356,6 +370,141 @@ document.addEventListener('alpine:init', () => {
         }
       } catch (err) {
         console.error(`❌ Download ${id} failed:`, err);
+      }
+    },
+
+    // ===== Phase 5 P5-T1: cache_status loader + per-video button state =====
+
+    /**
+     * Load all cache_status records from IDB into this.cacheStatus map.
+     * Called after SEED done in init() so per-video buttons have correct state.
+     */
+    async loadCacheStatus() {
+      if (!('indexedDB' in window)) return;
+      try {
+        const db = await new Promise((resolve, reject) => {
+          const req = indexedDB.open('video-notes', 2);
+          req.onsuccess = () => resolve(req.result);
+          req.onerror = () => reject(req.error);
+        });
+        const tx = db.transaction('cache_status', 'readonly');
+        const req = tx.objectStore('cache_status').getAll();
+        await new Promise((resolve, reject) => {
+          req.onsuccess = () => {
+            const map = {};
+            for (const e of req.result || []) {
+              map[e.id] = {
+                status: e.status,
+                markdown_status: e.markdown_status,
+                thumbnail_status: e.thumbnail_status,
+                cached_at: e.cached_at,
+              };
+            }
+            this.cacheStatus = map;
+            resolve();
+          };
+          req.onerror = () => reject(req.error);
+        });
+      } catch (err) {
+        console.warn('loadCacheStatus failed:', err);
+      }
+    },
+
+    /**
+     * Per-spec §7.1: return button state object for given videoId.
+     * 6 states: muted (initializing), primary (pending), progress (downloading),
+     *           success (cached), warning (partial), danger (failed).
+     */
+    getCacheButtonState(videoId) {
+      // SW not ready or seeding
+      if (!this.swReady || this.initProgress !== 'done') {
+        return { label: '⏳ 初始化中...', disabled: true, color: 'muted' };
+      }
+      const cs = this.cacheStatus[videoId];
+      const progress = this.downloadProgress[videoId];
+
+      // In-flight download
+      if (progress !== undefined && progress !== null) {
+        return {
+          label: `⏳ 下載中 ${progress}%`,
+          disabled: true,
+          color: 'progress',
+          progress,
+        };
+      }
+
+      // No cache_status yet (fresh video or pre-SEED)
+      if (!cs) {
+        return { label: '⬇️ 下載離線', disabled: !this.downloadEnabled, click: 'download', color: 'primary' };
+      }
+
+      switch (cs.status) {
+        case 'cached':
+          return { label: '✅ 已離線', disabled: false, click: 'remove', color: 'success' };
+        case 'partial':
+          return { label: '⚠️ 部分離線', disabled: false, click: 'retry_thumb', color: 'warning' };
+        case 'failed':
+          return { label: '❌ 下載失敗 — 重試', disabled: false, click: 'retry', color: 'danger' };
+        case 'pending':
+        default:
+          return { label: '⬇️ 下載離線', disabled: !this.downloadEnabled, click: 'download', color: 'primary' };
+      }
+    },
+
+    /** Per-state inline style for the cache button. */
+    getCacheButtonStyle(videoId) {
+      const s = this.getCacheButtonState(videoId);
+      const map = {
+        muted:    { bg: 'transparent', fg: '#9ca3af', border: '#d1d5db' },
+        primary:  { bg: '#dbeafe',      fg: '#1e40af', border: '#3b82f6' },
+        success:  { bg: '#d1fae5',      fg: '#065f46', border: '#10b981' },
+        warning:  { bg: '#fef3c7',      fg: '#78350f', border: '#f59e0b' },
+        danger:   { bg: '#fee2e2',      fg: '#7f1d1d', border: '#ef4444' },
+        progress: { bg: '#e0e7ff',      fg: '#3730a3', border: '#6366f1' },
+      };
+      const c = map[s.color] || map.primary;
+      return `background:${c.bg}; color:${c.fg}; border-color:${c.border}; ${s.disabled ? 'opacity:0.6; cursor:not-allowed;' : ''}`;
+    },
+
+    /** Click handler dispatcher based on button state. */
+    async handleCacheButtonClick(videoId) {
+      const state = this.getCacheButtonState(videoId);
+      if (state.disabled) return;
+      switch (state.click) {
+        case 'download':
+        case 'retry':
+          this.downloadProgress = { ...this.downloadProgress, [videoId]: 0 };
+          try {
+            await this.downloadVideo(videoId);
+          } catch (err) {
+            console.error(`Download ${videoId} failed:`, err);
+          }
+          // downloadProgress cleared via SW CACHE_DONE listener
+          break;
+        case 'remove':
+          try {
+            const controller = navigator.serviceWorker.controller;
+            if (!controller) throw new Error('SW controller not ready');
+            await this.sendSWMessage(controller, { type: 'UNCACHE_VIDEO', id: videoId }, 30000);
+            await this.loadCacheStatus();
+          } catch (err) {
+            console.error(`Uncache ${videoId} failed:`, err);
+          }
+          break;
+        case 'retry_thumb':
+          this.downloadProgress = { ...this.downloadProgress, [videoId]: 0 };
+          await this.downloadVideo(videoId);
+          break;
+      }
+    },
+
+    /** Called from SW message listener on CACHE_PROGRESS events. */
+    updateDownloadProgress(videoId, stage, status) {
+      if (stage === 'markdown' && status === 'done') {
+        this.downloadProgress = { ...this.downloadProgress, [videoId]: 50 };
+      } else if (stage === 'thumbnail' && status === 'done') {
+        this.downloadProgress = { ...this.downloadProgress, [videoId]: 100 };
+        // CACHE_DONE event will clean up progress + reload cache_status
       }
     },
 

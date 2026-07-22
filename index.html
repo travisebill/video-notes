@@ -267,6 +267,17 @@
               <div class="expand-topbar">
                 <button @click="closeExpand(video.id)" class="close-btn" aria-label="關閉">✕</button>
                 <h3 class="expand-title" x-text="video.title"></h3>
+                <!-- Phase 5 P5-T1: per-video ⬇ cache status button (6 states per spec §7.1) -->
+                <button @click="handleCacheButtonClick(video.id)"
+                        :disabled="getCacheButtonState(video.id).disabled"
+                        :data-state="getCacheButtonState(video.id).color"
+                        :data-progress="getCacheButtonState(video.id).progress || ''"
+                        :title="getCacheButtonState(video.id).label"
+                        x-text="getCacheButtonState(video.id).label"
+                        :style="getCacheButtonStyle(video.id)"
+                        class="cache-btn"
+                        style="border:1px solid; border-radius:4px; padding:0.4rem 0.9rem; font-size:0.85rem; cursor:pointer; margin-left:0.5rem; white-space:nowrap; transition:all 200ms;">
+                </button>
                 <button x-show="getYouTubeEmbedUrl(video) && !videoCollapsed[video.id]"
                         @click="toggleCollapse(video.id)"
                         class="secondary outline collapse-btn"
