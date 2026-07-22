@@ -230,7 +230,21 @@ document.addEventListener('alpine:init', () => {
         };
 
         try {
-          controller.postMessage(payload, [channel.port2]);
+          // Phase 3 P3-T2 fix: deep clone payload before postMessage.
+          // Alpine.data() wraps videos[] in reactive Proxy; postMessage throws
+          // DataCloneError when traversing Proxy traps that hold functions,
+          // undefined values, or getter-only properties (禮士 18:44 console).
+          // structuredClone preserves Date/Map/Set; JSON fallback handles any
+          // remaining Alpine Proxy objects. Our payload is plain JSON, so
+          // JSON fallback is the common path.
+          let safePayload;
+          try {
+            safePayload = structuredClone(payload);
+          } catch (cloneErr) {
+            console.warn('[sendSWMessage] structuredClone failed, falling back to JSON:', cloneErr?.message || cloneErr);
+            safePayload = JSON.parse(JSON.stringify(payload));
+          }
+          controller.postMessage(safePayload, [channel.port2]);
         } catch (err) {
           clearTimeout(tmo);
           reject(err);
