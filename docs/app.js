@@ -44,6 +44,8 @@ document.addEventListener('alpine:init', () => {
     swReady: false,          // boolean — SW controller active AND SEED done (gates ⬇ button in P3-T3)
     navigatorOnline: navigator.onLine,  // P3-T4: navigator.onLine mirror; updated by online/offline events
     downloadEnabled: false,  // P3-T3: gates ⬇ button; mirrors swReady but separate for future granular control
+    autoCacheBanner: null,    // P4-T6: {message, count, bytes}|null — AUTO_CACHE_DONE notif banner UX (24h-deduped via P2-T4)
+    autoCacheLastDoneAt: null, // ISO timestamp of last AUTO_CACHE_DONE (debug)
 
     // ===== Computed =====
     get sortedSpeakers() {
@@ -84,6 +86,23 @@ document.addEventListener('alpine:init', () => {
         navigator.serviceWorker.addEventListener('controllerchange', () => {
           console.log('🔄 SW controller changing — gating interactions');
           this.swReady = false;
+        });
+      }
+
+      // Phase 4 P4-T6: AUTO_CACHE_DONE inbound listener (consumes P2-T4 ShouldNotify banner UX)
+      // SW emits this via emitAutoCacheDone(cached_count, total_bytes, duration_ms, dedup_skipped, should_notify).
+      // Frontend listens and shows banner only if should_notify === true (24h-deduped + newVideos>0 rule).
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.addEventListener('message', (event) => {
+          const data = event.data || {};
+          if (data.type === 'AUTO_CACHE_DONE') {
+            this.handleAutoCacheDone(data);
+          } else if (data.type === 'LRU_EVICTED') {
+            console.log(`[LRU_EVICTED] ${data.count} evicted (~${data.freed_bytes}B freed)`);
+          } else if (data.type === 'CACHE_PROGRESS') {
+            // Future: drive progress bar UI in Phase 5 toolbar
+            // console.log('[CACHE_PROGRESS]', data.id, data.stage, data.status);
+          }
         });
       }
 
@@ -271,6 +290,41 @@ document.addEventListener('alpine:init', () => {
         // seedIndexedDB already updated state to error
         console.warn('retrySeed failed:', err);
       }
+    },
+
+    // ===== Phase 4 P4-T6: AUTO_CACHE_DONE notif handler =====
+    // Per plan P4-T6 (C-4 fixed) + spec §7.6: receive AUTO_CACHE_DONE broadcast from SW.
+    // Banner "✨ 自動下載 N 支新影片" only shows if should_notify === true (per P2-T4 dedupe rule).
+    // Silent log only when should_notify=false (24h dedup window OR newVideos=0).
+    // Banner auto-dismisses after 8s; user can click to dismiss earlier.
+    //
+    // @param {Object} data - {cached_count, total_bytes, duration_ms, dedup_skipped, should_notify}
+    handleAutoCacheDone(data) {
+      this.autoCacheLastDoneAt = new Date().toISOString();
+      if (data.should_notify) {
+        const count = data.cached_count || 0;
+        const bytes = data.total_bytes || 0;
+        const kb = (bytes / 1024).toFixed(1);
+        this.autoCacheBanner = {
+          message: `✨ 自動下載 ${count} 支新影片（約 ${kb} KB）`,
+          count,
+          bytes,
+        };
+        // Auto-dismiss after 8s (capture current count to avoid stale dismissal)
+        setTimeout(() => {
+          if (this.autoCacheBanner && this.autoCacheBanner.count === count) {
+            this.autoCacheBanner = null;
+          }
+        }, 8000);
+        console.log(`✅ [AUTO_CACHE_DONE] banner shown: ${count} 新影片`);
+      } else {
+        // Dedup window (24h since last_auto_cache_notification) or newVideos === 0
+        console.log(`🔕 [AUTO_CACHE_DONE] silent (should_notify=false): ${data.cached_count} cached, dedupe=${data.dedup_skipped}`);
+      }
+    },
+
+    dismissAutoCacheBanner() {
+      this.autoCacheBanner = null;
     },
 
     // ===== Phase 3 P3-T3: downloadVideo — fires SW CACHE_VIDEO handler (P1-T2) =====
