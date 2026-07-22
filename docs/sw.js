@@ -1125,21 +1125,31 @@ self.addEventListener('message', (event) => {
 
   switch (type) {
     case SW_MESSAGES.SEED_INDEXEDDB:
-      handleSeedIndexedDB(payload)
-        .then((result) => {
-          event.source.postMessage({
-            type: 'SEED_INDEXEDDB_DONE',
-            written: result.written,
-            updated: result.updated,
+      {
+        // Phase 3 P3-T2 fix: reply via MessagePort when provided
+        // Frontend (app.js sendSWMessage helper) uses MessageChannel.postMessage(port)
+        // for correlated reply; falling back to event.source.postMessage for legacy path.
+        const replyPort = (event.ports && event.ports[0]) || null;
+        const reply = (data) => {
+          if (replyPort) replyPort.postMessage(data);
+          else event.source.postMessage(data);
+        };
+        handleSeedIndexedDB(payload)
+          .then((result) => {
+            reply({
+              type: 'SEED_INDEXEDDB_DONE',
+              written: result.written,
+              updated: result.updated,
+            });
+          })
+          .catch((err) => {
+            console.error('[SW] SEED_INDEXEDDB failed:', err);
+            reply({
+              type: 'SEED_INDEXEDDB_ERROR',
+              error: err.message || String(err),
+            });
           });
-        })
-        .catch((err) => {
-          console.error('[SW] SEED_INDEXEDDB failed:', err);
-          event.source.postMessage({
-            type: 'SEED_INDEXEDDB_ERROR',
-            error: err.message || String(err),
-          });
-        });
+      }
       break;
 
     case SW_MESSAGES.UNCACHE_VIDEO:
