@@ -476,12 +476,23 @@ document.addEventListener('alpine:init', () => {
         case 'download':
         case 'retry':
           this.downloadProgress = { ...this.downloadProgress, [videoId]: 0 };
+          // Phase 5 P5-T1 failsafe: if SW doesn't emit CACHE_DONE within 70s
+          // (network hang / sendSWMessage timeout / SW internal error), clear progress
+          // so button doesn't stuck on "下載中 0%" forever
+          setTimeout(() => {
+            if (this.downloadProgress[videoId] !== undefined) {
+              console.warn(`[Failsafe] Clearing stuck downloadProgress[${videoId}] after 70s`);
+              delete this.downloadProgress[videoId];
+              this.downloadProgress = { ...this.downloadProgress };
+              this.loadCacheStatus();
+            }
+          }, 70000);
           try {
             await this.downloadVideo(videoId);
           } catch (err) {
             console.error(`Download ${videoId} failed:`, err);
           }
-          // downloadProgress cleared via SW CACHE_DONE listener
+          // downloadProgress cleared via SW CACHE_DONE listener (or 70s failsafe above)
           break;
         case 'remove':
           try {
@@ -534,6 +545,24 @@ document.addEventListener('alpine:init', () => {
       for (const id of videoIds) {
         this.downloadProgress = { ...this.downloadProgress, [id]: 0 };
       }
+      // Phase 5 P5-T3 failsafe: if SW doesn't emit CACHE_DONE per video within 70s,
+      // clear all stuck batch progress entries so per-card buttons don't stay
+      // "下載中 0%" (CACHE_DONE listener handles normal flow; this catches
+      // network hangs, sendSWMessage timeouts, partial-batch failures, etc.)
+      const batchFailsafe = setTimeout(() => {
+        let cleared = 0;
+        for (const id of videoIds) {
+          if (this.downloadProgress[id] !== undefined) {
+            delete this.downloadProgress[id];
+            cleared++;
+          }
+        }
+        if (cleared > 0) {
+          console.warn(`[Failsafe] Clearing ${cleared} stuck batch progress entries after 70s (${label})`);
+          this.downloadProgress = { ...this.downloadProgress };
+          this.loadCacheStatus();
+        }
+      }, 70000);
       try {
         const controller = navigator.serviceWorker.controller;
         if (!controller) throw new Error('SW controller not ready');
@@ -549,6 +578,7 @@ document.addEventListener('alpine:init', () => {
         console.error(`❌ [P5-T3] ${label} batch failed:`, err);
       } finally {
         this.toolbarBatchInFlight = false;
+        clearTimeout(batchFailsafe);
         await this.loadCacheStatus();
       }
     },
