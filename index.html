@@ -26,6 +26,50 @@
 
   <!-- 客製樣式 -->
   <link rel="stylesheet" href="style.css">
+  <!-- Phase 5 mobile-responsive overrides (P5-T3 mobile UI fix 2026-07-23) -->
+  <style>
+  @media (max-width: 768px) {
+    .header-actions {
+      margin-top: 0.5rem !important;
+      width: 100%;
+      justify-content: center !important;
+    }
+    .header-actions > * {
+      font-size: 0.8rem !important;
+    }
+    .expand-topbar {
+      flex-wrap: wrap !important;
+      gap: 0.3rem !important;
+      padding: 0.4rem !important;
+    }
+    .expand-topbar .expand-title {
+      font-size: 0.95rem !important;
+      flex: 1 1 100% !important;
+      order: -1;
+      margin-bottom: 0.25rem !important;
+      min-width: 0;
+    }
+    .expand-topbar .cache-btn {
+      font-size: 0.75rem !important;
+      padding: 0.3rem 0.6rem !important;
+      flex: 1 1 auto !important;
+    }
+    .expand-topbar .collapse-btn {
+      font-size: 0.75rem !important;
+      padding: 0.3rem 0.6rem !important;
+      flex: 0 0 auto !important;
+    }
+    .expand-topbar .close-btn {
+      padding: 0.3rem 0.6rem !important;
+      flex: 0 0 auto !important;
+    }
+    .toolbar-dropdown {
+      min-width: 200px !important;
+      right: 50% !important;
+      transform: translateX(50%) !important;
+    }
+  }
+  </style>
 
   <!-- Alpine.js 響應式 + 篩選 -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
@@ -86,11 +130,13 @@
           </small>
         </p>
       </hgroup>
-      <button @click="toggleTheme()" class="secondary outline" style="float:right; margin-top:-3rem;">
+      <!-- Phase 5 mobile-responsive header actions group (P5-T3 toolbar + theme toggle wrapped) -->
+      <div class="header-actions" style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; justify-content:flex-end; float:right; margin-top:-3rem;">
+      <button @click="toggleTheme()" class="secondary outline">
         <span x-text="theme === 'dark' ? '☀️ Light' : '🌙 Dark'"></span>
       </button>
       <!-- Phase 5 P5-T3: Toolbar 全域 ⬇ dropdown -->
-      <div class="toolbar-dropdown-wrapper" style="position:relative; float:right; margin-top:-3rem; margin-right:0.5rem;" x-show="swReady">
+      <div class="toolbar-dropdown-wrapper" style="position:relative;" x-show="swReady">
         <button @click="toggleToolbarDropdown()"
                 :disabled="toolbarBatchInFlight"
                 class="secondary outline"
@@ -130,6 +176,7 @@
             🗑️ 清空離線 cache
           </button>
         </div>
+      </div>
       </div>
     </header>
 
