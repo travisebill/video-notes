@@ -1202,16 +1202,15 @@ self.addEventListener('message', (event) => {
       break;
     }
 
-    case SW_MESSAGES.CANCEL_BATCH:
+    case SW_MESSAGES.CANCEL_BATCH: {
+      // Phase 3 P3-T2 fix: MessagePort correlation
+      const replyPort = (event.ports && event.ports[0]) || null;
+      const reply = (data) => replyPort ? replyPort.postMessage(data) : event.source.postMessage(data);
       handleCancelBatch(payload)
-        .then((result) => {
-          event.source.postMessage({ type: 'CANCEL_BATCH_DONE', ...result });
-        })
-        .catch((err) => event.source.postMessage({
-          type: 'CANCEL_BATCH_ERROR',
-          error: err.message || String(err),
-        }));
+        .then((result) => reply({ type: 'CANCEL_BATCH_DONE', ...result }))
+        .catch((err) => reply({ type: 'CANCEL_BATCH_ERROR', error: err.message || String(err) }));
       break;
+    }
 
     case SW_MESSAGES.CACHE_VIDEO: {
       // Phase 3 P3-T2 fix: MessagePort correlation
