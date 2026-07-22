@@ -11,6 +11,15 @@ const CACHE_VERSION = 'v1.8-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
+// 2026-07-23: SW URL base 統一用 jsDelivr (per AGENTS.md 永久教訓 #3)
+// 原來用 self.location.href (GitHub Pages)，但 .md / audio / transcripts 檔
+// 在 repo 根目錄，不在 docs/ 內，Pages 永遠 404 → 改 jsDelivr CDN_BASE
+// 重要：必須有尾斜線！URL constructor 把 'video-notes@main' 當 file segment，
+// 沒尾斜線會把 '人物訪談/xxx.md' 解析成 .../travisebill/人物訪談/xxx.md (404) 
+// 而非 .../travisebill/video-notes@main/人物訪談/xxx.md
+const CDN_BASE = 'https://cdn.jsdelivr.net/gh/travisebill/video-notes@main/';
+const cdnUrl = (path) => path ? new URL(path, CDN_BASE).href : null;
+
 // Phase 1 P1-T7: Import shared SW message type constants + JSDoc typedef companion file
 // importScripts loads synchronously and exposes SW_MESSAGES as global var in SW scope
 importScripts('./types/sw-message.js');
@@ -238,7 +247,7 @@ async function tryLRU() {
       if (cur.usage / cur.quota < 0.6) break;
 
       const urls = [];
-      if (v.note_path) urls.push(new URL(v.note_path, self.location.href).href);
+      if (v.note_path) urls.push(cdnUrl(v.note_path));
       const ytId = extractYouTubeId(v.video_url);
       if (ytId) urls.push(`https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`);
 
@@ -638,7 +647,7 @@ async function handleUncacheVideo({ id }) {
   //   would never match. Use exact URL lookup instead.
   const targetUrls = [];
   if (video?.note_path) {
-    targetUrls.push(new URL(video.note_path, self.location.href).href);
+    targetUrls.push(cdnUrl(video.note_path));
   }
   const ytId = extractYouTubeId(video?.video_url);
   if (ytId) {
@@ -880,10 +889,8 @@ async function handleCacheVideo(payload) {
   const video = await getVideo(id);
   if (!video) throw new Error(`CACHE_VIDEO: video ${id} not found in IDB`);
 
-  // Build markdown + thumbnail URLs
-  const markdownUrl = video.note_path
-    ? new URL(video.note_path, self.location.href).href
-    : null;
+  // Build markdown + thumbnail URLs (cdnUrl uses jsDelivr CDN_BASE, see header)
+  const markdownUrl = cdnUrl(video.note_path);
   const ytId = extractYouTubeId(video.video_url);
   const thumbnailUrl = ytId ? `https://i.ytimg.com/vi/${ytId}/hqdefault.jpg` : null;
 
