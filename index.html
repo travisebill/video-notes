@@ -89,6 +89,48 @@
       <button @click="toggleTheme()" class="secondary outline" style="float:right; margin-top:-3rem;">
         <span x-text="theme === 'dark' ? '☀️ Light' : '🌙 Dark'"></span>
       </button>
+      <!-- Phase 5 P5-T3: Toolbar 全域 ⬇ dropdown -->
+      <div class="toolbar-dropdown-wrapper" style="position:relative; float:right; margin-top:-3rem; margin-right:0.5rem;" x-show="swReady">
+        <button @click="toggleToolbarDropdown()"
+                :disabled="toolbarBatchInFlight"
+                class="secondary outline"
+                :data-state="toolbarBatchInFlight ? 'loading' : 'idle'"
+                style="padding:0.3rem 0.8rem; font-size:0.85rem; cursor:pointer;">
+          <span x-text="toolbarBatchInFlight ? '⏳ 批次下載中...' : '📥 下載離線 ▼'"></span>
+        </button>
+        <div x-show="toolbarDropdownOpen"
+             x-cloak
+             x-transition.opacity.duration.200ms
+             @click.outside="closeToolbarDropdown()"
+             class="toolbar-dropdown"
+             style="position:absolute; right:0; top:100%; margin-top:4px; min-width:240px; background:var(--pico-background); border:1px solid var(--pico-muted-border-color); border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:100; padding:0.5rem;">
+          <div style="padding:0.5rem 0.75rem; border-bottom:1px solid var(--pico-muted-border-color); margin-bottom:0.5rem;">
+            <strong>下載離線</strong><br>
+            <small x-text="getCacheStatusSummary().cached + ' / ' + getCacheStatusSummary().total + ' 支已離線'"></small>
+          </div>
+          <button @click="downloadRecent30()"
+                  :disabled="toolbarBatchInFlight"
+                  style="display:block; width:100%; text-align:left; padding:0.4rem 0.75rem; border:none; background:transparent; cursor:pointer; border-radius:4px; font-size:0.9rem;"
+                  @mouseover="this.style.background='var(--pico-muted-border-color)'"
+                  @mouseout="this.style.background='transparent'">
+            📦 下載最近 30 支（依 upload_date）
+          </button>
+          <button @click="downloadAllPending()"
+                  :disabled="toolbarBatchInFlight"
+                  style="display:block; width:100%; text-align:left; padding:0.4rem 0.75rem; border:none; background:transparent; cursor:pointer; border-radius:4px; font-size:0.9rem;"
+                  @mouseover="this.style.background='var(--pico-muted-border-color)'"
+                  @mouseout="this.style.background='transparent'">
+            📦 下載全部可下載
+          </button>
+          <button @click="clearAllCache()"
+                  :disabled="toolbarBatchInFlight"
+                  style="display:block; width:100%; text-align:left; padding:0.4rem 0.75rem; border:none; background:transparent; cursor:pointer; border-radius:4px; font-size:0.9rem; margin-top:0.25rem; border-top:1px solid var(--pico-muted-border-color); padding-top:0.6rem; color:var(--pico-del-color);"
+                  @mouseover="this.style.background='var(--pico-muted-border-color)'"
+                  @mouseout="this.style.background='transparent'">
+            🗑️ 清空離線 cache
+          </button>
+        </div>
+      </div>
     </header>
 
     <!-- Search Bar -->

@@ -48,6 +48,8 @@ document.addEventListener('alpine:init', () => {
     autoCacheLastDoneAt: null, // ISO timestamp of last AUTO_CACHE_DONE (debug)
     cacheStatus: {},           // P5-T1: { [videoId]: {status, markdown_status, thumbnail_status, cached_at} } — loaded from IDB cache_status store
     downloadProgress: {},      // P5-T1: { [videoId]: 0|50|100 } — current download progress percentage (cleared on CACHE_DONE)
+    toolbarDropdownOpen: false, // P5-T3: Toolbar 全域 ⬇ dropdown visibility
+    toolbarBatchInFlight: false, // P5-T3: true while CACHE_BATCH in progress (disable dropdown buttons)
 
     // ===== Computed =====
     get sortedSpeakers() {
@@ -506,6 +508,112 @@ document.addEventListener('alpine:init', () => {
         this.downloadProgress = { ...this.downloadProgress, [videoId]: 100 };
         // CACHE_DONE event will clean up progress + reload cache_status
       }
+    },
+
+    // ===== Phase 5 P5-T3: Toolbar 全域 ⬇ dropdown =====
+
+    toggleToolbarDropdown() {
+      this.toolbarDropdownOpen = !this.toolbarDropdownOpen;
+    },
+    closeToolbarDropdown() {
+      this.toolbarDropdownOpen = false;
+    },
+
+    /** Send CACHE_BATCH for an array of video IDs. Concurrency 3 (SW default). */
+    async downloadBatch(videoIds, label) {
+      if (!this.swReady) {
+        console.warn('[P5-T3] SW not ready for batch download');
+        return;
+      }
+      if (!Array.isArray(videoIds) || videoIds.length === 0) {
+        console.log(`[P5-T3] ${label}: nothing to download`);
+        return;
+      }
+      this.toolbarBatchInFlight = true;
+      // Set all these IDs as in-flight (50% placeholder, will update per-video from SW CACHE_PROGRESS)
+      for (const id of videoIds) {
+        this.downloadProgress = { ...this.downloadProgress, [id]: 0 };
+      }
+      try {
+        const controller = navigator.serviceWorker.controller;
+        if (!controller) throw new Error('SW controller not ready');
+        const batchId = (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : `batch-${Date.now()}`;
+        console.log(`[P5-T3] ${label} starting batch ${batchId} with ${videoIds.length} videos`);
+        const result = await this.sendSWMessage(
+          controller,
+          { type: 'CACHE_BATCH', batchId, videoIds, concurrency: 3 },
+          videoIds.length * 60000  // 60s per video, max
+        );
+        console.log(`✅ [P5-T3] ${label} batch done: ${result.done}/${videoIds.length} done, ${result.failed.length} failed, ${result.cancelled} cancelled, ${result.duration_ms}ms`);
+      } catch (err) {
+        console.error(`❌ [P5-T3] ${label} batch failed:`, err);
+      } finally {
+        this.toolbarBatchInFlight = false;
+        await this.loadCacheStatus();
+      }
+    },
+
+    /** Batch download all videos not yet cached (or cache_status=pending). */
+    async downloadAllPending() {
+      const cachedIds = new Set(Object.keys(this.cacheStatus));
+      const pendingIds = this.videos
+        .filter(v => !cachedIds.has(v.id) || (this.cacheStatus[v.id] && this.cacheStatus[v.id].status === 'pending'))
+        .map(v => v.id);
+      await this.downloadBatch(pendingIds, '下載全部可下載');
+      this.closeToolbarDropdown();
+    },
+
+    /** Batch download the 30 most recent videos by upload_date. */
+    async downloadRecent30() {
+      const recent = [...this.videos]
+        .sort((a, b) => (b.upload_date || '').localeCompare(a.upload_date || ''))
+        .slice(0, 30)
+        .map(v => v.id);
+      await this.downloadBatch(recent, '最近 30 支');
+      this.closeToolbarDropdown();
+    },
+
+    /** Clear all markdown + thumbnail cache (preserves json cache). */
+    async clearAllCache() {
+      if (!this.swReady) {
+        console.warn('[P5-T3] SW not ready for clear');
+        return;
+      }
+      try {
+        const controller = navigator.serviceWorker.controller;
+        if (!controller) throw new Error('SW controller not ready');
+        await this.sendSWMessage(controller, { type: 'CLEAR_ALL_CACHE' }, 30000);
+        await this.loadCacheStatus();
+        console.log('✅ [P5-T3] All cache cleared');
+      } catch (err) {
+        console.error('❌ [P5-T3] Clear cache failed:', err);
+      } finally {
+        this.closeToolbarDropdown();
+      }
+    },
+
+    /** Compute summary stats for Toolbar header display. */
+    getCacheStatusSummary() {
+      const cachedIds = new Set(Object.keys(this.cacheStatus));
+      let cached = 0, partial = 0, pending = 0, failed = 0;
+      for (const v of this.videos) {
+        const cs = this.cacheStatus[v.id];
+        if (!cs) { pending++; continue; }
+        switch (cs.status) {
+          case 'cached': cached++; break;
+          case 'partial': partial++; break;
+          case 'failed': failed++; break;
+          case 'pending':
+          default: pending++; break;
+        }
+      }
+      return {
+        total: this.videos.length,
+        cached,
+        partial,
+        pending,
+        failed,
+      };
     },
 
     // ===== Marked extension: 章節時間戳 MM:SS → chapter-link =====
