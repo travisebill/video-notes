@@ -1152,53 +1152,55 @@ self.addEventListener('message', (event) => {
       }
       break;
 
-    case SW_MESSAGES.UNCACHE_VIDEO:
+    case SW_MESSAGES.UNCACHE_VIDEO: {
+      // Phase 3 P3-T2 fix: MessagePort correlation (mirror surgical SEED fix)
+      const replyPort = (event.ports && event.ports[0]) || null;
+      const reply = (data) => replyPort ? replyPort.postMessage(data) : event.source.postMessage(data);
       handleUncacheVideo(payload)
-        .then((result) => {
-          event.source.postMessage({ type: 'UNCACHE_VIDEO_DONE', ...result });
-        })
-        .catch((err) => event.source.postMessage({
-          type: 'UNCACHE_VIDEO_ERROR', error: err.message || String(err),
-        }));
+        .then((result) => reply({ type: 'UNCACHE_VIDEO_DONE', ...result }))
+        .catch((err) => reply({ type: 'UNCACHE_VIDEO_ERROR', error: err.message || String(err) }));
       break;
+    }
 
-    case SW_MESSAGES.GET_CACHE_STATUS:
+    case SW_MESSAGES.GET_CACHE_STATUS: {
+      // Phase 3 P3-T2 fix: MessagePort correlation
+      const replyPort = (event.ports && event.ports[0]) || null;
+      const reply = (data) => replyPort ? replyPort.postMessage(data) : event.source.postMessage(data);
       handleGetCacheStatus()
-        .then((result) => {
-          event.source.postMessage({ type: 'GET_CACHE_STATUS_DONE', videos: result.videos });
-        })
-        .catch((err) => event.source.postMessage({
-          type: 'GET_CACHE_STATUS_ERROR', error: err.message || String(err),
-        }));
+        .then((result) => reply({ type: 'GET_CACHE_STATUS_DONE', videos: result.videos }))
+        .catch((err) => reply({ type: 'GET_CACHE_STATUS_ERROR', error: err.message || String(err) }));
       break;
+    }
 
-    case SW_MESSAGES.CLEAR_ALL_CACHE:
+    case SW_MESSAGES.CLEAR_ALL_CACHE: {
+      // Phase 3 P3-T2 fix: MessagePort correlation
+      const replyPort = (event.ports && event.ports[0]) || null;
+      const reply = (data) => replyPort ? replyPort.postMessage(data) : event.source.postMessage(data);
       handleClearAllCache()
-        .then((result) => {
-          event.source.postMessage({ type: 'CLEAR_ALL_CACHE_DONE', ...result });
-        })
-        .catch((err) => event.source.postMessage({
-          type: 'CLEAR_ALL_CACHE_ERROR', error: err.message || String(err),
-        }));
+        .then((result) => reply({ type: 'CLEAR_ALL_CACHE_DONE', ...result }))
+        .catch((err) => reply({ type: 'CLEAR_ALL_CACHE_ERROR', error: err.message || String(err) }));
       break;
+    }
 
-    case SW_MESSAGES.CACHE_BATCH:
+    case SW_MESSAGES.CACHE_BATCH: {
+      // Phase 3 P3-T2 fix: MessagePort correlation
+      const replyPort = (event.ports && event.ports[0]) || null;
+      const reply = (data) => replyPort ? replyPort.postMessage(data) : event.source.postMessage(data);
       handleCacheBatch(payload)
-        .then((result) => {
-          event.source.postMessage({
-            type: 'CACHE_BATCH_DONE',
-            batchId: result.batchId,
-            done: result.done,
-            failed: result.failed,
-            cancelled: result.cancelled,
-            duration_ms: result.duration_ms,
-          });
-        })
-        .catch((err) => event.source.postMessage({
+        .then((result) => reply({
+          type: 'CACHE_BATCH_DONE',
+          batchId: result.batchId,
+          done: result.done,
+          failed: result.failed,
+          cancelled: result.cancelled,
+          duration_ms: result.duration_ms,
+        }))
+        .catch((err) => reply({
           type: 'CACHE_BATCH_ERROR',
           error: err.message || String(err),
         }));
       break;
+    }
 
     case SW_MESSAGES.CANCEL_BATCH:
       handleCancelBatch(payload)
@@ -1211,23 +1213,25 @@ self.addEventListener('message', (event) => {
         }));
       break;
 
-    case SW_MESSAGES.CACHE_VIDEO:
+    case SW_MESSAGES.CACHE_VIDEO: {
+      // Phase 3 P3-T2 fix: MessagePort correlation
+      const replyPort = (event.ports && event.ports[0]) || null;
+      const reply = (data) => replyPort ? replyPort.postMessage(data) : event.source.postMessage(data);
       handleCacheVideo(payload)
-        .then((result) => {
-          event.source.postMessage({
-            type: 'CACHE_VIDEO_DONE',
-            id: result.id,
-            ok: result.ok,
-            markdownOk: result.markdownOk,
-            thumbnailOk: result.thumbnailOk,
-            partial: result.partial,
-          });
-        })
-        .catch((err) => event.source.postMessage({
+        .then((result) => reply({
+          type: 'CACHE_VIDEO_DONE',
+          id: result.id,
+          ok: result.ok,
+          markdownOk: result.markdownOk,
+          thumbnailOk: result.thumbnailOk,
+          partial: result.partial,
+        }))
+        .catch((err) => reply({
           type: 'CACHE_VIDEO_ERROR',
           error: err.message || String(err),
         }));
       break;
+    }
 
     // Phase 1 P1-T6: emit LRU_EVICTED event (helper at top of file)
 
