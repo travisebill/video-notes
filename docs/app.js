@@ -255,13 +255,19 @@ document.addEventListener('alpine:init', () => {
         channel.port1.onmessage = (e) => {
           clearTimeout(tmo);
           const data = e.data || {};
+          // SEED-specific return shape (used by seedIndexedDB caller)
           if (data.type === 'SEED_INDEXEDDB_DONE') {
-            resolve({ written: data.written, updated: data.updated });
-          } else if (data.type === 'SEED_INDEXEDDB_ERROR') {
-            reject(new Error(data.error || 'SEED unknown error'));
-          } else {
-            reject(new Error(`Unexpected SW reply type: ${data.type}`));
+            return resolve({ written: data.written, updated: data.updated });
           }
+          if (data.type === 'SEED_INDEXEDDB_ERROR') {
+            return reject(new Error(data.error || 'SEED unknown error'));
+          }
+          // Phase 5 fix (2026-07-23 browser test discovered): generic resolve for
+          // ALL other reply types (CACHE_VIDEO_DONE, UNCACHE_VIDEO_DONE, BATCH_DONE,
+          // CLEAR_ALL_CACHE_DONE, etc.). Previous code rejected with "Unexpected SW
+          // reply type" causing downloadProgress to stick on 0% until 70s failsafe.
+          // Callers destructure fields like result.ok, result.markdownOk, etc.
+          resolve(data);
         };
 
         try {
