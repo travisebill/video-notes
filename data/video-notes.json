@@ -1,23 +1,24 @@
 {
   "meta": {
-    "total_videos": 147,
+    "total_videos": 148,
     "total_with_audio": 118,
     "total_with_transcript": 90,
     "total_with_spoken_script": 118,
-    "speakers_count": 57,
+    "speakers_count": 58,
     "categories_count": 4,
-    "topics_count": 13,
+    "topics_count": 14,
     "courses": [
       "Harvard CS224",
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-24 02:48:38",
+    "last_updated": "2026-07-24 03:36:04",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
       "AWSShow And Tell",
       "Adam Bender",
+      "Alex Hormozi",
       "Andrej Karpathy",
       "Andrew Ng",
       "Angelos",
@@ -84,6 +85,7 @@
       "🏛️ 政治 / 國際局勢",
       "🏺 考古 / 古文明 / 人類學",
       "💰 財經 / 經濟",
+      "💼 商業 / 創業 / 經營",
       "📚 算法 / 計算機科學理論",
       "📜 歷史 / 文學 / 哲學",
       "📦 其他",
@@ -95,6 +97,34 @@
     ]
   },
   "videos": [
+    {
+      "id": "20260720_AlexHormozi_StopChasingAIBuildThisInstead",
+      "title": "《Alex Hormozi's Warning: Stop Chasing AI, Build This Instead》影片摘要",
+      "speaker": "Alex Hormozi",
+      "speaker_description": null,
+      "speaker_slug": "AlexHormozi",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "💼 商業 / 創業 / 經營",
+      "date": "2026-07-20",
+      "note_date": "2026-07-20",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/HwmwyBgzj8c?si=TDSLG_nMyow2VXTR",
+      "lec_num": null,
+      "audio": {
+        "opus": null,
+        "m4a": null,
+        "mp3": null
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": null,
+        "spoken_script_tts": null
+      },
+      "note_path": "人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md"
+    },
     {
       "id": "20260718_自說自話的總裁_人類並不孤單",
       "title": "人類並不孤單：科學家發現身邊正隱藏著一個平行文明⋯⋯鸚鵡 Alex 30 年研究、鳥類智慧與意識的兩條平行進化線",

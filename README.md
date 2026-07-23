@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-07-20** | Alex Hormozi（$106M 身價、Acquisition.com 創辦人）| [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · 2 小時 22 分鐘（8520s）· AI 警告 + 客戶黏著 + Unicorn hiring + 母親過世那一季的持續前進
 - **2026-07-13** | Daniel Kokotajlo（前 OpenAI 研究員、AI 2027 主要作者）| [He Risked Everything To Warn You — 70% 人類滅絕機率、AI 2027 與 Plan A](人物訪談/20260713_DanielKokotajlo_AI2027_70PctExtinction.md) · 2 小時 00 分 50 秒（7250s）· 《The Diary Of A CEO》深度訪談
 - **2026-06-25** | Jarred Sumner（Bun 創辦人、Anthropic 工程師）| [Rewriting Bun in Rust：Bun 從 Zig 改寫成 Rust 的工程紀實](技術講座/20260625_JarredSumner_BunInRust.md) · 技術文章（Article 路徑）
 - **2026-07-07** | Cedric Clyburn（IBM Technology 開發者倡導者）| [MCP vs Skills：哪一個適合你的 AI Agent 與 LLM？](技術講座/20260707_CedricClyburn_MCP_vs_Skills.md) · 8 分 2 秒（482s）
@@ -84,6 +85,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-07-20 | [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) | Alex Hormozi（$106M 身價、Acquisition.com 創辦人） · 主持人 Steven Bartlett | 2 小時 22 分鐘（8520s） | [📄 note](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · [📝 逐字稿](transcripts/20260720_AlexHormozi_StopChasingAI_逐字稿.md) · [🎙️ 口播稿](transcripts/20260720_AlexHormozi_StopChasingAI_口播稿_zh_TW.md) · [🔊 TTS mp3](audio/20260720_AlexHormozi_StopChasingAI_tts.mp3) |
 | 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) | Yuval Noah Harari（希伯來大學歷史系教授） | 1 小時 55 分 36 秒（口播稿 4:39） | [📄 note](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · [🎙️ 口播稿](transcripts/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion_口播稿.txt) · [🔊 opus](audio/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion_口播稿.opus) · [🔊 m4a](audio/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion_口播稿.m4a) · [🔊 mp3](audio/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion_口播稿.mp3) |
 | 2026-06-30 | [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) | Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》作者） | 47 分鐘（2812s）（口播稿 4:39） | [📄 note](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · [📝 逐字稿](transcripts/20260630_YuvalNoahHarari_AIHackedHumanCivilization_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.txt) · [🔊 opus](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.opus) · [🔊 m4a](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.m4a) · [🔊 mp3](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.mp3) |
 | 2026-06-06 | [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) | 林軒田（NTU CSIE 教授） | 29 分 58 秒（1798s） | [📄 note](技術講座/20260606_NTUFAI_Sharing.md) · [📝 逐字稿](transcripts/20260606_D_v8lW-JcHo_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260606_NTUFAI_Sharing_口播稿.txt) · [🔊 opus](audio/20260606_NTUFAI_Sharing_口播稿.opus) · [🔊 m4a](audio/20260606_NTUFAI_Sharing_口播稿.m4a) · [🔊 mp3](audio/20260606_NTUFAI_Sharing_口播稿.mp3) |
@@ -340,6 +342,10 @@
 ### 🏃 **健康 / 營養 / 抗老**（1 支）
 
 - 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）· 75 分 32 秒
+
+### 💼 **商業 / 創業 / 經營**（1 支）
+
+- 2026-07-20 | [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · Alex Hormozi（$106M 身價、Acquisition.com 創辦人） · 2 小時 22 分鐘（AI 警告 + 客戶黏著 + Unicorn hiring + 母親過世那一季的持續前進）
 
 ### 💰 **財經 / 經濟**（4 支）
 
