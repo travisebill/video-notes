@@ -1,2 +1,7 @@
 scripts/__pycache__/
 
+
+# Ryo SOP 2026-07-24 — 原始 audio > 100MB 不 commit (GitHub 100MB limit)
+# 用 TTS mp3 (5-10MB) 為主音源在 audio/ 目錄
+audio/*.m4a
+audio/*.mp4
