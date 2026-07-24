@@ -1,7 +1,7 @@
 {
   "meta": {
     "total_videos": 149,
-    "total_with_audio": 119,
+    "total_with_audio": 120,
     "total_with_transcript": 91,
     "total_with_spoken_script": 119,
     "speakers_count": 58,
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-24 21:17:57",
+    "last_updated": "2026-07-24 23:12:32",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -113,9 +113,9 @@
       "video_url": "https://youtu.be/HwmwyBgzj8c?si=TDSLG_nMyow2VXTR",
       "lec_num": null,
       "audio": {
-        "opus": null,
-        "m4a": null,
-        "mp3": null
+        "opus": "audio/20260720_AlexHormozi_StopChasingAIBuildThisInstead_口播稿.opus",
+        "m4a": "audio/20260720_AlexHormozi_StopChasingAIBuildThisInstead_口播稿.m4a",
+        "mp3": "audio/20260720_AlexHormozi_StopChasingAIBuildThisInstead_口播稿.mp3"
       },
       "transcripts": {
         "transcript": null,
