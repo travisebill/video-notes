@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 149,
-    "total_with_audio": 120,
-    "total_with_transcript": 91,
+    "total_videos": 150,
+    "total_with_audio": 121,
+    "total_with_transcript": 92,
     "total_with_spoken_script": 119,
-    "speakers_count": 58,
+    "speakers_count": 59,
     "categories_count": 4,
     "topics_count": 14,
     "courses": [
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-24 23:12:32",
+    "last_updated": "2026-07-25 04:32:21",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -33,6 +33,7 @@
       "Dex",
       "Dr. Darren Candow",
       "Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者）× Steven Bartlett（訪談主持人）",
+      "Dr. Roman Yampolskiy",
       "Google Cloud Tech",
       "Graham Hancock × Steven Bartlett",
       "Jarred Sumner",
@@ -180,6 +181,34 @@
       },
       "note_path": "人物訪談/20260713_DanielKokotajlo_AI2027_70PctExtinction.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260713_DanielKokotajlo_AI2027_70PctExtinction.md"
+    },
+    {
+      "id": "20260701_AI_DecodedGenius_AI99PercentExtinctionRisk",
+      "title": "AI Scientist: 99.9% Chance Super Intelligence Wipes Us Out By 2030",
+      "speaker": "Dr. Roman Yampolskiy",
+      "speaker_description": "AI 安全研究者，University of Louisville",
+      "speaker_slug": "AI",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🤖 AI 倫理 / 哲學 / 意識",
+      "date": "2026-07-01",
+      "note_date": "2026-07-01",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://www.youtube.com/watch?v=SnKM6IFzxwM",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿.opus",
+        "m4a": "audio/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿.m4a",
+        "mp3": "audio/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_逐字稿.txt",
+        "spoken_script": null,
+        "spoken_script_tts": null
+      },
+      "note_path": "人物訪談/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk.md"
     },
     {
       "id": "20260627_自說自話的總裁_煤與Starship與2100年的地球",
