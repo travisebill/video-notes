@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **144 支內容** · 250 個音檔 · 143 個逐字稿 · 144 個口播稿
-> 最後更新：2026-07-19
+> **145 支內容** · 253 個音檔 · 144 個逐字稿 · 145 個口播稿
+> 最後更新：2026-07-24
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-07-13** | Matt Pocock（AI Hero 創辦人 / Skills For Real Engineers）| [LIVE: The /wayfinder Demo — Wayfinder 把模糊需求轉成結構化 ticket graph 的 AI skill](技術講座/20260713_MattPocock_WayfinderDemo.md) · 1 小時 14 分 40 秒（4480s）· Grill Me 進化版 + 預規格階段 + 9 個 subtasks + 多 sessions 平行 + Decision vs Implementation tickets + CVM local desktop 架構決策
 - **2026-07-20** | Alex Hormozi（$106M 身價、Acquisition.com 創辦人）| [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · 2 小時 22 分鐘（8520s）· AI 警告 + 客戶黏著 + Unicorn hiring + 母親過世那一季的持續前進
 - **2026-07-13** | Daniel Kokotajlo（前 OpenAI 研究員、AI 2027 主要作者）| [He Risked Everything To Warn You — 70% 人類滅絕機率、AI 2027 與 Plan A](人物訪談/20260713_DanielKokotajlo_AI2027_70PctExtinction.md) · 2 小時 00 分 50 秒（7250s）· 《The Diary Of A CEO》深度訪談
 - **2026-06-25** | Jarred Sumner（Bun 創辦人、Anthropic 工程師）| [Rewriting Bun in Rust：Bun 從 Zig 改寫成 Rust 的工程紀實](技術講座/20260625_JarredSumner_BunInRust.md) · 技術文章（Article 路徑）
@@ -85,6 +86,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-07-13 | [LIVE: The /wayfinder Demo — Wayfinder 把模糊需求轉成結構化 ticket graph 的 AI skill](技術講座/20260713_MattPocock_WayfinderDemo.md) | Matt Pocock（AI Hero 創辦人 / Skills For Real Engineers） | 1 小時 14 分 40 秒（4480s）（口播稿 3:01） | [📄 note](技術講座/20260713_MattPocock_WayfinderDemo.md) · [📝 逐字稿](transcripts/20260713_MattPocock_WayfinderDemo_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260713_MattPocock_WayfinderDemo_口播稿.txt) · [🔊 opus](audio/20260713_MattPocock_WayfinderDemo.opus) · [🔊 m4a](audio/20260713_MattPocock_WayfinderDemo.m4a) · [🔊 mp3](audio/20260713_MattPocock_WayfinderDemo.mp3) |
 | 2026-07-20 | [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) | Alex Hormozi（$106M 身價、Acquisition.com 創辦人） · 主持人 Steven Bartlett | 2 小時 22 分鐘（8520s） | [📄 note](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · [📝 逐字稿](transcripts/20260720_AlexHormozi_StopChasingAI_逐字稿.md) · [🎙️ 口播稿](transcripts/20260720_AlexHormozi_StopChasingAI_口播稿_zh_TW.md) · [🔊 TTS mp3](audio/20260720_AlexHormozi_StopChasingAI_tts.mp3) |
 | 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) | Yuval Noah Harari（希伯來大學歷史系教授） | 1 小時 55 分 36 秒（口播稿 4:39） | [📄 note](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · [🎙️ 口播稿](transcripts/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion_口播稿.txt) · [🔊 opus](audio/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion_口播稿.opus) · [🔊 m4a](audio/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion_口播稿.m4a) · [🔊 mp3](audio/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion_口播稿.mp3) |
 | 2026-06-30 | [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) | Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》作者） | 47 分鐘（2812s）（口播稿 4:39） | [📄 note](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · [📝 逐字稿](transcripts/20260630_YuvalNoahHarari_AIHackedHumanCivilization_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.txt) · [🔊 opus](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.opus) · [🔊 m4a](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.m4a) · [🔊 mp3](audio/20260630_YuvalNoahHarari_AIHackedHumanCivilization_口播稿.mp3) |
@@ -237,8 +239,9 @@
 - 2026-04-23 | [Stanford 神經科學家：記不住夢境可能是大腦在警告你！](人物訪談/20260423_Eagleman_DreamsWarningSignals.md) · Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者） × Steven Bartlett · 1 小時 33 分 18 秒（YouTube 英文自動字幕 → 繁中翻譯）
 - 2026-07-18 | [人類並不孤單：科學家發現身邊正隱藏著一個平行文明⋯⋯鸚鵡 Alex 30 年研究、鳥類智慧與意識的兩條平行進化線](人物訪談/20260718_自說自話的總裁_人類並不孤單.md) · 自說自話的總裁 · 31 分 15 秒（1875s）｜Whisper `base` 中文聽寫 + Pepperberg Alex 30 年研究 + 微型麥克風田野觀察 signature calls
 
-### 🧠 **AI / LLM 學術與方法論**（67 支）
+### 🧠 **AI / LLM 學術與方法論**（68 支）
 
+- 2026-07-13 | [LIVE: The /wayfinder Demo — Wayfinder 把模糊需求轉成結構化 ticket graph 的 AI skill](技術講座/20260713_MattPocock_WayfinderDemo.md) · Matt Pocock（AI Hero 創辦人 / Skills For Real Engineers）· 1 小時 14 分 40 秒（4480s）｜Live demo + Grill Me 進化版 + 預規格階段 + 9 個 subtasks + 多 sessions 平行 + Decision vs Implementation tickets + CVM local desktop 架構決策
 - ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · 進階上下文工程 · ?
 - 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · Ryan Lopopolo（OpenAI Member of Technical Staff）· 46 分 20 秒
 - 2026-06-08 | [Nick Hanauer × Daniel Priestley：中產階級之死、AI 對工作衝擊，與資本主義能否自我修正](人物訪談/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.md) · Nick Hanauer · 2 小時 32 分 26 秒
@@ -465,6 +468,9 @@
 - **進階上下文工程** · ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · ?
 - **Graham Hancock × Steven Bartlett** · 2026-06-11 | [Graham Hancock：失落古文明、12,800 年前的人類浩劫，與南極被發現的真相](人物訪談/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.md) · 1 小時 56 分 40 秒
 - **Nick Hanauer** · 2026-06-08 | [Nick Hanauer × Daniel Priestley：中產階級之死、AI 對工作衝擊，與資本主義能否自我修正](人物訪談/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.md) · 2 小時 32 分 26 秒
+- **Matt Pocock（AI Hero 創辦人 / Skills For Real Engineers）** · 2026-07-13 | [LIVE: The /wayfinder Demo — Wayfinder 把模糊需求轉成結構化 ticket graph 的 AI skill](技術講座/20260713_MattPocock_WayfinderDemo.md) · 1 小時 14 分 40 秒（4480s）｜Live demo + Grill Me 進化版 + 預規格階段 + 9 個 subtasks + 多 sessions 平行 + Decision vs Implementation tickets + CVM local desktop 架構決策
+- **Matt Pocock（AI Hero 創辦人 / Skills For Real Engineers）** · 2026-06-19 | [Agentic Engineering Workflow — Harness First, Model Second](技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md) · 62 分 24 秒
+- **Matt Pocock（知名 TypeScript 教育者轉向 AI 編碼工具開發）** · 2026-05-12 | [AI 編碼工作坊：用 AI 實際開發功能的完整流程與哲學](技術講座/20260512_Matt_Pocock_AI編碼工作坊.md) · 1:36:29
 - **Generative UI 與 MCP Apps** · 2026-06-08 | [Generative UI 與 MCP Apps：Ruben Casas @ Postman](技術講座/20260608_RubenCasas_超越元件生成式UI_MCPApps.md) · ?
 - **Matt Pocock** · 2026-06-08 | [Matt Pocock：Learn anything with the /teach skill](技術講座/20260608_MattPocock_teach_skill_個人化學習.md) · 13 分 04 秒
 - **AI 代理開發實踐** · 2026-05-26 | [AI 代理開發實踐：Spec-Driven、Guard Rails 與軟體品質](技術講座/20260526_開發者對談_AI代理Spec-Driven與GuardRails.md) · 39 分鐘

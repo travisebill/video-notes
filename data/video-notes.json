@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 148,
-    "total_with_audio": 118,
-    "total_with_transcript": 90,
-    "total_with_spoken_script": 118,
+    "total_videos": 149,
+    "total_with_audio": 119,
+    "total_with_transcript": 91,
+    "total_with_spoken_script": 119,
     "speakers_count": 58,
     "categories_count": 4,
     "topics_count": 14,
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-24 03:36:04",
+    "last_updated": "2026-07-24 21:17:57",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -768,6 +768,34 @@
       },
       "note_path": "財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md"
+    },
+    {
+      "id": "20260713_MattPocock_WayfinderDemo",
+      "title": "【LIVE: The /wayfinder Demo】",
+      "speaker": "Matt Pocock",
+      "speaker_description": null,
+      "speaker_slug": "MattPocock",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": "🧠 AI / LLM 學術與方法論",
+      "date": "2026-07-13",
+      "note_date": "2026-07-13",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://www.youtube.com/live/251hsWgoTPM?si=svpv9fFpnsrbn5gv",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260713_MattPocock_WayfinderDemo.opus",
+        "m4a": "audio/20260713_MattPocock_WayfinderDemo.m4a",
+        "mp3": "audio/20260713_MattPocock_WayfinderDemo.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260713_MattPocock_WayfinderDemo_逐字稿.txt",
+        "spoken_script": "transcripts/20260713_MattPocock_WayfinderDemo_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260713_MattPocock_WayfinderDemo_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260713_MattPocock_WayfinderDemo.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260713_MattPocock_WayfinderDemo.md"
     },
     {
       "id": "20260707_CedricClyburn_MCP_vs_Skills",
