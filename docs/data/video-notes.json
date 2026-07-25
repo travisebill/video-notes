@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 150,
-    "total_with_audio": 121,
-    "total_with_transcript": 92,
-    "total_with_spoken_script": 119,
-    "speakers_count": 59,
+    "total_videos": 151,
+    "total_with_audio": 122,
+    "total_with_transcript": 93,
+    "total_with_spoken_script": 120,
+    "speakers_count": 60,
     "categories_count": 4,
     "topics_count": 14,
     "courses": [
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-25 14:50:01",
+    "last_updated": "2026-07-26 01:24:25",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -57,6 +57,7 @@
       "Pooja Trivedi（Microsoft 架構師，主導 Windows on Linux 開發者體驗與 AI）／Craig（Microsoft PM，負責 WSL 與 Windows AI 工具）",
       "Ruben Casas",
       "Ryan Lopopolo",
+      "Scott Galloway",
       "Smitha",
       "TVBS",
       "Tara Agyemang",
@@ -685,6 +686,34 @@
       },
       "note_path": "國際局勢/20260516_陳文茜_習川會伊朗共識與影子艦隊.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260516_陳文茜_習川會伊朗共識與影子艦隊.md"
+    },
+    {
+      "id": "20260724_ScottGalloway_TheWeek_ChinaAIUndercut",
+      "title": "【The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀】",
+      "speaker": "Scott Galloway",
+      "speaker_description": null,
+      "speaker_slug": "ScottGalloway",
+      "course_slug": null,
+      "category": "財經分析",
+      "primary_topic": "💰 財經 / 經濟",
+      "date": "2026-07-24",
+      "note_date": "2026-07-24",
+      "duration_seconds": 1106,
+      "duration_display": "18:26",
+      "video_url": "https://youtu.be/UmJ7qUpodpA",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_逐字稿.txt",
+        "spoken_script": "transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md"
     },
     {
       "id": "20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速",
