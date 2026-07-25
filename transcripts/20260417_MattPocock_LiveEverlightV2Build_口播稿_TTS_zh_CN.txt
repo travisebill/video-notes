@@ -1,0 +1,13 @@
+本集 AI Hero 平台 live stream 由 Matt Pocock 主讲，核心主题为「vibe coding 从零打造 coding agent observability 平台」。Matt 在开场直接定义 vibe coding — 与规范驱动相对，强调 coding agent 即时产生程式码、人工仅引导方向；接著从多个候选项目中挑选 observability 作为本集任务，因为这是他观察到组织内最迫切的需求：观察 agents 的 token 花费、skill 命中率、session 分支结构。
+
+第一个张力是选题的优先顺序。Matt 列举候选题目：interview-level coding tasks、bookmarks manager、Obsidian vault 整合，最终选择 coding agent observability platform。从产品哲学角度，这呼应 Eric Evans 的 DDD 原则 — 先与利害关系人对齐领域语言，再从场景推导需求。Matt 明确表示「DDD is a fantastic match for AI coding」，因为 agent 系统的语言最容易分歧。
+
+第二个张力是技术选型的取舍。Matt 在 scaffold 过程中逐一决定：Next.js（全端框架）、Vercel AI SDK v6（自家产品）、Sandcastle（coding agent orchestrator，提供沙盒环境）。从平台经济角度，Sandcastle 的核心价值是「run some agent inside some sandbox」 — 沙盒对于 coding agent 观察至关重要，因为它同时控制环境与搜集讯号，是 observability 平台的基础。
+
+第三个张力是资料模型的语言对齐。Matt 透过 DDD 场景演练厘清核心概念：Session（工作单元）、Turn（单次互动）、Branch（分支）、Subagent（子任务）。最具启发性的 scenario 是「Alice refactor auth module」 — 她尝试 middleware 8 turns 后失败，branch back 改试 in-place refactor 12 turns 才 ship。Matt 反问：「这是 3 个 sessions 还是 1 个 session 配 DAG？」最终雏型是「New session with parent ID」 — 用父子关系支援分支。
+
+第四个张力是架构机制的辩论。Matt 起初推荐 always-on daemon — 长驻 process watch 所有 agents，但被观众挑战：「hook fires curl → backend exits，不需要 always-on daemon」。Matt 接受修正：「you're right, my recommendation was wrong, let me refactor」 — hook 是 trigger，process 由下游 agent delegate，「我们不需要单独跑 process」。这个修正本身呼应 vibe coding 的核心精神：放手让 agent 处理副作用。
+
+结尾转向技术选型的个人诚实。Matt 宣布 binary 用 Rust、frontend 选 React，并承认「I've never written Rust before, I'm really intrigued by it」 — 把 vibe coding 哲学延伸到陌生语言。最后反思工程本质：「Is this engineering now? Yes — but tons of alignment before let it rip。」
+
+这支影片最鲜明的口号是：当 coding agents 在组织内普及，「观察它们」将成为下一个基础设施需求；vibe coding 是验证需求的最佳方法，但工程本质不变 — 大量对齐、大量厘清语言，然后放手让 agent 跑。
