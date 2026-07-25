@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 152,
-    "total_with_audio": 123,
-    "total_with_transcript": 94,
-    "total_with_spoken_script": 121,
+    "total_videos": 153,
+    "total_with_audio": 124,
+    "total_with_transcript": 95,
+    "total_with_spoken_script": 122,
     "speakers_count": 60,
     "categories_count": 4,
     "topics_count": 14,
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-26 01:45:16",
+    "last_updated": "2026-07-26 02:07:20",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -3374,6 +3374,34 @@
       },
       "note_path": "技術講座/20260420_StanfordCS336_Lecture5_GPUsTPUs.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260420_StanfordCS336_Lecture5_GPUsTPUs.md"
+    },
+    {
+      "id": "20260417_MattPocock_LiveEverlightV2Build",
+      "title": "【LIVE: Watch me build a brand-new project from scratch — Matt Pocock 從零 vibe coding 一個 coding agent observability 平台】",
+      "speaker": "Matt Pocock",
+      "speaker_description": null,
+      "speaker_slug": "MattPocock",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-04-17",
+      "note_date": "2026-04-17",
+      "duration_seconds": 6450,
+      "duration_display": "1:47:30",
+      "video_url": "https://www.youtube.com/live/K-mA3MZ_EzU",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260417_MattPocock_LiveEverlightV2Build_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260417_MattPocock_LiveEverlightV2Build_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260417_MattPocock_LiveEverlightV2Build_逐字稿.txt",
+        "spoken_script": "transcripts/20260417_MattPocock_LiveEverlightV2Build_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260417_MattPocock_LiveEverlightV2Build_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260417_MattPocock_LiveEverlightV2Build.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260417_MattPocock_LiveEverlightV2Build.md"
     },
     {
       "id": "20260415_StanfordCS336_Lecture4_AttentionAlternatives",
