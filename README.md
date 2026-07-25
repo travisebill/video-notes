@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **146 支內容** · 256 個音檔 · 145 個逐字稿 · 146 個口播稿
+> **147 支內容** · 259 個音檔 · 146 個逐字稿 · 147 個口播稿
 > 最後更新：2026-07-26
 
 ---
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-07-23** | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者）| [Don't waste time on specs: /prototype instead — 高保真度原型設計如何取代詳細規格](技術講座/20260723_MattPocock_PrototypeSkill.md) · 10 分 59 秒（659s）（口播稿 3:40）· 反對 spec-driven + 高保真度分級 + /prototype × /wayfinder 票種整合 + 實戰 demo TLDraw 搜尋欄迭代 4 版 + 純邏輯 prototype + Shape Up 思想根源
 - **2026-07-24** | George Hahn × Scott Galloway（Prof G Media — NYU Stern 教授 / The Prof G Pod）| [The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) · 18 分 26 秒（1106s）· 中國 Kimi K3 開源傾銷 + 開源 vs 閉源之戰 + 84% 中國人 vs 10% 美國人對 AI 興奮 + Oracle 430 億債務炸彈 + Derek Thompson 風險倒置 + 友誼作為社會疫苗
 - **2026-07-13** | Matt Pocock（AI Hero 創辦人 / Skills For Real Engineers）| [LIVE: The /wayfinder Demo — Wayfinder 把模糊需求轉成結構化 ticket graph 的 AI skill](技術講座/20260713_MattPocock_WayfinderDemo.md) · 1 小時 14 分 40 秒（4480s）· Grill Me 進化版 + 預規格階段 + 9 個 subtasks + 多 sessions 平行 + Decision vs Implementation tickets + CVM local desktop 架構決策
 - **2026-07-20** | Alex Hormozi（$106M 身價、Acquisition.com 創辦人）| [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · 2 小時 22 分鐘（8520s）· AI 警告 + 客戶黏著 + Unicorn hiring + 母親過世那一季的持續前進
@@ -88,6 +89,7 @@
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
 | 2026-07-24 | [The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) | George Hahn × Scott Galloway（Prof G Media — NYU Stern 教授 / The Prof G Pod） | 18 分 26 秒（1106s）（口播稿 4:37） | [📄 note](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) · [📝 逐字稿](transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.txt) · [🔊 opus](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.opus) · [🔊 m4a](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.m4a) · [🔊 mp3](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.mp3) |
+| 2026-07-23 | [Don't waste time on specs: /prototype instead — 高保真度原型設計如何取代詳細規格](技術講座/20260723_MattPocock_PrototypeSkill.md) | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者） | 10 分 59 秒（659s）（口播稿 3:40） | [📄 note](技術講座/20260723_MattPocock_PrototypeSkill.md) · [📝 逐字稿](transcripts/20260723_MattPocock_PrototypeSkill_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260723_MattPocock_PrototypeSkill_口播稿.txt) · [🔊 opus](audio/20260723_MattPocock_PrototypeSkill_口播稿.opus) · [🔊 m4a](audio/20260723_MattPocock_PrototypeSkill_口播稿.m4a) · [🔊 mp3](audio/20260723_MattPocock_PrototypeSkill_口播稿.mp3) |
 | 2026-07-13 | [LIVE: The /wayfinder Demo — Wayfinder 把模糊需求轉成結構化 ticket graph 的 AI skill](技術講座/20260713_MattPocock_WayfinderDemo.md) | Matt Pocock（AI Hero 創辦人 / Skills For Real Engineers） | 1 小時 14 分 40 秒（4480s）（口播稿 3:01） | [📄 note](技術講座/20260713_MattPocock_WayfinderDemo.md) · [📝 逐字稿](transcripts/20260713_MattPocock_WayfinderDemo_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260713_MattPocock_WayfinderDemo_口播稿.txt) · [🔊 opus](audio/20260713_MattPocock_WayfinderDemo.opus) · [🔊 m4a](audio/20260713_MattPocock_WayfinderDemo.m4a) · [🔊 mp3](audio/20260713_MattPocock_WayfinderDemo.mp3) |
 | 2026-07-20 | [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) | Alex Hormozi（$106M 身價、Acquisition.com 創辦人） · 主持人 Steven Bartlett | 2 小時 22 分鐘（8520s） | [📄 note](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · [📝 逐字稿](transcripts/20260720_AlexHormozi_StopChasingAI_逐字稿.md) · [🎙️ 口播稿](transcripts/20260720_AlexHormozi_StopChasingAI_口播稿_zh_TW.md) · [🔊 TTS mp3](audio/20260720_AlexHormozi_StopChasingAI_tts.mp3) |
 | 2026-07-01 | [AI Scientist: 99.9% Chance Super Intelligence Wipes Us Out By 2030](人物訪談/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk.md) | Dr. Roman Yampolskiy（University of Louisville AI 安全研究者、《AI: Unexplainable, Unpredictable, Uncontrollable》作者） × Decoded Genius | 53 分 23 秒（口播稿 6:57 / silent ratio 10.58% warning） | [📄 note](人物訪談/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk.md) · [📝 逐字稿](transcripts/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿_zh_TW.md) · [🔊 opus](audio/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿.opus) · [🔊 m4a](audio/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿.m4a) · [🔊 mp3](audio/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿.mp3) |
@@ -534,8 +536,8 @@
 - 🎙️ **人物訪談**（9 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
-- 🛠️ **技術講座**（64 支）→ [完整列表](技術講座/README.md)
+- 🛠️ **技術講座**（65 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-07-26 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 146 支內容*
+*最後更新：2026-07-26 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 147 支內容*
