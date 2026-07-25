@@ -7,7 +7,14 @@
 //             + 加 `loading="lazy"` 確保 scroll 內才 load iframe
 //             + SW bump 強制所有使用者重抓新 index.html
 //           — 詳見 AGENTS.md「Telegram WebView 崩潰」章節
-const CACHE_VERSION = 'v1.8-pwa';
+//
+// v1.9-pwa: bump cache version to flush stale app shell after audio player rewrite
+//           — 2026-07-25: 教訓 12 — 改 app.js + index.html 主播放器邏輯（加 getPreferredAudioFormat/Url）
+//             但 SW 沒偵測到更新 → 手機 Safari 用戶繼續用舊版 `x-show="video.audio.m4a"` + 寫死 m4a
+//             → 症狀：m4a=null 影片 player 完全隱藏、有 m4a 影片繼續播 m4a
+//             → bump CACHE_VERSION 強制 activate 清 APP_SHELL_CACHE + RUNTIME_CACHE
+//           — 詳見 AGENTS.md「video-notes Pages SW cache bump SOP」章節
+const CACHE_VERSION = 'v1.9-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
