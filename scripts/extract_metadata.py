@@ -17,6 +17,7 @@ Created: 2026-06-28
 """
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 from datetime import datetime
@@ -334,9 +335,31 @@ def parse_readme_topics(readme: str) -> dict:
     return topics
 
 
+def _is_git_tracked(rel_path: str) -> bool:
+    """檢查檔案是否在 git tracked。
+
+    2026-07-25 教訓 11：m4a 被 .gitignore 排除的大檔，video-notes.json 仍會列路徑，
+    但 jsDelivr 抓不到 → Pages 卡片 404。用 git ls-files 過濾，避免「顯示但拿不到」。
+    """
+    try:
+        subprocess.run(
+            ['git', 'ls-files', '--error-unmatch', rel_path],
+            cwd=REPO_ROOT,
+            capture_output=True,
+            check=True,
+        )
+        return True
+    except subprocess.CalledProcessError:
+        return False
+
+
 def find_audio_files(base_name: str) -> dict:
     """找對應音檔是否存在，回傳 {opus, m4a, mp3} 路徑
     支援兩種命名：(1) base_name.ext  (2) base_name_口播稿.ext (CS336 系列)
+
+    2026-07-25：m4a 加 git-tracked 檢查。.gitignore `audio/*.m4a` 排除 > 100MB 大檔，
+    但 extract_metadata.py 原本會把 working tree 內的 m4a 路徑塞進 video-notes.json
+    → Pages 卡片顯示 m4a 連結但 jsDelivr 404。修正：m4a 若不在 git tracked 就 None。
     """
     # CS336 系列用「口播稿」後綴（2026-04-14 後所有 CS336 lecture 一致採用）
     candidates = [base_name, f'{base_name}_口播稿']
@@ -346,7 +369,11 @@ def find_audio_files(base_name: str) -> dict:
         for c in candidates:
             p = AUDIO_DIR / f'{c}.{ext}'
             if p.exists():
-                out[ext] = f'audio/{c}.{ext}'
+                rel_path = f'audio/{c}.{ext}'
+                # 教訓 11：m4a 必須在 git tracked 才回傳路徑
+                if ext == 'm4a' and not _is_git_tracked(rel_path):
+                    continue
+                out[ext] = rel_path
                 break
     return out
 

@@ -328,17 +328,14 @@
           </header>
 
           <!-- Audio Player -->
-          <div x-show="video.audio.m4a" class="audio-player">
-            <small>🎙️ 口說音檔（m4a）：</small>
-            <audio controls preload="none" :src="getAudioUrl(video, 'm4a')" style="width:100%;"></audio>
-            <small x-show="video.audio.opus || video.audio.mp3" style="display:block; margin-top:0.3rem;">
-              <span x-show="video.audio.opus">
-                <a :href="getAudioUrl(video, 'opus')" download>opus</a>
-              </span>
-              <span x-show="video.audio.m4a && video.audio.mp3">｜</span>
-              <span x-show="video.audio.mp3">
-                <a :href="getAudioUrl(video, 'mp3')" download>mp3</a>
-              </span>
+          <div x-show="getPreferredAudioFormat(video)" class="audio-player">
+            <small>🎙️ 口說音檔（<span x-text="getPreferredAudioFormat(video)"></span>）</small>
+            <audio controls preload="none" :src="getPreferredAudioUrl(video)" style="width:100%;"></audio>
+            <small x-show="(video.audio.opus || video.audio.mp3 || video.audio.m4a)" style="display:block; margin-top:0.3rem;">
+              下載其他格式：
+              <a x-show="video.audio.opus" :href="getAudioUrl(video, 'opus')" download style="margin-left:0.3rem;">opus</a>
+              <a x-show="video.audio.m4a" :href="getAudioUrl(video, 'm4a')" download style="margin-left:0.3rem;">m4a</a>
+              <a x-show="video.audio.mp3" :href="getAudioUrl(video, 'mp3')" download style="margin-left:0.3rem;">mp3</a>
             </small>
           </div>
 
