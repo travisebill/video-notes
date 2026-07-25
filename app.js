@@ -872,6 +872,21 @@ document.addEventListener('alpine:init', () => {
       return `${CDN_BASE}/${this.encodePath(path)}`;
     },
 
+    // 2026-07-25 教訓 11：主播放器優先 opus（最小、最省流量），fallback mp3（universal 支援），
+    // 最後 m4a（iOS Safari 偏好但通常最大）
+    getPreferredAudioFormat(video) {
+      if (!video || !video.audio) return null;
+      if (video.audio.opus) return 'opus';
+      if (video.audio.mp3) return 'mp3';
+      if (video.audio.m4a) return 'm4a';
+      return null;
+    },
+
+    getPreferredAudioUrl(video) {
+      const fmt = this.getPreferredAudioFormat(video);
+      return fmt ? this.getAudioUrl(video, fmt) : '';
+    },
+
     getTranscriptUrl(video) {
       if (!video.transcripts.transcript) return '';
       return `${CDN_BASE}/${this.encodePath(video.transcripts.transcript)}`;

@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-25 04:32:21",
+    "last_updated": "2026-07-25 14:50:01",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -115,7 +115,7 @@
       "lec_num": null,
       "audio": {
         "opus": "audio/20260720_AlexHormozi_StopChasingAIBuildThisInstead_口播稿.opus",
-        "m4a": "audio/20260720_AlexHormozi_StopChasingAIBuildThisInstead_口播稿.m4a",
+        "m4a": null,
         "mp3": "audio/20260720_AlexHormozi_StopChasingAIBuildThisInstead_口播稿.mp3"
       },
       "transcripts": {
@@ -199,7 +199,7 @@
       "lec_num": null,
       "audio": {
         "opus": "audio/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿.opus",
-        "m4a": "audio/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿.m4a",
+        "m4a": null,
         "mp3": "audio/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿.mp3"
       },
       "transcripts": {
@@ -815,7 +815,7 @@
       "lec_num": null,
       "audio": {
         "opus": "audio/20260713_MattPocock_WayfinderDemo.opus",
-        "m4a": "audio/20260713_MattPocock_WayfinderDemo.m4a",
+        "m4a": null,
         "mp3": "audio/20260713_MattPocock_WayfinderDemo.mp3"
       },
       "transcripts": {
