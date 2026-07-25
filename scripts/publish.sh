@@ -52,6 +52,14 @@ git commit -m "$COMMIT_MSG"
 git push origin main
 echo ""
 
+# Step 3.5: fetch gh-pages（避免本地 gh-pages 落後導致 subtree push no-op）
+# 教訓 13（2026-07-26）：publish.sh 用 subtree push 直接推遠端，本地 gh-pages 從未 fetch 過，
+# 導致 subtree push 計算 common ancestor 時誤判為 Everything up-to-date 卻沒 push。
+# 永遠在 subtree push 前先同步本地 gh-pages HEAD。
+echo "[3.5/5] git fetch origin gh-pages:gh-pages（避免 subtree push no-op）"
+git fetch origin gh-pages:gh-pages
+echo ""
+
 # Step 4: subtree push 到 gh-pages（GitHub Pages 來源）
 echo "[4/5] git subtree push → gh-pages (GitHub Pages deploy)"
 git subtree push --prefix=docs origin gh-pages
