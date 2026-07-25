@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **145 支內容** · 253 個音檔 · 144 個逐字稿 · 145 個口播稿
-> 最後更新：2026-07-24
+> **146 支內容** · 256 個音檔 · 145 個逐字稿 · 146 個口播稿
+> 最後更新：2026-07-26
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-07-24** | George Hahn × Scott Galloway（Prof G Media — NYU Stern 教授 / The Prof G Pod）| [The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) · 18 分 26 秒（1106s）· 中國 Kimi K3 開源傾銷 + 開源 vs 閉源之戰 + 84% 中國人 vs 10% 美國人對 AI 興奮 + Oracle 430 億債務炸彈 + Derek Thompson 風險倒置 + 友誼作為社會疫苗
 - **2026-07-13** | Matt Pocock（AI Hero 創辦人 / Skills For Real Engineers）| [LIVE: The /wayfinder Demo — Wayfinder 把模糊需求轉成結構化 ticket graph 的 AI skill](技術講座/20260713_MattPocock_WayfinderDemo.md) · 1 小時 14 分 40 秒（4480s）· Grill Me 進化版 + 預規格階段 + 9 個 subtasks + 多 sessions 平行 + Decision vs Implementation tickets + CVM local desktop 架構決策
 - **2026-07-20** | Alex Hormozi（$106M 身價、Acquisition.com 創辦人）| [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · 2 小時 22 分鐘（8520s）· AI 警告 + 客戶黏著 + Unicorn hiring + 母親過世那一季的持續前進
 - **2026-07-13** | Daniel Kokotajlo（前 OpenAI 研究員、AI 2027 主要作者）| [He Risked Everything To Warn You — 70% 人類滅絕機率、AI 2027 與 Plan A](人物訪談/20260713_DanielKokotajlo_AI2027_70PctExtinction.md) · 2 小時 00 分 50 秒（7250s）· 《The Diary Of A CEO》深度訪談
@@ -86,6 +87,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-07-24 | [The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) | George Hahn × Scott Galloway（Prof G Media — NYU Stern 教授 / The Prof G Pod） | 18 分 26 秒（1106s）（口播稿 4:37） | [📄 note](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) · [📝 逐字稿](transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.txt) · [🔊 opus](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.opus) · [🔊 m4a](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.m4a) · [🔊 mp3](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.mp3) |
 | 2026-07-13 | [LIVE: The /wayfinder Demo — Wayfinder 把模糊需求轉成結構化 ticket graph 的 AI skill](技術講座/20260713_MattPocock_WayfinderDemo.md) | Matt Pocock（AI Hero 創辦人 / Skills For Real Engineers） | 1 小時 14 分 40 秒（4480s）（口播稿 3:01） | [📄 note](技術講座/20260713_MattPocock_WayfinderDemo.md) · [📝 逐字稿](transcripts/20260713_MattPocock_WayfinderDemo_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260713_MattPocock_WayfinderDemo_口播稿.txt) · [🔊 opus](audio/20260713_MattPocock_WayfinderDemo.opus) · [🔊 m4a](audio/20260713_MattPocock_WayfinderDemo.m4a) · [🔊 mp3](audio/20260713_MattPocock_WayfinderDemo.mp3) |
 | 2026-07-20 | [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) | Alex Hormozi（$106M 身價、Acquisition.com 創辦人） · 主持人 Steven Bartlett | 2 小時 22 分鐘（8520s） | [📄 note](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · [📝 逐字稿](transcripts/20260720_AlexHormozi_StopChasingAI_逐字稿.md) · [🎙️ 口播稿](transcripts/20260720_AlexHormozi_StopChasingAI_口播稿_zh_TW.md) · [🔊 TTS mp3](audio/20260720_AlexHormozi_StopChasingAI_tts.mp3) |
 | 2026-07-01 | [AI Scientist: 99.9% Chance Super Intelligence Wipes Us Out By 2030](人物訪談/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk.md) | Dr. Roman Yampolskiy（University of Louisville AI 安全研究者、《AI: Unexplainable, Unpredictable, Uncontrollable》作者） × Decoded Genius | 53 分 23 秒（口播稿 6:57 / silent ratio 10.58% warning） | [📄 note](人物訪談/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk.md) · [📝 逐字稿](transcripts/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿_zh_TW.md) · [🔊 opus](audio/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿.opus) · [🔊 m4a](audio/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿.m4a) · [🔊 mp3](audio/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk_口播稿.mp3) |
@@ -352,8 +354,9 @@
 
 - 2026-07-20 | [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · Alex Hormozi（$106M 身價、Acquisition.com 創辦人） · 2 小時 22 分鐘（AI 警告 + 客戶黏著 + Unicorn hiring + 母親過世那一季的持續前進）
 
-### 💰 **財經 / 經濟**（4 支）
+### 💰 **財經 / 經濟**（5 支）
 
+- 2026-07-24 | [The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) · George Hahn × Scott Galloway（Prof G Media — NYU Stern 教授 / The Prof G Pod） · 18 分 26 秒（1106s）｜中國 AI 傾銷浪潮（Kimi K3 + DeepSeek 99% 價差）+ 開源 vs 閉源之戰 + 全球對中美好感逆轉 + Oracle 430 億債務炸彈 + Derek Thompson 風險倒置與社會疫苗
 - 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 陳文茜 · 48 分 36 秒
 - 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 陳文茜 · 48 分 19 秒
 - 2026-05-10 | [反腐清洗無盡頭、川習會前的大國博弈｜文茜財經周報 20260510](財經分析/20260510_陳文茜_反腐清洗與川習會前大國博弈.md) · ? · ?
@@ -456,6 +459,7 @@
 
 - **陳文茜** · 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 48 分 36 秒
 - **陳文茜** · 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 48 分 19 秒
+- **Scott Galloway（NYU Stern 教授 / The Prof G Pod 主理人）** · 2026-07-24 | [The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) · 18 分 26 秒｜主播 George Hahn × Scott Galloway《The Week》每週評論：中國 Kimi K3 開源模型挑戰美國統治地位 + DeepSeek 比美國同類低 99% 價差 + 全球對中美好感逆轉（墨西哥 +19pp、加拿大 +11pp）+ Oracle 430 億債務炸彈（FCF 為負、燒 240 億）+ Derek Thompson《Casino Monks》風險倒置 + 友誼作為社會疫苗
 - **Cedric Clyburn（IBM Technology 開發者倡導者）** · 2026-07-07 | [MCP vs Skills：哪一個適合你的 AI Agent 與 LLM？](技術講座/20260707_CedricClyburn_MCP_vs_Skills.md) · 8 分 2 秒（482s）
 - **Angelos（Apple MLX team 工程師）** · 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · 13 分 26 秒（HTML-Video-Page）
 - **Yuval Noah Harari（希伯來大學歷史系教授、《Sapiens》《Homo Deus》《Nexus》作者）** · 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein × Harari](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · 1 小時 55 分 36 秒
@@ -529,9 +533,9 @@
 
 - 🎙️ **人物訪談**（9 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
-- 💰 **財經分析**（4 支）→ [完整列表](財經分析/README.md)
+- 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（64 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-07-08 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 142 支內容*
+*最後更新：2026-07-26 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 146 支內容*
