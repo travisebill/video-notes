@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **148 支內容** · 262 個音檔 · 147 個逐字稿 · 148 個口播稿
+> **149 支內容** · 265 個音檔 · 149 個逐字稿 · 149 個口播稿
 > 最後更新：2026-07-26
 
 ---
@@ -354,6 +354,10 @@
 
 - 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）· 75 分 32 秒
 
+### 🗣️ **自我成長 / 溝通 / 表達技巧**（1 支）
+
+- 2025-12-06 | [How to Think, Speak, and Influence Like a Pro | Best Audiobooks](人物訪談/20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro.md) · AudioBook Rise（YouTube 頻道 — 專門整理 self-improvement 有聲書精華）· 86 分 14 秒｜86 分鐘 audiobook 整理｜核心支柱：clarity in thinking + authority in tone + precision in language + timing in delivery｜十個可訓練能力：think clearly / calm authority / words with weight / structure / action / tone / precision-honesty / silence / read the room / repeat fundamentals｜4 pillars + 10 abilities 訓練框架
+
 ### 💼 **商業 / 創業 / 經營**（1 支）
 
 - 2026-07-20 | [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · Alex Hormozi（$106M 身價、Acquisition.com 創辦人） · 2 小時 22 分鐘（AI 警告 + 客戶黏著 + Unicorn hiring + 母親過世那一季的持續前進）
@@ -535,7 +539,7 @@
 <a id="by-type"></a>
 ## 📂 按分類
 
-- 🎙️ **人物訪談**（9 支）→ [完整列表](人物訪談/README.md)
+- 🎙️ **人物訪談**（10 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（66 支）→ [完整列表](技術講座/README.md)

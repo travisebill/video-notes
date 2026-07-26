@@ -1,18 +1,18 @@
 {
   "meta": {
-    "total_videos": 153,
-    "total_with_audio": 124,
+    "total_videos": 154,
+    "total_with_audio": 125,
     "total_with_transcript": 95,
-    "total_with_spoken_script": 122,
-    "speakers_count": 60,
+    "total_with_spoken_script": 123,
+    "speakers_count": 61,
     "categories_count": 4,
-    "topics_count": 14,
+    "topics_count": 15,
     "courses": [
       "Harvard CS224",
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-26 02:07:20",
+    "last_updated": "2026-07-26 22:56:38",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -23,6 +23,7 @@
       "Andrew Ng",
       "Angelos",
       "Anne Applebaum",
+      "AudioBook Rise",
       "Boris，Claude Code 的創作者（被稱為「Claude Code 之父」），任職於 Anthropic。先前創辦過多間新創公司，經歷過 Y Combinator，編寫過程式設計和 TypeScript 教科書。自稱「過去一年幾乎沒親手寫過一行程式碼」",
       "CNBC",
       "Cedric Clyburn",
@@ -92,6 +93,7 @@
       "📜 歷史 / 文學 / 哲學",
       "📦 其他",
       "📱 消費電子 / 科技評論",
+      "🗣️ 自我成長 / 溝通 / 表達技巧",
       "🛠️ 編碼工具 / Agent 工程實踐",
       "🤖 AI 倫理 / 哲學 / 意識",
       "🤖 AI 安全 / 末日論 / 政策",
@@ -490,6 +492,34 @@
       },
       "note_path": "人物訪談/20260423_Eagleman_DreamsWarningSignals.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260423_Eagleman_DreamsWarningSignals.md"
+    },
+    {
+      "id": "20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro",
+      "title": "【How to Think, Speak, and Influence Like a Pro | Best Audiobooks】",
+      "speaker": "AudioBook Rise",
+      "speaker_description": "YouTube 頻道 — 專門整理 self-improvement 有聲書精華",
+      "speaker_slug": "AudioBookRise",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🗣️ 自我成長 / 溝通 / 表達技巧",
+      "date": "2025-12-06",
+      "note_date": "2025-12-06",
+      "duration_seconds": 5174,
+      "duration_display": "1:26:14",
+      "video_url": "https://youtu.be/EScIzEExWWE",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro_口播稿.opus",
+        "m4a": "audio/20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro_口播稿.m4a",
+        "mp3": "audio/20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro_口播稿.txt",
+        "spoken_script_tts": null
+      },
+      "note_path": "人物訪談/20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro.md"
     },
     {
       "id": "20260630_YuvalNoahHarari_AIHackedHumanCivilization",
