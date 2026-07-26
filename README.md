@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **149 支內容** · 265 個音檔 · 149 個逐字稿 · 149 個口播稿
+> **150 支內容** · 268 個音檔 · 150 個逐字稿 · 150 個口播稿
 > 最後更新：2026-07-26
 
 ---
@@ -354,8 +354,9 @@
 
 - 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）· 75 分 32 秒
 
-### 🗣️ **自我成長 / 溝通 / 表達技巧**（1 支）
+### 🗣️ **自我成長 / 溝通 / 表達技巧**（2 支）
 
+- 2026-06-26 | [25 Years of Mental Strength — Condensed in 60 Minutes | Best Audiobooks](人物訪談/20260626_AudioBookRise_25YearsOfMentalStrength.md) · AudioBook Rise（YouTube 頻道 — 專門整理 self-improvement 有聲書精華）· 64 分 12 秒｜64 分鐘 audiobook 整理｜心智力量不是天賦是建造的｜八個核心能力：stop reacting / pain as signal / discipline replaces motivation / control inner dialogue / silence as weapon / unseen discipline / pick battles / calm not hard｜25 年 lived experience
 - 2025-12-06 | [How to Think, Speak, and Influence Like a Pro | Best Audiobooks](人物訪談/20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro.md) · AudioBook Rise（YouTube 頻道 — 專門整理 self-improvement 有聲書精華）· 86 分 14 秒｜86 分鐘 audiobook 整理｜核心支柱：clarity in thinking + authority in tone + precision in language + timing in delivery｜十個可訓練能力：think clearly / calm authority / words with weight / structure / action / tone / precision-honesty / silence / read the room / repeat fundamentals｜4 pillars + 10 abilities 訓練框架
 
 ### 💼 **商業 / 創業 / 經營**（1 支）
@@ -539,7 +540,7 @@
 <a id="by-type"></a>
 ## 📂 按分類
 
-- 🎙️ **人物訪談**（10 支）→ [完整列表](人物訪談/README.md)
+- 🎙️ **人物訪談**（11 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（66 支）→ [完整列表](技術講座/README.md)
