@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **150 支內容** · 268 個音檔 · 150 個逐字稿 · 150 個口播稿
-> 最後更新：2026-07-26
+> **151 支內容** · 271 個音檔 · 151 個逐字稿 · 151 個口播稿
+> 最後更新：2026-07-28
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-07-27** | Boris Cherny（Anthropic · Claude Code 創建者）· 主持 Diana Hu | [Boris Cherny: Building Claude Code — Opus 5 long-running + Prompt injection 防禦改變 + 砍 80% system prompt + Product Overhang / Unhobbling + Give Claude Harder Problems（Bun 11 天 Zig→Rust）+ Prompt Eng → Verification + Two-Week Swift Rewrite Prompt + Agent Algebra + Claude Maintaining Itself（abstraction police）+ Coding Almost Solved caveats + CS Student 學 application](技術講座/20260727_BorisCherny_BuildingClaudeCode.md) · 35:51（2151s）（口播稿 2:41）· Y Combinator Startup School 2026 · Opus 5 發布隔天錄製 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.72/1K · Bar 3 8.23%
 - **2026-04-17** | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者）| [LIVE: Watch me build a brand-new project from scratch — 從零 vibe coding 一個 coding agent observability 平台](技術講座/20260417_MattPocock_LiveEverlightV2Build.md) · 107:30（6450s，live stream replay）· vibe coding 定義 + coding agent observability 選題 + Next.js × Vercel AI SDK v6 × Sandcastle + DDD 語言對齊（Session/Turn/Branch/Subagent）+ Hooks vs Daemon 架構辯論 + Rust vs TypeScript + DDD 對齊後 let it rip
 - **2026-07-23** | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者）| [Don't waste time on specs: /prototype instead — 高保真度原型設計如何取代詳細規格](技術講座/20260723_MattPocock_PrototypeSkill.md) · 10 分 59 秒（659s）（口播稿 3:40）· 反對 spec-driven + 高保真度分級 + /prototype × /wayfinder 票種整合 + 實戰 demo TLDraw 搜尋欄迭代 4 版 + 純邏輯 prototype + Shape Up 思想根源
 - **2026-07-24** | George Hahn × Scott Galloway（Prof G Media — NYU Stern 教授 / The Prof G Pod）| [The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) · 18 分 26 秒（1106s）· 中國 Kimi K3 開源傾銷 + 開源 vs 閉源之戰 + 84% 中國人 vs 10% 美國人對 AI 興奮 + Oracle 430 億債務炸彈 + Derek Thompson 風險倒置 + 友誼作為社會疫苗
@@ -319,8 +320,9 @@
 - 2026-06-06 | [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) · 林軒田（NTU CSIE 教授） · 29 分 58 秒（1798s）
 - 2026-03-11 | [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs） · 33 分 11 秒（1991s）
 
-### 🛠️ **編碼工具 / Agent 工程實踐**（17 支）
+### 🛠️ **編碼工具 / Agent 工程實踐**（18 支）
 
+- 2026-07-27 | [Boris Cherny: Building Claude Code — Opus 5 long-running + Prompt injection 不再 + 砍 80% system prompt + Product Overhang / Unhobbling + Give Claude Harder Problems（Bun 11 天 Zig→Rust）+ Two-Week Swift Rewrite + Agent Algebra + Claude Maintaining Itself + Coding Almost Solved](技術講座/20260727_BorisCherny_BuildingClaudeCode.md) · Boris Cherny（Anthropic · Claude Code 創建者）· 主持 Diana Hu · Y Combinator Startup School 2026 · 35:51（2151s）（口播稿 2:41）· Opus 5 發布隔天錄製 · 對 backend engineer 用 Copilot CLI / Codex 是直接對手的內部視角
 - 2026-07-01 | [MCP vs API — 為什麼傳統 API 在 AI agent 時代不夠用？](技術講座/20260701_GoogleCloudTech_MCP_vs_API.md) · Google Cloud Tech · 12:25 | [📄 note](技術講座/20260701_GoogleCloudTech_MCP_vs_API.md) · [📝 逐字稿](transcripts/20260701_GoogleCloudTech_MCP_vs_API_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260701_GoogleCloudTech_MCP_vs_API_口播稿.txt) · [🔊 opus](audio/20260701_GoogleCloudTech_MCP_vs_API.opus) · [🔊 m4a](audio/20260701_GoogleCloudTech_MCP_vs_API.m4a) · [🔊 mp3](audio/20260701_GoogleCloudTech_MCP_vs_API.mp3)
 - 2026-06-25 | [Rewriting Bun in Rust：Bun 從 Zig 改寫成 Rust 的工程紀實](技術講座/20260625_JarredSumner_BunInRust.md) · Jarred Sumner（Bun 創辦人、Anthropic 工程師）· 技術文章（Article 路徑，bun.com 官方 blog；Claude Fable 5 + 64 Claudes × 11 天 機械移植 535K LOC Zig → Rust）
 - 2026-07-07 | [MCP vs Skills：哪一個適合你的 AI Agent 與 LLM？](技術講座/20260707_CedricClyburn_MCP_vs_Skills.md) · Cedric Clyburn（IBM Technology 開發者倡導者）· 8 分 2 秒（YouTube 一般路徑，zh-Hant 自動字幕 + 英文自動字幕雙語對照）
