@@ -889,12 +889,15 @@ document.addEventListener('alpine:init', () => {
 
     getTranscriptUrl(video) {
       if (!video.transcripts.transcript) return '';
-      return `${CDN_BASE}/${this.encodePath(video.transcripts.transcript)}`;
+      // 2026-08-01 教訓：.md / transcripts / spoken_script 改走 RAW_BASE（raw GitHub，永遠最新）
+      // 避免 jsDelivr CDN 24h cache 延遲讓 modal 顯示舊版內容
+      return `${RAW_BASE}/${this.encodePath(video.transcripts.transcript)}`;
     },
 
     getSpokenScriptUrl(video) {
       if (!video.transcripts.spoken_script) return '';
-      return `${CDN_BASE}/${this.encodePath(video.transcripts.spoken_script)}`;
+      // 同上：raw GitHub 優先，jsDelivr 24h cache 太慢
+      return `${RAW_BASE}/${this.encodePath(video.transcripts.spoken_script)}`;
     },
 
     // 主题樣式顯示（去除 ** markdown 強調跟 zero-width space）
@@ -974,7 +977,7 @@ document.addEventListener('alpine:init', () => {
 
       this.loadingContent[videoId] = true;
       try {
-        const fullUrl = `${CDN_BASE}/${this.encodePath(url)}`;
+        const fullUrl = `${RAW_BASE}/${this.encodePath(url)}`;
         const resp = await fetch(fullUrl);
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const text = await resp.text();

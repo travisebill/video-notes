@@ -8,13 +8,12 @@
 //             + SW bump 強制所有使用者重抓新 index.html
 //           — 詳見 AGENTS.md「Telegram WebView 崩潰」章節
 //
-// v1.10-pwa: bump cache version to flush stale app shell after adding 2026-07-24 Scott Galloway 影片
-//           — 2026-07-26: 禮士回報新影片「The Week: China Is Undercutting America's AI Boom」在網站上沒播放器
-//             確認 metadata 已上線（151 videos, audio.opus 路徑齊全，jsDelivr 200 OK）
-//             但 SW 還在用 v1.9-pwa，舊版 app shell 拿到舊 JSON（不含 Scott Galloway）→ 播放器隱藏
-//             → bump CACHE_VERSION 強制 activate 清 APP_SHELL_CACHE + RUNTIME_CACHE，下次開啟 reload 重新 fetch JSON
+// v2.0-pwa: bump cache version to fix jsDelivr 24h cache 延遲（2026-08-01 禮士 UX 反饋）
+//           — 改 app.js 抓 .md / transcripts / spoken_script 改走 RAW_BASE（raw GitHub，永遠最新）
+//           — getAudioUrl 仍走 CDN_BASE（jsDelivr 因為 audio streaming 需要 Range request 支援，raw GitHub 不支援）
+//           — bump CACHE_VERSION 強制 activate 清 APP_SHELL_CACHE + RUNTIME_CACHE，下次開啟 reload 重新 fetch JSON
 //           — 詳見 AGENTS.md「video-notes Pages SW cache bump SOP」章節
-const CACHE_VERSION = 'v1.10-pwa';
+const CACHE_VERSION = 'v2.0-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
