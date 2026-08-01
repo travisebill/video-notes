@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **151 支內容** · 271 個音檔 · 151 個逐字稿 · 151 個口播稿
-> 最後更新：2026-07-28
+> **152 支內容** · 274 個音檔 · 152 個逐字稿 · 152 個口播稿
+> 最後更新：2026-08-01
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-07-30** | Ray Dalio（Bridgewater Associates 創辦人、1500 億美金對沖基金、《Principles》作者）· 主持 Steven Bartlett | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · 1:30:17（5417s）（口播稿 4:32）· DOAC 深度訪談 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.63%
 - **2026-07-27** | Boris Cherny（Anthropic · Claude Code 創建者）· 主持 Diana Hu | [Boris Cherny: Building Claude Code — Opus 5 long-running + Prompt injection 防禦改變 + 砍 80% system prompt + Product Overhang / Unhobbling + Give Claude Harder Problems（Bun 11 天 Zig→Rust）+ Prompt Eng → Verification + Two-Week Swift Rewrite Prompt + Agent Algebra + Claude Maintaining Itself（abstraction police）+ Coding Almost Solved caveats + CS Student 學 application](技術講座/20260727_BorisCherny_BuildingClaudeCode.md) · 35:51（2151s）（口播稿 2:41）· Y Combinator Startup School 2026 · Opus 5 發布隔天錄製 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.72/1K · Bar 3 8.23%
 - **2026-04-17** | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者）| [LIVE: Watch me build a brand-new project from scratch — 從零 vibe coding 一個 coding agent observability 平台](技術講座/20260417_MattPocock_LiveEverlightV2Build.md) · 107:30（6450s，live stream replay）· vibe coding 定義 + coding agent observability 選題 + Next.js × Vercel AI SDK v6 × Sandcastle + DDD 語言對齊（Session/Turn/Branch/Subagent）+ Hooks vs Daemon 架構辯論 + Rust vs TypeScript + DDD 對齊後 let it rip
 - **2026-07-23** | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者）| [Don't waste time on specs: /prototype instead — 高保真度原型設計如何取代詳細規格](技術講座/20260723_MattPocock_PrototypeSkill.md) · 10 分 59 秒（659s）（口播稿 3:40）· 反對 spec-driven + 高保真度分級 + /prototype × /wayfinder 票種整合 + 實戰 demo TLDraw 搜尋欄迭代 4 版 + 純邏輯 prototype + Shape Up 思想根源
@@ -90,6 +91,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-07-30 | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) | Ray Dalio（Bridgewater Associates 創辦人）· 主持人 Steven Bartlett | 1:30:17（5417s）（口播稿 4:32） | [📄 note](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · [🎙️ 口播稿](transcripts/20260730_RayDalio_AIBubbleBigCycle_口播稿.txt) · [🔊 opus](audio/20260730_RayDalio_AIBubbleBigCycle_口播稿.opus) · [🔊 mp3](audio/20260730_RayDalio_AIBubbleBigCycle_口播稿.mp3) |
 | 2026-07-24 | [The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) | George Hahn × Scott Galloway（Prof G Media — NYU Stern 教授 / The Prof G Pod） | 18 分 26 秒（1106s）（口播稿 4:37） | [📄 note](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) · [📝 逐字稿](transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.txt) · [🔊 opus](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.opus) · [🔊 m4a](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.m4a) · [🔊 mp3](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.mp3) |
 | 2026-07-23 | [Don't waste time on specs: /prototype instead — 高保真度原型設計如何取代詳細規格](技術講座/20260723_MattPocock_PrototypeSkill.md) | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者） | 10 分 59 秒（659s）（口播稿 3:40） | [📄 note](技術講座/20260723_MattPocock_PrototypeSkill.md) · [📝 逐字稿](transcripts/20260723_MattPocock_PrototypeSkill_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260723_MattPocock_PrototypeSkill_口播稿.txt) · [🔊 opus](audio/20260723_MattPocock_PrototypeSkill_口播稿.opus) · [🔊 m4a](audio/20260723_MattPocock_PrototypeSkill_口播稿.m4a) · [🔊 mp3](audio/20260723_MattPocock_PrototypeSkill_口播稿.mp3) |
 | 2026-04-17 | [LIVE: Watch me build a brand-new project from scratch — 從零 vibe coding 一個 coding agent observability 平台](技術講座/20260417_MattPocock_LiveEverlightV2Build.md) | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者） | 107:30（6450s，live stream replay）（口播稿 3:27） | [📄 note](技術講座/20260417_MattPocock_LiveEverlightV2Build.md) · [📝 逐字稿](transcripts/20260417_MattPocock_LiveEverlightV2Build_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260417_MattPocock_LiveEverlightV2Build_口播稿.txt) · [🔊 opus](audio/20260417_MattPocock_LiveEverlightV2Build_口播稿.opus) · [🔊 m4a](audio/20260417_MattPocock_LiveEverlightV2Build_口播稿.m4a) · [🔊 mp3](audio/20260417_MattPocock_LiveEverlightV2Build_口播稿.mp3) | [📄 note](技術講座/20260723_MattPocock_PrototypeSkill.md) · [📝 逐字稿](transcripts/20260723_MattPocock_PrototypeSkill_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260723_MattPocock_PrototypeSkill_口播稿.txt) · [🔊 opus](audio/20260723_MattPocock_PrototypeSkill_口播稿.opus) · [🔊 m4a](audio/20260723_MattPocock_PrototypeSkill_口播稿.m4a) · [🔊 mp3](audio/20260723_MattPocock_PrototypeSkill_口播稿.mp3) |
@@ -365,8 +367,9 @@
 
 - 2026-07-20 | [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · Alex Hormozi（$106M 身價、Acquisition.com 創辦人） · 2 小時 22 分鐘（AI 警告 + 客戶黏著 + Unicorn hiring + 母親過世那一季的持續前進）
 
-### 💰 **財經 / 經濟**（5 支）
+### 💰 **財經 / 經濟**（6 支）
 
+- 2026-07-30 | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · Ray Dalio（Bridgewater Associates 創辦人）· 主持人 Steven Bartlett · 1:30:17（5417s）｜DOAC 深度訪談｜AI bubble 1929/2000 歷史類比 + 5 forces 健康指標 + 個人理財三鐵律（cash ≠ safe / diversify / 年輕人唯一資產是自己）+ Gold > Bitcoin（無破解風險）+ 9 百萬 Uber + 白領思維工作被取代 + 80 年帝國週期 + 美英 decline + 多極世界秩序 + Iran 加速區域化
 - 2026-07-24 | [The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) · George Hahn × Scott Galloway（Prof G Media — NYU Stern 教授 / The Prof G Pod） · 18 分 26 秒（1106s）｜中國 AI 傾銷浪潮（Kimi K3 + DeepSeek 99% 價差）+ 開源 vs 閉源之戰 + 全球對中美好感逆轉 + Oracle 430 億債務炸彈 + Derek Thompson 風險倒置與社會疫苗
 - 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 陳文茜 · 48 分 36 秒
 - 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 陳文茜 · 48 分 19 秒
@@ -435,6 +438,8 @@
 
 <a id="by-speaker"></a>
 ## 👥 按講者
+
+- **Ray Dalio（Bridgewater Associates 創辦人、1500 億美金對沖基金、《Principles》作者）** · 2026-07-30 | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — DOAC 訪談](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · 1:30:17（5417s）｜AI bubble + big cycle + 5 forces + Bitcoin vs Gold + AI jobs + 80-year cycle + multipolar world order + Iran conflict
 
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-20 | [Lecture 5：GPUs、TPUs 與 Flash Attention 加速](技術講座/20260420_StanfordCS336_Lecture5_GPUsTPUs.md) · 1 小時 18 分 39 秒（4719s）
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-15 | [Lecture 4：線性 Attention、Mamba 與 Gated DeltaNet](技術講座/20260415_StanfordCS336_Lecture4_AttentionAlternatives.md) · 1 小時 26 分 20 秒（5180s）

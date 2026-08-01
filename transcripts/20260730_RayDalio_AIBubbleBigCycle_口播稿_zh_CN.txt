@@ -1,0 +1,17 @@
+# 20260730_RayDalio_AIBubbleBigCycle 口播稿
+
+> TTS 前处理：OpenCC t2s 繁→简， 送 MiniMax G2P。 第三人称、 学术语气、 全知分析者视角。
+
+---
+
+本场《The Diary Of A CEO》来宾 Ray Dalio， 是 Bridgewater Associates 创办人、 1500 亿美金对冲基金掌门、 《Principles》作者。 主持人 Steven Bartlett 在开场揭示核心张力：AI 革命是否正把全球经济推向史上最大泡沫， 80 年帝国兴衰周期是否已将美、 英推入 decline 末段。 这场 90 分钟对谈被设计成「诊断报告」式对话， Dalio 以 50 年 macro 经验与 500 年历史研究回应。
+
+从经济学角度， Dalio 的论述呼应他在《How the Economic Machine Works》30 分钟影片所建立的交易模型（观看次数已达 1. 4 亿）。 他把 AI 泡沫放在三阶段因果链中：革命性技术降临、 引发乐观买盘、 忽略价格风险， 最后在升息或黑天鹅事件触发下反向螺旋。 1929 年电力与汽车普及、 2000 年 dot-com 神话都符合同一模式； 当前 AI 热潮的特征是「弱手持有」——散户以杠杆 ETF、 借贷买入， 构成泡沫末期典型讯号。
+
+从政策经济学角度， 本集横跨财富分配、 AI 取代人力、 储备货币、 多极世界秩序。 Dalio 对 Bitcoin vs. Gold 的判断值得注意：他自陈持有约 1% 比特币， 其余配置在黄金； 理由是黄金「不是别人负债」、 「无法被科技破解」、 「央行会持有」。 比特币虽属同一类 hard money， 却有量子运算、 政府监控等弱点。 个人理财上， Dalio 给出三条铁律——现金是长期最差投资、 必须 diversify、 年轻人唯一的资产是自己。 AI 革命的赢家是拥有资本的资本家与构思取代劳工方案的人——机器取代体力、 再取代部分心智工作后， 劳工收入份额将下滑， 资本家份额上升。
+
+从地缘政治角度， 本集后半段进入多极世界秩序讨论。 Dalio 援引 500 年帝国研究指出， 美、 英已进入 decline 末段， 5 forces（教育、 竞争力、 创新、 军事、 债务负担）皆可客观量化， 「像健康检查一样」。 历史上的单极霸权通常透过战争洗牌后重组， 但这次中国的本质目标是「不被切断、 不被伤害、 尽可能强」； 最可能的 beneficial outcome 是区域化——美洲区与亚太区各自发展、 台湾议题透过压力而非战争解决。 Dalio 并对伊朗战争下判读：美国因国内民意已「不会再 show up in Asia」， 亚洲盟国指望的美国 counterbalancing influence 正在退场， 这正是英美帝国从单极走向区域化的关键讯号。
+
+从社会学角度， Dalio 对年轻世代的建议最 personal。 他强调 happiness 与金钱在超过基本门槛后相关性极低， 并指出成功关键不是智商而是 adaptability——「It is not the most intelligent people or the most intelligent species that are the most successful. It is those who are most adaptable. 」他将桥水内部的人格测验免费上线为 Principles U， 呼吁年轻人先认识自己的 nature。 对 21 岁创业家， 他建议「狡兔三窟」——不要单押一国， 要在多个「文艺复兴式」活力城市布局。
+
+影片结尾， Steven 引用 Dalio 的 *How the Economic Machine Works* 影片为「永远不会忘记的 YouTube 影片之一」， 呼应 Dalio 自陈「帮助人们理解 cause and effect relationships」的使命。 这支影片最鲜明的口号是——**AI 革命正在加速帝国周期的每个变量， 唯一不变的是适应力本身的价值。 ** Dalio 把帝国衰亡的历史必然性， 转化为个人层面「找到 nature × 最大化 adaptability × diversify 风险」的对称解方——这正是 500 年帝国兴衰研究对个体最 actionable 的启示。
