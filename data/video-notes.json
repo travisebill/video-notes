@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 156,
-    "total_with_audio": 127,
+    "total_videos": 157,
+    "total_with_audio": 128,
     "total_with_transcript": 95,
-    "total_with_spoken_script": 125,
-    "speakers_count": 62,
+    "total_with_spoken_script": 126,
+    "speakers_count": 63,
     "categories_count": 4,
     "topics_count": 15,
     "courses": [
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-07-28 03:57:45",
+    "last_updated": "2026-08-01 16:08:07",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -57,6 +57,7 @@
       "Percy Liang, Tatsu Hashimoto",
       "Piotr Indyk",
       "Pooja Trivedi（Microsoft 架構師，主導 Windows on Linux 開發者體驗與 AI）／Craig（Microsoft PM，負責 WSL 與 Windows AI 工具）",
+      "Ray Dalio",
       "Ruben Casas",
       "Ryan Lopopolo",
       "Scott Galloway",
@@ -102,6 +103,34 @@
     ]
   },
   "videos": [
+    {
+      "id": "20260730_RayDalio_AIBubbleBigCycle",
+      "title": "【Ray Dalio: I Predicted The 2008 CRASH — I Know What Comes Next!】",
+      "speaker": "Ray Dalio",
+      "speaker_description": null,
+      "speaker_slug": "RayDalio",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "💰 財經 / 經濟",
+      "date": "2026-07-30",
+      "note_date": "2026-07-30",
+      "duration_seconds": 5417,
+      "duration_display": "1:30:17",
+      "video_url": "https://youtu.be/Bu0xNDLNORU",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260730_RayDalio_AIBubbleBigCycle_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260730_RayDalio_AIBubbleBigCycle_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260730_RayDalio_AIBubbleBigCycle_口播稿.txt",
+        "spoken_script_tts": null
+      },
+      "note_path": "人物訪談/20260730_RayDalio_AIBubbleBigCycle.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260730_RayDalio_AIBubbleBigCycle.md"
+    },
     {
       "id": "20260720_AlexHormozi_StopChasingAIBuildThisInstead",
       "title": "《Alex Hormozi's Warning: Stop Chasing AI, Build This Instead》影片摘要",
