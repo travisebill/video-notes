@@ -1,4 +1,6 @@
-# 【Ray Dalio: I Predicted The 2008 CRASH — I Know What Comes Next!】
+# Ray Dalio: I Predicted The 2008 CRASH
+
+> DOAC 訪談 · I Know What Comes Next!（AI 泡沫 + 80 年大循環 + 5 forces + 多極世界）
 
 **講者｜Ray Dalio（Bridgewater Associates 創辦人、1500 億美金對沖基金、《Principles》作者）/ 主持｜Steven Bartlett（The Diary Of A CEO）**
 
