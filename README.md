@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **152 支內容** · 274 個音檔 · 152 個逐字稿 · 152 個口播稿
+> **153 支內容** · 277 個音檔 · 153 個逐字稿 · 153 個口播稿
 > 最後更新：2026-08-01
 
 ---
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-02-21** | 睡前听书助眠（audiobook summary channel）· 來源書籍《被討厭的勇氣》岸見一郎 × 古賀史健合著 | [睡前听完一本书《被讨厌的勇气》—— 阿德勒心理學核心觀點 + 課題分離 + 不被討厭的勇氣](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) · 19:15（1155s）（口播稿 5:52）· Whisper 中文 base 聽寫 · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.72%
 - **2026-07-30** | Ray Dalio（Bridgewater Associates 創辦人、1500 億美金對沖基金、《Principles》作者）· 主持 Steven Bartlett | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · 1:30:17（5417s）（口播稿 4:32）· DOAC 深度訪談 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.63%
 - **2026-07-27** | Boris Cherny（Anthropic · Claude Code 創建者）· 主持 Diana Hu | [Boris Cherny: Building Claude Code — Opus 5 long-running + Prompt injection 防禦改變 + 砍 80% system prompt + Product Overhang / Unhobbling + Give Claude Harder Problems（Bun 11 天 Zig→Rust）+ Prompt Eng → Verification + Two-Week Swift Rewrite Prompt + Agent Algebra + Claude Maintaining Itself（abstraction police）+ Coding Almost Solved caveats + CS Student 學 application](技術講座/20260727_BorisCherny_BuildingClaudeCode.md) · 35:51（2151s）（口播稿 2:41）· Y Combinator Startup School 2026 · Opus 5 發布隔天錄製 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.72/1K · Bar 3 8.23%
 - **2026-04-17** | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者）| [LIVE: Watch me build a brand-new project from scratch — 從零 vibe coding 一個 coding agent observability 平台](技術講座/20260417_MattPocock_LiveEverlightV2Build.md) · 107:30（6450s，live stream replay）· vibe coding 定義 + coding agent observability 選題 + Next.js × Vercel AI SDK v6 × Sandcastle + DDD 語言對齊（Session/Turn/Branch/Subagent）+ Hooks vs Daemon 架構辯論 + Rust vs TypeScript + DDD 對齊後 let it rip
@@ -91,6 +92,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-02-21 | [睡前听完一本书《被讨厌的勇气》—— 阿德勒心理學核心觀點 + 課題分離 + 不被討厭的勇氣](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) | 睡前听书助眠（audiobook summary channel）· 來源書籍《被討厭的勇氣》岸見一郎 × 古賀史健合著 | 19:15（1155s）（口播稿 5:52） | [📄 note](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) · [🎙️ 口播稿](transcripts/20260221_被討厭的勇氣_阿德勒心理學_口播稿.txt) · [🔊 opus](audio/20260221_被討厭的勇氣_阿德勒心理學_口播稿.opus) · [🔊 mp3](audio/20260221_被討厭的勇氣_阿德勒心理學_口播稿.mp3) |
 | 2026-07-30 | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) | Ray Dalio（Bridgewater Associates 創辦人）· 主持人 Steven Bartlett | 1:30:17（5417s）（口播稿 4:32） | [📄 note](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · [🎙️ 口播稿](transcripts/20260730_RayDalio_AIBubbleBigCycle_口播稿.txt) · [🔊 opus](audio/20260730_RayDalio_AIBubbleBigCycle_口播稿.opus) · [🔊 mp3](audio/20260730_RayDalio_AIBubbleBigCycle_口播稿.mp3) |
 | 2026-07-24 | [The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) | George Hahn × Scott Galloway（Prof G Media — NYU Stern 教授 / The Prof G Pod） | 18 分 26 秒（1106s）（口播稿 4:37） | [📄 note](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) · [📝 逐字稿](transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.txt) · [🔊 opus](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.opus) · [🔊 m4a](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.m4a) · [🔊 mp3](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.mp3) |
 | 2026-07-23 | [Don't waste time on specs: /prototype instead — 高保真度原型設計如何取代詳細規格](技術講座/20260723_MattPocock_PrototypeSkill.md) | Matt Pocock（AI Hero 創辦人 / Sandcastle 作者） | 10 分 59 秒（659s）（口播稿 3:40） | [📄 note](技術講座/20260723_MattPocock_PrototypeSkill.md) · [📝 逐字稿](transcripts/20260723_MattPocock_PrototypeSkill_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260723_MattPocock_PrototypeSkill_口播稿.txt) · [🔊 opus](audio/20260723_MattPocock_PrototypeSkill_口播稿.opus) · [🔊 m4a](audio/20260723_MattPocock_PrototypeSkill_口播稿.m4a) · [🔊 mp3](audio/20260723_MattPocock_PrototypeSkill_口播稿.mp3) |
@@ -358,8 +360,9 @@
 
 - 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）· 75 分 32 秒
 
-### 🗣️ **自我成長 / 溝通 / 表達技巧**（2 支）
+### 🗣️ **自我成長 / 溝通 / 表達技巧**（3 支）
 
+- 2026-02-21 | [睡前听完一本书《被讨厌的勇气》—— 阿德勒心理學核心觀點 + 課題分離 + 不被討厭的勇氣](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) · 睡前听书助眠（audiobook summary channel）· 來源書籍《被討厭的勇氣》岸見一郎 × 古賀史健合著 · 19:15（1155s）｜阿德勒心理學核心：痛苦是主動選擇的結果 + 目的論 vs 原因論 + 課題分離三步驟 + 自卑感 vs 自卑情結 + 共同體感覺 + 人生從願意被討厭那一刻才真正開始
 - 2026-06-26 | [25 Years of Mental Strength — Condensed in 60 Minutes | Best Audiobooks](人物訪談/20260626_AudioBookRise_25YearsOfMentalStrength.md) · AudioBook Rise（YouTube 頻道 — 專門整理 self-improvement 有聲書精華）· 64 分 12 秒｜64 分鐘 audiobook 整理｜心智力量不是天賦是建造的｜八個核心能力：stop reacting / pain as signal / discipline replaces motivation / control inner dialogue / silence as weapon / unseen discipline / pick battles / calm not hard｜25 年 lived experience
 - 2025-12-06 | [How to Think, Speak, and Influence Like a Pro | Best Audiobooks](人物訪談/20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro.md) · AudioBook Rise（YouTube 頻道 — 專門整理 self-improvement 有聲書精華）· 86 分 14 秒｜86 分鐘 audiobook 整理｜核心支柱：clarity in thinking + authority in tone + precision in language + timing in delivery｜十個可訓練能力：think clearly / calm authority / words with weight / structure / action / tone / precision-honesty / silence / read the room / repeat fundamentals｜4 pillars + 10 abilities 訓練框架
 
@@ -440,6 +443,8 @@
 ## 👥 按講者
 
 - **Ray Dalio（Bridgewater Associates 創辦人、1500 億美金對沖基金、《Principles》作者）** · 2026-07-30 | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — DOAC 訪談](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · 1:30:17（5417s）｜AI bubble + big cycle + 5 forces + Bitcoin vs Gold + AI jobs + 80-year cycle + multipolar world order + Iran conflict
+
+- **睡前听书助眠（audiobook summary channel）· 來源書籍《被討厭的勇氣》岸見一郎 × 古賀史健合著** · 2026-02-21 | [睡前听完一本书《被讨厌的勇气》—— 阿德勒心理學核心觀點 + 課題分離 + 不被討厭的勇氣](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) · 19:15（1155s）｜Whisper 中文 base 聽寫 fallback（YouTube 自動字幕 429 rate limit）｜阿德勒心理學核心：痛苦是主動選擇 + 目的論 vs 原因論 + 課題分離三步驟 + 自卑感 vs 自卑情結 + 共同體感覺
 
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-20 | [Lecture 5：GPUs、TPUs 與 Flash Attention 加速](技術講座/20260420_StanfordCS336_Lecture5_GPUsTPUs.md) · 1 小時 18 分 39 秒（4719s）
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-15 | [Lecture 4：線性 Attention、Mamba 與 Gated DeltaNet](技術講座/20260415_StanfordCS336_Lecture4_AttentionAlternatives.md) · 1 小時 26 分 20 秒（5180s）
