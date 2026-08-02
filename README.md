@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **154 支內容** · 280 個音檔 · 153 個逐字稿 · 154 個口播稿
-> 最後更新：2026-08-02
+> **155 支內容** · 282 個音檔 · 153 個逐字稿 · 155 個口播稿
+> 最後更新：2026-08-03
 
 ---
 
@@ -18,6 +18,7 @@
 > 最近 5 支影片
 
 - **2026-08-02** | Yuval Noah Harari（哈拉瑞，《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者）· 主持 Tom Parker（Financial Times《The Next Five》主播）| [哈拉瑞 gala 對談：50 年後的人類、AI 與民主 — EDP 50 週年 Gala 對談](人物訪談/20260730_Harari_50年AI.md) · 48:06（2886s）（口播稿 5:00）· July 2026 EDP 50th Anniversary Gala Dinner · Whisper base en 聽寫（zh-Hant 字幕 429 + en-orig 無人工字幕）· xiaotian_clone_v1 · Bar 2 0.24/1K · Bar 3 9.23%
+- **2026-08-01** | 自說自話的總裁（《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者）| [柯伊伯帶與 2700 萬年大清洗 — 太陽系「殭屍地球」/ 紅線 / Planet X](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) · 33:25（2005s）（口播稿 5:04）· 自說自話的總裁 宇宙系列 · 1994 木星事件 / 柯伊伯帶（古伯帶）/ 2700 萬年週期性滅絕 / Planet X 引力異常 · Whisper base zh 聽寫（list-subs 確認 has no captions）· xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.72%
 - **2026-02-21** | 睡前听书助眠（audiobook summary channel）· 來源書籍《被討厭的勇氣》岸見一郎 × 古賀史健合著 | [睡前听完一本书《被讨厌的勇气》—— 阿德勒心理學核心觀點 + 課題分離 + 不被討厭的勇氣](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) · 19:15（1155s）（口播稿 5:52）· Whisper 中文 base 聽寫 · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.72%
 - **2026-07-30** | Ray Dalio（Bridgewater Associates 創辦人、1500 億美金對沖基金、《Principles》作者）· 主持 Steven Bartlett | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · 1:30:17（5417s）（口播稿 4:32）· DOAC 深度訪談 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.63%
 - **2026-07-27** | Boris Cherny（Anthropic · Claude Code 創建者）· 主持 Diana Hu | [Boris Cherny: Building Claude Code — Opus 5 long-running + Prompt injection 防禦改變 + 砍 80% system prompt + Product Overhang / Unhobbling + Give Claude Harder Problems（Bun 11 天 Zig→Rust）+ Prompt Eng → Verification + Two-Week Swift Rewrite Prompt + Agent Algebra + Claude Maintaining Itself（abstraction police）+ Coding Almost Solved caveats + CS Student 學 application](技術講座/20260727_BorisCherny_BuildingClaudeCode.md) · 35:51（2151s）（口播稿 2:41）· Y Combinator Startup School 2026 · Opus 5 發布隔天錄製 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.72/1K · Bar 3 8.23%
@@ -93,6 +94,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-08-01 | [柯伊伯帶與 2700 萬年大清洗](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) | 自說自話的總裁（《人類大歷史》《Nexus》作者）| 33:25（2005s）（口播稿 5:04）| [📄 note](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) · [🎙️ 口播稿](transcripts/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.txt) · [🔊 opus](audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.opus) · [🔊 m4a](audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.m4a) · [🔊 mp3](audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.mp3) |
 | 2026-08-02 | [哈拉瑞 gala 對談：50 年後的人類、AI 與民主](人物訪談/20260730_Harari_50年AI.md) | Yuval Noah Harari（哈拉瑞，《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者）· 主持 Tom Parker（FT《The Next Five》主播）| 48:06（2886s）（口播稿 5:00）| [📄 note](人物訪談/20260730_Harari_50年AI.md) · [🎙️ 口播稿](transcripts/20260730_Harari_50年AI_口播稿.txt) · [🔊 opus](audio/20260730_Harari_50年AI_口播稿.opus) · [🔊 m4a](audio/20260730_Harari_50年AI_口播稿.m4a) · [🔊 mp3](audio/20260730_Harari_50年AI_口播稿.mp3) |
 | 2026-02-21 | [睡前听完一本书《被讨厌的勇气》—— 阿德勒心理學核心觀點 + 課題分離 + 不被討厭的勇氣](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) | 睡前听书助眠（audiobook summary channel）· 來源書籍《被討厭的勇氣》岸見一郎 × 古賀史健合著 | 19:15（1155s）（口播稿 5:52） | [📄 note](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) · [🎙️ 口播稿](transcripts/20260221_被討厭的勇氣_阿德勒心理學_口播稿.txt) · [🔊 opus](audio/20260221_被討厭的勇氣_阿德勒心理學_口播稿.opus) · [🔊 mp3](audio/20260221_被討厭的勇氣_阿德勒心理學_口播稿.mp3) |
 | 2026-07-30 | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) | Ray Dalio（Bridgewater Associates 創辦人）· 主持人 Steven Bartlett | 1:30:17（5417s）（口播稿 4:32） | [📄 note](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · [🎙️ 口播稿](transcripts/20260730_RayDalio_AIBubbleBigCycle_口播稿.txt) · [🔊 opus](audio/20260730_RayDalio_AIBubbleBigCycle_口播稿.opus) · [🔊 mp3](audio/20260730_RayDalio_AIBubbleBigCycle_口播稿.mp3) |
@@ -397,7 +399,9 @@
 - 2026-06-09 | [WWDC 2026 Impressions: Yeah, That's About Right](技術講座/20260609_MKBHD_WWDC2026_YeahThatsAboutRight.md) · ? · 16:28
 - 2026-02-05 | [黃仁勳最新訪談：你不會輸給 AI，但你會輸給會用 AI 的人](技術講座/20260205_JensenHuang_不輸給AI_輸給會用AI的人.md) · Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長 · 44 分鐘
 
-### 🌍 **地球科學 / 太空 / 科普**（1 支）
+### 🌍 **地球科學 / 太空 / 科普**（2 支）
+
+- 2026-08-01 | [柯伊伯帶與 2700 萬年大清洗](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) · 自說自話的總裁（《人類大歷史》《Nexus》作者）· 33:25（2005s）｜1994 舒梅克－李維 9 號撞木星 → 柯伊伯帶（古伯帶）與「殭屍地球」→ 2700 萬年週期性滅絕 → Planet X / Planet Nine 引力異常候選解釋
 
 - 2026-06-28 | [煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明](人物訪談/20260627_自說自話的總裁_煤與Starship與2100年的地球.md) · 自說自話的總裁 · 30 分 54 秒
 
@@ -494,6 +498,7 @@
 - **Yann LeCun** · 2026 | [World Models 將開啟下一場 AI 革命 — 從 LLMs 的死路到 AMILabs](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) · 58 分 54 秒
 - **馬臉姐** · 2026-06-19 | [AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說](技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md) · 29 分 55 秒
 - **馬臉姐** · 2025-10-31 | [AI 2027 報告：兩種結局、6 段時間線，與台灣在 AI 晶片戰爭中的關鍵角色](技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md) · 39 分 18 秒
+- **自說自話的總裁** · 2026-08-01 | [柯伊伯帶與 2700 萬年大清洗 — 太陽系「殭屍地球」/ 紅線 / Planet X](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) · 33:25（2005s）｜1994 舒梅克－李維 9 號撞木星 → 柯伊伯帶（古伯帶）→ 2700 萬年週期性滅絕 → Planet X / Planet Nine 引力異常 → 5 視角切片（天文學 / 行星科學 / 宇宙論 / 古生物學 / 數學模擬）
 - **自說自話的總裁** · 2026-06-28 | [煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明](人物訪談/20260627_自說自話的總裁_煤與Starship與2100年的地球.md) · 30 分 54 秒
 - **自說自話的總裁** · 2026-06-13 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) · 28 分 50 秒
 - **Smitha（Google Cloud Tech）** · 2026-06-13 | [AI Agents 入門：8 分鐘打造你的第一個 Agent](技術講座/20260613_Smitha_AI_agents_explained.md) · 8 分 29 秒
@@ -557,7 +562,7 @@
 <a id="by-type"></a>
 ## 📂 按分類
 
-- 🎙️ **人物訪談**（12 支）→ [完整列表](人物訪談/README.md)
+- 🎙️ **人物訪談**（13 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（66 支）→ [完整列表](技術講座/README.md)
