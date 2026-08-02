@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 158,
-    "total_with_audio": 129,
+    "total_videos": 159,
+    "total_with_audio": 130,
     "total_with_transcript": 95,
-    "total_with_spoken_script": 127,
-    "speakers_count": 64,
+    "total_with_spoken_script": 128,
+    "speakers_count": 65,
     "categories_count": 4,
     "topics_count": 15,
     "courses": [
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-08-01 22:45:37",
+    "last_updated": "2026-08-02 18:01:00",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -38,6 +38,7 @@
       "Dr. Roman Yampolskiy",
       "Google Cloud Tech",
       "Graham Hancock × Steven Bartlett",
+      "Harari",
       "Jarred Sumner",
       "Jelani Nelson",
       "Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長",
@@ -131,6 +132,34 @@
       },
       "note_path": "人物訪談/20260730_RayDalio_AIBubbleBigCycle.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260730_RayDalio_AIBubbleBigCycle.md"
+    },
+    {
+      "id": "20260730_Harari_50年AI",
+      "title": "哈拉瑞 gala 對談：50 年後的人類、AI 與民主",
+      "speaker": "Harari",
+      "speaker_description": null,
+      "speaker_slug": "Harari",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🏛️ 政治 / 國際局勢",
+      "date": "2026-07-30",
+      "note_date": "2026-07-30",
+      "duration_seconds": 2886,
+      "duration_display": "48:06",
+      "video_url": "https://youtu.be/_V_ed5fuexA?si=hfeEbwwp1t4jkt0D",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260730_Harari_50年AI_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260730_Harari_50年AI_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260730_Harari_50年AI_口播稿.txt",
+        "spoken_script_tts": null
+      },
+      "note_path": "人物訪談/20260730_Harari_50年AI.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260730_Harari_50年AI.md"
     },
     {
       "id": "20260720_AlexHormozi_StopChasingAIBuildThisInstead",
