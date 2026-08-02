@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **153 支內容** · 277 個音檔 · 153 個逐字稿 · 153 個口播稿
-> 最後更新：2026-08-01
+> **154 支內容** · 280 個音檔 · 153 個逐字稿 · 154 個口播稿
+> 最後更新：2026-08-02
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-08-02** | Yuval Noah Harari（哈拉瑞，《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者）· 主持 Tom Parker（Financial Times《The Next Five》主播）| [哈拉瑞 gala 對談：50 年後的人類、AI 與民主 — EDP 50 週年 Gala 對談](人物訪談/20260730_Harari_50年AI.md) · 48:06（2886s）（口播稿 5:00）· July 2026 EDP 50th Anniversary Gala Dinner · Whisper base en 聽寫（zh-Hant 字幕 429 + en-orig 無人工字幕）· xiaotian_clone_v1 · Bar 2 0.24/1K · Bar 3 9.23%
 - **2026-02-21** | 睡前听书助眠（audiobook summary channel）· 來源書籍《被討厭的勇氣》岸見一郎 × 古賀史健合著 | [睡前听完一本书《被讨厌的勇气》—— 阿德勒心理學核心觀點 + 課題分離 + 不被討厭的勇氣](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) · 19:15（1155s）（口播稿 5:52）· Whisper 中文 base 聽寫 · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.72%
 - **2026-07-30** | Ray Dalio（Bridgewater Associates 創辦人、1500 億美金對沖基金、《Principles》作者）· 主持 Steven Bartlett | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · 1:30:17（5417s）（口播稿 4:32）· DOAC 深度訪談 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.63%
 - **2026-07-27** | Boris Cherny（Anthropic · Claude Code 創建者）· 主持 Diana Hu | [Boris Cherny: Building Claude Code — Opus 5 long-running + Prompt injection 防禦改變 + 砍 80% system prompt + Product Overhang / Unhobbling + Give Claude Harder Problems（Bun 11 天 Zig→Rust）+ Prompt Eng → Verification + Two-Week Swift Rewrite Prompt + Agent Algebra + Claude Maintaining Itself（abstraction police）+ Coding Almost Solved caveats + CS Student 學 application](技術講座/20260727_BorisCherny_BuildingClaudeCode.md) · 35:51（2151s）（口播稿 2:41）· Y Combinator Startup School 2026 · Opus 5 發布隔天錄製 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.72/1K · Bar 3 8.23%
@@ -92,6 +93,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-08-02 | [哈拉瑞 gala 對談：50 年後的人類、AI 與民主](人物訪談/20260730_Harari_50年AI.md) | Yuval Noah Harari（哈拉瑞，《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者）· 主持 Tom Parker（FT《The Next Five》主播）| 48:06（2886s）（口播稿 5:00）| [📄 note](人物訪談/20260730_Harari_50年AI.md) · [🎙️ 口播稿](transcripts/20260730_Harari_50年AI_口播稿.txt) · [🔊 opus](audio/20260730_Harari_50年AI_口播稿.opus) · [🔊 m4a](audio/20260730_Harari_50年AI_口播稿.m4a) · [🔊 mp3](audio/20260730_Harari_50年AI_口播稿.mp3) |
 | 2026-02-21 | [睡前听完一本书《被讨厌的勇气》—— 阿德勒心理學核心觀點 + 課題分離 + 不被討厭的勇氣](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) | 睡前听书助眠（audiobook summary channel）· 來源書籍《被討厭的勇氣》岸見一郎 × 古賀史健合著 | 19:15（1155s）（口播稿 5:52） | [📄 note](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) · [🎙️ 口播稿](transcripts/20260221_被討厭的勇氣_阿德勒心理學_口播稿.txt) · [🔊 opus](audio/20260221_被討厭的勇氣_阿德勒心理學_口播稿.opus) · [🔊 mp3](audio/20260221_被討厭的勇氣_阿德勒心理學_口播稿.mp3) |
 | 2026-07-30 | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) | Ray Dalio（Bridgewater Associates 創辦人）· 主持人 Steven Bartlett | 1:30:17（5417s）（口播稿 4:32） | [📄 note](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · [🎙️ 口播稿](transcripts/20260730_RayDalio_AIBubbleBigCycle_口播稿.txt) · [🔊 opus](audio/20260730_RayDalio_AIBubbleBigCycle_口播稿.opus) · [🔊 mp3](audio/20260730_RayDalio_AIBubbleBigCycle_口播稿.mp3) |
 | 2026-07-24 | [The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) | George Hahn × Scott Galloway（Prof G Media — NYU Stern 教授 / The Prof G Pod） | 18 分 26 秒（1106s）（口播稿 4:37） | [📄 note](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) · [📝 逐字稿](transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.txt) · [🔊 opus](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.opus) · [🔊 m4a](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.m4a) · [🔊 mp3](audio/20260724_ScottGalloway_TheWeek_ChinaAIUndercut_口播稿.mp3) |
@@ -241,8 +243,9 @@
 <a id="by-topic"></a>
 ## 🏷️ 按主題
 
-### 🤖 **AI 倫理 / 哲學 / 意識**（8 支）
+### 🤖 **AI 倫理 / 哲學 / 意識**（9 支）
 
+- 2026-08-02 | [哈拉瑞 gala 對談：50 年後的人類、AI 與民主 — EDP 50 週年 Gala 對談 Tom Parker](人物訪談/20260730_Harari_50年AI.md) · Yuval Noah Harari（《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者） × Tom Parker（FT《The Next Five》主播）· 48:06（2886s）｜AI 代理人接管官僚體系 + 大規模民主依賴資訊科技 + intelligence vs wisdom 精靈比喻 + 100:1 安全預算比 + AI 帝國「帝都開關」+ wisdom revolution 呼籲
 - 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · Yuval Noah Harari（希伯來大學歷史系教授、《Sapiens》作者） × Ezra Klein（Vox）· 1 小時 55 分 36 秒（6936s）
 - 2026-06-30 | [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》作者） × Linacre College, Oxford University · 47 分鐘（口播稿 4:39）
 - 2026-06-02 | [Mo Gawdat 談 AI 倫理與人類未來 — 結構化筆記](人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md) · ? · ?
@@ -346,8 +349,9 @@
 - 2026-05-13 | [免費 AI 網頁爬蟲實戰：用 DeepSeek + Grok + Crawl4AI 抓取任何網站](技術講座/20260513_AI_Web_Scraper_免費爬蟲實戰.md) · AI 開發領域的技術教學者，經營免費 AI 開發者社群 · 22:45
 - 2026-05-12 | [Claude Code 創作者 Boris：軟體的未來、AI 民主化與 SaaS 末日](技術講座/20260512_Boris_Claude_Code創作者訪談.md) · Boris，Claude Code 的創作者 · 24:35
 
-### 🏛️ **政治 / 國際局勢**（7 支）
+### 🏛️ **政治 / 國際局勢**（8 支）
 
+- 2026-08-02 | [哈拉瑞 gala 對談：50 年後的人類、AI 與民主 — EDP 50 週年 Gala 對談 Tom Parker](人物訪談/20260730_Harari_50年AI.md) · Yuval Noah Harari（《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者） × Tom Parker（FT《The Next Five》主播）· 48:06（2886s）｜AI 代理人接管官僚體系 + 大規模民主依賴資訊科技 + intelligence vs wisdom 精靈比喻 + 100:1 安全預算比 + AI 帝國「帝都開關」+ wisdom revolution 呼籲
 - 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · Yuval Noah Harari（希伯來大學歷史系教授、《Sapiens》作者） × Ezra Klein（Vox）· 1 小時 55 分 36 秒（口播稿 4:39）
 - 2026-06-27 | [【完整版上集20260627】一紙停火備忘錄 美伊各取所需 川普表示戰爭結束了 — TVBS 文茜的世界周報](國際局勢/20260627_TVBS_文茜_美伊停火.md) · TVBS 文茜的世界周報（歐洲版） · 48:17（口播稿 4:35）
 - 2026-06-27 | [【完整版下集20260627】英國脫歐公投十週年 脫歐後換七首相 — TVBS 文茜的世界周報（歐洲版）](國際局勢/20260627_TVBS_文茜_英國脫歐.md) · TVBS 文茜的世界周報（歐洲版） · 48:11（口播稿 5:32）
@@ -485,6 +489,7 @@
 - **Angelos（Apple MLX team 工程師）** · 2026-06-27 | [Run local agentic AI on the Mac using MLX — WWDC26 Session 232](技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md) · 13 分 26 秒（HTML-Video-Page）
 - **Yuval Noah Harari（希伯來大學歷史系教授、《Sapiens》《Homo Deus》《Nexus》作者）** · 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein × Harari](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · 1 小時 55 分 36 秒
 - **Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》《人類大命運》作者）** · 2026-06-30 | [AI has hacked the code of human civilization — Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · 47 分鐘
+- **Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者）** · 2026-08-02 | [哈拉瑞 gala 對談：50 年後的人類、AI 與民主 — EDP 50 週年 Gala 對談 Tom Parker](人物訪談/20260730_Harari_50年AI.md) · 48:06（2886s）｜AI 代理人接管官僚體系 + 大規模民主依賴資訊科技 + intelligence vs wisdom 精靈比喻 + 100:1 安全預算比 + AI 帝國「帝都開關」+ wisdom revolution 呼籲
 - **Y Combinator Paper Club** · 2026-06-12 | [5 篇 AI 論文告訴我們研究正往哪裡走 — YC Paper Club 全景](技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md) · 1 小時 16 分 55 秒
 - **Yann LeCun** · 2026 | [World Models 將開啟下一場 AI 革命 — 從 LLMs 的死路到 AMILabs](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) · 58 分 54 秒
 - **馬臉姐** · 2026-06-19 | [AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說](技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md) · 29 分 55 秒
@@ -552,7 +557,7 @@
 <a id="by-type"></a>
 ## 📂 按分類
 
-- 🎙️ **人物訪談**（11 支）→ [完整列表](人物訪談/README.md)
+- 🎙️ **人物訪談**（12 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（66 支）→ [完整列表](技術講座/README.md)
