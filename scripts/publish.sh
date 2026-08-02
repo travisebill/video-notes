@@ -40,6 +40,7 @@ git add 人物訪談/ 國際局勢/ 財經分析/ 技術講座/
 git add transcripts/ audio/
 git add data/video-notes.json docs/data/video-notes.json scripts/
 git add docs/  # docs/ 底下除了 docs/data/ 還有 app.js / index.html / style.css 等（2026-06-29 補）
+git add README.md  # SOP README 自動 commit fix（2026-08-02 Harari SOP 漏 add 教訓）
 
 # 顯示將要 commit 的檔案
 echo "--- 待 commit 檔案 ---"
