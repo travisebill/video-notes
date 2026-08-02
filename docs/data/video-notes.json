@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 159,
-    "total_with_audio": 130,
+    "total_videos": 160,
+    "total_with_audio": 131,
     "total_with_transcript": 95,
-    "total_with_spoken_script": 128,
+    "total_with_spoken_script": 129,
     "speakers_count": 65,
     "categories_count": 4,
     "topics_count": 15,
@@ -12,7 +12,7 @@
       "NTU 人工智慧導論",
       "Stanford CS336"
     ],
-    "last_updated": "2026-08-02 18:01:00",
+    "last_updated": "2026-08-03 04:00:54",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -105,6 +105,34 @@
     ]
   },
   "videos": [
+    {
+      "id": "20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗",
+      "title": "自說自話的總裁：太陽系殭屍地球",
+      "speaker": "自說自話的總裁",
+      "speaker_description": null,
+      "speaker_slug": "自說自話的總裁",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": null,
+      "date": "2026-08-01",
+      "note_date": "2026-08-01",
+      "duration_seconds": 2005,
+      "duration_display": "33:25",
+      "video_url": "https://youtu.be/IKblHoNXd9o?si=jXzpo_6ObdvY6fmm",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.txt",
+        "spoken_script_tts": null
+      },
+      "note_path": "人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md"
+    },
     {
       "id": "20260730_RayDalio_AIBubbleBigCycle",
       "title": "Ray Dalio: I Predicted The 2008 CRASH",
