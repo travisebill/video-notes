@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 166,
-    "total_with_audio": 137,
-    "total_with_transcript": 97,
-    "total_with_spoken_script": 135,
+    "total_videos": 168,
+    "total_with_audio": 139,
+    "total_with_transcript": 99,
+    "total_with_spoken_script": 137,
     "speakers_count": 67,
     "categories_count": 4,
     "topics_count": 15,
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-08-05 06:35:51",
+    "last_updated": "2026-08-05 07:06:59",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -1005,6 +1005,62 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md"
     },
     {
+      "id": "20260803_StanfordCS329A_Part7SelfImprovementAndDeepResearchAgents",
+      "title": "【Stanford CS329A — Part 7 — Self-Improvement and Deep Research Agents】",
+      "speaker": "Stanford CS329A",
+      "speaker_description": null,
+      "speaker_slug": "StanfordCS329A",
+      "course_slug": "Stanford CS329A",
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-08-03",
+      "note_date": "2026-08-03",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://www.youtube.com/watch?v=Uni9dqyuuDM",
+      "lec_num": 7,
+      "audio": {
+        "opus": "audio/20260803_StanfordCS329A_Part7SelfImprovementAndDeepResearchAgents_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260803_StanfordCS329A_Part7SelfImprovementAndDeepResearchAgents_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260803_StanfordCS329A_Part7SelfImprovementAndDeepResearchAgents_逐字稿.txt",
+        "spoken_script": "transcripts/20260803_StanfordCS329A_Part7SelfImprovementAndDeepResearchAgents_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260803_StanfordCS329A_Part7SelfImprovementAndDeepResearchAgents_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260803_StanfordCS329A_Part7SelfImprovementAndDeepResearchAgents.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part7SelfImprovementAndDeepResearchAgents.md"
+    },
+    {
+      "id": "20260803_StanfordCS329A_Part6TrainTimeScalingScalingRL",
+      "title": "【Stanford CS329A — Part 6 — Train Time Scaling / Scaling RL】",
+      "speaker": "Stanford CS329A",
+      "speaker_description": null,
+      "speaker_slug": "StanfordCS329A",
+      "course_slug": "Stanford CS329A",
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-08-03",
+      "note_date": "2026-08-03",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://www.youtube.com/watch?v=yVnmHSAy3ck",
+      "lec_num": 6,
+      "audio": {
+        "opus": "audio/20260803_StanfordCS329A_Part6TrainTimeScalingScalingRL_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260803_StanfordCS329A_Part6TrainTimeScalingScalingRL_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260803_StanfordCS329A_Part6TrainTimeScalingScalingRL_逐字稿.txt",
+        "spoken_script": "transcripts/20260803_StanfordCS329A_Part6TrainTimeScalingScalingRL_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260803_StanfordCS329A_Part6TrainTimeScalingScalingRL_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260803_StanfordCS329A_Part6TrainTimeScalingScalingRL.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part6TrainTimeScalingScalingRL.md"
+    },
+    {
       "id": "20260803_StanfordCS329A_Part5PlanningMultiStepReasoning",
       "title": "【Stanford CS329A Part 5 — Planning and Multi-Step Reasoning】",
       "speaker": "Stanford CS329A",
@@ -1018,7 +1074,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://www.youtube.com/watch?v=Ml_fp9XkB8Y",
-      "lec_num": null,
+      "lec_num": 5,
       "audio": {
         "opus": "audio/20260803_StanfordCS329A_Part5PlanningMultiStepReasoning_口播稿.opus",
         "m4a": null,
@@ -1046,7 +1102,7 @@
       "duration_seconds": null,
       "duration_display": null,
       "video_url": "https://www.youtube.com/watch?v=Lxh9RF5S-K0",
-      "lec_num": null,
+      "lec_num": 4,
       "audio": {
         "opus": "audio/20260803_StanfordCS329A_Part4LearningFromFeedbackWithToolsCode_口播稿.opus",
         "m4a": null,
@@ -1074,7 +1130,7 @@
       "duration_seconds": 4379,
       "duration_display": "1:12:59",
       "video_url": "https://www.youtube.com/watch?v=p7TdPUcPoik",
-      "lec_num": null,
+      "lec_num": 3,
       "audio": {
         "opus": "audio/20260803_StanfordCS329A_Part3RobustVerification_口播稿.opus",
         "m4a": null,
@@ -1102,7 +1158,7 @@
       "duration_seconds": 3801,
       "duration_display": "1:03:21",
       "video_url": "https://www.youtube.com/watch?v=-Ggc37xLj_Y",
-      "lec_num": null,
+      "lec_num": 2,
       "audio": {
         "opus": "audio/20260803_StanfordCS329A_Part2TestTimeComputeScaling_口播稿.opus",
         "m4a": null,
@@ -1130,7 +1186,7 @@
       "duration_seconds": 4182,
       "duration_display": "1:09:42",
       "video_url": "https://www.youtube.com/watch?v=6YnLB0XbTnI",
-      "lec_num": null,
+      "lec_num": 1,
       "audio": {
         "opus": "audio/20260803_StanfordCS329A_Part1CourseOverview_口播稿.opus",
         "m4a": null,
