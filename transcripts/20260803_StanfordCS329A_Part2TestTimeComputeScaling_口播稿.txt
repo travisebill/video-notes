@@ -1,0 +1,21 @@
+本場 Stanford CS329A「Self-Improving AI Agents」系列 Part 2，由課程團隊主講，聚焦「Test-Time Compute Scaling」這個新典範。講者開場便揭示核心張力：LLM 開發分為預訓練、微調、推論三階段，其中推論階段在歷史上幾乎不被賦予算力，而這正是本講要改變的觀念。
+
+從「Large Language Monkeys」論文出發，講者展示一個驚人的發現：把同一個問題反覆丟給 Llama-3 8B 或 70B 等次旗艦模型一百次，再用 verifier 從中挑選正確答案，最終表現竟可超越 GPT-4o 的單次作答。視覺化曲線顯示，DeepSeek V3 在一千個樣本後，於 coding 任務上擊敗 Claude 3.5 與 o1 preview。
+
+更具理論意義的是，這套抽樣行為服從冪次定律——coverage 對樣本數 K 的關係近似為 1 減 A 乘以 K 的負 B 次方。講者特別強調，這個冪次行為的成立有一個充分必要條件：資料集中必須存在難題的長尾分布。換言之，沒有 long tail of hard problems，就沒有 inference scaling。
+
+講者接著探討 verifier 機制，舉出數學領域的 formal proofs、編碼領域的 unit tests、以及 AI as a Compiler 等完美驗證的範例。然而實驗顯示，多數決機制在樣本數大於 50 後幾乎停滯，這就是所謂的 Generation-Verification Gap——模型其實生成出許多正確答案，但 verifier 抓不到。
+
+在方法論層次，講者區分平行抽樣與序列修正兩條路線，並介紹 Outcome Reward Model 與 Process Reward Model 的差異。引用「Scaling LLM Test-Time Compute Optimally」論文，他指出對容易與中等難度的題目，test-time compute 比擴大模型更划算；但對極難題目，更大的預訓練模型仍然勝出。
+
+最後，講者介紹 Archon 框架，把 inference-time scaling 重新定位為架構設計問題。透過 Bayesian optimizer 組合 generation、fusion、critic、ranker、unit-test generator 等 inference operations，純開源模型平均在指令遵循、推理、數學、編碼任務上超越 GPT-4o 與 Claude 3.5 Sonnet 達 14.1%。
+
+本講最深層的啟示是：與其追求單一更大的模型，不如設計可組合、可驗證、可優化的推論系統。Inference 已從單純的問答動作，演變為新一代 AI 系統的核心設計空間。
+
+值得特別留意的是 Archon 論文中的 fusion 操作：把 K 個候選回答同時交給 LLM，請它綜合成一個新回答——實驗顯示這個方法竟比 oracle selection 更強。這個反直覺的發現揭示了 LLM 在整合多重證據上的隱藏能力。
+
+講者也在結尾抛出多個延伸研究方向：如何針對極難題目設計 verifier、多個弱監督 verifier 的 ensembling、self-study 與 chain-of-thought 的剪枝整合、不同難度下 sequential 與 parallel 的最佳配比。這些都是尚未收口的開放問題。
+
+整場講座貫穿一條清晰的軸線：過去十年業界聚焦於擴大預訓練規模，而 test-time compute scaling 開啟了第二條同樣可預測、可工程化的擴展路徑。兩條路並非互斥，而是互補——容易題用 inference 算力換表現，最難題仍需更大模型打底。
+
+從後端工程的視角，這場講揭示一個關鍵轉變：推論成本從可忽略的固定支出，變成每次查詢都會累積的變動成本。產品定價、API 設計、錯誤處理流程，都必須把這個新現實納入考量。
