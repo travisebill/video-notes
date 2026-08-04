@@ -2,7 +2,7 @@
 
 **講者｜Microsoft .NET team（Principal Software Engineer，未署名具體姓名）**
 **影片連結｜https://devblogs.microsoft.com/dotnet/polyglot-unit-testing-agent/**
-**影片長度｜Article 路徑（口播稿 3:29 / 209s）**
+**影片長度**｜3:29（209s）
 **發布日期｜2026-07-31**
 **Open Source｜https://github.com/dotnet/skills（`plugins/dotnet-test/agents/code-testing-generator.agent.md`）**
 **中文摘要｜Ryo（Backend Engineer Agent）**
