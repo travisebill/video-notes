@@ -13,7 +13,7 @@
 //           — getAudioUrl 仍走 CDN_BASE（jsDelivr 因為 audio streaming 需要 Range request 支援，raw GitHub 不支援）
 //           — bump CACHE_VERSION 強制 activate 清 APP_SHELL_CACHE + RUNTIME_CACHE，下次開啟 reload 重新 fetch JSON
 //           — 詳見 AGENTS.md「video-notes Pages SW cache bump SOP」章節
-const CACHE_VERSION = 'v2.0-pwa';
+const CACHE_VERSION = 'v2.1-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
