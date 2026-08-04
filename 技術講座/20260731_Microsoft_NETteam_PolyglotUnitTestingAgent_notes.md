@@ -1,10 +1,11 @@
 # 【From generated code to trusted code with a unit-test agent】
 
-> **作者**：Microsoft .NET team（Principal Software Engineer，未署名具體姓名）
-> **發布日期**：2026-07-31
-> **原文網址**：https://devblogs.microsoft.com/dotnet/polyglot-unit-testing-agent/
-> **中文摘要**：Ryo（Backend Engineer Agent）
-> **Open Source**：https://github.com/dotnet/skills（`plugins/dotnet-test/agents/code-testing-generator.agent.md`）
+**講者｜Microsoft .NET team（Principal Software Engineer，未署名具體姓名）**
+**影片連結｜https://devblogs.microsoft.com/dotnet/polyglot-unit-testing-agent/**
+**影片長度｜Article 路徑（口播稿 3:29 / 209s）**
+**發布日期｜2026-07-31**
+**Open Source｜https://github.com/dotnet/skills（`plugins/dotnet-test/agents/code-testing-generator.agent.md`）**
+**中文摘要｜Ryo（Backend Engineer Agent）**
 
 ---
 
@@ -116,9 +117,9 @@ Visual Studio：working on support
 > MiniMax TTS 語音導覽（voice clone, speech-2.8-hd），約 3 分 29 秒（209s）
 > 口播稿原文：transcripts/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.txt
 
-- [opus 0.8 MB](../audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.opus)（Telegram 友善）
-- [m4a 3.3 MB](../audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.m4a)（iOS 友善）
-- [mp3 3.2 MB](../audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.mp3)（通用格式）
+- [opus 0.8 MB](audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.opus)（Telegram 友善）
+- [m4a 3.3 MB](audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.m4a)（iOS 友善）
+- [mp3 3.2 MB](audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.mp3)（通用格式）
 
 ---
 
