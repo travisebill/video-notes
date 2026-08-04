@@ -393,6 +393,8 @@ def derive_course_slug(filename_stem: str) -> str | None:
     Returns:
         'Stanford CS336' / 'Harvard CS224' / 'NTU 人工智慧導論' / None
     """
+    if 'StanfordCS329A' in filename_stem:
+        return 'Stanford CS329A'
     if 'StanfordCS336' in filename_stem:
         return 'Stanford CS336'
     if 'HarvardCS224' in filename_stem or 'AdvancedAlgorithmsCS224' in filename_stem or 'HarvardCS224AdvancedAlgorithms' in filename_stem:

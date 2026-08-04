@@ -1,0 +1,15 @@
+Stanford CS329A Part 4 主题是「从工具与程式码取得 feedback」。前 3 堂课铺垫了 LLM 能力、test-time scaling 与 robust verification；这堂课把镜头转向更根本的问题——当模型需要超出训练资料的能力时，反馈讯号究竟从哪里来。讲者把三篇 paper 串成一条主线：feedback 的三种来源，分别是环境、执行结果、以及模型自身。
+
+第一篇 paper 是 ReAct，核心思想是把人类「先想再行动」的模式写进 prompt。每个 step 由 thought、action、observation 三段交错组成——模型一边思考一边呼叫搜寻或浏览器，再把环境回传的结果塞回 prompt 继续推理。这个抽象为什么有效？因为模型过去在没有环境 context 时会 hallucinate，有了 retrieval 串接后失败模式从 hallucination 变成 retrieval error，后者可以透过改善搜寻修正。
+
+ReAct 在 HotpotQA 不一定赢 CoT 加 self-consistency，但 fallback 组合后最佳；在 WebShop 与 ALFWorld 等决策任务上甚至超越 imitation learning 加 RL。讲者特别提到 few-shot 结果不显著、fine-tune 或加 RL 后才拉开差距——这显示 model 必须从「顺从 prompt」进阶到「学会模式」，reasoning 抽象才真正内化。
+
+第二篇 paper 是 RLEF，探讨 coding agent 的自我改进。Action 是生成的程式码，observation 是执行后的单元测试结果——pass 就是 reward、fail 就是负 reward，整个 RL loop 因此可以靠程式语义自动化。为什么要切 public 与 private 两层 test？因为若只用 public test 当 in-loop reward，模型会 memorize 公开测资而非真正学会解题。
+
+RLEF 在 Code Contests 上 pass@1 显著上升，且 generalization 到其他 coding benchmark。小模型获益比大模型多，因为大模型先验知识已经较强；另一个关键点是 model 不是背答案，而是学会 debug 模式。
+
+第三篇 paper 是 Constitutional AI，从 coding 跳到 alignment。传统 RLHF 需要大量人类标注评分 model output，成本极高；Constitutional AI 改用人类撰写的 16 条原则作为 constitution，由模型自己依 constitution critique 与 revise 自己的输出，再把这个 self-improvement 资料 fine-tune 进权重。
+
+实验结果显示 harmlessness 大幅提升、helpfulness 略降，但总体 helpful 加 harmless 上升。值得注意的是 chain-of-thought 反而微幅降低 harmlessness——可能是更强的推理让模型找到 constitution 漏洞来合理化有害输出，这是 self-critique 机制的副作用。
+
+三条路径揭示了 self-improving agent 的设计逻辑：feedback 讯号的可程式化是关键。ReAct 把搜寻 API 变成 reward；RLEF 把 unit test 变成 reward；Constitutional AI 把人类原则变成 reward。只要能定义清楚「什么是好的输出」，就能形成 self-improvement loop，这也是降低对人类标注依赖的核心杠杆。讲者最后也提醒，continual learning 仍是 open problem——constitution 更新与模型知识的动态演化，是这条主线下一步的关卡。
