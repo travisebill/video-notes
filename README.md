@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
-> YouTube 影片的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **155 支內容** · 282 個音檔 · 153 個逐字稿 · 155 個口播稿
-> 最後更新：2026-08-03
+> YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
+> **156 支內容** · 285 個音檔 · 154 個逐字稿 · 156 個口播稿
+> 最後更新：2026-08-04
 
 ---
 
@@ -19,6 +19,7 @@
 
 - **2026-08-02** | Yuval Noah Harari（哈拉瑞，《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者）· 主持 Tom Parker（Financial Times《The Next Five》主播）| [哈拉瑞 gala 對談：50 年後的人類、AI 與民主 — EDP 50 週年 Gala 對談](人物訪談/20260730_Harari_50年AI.md) · 48:06（2886s）（口播稿 5:00）· July 2026 EDP 50th Anniversary Gala Dinner · Whisper base en 聽寫（zh-Hant 字幕 429 + en-orig 無人工字幕）· xiaotian_clone_v1 · Bar 2 0.24/1K · Bar 3 9.23%
 - **2026-08-01** | 自說自話的總裁（《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者）| [柯伊伯帶與 2700 萬年大清洗 — 太陽系「殭屍地球」/ 紅線 / Planet X](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) · 33:25（2005s）（口播稿 5:04）· 自說自話的總裁 宇宙系列 · 1994 木星事件 / 柯伊伯帶（古伯帶）/ 2700 萬年週期性滅絕 / Planet X 引力異常 · Whisper base zh 聽寫（list-subs 確認 has no captions）· xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.72%
+- **2026-07-31** | Microsoft .NET team（Principal Software Engineer）| [From generated code to trusted code with a unit-test agent — Polyglot Unit Testing Agent for coding agents](技術講座/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent.md) · Article 路徑（口播稿 3:29）· dotnet/skills open-source plugin（`code-testing-generator` agent）· 4 階段 repo-aware workflow（learn / plan / write / check）+ 152 tasks 內部 benchmark 92.1% vs 78.9% stock Copilot（**63% fewer failures**）+ 跨模型 Opus/GPT-5.5/Haiku 全勝 + 跨語言 12 種 + SWE Atlas 16/44 vs 12/44 · web_fetch 抓原文 · xiaotian_clone_v1 · Bar 2 0.79/1K · Bar 3 7.65%
 - **2026-02-21** | 睡前听书助眠（audiobook summary channel）· 來源書籍《被討厭的勇氣》岸見一郎 × 古賀史健合著 | [睡前听完一本书《被讨厌的勇气》—— 阿德勒心理學核心觀點 + 課題分離 + 不被討厭的勇氣](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) · 19:15（1155s）（口播稿 5:52）· Whisper 中文 base 聽寫 · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.72%
 - **2026-07-30** | Ray Dalio（Bridgewater Associates 創辦人、1500 億美金對沖基金、《Principles》作者）· 主持 Steven Bartlett | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · 1:30:17（5417s）（口播稿 4:32）· DOAC 深度訪談 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.63%
 - **2026-07-27** | Boris Cherny（Anthropic · Claude Code 創建者）· 主持 Diana Hu | [Boris Cherny: Building Claude Code — Opus 5 long-running + Prompt injection 防禦改變 + 砍 80% system prompt + Product Overhang / Unhobbling + Give Claude Harder Problems（Bun 11 天 Zig→Rust）+ Prompt Eng → Verification + Two-Week Swift Rewrite Prompt + Agent Algebra + Claude Maintaining Itself（abstraction police）+ Coding Almost Solved caveats + CS Student 學 application](技術講座/20260727_BorisCherny_BuildingClaudeCode.md) · 35:51（2151s）（口播稿 2:41）· Y Combinator Startup School 2026 · Opus 5 發布隔天錄製 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.72/1K · Bar 3 8.23%
@@ -95,6 +96,7 @@
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
 | 2026-08-01 | [柯伊伯帶與 2700 萬年大清洗](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) | 自說自話的總裁（《人類大歷史》《Nexus》作者）| 33:25（2005s）（口播稿 5:04）| [📄 note](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) · [🎙️ 口播稿](transcripts/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.txt) · [🔊 opus](audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.opus) · [🔊 m4a](audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.m4a) · [🔊 mp3](audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.mp3) |
+| 2026-07-31 | [From generated code to trusted code with a unit-test agent](技術講座/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent.md) | Microsoft .NET team（Principal Software Engineer）| Article（口播稿 3:29 / 209s）| [📄 note](技術講座/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent.md) · [🎙️ 口播稿](transcripts/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.txt) · [🔊 opus](audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.opus) · [🔊 m4a](audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.m4a) · [🔊 mp3](audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.mp3) |
 | 2026-08-02 | [哈拉瑞 gala 對談：50 年後的人類、AI 與民主](人物訪談/20260730_Harari_50年AI.md) | Yuval Noah Harari（哈拉瑞，《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者）· 主持 Tom Parker（FT《The Next Five》主播）| 48:06（2886s）（口播稿 5:00）| [📄 note](人物訪談/20260730_Harari_50年AI.md) · [🎙️ 口播稿](transcripts/20260730_Harari_50年AI_口播稿.txt) · [🔊 opus](audio/20260730_Harari_50年AI_口播稿.opus) · [🔊 m4a](audio/20260730_Harari_50年AI_口播稿.m4a) · [🔊 mp3](audio/20260730_Harari_50年AI_口播稿.mp3) |
 | 2026-02-21 | [睡前听完一本书《被讨厌的勇气》—— 阿德勒心理學核心觀點 + 課題分離 + 不被討厭的勇氣](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) | 睡前听书助眠（audiobook summary channel）· 來源書籍《被討厭的勇氣》岸見一郎 × 古賀史健合著 | 19:15（1155s）（口播稿 5:52） | [📄 note](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) · [🎙️ 口播稿](transcripts/20260221_被討厭的勇氣_阿德勒心理學_口播稿.txt) · [🔊 opus](audio/20260221_被討厭的勇氣_阿德勒心理學_口播稿.opus) · [🔊 mp3](audio/20260221_被討厭的勇氣_阿德勒心理學_口播稿.mp3) |
 | 2026-07-30 | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) | Ray Dalio（Bridgewater Associates 創辦人）· 主持人 Steven Bartlett | 1:30:17（5417s）（口播稿 4:32） | [📄 note](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · [🎙️ 口播稿](transcripts/20260730_RayDalio_AIBubbleBigCycle_口播稿.txt) · [🔊 opus](audio/20260730_RayDalio_AIBubbleBigCycle_口播稿.opus) · [🔊 mp3](audio/20260730_RayDalio_AIBubbleBigCycle_口播稿.mp3) |
@@ -260,6 +262,7 @@
 ### 🧠 **AI / LLM 學術與方法論**（68 支）
 
 - 2026-07-13 | [LIVE: The /wayfinder Demo — Wayfinder 把模糊需求轉成結構化 ticket graph 的 AI skill](技術講座/20260713_MattPocock_WayfinderDemo.md) · Matt Pocock（AI Hero 創辦人 / Skills For Real Engineers）· 1 小時 14 分 40 秒（4480s）｜Live demo + Grill Me 進化版 + 預規格階段 + 9 個 subtasks + 多 sessions 平行 + Decision vs Implementation tickets + CVM local desktop 架構決策
+- 2026-07-31 | [From generated code to trusted code with a unit-test agent — Polyglot Unit Testing Agent for coding agents](技術講座/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent.md) · Microsoft .NET team（Principal Software Engineer）· Article（口播稿 3:29 / 209s）｜4 階段 repo-aware workflow（learn / plan / write / check）+ mutation testing 驗證測試價值 + 152 tasks 內部 benchmark 92.1% vs 78.9% stock Copilot（63% fewer failures）+ 跨模型 Opus / GPT-5.5 / Haiku 全勝 + 跨語言 12 種（含 Python / Go / PowerShell）+ SWE Atlas 16/44 vs 12/44 + dotnet/skills open-source plugin（`code-testing-generator` agent，支援 .NET / Python / TS / JS / Java / Go / Ruby / Rust / Swift / Kotlin / PowerShell / C++）
 - ? | [進階上下文工程：如何讓 AI 寫出能真正上線的程式碼](技術講座/202602_Dex_進階上下文工程：如何讓AI寫出能真正上線的程式碼.md) · 進階上下文工程 · ?
 - 2026-04-17 | [Harness Engineering: How to Build Software When Humans Steer, Agents Execute](技術講座/20260617_RyanLopopolo_HarnessEngineering.md) · Ryan Lopopolo（OpenAI Member of Technical Staff）· 46 分 20 秒
 - 2026-06-08 | [Nick Hanauer × Daniel Priestley：中產階級之死、AI 對工作衝擊，與資本主義能否自我修正](人物訪談/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.md) · Nick Hanauer · 2 小時 32 分 26 秒
@@ -460,6 +463,8 @@
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-14 | [Lecture 2：PyTorch 資源帳戶與 Roofline 模型](技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md) · 1 小時 17 分 25 秒（4645s）
 - **Percy Liang & Tatsu Hashimoto（Stanford CS 教授）** · 2026-04-14 | [Lecture 1：Roadmap 與 BPE Tokenization](技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md) · 1 小時 19 分 22 秒（4762s）
 
+- **Microsoft .NET team（Principal Software Engineer）** · 2026-07-31 | [From generated code to trusted code with a unit-test agent — Polyglot Unit Testing Agent for coding agents](技術講座/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent.md) · Article（口播稿 3:29 / 209s）｜dotnet/skills open-source `code-testing-generator` agent + 4 階段 repo-aware workflow（learn / plan / write / check）+ mutation testing + 152 tasks 內部 benchmark 92.1% vs 78.9% stock Copilot + 跨模型 Opus / GPT-5.5 / Haiku 全勝 + 跨語言 12 種 + SWE Atlas 16/44 vs 12/44
+
 - **林軒田（NTU CSIE 教授）** · 2026-06-06 | [Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) · 29 分 58 秒（1798s）
 - **陳縕儂（NTU CSIE 教授）** · 2026-06-04 | [FAI 6.3：Agents 可以動手的代理人真的要來了?](技術講座/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了.md) · 38:26
 - **陳縕儂（NTU CSIE 教授）** · 2026-06-03 | [FAI 6.1：Generative AI - Large Language Models 生成式人工智慧之大型語言模型](技術講座/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型.md) · 25:02
@@ -565,8 +570,8 @@
 - 🎙️ **人物訪談**（13 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
-- 🛠️ **技術講座**（66 支）→ [完整列表](技術講座/README.md)
+- 🛠️ **技術講座**（67 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-07-26 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 148 支內容*
+*最後更新：2026-08-04 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 156 支內容*
