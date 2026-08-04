@@ -10,10 +10,9 @@
     "courses": [
       "Harvard CS224",
       "NTU 人工智慧導論",
-      "Stanford CS336",
-      "Stanford CS329A"
+      "Stanford CS336"
     ],
-    "last_updated": "2026-08-05 04:06:15",
+    "last_updated": "2026-08-05 05:12:47",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -65,6 +64,7 @@
       "Ryan Lopopolo",
       "Scott Galloway",
       "Smitha",
+      "Stanford CS329A",
       "TVBS",
       "Tara Agyemang",
       "Tejas",
@@ -80,8 +80,7 @@
       "被討厭的勇氣",
       "陳文茜",
       "陳縕儂",
-      "馬臉姐",
-      "Stanford CS329A"
+      "馬臉姐"
     ],
     "categories": [
       "人物訪談",
@@ -105,94 +104,9 @@
       "🤖 AI 倫理 / 哲學 / 意識",
       "🤖 AI 安全 / 末日論 / 政策",
       "🧠 AI / LLM 學術與方法論"
-    ],
-    "courses_count": 4
+    ]
   },
   "videos": [
-    {
-      "id": "20260803_StanfordCS329A_Part1CourseOverview",
-      "title": "【Stanford CS329A — Self-Improving AI Agents, Part 1: Course Overview】",
-      "speaker": "Stanford CS329A",
-      "speaker_description": "Stanford 2026 秋季「Self-Improving AI Agents」課程團隊（Akanksha Sreyas、Azalia Mirhoseini 等）",
-      "speaker_slug": "StanfordCS329A",
-      "course_slug": "Stanford CS329A",
-      "category": "技術講座",
-      "primary_topic": "🧠 AI / LLM 學術與方法論",
-      "date": "2026-08-03",
-      "note_date": "2026-08-03",
-      "duration_seconds": 4182,
-      "duration_display": "1:09:42",
-      "video_url": "https://www.youtube.com/watch?v=6YnLB0XbTnI",
-      "lec_num": 1,
-      "audio": {
-        "opus": "audio/20260803_StanfordCS329A_Part1CourseOverview_口播稿.opus",
-        "m4a": "audio/20260803_StanfordCS329A_Part1CourseOverview_口播稿.m4a",
-        "mp3": "audio/20260803_StanfordCS329A_Part1CourseOverview_口播稿.mp3"
-      },
-      "transcripts": {
-        "transcript": null,
-        "spoken_script": "transcripts/20260803_StanfordCS329A_Part1CourseOverview_口播稿.txt",
-        "spoken_script_tts": "transcripts/20260803_StanfordCS329A_Part1CourseOverview_口播稿_TTS_zh_CN.txt"
-      },
-      "note_path": "技術講座/20260803_StanfordCS329A_Part1CourseOverview.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part1CourseOverview.md"
-    },
-    {
-      "id": "20260803_StanfordCS329A_Part2TestTimeComputeScaling",
-      "title": "【Stanford CS329A — Self-Improving AI Agents, Part 2: Test-Time Compute Scaling】",
-      "speaker": "Stanford CS329A",
-      "speaker_description": "Stanford 2026 秋季「Self-Improving AI Agents」課程團隊（Akanksha Sreyas、Azalia Mirhoseini 等）",
-      "speaker_slug": "StanfordCS329A",
-      "course_slug": "Stanford CS329A",
-      "category": "技術講座",
-      "primary_topic": "🧠 AI / LLM 學術與方法論",
-      "date": "2026-08-03",
-      "note_date": "2026-08-03",
-      "duration_seconds": 3801,
-      "duration_display": "1:03:21",
-      "video_url": "https://www.youtube.com/watch?v=-Ggc37xLj_Y",
-      "lec_num": 2,
-      "audio": {
-        "opus": "audio/20260803_StanfordCS329A_Part2TestTimeComputeScaling_口播稿.opus",
-        "m4a": "audio/20260803_StanfordCS329A_Part2TestTimeComputeScaling_口播稿.m4a",
-        "mp3": "audio/20260803_StanfordCS329A_Part2TestTimeComputeScaling_口播稿.mp3"
-      },
-      "transcripts": {
-        "transcript": null,
-        "spoken_script": "transcripts/20260803_StanfordCS329A_Part2TestTimeComputeScaling_口播稿.txt",
-        "spoken_script_tts": "transcripts/20260803_StanfordCS329A_Part2TestTimeComputeScaling_口播稿_TTS_zh_CN.txt"
-      },
-      "note_path": "技術講座/20260803_StanfordCS329A_Part2TestTimeComputeScaling.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part2TestTimeComputeScaling.md"
-    },
-    {
-      "id": "20260803_StanfordCS329A_Part3RobustVerification",
-      "title": "【Stanford CS329A — Self-Improving AI Agents, Part 3: Robust Verification】",
-      "speaker": "Stanford CS329A",
-      "speaker_description": "Stanford 2026 秋季「Self-Improving AI Agents」課程團隊（Akanksha Sreyas、Azalia Mirhoseini 等）",
-      "speaker_slug": "StanfordCS329A",
-      "course_slug": "Stanford CS329A",
-      "category": "技術講座",
-      "primary_topic": "🧠 AI / LLM 學術與方法論",
-      "date": "2026-08-03",
-      "note_date": "2026-08-03",
-      "duration_seconds": 4379,
-      "duration_display": "1:12:59",
-      "video_url": "https://www.youtube.com/watch?v=p7TdPUcPoik",
-      "lec_num": 3,
-      "audio": {
-        "opus": "audio/20260803_StanfordCS329A_Part3RobustVerification_口播稿.opus",
-        "m4a": "audio/20260803_StanfordCS329A_Part3RobustVerification_口播稿.m4a",
-        "mp3": "audio/20260803_StanfordCS329A_Part3RobustVerification_口播稿.mp3"
-      },
-      "transcripts": {
-        "transcript": null,
-        "spoken_script": "transcripts/20260803_StanfordCS329A_Part3RobustVerification_口播稿.txt",
-        "spoken_script_tts": "transcripts/20260803_StanfordCS329A_Part3RobustVerification_口播稿_TTS_zh_CN.txt"
-      },
-      "note_path": "技術講座/20260803_StanfordCS329A_Part3RobustVerification.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part3RobustVerification.md"
-    },
     {
       "id": "20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗",
       "title": "自說自話的總裁：太陽系殭屍地球",
@@ -1088,6 +1002,90 @@
       },
       "note_path": "財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md"
+    },
+    {
+      "id": "20260803_StanfordCS329A_Part3RobustVerification",
+      "title": "【Stanford CS329A Part 3 — Robust Verification】",
+      "speaker": "Stanford CS329A",
+      "speaker_description": null,
+      "speaker_slug": "StanfordCS329A",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-08-03",
+      "note_date": "2026-08-03",
+      "duration_seconds": 4379,
+      "duration_display": "1:12:59",
+      "video_url": "https://www.youtube.com/watch?v=p7TdPUcPoik",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260803_StanfordCS329A_Part3RobustVerification_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260803_StanfordCS329A_Part3RobustVerification_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260803_StanfordCS329A_Part3RobustVerification_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260803_StanfordCS329A_Part3RobustVerification_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260803_StanfordCS329A_Part3RobustVerification.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part3RobustVerification.md"
+    },
+    {
+      "id": "20260803_StanfordCS329A_Part2TestTimeComputeScaling",
+      "title": "【Stanford CS329A Part 2 — Test-Time Compute Scaling】",
+      "speaker": "Stanford CS329A",
+      "speaker_description": null,
+      "speaker_slug": "StanfordCS329A",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-08-03",
+      "note_date": "2026-08-03",
+      "duration_seconds": 3801,
+      "duration_display": "1:03:21",
+      "video_url": "https://www.youtube.com/watch?v=-Ggc37xLj_Y",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260803_StanfordCS329A_Part2TestTimeComputeScaling_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260803_StanfordCS329A_Part2TestTimeComputeScaling_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260803_StanfordCS329A_Part2TestTimeComputeScaling_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260803_StanfordCS329A_Part2TestTimeComputeScaling_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260803_StanfordCS329A_Part2TestTimeComputeScaling.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part2TestTimeComputeScaling.md"
+    },
+    {
+      "id": "20260803_StanfordCS329A_Part1CourseOverview",
+      "title": "【Stanford CS329A Part 1 — Course Overview】",
+      "speaker": "Stanford CS329A",
+      "speaker_description": null,
+      "speaker_slug": "StanfordCS329A",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-08-03",
+      "note_date": "2026-08-03",
+      "duration_seconds": 4182,
+      "duration_display": "1:09:42",
+      "video_url": "https://www.youtube.com/watch?v=6YnLB0XbTnI",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260803_StanfordCS329A_Part1CourseOverview_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260803_StanfordCS329A_Part1CourseOverview_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260803_StanfordCS329A_Part1CourseOverview_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260803_StanfordCS329A_Part1CourseOverview_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260803_StanfordCS329A_Part1CourseOverview.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part1CourseOverview.md"
     },
     {
       "id": "20260731_Microsoft_NETteam_PolyglotUnitTestingAgent",
