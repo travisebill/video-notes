@@ -123,6 +123,14 @@ def parse_filename(stem: str) -> dict:
     lec_match = re.search(r'Lecture(\d+)', title)
     lec_num = int(lec_match.group(1)) if lec_match else None
 
+    # 抽 Part 編號（Stanford CS329A 等 _PartN_ pattern，2026-08-05 加）
+    # 例如：20260803_StanfordCS329A_Part4LearningFromFeedbackWithToolsCode → 4
+    # 課程排序順序：依 Part 編號 1, 2, 3, ...（Part 1 課程介紹 → Part 9 未來方向）
+    if lec_num is None:
+        part_match = re.search(r'Part(\d+)', title)
+        if part_match:
+            lec_num = int(part_match.group(1))
+
     # 抽 NTU FAI 編號（2026-07-06 加）：FAI 0 → 0, FAI 1.1 → 11, FAI 6.3 → 63
     # 例如：20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型 → 11
     # 課程排序順序：FAI 0 (0), FAI 1.1-1.6 (11-16), FAI 2.1-2.4 (21-24), FAI 3.1-3.5 (31-35),

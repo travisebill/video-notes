@@ -1,0 +1,11 @@
+Stanford CS329A Part 7 圍繞核心命題展開：解存在於模型輸出的搜尋空間裡，但要把解 curate 出來，得靠工程化的 search pipeline。本課把 Part 2 的 inference-time scaling 與 Part 3 的 verification 推向 production scale，分兩條主線——code 場景的 sample-then-pick 與 deep research 場景的 reason-then-fetch。
+
+AlphaCode 2022 是第一個把 end-to-end competitive programming 跑通的系統，pipeline 是 pre-training → gold loss fine-tune → 每題 sample 一百萬解 → filter 九成五 → cluster by semantic equivalence → 送出 top ten。selection bottleneck 是核心限制：同樣一百萬 samples，pass@k 到四成，但十 at k 只有三成——這十個百分點差距就是 curate 品質的天花板。
+
+AlphaCode 2 在 2023 升級成 Gemini Pro 當 base、用 family of models 換 diversity、並把 selection 從 heuristic 升級成 learned scoring model。量化結果 impressive：AlphaCode 2 用一百 samples 就達到 AlphaCode 一百萬 samples 的 solve rate，search efficiency 提升一萬倍；用一百萬 samples 時 solve rate 從二成五推到四成三。Codeforces percentile 從 top 54% 推到 top 85%——不是靠堆 sample，而是 model、diversity、scoring 三者同時改善。
+
+Selection bottleneck 真正的限制是 diversity saturation：log-linear scaling 的前提是 diversity 也跟著 sample 數增加——model capacity 不夠時，sample 10x 只換來 10x 個近似解，coverage 不會跟著漲。這個觀察把 Part 2 與 Part 3 接在一起，verification 從「給 final answer 打分」變成「學會什麼是好的 candidate」的 reward model。
+
+後半段切到 deep research agent。LLM 有兩個根本限制：knowledge cutoff 與 reasoning 過程中的不確定性，後者會以 "perhaps"、"wait" 等 token 表徵，這是 deep research agent 可 hook 的 trigger。Search-o1 用三招解決 simple RAG 的不足：agentic RAG、reason-in-documents、iterative refinement。GPQA 上 Search-o1 在物理與生物接近或超過 human expert。
+
+最後 Q&A 講者把 hallucination 與 calibration 的 open problem 留給學生：model 是否知道自己不知道，是 deep research agent 真正 close the loop 的根本瓶頸——如果連 model 都 overconfident，automatic uncertainty detection 就只能靠 surface token 這種 weak proxy。本課從 AlphaCode 走到 Search-o1，是 CS329A 系列從 test-time scaling 到 production agent 的關鍵銜接。
