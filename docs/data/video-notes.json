@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 170,
-    "total_with_audio": 141,
-    "total_with_transcript": 101,
-    "total_with_spoken_script": 139,
-    "speakers_count": 67,
+    "total_videos": 171,
+    "total_with_audio": 142,
+    "total_with_transcript": 102,
+    "total_with_spoken_script": 140,
+    "speakers_count": 68,
     "categories_count": 4,
     "topics_count": 15,
     "courses": [
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-08-05 07:29:52",
+    "last_updated": "2026-08-05 21:32:04",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -51,6 +51,7 @@
       "Matt Pocock",
       "Matthew",
       "Maya",
+      "Mc Kinsey",
       "Microsoft",
       "Mo Gawdat — 前 Google X 首席商務長、《Scary Smart》《Solve for Happy》作者",
       "Moonshot",
@@ -135,6 +136,34 @@
       },
       "note_path": "人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md"
+    },
+    {
+      "id": "20260801_McKinsey_TheBiggestAIOpportunityIsntReplacingPeople",
+      "title": "【McKinsey — The Biggest AI Opportunity Isn't Replacing People】",
+      "speaker": "Mc Kinsey",
+      "speaker_description": null,
+      "speaker_slug": "McKinsey",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": null,
+      "date": "2026-08-01",
+      "note_date": "2026-08-01",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/u76xdhpF474",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260801_McKinsey_TheBiggestAIOpportunityIsntReplacingPeople_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260801_McKinsey_TheBiggestAIOpportunityIsntReplacingPeople_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260801_McKinsey_TheBiggestAIOpportunityIsntReplacingPeople_逐字稿.txt",
+        "spoken_script": "transcripts/20260801_McKinsey_TheBiggestAIOpportunityIsntReplacingPeople_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260801_McKinsey_TheBiggestAIOpportunityIsntReplacingPeople_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20260801_McKinsey_TheBiggestAIOpportunityIsntReplacingPeople.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260801_McKinsey_TheBiggestAIOpportunityIsntReplacingPeople.md"
     },
     {
       "id": "20260730_RayDalio_AIBubbleBigCycle",
