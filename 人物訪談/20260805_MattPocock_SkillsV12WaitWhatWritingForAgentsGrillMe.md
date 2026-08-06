@@ -1,18 +1,10 @@
----
-title: Matt Pocock 釋出 Claude Skills v1.2 — /wait-what、/writing-for-agents、/grill-me 修復
-speaker: Matt Pocock
-speaker_description: AI 工程教育者、Total TypeScript 創辦人；目前聚焦 AI 編碼技能工程（AI coding skill engineering），是 Anthropic / Claude Code 社群的知名技能作者，claude-code-skill-engineering-template 等熱門 repo 維護者
-video_url: https://youtu.be/gaDdrDdczO4
-duration: 11:37
-upload_date: 2026-08-05
-keywords:
-  - Claude Skills
-  - /wait-what
-  - /writing-for-agents
-  - /grill-me
-  - aihero.dev/skills
-  - Opus 5 verbose
-  - Matt Pocock
+# 【Matt Pocock — Claude Skills v1.2 釋出：/wait-what、/writing-for-agents、/grill-me 修復】
+
+**講者｜Matt Pocock（AI 工程教育者、Total TypeScript 創辦人；claude-code-skill-engineering-template 等熱門 repo 維護者）**
+**影片連結｜https://youtu.be/gaDdrDdczO4**
+**影片長度**｜11:37（697s）
+**發布日期｜2026-08-05**
+
 ---
 
 ## 主題與背景

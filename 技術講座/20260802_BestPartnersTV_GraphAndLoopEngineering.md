@@ -1,14 +1,11 @@
----
-title: 什么是图工程 | Graph Engineering 与循环工程的视角上移
-speaker: 大飞
-speaker_description: Best Partners TV（最佳拍档）頻道主持人，聚焦 AI 工程實務的中文科技 YouTube 頻道
-video_url: https://youtu.be/8RedSkw1UjE
-duration: 20:11
-upload_date: 2026-08-02
-keywords: [Graph Engineering, Loop Engineering, LangGraph, Multi-Agent, ReAct, Verifier, Prompt Engineering, Workflow Orchestration]
----
+# 【Best Partners TV — 什么是图工程 (Graph Engineering) 与循环工程 (Loop Engineering)】
 
-# 什么是图工程 | Graph Engineering | 循环工程 | Loop Engineering | 多智能体 | LangGraph | ReAct | 提示词工程 | 工作流编排 | 验证器 | Best Partners TV
+**講者｜大飛（Best Partners TV 主持人，聚焦 AI 工程實務的中文科技 YouTube 頻道）**
+**影片連結｜https://youtu.be/8RedSkw1UjE**
+**影片長度**｜20:11（1211s）
+**發布日期｜2026-08-02**
+
+---
 
 ## 主題與背景
 
