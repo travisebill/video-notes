@@ -1043,6 +1043,17 @@ document.addEventListener('alpine:init', () => {
       return `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&enablejsapi=1`;
     },
 
+    // 點 thumbnail 切換 inline embed iframe（v1.9 2026-08-07）
+    inlinePreview(videoId) {
+      this.expanded[videoId] = !this.expanded[videoId];
+      if (this.expanded[videoId]) {
+        this.$nextTick(() => {
+          const el = document.getElementById(`youtube-iframe-${videoId}`);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+    },
+
     // 透過 YouTube IFrame Player API seek 跳到指定秒數
     // 章節時間戳 link 點擊時呼叫
     seekYouTube(videoId, seconds) {
@@ -1075,9 +1086,15 @@ document.addEventListener('alpine:init', () => {
     // 用 category 對應 emoji + speaker 名字，避免 404 request + 純黑卡片
     _thumbnailPlaceholderCache: new Map(),
     thumbnailUrl(video) {
-      const ytId = video?.yt_id;
-      if (ytId) {
-        return `https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`;
+      // 從 video.video_url 抽 YouTube ID（v1.9 2026-08-07 fix: video-notes.json 沒 yt_id 欄位）
+      const url = video?.video_url;
+      if (url) {
+        let m = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+        if (!m) m = url.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/);
+        if (!m) m = url.match(/youtube\.com\/live\/([a-zA-Z0-9_-]+)/);
+        if (m) {
+          return `https://i.ytimg.com/vi/${m[1]}/hqdefault.jpg`;
+        }
       }
       // SVG fallback — 區分 category 給不同 icon & 背景
       const cat = video?.category || '';

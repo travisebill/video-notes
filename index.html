@@ -276,17 +276,17 @@
           <!-- 用 <template x-if> 而非 x-show，避免 CSS display: block !important 蓋掉 inline display: none -->
           <div class="video-thumbnail-wrap">
             <template x-if="video.video_url">
-              <a :href="video.video_url"
-                 target="_blank"
-                 class="video-thumbnail-link"
-                 :aria-label="'在 YouTube 開啟：' + video.title">
+              <div class="video-thumbnail-link"
+                   @click="inlinePreview(video.id)"
+                   style="cursor:pointer;"
+                   :aria-label="'播放內嵌：' + video.title">
                 <img class="video-thumbnail"
                      :src="thumbnailUrl(video)"
                      :alt="video.title"
                      loading="lazy"
                      @error="onThumbnailError($event, video)">
                 <span class="video-thumbnail-play" aria-hidden="true">▶</span>
-              </a>
+              </div>
             </template>
             <template x-if="!video.video_url">
               <div class="video-thumbnail-link no-thumbnail"
