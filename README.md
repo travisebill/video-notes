@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **159 支內容** · 288 個音檔 · 154 個逐字稿 · 159 個口播稿
-> 最後更新 2026-08-05
+> **160 支內容** · 290 個音檔 · 154 個逐字稿 · 160 個口播稿
+> 最後更新 2026-08-06
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-08-05** | Matt Pocock（AI 工程教育者、Total TypeScript 創辦人、claude-code-skill-engineering-template 作者 — GitHub 史上第 24 名、24K stars）| [New Skills! v1.2 brings /wait-what, /writing-for-agents, and fixes /grill-me — Claude Skills v1.2 三層架構總覽 + aihero.dev/skills 官方文件站 + Claude Code plugin marketplace + Codex OpenAI.YAML sidecar + /wait-what 治 Opus 5 滿嘴 LLM 慣用語 + ASD-STE100 簡化技術英文標準 + ubiquitous language 寫法 + /grill-me 圖形化 frontier 推進 + dictation-friendly UI + /writing-for-agents 拓寬所有 AGENTS.md / CLAUDE.md 配置 + /wizard 互動式 bash script 生成器 + /questionnaire 可分享 Markdown 橋接非 AI 利害關係人 + AI coding 沉澱期觀察](人物訪談/20260805_MattPocock_SkillsV12WaitWhatWritingForAgentsGrillMe.md) · 11:37（697s）（口播稿 8:04）· Skills repo 進入成熟期（雙 24K stars 巧合）+ 3 個核心技能改寫回應真實痛點 + 2 個新技能處理過去不受注意的場景 + Matt 對 AI coding 進入沉澱期的個人判斷 + 自學式 AI coding 速成課程預告 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 7.80%
 - **2026-08-01** | McKinsey & Company（Lucia Rahilly / Brooke Weddle / Brian Hancock 主持）· 來賓 Erik Brynjolfsson（Stanford Digital Economy Lab 主任、《The Second Machine Age》共同作者）| [The Biggest AI Opportunity Isn't Replacing People — Stanford 經濟學家 Brynjolfsson 訪談 — AI 補位 vs 取代 + Solow Paradox 復活 + J 曲線生產力延遲 + 任務原子級重組 + Coding 雙軌效應 + ADP 22-26 歲雇用 -33% + 新產出指標 vs Power Law 員工模式 + Token 經濟 + Engine 1 vs Engine 2 雙軌經濟 + mavericks 角色 + 多層次組織設計](人物訪談/20260801_McKinsey_TheBiggestAIOpportunityIsntReplacingPeople.md) · 30:33（1833s）（口播稿 4:27）· 為什麼 AI 最大商機是補位而非取代 + 7 章節 + 24 概念表 + 12 金句 + 學術框架引用 Brynjolfsson / Solow Paradox / Acemoglu & Restrepo + 1 全球銀行 Engine 2 案例 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.88%
 - **2026-08-03** | Stanford CS329A（Akanksha Sreyas、Azalia Mirhoseini 等 — Self-Improving AI Agents 課程團隊）| [Stanford CS329A Part 1: Course Overview — 開課介紹 + Scaling Laws + Zero/Few-shot/CoT + Pre-training + Instruction Tuning + RLHF + Inference Scaling via Large Language Monkeys + OpenAI o1 / DeepSeek / Gemini Thinking 四象限](技術講座/20260803_StanfordCS329A_Part1CourseOverview.md) · 1:09:42（4182s）（口播稿 3:03）· 兩位講者共同授課（第二次開課）· LLM 演進史 + Reasoning Models + Test-Time Compute intro + Agent Self-Improvement 課程地圖 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 9.41%
 - **2026-08-03** | Stanford CS329A（Self-Improving AI Agents 課程團隊）| [Stanford CS329A Part 2: Test-Time Compute Scaling — Inference-time compute + CoT depth + search/sampling/verification 三策略 + self-consistency + MCTS + PRM/ORM + pass@k vs pass@1 + Large Language Monkeys](技術講座/20260803_StanfordCS329A_Part2TestTimeComputeScaling.md) · 1:03:21（3801s）（口播稿 4:03）· inference scaling 三維（parallel / sequential / search）+ verifier 必要性 + math/code/reasoning 實驗 + CodeMonkeys preview · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 9.20%
