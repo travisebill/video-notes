@@ -1,0 +1,15 @@
+Stanford CS336「Language Modeling from Scratch」Lecture 8 由 Tatsu Hashimoto 主講,是 Lecture 7 的延伸——當 Data Parallel 加上 ZeRO Stage 3 都裝不下模型時,必須把單個模型本身切到多個 GPU。本講涵蓋三種主要策略:Tensor Parallel、Pipeline Parallel、Sequence Parallel,以及它們組合成 3D Parallelism 的實務模式。
+
+開場 Tatsu 點出 ZeRO Stage 3 的記憶體瓶頸:即使把參數、gradient、optimizer state 全部分區,forward pass 仍需要儲存完整的 activation——每個 layer 的 forward 結果都要保存到 backward 時使用。對 405B 模型來說,即使 ZeRO Stage 3,8 張 H100 80GB 也裝不下整個 activation。Tensor、Pipeline、Sequence Parallel 三種策略正是為了解決 activation 記憶體瓶頸而設計,各自攻不同的維度。
+
+Tensor Parallel 把單個 tensor——通常是 matmul 的 weight matrix——切到多個 GPU。Column parallel 把 weight 沿 output 維度切,每個 GPU 算 partial matmul 後 all-gather 得到完整輸出;Row parallel 把 weight 沿 input 維度切,每個 GPU 算 partial matmul 後 all-reduce。現代 transformer block 通常 attention 用 column parallel、FFN 用 row parallel,每個 layer 需要 4 次 all-reduce 通訊。
+
+Pipeline Parallel 把模型的 layers 切到多個 GPU,每個 GPU 持有連續的若干 layers,形成類似 CPU pipeline 的結構。但 pipeline 有個致命問題:啟動與結束時,部分 GPU 處於閒置狀態,造成所謂的 pipeline bubble——這是 PP 的核心成本。Micro-batching 把 batch 切成多個 micro-batch,提升 pipeline 利用率;1F1B(one forward one backward)schedule 透過交錯執行,把 bubble 從 O(stages) 降到 O(1),是現代 PP 框架的標準做法。
+
+Sequence Parallel 沿 sequence 維度切 activation,主要處理 LayerNorm、Dropout 這類 sequence-wise 的 operation。它與 TP 互補——TP 切 weight、SP 切 activation,組合使用可以最大化記憶體節省。DeepSpeed Ulysses 與 Megatron-LM 都支援 SP。
+
+實務上,70B 以上模型幾乎都跑 3D Parallelism——Data Parallel + Tensor Parallel + Pipeline Parallel 的組合。一個典型 70B 配置可能是 TP 等於 8、PP 等於 2、DP 等於 8,總計 128 張 GPU。Megatron-LM 是 NVIDIA 主導的 TP + PP 框架,DeepSpeed 是 Microsoft 主導、整合 ZeRO + TP + PP 的框架,兩者各有取捨——TP 通訊頻繁但 bubble 小,PP bubble 大但通訊少。
+
+Lecture 8 的最後一個主題是 Activation Recomputation:重新計算某些 layer 的 forward,放棄儲存 activation,trade memory for compute。這個技巧與 TP/PP 互補——即使切了模型,activation 仍可能過多時,recomputation 提供最後一道防線。
+
+整堂 Lecture 8 的核心 takeaway:TP 切 tensor、PP 切 layers、SP 切 activation;3D Parallelism 是 70B 以上模型的生產標準;activation recomputation 是另一個 trade memory for compute 的工具。下週 Lecture 9 將從「系統」轉向「設計權衡」——Scaling Laws 告訴我們,在固定算力下,模型大小與訓練 tokens 應該如何分配。

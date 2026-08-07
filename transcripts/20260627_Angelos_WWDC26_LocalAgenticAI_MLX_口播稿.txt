@@ -1,0 +1,21 @@
+這段影片來自 Apple WWDC26 第二三二場 session，主題是「Run local agentic AI on the Mac using MLX」，由 Apple MLX 團隊工程師 Angelos 主講，影片長度約十三分鐘。
+
+開場破題就點出三個核心賣點：不需要雲端、不需要 API key、不需要付費；整個 agentic loop 可以在 Mac 上完整本地執行，使用者的資料完全保留在自己機器上，AI 隨時可用。
+
+接著對比兩種模式。傳統 chat 是使用者把 prompt 送進模型，模型回應，使用者自己負責執行。Agentic loop 則是 agent 跟模型互動做決策、呼叫工具執行指令、讀檔、呼叫 API，再把觀察結果送回模型規劃下一步。這個循環會一直持續到任務完成。在 Apple silicon 上，這個完整的循環可以本地跑，這是整部影片的主軸。
+
+重頭戲是本地 agentic AI 的四層 stack 架構。最底層是 MLX，Apple 開源的 array framework，專為 Apple silicon 設計，負責 Metal 加速和記憶體管理。第二層是 MLX-LM，提供模型載入、量化、微調的工具，支援 HuggingFace 上數千個模型，附帶 CLI 跟 Python API。第三層是 MLX-LM Server，是一個 OpenAI 相容的 HTTP server，把本地模型透過標準 API 暴露出來，支援結構化 tool calling 跟 reasoning 模型，可以直接 drop-in 取代雲端 LLM API。最頂層是 agent 本身，可以是 Xcode、OpenCode、Pi agent、或自己寫的腳本，只要遵守 OpenAI chat completions 協定即可。講者特別強調，除了 MLX 自家 stack，市面上知名的 Ollama、LM Studio、vLLM 都跑在 MLX 之上，代表 MLX 已經是 Apple silicon AI 的事實標準。
+
+設定本地 agent 只要三步：第一步用 pip install mlx-lm 安裝；第二步用 mlx_lm.server 啟動 server 並指定支援 tool calling 的模型；第三步把 agent 的 baseURL 設到 127.0.0.1 的 8080 port 就完成了。
+
+接下來談三大工程挑戰跟解法。第一個是 prompt processing。Agentic session 通常累積數十萬個 token，而且絕大多數不是生成，而是處理 prompt——讀 tool 結果、讀 codebase、規劃下一步。Apple M5 晶片新加入 Neural Accelerator，專門加速矩陣乘法，比 M4 快四倍。MLX 會自動對接這顆加速器，使用者不需要加任何參數、改任何程式碼，模型會自動選最佳 kernel。這讓 prompt processing 在 M5 上幾乎正好快四倍。
+
+第二個挑戰是 concurrency。實務上 agent 會 spawn 多個 subagent 平行處理不同子任務。解法是 continuous batching，server 動態把多個 in-flight request 組成 batch 在 GPU 同時跑，新 request 可以加入進行中的 batch，不用排隊。
+
+第三個挑戰是 model size。即使 512GB 記憶體也裝不下 1.6 兆參數的 DeepSeek。MLX 的 distributed support 可以把模型跨多台 Mac 切 shard，靠 Thunderbolt 或 Ethernet 連接。對 agent 的好處有兩個：能跑更大的模型，而且 prompt processing 也平行化。macOS 26.2 加入 Thunderbolt RDMA 支援，讓四台 Mac 的 distributed inference 達到三倍加速。
+
+最後是兩個 live demo。第一個 demo 用 OpenCode 從空白 Xcode project 建出 iPad 繪圖 app，約兩分鐘產出第一版，再來回迭代把筆觸改成圓頭，全程本地。第二個 demo 用 Xcode 接上同一個 MLX server，故意引入 bug，請模型修，數秒內定位、檢查、修正。
+
+總結一句話：Apple silicon 加上 MLX stack，已經能做到完整的本地 agentic AI；從 agent loop、tool calling、到多機 distributed inference，全部在 Mac 上跑，程式碼與資料不離機。
+
+> 送 TTS 前會 OpenCC t2s 預轉繁→簡（AGENTS.md 永久教訓）

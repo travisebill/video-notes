@@ -1,0 +1,19 @@
+这是 Harvard CS224 高阶演算法第二十四讲，主题是快速指数时间演算法的四种技巧：exp divide-and-conquer、pruned brute force、随机漫步、以及 inclusion-exclusion。
+
+Section 1｜课程方向与四种技巧
+教授说明课程还剩三讲，今天开始谈 NP-hard 问题的指数时间加速。目标是把朴素演算法的指数基数尽量压小，例如从阶乘降到 4 的 n 次方、或从 2 的 n 次方降到 4 分之 3 的 2n 次方。同时也要权衡时间与空间。四种技巧分别是：exponential divide-and-conquer，以 TSP 为例；pruned brute force，以 3-SAT 为例；随机化，以 Schöning 演算法为例；以及 inclusion-exclusion 与 Möbius inversion，以 k-coloring 为例。
+
+Section 2｜TSP 与指数型 Divide-and-Conquer
+TSP 朴素演算法枚举中间顶点的所有排列，时间为阶乘级，空间为多项式。动态规划版本以集合 s 表示尚未访问的点，时间为 2 的 n 次方级，空间同样为指数级。教授提出指数型 divide-and-conquer：把路径分成前后两半，穷举前半段的子集合 s 与中间点 m，再递回处理后半段。空间维持在多项式，因为递回深度只有对数 n；但时间因为穷举所有半分子集合，满足 T(n) 等于 n 乘上 n-2 选 n/2 乘上 T(n/2)，解为 4 的 n 次方等级的时间。
+
+Section 3｜3-SAT 的 Pruned Brute Force
+对 3-SAT，朴素枚举所有指派是 2 的 n 次方时间。教授改进为先选某子句，尝试把它的三个文字之一设为真；若分支失败则可推论假设某变数为假，剪掉部分指派空间。改良后的递回式为 T(n) 等于 T(n-1) 加 T(n-2) 加 T(n-3)，解约为 1.84 的 n 次方。另一个更激进的剪枝是：若已知满足指派与某指派的汉明距离不超过 n/2，则每次翻转未满足子句中的一个变数，最多做 n/2 次翻转就会找到。三分支后总时间为根号 3 的 n 次方，约 1.73 的 n 次方。
+
+Section 4｜Schöning 随机演算法
+Schöning 2002 的随机演算法更强：随机选一个指派，然后反复找未满足子句并随机翻转其中一个变数，最多做 t 步。对 3-SAT，成功机率约为 3/4 的 n 次方，重复做 4/3 的 n 次方次后成功机率近一，得到 4/3 的 n 次方的时间与多项式空间。后续 Hurtado 与 Sycom 2014 改进到约 1.307 的 n 次方随机、1.330 的 n 次方确定性。这些演算法都靠 Markov chain 分析：把状态定义为当前指派与满足指派的距离，每次有至少三分之一机率向左、一至三分之二向右，分析 n/2 步内抵达零的机率。
+
+Section 5｜Inclusion-Exclusion 与 k-coloring
+下一个技巧是 inclusion-exclusion：对固定集合 r 子集于 t，r 到 t 之间所有 s 的负一之 t 减 s 次方的和等于 r 等于 t 的指示函数。应用到 k-coloring：定义 f 为集合 s 是否为非空独立集的指示，zeta transform 为所有子集的独立集数量。定理：图 g 是 k 可著色的若且若对所有 s 子集于顶点的负一之 n 减 s 次方乘以 f hat(s) 的 k 次方的和大于零。下次会证明这个定理。
+
+Section 6｜结论
+这堂课展示了 NP-hard 问题并非铁板一块：透过指数型 divide-and-conquer 把 TSP 压到 4 的 n 次方；pruned brute force 把 3-SAT 压到根号 3 的 n 次方；随机漫步压到 4/3 的 n 次方；inclusion-exclusion 把 k-coloring 压到 2 的 n 次方。核心讯息是：即使无法在多项式时间内解决，至少可以把指数的基数压到符合实务需求。

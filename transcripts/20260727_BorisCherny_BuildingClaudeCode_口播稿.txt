@@ -1,0 +1,11 @@
+Boris Cherny 在 Y Combinator Startup School 2026 的這場訪談，時機特殊——Anthropic 前一天才剛發布 Opus 5。這場對談從三個層面談 Claude Code 的設計哲學，以及當底層模型能力持續加速時，AI 產品該如何跟上。
+
+首先，Opus 5 帶來的根本改變是 long-running autonomous tasks。在 auto mode 下，模型可以連續跑幾天、幾週甚至幾個月，不需要外部 scaffolding。對工程師來說，這代表 LangChain、LlamaIndex 風格的 agent scaffold 可能即將過時——Opus 5 已經內建 long-running agentic loop，不再需要 task planner 跟 state machine 這類外部框架。
+
+第二個突破是 prompt injection。Boris 直接說 Opus 5「does not seem to be prompt injectable anymore」。這對 agent design 是結構性改變。過去 lethal trifecta——untrusted input 加上 code execution 加上 outgoing communication——讓 prompt injection 成為 agent design 的核心約束。Opus 5 之後這個約束明顯放鬆。對 Claude Code、Codex 這類 agent 工具來說，未來可以更信任 tool output 跟 file content。
+
+第三個主題是 Claude Code 自己的演進。Boris 提到 Claude Code 砍掉了八成的 system prompt，從幾千行縮到幾百行。呼應「press delete on your AI product」的設計哲學——能刪就刪，每多一行 prompt 都是模型能力的鎖鍊。背後邏輯是 Product overhang 概念：模型能力領先產品能利用的能力，差距越大越浪費。Claude Code 的工作就是不斷 unhobbling 模型，把 Opus 5 的能力完整釋放。
+
+Boris 對 AI coding 工具開發者的具體建議是「給 AI 更難的問題」。不要給過度具體的指令，而是給高層次的任務描述、guardrails、exit criteria，然後讓模型自己 cook。Boris 舉 Bun 開源 runtime 的例子——Jared 從手動 fuzz 找 memory leak，到讓 Opus 5 一次 prompt rewrite Zig 到 Rust，整整跑了十一天。
+
+另外，Boris 提到 Anthropic 自己每天用 Claude 跑幾千個 agents 做 codebase maintenance——清 dead code、刪 useless tests、抽象統一。Claude Code 已經在自我維護，取代「dozens or hundreds of engineers」的工作量。對 CS 學生的建議是：coding skill 的邊際價值在降低，business、design、user sense 的價值在提升。

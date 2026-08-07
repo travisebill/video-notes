@@ -1,0 +1,13 @@
+台大資訊工程學系 2026 年春季「人工智慧導論」FAI 2.2「機器學習最令人聞之色變的情況為何會發生？」，由林軒田教授主講，約 16 分鐘，是 Machine Learning 章節進入 Overfitting 議題的第一講。
+
+從 Overfitting 定義角度，林軒田教授指出 Overfitting 是 ML 最令人聞之色變的情況：training 時看起來做得好，但 testing 時做得不好。直觀類比是在考古題上做 100 分，但只是死背下來；題目一變化（沒見過的測試資料）就不行。Overfitting 是 FAI 1.4 Generalization 議題的「反面案例」——$E_{in}$ 小不代表 $E_{out}$ 小，當 Hypothesis Set 太複雜，模型把 training data 的 noise 當 signal 學進去。
+
+從 Bias-Variance 打靶比喻角度，靶心是理想的 $f$（只有老天才知道），每次 algorithm 跑出來的 $g$ 像射出的箭。藍點跟靶心的偏移叫 bias（瞄準有沒有準）；藍點彼此的散開叫 variance（手會不會抖）。理想狀態是 bias 小 + variance 小。模型複雜度對 Bias-Variance 的影響：簡單模型（Linear）variance 小但可能根本 cover 不到 $f$ → bias 大；複雜模型（Quadratic/Cubic）bias 小但每次找出來的 $g$ 變異度大 → variance 大。Trade-off：模型複雜度 ↑ bias ↓ 但 variance ↑。太小也不好（包含不到 $f$）、太大也不好（variance 太大）——需要取得平衡，實務上非常困難。
+
+從 Testing Error Upper Bound 角度，理論假設 training 跟 testing 來自同一個 distribution；testing error 有 upper bound $E_{out} \leq E_{in} + \Omega(H)$：第一項是 training error，第二項是模型複雜度（VC Dimension 函數）。兩項都希望越小越好——這個 bound 揭示 $E_{out}$ 不可能比這個數字大太多，但代價是 bound 本身是估計，無法精確算 $E_{out}$。詳細證明需要修「系上彥寰老師」的理論課；概念理解即可：希望 testing error upper bound 越低越好。
+
+從 Bias-Variance 圖角度，x 軸是 VC Dimension（模型複雜度，越右越複雜），藍線 $E_{in}$ 隨複雜度上升而下降、紅線 $\Omega(H)$ 隨複雜度上升而上升。Testing error upper bound = 兩者加總，最低點在中段——$E_{in}$ 下降得差不多了但 $\Omega(H)$ 還沒上升太多。右半邊模型太複雜（overfitting 開始發生），左半邊模型太簡單（underfitting 發生）。
+
+從 Underfitting vs Overfitting 對比角度，Underfitting 是模型太簡單（VC Dimension 小），$E_{in}$ 大沒辦法 fit 好 training data，variance 小但 bias 大——對應打靶圖的「瞄錯 + 穩定」。Overfitting 是模型太複雜（VC Dimension 大），$E_{in}$ 小 fit 得很好，variance 大但 bias 小——對應打靶圖的「瞄準 + 手抖」。兩者都不好，需要在 Bias-Variance 圖中找到 sweet spot。Model Selection 之所以困難，是因為根本不知道理想的 $f$ 在哪裡。
+
+一句話總結：FAI 2.2 把 Machine Learning 從「$E_{in}$ 小就好」推進到「要小心 Overfitting」——$E_{in}$ 小 $E_{out}$ 大是 ML 最糟的情況；其成因是 Bias-Variance Trade-off：模型複雜度 ↑ bias ↓ 但 variance ↑；需要用 Validation Set、Regularization 等方法做 Model Selection，找到 sweet spot，這是 ML 最核心也最困難的難題之一。

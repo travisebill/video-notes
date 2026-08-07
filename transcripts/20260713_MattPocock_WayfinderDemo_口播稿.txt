@@ -1,0 +1,9 @@
+Matt Pocock 在 2026 年 7 月的這場直播裡，展示了他最新的 AI 開發方法論——`/wayfinder` skill。這套方法被定位為 `/grill-me` skill 的進化版：Grill Me 擅長在一對一對話中釐清單一需求；Wayfinder 則把視野拉到「整體性大規模工作」，能在同一次對話裡把一個新功能的 spec、ticket 拆解、架構決策、平行實作策略一次鋪出來。
+
+影片的核心示範，是把這個方法套到一個真實任務上：替 Matt 既有的 Course Video Manager（CVM）應用新增 TikTok creator 支援。Matt 開場時把需求講得極度模糊——他自承「就像在 meeting 裡隨口講」——這正是 Wayfinder 設計上要接住的訊號。在長達七十四分鐘的 live coding 過程裡，觀眾會看到 Wayfinder 把這段模糊對話收斂成九個 subtasks，掛在一個主 issue 底下，每個 subtask 之間還帶有 blocking relationships，依類型分為 grilling session、prototype、research tasks 三種。
+
+從架構角度看，這場 demo 揭露了兩個值得注意的決策。第一，Wayfinder 並不綁定 GitHub——Matt 強調 issue tracker 可以替換，重點在 ticket dependency graph 本身，而不是工具品牌。第二，CVM 被定位為 local desktop tool（搭配 OBS forwarder 做串流），Matt 在實作過程中決定把 My Comp 3 motion project 抽出成獨立 repo，CVM 透過 shell out 呼叫，CVM 本身只負責周邊 glue code——這是典型的「職責分離 + CVM owns surrounding glue」設計。
+
+方法論層面，Matt 在影片最後把整套流程拆得很清楚：Wayfinder map 階段產出 tickets graph，每個 decision ticket 都透過對話（grilling session）釐清，留下 resolution comment；當 decision 被具體化到 code 時，就會產生 implementation ticket，也就是 sub-task。每個 sub-task 在獨立的 context window 裡執行，通常交給 AFK agent 處理，因為這類任務不需要人在場盯著。實作完成後，仍要做整份 diff 的 code review，最後才送 human review。Matt 特別強調，AI agent 不會主動報告「做完了」，常需要人介入問一句「are you done yet or not?」。
+
+整場展示傳達的核心信念，可以濃縮成一句：模糊需求不必立刻跳進 code——先用 Wayfinder 跑一次預規格階段，把決策和實作切成兩條獨立軌道，再用 multi-session 並行加速，最後靠人工 code review 把關，這條 pipeline 在 AI 輔助開發的時代仍然站得住腳。

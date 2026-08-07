@@ -1,0 +1,9 @@
+這堂課完成兩件事。第一件是 Mark 演算法的完整分析——Mark 是 Fiat 等人在 1991 年提出的 randomized paging 演算法，cache miss 時會從所有 unmarked pages 中 uniformly random 選一個 evict，並 mark 新進來的 page。Phase 分析證明 expected cost ≤ 2 H_K 乘以 OPT 加常數，其中 H_K 是第 K 個 harmonic number，也就是 1 加 1/2 一直加到 1/K。H_K 大約等於 ln K 加歐拉常數，所以 Mark 的 randomized competitive ratio 約為 2 ln K，比 deterministic LRU 的 K 競爭比好非常多——在 K 達到 1000 時，2 ln K 約 14，K 卻是 1000。
+
+第二件是引入 covering 與 packing 線性規劃以及 Buchbinder-Naor 2005 提出的 online primal-dual 框架。Covering LP 最小化某個成本函數，受限於一組 covering constraints；packing LP 則是最大化，受限於 packing constraints。Weak duality 告訴讀者任何 feasible primal 的值 ≤ 任何 feasible dual 的值；strong duality 則說 LP 達成時兩者相等。
+
+Buchbinder-Naor framework 把 online 決策放在 covering LP 框架下：邊做決定邊更新 primal 變數，同時 maintain dual feasibility，再用 approximate complementary slackness 控制 competitive ratio。具體來說，若 primal 變數大於零時對應 dual constraint 的 slack 最多 α 倍；若 dual 變數大於零時對應 primal constraint 的 slack 最多 β 倍，則 online 算法成本 ≤ α 乘以 β 乘以 OPT。
+
+用這個 framework 重寫 ski rental：deterministic 演算法達 2-competitive，α 等於 β 等於 √2；randomized 版本則能達 e/(e-1) 約 1.58-competitive，這個結果最早由 Karlin 等人在 1994 年提出，但用 Buchbinder-Naor 的 LP 框架能更直覺地解釋為何 2 能被改進到 e/(e-1)。
+
+整堂課展示的核心思想在於：randomization 能讓 competitive ratio 突破 deterministic lower bound；而 LP duality 提供統一的語言來分析各類 online 算法，把 paging、ski rental、set cover 等看似不相關的問題放在同一個 primal-dual 框架下討論。Mark 演算法的 phase 分析加上 Buchbinder-Naor framework，組成了這堂課的兩條主線，下一堂課會進一步把 primal-dual 應用於 randomized ski rental 的 e/(e-1) competitive 證明以及 online set cover 的 O(log n) competitive 分析，把 LP duality 的力量延伸到更廣的 online 演算法設計領域。

@@ -1,0 +1,17 @@
+台大資訊工程學系 2026 年春季「人工智慧導論」FAI 1.6「超實用的邏輯迴歸你真的懂嗎」，由林軒田教授主講，約 23 分鐘，是 Machine Learning 章節的收尾。
+
+從任務需求角度，林軒田教授點出 Linear Classification 與 Linear Regression 都無法解決的真實問題：很多任務要的不是 binary 而是機率值。病人得癌症機率、申請者接受 offer 機率、病人死亡機率——這些任務「只能觀察到 binary 但想預測機率」，稱為 Soft Binary Classification。醫學研究最典型：疾病有 / 沒有是 binary，但想知道得病機率、死亡機率、治療副作用機率。Logistic Regression 就是為了解決這個問題而設計——把 Linear Score 透過 Logistic Function 對應到 0~1 機率值。
+
+從 Logistic Function 角度，$\theta(s) = \frac{1}{1+e^{-s}}$ 把任意實數 $s$ 平滑對應到 0~1。特性包括：$s$ 等於 0 對應 $\theta$ 等於 0.5（中點）；$s$ 越大 $\theta$ 越接近 1；$s$ 越小 $\theta$ 越接近 0。函數平滑、可微、輸出範圍 (0, 1)，是機率預測的理想工具。Logistic Regression 在工業界應用極廣——信用評分（違約機率）、醫療診斷（疾病機率）、行銷（轉換率）幾乎都是 Logistic Regression。
+
+從 Error Measure 角度，Logistic Regression 用 Cross-Entropy——$-y \log \hat{y} - (1-y) \log (1-\hat{y})$。直觀上，當真實標籤 $y$ 等於 1 時希望預測 $\hat{y}$ 接近 1（loss 小）；當 $y$ 等於 0 時希望 $\hat{y}$ 接近 0。為什麼不用 Squared Error？因為 Squared Error 配 Logistic 函數不是 convex，gradient descent 會卡在 local minimum。Cross-Entropy 的優勢是 Convex（單一 global minimum）、Continuous Differentiable（gradient descent 可用）、機率語意清晰（K-L divergence 形式）。目標是 minimize $E_{in}$ 找 $\mathbf{w}^*$。
+
+從 Gradient Descent 角度，Logistic Regression 沒有 Closed-form Solution，但 $E_{in}(\mathbf{w})$ 是 Continuous + Differentiable + Convex，所以可以用 Gradient Descent。直觀上把 $\mathbf{w}$ 想像成一顆球在凸面上，沿著斜率（負梯度方向）滑下——數學式是 $\mathbf{w}_{t+1} = \mathbf{w}_t - \eta \nabla E_{in}(\mathbf{w}_t)$。Learning rate $\eta$ 控制步長：太大可能跨過最低點，太小收斂太慢；實務上會動態調整。Gradient Descent 是 ML 中最重要的優化方法，後續 Deep Learning 的 SGD、Adam 都是它的變體。比較 PLA（FAI 1.4）——PLA 是「看錯就改」的硬規則，Gradient Descent 是「沿著斜率滑」的平滑優化。
+
+從三種 Linear Model 比較角度，林軒田教授用一張表把整個章節收束。Linear Classification 用 sign($\mathbf{w}^T \mathbf{x}$) 切 binary、0/1 Error、PLA 疊代；Linear Regression 用 $\mathbf{w}^T \mathbf{x}$ 直接輸出連續值、Squared Error、Closed-form Solution；Logistic Regression 用 $\theta(\mathbf{w}^T \mathbf{x})$ 輸出機率、Cross-Entropy、Gradient Descent。三者共享同一個 Hypotheses Set（所有 hyperplane $\mathbf{w}^T \mathbf{x}$），差別只在 Output 處理、Error Measure、Solution 三層。業界實務上，Logistic Regression 是 Classification 的首選 baseline——比 SVM、Neural Net 簡單、穩定、可解釋。
+
+從實務建議角度，林軒田教授給出最後一條規則：遇到任何 ML 問題先從最簡單的 Linear 開始。Linear 簡單、快、Generalization 強；Linear 不夠再升級到 Deep Learning。很多業界任務 Linear Model 就夠用——Linear Model 不行通常代表特徵不足而非模型太簡單，加特徵往往比換模型更有效。這也是 FAI 1.4 強調的「簡單模型 Generalization 較好」的延伸。
+
+從學科視野角度，這個章節把 ML 從「算法」提升為「工程實踐」。學生學到的不是單純的數學推導，而是完整的 Recipe——從判斷任務適合性（步驟 0）到選擇 Hypothesis Set（步驟 2）到設計 Error Measure（步驟 3）到執行 Learning（步驟 4）——每一步都有明確的設計決策。這也是林軒田教授一貫的教學哲學：給學生可操作的框架，而不是抽象的理論。
+
+一句話總結：FAI 1.6 用 Logistic Regression 把 ML 從「binary 分類」升級為「機率預測」——用 Logistic Function 對應機率、用 Cross-Entropy 量化誤差、用 Gradient Descent 找最佳參數——這是 Machine Learning 章節從「理論推導」到「實務應用」的關鍵橋樑，也是現代工業界最常用的分類模型之一。

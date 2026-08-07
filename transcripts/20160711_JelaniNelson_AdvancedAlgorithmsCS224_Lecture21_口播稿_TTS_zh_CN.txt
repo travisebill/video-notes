@@ -1,0 +1,19 @@
+这是 Harvard CS224 高阶演算法 Lecture 21， 主题是更快的最大流演算法——scaling blocking flow 与 link-cut trees 的整合。
+
+Section 1｜回顾 Ford-Fulkerson 与术语
+回顾基本设定：容量有向图 G 等于 (V, E)， 每条边有整数容量在 1 到 U 之间， 目标是找从源点 S 到汇点 T 的最大流。 Ford-Fulkerson 反复在残余图中找扩充路径并推送流量， 直到没有扩充路径为止。 对整数容量， 这个演算法正确， 但时间为 O(M 乘以 F)， 其中 F 是最大流值——这是拟多项式， 不是强多项式。
+
+Section 2｜强多项式 vs 弱多项式
+三个术语的区分很重要：弱多项式指时间对 M 与 log U 多项式； 强多项式指时间完全不依赖容量大小， 只依赖 M 与 N； 拟多项式则对 U 也多项式。 Ford-Fulkerson 只达到拟多项式。 本堂的目标是强多项式演算法， 运行时间完全独立于容量数值。
+
+Section 3｜Blocking Flow 与 Dinic
+回顾 blocking flow：对 level graph 做 DFS 找从 S 到 T 的路径， 沿路推送最小容量， 把饱和边删除， 重复直到 level graph 中没有 S-T 路径。 每次找到 blocking flow 后残余图的 S-T 距离至少增加 1， 因此最多 N-1 次 blocking flow 就能完成。 找一个 blocking flow 用 DFS 是 O(M)， 整体是 O(MN)。 这个 O(MN) 界虽然对很多图已经足够， 但对稠密图仍有改进空间——特别是在密集图中 M 接近 N 平方， M 因子主导总时间。
+
+Section 4｜单元容量图的特殊情况
+对单元容量图， Dinic 的 blocking flow 步骤只要 O(M) 就能完成， 因为每次推送至少饱和一条边——总推送量受 M 限制。 但对一般容量图， 每次推送可能只推进 1 个单位的流， blocking flow 内部要重复 O(M) 次， 总时间 O(MN)。
+
+Section 5｜Scaling 对一般容量的加速
+Scaling 法的核心想法：把容量的二进位表示拆成位元， 从最低位元开始逐步加入。 对当前位元为 1 的边， 先在残余图上跑一次 blocking flow 把这些边用掉， 再进入下一个位元。 对整数容量 U， 需要 log U 个位元层， 每层做一次 blocking flow。 由于每层的 blocking flow 至少饱和若干边， 整体时间 O(M log U)， 弱多项式。 Scaling 法的巧妙之处在于它把「容量大小」这个连续参数化为离散的位元层数， 每层都是相同的子问题， 因此可以用 divide-and-conquer 的精神逐位解决。
+
+Section 6｜Link-cut trees 与课程结论
+最后一步是用 link-cut trees 加速 blocking flow 的查找， 从 O(M) 降到 O(M log N)， 整体得到 O(MN log N) 或更强的强多项式界。 Link-cut trees 由 Sleator 与 Tarjan 在 1983 年提出， 是处理动态森林的关键资料结构——它能在 amortized O(log N) 时间内支援 link、 cut、 find-root 等操作。 下堂课将详细拆解 link-cut trees 的内部结构， 并展示它如何被应用到 blocking flow 中， 让强多项式最大流演算法的最后一块拼图落地。 这三十年间， 从 1983 年的 O(MN log N) 到后续的 O(MN) 甚至 O(M 平方除以 log M) 改进， 都是围绕 link-cut trees 与其变体在做文章。

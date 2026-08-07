@@ -1,0 +1,19 @@
+这是 Harvard CS224 高阶演算法第二十五讲，主题是 Inclusion-Exclusion 与 Möbius Inversion 应用于 k-coloring 的指数时间演算法。
+
+Section 1｜复习上节的 Inclusion-Exclusion
+教授从上节结束的 inclusion-exclusion 开始：对所有集合 r 子集于 t，r 到 t 之间所有 s 的负一之 t 减 s 次方的和等于 r 等于 t 的指示函数。Zeta transform 定义为 f hat(s) 等于所有 r 子集于 s 的 f(r) 之和。Möbius inversion 为 f tilde(s) 等于所有 r 子集于 s 的负一之 s 减 r 次方乘以 f(r) 之和。核心性质是 f hat tilde 等于 f tilde hat 等于 f，这两个方向都可以用 inclusion-exclusion 证明。
+
+Section 2｜k-coloring 与 Zeta Transform
+教授应用到 k-coloring：图 g 的顶点集合 V 大小为 n，边集合 E 大小为 m，k-coloring 是把顶点著色使相邻顶点不同色的函数，等价于把 V 分割成 k 个独立集。定义 f 为非空独立集的指示函数，则 f hat(s) 等于 s 中所有非空独立集的数量。教授给出双重计数的等式：选 k 个都在 s 内的非空独立集，左边用 g(s) 的 k 次方计数，右边用 f hat(s) 的 k 次方计数，两者相等。从 Möbius inversion 得到 g(V) 等于 f hat(s) 的 k 次方取 Möbius 反变换在 V 的值。
+
+Section 3｜演算法时间与空间分析
+关键是计算所有 f hat(s) 值。教授证明可以用 O 星号 3 的 n 次方时间与多项式空间完成。方法是对每个座标 i 做递回：定义 g(i,s) 为部分和，若 i 不在 s 则 g(i,s) 等于 g(i-1,s)；若 i 在 s 则 g(i,s) 等于 g(i-1,s) 加 g(i-1, s 减 i) 乘以 f(i)。这样递回可在 3 的 n 次方时间内展开所有子集，每步只花费多项式时间，空间只需要储存当前递回状态。最终 g(n,s) 就是 f hat(s)。
+
+Section 4｜Inclusion-Exclusion 的历史脉络
+教授补充历史：这个技巧在 Björklund 与 Husfeldt 2006 与 Fox 2006 的两篇独立论文中首次系统化，给出 O 星号 3 的 n 次方时间多项式空间、或 O 星号 2 的 n 次方时间空间的两种取舍。前者还可改进到 2 的 2.461 次方 n 次方时间；后者的 2 的 n 次方时间多项式空间仍是公开问题。这些结果把多个 NP-hard 问题的指数基数压到 2 的 n 次方级。
+
+Section 5｜独立计数应用
+教授举例独立集计数：对图 g 计算大小为某 k 的独立集数量，是经典的 #P 困难问题。用 inclusion-exclusion 可以在 2 的 n 次方时间内精确计数所有大小的独立集数量，方法是对每个子集应用 inclusion-exclusion 并用 zeta transform 加速。另一个应用是 Hamiltonian 路径的存在性判断，可表达为 inclusion-exclusion 的形式后在 2 的 n 次方时间内解决。
+
+Section 6｜结论
+这堂课把 inclusion-exclusion 从数学恒等式推进到演算法工具：透过 zeta transform 与 Möbius inversion，可以在 3 的 n 次方时间与多项式空间内计算所有子集上的 transform 值，从而把 k-coloring 等问题的指数基数压到接近 2 的 n 次方。教授总结这套技巧的价值：它把看似神秘的 inclusion-exclusion 变成可操作的演算法，并展示如何用 transform 观点重新理解组合计数问题。

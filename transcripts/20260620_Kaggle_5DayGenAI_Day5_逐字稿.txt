@@ -1,0 +1,333 @@
+歡迎來到 Kaggle 與 Google 共同舉辦的「五天 Gen AI 密集課程」第五天。 如果你經歷 fine-tuning 延遲，不用擔心——因為很多人同時打 API。 這是最終場，今天要談 MLOps for Generative AI。 我是 Paige。
+
+會回答 Discord 上所有的好問題。
+
+今天與會的 Google Cloud AI 團隊代表。
+
+bonus code lab 在 Discord 分享。
+
+end-to-end GenAI 應用的嚴格 evaluation。
+
+side-by-side evaluation 等也會談到。
+
+讓建這些系統的開發者能可靠迭代。
+
+LLM 與 multimodal model。
+
+開發與部署過程的 accountability 與 transparency。
+
+Google Cloud 連結在 email 中。
+
+謝謝 Ilya 走 demo。 交給你。
+
+我會分享螢幕。
+
+白皮書提到的部分技術。
+
+為什麼做 starter pack。
+
+如何做 testing、deployment、建 UI。
+
+如何衡量 performance、建 synthetic data。
+
+interface、event streaming、auto generation of docs。
+
+包含 UI playground 供實驗。
+
+Terraform 做快速部署。
+
+追蹤使用者與應用程式的所有互動。
+
+模擬我這邊的操作。
+
+在 generative AI Google Cloud 官方 repo 底下。
+
+Gemini sample apps end-to-end GenAI starter pack。
+
+下載提供的 zip 檔。
+
+跑 Vertex AI Model Garden、Vertex AI Evaluation、BigQuery 等。
+
+進 IDE 展示範例。
+
+self-paced 方式學 starter pack。
+
+支援應用程式的 code。
+
+specializing 在提供食譜。
+
+如何建 custom rag Q&A 應用。
+
+可能想用的 evaluation 範例。
+
+完成後可以 merge 進 main branch。
+
+不同 throughput per second。
+
+測試之前 deploy 到 production 的 endpoint。
+
+logged 後存到 BigQuery。
+
+監控應用程式使用。
+
+人與 AI 互動的 data point。
+
+description box 附連結。
+
+謝謝 Ilya。 交給 Paige 進行 Q&A。
+
+Q&A 開始。
+
+如何在長時間維護 GenAI 系統。
+
+Discord、Kaggle、YouTube videos。
+
+Long、Kaz、Mark、Eric、Irwin、Miles、Guillaume。
+
+各位都很棒，感謝。
+
+指引正確方向。
+
+Google Cloud Vertex 團隊與 Cloud AI 團隊。
+
+MLOps 過去幾年的演進。
+
+2010 年前後開始做 ML。
+
+data 變化與 model 需要 continuous monitoring 與 retraining。
+
+late 2010s，MLOps ecosystem 出現。
+
+pipelines 與 serverless ML。
+
+reliability 與降低成本。
+
+prompt templates、chaining pipelines。
+
+整個系統與個別部分的 evaluation。
+
+也需要 exceptional agile workflows。
+
+對 GenAI 新世界有興趣。
+
+text 還是 multimodal evaluation。
+
+DeepMind 歡迎 Olivia。
+
+各種任務的 evaluation。
+
+單純跟現有 reference 比較。
+
+Olivia 接續深入。
+
+evaluation space 與 multimodal space。
+
+思考很久了。
+
+真的想像 model 應用於哪些 use cases。
+
+use cases 的資料覆蓋率。
+
+不知道 model 怎麼運作也無法監控。
+
+process 中關鍵與基礎。
+
+是時候建 evaluator。
+
+isolation，但評估組合。
+
+2-3 年前知道不 fit for purpose。
+
+對這類任務有效。
+
+我們看 alignment。
+
+有 prompt 生成 image，image 對齊 prompt。
+
+prompt 真的出現在 generated image。
+
+沒有 dog，答案就是 no。
+
+model 在哪裡表現不好。
+
+新增或移除問題。
+
+把 text 的工作推到 multimodal。
+
+作為 auditor 幫助 multimodal eval。
+
+Neptune eval 也值得提。
+
+在教育內容強化。
+
+大多數公司用 REST API。
+
+auditing data 與 artifacts。
+
+fine-tuning 才會做。
+
+應用程式相對容易。
+
+toxicity、factual knowledge 與任務特定 metrics。
+
+最後是 guardrails。
+
+特定主題。
+
+mission-critical 必須做好。
+
+auto-scaling 確保持續運行。
+
+不擔心這個。
+
+model 對所有人可用。
+
+不用自己處理 balancing。
+
+客戶為何要使用。
+
+MLOps 工具是今天主題。
+
+high-quality data。
+
+管理 infrastructure 的 effort。
+
+DevOps engineer 想專注 ML。
+
+不管 GenAI 或否的挑戰。
+
+服務整合與部署。
+
+跟傳統 MLOps 差異。
+
+Vertex 上管理 foundation model 實務。
+
+Vertex AI Model Garden。
+
+model discovery。
+
+為 use case 從 landscape 選 foundation model。
+
+quality、latency、development time、cost、compliance。
+
+第二步，prompt engineering。
+
+back 與 fine-tune prompts。
+
+Vertex AI 提供的工具。
+
+extensions。 vector search、agent builder。
+
+fine-tuning、RLHF、distillation。
+
+Data Plex 等。
+
+Next is evaluation。
+
+之前討論過。
+
+簡短談一下。
+
+model outputs 複雜與主觀。
+
+已經討論的自動化 metrics。
+
+rapid evaluation API。
+
+Cloud Build、Cloud Deploy for CI/CD。
+
+整個 development 與 deployment life cycle。
+
+需要 governance。
+
+Registry 與 Data Plex。
+
+AI Model Garden 選 model。
+
+Vertex AI Pipelines。
+
+user queries 高 variability。
+
+answers 準確、相關、安全等。
+
+detailed logs。
+
+snippets、prompts、generated answers、user feedback、latencies。
+
+BigQuery。
+
+特定 query 的 metrics 與 feedback。
+
+ML features in BigQuery。
+
+資源豐富。
+
+YouTube comments 也會附。
+
+最後一題。
+
+GenAI 跟其他平台差異。
+
+調到最佳 performance。
+
+今天不一定要做。
+
+更 statistically driven。
+
+high-quality results 所需。
+
+fine-tuning 對 model quality 的影響。
+
+production 觀察發生什麼。
+
+fine-tuning 在 Vertex 直接做。
+
+Advait 補充。
+
+應用程式的 prompt template 版本。
+
+scaling 時被低估。
+
+選項很棒。
+
+hosts 與 guests 優秀 Q&A 與 code lab 概覽。
+
+iterative cycle。 資料驗證、model evaluation、model monitoring。
+
+GenAI 應用的 MLOps 實務。
+
+foundation model 本身或 final output。
+
+user inputs 的 placeholders 為 prompt templates。
+
+version control 所有 prompt templates。
+
+chaining 在 GenAI 的目的。
+
+evaluation 在 GenAI 系統的重要性。
+
+resource utilization 與 reduce latency。
+
+GenAI 系統開發的一步。
+
+所有人都在想這個。
+
+D，衡量 model output 品質與 effectiveness。
+
+images、audio、text、code，全部。
+
+drift detection 流程。
+
+Vertex AI pipelines、Feature Store、Model Registry。
+
+recurrent evaluation jobs 執行。
+
+答案 B，Vertex AI pipelines。
+
+過去五天社群。
+
+應用程式。
+
+白皮書團隊辛苦。
+
+美好的一年餘下時光。

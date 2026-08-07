@@ -1,0 +1,421 @@
+[music]
+&gt;&gt; In<00:00:04.720> this<00:00:04.880> video,<00:00:05.320> you're<00:00:05.480> going<00:00:05.640> to<00:00:05.760> learn
+&gt;&gt; In this video, you're going to learn
+what<00:00:06.360> AI<00:00:06.800> agents<00:00:07.280> are,<00:00:07.920> not<00:00:08.160> just<00:00:08.360> in<00:00:08.480> theory,
+what AI agents are, not just in theory,
+but<00:00:09.170> [music]<00:00:09.200> in<00:00:09.320> practice.<00:00:10.160> We'll<00:00:10.320> look<00:00:10.480> at
+but [music] in practice. We'll look at
+the<00:00:10.680> ideas<00:00:11.160> behind<00:00:11.720> modern<00:00:12.200> agents,<00:00:12.800> and<00:00:12.960> then
+the ideas behind modern agents, and then
+we'll<00:00:13.400> build<00:00:13.720> your<00:00:13.880> very<00:00:14.240> first<00:00:14.760> AI<00:00:15.160> agent
+we'll build your very first AI agent
+step-by-step<00:00:16.680> using<00:00:17.000> Google's<00:00:17.440> ADK.<00:00:18.280> By<00:00:18.400> the
+step-by-step using Google's ADK. By the
+end,<00:00:18.800> you'll<00:00:18.920> understand<00:00:19.400> how<00:00:19.880> agents
+end, you'll understand how agents
+reason,<00:00:20.960> act,<00:00:21.520> and<00:00:21.680> adapt,<00:00:22.520> and<00:00:22.720> you'll<00:00:22.880> have
+reason, act, and adapt, and you'll have
+code<00:00:23.520> that<00:00:23.680> you<00:00:23.760> can<00:00:23.880> actually<00:00:24.160> run<00:00:24.320> yourself.
+code that you can actually run yourself.
+So,<00:00:25.600> what<00:00:25.840> are<00:00:26.040> AI<00:00:26.320> agents?<00:00:27.120> At<00:00:27.320> the<00:00:27.440> simplest
+So, what are AI agents? At the simplest
+level,<00:00:28.360> an<00:00:28.680> agent<00:00:29.120> is<00:00:29.320> software<00:00:29.960> that<00:00:30.160> doesn't
+level, an agent is software that doesn't
+just<00:00:30.720> answer,<00:00:31.400> it<00:00:31.520> can<00:00:31.680> decide<00:00:32.240> and<00:00:32.400> take
+just answer, it can decide and take
+action.<00:00:33.520> Instead<00:00:33.800> of<00:00:33.880> generating<00:00:34.320> a<00:00:34.400> single
+action. Instead of generating a single
+response<00:00:35.280> like<00:00:35.440> a<00:00:35.480> traditional<00:00:36.040> chatbot,<00:00:36.920> it
+response like a traditional chatbot, it
+looks<00:00:37.360> at<00:00:37.520> your<00:00:37.640> request,<00:00:38.720> figures<00:00:39.120> out<00:00:39.400> what
+looks at your request, figures out what
+steps<00:00:40.040> need<00:00:40.200> to<00:00:40.280> be<00:00:40.400> taken,<00:00:41.280> maybe<00:00:41.600> calls<00:00:41.920> an
+steps need to be taken, maybe calls an
+API,<00:00:42.600> runs<00:00:43.000> code,<00:00:43.800> looks<00:00:44.040> at<00:00:44.120> the<00:00:44.200> results,
+API, runs code, looks at the results,
+and<00:00:45.000> then<00:00:45.200> decides<00:00:45.720> what<00:00:45.880> to<00:00:45.960> do<00:00:46.080> next.<00:00:46.800> One<00:00:47.000> of
+and then decides what to do next. One of
+the<00:00:47.240> clearest<00:00:47.720> explanations
+the clearest explanations
+comes<00:00:49.640> from<00:00:49.760> the<00:00:49.880> research<00:00:50.240> paper<00:00:50.640> React:
+comes from the research paper React:
+Synergizing<00:00:52.320> Reasoning<00:00:52.880> and<00:00:53.200> Acting<00:00:53.600> in
+Synergizing Reasoning and Acting in
+Language<00:00:54.160> Models.<00:00:55.000> The<00:00:55.200> idea<00:00:55.680> in<00:00:55.840> that<00:00:56.040> paper
+Language Models. The idea in that paper
+was<00:00:56.520> simple<00:00:57.000> but<00:00:57.200> powerful.<00:00:58.240> Language<00:00:58.640> models
+was simple but powerful. Language models
+shouldn't<00:00:59.720> just<00:01:00.000> generate<00:01:00.440> text<00:01:00.800> in<00:01:00.920> one
+shouldn't just generate text in one
+goal,<00:01:01.840> they<00:01:01.960> can<00:01:02.160> actually<00:01:02.640> reason
+goal, they can actually reason
+step-by-step,<00:01:04.080> take<00:01:04.280> an<00:01:04.400> action<00:01:04.839> like
+step-by-step, take an action like
+calling<00:01:05.400> a<00:01:05.440> tool<00:01:05.840> or<00:01:06.040> API,<00:01:06.520> observe<00:01:06.960> the
+calling a tool or API, observe the
+results,<00:01:08.000> and<00:01:08.200> then<00:01:08.400> decide<00:01:08.760> what<00:01:08.920> to<00:01:09.000> do
+results, and then decide what to do
+next.<00:01:09.920> That<00:01:10.160> cycle<00:01:10.720> of<00:01:11.000> reasoning,<00:01:11.680> acting,
+next. That cycle of reasoning, acting,
+observing,<00:01:12.920> and<00:01:13.080> adjusting<00:01:14.160> is<00:01:14.360> the
+observing, and adjusting is the
+foundation<00:01:15.120> of<00:01:15.320> how<00:01:15.760> modern<00:01:16.400> AI<00:01:16.760> agents<00:01:17.240> work,
+foundation of how modern AI agents work,
+and<00:01:18.080> it<00:01:18.200> lines<00:01:18.520> up<00:01:18.760> with<00:01:19.000> how<00:01:19.360> it's<00:01:19.560> defined.
+and it lines up with how it's defined.
+Systems<00:01:21.200> with<00:01:21.480> reasoning,<00:01:22.240> planning,<00:01:22.880> and
+Systems with reasoning, planning, and
+memory,<00:01:23.840> with<00:01:24.280> enough<00:01:24.600> autonomy<00:01:25.320> to<00:01:25.440> adapt
+memory, with enough autonomy to adapt
+and<00:01:26.120> make<00:01:26.400> decisions<00:01:27.040> on<00:01:27.280> behalf<00:01:27.800> of<00:01:27.920> the
+and make decisions on behalf of the
+user.<00:01:28.960> Now,<00:01:29.200> not<00:01:29.440> all<00:01:29.600> agents<00:01:29.960> behave<00:01:30.240> the
+user. Now, not all agents behave the
+same<00:01:30.560> way.
+same way.
+A<00:01:31.480> useful<00:01:31.880> way<00:01:32.000> to<00:01:32.120> think<00:01:32.280> about<00:01:32.520> them<00:01:33.160> is<00:01:33.520> in
+A useful way to think about them is in
+three<00:01:34.080> broad<00:01:34.520> patterns.<00:01:35.360> First,<00:01:35.760> we<00:01:35.920> have
+three broad patterns. First, we have
+sequential<00:01:36.760> agents.<00:01:37.760> These<00:01:38.080> run
+sequential agents. These run
+step-by-step<00:01:39.440> like<00:01:39.640> an<00:01:39.720> assembly<00:01:40.120> line.<00:01:40.800> Step
+step-by-step like an assembly line. Step
+one,<00:01:41.400> then<00:01:41.520> step<00:01:41.800> two,<00:01:42.120> then<00:01:42.320> step<00:01:42.560> three.
+one, then step two, then step three.
+They're<00:01:43.280> predictable<00:01:43.920> but<00:01:44.120> rigid.<00:01:44.760> Second,
+They're predictable but rigid. Second,
+we<00:01:45.280> have<00:01:45.480> reactive<00:01:45.960> agents.<00:01:46.720> These<00:01:47.040> decide<00:01:47.440> in
+we have reactive agents. These decide in
+the<00:01:47.600> moment.<00:01:48.160> They<00:01:48.320> look<00:01:48.520> at<00:01:48.640> the<00:01:48.720> current
+the moment. They look at the current
+state<00:01:49.280> and<00:01:49.440> ask,<00:01:49.760> "What<00:01:49.920> should<00:01:50.040> I<00:01:50.120> do<00:01:50.240> next?"
+state and ask, "What should I do next?"
+Maybe<00:01:51.160> tool<00:01:51.560> A<00:01:51.720> one<00:01:51.960> time,<00:01:52.320> tool<00:01:52.560> B<00:01:52.760> the<00:01:52.880> next.
+Maybe tool A one time, tool B the next.
+They're<00:01:53.720> flexible,<00:01:54.240> but<00:01:54.440> they<00:01:54.520> don't<00:01:54.760> plan
+They're flexible, but they don't plan
+ahead.<00:01:55.680> Lastly,<00:01:56.200> we<00:01:56.400> have<00:01:56.680> deliberate<00:01:57.360> or
+ahead. Lastly, we have deliberate or
+planning<00:01:58.080> agents.<00:01:58.800> These<00:01:59.160> pause<00:01:59.720> to<00:01:59.840> sketch<00:02:00.120> a
+planning agents. These pause to sketch a
+plan,<00:02:00.840> then<00:02:01.160> execute.<00:02:02.320> Think<00:02:02.480> about<00:02:02.760> booking
+plan, then execute. Think about booking
+travel.<00:02:03.840> You<00:02:03.920> don't<00:02:04.080> just<00:02:04.320> buy<00:02:04.479> a<00:02:04.560> flight
+travel. You don't just buy a flight
+randomly,<00:02:05.520> you<00:02:05.680> pick<00:02:05.920> dates,<00:02:06.400> hotels,<00:02:07.240> and
+randomly, you pick dates, hotels, and
+then<00:02:07.520> that's<00:02:07.760> the<00:02:07.880> order<00:02:08.080> of<00:02:08.200> steps<00:02:08.479> that<00:02:08.679> you
+then that's the order of steps that you
+follow<00:02:09.119> through.<00:02:09.840> So,<00:02:10.240> which<00:02:10.440> of<00:02:10.560> these<00:02:10.800> is
+follow through. So, which of these is
+the<00:02:11.080> right<00:02:11.400> one<00:02:11.640> for<00:02:11.800> you?<00:02:12.200> It<00:02:12.280> depends<00:02:12.560> on<00:02:12.640> the
+the right one for you? It depends on the
+problem.<00:02:13.400> For<00:02:13.600> simple,<00:02:14.200> predictable<00:02:14.720> flows,
+problem. For simple, predictable flows,
+sequential<00:02:15.959> is<00:02:16.080> fine.<00:02:16.640> For<00:02:16.920> dynamic,
+sequential is fine. For dynamic,
+reactive<00:02:18.360> works<00:02:18.760> better.<00:02:19.440> And<00:02:19.640> for
+reactive works better. And for
+multi-step<00:02:20.600> goals<00:02:21.040> with<00:02:21.200> dependencies,<00:02:22.200> you
+multi-step goals with dependencies, you
+want<00:02:22.920> planning<00:02:23.400> agents.<00:02:24.280> Okay,<00:02:24.600> that's<00:02:24.880> a
+want planning agents. Okay, that's a
+high-level<00:02:25.360> view.<00:02:25.840> Now,<00:02:26.280> let's<00:02:26.600> actually
+high-level view. Now, let's actually
+build<00:02:27.160> an<00:02:27.320> agent<00:02:27.680> so<00:02:27.840> you<00:02:27.959> can<00:02:28.160> see<00:02:28.400> these
+build an agent so you can see these
+ideas<00:02:29.280> in<00:02:29.440> action.<00:02:30.200> We'll<00:02:30.360> build<00:02:30.600> a<00:02:30.720> blog
+ideas in action. We'll build a blog
+writing<00:02:31.600> agent.<00:02:32.680> You<00:02:32.920> give<00:02:33.120> it<00:02:33.240> a<00:02:33.280> topic,<00:02:33.840> it
+writing agent. You give it a topic, it
+will<00:02:34.160> generate<00:02:34.560> a<00:02:34.600> structured<00:02:35.080> outline,<00:02:35.600> turn
+will generate a structured outline, turn
+that<00:02:36.120> outline<00:02:36.600> into<00:02:36.840> a<00:02:36.920> full<00:02:37.240> blog<00:02:37.560> post,<00:02:38.080> and
+that outline into a full blog post, and
+then<00:02:38.440> suggest<00:02:38.959> alternative<00:02:39.600> titles<00:02:40.120> and
+then suggest alternative titles and
+hooks.<00:02:40.880> This<00:02:41.080> is<00:02:41.160> where<00:02:41.400> ADK's<00:02:42.040> categories
+hooks. This is where ADK's categories
+comes<00:02:42.920> in.<00:02:43.600> As<00:02:43.800> you<00:02:43.920> walk<00:02:44.120> through<00:02:44.240> the<00:02:44.360> code,
+comes in. As you walk through the code,
+notice<00:02:45.280> how<00:02:45.760> the<00:02:45.920> planner<00:02:46.600> and<00:02:46.800> writer<00:02:47.200> agent
+notice how the planner and writer agent
+are<00:02:48.080> LLM<00:02:48.560> agents,<00:02:49.080> which<00:02:49.320> are<00:02:49.520> powered<00:02:50.000> by<00:02:50.560> a
+are LLM agents, which are powered by a
+model.<00:02:51.320> They're<00:02:51.520> wrapped<00:02:51.920> in<00:02:52.240> loop<00:02:52.560> agents,
+model. They're wrapped in loop agents,
+which<00:02:53.480> are<00:02:53.680> workflow<00:02:54.200> agents<00:02:54.640> in<00:02:54.760> ADK.<00:02:55.760> These
+which are workflow agents in ADK. These
+handle<00:02:56.480> retries<00:02:57.080> automatically<00:02:57.800> if
+handle retries automatically if
+validation<00:02:58.560> fails.<00:02:59.480> And<00:02:59.880> if<00:03:00.040> we<00:03:00.200> ever<00:03:00.480> wanted
+validation fails. And if we ever wanted
+something<00:03:01.080> beyond<00:03:01.519> that,<00:03:01.880> ADK<00:03:02.360> would<00:03:02.560> also
+something beyond that, ADK would also
+let<00:03:03.160> us<00:03:03.320> extend<00:03:04.320> a<00:03:04.400> custom<00:03:04.920> agent<00:03:05.400> by
+let us extend a custom agent by
+subclassing<00:03:06.600> the<00:03:06.720> base<00:03:07.200> agent.<00:03:08.080> So,<00:03:08.400> let's
+subclassing the base agent. So, let's
+set<00:03:08.800> up<00:03:08.880> the<00:03:08.959> environment<00:03:09.560> and<00:03:09.760> then<00:03:09.959> go<00:03:10.160> line
+set up the environment and then go line
+by<00:03:10.560> line<00:03:10.840> through<00:03:11.000> the<00:03:11.080> code.<00:03:11.560> First<00:03:11.880> off,<00:03:12.080> you
+by line through the code. First off, you
+need<00:03:12.280> to<00:03:12.400> install<00:03:12.840> UV.<00:03:13.440> You<00:03:13.560> can<00:03:13.680> do<00:03:13.800> that<00:03:14.040> by
+need to install UV. You can do that by
+running<00:03:14.440> the<00:03:14.519> command<00:03:14.920> right<00:03:15.080> here.
+running the command right here.
+Secondly,<00:03:16.560> you<00:03:16.640> need<00:03:16.800> to<00:03:16.880> install<00:03:17.400> Google<00:03:17.720> ADK
+Secondly, you need to install Google ADK
+because<00:03:18.800> we<00:03:18.880> need<00:03:19.040> to<00:03:19.480> obviously<00:03:19.800> use<00:03:20.000> ADK<00:03:20.400> in
+because we need to obviously use ADK in
+this.<00:03:21.239> And<00:03:21.360> then,<00:03:21.800> let's<00:03:22.120> create<00:03:22.320> a<00:03:22.400> file
+this. And then, let's create a file
+called<00:03:23.480> agent.py
+called agent.py
+in<00:03:25.440> your<00:03:25.720> IDE.
+in your IDE.
+We<00:03:27.000> need<00:03:27.120> to<00:03:27.200> import<00:03:27.680> these<00:03:27.880> key<00:03:28.160> libraries,
+We need to import these key libraries,
+and<00:03:29.000> then<00:03:29.160> we<00:03:29.280> can<00:03:29.440> start<00:03:29.840> building<00:03:30.239> out<00:03:30.519> our
+and then we can start building out our
+very<00:03:31.000> first<00:03:31.440> agent.<00:03:32.320> So,<00:03:32.560> the<00:03:32.680> first<00:03:32.920> agent
+very first agent. So, the first agent
+that<00:03:33.200> we're<00:03:33.280> building<00:03:33.560> out<00:03:33.800> is<00:03:33.959> called<00:03:34.760> the
+that we're building out is called the
+blog<00:03:35.400> planner.<00:03:36.200> Its<00:03:36.400> only<00:03:36.680> job<00:03:37.000> is<00:03:37.160> to<00:03:37.280> take<00:03:37.440> a
+blog planner. Its only job is to take a
+topic<00:03:38.120> and<00:03:38.360> turn<00:03:38.600> it<00:03:38.720> into<00:03:39.000> a<00:03:39.040> structured
+topic and turn it into a structured
+outline.<00:03:40.440> We<00:03:40.600> give<00:03:40.760> it<00:03:41.280> the<00:03:41.400> name<00:03:41.680> blog
+outline. We give it the name blog
+planner,<00:03:42.519> so<00:03:42.720> it's<00:03:43.000> easy<00:03:43.239> to<00:03:43.320> identify,<00:03:43.959> and
+planner, so it's easy to identify, and
+we<00:03:44.840> tell<00:03:45.040> it<00:03:45.239> which<00:03:45.480> model<00:03:45.760> to<00:03:45.880> use,<00:03:46.440> which
+we tell it which model to use, which
+comes<00:03:46.840> from<00:03:47.120> our<00:03:47.360> environment<00:03:47.840> file.<00:03:48.400> The
+comes from our environment file. The
+description<00:03:49.000> is<00:03:49.160> just<00:03:49.400> a<00:03:49.480> human-readable
+description is just a human-readable
+note.<00:03:51.000> The<00:03:51.120> important<00:03:51.640> part<00:03:51.840> of<00:03:51.920> the
+note. The important part of the
+introduction<00:03:53.120> is<00:03:53.640> here<00:03:53.840> we<00:03:53.960> actually<00:03:54.200> tell<00:03:54.440> it
+introduction is here we actually tell it
+what<00:03:54.760> to<00:03:54.840> produce,<00:03:55.520> which<00:03:55.720> is<00:03:55.920> a<00:03:56.000> markdown
+what to produce, which is a markdown
+outline<00:03:57.120> with<00:03:57.240> a<00:03:57.320> title,<00:03:58.200> a<00:03:58.280> short
+outline with a title, a short
+introduction,<00:03:59.360> four<00:03:59.600> to<00:03:59.720> six<00:04:00.040> sections<00:04:00.640> with
+introduction, four to six sections with
+bullet<00:04:01.120> points,<00:04:01.600> and<00:04:01.760> a<00:04:01.800> conclusion.<00:04:02.760> By
+bullet points, and a conclusion. By
+spelling<00:04:03.400> that<00:04:03.680> out,<00:04:04.040> we<00:04:04.200> make<00:04:04.440> the<00:04:04.640> output
+spelling that out, we make the output
+much<00:04:05.720> more<00:04:06.000> reliable.<00:04:07.080> Finally,<00:04:07.560> look<00:04:07.800> at<00:04:07.880> the
+much more reliable. Finally, look at the
+output<00:04:08.360> key.
+output key.
+We<00:04:09.520> set<00:04:09.800> it<00:04:09.920> to<00:04:10.080> blog<00:04:10.760> outline.<00:04:11.680> This<00:04:11.959> means
+We set it to blog outline. This means
+whatever<00:04:13.000> this<00:04:13.320> agent<00:04:13.760> writes<00:04:14.160> will<00:04:14.320> be
+whatever this agent writes will be
+stored<00:04:14.880> in<00:04:15.120> shared<00:04:15.720> state<00:04:16.400> under<00:04:16.680> that<00:04:16.920> name,
+stored in shared state under that name,
+so<00:04:17.720> that<00:04:17.840> the<00:04:17.959> next<00:04:18.280> agent<00:04:18.560> that<00:04:18.680> can<00:04:18.880> pick<00:04:19.079> it
+so that the next agent that can pick it
+up<00:04:19.640> can<00:04:19.799> do<00:04:19.920> it<00:04:20.040> automatically.<00:04:21.160> Next,<00:04:21.560> we<00:04:21.760> add
+up can do it automatically. Next, we add
+a<00:04:22.000> second<00:04:22.400> agent,<00:04:23.280> the<00:04:23.520> outline<00:04:24.040> validation
+a second agent, the outline validation
+checker.<00:04:25.280> This<00:04:25.480> one<00:04:25.760> doesn't<00:04:26.080> write<00:04:26.320> anything
+checker. This one doesn't write anything
+new,<00:04:27.120> it<00:04:27.240> just<00:04:27.480> checks<00:04:27.840> the<00:04:28.040> outline.<00:04:28.680> Its
+new, it just checks the outline. Its
+instruction<00:04:29.720> is<00:04:29.919> strict.<00:04:30.840> If<00:04:30.960> the<00:04:31.120> outline<00:04:31.480> in
+instruction is strict. If the outline in
+state<00:04:32.200> has<00:04:32.520> a<00:04:32.560> title,<00:04:33.160> an<00:04:33.360> intro,<00:04:33.800> four<00:04:34.000> to<00:04:34.080> six
+state has a title, an intro, four to six
+sections,<00:04:35.000> and<00:04:35.800> a<00:04:35.880> conclusion,<00:04:36.600> it<00:04:36.760> must
+sections, and a conclusion, it must
+answer<00:04:37.600> with<00:04:37.720> the<00:04:37.840> word<00:04:38.080> okay.<00:04:38.840> If<00:04:39.000> something
+answer with the word okay. If something
+is<00:04:39.440> missing,<00:04:39.960> it<00:04:40.160> must<00:04:40.560> answer<00:04:41.000> with<00:04:41.160> the<00:04:41.280> word
+is missing, it must answer with the word
+retry<00:04:42.280> and<00:04:42.440> explain<00:04:42.880> what's<00:04:43.160> wrong.<00:04:43.800> That<00:04:44.040> way
+retry and explain what's wrong. That way
+we<00:04:44.320> can<00:04:44.600> automatically<00:04:45.200> decide<00:04:45.680> whether<00:04:45.919> to
+we can automatically decide whether to
+accept<00:04:46.480> the<00:04:46.640> outline<00:04:47.120> or<00:04:47.280> try<00:04:47.600> again.<00:04:48.280> To
+accept the outline or try again. To
+connect<00:04:48.760> the<00:04:48.880> planner<00:04:49.360> and<00:04:49.480> the<00:04:49.600> checker,<00:04:50.320> we
+connect the planner and the checker, we
+wrap<00:04:50.720> them<00:04:50.960> inside<00:04:51.400> a<00:04:51.440> loop<00:04:51.919> agent<00:04:52.440> called
+wrap them inside a loop agent called
+robust<00:04:53.720> blog<00:04:54.320> planner.<00:04:55.040> The<00:04:55.200> loop<00:04:55.520> first<00:04:56.080> runs
+robust blog planner. The loop first runs
+the<00:04:56.480> planner,<00:04:57.200> then<00:04:57.400> the<00:04:57.520> checker.<00:04:58.160> If<00:04:58.280> the
+the planner, then the checker. If the
+checker<00:04:58.680> says<00:04:59.000> okay,<00:04:59.520> we're<00:04:59.720> done.<00:05:00.360> If<00:05:00.440> the
+checker says okay, we're done. If the
+checker<00:05:00.960> says<00:05:01.400> retry,<00:05:02.080> the<00:05:02.320> loop<00:05:03.000> runs<00:05:03.440> the
+checker says retry, the loop runs the
+planner<00:05:03.840> again<00:05:04.320> with<00:05:04.480> the<00:05:04.560> same
+planner again with the same
+instructions.<00:05:05.919> It<00:05:06.040> can<00:05:06.160> do<00:05:06.280> this<00:05:06.440> up<00:05:06.600> to<00:05:06.680> three
+instructions. It can do this up to three
+times.<00:05:07.760> This<00:05:08.000> gives<00:05:08.280> us<00:05:08.400> a<00:05:08.480> safety<00:05:08.840> net,<00:05:09.120> so<00:05:09.320> if
+times. This gives us a safety net, so if
+the<00:05:09.600> model<00:05:09.880> forgets<00:05:10.240> something,<00:05:10.680> it<00:05:10.840> has
+the model forgets something, it has
+another<00:05:11.560> chance<00:05:11.880> to<00:05:12.000> get<00:05:12.160> it<00:05:12.320> right.<00:05:13.000> Now,<00:05:13.240> we
+another chance to get it right. Now, we
+create<00:05:13.640> another<00:05:14.000> agent<00:05:14.400> called<00:05:15.080> blog<00:05:15.600> writer.
+create another agent called blog writer.
+This<00:05:16.520> one<00:05:16.640> takes<00:05:16.840> the<00:05:16.919> outline<00:05:17.320> we<00:05:17.440> just<00:05:17.680> saved
+This one takes the outline we just saved
+in<00:05:18.240> blog_outline
+in blog_outline
+and<00:05:20.160> turns<00:05:20.440> it<00:05:20.520> into<00:05:20.720> a<00:05:20.800> full<00:05:21.200> markdown<00:05:21.760> blog
+and turns it into a full markdown blog
+post.<00:05:22.720> The<00:05:22.840> instruction<00:05:23.320> tells<00:05:23.560> it<00:05:23.760> how<00:05:23.960> to
+post. The instruction tells it how to
+write.
+It<00:05:25.120> should<00:05:25.280> assume<00:05:25.720> the<00:05:25.880> audience<00:05:26.520> is
+It should assume the audience is
+software<00:05:27.440> engineers,<00:05:28.160> skip<00:05:28.520> the<00:05:28.600> basics,<00:05:29.520> and
+software engineers, skip the basics, and
+focus<00:05:30.120> on<00:05:30.320> practical<00:05:31.040> insights,<00:05:31.880> explain
+focus on practical insights, explain
+both<00:05:32.919> the<00:05:33.040> how<00:05:33.520> and<00:05:33.720> the<00:05:33.800> why,<00:05:34.560> and<00:05:34.720> include
+both the how and the why, and include
+short<00:05:35.919> code<00:05:36.160> snippets<00:05:36.680> where<00:05:36.840> helpful.<00:05:37.640> It
+short code snippets where helpful. It
+should<00:05:37.880> also<00:05:38.120> follow<00:05:38.360> the<00:05:38.480> structure<00:05:38.880> of<00:05:39.000> the
+should also follow the structure of the
+outline<00:05:39.600> with<00:05:39.800> proper<00:05:40.160> headings.<00:05:40.880> The
+outline with proper headings. The
+finished<00:05:41.280> draft<00:05:41.600> is<00:05:41.800> saved<00:05:42.120> under<00:05:42.560> blog_post
+finished draft is saved under blog_post
+in<00:05:44.160> shared<00:05:44.600> state,<00:05:45.360> ready<00:05:45.720> for<00:05:45.880> the<00:05:45.960> next
+in shared state, ready for the next
+step.<00:05:46.880> Next<00:05:47.200> up,<00:05:47.760> we're<00:05:47.880> going<00:05:48.000> to<00:05:48.080> add
+step. Next up, we're going to add
+another<00:05:48.840> checker,<00:05:49.400> this<00:05:49.600> time<00:05:49.920> for<00:05:50.080> the<00:05:50.200> post.
+another checker, this time for the post.
+It's<00:05:51.120> called<00:05:51.440> blog<00:05:51.760> post<00:05:52.160> validation
+It's called blog post validation
+checker.
+It<00:05:54.000> looks<00:05:54.240> at<00:05:54.440> blog<00:05:54.880> underscore<00:05:55.440> post<00:05:56.080> and
+It looks at blog underscore post and
+checks<00:05:56.600> if<00:05:56.760> the<00:05:56.880> article<00:05:57.400> has<00:05:57.760> an
+checks if the article has an
+introduction,<00:05:58.680> a<00:05:59.080> sections<00:05:59.480> that<00:05:59.640> match<00:05:59.920> the
+introduction, a sections that match the
+outline,<00:06:00.960> a<00:06:01.080> conclusion,<00:06:01.720> and<00:06:01.920> clear
+outline, a conclusion, and clear
+explanations.<00:06:03.440> If<00:06:03.600> it<00:06:03.760> passes,<00:06:04.280> the<00:06:04.440> checker
+explanations. If it passes, the checker
+says,<00:06:05.080> "Okay."<00:06:05.960> If<00:06:06.200> not,<00:06:06.720> it<00:06:06.840> says,<00:06:07.160> "Retry."
+says, "Okay." If not, it says, "Retry."
+and<00:06:08.240> lists<00:06:08.600> the<00:06:08.720> fixes<00:06:09.160> which<00:06:09.360> are<00:06:09.440> needed.
+and lists the fixes which are needed.
+Just<00:06:10.400> like<00:06:10.560> with<00:06:10.760> planning,<00:06:11.320> we<00:06:11.480> combine<00:06:12.000> the
+Just like with planning, we combine the
+writer<00:06:12.760> and<00:06:12.920> its<00:06:13.120> checker<00:06:13.640> into<00:06:14.320> a<00:06:14.440> loop<00:06:14.880> agent
+writer and its checker into a loop agent
+called<00:06:16.160> robust<00:06:16.840> blog<00:06:17.240> writer.<00:06:17.960> This<00:06:18.240> makes
+called robust blog writer. This makes
+the<00:06:18.640> system<00:06:19.160> automatically<00:06:19.919> retry<00:06:20.400> the
+the system automatically retry the
+writing<00:06:20.880> step<00:06:21.360> until<00:06:21.680> the<00:06:21.800> validation
+writing step until the validation
+passes,<00:06:23.400> up<00:06:23.560> to<00:06:23.680> three<00:06:23.919> times.<00:06:24.960> Now,<00:06:25.360> we<00:06:25.640> wrap
+passes, up to three times. Now, we wrap
+each<00:06:26.480> loop,<00:06:27.200> the<00:06:27.360> robust<00:06:28.080> blog<00:06:28.400> planner<00:06:29.320> and
+each loop, the robust blog planner and
+the<00:06:29.560> robust<00:06:30.080> blog<00:06:30.560> writer,<00:06:31.080> as<00:06:31.320> tools.<00:06:32.040> This
+the robust blog writer, as tools. This
+is<00:06:32.360> what<00:06:32.600> lets<00:06:32.880> the<00:06:33.040> root<00:06:33.400> agent<00:06:33.800> call<00:06:34.160> them
+is what lets the root agent call them
+directly<00:06:35.160> without<00:06:35.600> worrying<00:06:35.880> about<00:06:36.240> what's
+directly without worrying about what's
+happening<00:06:36.800> inside.<00:06:37.680> Finally,<00:06:38.080> we<00:06:38.200> put<00:06:38.400> it<00:06:38.520> all
+happening inside. Finally, we put it all
+together<00:06:39.120> with<00:06:39.400> the<00:06:39.520> root<00:06:39.880> agent<00:06:40.440> called
+together with the root agent called
+blogger.<00:06:41.919> The<00:06:42.040> instructions<00:06:42.560> for<00:06:42.680> blogger
+blogger. The instructions for blogger
+are<00:06:43.320> simple.<00:06:44.240> When<00:06:44.720> a<00:06:44.880> user<00:06:45.240> gives<00:06:45.520> it<00:06:45.600> a
+are simple. When a user gives it a
+topic,<00:06:46.400> first<00:06:46.840> it<00:06:47.000> calls<00:06:47.480> the<00:06:47.600> planner<00:06:47.919> tool
+topic, first it calls the planner tool
+to<00:06:48.280> make<00:06:48.440> an<00:06:48.560> outline,<00:06:49.520> then<00:06:49.720> it<00:06:49.840> calls<00:06:50.200> the
+to make an outline, then it calls the
+writer<00:06:50.600> tool<00:06:50.840> to<00:06:50.960> draft<00:06:51.440> the<00:06:51.560> full<00:06:51.840> post,<00:06:52.840> and
+writer tool to draft the full post, and
+finally<00:06:53.600> it<00:06:53.800> adds<00:06:54.360> three<00:06:54.880> alternative<00:06:55.480> titles
+finally it adds three alternative titles
+and<00:06:56.600> two<00:06:57.320> tweet<00:06:57.600> length<00:06:57.840> hooks.<00:06:58.800> The<00:06:58.919> root
+and two tweet length hooks. The root
+agent<00:06:59.880> only<00:07:00.320> has<00:07:00.800> access<00:07:01.280> to<00:07:01.400> the<00:07:01.640> two<00:07:02.040> tools
+agent only has access to the two tools
+we<00:07:02.720> exposed,<00:07:03.720> the<00:07:03.880> planner<00:07:04.480> and<00:07:04.720> the<00:07:04.800> writer.
+we exposed, the planner and the writer.
+So,<00:07:05.919> its<00:07:06.280> workflow<00:07:06.640> is<00:07:06.800> clear<00:07:07.240> and
+So, its workflow is clear and
+controlled.<00:07:08.200> You<00:07:08.400> give<00:07:08.560> it<00:07:08.720> a<00:07:08.840> topic,<00:07:09.640> it
+controlled. You give it a topic, it
+plans,<00:07:10.480> it<00:07:10.720> writes,<00:07:11.360> it<00:07:11.520> checks,<00:07:12.120> and<00:07:12.280> then<00:07:12.520> it
+plans, it writes, it checks, and then it
+gives<00:07:13.040> you<00:07:13.200> a<00:07:13.320> polished<00:07:14.080> blog<00:07:14.400> post.<00:07:15.360> You've
+gives you a polished blog post. You've
+now<00:07:15.720> successfully<00:07:16.320> written<00:07:16.640> your<00:07:16.760> first
+now successfully written your first
+agent<00:07:17.720> script.<00:07:18.400> The<00:07:18.520> next<00:07:18.840> step<00:07:19.160> is<00:07:19.360> to
+agent script. The next step is to
+actually<00:07:19.919> run<00:07:20.120> it.<00:07:20.560> Head<00:07:20.840> into<00:07:21.080> your<00:07:21.240> terminal
+actually run it. Head into your terminal
+and<00:07:22.200> launch<00:07:22.560> it<00:07:22.960> using<00:07:23.240> this<00:07:23.400> command<00:07:24.240> with
+and launch it using this command with
+ADK<00:07:24.960> web,<00:07:25.520> so<00:07:25.680> you<00:07:25.800> can<00:07:25.960> view<00:07:26.240> everything
+ADK web, so you can view everything
+inside<00:07:27.240> a<00:07:27.320> simple<00:07:27.840> UI.<00:07:28.640> Once<00:07:28.880> that's<00:07:29.120> running,
+inside a simple UI. Once that's running,
+open<00:07:30.160> the<00:07:30.280> local<00:07:30.680> ADK<00:07:31.160> web<00:07:31.480> link<00:07:31.880> in<00:07:32.000> your
+open the local ADK web link in your
+browser<00:07:32.720> and<00:07:32.960> start<00:07:33.320> interacting<00:07:33.919> with<00:07:34.040> the
+browser and start interacting with the
+agent<00:07:34.680> directly.<00:07:35.520> To<00:07:35.640> kick<00:07:35.800> things<00:07:36.040> off,<00:07:36.400> I'm
+agent directly. To kick things off, I'm
+going<00:07:36.720> to<00:07:36.840> ask<00:07:37.160> it<00:07:37.280> to<00:07:37.400> generate<00:07:37.960> a<00:07:38.080> blog<00:07:38.600> on
+going to ask it to generate a blog on
+the<00:07:38.919> top<00:07:39.320> 10<00:07:39.640> use<00:07:39.919> cases<00:07:40.440> for<00:07:40.720> AI<00:07:41.040> agents.
+the top 10 use cases for AI agents.
+Let's<00:07:42.120> see<00:07:42.360> how<00:07:42.520> it<00:07:42.760> plans,<00:07:43.360> writes,<00:07:43.840> and
+Let's see how it plans, writes, and
+delivers<00:07:44.520> the<00:07:44.600> results.<00:07:45.600> Your<00:07:45.840> sub-agents
+delivers the results. Your sub-agents
+will<00:07:46.720> then<00:07:46.960> work<00:07:47.160> together<00:07:47.600> to<00:07:47.720> create<00:07:48.160> a<00:07:48.240> blog
+will then work together to create a blog
+post.<00:07:49.240> And<00:07:49.400> that's<00:07:49.640> it.<00:07:50.240> You've<00:07:50.560> built<00:07:51.000> and
+post. And that's it. You've built and
+run<00:07:51.480> your<00:07:51.680> first<00:07:52.240> AI<00:07:52.640> agent<00:07:53.200> with<00:07:53.480> Google's
+run your first AI agent with Google's
+ADK.<00:07:54.800> We<00:07:54.920> started<00:07:55.280> from<00:07:55.400> the<00:07:55.600> idea<00:07:55.960> of<00:07:56.200> what
+ADK. We started from the idea of what
+agents<00:07:57.160> are,<00:07:57.720> then<00:07:57.960> walked<00:07:58.240> through<00:07:58.400> the<00:07:58.520> code
+agents are, then walked through the code
+step<00:07:59.280> by<00:07:59.440> step,<00:07:59.960> and<00:08:00.120> [music]<00:08:00.240> finally<00:08:00.800> saw<00:08:01.000> it
+step by step, and [music] finally saw it
+come<00:08:01.320> to<00:08:01.440> life<00:08:01.760> in<00:08:01.920> terminal.<00:08:02.680> Thank<00:08:02.880> you<00:08:02.960> for
+come to life in terminal. Thank you for
+watching.<00:08:03.600> Check<00:08:03.840> out<00:08:03.960> the<00:08:04.040> description<00:08:04.480> box
+watching. Check out the description box
+for<00:08:05.000> all<00:08:05.200> the<00:08:05.360> resources<00:08:06.120> and<00:08:06.320> code<00:08:06.640> mentioned
+for all the resources and code mentioned
+in<00:08:07.200> this<00:08:07.400> video.<00:08:08.040> Check<00:08:08.280> out<00:08:08.440> this<00:08:08.640> next<00:08:09.000> video
+in this video. Check out this next video
+to<00:08:09.400> learn<00:08:09.680> how<00:08:09.800> to<00:08:09.920> connect<00:08:10.520> your<00:08:10.880> AI<00:08:11.240> agent<00:08:11.680> to
+to learn how to connect your AI agent to
+an<00:08:11.910> [music]<00:08:11.960> MCP<00:08:12.480> server.
+&gt;&gt; [music]

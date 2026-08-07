@@ -1,0 +1,17 @@
+# 20260730_RayDalio_AIBubbleBigCycle 口播稿
+
+> TTS 前處理：OpenCC t2s 繁→簡，送 MiniMax G2P。第三人稱、學術語氣、全知分析者視角。
+
+---
+
+本場《The Diary Of A CEO》來賓 Ray Dalio，是 Bridgewater Associates 創辦人、1500 億美金對沖基金掌門、《Principles》作者。主持人 Steven Bartlett 在開場揭示核心張力：AI 革命是否正把全球經濟推向史上最大泡沫，80 年帝國興衰週期是否已將美、英推入 decline 末段。這場 90 分鐘對談被設計成「診斷報告」式對話，Dalio 以 50 年 macro 經驗與 500 年歷史研究回應。
+
+從經濟學角度，Dalio 的論述呼應他在《How the Economic Machine Works》30 分鐘影片所建立的交易模型（觀看次數已達 1.4 億）。他把 AI 泡沫放在三階段因果鏈中：革命性技術降臨、引發樂觀買盤、忽略價格風險，最後在升息或黑天鵝事件觸發下反向螺旋。1929 年電力與汽車普及、2000 年 dot-com 神話都符合同一模式；當前 AI 熱潮的特徵是「弱手持有」——散戶以槓桿 ETF、借貸買入，構成泡沫末期典型訊號。
+
+從政策經濟學角度，本集橫跨財富分配、AI 取代人力、儲備貨幣、多極世界秩序。Dalio 對 Bitcoin vs. Gold 的判斷值得注意：他自陳持有約 1% 比特幣，其餘配置在黃金；理由是黃金「不是別人負債」、「無法被科技破解」、「央行會持有」。比特幣雖屬同一類 hard money，卻有量子運算、政府監控等弱點。個人理財上，Dalio 給出三條鐵律——現金是長期最差投資、必須 diversify、年輕人唯一的資產是自己。AI 革命的贏家是擁有資本的資本家與構思取代勞工方案的人——機器取代體力、再取代部分心智工作後，勞工收入份額將下滑，資本家份額上升。
+
+從地緣政治角度，本集後半段進入多極世界秩序討論。Dalio 援引 500 年帝國研究指出，美、英已進入 decline 末段，5 forces（教育、競爭力、創新、軍事、債務負擔）皆可客觀量化，「像健康檢查一樣」。歷史上的單極霸權通常透過戰爭洗牌後重組，但這次中國的本質目標是「不被切斷、不被傷害、盡可能強」；最可能的 beneficial outcome 是區域化——美洲區與亞太區各自發展、台灣議題透過壓力而非戰爭解決。Dalio 並對伊朗戰爭下判讀：美國因國內民意已「不會再 show up in Asia」，亞洲盟國指望的美國 counterbalancing influence 正在退場，這正是英美帝國從單極走向區域化的關鍵訊號。
+
+從社會學角度，Dalio 對年輕世代的建議最 personal。他強調 happiness 與金錢在超過基本門檻後相關性極低，並指出成功關鍵不是智商而是 adaptability——「It is not the most intelligent people or the most intelligent species that are the most successful. It is those who are most adaptable.」他將橋水內部的人格測驗免費上線為 Principles U，呼籲年輕人先認識自己的 nature。對 21 歲創業家，他建議「狡兔三窟」——不要單押一國，要在多個「文藝復興式」活力城市布局。
+
+影片結尾，Steven 引用 Dalio 的 *How the Economic Machine Works* 影片為「永遠不會忘記的 YouTube 影片之一」，呼應 Dalio 自陳「幫助人們理解 cause and effect relationships」的使命。這支影片最鮮明的口號是——**AI 革命正在加速帝國週期的每個變量，唯一不變的是適應力本身的價值。** Dalio 把帝國衰亡的歷史必然性，轉化為個人層面「找到 nature × 最大化 adaptability × diversify 風險」的對稱解方——這正是 500 年帝國興衰研究對個體最 actionable 的啟示。

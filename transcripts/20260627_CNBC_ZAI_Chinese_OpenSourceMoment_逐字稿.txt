@@ -1,0 +1,294 @@
+[00:00:00] Deepsec showed Wall Street that China could build cheap, powerful AI. Now,
+[00:00:11] >> I've been consistently surprised by how quickly the open source has caught up.
+[00:00:21] still be in this sort of three to six month territory. Everything about the
+[00:00:33] >> We need cost to come down. That's how you drive adoption. That's how you get
+[00:00:44] be over intelligence per dollar. Models that are capable enough for real work
+[00:01:00] 5.2, comes out of China. It has landed with a bang in Silicon Valley, blowing
+[00:01:10] router token traffic showing much quicker adoption for GLM52 than DeepSk's
+[00:01:20] quicker adoption for GLM52 than DeepSk's V4 launch back in April. It was a big
+[00:01:31] different moment though. The trillion dollar sell-off post deepseeek that was
+[00:01:42] benchmark. It is just one percentage point away from opus 4.8 for a fifth of
+[00:01:52] point away from opus 4.8 for a fifth of the cost. Now opus 4.8 that is anthropic
+[00:02:03] of a cost. And it really comes at a time when expensive AI is already eating into
+[00:02:13] companies, for Fortune 500 to ignore. Aentic AI, it's only going to intensify
+[00:02:25] next big threat out of China. And here's the part of the story, the AI story that
+[00:02:35] model? Who's the best at coding? Which one is ahead on reasoning? But that is
+[00:02:45] run this thing a million times or more. All of my employees running it a million
+[00:02:56] times over the course of weeks, months, a year. So the new metric in AI, it is
+[00:03:06] The American AI story it has been built around bigger models bigger data centers
+[00:03:17] around bigger models bigger data centers huge spending. But Chinese labs they're
+[00:03:27] analysis has this chart that looks at both sides of this. How smart is a model
+[00:03:38] That's where every company wants to be. Jeep's GLM 5.2. It's getting very close
+[00:03:48] square. So, not at the very top in terms of performance, but it is close enough
+[00:03:58] matters even more. These are tasks where models don't just answer one question.
+[00:04:08] model, cheap enough to use over and over again. And that is the setup. I want to
+[00:04:19] valley on what this stuff actually looks like when it hits a real company. We've
+[00:04:30] Harvey, which is the AI platform um that half of the AM law 100 is now running
+[00:04:41] scientist at DeepMind and Meta. So, he has seen this from both sides, the model
+[00:04:53] Okay, we're gonna I can't Let's see. Do we have both their sound?
+[00:05:06] I'll come to you on this. Um, Gabe, let me start this off with what's happening
+[00:05:16] here just cannot get enough of this new model GLM52 right now. Um kind of feels
+[00:05:26] maybe even bigger. So I guess first how do you explain this to someone outside
+[00:05:36] all of this buzz around a new model that is almost as capable but a lot cheaper.
+[00:05:46] these closed source models is just how big is the gap between the closed source
+[00:05:57] seeing the first model where it's really competitive with like Opus 4.7 and some
+[00:06:08] source intelligence. And I think this is what we're starting to figure out and a
+[00:06:19] >> right? So explain that kind of in like just basic terms. If you are a company
+[00:06:29] something like this, what should they be thinking? Especially when you say like
+[00:06:39] best models but for a fraction of the price. People you are talking to, Gabe,
+[00:06:50] intelligence? And so as these models get smarter, do you need the smartest model
+[00:07:00] smarter, do you need the smartest model reviewing your contracts or doing simple
+[00:07:11] intelligence and there'll be some agents that are doing simpler tasks and there
+[00:07:22] >> Right. And are you seeing sort of the buzz that I am as well? is your feed,
+[00:07:32] you explain why this is so interesting, why this is different than Deepseek? I
+[00:07:42] >> Yeah, I think we're seeing the same buzz. It in terms of our benchmarks, it
+[00:07:53] similar. I would say to me the deepseek moment was much more of I think there's
+[00:08:03] moment was much more of I think there's always this question of how much money
+[00:08:13] >> right? And that gap keeps like becoming narrower and narrower. Erin, I think
+[00:08:27] it's a live stream, Erin. I know you're used to TV. We kind of shoot from the
+[00:08:37] tweeting about this. I know you've been tweeting a lot about open source. You've
+[00:08:47] tweeting a lot about open source. You've been talking about this for years, kind
+[00:08:57] >> Yeah, I mean I totally concur with with Gabe. I mean the the um you know there's
+[00:09:09] closed sourced models. And there's like fundamentally different outcomes in the
+[00:09:20] what uh what what GLM52 kind of shows is, you know, we might still be in this
+[00:09:31] is, you know, we might still be in this sort of 3 to six month territory as
+[00:09:41] depending on which outcome we're in. Um I think to your to your intro um I
+[00:09:52] enterprises are only going to kind of peel off uh uh sort of workloads that
+[00:10:02] really feel like we've reached a level where you can kind of you know bank on
+[00:10:13] intelligence for a lot of the types of of use cases that that we're seeing in
+[00:10:23] fundamentally change the architecture of AI because it means that now uh whether
+[00:10:35] you're using Harvey or box or factory or cognition or you know any any other kind
+[00:10:47] >> Right. So the big thing right now is model routing, right? As Erin, as you
+[00:10:57] years. You think that frontier is going to be really important and yes the ZI or
+[00:11:10] to be really important and yes the ZI or founders said that it was only a year.
+[00:11:21] >> Um I think you'd be fine with a three to six month gap. Um because that that's
+[00:11:32] don't use Frontier on everything that my firm or my organization loses some kind
+[00:11:42] scenario where if that gap was two to three years, you would you would never
+[00:11:52] effectively as a company in and the code you're producing or the the legal, you
+[00:12:02] you kind of see this fundamental shift. You don't need open weights to be at the
+[00:12:12] You don't need open weights to be at the exact same, you know, kind of the same
+[00:12:22] models. Uh and then you know that gets to the second part which is now you can
+[00:12:32] tasks. um uh you know everybody kind of looks at it as a as a pure kind of cost
+[00:12:42] domain requires and that has a different set of performance axis axes that matter
+[00:12:52] set of performance axis axes that matter which is like what are the capabilities
+[00:13:02] >> right and that changes the dynamics like once again right Gabe I was going to
+[00:13:14] phase where you know you needed to build your own proprietary models but now is I
+[00:13:24] >> exactly that's what we're starting to do for kind of both cost and performance
+[00:13:35] just use models, it was easy to kind of train a model and then that was separate
+[00:13:46] train a model and then that was separate from the rest of your business and you
+[00:13:56] frontier intelligence. I think a lot of that training data is going to come from
+[00:14:07] simple example, when a law firm works for like a large private equity firm and
+[00:14:17] question in the future of where is all of that training data eval coming from
+[00:14:27] training these open source models is how do we allow our customers and each of
+[00:14:38] >> right? And keep them for yourselves, right? You don't want to train someone
+[00:14:48] staying ahead. Am I reading that right, Aaron? I feel like you're not going to
+[00:14:59] Aaron? I feel like you're not going to say that though because you work with
+[00:15:10] >> You know, what's the case for continuing to buy AI from anthropic or open AI when
+[00:15:20] >> Uh well, I I actually didn't say that. Um the and this is where you have it's
+[00:15:30] you know, better than whatever the open weights equivalent is at any given time.
+[00:15:40] scenario that as just a mental model is is sort of, you know, might you might
+[00:15:50] actually have an incredible demand for frontier intelligence. uh but often as
+[00:16:01] that's happening. And so, interestingly, you might spend the same amount of money
+[00:16:11] intelligence. Those will actually cost five or 10 times as much. Um but the
+[00:16:23] processing, heavy analysis and combing through every sort of you know piece of
+[00:16:33] model that is is sort of more tuned for that workflow. So I actually don't know
+[00:16:43] thousand times more tokens in 10 years from now than we are today. And you're
+[00:16:53] important sort of work that an agent is doing. But there's just so many tokens
+[00:17:04] would just throw out there is um is none of this means that you that a frontier
+[00:17:15] models. Um and so uh so right now we're seeing that come from these open weights
+[00:17:25] model in their environment. So, so it's not it's not obvious that that this kind
+[00:17:37] market structure um at the frontier labs other than the market structure of the
+[00:17:48] model agnostic and so it's going to just route the workload depending on what the
+[00:18:00] Google Gemini have trained open-source models, but they don't show up in terms
+[00:18:10] benchmarks. Why are they letting um the Chinese models run away with this? And I
+[00:18:22] attention to it? It's hard to make money from open source. is that part of it. Um
+[00:18:32] >> Yeah, I think it's kind of depends on where you are in the stack. So if you're
+[00:18:42] rather this gap be a bit bigger. But I think to Erin's point, there's room for
+[00:18:52] taken different strategies of I think we are pushing the frontier with closed and
+[00:19:02] open but I think you've seen companies flip-flop right you've seen companies
+[00:19:13] >> right and I wanted to sort of make this connection too. I know Gabe like Harvey
+[00:19:23] know what kind of model you're going to use. Is it a Chinese open source model?
+[00:19:33] customers that want to use Mistrol. We have customers that want US models. So,
+[00:19:44] >> Yeah. And I would I would say that that if I if I could kind of like design the
+[00:19:55] if I if I could kind of like design the perfect strategy of of you know, kind of
+[00:20:06] want to consistently have a a just close to frontier open weights model because
+[00:20:17] that the that the cheaper faster version isn't in the same kind of model family
+[00:20:28] theory standpoint you'd probably want to be uh heavily supporting open weights.
+[00:20:39] reason why Enthropic in particular might not do that strategy. Um but for Open AI
+[00:20:51] frontier of of a GLM or a or a Kimmy. Um I I think actually you know from a game
+[00:21:01] >> and historical right. I mean they sort of led the way on open source and own
+[00:21:11] that um we don't hear or see more. Um I do think about cursor as well, right?
+[00:21:21] now. And the whole secret sauce runs on a Chinesebased model. And it feels like
+[00:21:31] world. So you can see how you can sort of use these Chinese open source models
+[00:21:42] Feels like there's a lot of that going on right now. And so when I think about
+[00:21:53] Anthropic. I mean, right after they cut off access to Fable Mythos, their most
+[00:22:03] at any time? And it felt like it just gave so much momentum to open source. Do
+[00:22:14] think that, you know, that was misplayed by anthropic? What are the what's the
+[00:22:26] Um well it's it's not obvious that well it kind of depends on I guess what what
+[00:22:37] government uh for for for the same for the same kind of economic and national
+[00:22:48] show that we'll we'll block access to an AI model um through export controls. So
+[00:22:58] are another country right now this was a sort of shock to the system that says oh
+[00:23:10] sort of shock to the system that says oh actually like like AI is not going to be
+[00:23:20] there might be some privacy requirements in different regions but generally it's
+[00:23:31] know kind of economic uh benefit AI uh because the export itself is coming with
+[00:23:41] government wants a bit more control over and who should have access to it. At
+[00:23:52] least now the precedent has been set for that. Uh so then you know by definition
+[00:24:03] their own models. uh you probably would sort of say, hey, we should actually be,
+[00:24:14] making these things better and better. At a minimum as a hedge, you know, maybe
+[00:24:24] At a minimum as a hedge, you know, maybe you still do as much work as you can
+[00:24:35] treated access to AI as another kind of geopolitical or economic kind of weapon
+[00:24:45] incredibly interesting consequences as a result of that. You know imagine imagine
+[00:24:56] that would that could very much threaten your your kind of economic and national
+[00:25:06] controls is a really interesting blunt instrument um that that I you know again
+[00:25:17] well, wait a second, maybe this is like going to be treated as like nuclear arms
+[00:25:27] weapon um in which case yeah the set of of controls that the government has of
+[00:25:37] considered before which again then means downstream as another country you have
+[00:25:47] what we saw with chips, right? And and I'm with you. I never thought that could
+[00:25:57] >> chips were actually not even as blunt of an instrument though. Chips were even
+[00:26:09] >> It's even more blunt yet the solution is like sitting right there for anyone to
+[00:26:20] like sitting right there for anyone to take, right? And it's just distillation.
+[00:26:30] outputs to train a smaller cheaper model to behave like it. And Gabe, I wonder
+[00:26:40] but you know, Harvey operates in a very sensitive industry. Do you see the same
+[00:26:50] >> Yeah, I I would say distillation is one way, but I I think these Chinese labs
+[00:27:01] like extreme for us to just say the only reason they're catching up is because
+[00:27:12] harder to distill their models. Like that's what you saw with Fable. And it's
+[00:27:22] that's what you saw with Fable. And it's like I think that strategy will work. As
+[00:27:32] at preventing that. So I think that is defensible. But then I think the kind of
+[00:27:42] think about business continuity and if one of the labs that you're using runs
+[00:27:52] out of compute the government prevents you from accessing their models like as
+[00:28:04] use multiple clouds. I can also use open source and build that muscle of you know
+[00:28:15] potential model not working for a period of time. So we've we've definitely seen
+[00:28:26] why I guess I started by saying it felt like a miscalculation. You're right Erin
+[00:28:37] feel like the smartest people I talk to say that distillation should not be a
+[00:28:48] right? Turning expensive AI into cheaper products that can actually scale. And as
+[00:28:59] Um, yeah, I I would say I'm not as close to the latest uh views on on what the
+[00:29:10] uh view of of that. And and like it also is just like first principles like China
+[00:29:20] are, you know, leaders at at uh in many of these labs. So, so it's sort of like
+[00:29:30] the chip problem um uh of of do you have enough compute and that's also tractable
+[00:29:40] distillation um I don't know I I I don't I'm not bothered by distillation because
+[00:29:50] creation of information and knowledge. Um, and everything is sort of riding on
+[00:30:00] Um, and everything is sort of riding on on some other set of information that's
+[00:30:10] bothered by um bothered by distillation. So, so to me, it's sort of all within
+[00:30:21] um and at the same time, I think that there should be kind of a cat-and- mouse
+[00:30:31] >> Yeah, it's a great point. It kind of goes back to the beginning of this like
+[00:30:41] modern AI era. All of these models are trained on, you know, the internet's all
+[00:30:51] they were trained on my uh my trolling tweets from 15 years ago. I mean how mad
+[00:31:02] know, Gabe. I haven't gone too deep into your uh X feed, but it's trained on that
+[00:31:12] bit of a turn. I wanted to ask you about Claude Tag because um producer Jasmine,
+[00:31:22] wonder, Erin, first, I know you've been tweeting about this. Like, can you break
+[00:31:33] like lockin to me, but also seems really important. Erin, is this like going to
+[00:31:46] it's a pretty big deal is is we're we're very used to AI in kind of single player
+[00:31:58] mode uh where I have access to claude or or codeex or chatbt or co-work and this
+[00:32:09] um in in a variety of systems. And so it's incredibly powerful because I can
+[00:32:19] recent zeitgeist of OpenClaw and Hermes and um and um uh and even kind of you're
+[00:32:30] in the organization. it's its own sort of entity and it has access to a set of
+[00:32:42] in your system and the reason why that's meaningful is that it has shared context
+[00:32:52] meaningful is that it has shared context across whatever that group uh that has
+[00:33:03] It's it's probably a very big deal in in sort of the the philosophical direction
+[00:33:15] of use cases uh that that it enables. It's less about my personal productivity
+[00:33:25] intelligence uh for some from you know group of users. So, you're in a Slack
+[00:33:35] into. Um, and it needs access to your underlying, you know, marketing assets
+[00:33:45] it's another kind of, you know, point in the timeline of like what is the future
+[00:33:55] kind of a lockin point, I think there's an interesting point like on one hand,
+[00:34:05] particular paradigm. Uh, on the other hand, you can choose to decide how much
+[00:34:16] like you can plug in an MCP server of an entirely other agentic system. So Claude
+[00:34:27] other other tools. I'm making up the use case, but I'm sure it could be a router
+[00:34:37] >> right? Feels like it's certainly like the whole industry is heading that way.
+[00:34:48] these live streams, we really try to be on like what Silicon Valley is talking
+[00:35:01] >> I feel like it'll be interesting to see what happens kind of with the Fable 5
+[00:35:12] about with Claude Tag. Like I think that philosophical shift of just thinking
+[00:35:23] more we're thinking about our product as how do we give agents to a law firm or
+[00:35:34] kind of one player like Aaron mentioned, how do you start organizing these kind
+[00:35:44] >> right? We'll call it multiplayer mode since Aeron's been talking about single
+[00:35:54] since Aeron's been talking about single player mode. Uh, thank you both so much,
+[00:36:05] through the same question for investors. What does it do for the chip trade that
+[00:36:15] just nine months. OpenAI used its own AI models to help design it. Broadcom CEO
+[00:36:26] Nvidia GPUs. The person I want to break all of this down with is Stacy Rascott.
+[00:36:37] He has been covering semiconductors at Bernstein for over a decade called the
+[00:36:49] >> Oh, then I definitely needed to round it up. Well, I know that's why we always
+[00:36:59] Jalapeno. I mean, to me, it just struck me as a huge like develop like maybe a
+[00:37:09] >> Well, so look, so chips are the most complicated things that humanity has
+[00:37:20] unexpected. I I want I want to say that. So we we've known for a long time that
+[00:37:30] >> over the next five years. I we'll see how much of it actually ships, but but
+[00:37:40] earnings call they talked about I think in 27 they're supposed to ship I can't
+[00:37:50] remember 1.2 or 1.3 gigawatts to OpenAI. So that is presumably this this chip. So
+[00:38:01] a surprise and in fact one would hope that they would have been announcing it
+[00:38:12] you know they put out a lot of stuff. I guess he had said that you're right. He
+[00:38:23] cherrypick stuff. And um at the end of the day, it's not really the cost of the
+[00:38:34] matters. It's the performance per watt, you know, performance per dollar, total
+[00:38:44] production with this yet, but it sounds like the early tests are are um in very
+[00:38:56] like the early tests are are um in very very encouraging along those fronts. And
+[00:39:07] >> Okay. So, I'm glad you stepped back. You said, "Okay, it comes as a surprise to
+[00:39:18] >> Yeah, they all are. BUT THEY'RE ALL BUYING A LOT OF GPUS, TOO. SO, AGAIN, to
+[00:39:29] BUYING A LOT OF GPUS, TOO. SO, AGAIN, to go back to OpenAI, so they have this 10
+[00:39:40] Everyone is just trying to get compute. They're trying to get their costs down.
+[00:39:51] thought it was interesting. Nine months built in nine months from scratch. Like
+[00:40:01] >> So, that is fast. But Broadcom again has talked about exactly that and and that's
+[00:40:13] part of their differentiation on on this custom chip design. There's a number of
+[00:40:23] they've said. This is the first time I think that they've actually shown a real
+[00:40:35] space? We've talked about, you know, the cycle getting shorter and Nvidia putting
+[00:40:45] >> No, no, no. I'M NOT SKEPTICAL AT ALL. NO, NO, IT LOOKS but I mean the space is
+[00:40:55] designs because now we actually have a reason to do them and someone that's
+[00:41:05] actually willing to pay for them. Yes. I I'll give you an example. You know, it's
+[00:41:16] all all of the VC investments back then it was it was like corporate VC that was
+[00:41:27] it was it was like corporate VC that was it there wasn't a lot of of of of actual
+[00:41:37] opportunities weren't and back then they would have just like invested in SAS it
+[00:41:47] markets now like in the billions or even tens of billions of dollars. So there's
+[00:41:57] the space is is absolutely changing and this is one aspect of it clearly. Right.
+[00:42:08] this is one aspect of it clearly. Right. >> Yeah. And Okay. So as we've seen more
+[00:42:19] >> so so as as as as a as an equity analyst we get paid to over complicate things
+[00:42:29] sometimes and and there's always worries about competition and I would say first
+[00:42:40] invest in the road map and and to hire the best people and so on and so forth
+[00:42:51] you know, you talk about Broadcom versus Nvidia and they talk about GPUs versus
+[00:43:02] TPUs. And my general view is that I get that, but it's it's probably the wrong
+[00:43:12] >> Well, it's been and it's been straight up to the right. So, so far, right? Is
+[00:43:22] >> Well, I mean, you're seeing it in G. It's not even just in this space. You're
+[00:43:34] optical and all kinds of different where there's alternatives. There's always
+[00:43:45] billion, right? know they'll probably do more than that, right? And I don't know,
+[00:43:56] yesterday and they said they're going to do55 billion dollars from zero basically
+[00:44:07] probably a little bit but is it a really a problem at this point? Okay. So, this
+[00:44:19] a problem at this point? Okay. So, this is right and you're saying even though
+[00:44:29] It's a lot more efficient and it's almost at frontier level. Does it I feel
+[00:44:40] almost at frontier level. Does it I feel like as an onlooker and you tell me if
+[00:44:51] edge in terms of chips but in terms of memory in terms of you know some of the
+[00:45:02] >> well the Chinese are constrained in in in some sense right so you I you know I
+[00:45:12] more capacity online? And the answer was the US is bringing more online. It's not
+[00:45:22] technology that impacts their yields and ability to really produce like local
+[00:45:33] chips at high volume which is one reason that I think that they have been forced
+[00:45:43] best as they can with those and and and they're very very they've been very very
+[00:45:53] >> um there are Chinese memory players um but I mean from what we're seeing in in
+[00:46:03] and I I I mean It's it's it's looking like things are going to be tight for a
+[00:46:14] supply issue as well as as a demand issue and supply will come online over
+[00:46:24] >> to make the chip. So it takes time but you know the question will be once that
+[00:46:34] with it and one at a time the different parts of the industry have sort of been
+[00:46:44] being the bottleneck a year or two years ago whatever and then it went to memory
+[00:46:54] you could have almost owned anything in the space. I think that the socks index
+[00:47:05] >> you could have owned anything, you would have been fine like almost anything you
+[00:47:17] >> Yes. And it's basically you're owning the underlying things, but the app layer
+[00:47:28] everyone's talking about a super cycle. Um is that still the case right now? Do
+[00:47:38] >> Well, for now, yes. Right. Look, I I've again I've been I've been hearing the
+[00:47:48] different types of cycles, right? you have inventory cycles like semis are the
+[00:47:59] tight and pricing goes up we're having a big one in memory right now you can have
+[00:48:10] big one in memory right now you can have product cycles or socket cycles like you
+[00:48:20] >> then you got what we have today which is I mean it's a true demand cycle It's not
+[00:48:31] there like not not that long ago. And if you want to define that as maybe, you
+[00:48:42] it's driving everything. And and so the big question is how long does the demand
+[00:48:54] >> right it's more just sort of the makeup of that which we discussed before is it
+[00:49:04] going to be the labs is it going to be the open source models but
+[00:49:14] you know, for the vendors. I mean, it'll depend on on building for their models,
+[00:49:24] >> at the end of the day, I I think compute is is demand for comput is good. It's
+[00:49:34] shovels in the gold rush. So, they'll they'll be fine as long as the gold rush
+[00:49:44] >> Yeah. But have you seen that cartoon? And I feel like I've seen it a lot over
+[00:49:54] >> they are they are mining but I think we can have genuine questions on on return
+[00:50:05] >> continues is is there a return on the spending or is there not and it's still
+[00:50:15] >> I do wonder though, Stacy, how is it that the Chinese are able to do so much
+[00:50:27] >> And by the I do not view that as a bad thing. Like this gets back to the whole
+[00:50:37] >> China deep. I think we might be >> Everybody freaked out AND I'LL BE
+[00:50:47] >> OKAY, last thing I'll say. Yes, that was not a blip though. I mean, we we may be
+[00:50:57] >> What happened? Only since then is been skyrocketing. We need cost to come down.
+[00:51:07] skyrocketing. We need cost to come down. That's how you drive adoption. That's
+[00:51:18] GOT CUT IN HALF EVERY TWO YEARS FOR SIX decades was that a bad thing FOR SEMI NO
+[00:51:28] >> I started by calling you a semi guy now you're calling yourself a semi guy I
+[00:51:38] love it was perfect you for our semi guy Stacy. Lots of energy, right place for
+[00:51:50] >> We'll talk to you again soon, I'm sure. >> Thanks, Stacy. Um, thank you guys for
+[00:52:00] and Evan um, in the behind here and Bud in in the control room. We'll be back

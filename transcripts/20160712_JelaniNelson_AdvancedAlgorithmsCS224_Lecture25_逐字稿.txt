@@ -1,0 +1,1774 @@
+So, uh today
+we're going to finish uh
+uh faster exponential time algorithms
+for small space.
+Uh specifically, we're going to do
+inclusion-exclusion.
+I just want to say a few more words
+about that.
+/ uh
+zeta transform
+and Mobius inversion.
+And then
+uh
+the last Well, the remainder of the
+class as well as uh next lecture I'll
+tell you some things about Well, an area
+I work in, which is uh streaming
+sketching.
+Okay, so
+um
+let's get started. So, I just want to
+write something I wrote on the board
+last time, which is
+uh this is fact. We proved it last time.
+This was inclusion-exclusion.
+Which said that um for all
+sets
+R subset T
+we have that
+the sum over all S's that are sandwiched
+in between
+of -1
+to the uh
+T - S
+is equal to
+R equals T.
+Okay?
+Remember, this is just one Whenever I
+put a Boolean expression in brackets, it
+means one if it's true and zero
+otherwise.
+And
+we defined the zeta transform. So, if we
+have a function f
+mapping
+sets
+into
+some ring,
+we defined f hat. This is the zeta
+transform of s was the sum over all r
+subset equal to s of f of r.
+Okay.
+And last time, what did we say?
+Uh we said
+last time we ended with k-coloring.
+And we have a scribe today, I think.
+Yeah, okay, great.
+We said let f of x let f of let's say s
+be
+um
+an indicator for s
+is a non-empty
+independent set
+in our graph.
+And we had this claim
+uh which stated that
+k uh
+the graph g is k-colorable
+if and only if
+uh let's say the sum
+over all s subset equal to v
+-1 to the n minus uh s
+This is just
+if want to say this differently, this is
+just the size of V minus S.
+of
+uh
+let's say uh
+F hat to the K.
+It's greater than zero.
+Okay.
+So, I mentioned at the end of last
+lecture that this will let us do things
+more efficiently.
+And I also mentioned that
+um
+you can prove this claim using
+inclusion-exclusion.
+Um so, the scribe actually put those
+well, put the details of why this claim
+is true in the notes.
+Um
+I I am going to show you a proof of this
+claim, but I'm actually going to show it
+to you uh
+as basically just one example of
+something more general.
+Okay.
+So, you know, first of all, how would
+someone come up with this formula?
+Um right, it's one thing to just show
+you something and then have you prove
+it, but it's harder to come up with such
+things, right?
+And I'm going to show you that the way
+that you would come up with this
+is um
+basically via this zeta transform Mobius
+inversion, which I'm Well, I guess I
+defined the zeta transform, but I will
+define uh
+this this thing here is called so, the
+zeta transform. This F hat.
+And let me just include some references.
+Um
+So, first of all, this thing here we're
+going to see soon.
+You can compute it in either
+O star of three to the end time
+and poly-n space.
+Or, you can do it in
+O-star
+two to the end time n space.
+Okay.
+And these these are due to independent
+works.
+Um one is
+Bjorklund
+and Husfeldt.
+This is Fox 06.
+And the other one is Kowalczyk. I'm
+probably saying the name wrong.
+Fox 06.
+And actually, the former
+the first paper the first of the two
+papers
+I mean, these are two independent
+papers. They were published at the same
+time. But the first paper
+this one
+can also get
+um something like O-star
+of
+two to the 2.461
+well, O of
+two to the 2.
+two 2.2461 to the end time
+and poly-n space.
+And it's actually an open problem.
+It's an open problem to get two to the
+end time or roughly two to the end time
+with poly space.
+Okay.
+So,
+rather than uh prove that
+claim and talk about running time
+specifically for K-colorability, I want
+to show you why this is
+just a kind of
+falls out of something more general.
+Okay, so
+So, we have F as before, meaning
+I said F maps
+sets to some ring.
+And I defined the zeta transform.
+That was the F hat.
+And then I also defined the Mobius
+inversion formula.
+And I'll call that
+F tilde.
+Tilde of S
+uh is the sum
+R subset of S -1 to the size of S - R
+F of R.
+Okay.
+And
+kind of the real place where this
+formula comes from and why it works
+is the following claim.
+F hat tilde equals F tilde hat equals F.
+Okay.
+Is it clear what I mean? If you take the
+zeta transform, then Mobius invert it,
+you get F. And if you do it the other
+way, if you first do the Mobius
+inversion
+and then do the zeta transform, you also
+get F.
+Okay.
+Okay, so let's prove this.
+And I want to show you just one of the
+directions. The other direction is very
+similar. We'll show
+that if you zeta transform the Mobius
+inversion, you'll get F.
+Okay.
+And the other direction
+Well, not the other direction, but
+you know, showing
+that F tilde F hat tilde
+is F is similar.
+So, let's evaluate this thing
+on some set.
+So,
+we have Let's look at F
+tilde hat
+of T.
+Okay.
+So,
+um
+Good.
+So, what does it mean to take F tilde
+So, we're taking the hat of the tilde.
+Um
+Uh let's see. So,
+Well, first, let's just look at what is
+F tilde of T.
+F tilde of T is equal to
+um
+the sum of S subset equal to T -1 to the
+T minus S
+of F of s.
+Okay?
+Which implies that
+f tilde hat
+of t
+is
+um
+Let me see, where is my definition?
+The sum over
+That's the sum over
+Let's call it
+uh
+s subset t
+of
+um Now I'm confusing myself with double
+indices. Okay, so
+um
+of f tilde
+of s
+Right?
+Which is equal to So, let's we actually
+call this f tilde of s.
+So, this is now r is a subset of s.
+Uh
+And this thing is equal to
+the sum
+of
+r is a subset of s is a subset of t
+negative one
+to the s minus r
+uh
+of f of
+r.
+I don't know how I
+Okay.
+I feel like I'm off by a minus sign
+somewhere, but let me continue.
+Seems right. Okay, good.
+And now I want to invoke uh
+inclusion-exclusion at some point.
+So,
+this is equal to
+um
+sum over
+r
+uh
+subset equal to t
+and then f of r
+and then uh
+sum over
+s and then
+s is r is a subset of s
+subset of t
+negative one
+to the uh
+s minus r.
+And
+what I wanted to say
+is that
+the thing that's confusing, I wanted to
+say that this thing
+um I seem to have confused myself.
+Hopefully, it's going to be r equals t,
+in which case I would just be left with
+f of r.
+Um
+I'm sorry?
+If that was the initial measure
+you do the sum something change the
+order.
+You get inclusion-exclusion, meaning you
+don't need to write
+The problem is I really want I really
+wanted this to be T minus S, not S minus
+R.
+Okay, so
+I'm not sure I followed exactly that,
+but I think this thing
+is equal I think this thing is going to
+be equal to -1 to the T minus S times
+some fixed sign,
+right?
+Um
+which doesn't depend on
+anything else.
+In which case uh this thing dies when R
+is not equal to S anyway, so the sign
+doesn't matter and otherwise you get
+otherwise you you're only left with uh
+one thing in the summation anyway.
+So, I think I I confused myself by being
+off by the sign, but uh
+um
+Let me I'll fix this at some point.
+But I'm pretty sure what I said is okay.
+Okay.
+All right.
+So, um
+Okay, good. So, so
+So, given just given that this is true,
+where did this formula come from
+for K-colorability?
+Okay.
+So,
+Okay.
+Um
+Yeah. So, let's define a function
+which is
+number of ways
+to write
+S as the union
+of K
+non-empty
+independent sets.
+Okay.
+So, if if G So, we really want to know
+So, G of T
+being bigger than zero is the same thing
+as saying uh K-colorable.
+T is really the set of all vertices.
+Right? What does it mean to be
+K-colorable? It means we can write our
+graph as a union of K independent sets.
+Non-empty independent sets. Of course,
+I didn't say anything about these being
+disjoint.
+Okay?
+But that doesn't matter. If you can
+write it as an as a union of K non-empty
+independent sets and they overlap,
+okay, I mean just greedily go through
+one by one and assign it the first color
+that it of the set it was in.
+If it's in another set later, just
+ignore it the second time around.
+Okay?
+Basically, all I'm saying is if you can
+write it as a set of possibly
+overlapping independent sets, as a union
+of possibly overlapping independent
+sets, you can also write it as disjoint
+union of independent sets.
+Just drop, you know, if a if a if a
+vertex appears in multiple sets, drop it
+from all of them except one.
+Yep.
+Okay. So,
+so we just need to be able to compute G
+of V.
+Okay?
+But the claim
+is that
+Well, it's not really it's pretty it's
+not really even at the level of a claim.
+Just note that G hat of S is the same
+thing as F of hat of S
+to the K.
+Okay?
+So,
+what is F, remember?
+F
+just is an indicator function for
+non-empty independent sets.
+Okay? So, I claim that the way to see
+that these two things are equal is just
+to interpret what they both mean in
+words. So, what is this? So, G of S is
+we want to write S as a union of K
+non-empty independent sets. So, what
+does G hat of S mean?
+Under the definition of the zeta
+transform, that means
+we want to count
+the number of ways of of of coming up
+with unions of independent sets such
+that the union lies in in S. It's
+contained in S.
+Okay?
+So, we want to choose K independent sets
+that are all K non-empty independent
+sets that are all contained in S.
+That's what this is counting. How many
+ways are there of doing that?
+Well, how many ways of doing of doing
+that are there? Well,
+just choose um just choose K non-empty
+independent sets or just count how many
+non-empty independent sets are contained
+in S and raise it to the K power.
+Which is exactly the right-hand side.
+Okay?
+Does that make sense?
+Are people okay or are people confused?
+Okay, I'll interpret that as people
+understand what I'm saying.
+So,
+let's call this double star.
+Both
+left-hand side and right-hand side
+of double star
+count
+the number of
+ways
+of choosing
+K non-empty independent sets
+that all
+lie in or contained in S.
+Okay?
+I'm sorry?
+Yeah, they're
+uh
+Right, so they're ordered. So, um if you
+take set one and then set two versus set
+two then set one, those count those
+count as two different uh
+things.
+For them to be equal. That's right.
+So, that implies
+that g of v, which is the thing we want
+to compute,
+g of v is equal to, by Mobius inversion,
+it's equal to um
+g hat
+tilde
+of v. And we just said that g hat is
+this thing. So, that's equal to
+um
+f hat of s
+to the k tilded.
+Or, I guess
+uh
+I should write it as
+f
+hat to the k
+tilded evaluated at v.
+Okay.
+So, um
+that's where that formula I wrote before
+is coming from. It's just taking f hat
+and then taking the k-th power and then
+Mobius inverting it.
+So,
+claim
+we can compute
+um
+we can compute, say, all
+f hat s
+or f tilde s
+values
+sequentially
+in space
+o star 3 to the n
+uh in time O-star three to the end
+and poly end space.
+And when I count time, I'm assuming uh
+let's say that evaluating F takes unit
+time. In the case we care about
+evaluating F will take you poly time,
+right? Cuz you have to check whether or
+not this set is an independent set.
+Okay.
+So, why is this true?
+I When I say all, I mean for all S.
+Right? So, if you think about this
+formula, I guess I erased it. The
+formula here was sum over S subset V
+negative one to the V minus minus S of F
+hat
+of S
+to the K.
+Right? That was the value we had here.
+So, I claim that
+you know, you can for example compute
+this thing in three to the end time and
+poly space.
+So, how would you Yeah, how would you do
+that?
+I'm sorry?
+I mean uh yeah, so not
+um
+um it's Yeah, so not
+Right, so
+not even really recursion, but just I
+mean just kind of brute forcing it.
+Right? So, let's say you wanted all the
+hat values, right? The naive way to do
+it is you loop over all S and you
+compute Right? So,
+let's look at hat, for example. F hat of
+S
+is the sum of all R subset of S of F of
+R.
+Right? So, let's say that I wanted to
+compute
+let's say we want
+you know, F hat of S
+for all S.
+And after we compute F hat of S for a
+particular S, we don't need to store it
+cuz we're going to keep it into a
+running sum that we're using to compute
+something else, right?
+We just want to compute them compute the
+answer throw it away compute the answer
+for the next S throw it away etc.
+How much time does it take? Well, for
+each S, we take time proportional to the
+number of subsets of S.
+Which is two to the size of S.
+Right? So, the time
+up to the star notation is the sum over
+all S's sum over all R sorry subset of S
+two to the size of R.
+And we already saw this before.
+Right? What is this? This is equal to
+um
+Well, actually we want this for all S's.
+So, the sum over all subset of V
+two to the S.
+Right? Two to the S time cuz we have to
+loop over all R's which are in S.
+And we said, look we said this is equal
+to the sum over all I from one to N of N
+choose I. That's the number of sets S
+there are of two to the I. And we
+already we already saw last time that
+this is at most three to the N.
+Right? We talked about this last time.
+So, it's three to the N time and it's
+poly space just by brute force doing it.
+So, last time we mentioned that there's
+a dynamic programming algorithm for K
+colorability which took roughly three to
+the N time and three to and two to the N
+space, but it turns out using
+inclusion-exclusion, you can do it in
+three to the N time and poly space.
+Okay.
+So, what about a faster algorithm?
+So, there's something called Yates
+algorithm.
+And that gives you something like two to
+the end time and space.
+Okay?
+And I'll describe it for um the zeta
+transform
+and I'll actually prove that it works.
+And then I'll just mention what you
+would do for the Mobius inversion. It's
+very similar.
+Okay.
+So, it it's a dynamic programming
+algorithm.
+Usually, I like to describe dynamic
+programming algorithms by just giving
+you the recurrence. I describe it as a
+recursive algorithm. And then you can
+turn it into
+dynamic programming using memorization,
+right? You remember the answers to
+things you saw.
+So, let's come up with a
+a nice recursive formulation that will
+get us all of the F hat of S values.
+Okay.
+So,
+remember, we want
+F hat of S for all S.
+Let's define a function
+I'll call G of I {comma} S
+as the sum over all R subset of S.
+And I'll say what this means very soon.
+S I equals R I
+times F of R.
+What's this S of I business? So, S of I
+just means
+S intersect I plus one up to N.
+Let's say that all of these are subsets
+of 1 to n.
+Okay?
+So, we want f hat of s. What's f hat of
+s in terms of g?
+g n
+Yeah, g n s, right? So, note
+uh f hat of s
+is just g of n, s.
+Right? Why is that? Because when i is
+equal to n,
+the the set from n + 1 up to n is the
+empty set.
+So, s of i is s intersect the empty set,
+which is the empty set. And the empty
+set always equals the empty set. So,
+this is just always one.
+So, you have a sum over all r of f of r,
+which is exactly f hat of s.
+Okay?
+So, we want g of n, s, and we're going
+to go come up with a recurrence that
+lets us compute g of n, s.
+So, first of all, the base case,
+g of
+So, let me let me claim it, and then
+we'll prove it.
+I claim that g of i, s
+is equal to First of all, the base case
+for me is i is zero.
+If i is zero,
+then this is everything. So, s of i is
+just s.
+So, this is just testing whether r
+equals s,
+which is only true when r equals s. So,
+um you get F of S
+if I is equal to zero.
+Otherwise, the recurrence that I'm
+the recurrence that I'm going to claim
+is that this equals
+G of
+I minus one S
+plus
+an indicator for I being in S times G of
+I minus one S minus I
+if I is bigger than zero.
+Okay.
+So,
+just in terms of space and time, you
+know, we're going to prove that this is
+this is actually correct. In terms of
+space and time, well, how many states
+are there in this memoized function?
+There are two to the N possibilities for
+S. There are N possibilities for I.
+So, the space is like N times two to the
+N
+times the amount of space it takes to
+hold these sums.
+But, these sums are, you know, at most
+exponentially large, so you can write
+them down in at most N bits or N bits.
+I mean, it depends on what F is. I
+didn't say, you know, F maps to some
+arbitrary ring. So, the space is N times
+two to the N times the space to store a
+ring element.
+Okay.
+How about the time? Well, within each
+state
+to compute the value for that state
+you need to do at most a constant number
+of recursive calls.
+And then a constant number of arithmetic
+operations.
+Right? So, the time is proportional to
+the space.
+Okay.
+So,
+you can compute all of this in for all
+S, you can compute G of N S in O O star
+of two to the n time and space.
+So, now let's prove that it's correct.
+Prove that it satisfies this recurrence,
+I mean.
+So,
+let's write GI of S in a different way.
+Let's just break up the sum into two
+pieces.
+So, I can write that GI of S
+Let me give myself some more space.
+So, I can say, "Look, GI of S
+is equal to
+the sum over R subset of S such that I
+is in R
+of
+SI equals RI
+times f of R
+plus
+the sum over R subset S
+such that I is not in R.
+SI equals RI
+times f of R.
+Okay.
+So, now let's Let me prove to you that
+it this actually satisfies this
+recurrence. So, case one
+Case one is that I is not in S.
+If I is not in S
+and R is is in S is contained in S, then
+certainly I is not in R.
+In which case the first sum completely
+disappears.
+Cuz it's the empty sum. There are no
+such Rs.
+Okay?
+But if I is not in S, well, SI minus one
+will be the same thing as SI.
+And I is not in R either, so RI is also
+the same as RI minus one.
+So this implies
+first sum
+is zero. It vanishes. It's the empty
+sum.
+And the second sum
+is a sum over R contained in S such that
+SI minus one
+equals RI minus one
+f of R.
+Which is just
+g of I minus one S.
+And this term didn't appear because I is
+not in S.
+So that's great.
+Case two.
+Let me maybe give myself some space.
+Is that I is in S.
+Okay, so if I is in S
+then
+if I is also in R
+that means that SI minus 1 will equal RI
+- 1.
+Cuz both of them both S and R contain I.
+So, if I is in S,
+then
+the first sum
+equals
+the sum over all R subset S such that SI
+- 1 = RI - 1
+times f of R.
+Okay?
+Which again is going to give us
+uh
+Where did it go?
+It's going to give us this term, the GI
+- 1 S.
+And then let's look at the second sum.
+So, in the second sum,
+we want to sum over all R's that don't
+contain I such that it agrees with S
+from I + 1 onward.
+Okay?
+So,
+that means that it agrees with S - I
+from I onward.
+In the second sum,
+we want
+R
+which agrees
+with S
+from I onward.
+Which implies that it agrees
+with S - I
+from I onward.
+So, what is that? That's the sum over
+all R subset S
+of S - I
+I equals R - 1 equals RI - 1
+times f of r.
+And this
+Remember, we're in the we're in the
+second case where I is in S. So, we're
+For this term to appear, I has to be in
+S. And then we get exactly g of I minus
+1 S minus I.
+So, that's that's it.
+Okay.
+So,
+summary, we can compute we can figure
+out we can decide k-colorability in
+roughly 2 to the n time up to poly n
+factors.
+Questions?
+And I should mention maybe some
+references if you want to see more on
+this.
+Um
+can solve, you know, other problems
+using this technique.
+I only gave you one example.
+So, for example, min Steiner
+tree
+uh you know, find
+all k-colorable
+induced subgraphs.
+And there are a bunch. Um
+maybe so I'll give you some references.
+So, you can look at, for example,
+Husfeldt
+has a survey article.
+I think it's called Actually, I may have
+a copy with me.
+An invitation to algorithmic uses of
+inclusion-exclusion. Okay, so he's
+inviting you.
+It's in Icalp 2011. It's also
+on the archive.
+And there are several other uh uh
+You can find more references in that
+paper.
+Yeah.
+Um let me think for a second.
+All right. So, you want So, I said that
+this function G, I said that G of V is
+um
+What did I say? I said that G of V
+is bigger than zero if and only if it's
+K-colorable.
+Right? That was our final I It's erased
+now, but at some point Oh, this is a
+different G. I defined this function G
+which said um G of S is the number of of
+choices of K independent non-empty K
+K non-empty independent sets that are
+all contained in S.
+And then we just wanted to check that
+um or whose union is exactly S actually.
+And we wanted to check that G of V is
+strictly bigger than zero.
+Um
+Are you saying you you said
+Right.
+Yeah, yeah. That's That's actually uh
+That is actually true.
+That's actually true. Yeah, so let me
+think about what's going on there. Yeah,
+so what you said sounds makes some sense
+makes sense. Yeah, so
+So, yeah. Okay.
+But there are other problems that have
+nothing to do with coloring, too, which
+you can solve.
+Okay.
+Um
+So, okay. So, but before I switch to the
+next topic
+you know, one
+one thing I should point out is, you
+know, the first the first question that
+might come to your mind when you see
+this algorithm is well, maybe I don't
+actually want to just know if it's K
+colorable. I want to actually find a K
+coloring.
+Right? So, at the end of the day I
+evaluate this formula, I get something
+positive, I know there's a K coloring.
+How do I actually then find a K
+coloring?
+It turns out that you can do it in
+roughly the same algorithm in the
+roughly the same running time.
+So, for example, there's a reduction
+a reduction in the uh Bjorklund
+Husfeldt
+Fox 06
+um shows
+can also
+find
+K coloring.
+And I'll start to do that.
+type space.
+It's actually very short. It's maybe a
+couple paragraphs. Um I'm not going to
+cover it in class just cuz I'm running
+low on time, but if you want you can go
+the paper's on archive, check it out.
+I mean, it's it's got it's a black box
+reduction. They're saying like if you
+can compute
+if you can compute the chromatic number
+of of a graph in 2 to the end time, then
+just black box that implies that you can
+that you can actually find a K coloring
+in roughly the same time.
+It's not it does not specific to their
+algorithm.
+So, in the last I guess class and a
+half, I'm going to talk about something
+totally different.
+Um so, before I do that, namely
+streaming and sketching,
+uh are there any questions?
+mentioned
+your
+Oh, right. So, I mean, that formula I
+had, right? So, the formula we remember
+we had
+uh G is K colorable
+if and only if
+and then I said the sum R subset
+of
+What was this thing?
+So, there's S subset of V -1 to the V -
+S
+uh F hat
+of S
+to the K is bigger than zero.
+Right? So, remember I we had this This
+was our algorithm. Our algorithm is just
+going to compute this thing.
+Okay? And check that it's positive. So,
+I mean, the reason I
+So, I said I was going to talk about
+zeta transforms and Mobius inversion,
+but this is exactly the Mobius inversion
+of the zeta transform.
+So,
+um I just I I told you about those two
+those two transforms to explain where
+this formula is coming from.
+Yeah.
+And then I get So, this Yates's
+algorithm Oh, and I I didn't mention
+how to actually compute Mobius
+inversion.
+Right? I just mentioned how to compute
+the zeta transform. But, uh maybe I'll
+leave that as an exercise. So,
+there's there's there's almost an
+identical way to compute the Mobius
+inversion using a similar kind of
+dynamic program.
+Okay.
+Maybe I'll put that in the notes. Or
+until then, you can try and
+think about it as an exercise.
+Any other questions?
+Okay.
+So,
+final topic.
+And so, there are many um
+advanced algorithms classes
+that maybe spend
+more than a lecture and a half on this
+topic. But, uh
+we have a whole class on this topic at
+Harvard. It will It will be offered next
+fall, namely algorithms for big data.
+It's not just on this topic, but this is
+one of the topics that we spend a lot of
+time on. So, I didn't want to uh
+kind of reduplicate things that
+are in another class uh by too much.
+Just in case you have taken it or will
+take it in the future.
+Um
+but, sketching and streaming.
+And I'll also try to
+next lecture I'll mention
+an algorithm that's connected to
+something we have we've seen already.
+That can be used to speed up something
+we've seen already, actually.
+Okay, so So, what's the idea?
+So,
+first,
+we'll cover streaming.
+Okay. And what is streaming? Streaming
+is just
+it's really just uh
+data structures, small space data
+structures.
+Okay.
+So, I'm going to look at a particular
+model.
+So, we have some
+high dimensional
+vector X
+say in RN
+or maybe
+high dimensional matrix
+capital X
+Today we're just going to look at a
+vector vector problem.
+Uh
+and
+we want
+just like data structures, we want to
+support
+updates to X
+and also queries about X.
+Okay.
+So
+what kinds of updates and queries do we
+want to support? Well, I'm going to talk
+about one kind of update that we want
+we're going to look at. So there's
+something called the turnstile model.
+This term was due to Muthu Krishnan.
+Maybe in '05, but I
+I'll I'll look that up.
+And the idea is
+each update
+I is a pair, it's an index I as well as
+an amount V
+causes the change
+XI gets incremented by V.
+Okay.
+And also at the beginning of the stream,
+let's say X starts off
+as the zero vector.
+off.
+So, for example,
+um maybe X is maybe N is uh the number
+of IP addresses that exist, so 2 to the
+32 or 2 to the 128 in IPv6.
+And
+some algorithm is sitting in a router
+and it's maintaining X, where XI is the
+number of packets that were sent to IP
+address I.
+Okay?
+So, every time you see a packet,
+you can interpret that as an update. You
+look at where the packet is going to,
+it's going to some IP address I, that
+can be seen as an update I comma 1.
+Right? There's one more packet going to
+that IP address.
+And then at the end of the day, you want
+to compute
+some query about X.
+So, example queries,
+maybe you want to know,
+you know,
+what is XI for some I, or maybe you want
+to know what is
+the support size of X.
+Right? How many IP addresses received
+traffic since the beginning of the
+stream?
+Or how many packets did this IP address
+receive?
+Okay?
+And
+maybe I'll mention there's always
+So,
+always
+the solution
+of either
+remembering
+remember
+ing
+X or the whole string.
+So, either, you know,
+N or M space.
+Where this thing here is the stream
+length.
+So, the goal usually in streaming
+algorithms is to come up with an
+algorithm that uses
+much less space than the trivial
+solution.
+Right, you don't want to You don't want
+to remember the whole vector, and you
+also don't want to remember the whole
+stream.
+So, one goal
+is very low space.
+Right, so you imagine you're seeing all
+the traffic going through your router.
+You're using IPv6. You don't want to use
+2 to the 128 space. You don't have 2 to
+the 128 space.
+You also don't remember every packet
+that you've ever seen.
+Okay.
+So,
+let's look at an example.
+Let's say query There's only one query
+that's allowed,
+which is the support size.
+And for historical reasons, I'm going to
+denote this by F0.
+Okay.
+And also,
+all updates
+IV
+have, let's say, V being one.
+In general, you might allow negative
+updates as well.
+But for us, we're only going to we're
+going to assume that this is the query
+and all updates have V equals one.
+So, really, it's how many distinct IP
+addresses
+did my router, you know, or receive
+traffic today or something? Okay, that's
+that's the thing we want to know.
+Questions about this example problem
+before I say some more things about it?
+All right, so, to be more precise, you
+can use exactly N bits of space to solve
+this problem.
+You just remember a bit string where the
+Ith bit is one if you've ever seen IP
+address I.
+Or you could use M times log N bits of
+space, where the stream length is M,
+remember?
+And what is a stream element? It's an
+index I, which takes log N bits. So, to
+remember all of them takes M log N.
+So, we want to do much better than that.
+Unfortunately, claim,
+any deterministic
+algorithm
+for F0
+requires
+let's say,
+omega
+min
+N M
+bits of space.
+So, unfortunately, uh
+we can't solve the problem much more
+efficiently. Let's prove this.
+And this is this I think was first
+observed in uh
+paper of Alon
+Matias and Szegedy.
+Uh I know the the conference version was
+'96, but I believe the journal version
+was in '99.
+So let's prove that.
+So it's going to be via an encoding
+argument.
+What do I mean by that?
+I mean if we could actually solve this
+problem in less than linear space,
+we're going to be able to encode So
+suppose I suppose I want to design an a
+compression algorithm.
+Okay?
+What should this compression algorithm
+do? It takes as input an n-bit string,
+and it outputs some compression of it.
+What's a compression of it? It's just
+some mapping that can be inverted. Okay,
+it's some injection.
+So
+our compressed version version, let's
+say we're compressing it into another
+string.
+Okay?
+So
+if I if I want a compression of all
+n-bit strings into some other bits into
+say t-bit strings, how big does t have
+to be to ensure that this is possible?
+At least n, right? Just by the
+pigeonhole principle. I mean or you
+know, you can't have an injection into a
+smaller set. So that's what it So um
+So
+suppose
+Let me write it down what I mean.
+Suppose we had
+a space
+S algorithm
+streaming algorithm.
+We will show
+how to then
+design
+design a compression
+algorithm
+mapping
+N-bit
+strings
+to S-bit strings.
+Which implies, as you said, S has to be
+N.
+For for it to A compression algorithm is
+an injection.
+So, you can't have such an injection
+unless S is at least N.
+And
+the streams that are going to arise in
+this proof
+will have M being roughly N as well.
+So,
+um
+in this example, M and N are roughly the
+same thing.
+So, let's let's design such a
+compression algorithm.
+So, let's say Alice
+receives
+some X which is in 0 1 to the N
+and wants to compress it
+using
+our F0 algorithm
+A.
+So, what does she do?
+Well, I mean, the A A takes as input
+streams.
+So, she's going to create an artificial
+stream,
+feed that to A,
+and then she's going to compress her
+string X as being the memory contents of
+A.
+Right? And since A uses S bits of
+memory, that's going to be an S bit
+compression.
+So, what's the stream that she's going
+to create?
+And we also have to show that it's an
+injection. And to do that, we'll give a
+decompression algorithm.
+So, how does she encode an of X? How
+does she encode X?
+She creates a stream
+containing
+the set I such that XI is 1,
+runs A on it,
+and then she outputs
+the memory contents of A.
+So, now we have to show that this
+compression allows for decoding.
+So, now Bob gets this compression and he
+wants to decode.
+So, what do you do?
+How do you decode and figure out what X
+was based on this compression?
+Yeah, exactly. Try adding more bits and
+see if the support size changes.
+Right? So,
+So, we're given
+mem contents
+of A.
+And
+we'll continue
+running A
+starting
+with this state.
+Okay, so what do we do?
+Here's the algorithm.
+Let's let Z
+be
+a query.
+Okay.
+A.query.
+So that's that's the that's the number
+of distinct elements in the stream.
+Starting off from where Alice left off.
+Basically, the number of one bits in X.
+And then
+for I being one to N
+we'll insert I in the stream.
+And then we'll check
+if if A.query now
+has gone up
+that means that
+um sorry, no. No, no, if it hasn't gone
+up.
+If A.query hasn't gone up
+it means that the Ith bit was already
+one.
+Right?
+Which means that Xi is one.
+Otherwise, if the if the if it did
+increase, otherwise Xi is zero.
+And then now we'll
+we'll uh
+set Z to be the new value.
+That's the decoding algorithm.
+Questions?
+So,
+great. So, we can't do it with a
+deterministic exact algorithm.
+So,
+let's look at deterministic exact F0.
+We just showed that that's impossible.
+How about
+deterministic approximate?
+How about
+randomized
+exact?
+And how about randomized
+approximate?
+What do I mean by these?
+Here I mean is a deterministic
+algorithm, it always is correct.
+Okay?
+And
+it doesn't give us the support size, but
+it gives us a value which is going to be
+within 1% of the support size.
+Like guaranteed.
+What do I mean here? I mean we have a
+randomized algorithm
+which with 99% probability will give us
+the support size.
+With the other 1% probability, it might
+output some junk.
+Okay? So, the question is, is that
+possible?
+And then, this is like the most relaxed
+version.
+It's a randomized algorithm with 99%
+probability, it'll give us an answer
+that's within 1% of the true answer.
+And then with 1% probability, it It give
+us junk.
+Okay.
+So,
+um
+it turns out that
+I'm not going to prove it here.
+Um
+both of these are also impossible.
+You can prove, also via encoding
+arguments actually,
+that these things are also impossible.
+All of these are due to the paper uh
+AMS.
+And it turns out that yes, this is
+possible.
+And when I say possible, I mean possible
+in sublinear space. It's always possible
+by remembering everything.
+And this
+is due to Flajolet
+and Martin
+in uh JCSS
+'85.
+Okay.
+Yeah.
+Yeah, let's say you want uh
+any constant like two two approximation.
+It's impossible. Yeah.
+You mean in the randomized uh
+Um
+No, it's just going to be it's like this
+Monte Carlo kind of algorithm, right?
+So, there's In general, when you talk
+about randomized algorithms, there's
+this Las Vegas Monte Carlo. Las Vegas
+means it's always right, but the running
+time or the space or something is
+expected.
+And Monte Carlo means
+the efficiency is always guaranteed, but
+the correctness is randomized. Um
+So,
+yeah, so this is this Monte Carlo flavor
+and yeah, we don't have a guarantee.
+When when it's wrong that 1% of the
+time, it's just it could do anything.
+Um,
+you can you can decrease that 1% to be
+as small as you'd like. You can make
+your failure probability be delta.
+Let's say for this problem, but you
+would pay in your space by paying some
+log one over delta factor.
+Okay. So,
+just uh let me wrap up by showing you
+kind of why
+this is even possible.
+Like why is it possible to beat
+uh I'll give you some intuition for why
+it's possible to beat linear space if
+you're allowed randomization and
+approximation.
+So,
+remember what's our goal now?
+Is to develop
+a randomized
+algorithm
+A such that for all
+um
+for all streams
+S
+the probability
+over over the randomness in the
+algorithm
+that
+let's say the output of A on stream S
+minus F0
+is bigger than
+um let's say epsilon
+times F0
+should be at most let's say a third.
+You can make this third be as small as
+you'd like, make it be delta. You'd pay
+something in your in your efficiency.
+So let's say let's look at an idealized
+randomized algorithm.
+This is Flajolet-Martin.
+So
+why is it idealized? The first The next
+thing we're going to write is going to
+be idealized. So let's say we have
+a totally random hash function.
+Which maps
+I'm just from now on I'm just going to
+call this thing bracket n.
+It maps our universe, our coordinates of
+this vector x,
+into the continuous interval from 0 to
+1.
+So each index of x gets assigned a
+totally random fraction between 0 and 1
+by this hash function.
+Uniform.
+Uniform value. So already this is a
+little problematic. Um
+we can't actually store I mean the point
+is to use sublinear space.
+And if I'm telling you I'm using a
+totally random hash function, that's
+that takes as
+that has n different possible inputs, we
+have to store these n random numbers.
+That's already n space.
+Furthermore, these are real numbers and
+our computer can't store real numbers,
+right? It has finite precision. So
+that's another catch.
+So it turns out that A you can
+discretize You can make an algorithm
+like the one I'm going to tell you work
+by discretizing this, so the precision
+you need is not that bad.
+Okay, you can discretize this into
+fractions whose denominator is say poly
+n.
+So, you just need to work with numbers
+that are take log n bits of precision.
+And another thing is, you know, the fact
+that you need n random numbers, that
+would take you n space to store this
+hash function. But remember earlier in
+the course we talked about you know,
+pairwise independence and other kind of
+limited
+randomness hash functions. You can use
+those kinds of things to
+um
+in place of what I'm going to tell you
+as well. Okay, so I'm not going to talk
+about that here, but
+uh
+you can get away with a reasonable hash
+function that doesn't take that much
+space to store.
+Okay?
+So, the the idea that makes
+Flajolet-Martin work
+is
+is the following. So, here's the
+algorithm.
+Let Z be the min
+over all I in the stream
+of h of I.
+The number Z can be stored just using
+one number. I mean, Z is one number,
+right? So, this is like one unit of
+memory if we can store real numbers.
+Right? Every time you see an I, you hash
+it, and then you set your current
+value to be the min of what it was
+before and the new hash.
+And then when you ask for a query
+to answer
+a query for the number of distinct
+elements
+or the number of the support size
+we output
+1 over Z minus 1.
+Okay.
+If you want to
+So,
+here if I put I put this epsilon here.
+So, if you want if you want an epsilon
+in your in your guarantee, what you'd
+actually do is
+you'd pick
+H1 up to HR
+independently
+where R is going to be something like 1
+over epsilon squared.
+Okay?
+So, you pick R totally random hash
+functions, 1 over epsilon squared
+totally random hash functions.
+And then
+we're going to let
+Z
+let's say ZJ be the min
+over I in the stream
+of HJI.
+Basically, run this algorithm R times in
+parallel with different random hash
+functions in each iteration.
+So, now you're only remembering R units
+of memory as opposed to one number of
+memory.
+And then
+what do you output? You output
+1 over let's call it Z bar minus 1
+where Z bar is just the average of all
+the ZIs or ZJs. 1 over R
+sum J from 1 to R
+of ZJ.
+The idea is this averaging will decrease
+the variance.
+So, that
+um if you if you average enough of them,
+you'll be within a multiplicative 1 plus
+epsilon as opposed to
+um
+as opposed to constant error.
+So, I haven't proven anything,
+but
+are there any questions about
+about the algorithm?
+What the algorithm does?
+No? Okay. Okay.
+So, the basic idea is look.
+Let's look at this hash function H.
+So, we have this continuous interval
+from 0 to 1.
+And we're hashing these F0 items. F0 is
+the support size. We're hashing these F0
+items
+into this interval.
+So, kind of what do we expect to happen?
+We roughly expect them to be roughly
+evenly spaced.
+Where the gaps will be roughly 1 over
+F0 + 1.
+And the smallest of the hash values
+Does we expect the smallest of the hash
+values and expectation, right? That
+should be 1 over F0 + 1.
+Okay.
+All right. If you want to formally prove
+that, you can say look.
+The expectation
+of Z
+is the is
+the integral
+from 0 to 1 the probability that Z is
+bigger than X DX.
+And then you can compute this and get
+what I said.
+Okay.
+Um
+Right. So, maybe the the easiest way to
+do this is to say
+um
+this is
+1 minus the probability that Z is at
+most X.
+And then this thing here
+is the probability that
+for all I
+in this for all I in the stream
+H of I
+is at most X.
+Right?
+And since the H values are independent,
+this is equal to the product over I in
+the stream
+the probability that
+H I
+is at most X.
+And this thing here is just X.
+What's the C in the formula?
+Um
+Right, so
+Z is the min.
+Oh,
+uh right.
+Very good point. I you can't do math.
+So
+Good. So for the min to be bigger than X
+this means that this is the probability
+that for all I
+H of I is bigger than X.
+Okay.
+In the stream.
+And this is just equal to 1 minus X
+to the F0.
+Okay, good.
+And then you can integrate that over X
+and you get what I said and you evaluate
+it and then you'll get what I said.
+Okay.
+You can also show
+You can also show that the expectation
+of Z squared again by a similar kind of
+integral
+is equal to two over
+uh F0 plus one
+F0 plus two. I'm not going to do it for
+you, but you can show it.
+And remember that we have Chebyshev's
+inequality.
+The probability that
+Z minus the expectation of Z
+is bigger than say epsilon times the
+expectation of Z
+is at most the variance
+over epsilon squared times the
+expectation of Z squared.
+And this is at most the expectation of Z
+squared over epsilon squared times the
+expectation of Z squared.
+Okay.
+So, you can do this kind of thing to
+analyze and say, "Look, there's a decent
+chance that Z is actually close to its
+expectation meaning it's close to 1 over
+F0 + 1
+meaning that
+if you invert it
+if you invert it and subtract 1, you'll
+get something pretty close to F0."
+That's the basic idea.
+And the second algorithm here where we
+averaged a bunch of copies before
+inverting it
+what's the point of that? The point of
+that is
+look, so
+each one of those copies has the same
+expectation.
+So, when we average it
+the the expectation of the average is
+the same thing.
+But when you average it, the variance
+the variance goes down by a factor of
+the number of things you averaged. So,
+if you average R things the variance
+goes down by a factor of R.
+So, if you set R to be 1 over epsilon
+squared the variance goes down by a
+factor of 1 over epsilon squared, which
+is just enough to kill this epsilon
+squared here.
+And make this thing still small.
+Okay, so that's basically uh how this
+works.
+Um
+and yeah, I guess class is over. Any
+questions about
+about this algorithm or I mean, it's
+idealized I already mentioned, but any
+other questions?
+Question or
+No, I was just
+about So,
+um
+this is just if you want to be able to
+query only the support size.
+Yeah.
+So, like how much more complicated is it
+going to be if you want to actually be
+able to query individual
+Oh, you want to know xi?
+Or or something more
+specific than just the
+size of the entire support.
+So, yeah. So, he So, he said something
+more specific than the size entire
+support. So,
+So, so So, one I don't I don't know if
+if this is what you mean if you if what
+you mean, but So, here it's funny in
+that there's only one kind of query.
+Often times when we when we solve data
+structural problems, there are lots of
+different possible queries.
+You could look at other problems, too,
+like
+a query also gives you an index I and
+you have to give xi.
+So, just like we had all these
+impossibility results for support size,
+you can prove such things for other
+things as well. So, for example,
+um
+that problem, given I output xi,
+there's no deterministic exact
+algorithm. There's no randomized exact
+algorithm, but actually there is a
+deterministic approximate one, and there
+is also a randomized approximate one,
+which is a bit slightly more efficient.
+Um What does approximate there mean? It
+means I'm not going to output xi,
+but I'm going to output, say,
+xi plus or minus some error term, and
+that error term is allowed to be say
+epsilon times some norm of x, maybe the
+L1 norm or something.
+So, uh for that kind of relaxation of
+the problem, you can also get small
+space algorithms.
+And there you have lots of different
+possible queries. You have n possible
+queries.
+So why can't that be used to get a
+deterministic approximation for the
+support size?
+Well, so you get this for every single
+i, right? So in particular, if i is z-
+if xi is zero,
+the query algorithm might tell you that
+xi is epsilon times the l1 norm.
+Right? So you don't know which ones are
+actually zero and which ones are maybe
+close to zero.
+What if they're discrete?
+If what's discrete?
+The values. So like what if xi are
+Oh, I mean even if they're integers, uh
+right? So
+let's say uh I mean
+epsilon might be
+a tenth or something and the l1 norm
+might be divisible by 10. So I mean this
+thing will still be
+it might still this might still be an
+integer
+and you wouldn't know whether or not
+it's uh
+w- if whether or not it's zero or
+non-zero.
+Whether xi is zero or non-zero. I don't
+know. D- Does that answer your what your
+worry is or
+Well,
+I mean there you're allowed to choose
+epsilon
+as small as
+Yeah, but then your space will increase
+as a function of epsilon. So
+for example, the deterministic
+algorithms, your space will be like one
+over epsilon squared and the randomized
+algorithms, you can get space one over
+epsilon.
+Up to some extra maybe log something
+log one over delta, etc.
+Okay, I think we're definitely out of
+time, so
+I guess I will see you Tuesday. Happy
+Thanksgiving.
+Happy Thanksgiving.

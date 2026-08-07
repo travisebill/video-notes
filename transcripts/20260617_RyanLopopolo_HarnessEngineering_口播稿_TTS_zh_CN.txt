@@ -1,0 +1,19 @@
+本场录影收录于 2026 年 4 月 AI Engineer Summit London。 讲者 Ryan Lopopolo 是 OpenAI 的 Member of Technical Staff， 过去九个月带领一支全职员工团队， 实验性地禁止团队手动打开编辑器——所有程式码必须经由 coding agent 生成。 Ryan 自称 token billionaire， 每日消耗超过十亿颗 output token， 这个数字本身就是一种宣言：在 agent-first 的工作模式里， 程式码已经不再稀缺， 稀缺的是 context、 是注意力、 是判断。
+
+从软体工程经济学角度， 这场演讲的主轴呼应了 Andrej Karpathy 早前提出的 Software 2. 0 概念——当程式码生成被模型接管， human-in-the-loop 的价值就从「会写」转向「会设计让模型写好的系统」。 Ryan 把这个转向具象化为一个词：harness engineering。 harness 指的是缠绕在模型周围的所有约束与提示系统——lint 规则、 tests、 reviewer agents、 skills、 文件——它们的共同任务是把那些过去藏在资深工程师直觉里的非功能性需求， 外化成模型可以读取的 text。
+
+Ryan 在开场抛出的核心主张是 Code is free。 程式码的产出、 重构、 删除成本被模型压到接近零之后， 工程师团队规模的唯一限制就只剩下 GPU 与 token 预算。 他做了一个类比：每位工程师今天相当于拥有 5, 000 个 agent 级的产能可以驱动。 这个观点呼应了矽谷过去半年关于 junior 工程的辩论， 但 Ryan 的著眼点不在就业冲击， 而在排程哲学的翻转——过去所有 stack-rank 永远排不到的 P3 工作， 现在可以全部 kick off、 四倍平行、 最后挑一个收尾。 他举了一个内部案例：在 Code is free 的世界， 所有内部工具从 day one 就有完整国际化， London、 Dublin、 Zurich 的同事可直接用母语使用， trade-off 消失。
+
+从 process design 角度， Ryan 认为真正重要的不是程式码本身， 而是产生程式码的那条 prompt 路径与 guardrail。 他用 breadcrumbs 这个词涵盖所有 process artifacts——tickets、 code review 纪录、 ADR、 persona 文件——这些对人类是组织记忆， 对 agent 是 prompt 来源。 他主张一个好的工程系统必须对 agent legible， 也就是说文件的目标不是写给谁看， 而是让执行任务所需的 tokens 变得可预测。 「Make things the same」是贯穿全场的方法论口号——当 codebase 内每个 pattern 只有一种写法， agent 在任何 subtree 开发时累积的 transferable context 就能跨档案、 跨模组复用。
+
+从资深工程师的视角， Ryan 指出单一 patch 通常包含约 500 个 micro decisions， 每个都是非功能性需求的 trade-off：retry 要不要加？ timeout 设多少？ 这个 interface 是否可能被误用？ 模型在 training 时已经看过数兆行包含各种 trade-off 组合的程式码， 所以模型并不是不知道「哪种 trade-off 是好的」， 而是没有被 prompt 提醒。 于是 Ryan 的解方是把这些 trade-off 写下来——不是写给自己， 而是写成 persona 文件、 写成 lint 规则、 写成 reviewer agent 的 rubric。
+
+最具操作杠杆的具体技术是 reviewer agents。 Ryan 的团队为 security、 reliability、 frontend、 product 四种 persona 各训练一个 reviewer agent， 每次 push 自动触发， 读 persona 文件 + proposed patch， 输出 P2 等级以上的阻挡意见。 这些 reviewer agent 不是取代人类 code review， 而是把人类从重复性的非功能性需求检查中解放出来。 Ryan 描述了一个极具画面感的场景：他用一条束带把 laptop 固定在汽车后座， 靠手机 tether 让 Codex 持续 inference， 三十分钟通勤即可让一个长时程任务跑完； GPT-5. 4 与 Codex 的 auto-compaction 已经好到他几乎不再手动 /new。
+
+从系统工程角度， 这套方法真正的关键是一个闭环：Friday garbage collection day。 Ryan 团队每周五整天不写新功能， 而是把当周 PR 上观察到的所有 slop 系统化分类、 写进 repository 文件， 再交给 persona-based reviewer agent 自动挡同类问题。 下周起， 这类 slop 在 PR 阶段就被挡下， 人类 review focus 进一步上移到更高杠杆议题。 这是一个用 lint + 文件 + reviewer agent 三件式组合， 把人类的 process memory 转成可执行的自我愈合系统的案例。
+
+Ryan 在 Q&A 阶段也提出一个值得反思的框架：LLM as fuzzy compiler。 把 LLM 视为可热插拔的 code generation backend， 把 harness 视为 constraints + optimization passes， 则 swap 模型就像 Rust 编译器从 LLVM 换成 Cranelift——harness 结构不变， acceptable output 仍成立。 这个类比把「prompt engineering」这个被过度浪漫化的词， 还原成一个工程师熟悉的概念：把模型当成编译器、 把上下文当成型别约束与最佳化条件。 这也解释了为何他强烈偏好 first-party harness——模型是在自家 harness 内的 context 上做 post-training 的， apply patch、 quoting 等工具语意已经被对齐。
+
+最后， Ryan 描绘了一个相当极端的愿景：给定一个 quarter 级的 token budget 与 success metrics， 人类负责 ranking 与方向， agent 负责 24/7 推进产品。 从管理学角度， 这个愿景与 Andy Grove 早期 OKR 框架的精神并不矛盾——目标设定在人类、 执行交给可量化系统。 差别只在于， 过去那个系统是员工， 今天这个系统是 agent 群。
+
+这支影片最鲜明的口号是——Code is free, prompt is the artifact。 当工程师放弃把自己定位为「会写程式码的人」， 转而定位为「设计让程式码长对的系统的人」， 软体工程的稀缺资源配置才真正对齐到这个新时代的生产函数。

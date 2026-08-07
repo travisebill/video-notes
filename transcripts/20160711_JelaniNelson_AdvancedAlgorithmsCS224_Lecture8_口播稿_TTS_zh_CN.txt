@@ -1,0 +1,11 @@
+Online algorithms 的核心问题是：面对未知的未来，每次 request 都必须立即做决定，怎么做才能让「后悔」最少？这个问题的解答框架叫做 competitive analysis——把 online algorithm 与事先知道整个 request sequence 的 offline OPT 比较，以倍率衡量 regret。Competitive analysis 概念由 Sleator 与 Tarjan 在 1985 年提出，跟同年提出的 splay tree 是两篇不同的论文。具体来说，若对所有 request sequence σ 来说，online A 的 cost ≤ r 乘以 OPT 的 cost 加上一个常数，就说 A 是 r-competitive。
+
+这堂课介绍三个 toy example 带出 competitive analysis。第一个是 ski rental：每天租雪具一块钱，买雪具 B 块钱，但不知道会滑雪几天。最简单的 2-competitive 演算法是「前 B 天都租，第 B 天就买」。这个演算法在 m ≤ B 时跟 OPT 一样只租 m 天；在 m > B 时 OPT 会选一天买完，online 演算法成本最壂是 2B。
+
+第二个是 move-to-front list：每次 access 某个 item 就把该 item 搬到 list 的最前端，cost 是 access 路径长度。MTF（move-to-front）演算法对任何 access sequence σ 来说都能达到 2-competitive 加 O(n)，代表 MTF 把 hot items 自然推到前面，逼近 offline OPT 任意 reorder 的能力。
+
+第三个是 paging：cache 大小 K、总共有 N 个 pages 散落在磁碟，每次 access 要不在 cache 就得 evict 一个。LRU 与 FIFO 都是 K-competitive。下界证明用 adversarial argument：adversary 构造 sequence 让 online 每次 evict 一个 page，下一个 request 就是刚刚被 evict 的 page，因此 online cost 达到 K × OPT cost。所以对 paging 来说，K 是 deterministic online 的 tight bound，LRU 与 FIFO 都达到这个 bound。
+
+但这个 K 的 tight bound 对 deterministic 而言，randomized 是否能突破？这就是下堂课要回答的问题——Mark 演算法达 2 H_K competitive，其中 H_K 是第 K 个 harmonic number，代表 randomize 确实比 deterministic LRU 的 K competitive 更好，但要付出 randomness 的代价。
+
+整堂课展示的核心思想在于：online 算法不能跟 OPT 单纯比成本，而是要跟「在同样 input 上 OPT 必须付出的成本」比。这个 framework 让许多看似无解的决策问题——滑雪买租、cache 替换、list reorder——能被厳谧分析并设计出证明上限的演算法。Sleator-Tarjan 1985 的这套方法论之后广泛应用于 algorithm 设计，如 k-server problem、metrical task system、online convex optimization 等不同抽象的 online 问题。

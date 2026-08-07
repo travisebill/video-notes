@@ -1,0 +1,19 @@
+CS336 第二讲由 Percy Liang 主讲,主题是 PyTorch 基础与 resource accounting。开场先报告好消息:Moraine 计划预训练的大模型 loss 与预测值差距仅 0.05——这证明 scaling law 的外推有效,他们甚至公开了外推到 GPT-5 等级的预测 loss 数字。
+
+本讲要建立的核心 mindset 是:每写一行 code,先想它的性能特征。Percy 用了两个经典问题开场。第一个是「70B 参数模型在 15T tokens 上用 H100 训练要多久?」答案透过 6ND 公式算 FLOPs、查 spec sheet 拿 H100 throughput、再乘 MFU 0.5 估实际效率,得到 143 天。第二个是「8 张 H100 用 AdamW 能 train 最大的 model?」每个参数要 12 bytes(2 + 2 + 4 + 4,BF16 参数加梯度加两个 FP32 optimizer state),80GB HBM 算出上限约 53B 参数。这些都是 back-of-envelope 计算,重点是掌握 rough shape,不是精确数字。
+
+进入技术细节。Tensors 是 LM 的万物基础——参数、gradient、optimizer state、data、activation 全部都是 tensor。DeepSeek 3.2 为例,每个矩阵有 shape 与 precision,模型就是一堆 tensor 的集合。Float32 是预设,但现代训练已走向低精度:BF16 是 sweet spot,因为 1 + 8 + 7 bits 结构让 dynamic range 同 FP32 但精度同 FP16。FP8 有两个变体——E4M3 偏 dynamic range、E5M2 偏 resolution——NVIDIA Transformer Engine 内建支援。最激进的是 FP4,NeMo-3 Super 2025 年已实际用 NVFP4 训练,透过 block 共享 scale 来扩展表示范围。
+
+Einops 是本讲最重要的工具。Percy 用 einsum notation 取代传统 matmul 写法,因为 named dimensions 让 broadcasting 与 chain rule 不再出错。例如 forward 是 `Y[b,k] = einsum("b d, d k -> b k", X, W)`,backward 算 X 的梯度时只要记得 scalar case 倒推——`X.grad[b,d] = einsum("b k, d k -> b d", Y.grad, W)`——永远对。学会 einops 后,transformer 的 QKV attention 与 MLP 都可以干净表达。
+
+Matmul FLOPs 的核心公式是 2BDK——B 是 batch、D 是 input dim、K 是 output dim,每个 output element 做 D 次乘加。换个角度:matmul FLOPs = 2 × tokens × params。延伸到整个 LLM,forward pass 2ND、backward pass 约 4ND,总计 6ND——这就是业界常用的 6ND 公式由来。
+
+MFU(Model FLOPs Utilization)是实际 FLOPs/sec 除以承诺 FLOPs/sec。Spec sheet 写 H100 有 989 TFLOPs BF16,实际可能只有一半——0.5 MFU 算优秀,纯 matmul 可能达 0.8,0.1 表示严重问题。为什么拿不到 100%?因为大部分运算落在 memory-bound 区,不是 compute-bound。
+
+Roofline analysis 把这件事讲清楚。Arithmetic intensity = FLOPs 除以 bytes——也就是每搬一个 byte 的资料要做多少次计算。低 intensity 的运算(像 dot product、element-wise)被记忆体频宽限制,realized FLOPs 跟 intensity 线性成长;高 intensity(像大矩阵 matmul)被计算能力限制,realized FLOPs 饱和在 peak。B200 spec 是 2.25 PFLOPS BF16 配 8 TB/s memory bandwidth,这两个数字决定 roofline 的转折点。
+
+Backward pass 需要算两个 gradient:对 input 的梯度、对参数的梯度,两者都是 2BDK FLOPs,所以 backward 约等于 2 倍 forward。一个 layer 总计 6BDK FLOPs。延伸到 LLM 就是 6ND。Optimizer state 方面,AdamW 每个参数 12 bytes 是固定成本——H100 80GB 不计 activation 最多只能装 6.6B 参数,所以大模型必须靠 sharded optimizer、gradient checkpointing 等技巧突破。
+
+Deep network 的另一个记忆体杀手是 activation——随 layer 数线性增长。Forward pass 的中间值必须保存供 backward 使用,可以用 gradient checkpointing 换记忆体换 compute,只重算部分 activation。
+
+一句话总结:这堂课教的是 LLM 工程师的核心 mindset——把每一个 op 拆成 FLOPs 与 bytes 两个维度思考,选择落在 roofline 饱和区的演算法,用 einops 写出无歧义的 forward/backward,这才是从能跑到能 scale 的底层功夫。

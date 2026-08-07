@@ -1,0 +1,13 @@
+本集整理 Stanford CS329A「Self-Improving AI Agents」第一堂「Course Overview」， 由 Akanksha Sreyas 与 Azalia Mirhoseini 两位教授共同授课。
+
+整堂课由三大段构成。 第一段回顾大型语言模型的演进：自 GPT-3 以来的 Scaling Laws 指出参数量、 资料量、 训练算力三轴与 loss 呈幂次关系， 催生了 PaLM、 Gemini、 GPT-4 等指数级成长的模型。 模型变大后涌现三项关键能力：Zero-shot、 Few-shot 与 Chain-of-Thought 推理。 第二段分析 ChatGPT 领先 GPT-3 的三块基石：Pre-training、 Instruction Tuning 与 RLHF。 第三段介绍 Inference Scaling 的新 frontier——以 Large Language Monkeys 论文为例， 论证不改参数、 仅在推论时搭配 verifier 平行取样， 小模型就能在困难数学题上超越 GPT-4o。
+
+接著进入 Reasoning Models 的讨论。 OpenAI o1、 DeepSeek、 Gemini Thinking 等模型展示了四项核心能力：问题分析、 任务分解、 evolution strategies 与 self-correction， 模型会在 trace 中自言「Wait, 这里有错」并回头修正。 test-time compute 与 pass@1 呈对数线性关系， 这是 self-improving 回路的第一块拼图。
+
+下半场从 LLM 切换到 Agent 的主题。 LLM 作为 chatbot 虽有趣但无法完成任务； Agent 则具备 goal、 action、 feedback 三元素， 能透过 Claude Code、 Deep Research 完成 end-to-end 工作流。 Azalia 拆解六种 Agentic Workflow 原语：Prompt Chaining、 Routing、 Parallelization、 Orchestrator、 Evaluator 与 Verifier， 并举出三个已落地的场景：Coding Agents、 Customer Support Agents 与 Research Agents。 她也指出 Generator-Verifier Gap 是当前瓶颈——有 verifier 的数学、 程式领域进步最快， 创意写作则因人类 feedback 成本过高而卡关。
+
+最后是课程行政：本学期有 3 份 Homework 占总成绩 50%， Course Project 占另 50%， 1 至 4 人可组队， 提案期 10 月初、 Poster Presentation 订于 12 月 12 日。 去年有学生将 project 延伸为 conference paper， 鼓励本届跟进。
+
+整堂课的核心讯息是：在 frontier 模型参数量逼近饱和的当下， 下一波动能来自「让模型自主演化」——把 inference scaling 产生的合成资料回灌到训练流程， 形成 closed-loop， 这也是整个 CS329A 学期的主轴。
+
+（送 TTS 前会 OpenCC t2s 预转为简体）

@@ -1,0 +1,19 @@
+Harvard CS224 高阶演算法第四堂课延续 hashing 主题，涵盖三个主轴：线性探测在五元独立下的更紧证明、Bloom filters 的成员问题解法、Bloomier filters 的撷取问题解法，最后介绍 cuckoo hashing 把三个问题串起来。
+
+Section 1｜开场修正
+课程一开始，教授先为你修正上次 cuckoo hashing lemma 的陈述错误，会用 email 寄给全班。顺道确认学生都在课程 mailing list 上，没注册的到 class website 补注册。接著公告今天的计划：完成线性探测五元独立的证明、讲解 Bloom filters 与 Bloomier filters、介绍 cuckoo hashing 与 power of two choices。
+
+Section 2｜五元独立的线性探测证明
+教授沿用上次的 moment method 框架，为你，但条件更紧。核心引理维持不变：查询进行 K 个探测意味著 hash 值落在至少 K 个长度为 K 的满区间中。期望查询时间被 bound 为对 K 求和 K 乘上区间为满的机率，需要这个机率是一除以 K 的三次方量级才能让总和收敛到常数。Markov bound 的推导用六次动差：因为 hash 是六元独立，可展开六次动差的期望，主要项的系数是 K 的六次方量级，最终得到所需的一除以 K 的三次方上界。为何是五元而非七元就够：condition on hash 值落在区间用掉一个变数后，剩下四个仍是四元独立，四元独立对六次动差展开已足够。
+
+Section 3｜Bloom Filters
+成员问题只需要判断某个元素是否在集合中，当你，允许错误正向的机率不超过 ε。基本方案是用一个 bit array 加一个 hash 函数，插入时把对应位元设为一，查询时读取该位元。对不在集合中的元素，错误正向机率是 n 除以 m，设定 m 等于 2n 时机率是二分之一。改进方案是用对数 1 除以 ε 个 bit array，每个用独立 hash 函数，插入时全部更新，查询时检查全部都为一才回应是。机率压到 ε，空间是 n 乘以对数 1 除以 ε 位元，查询时间是对数 1 除以 ε。Bloom filter 在 1970 年由 Bloom 提出，是现代分散式系统的基础工具。
+
+Section 4｜Bloomier Filters
+撷取问题是 Bloom filter 的进阶版：当你：每个元素有一个 r 位元字串，查询要回传正确字串，不在集合中的元素可回任意垃圾值。空间需求是 n 乘以 r 位元。解法构造精巧：先建立 cuckoo hash table，当 cuckoo graph 没有 cycle 时是 forest 结构。对 forest 的每条边对应的元素，指定其深节点为拥有者，从顶端往下以 XOR 填值：根节点存零，每个边在深节点处填入使 XOR 等于目标字串的值。查询时输出 g 位置与 h 位置的 XOR，因为 XOR 的代数性质自动抵消中间节点的值，直接得到正确字串。Bloomier filter 由 Chazelle、Kilian、Rubinfeld、Tal 在 2004 年提出。
+
+Section 5｜Cuckoo Hashing 构造
+动态字典问题的解法是 cuckoo hash table，教授为你展示。结构是两个 hash 函数 g 与 h 对应到长度 m 等于 c 乘以 n 的 array。插入时先放 g 位置，冲突就把旧元素踢出去，旧元素去它的 h 位置，继续冲突就继续踢。如果踢的链超过十对数 n 步就重选 hash 函数重新建立 table，期望两次内成功。期望插入时间是常数。Cuckoo graph 是分析的关键工具：m 个顶点 n 条边，每个元素对应一条边。动态问题中 cycle 一出现就会卡住，所以用 rebuild 处理；静态问题用于 Bloomier filter 时则事先检查 cycle-free 机率。
+
+Section 6｜Power of Two Choices 与结论
+最后，教授为你简介 power of two choices：用 g 和 h 两个 hash 函数把元素放到 load 较小的桶。直觉论证是每层负载分布的 fraction 平方递减，因此对数对数 n 层后最大负载就降到一。严格证明需要 Chernoff bound 加 union bound，并定义 α_i 等于 e 乘以 α_{i-1} 平方除以 n 的递回给 slack。教授承认有 dependency issue 需要修在 notes。这堂课教授为你展示的核心主题是：空间与时间的 trade-off 可用 hash family 的独立性强度与函数数量精准调控。

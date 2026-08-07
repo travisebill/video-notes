@@ -1,0 +1,19 @@
+這是 Harvard CS224 高階演算法的第十二堂課，主題是逼近演算法的下半場：從 Knapsack 的 FPTAS 回顧開始，到 DNF 計數的 FPRAS，再到半正定規畫的引入，最後用 Max-Cut 切割問題展示如何達到經典的零點八七八逼近比。
+
+Section 1｜Knapsack FPTAS 回顧與通用架構
+教授先用 Knapsack 的 FPTAS 做為暖身。FPTAS 的精神是先對價值做四捨五入到 b bits，再用動態規畫把權重為 nW 的問題降到 n 乘以二的 b 次方。教授指出這個轉換是 poly n 除以 Epsilon 的時間，這對所有 pseudo-polynomial 演算法都通用。任何 pseudo-poly 時間的演算法都可以透過對某個參數四捨五入變成 FPTAS，這是一個普世的設計模式，從 Knapsack 延伸到 Subset Sum、bin packing 等問題都適用。
+
+Section 2｜DNF 計數問題與 #P 完備性
+接著進入 DNF 計數問題。給定一個 DNF 公式有 m 個子句、每子句最多 k 個字、總共有 n 個不同布林變數，要求計算滿足賦值的數量。這是個 #P 完備問題，意思是計算版本甚至比 NP 還難：給定 NP 機器接受路徑數的計算問題屬於 #P 完備。教授解釋 #P 完備類別包含所有 NP 問題加上 counting 版本，並舉例 Permutations 問題屬於 #P 完備。
+
+Section 3｜Karp-Luby FPRAS 演算法細節
+教授介紹 Karp 與 Luby 在 1980 年提出的 Fully Polynomial Randomized Approximation Scheme，給定任意常數 delta 與 epsilon，演算法在 poly n log 1 除以 delta 的時間內回傳一個 epsilon 逼近。演算法的核心是估計子集大小對總集大小的比例：對每個子集 A，使用完全採樣 B 並計算 A 與 B 的交集佔 B 的比例，再乘以 B 的大小得到 A 的估計值。教授詳細推導這個 estimator 是無偏的，並證明其變異數上界是 1 除以 p，讓 Chernoff bound 給出指數級的集中。這個 estimator 的設計展現了 FPRAS 的核心精神：透過均匀採樣把 #P 難問題轉化為多項式時間的 Monte Carlo 估計。
+
+Section 4｜半正定規畫 SDP 簡介
+下午場教授引入半正定規畫。LP 的約束是 Ax 等於 b、x 點積 c 最小化，x 是實數向量；SDP 把 x x transpose 換成矩陣 X，並加上 X 是 positive semidefinite 的約束。教授指出這個替換讓 SDP 能表示向量之間的內積與範數約束，特別是 Max-Cut 這類組合問題中 SDP 比 LP 強很多。SDP 屬於凸最佳化，所以可以用內點法多項式時間求解，這讓 SDP 從理論到實務都可行。
+
+Section 5｜Max-Cut 與 Goemans-Williamson 逼近
+Max-Cut 問題是給定圖 G，要把頂點分成兩組讓切割邊數最大，這是 NP 難問題。教授介紹 Goemans-Williamson 1995 的 0.878 逼近演算法：把每個頂點 i 對應到單位向量 vi，求解放鬆後的 SDP，再用隨機超平面切割。切割邊被切的機率是 theta 除以 pi 的函數，期望切割數至少是 0.878 乘以 SDP 上界。教授並提到這 0.878 是最佳值，除非 P 等於 NP，因為完全圖的 PCP 證據顯示超越這個比例是不可能的。這個 0.878 數字來自於 theta 除以 pi 的最小值除以 1 除以 pi 的積分，是優化後的幾何常數。
+
+Section 6｜課程結論
+這堂課完整展示了逼近演算法的設計哲學：對 pseudo-poly 演算法做四捨五入得到 FPTAS、用 Monte Carlo 採樣估計 #P 問題、用 SDP 放鬆組合問題再用隨機切割得到超越 Greedy 的逼近比。Max-Cut 的 0.878 結果說明在某些問題上，逼近比存在不可超越的牆，除非 P 等於 NP。接下來的課程會把這些技術擴展到更多幾何與圖論問題，並討論更強的近似技術。

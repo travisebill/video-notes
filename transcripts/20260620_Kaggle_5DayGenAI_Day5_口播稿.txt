@@ -1,0 +1,17 @@
+本集影片是 Kaggle 與 Google 共同舉辦的「五天 Gen AI 密集課程」第五天（最終場）的直播內容。 主講者 Paige Bailey 與客座講師 Ilya 帶來 MLOps for Generative AI 的完整介紹。 整場直播的核心張力在於：如何把 Gen AI 從 prototype 推向 production，並在長時間運行中保持品質。
+
+Day 4 聚焦於 domain-specific model 在 healthcare 與 security 的應用，Day 5 轉向 MLOps——把這些模型實際部署到 production 的工程實踐。 從 software engineering 角度，這代表著從 proof-of-concept 走向 production-ready 系統的成熟化路徑。
+
+Ilya 帶來 end-to-end GenAI app starter pack——開箱即用的 reference 架構。 涵蓋 Terraform 部署、Vertex AI Model Garden、Vertex AI Evaluation、BigQuery logging 與 monitoring。 從 SRE 角度，這正是 production 系統需要的可觀察性與可維護性設計。
+
+Q&A 環節由多位業界專家共同參與，回顧 MLOps 的演進：2010 年前後是傳統 ML 的 MLOps；late 2010s 出現完整 ecosystem；2020s 進入 GenAI 時代後，prompt template、chaining pipeline、continuous evaluation 成為新核心。 從 platform engineering 角度，這代表著工具與流程的典範轉移。
+
+DeepMind 來賓 Olivia 深入討論 multimodal evaluation——不只評估文字，還要評估 image 對 prompt 的對齊。 從 evaluation methodology 角度，這代表著從單一指標走向 task-specific 多維度評估。 關鍵 insight 是先定義 use case 再決定 metric。
+
+其他來賓介紹 Vertex AI 在 GenAI MLOps 的工具組合。 Vertex AI Model Garden 提供模型選擇；Pipelines 提供 CI/CD 與 recurrent evaluation；Feature Store 與 Model Registry 提供 governance。 從 cloud architecture 角度，這是 managed service 對 self-hosted 的典範轉移——降低 MLOps 基礎建設的維護負擔。
+
+討論的最後聚焦在 production 階段的 observability。 需要詳細 log：prompts、generated answers、user feedback、latencies。 透過 BigQuery 集中儲存，並用 drift detection 監控 model quality 是否退化。 從 incident response 角度，這是 LLM 應用從開發階段進入維運階段的關鍵設計。
+
+隨堂測驗回顧五天主題。 正確答案包括：prompt template versioning、Vertex AI pipelines for recurrent eval、evaluation 為衡量 model output quality。
+
+這場直播最鮮明的訊息是：MLOps 不是 ML 的附屬品，而是 Gen AI 從實驗走向 production 的橋樑。

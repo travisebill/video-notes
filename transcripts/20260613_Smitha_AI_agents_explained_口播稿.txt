@@ -1,0 +1,21 @@
+# AI Agents 入門：口播稿（含 TTS 預處理說明）
+
+> **重要**：本口播稿為繁體中文版（人讀、review 用）。送入 TTS 之前會先用 OpenCC `t2s` 預轉為簡體中文，
+> 因為 `speech-2.8-hd` 模型的 G2P 是基於簡中語料訓練，繁中字會被亂唸。
+> 簡中版檔案：`transcripts/20260613_Smitha_AI_agents_explained_TTS_zh_CN.txt`
+
+---
+
+這支影片是 Google Cloud Tech 出品的，標題是 AI agents explained，講者 Smitha 用八分鐘把 AI Agent 從觀念講到實作。我把重點整理給你。
+
+第一個重點，Agent 跟 Chatbot 到底差在哪。Chatbot 是你問一句它答一句，一次性的回應就結束。Agent 不一樣，它會先拆解問題，想好步驟，然後呼叫 API、執行程式碼、查資料，看結果對不對，最後再決定下一步該怎麼走。學術上最經典的解釋來自 ReAct 這篇論文，全名是 Synergizing Reasoning and Acting in Language Models，核心概念就是一個循環：思考、行動、觀察、調整。這個循環就是現代 AI Agent 的地基。
+
+第二個重點，三種常見的 Agent 設計模式。第一種叫 Sequential，循序型，像生產線一樣一步一步跑，優點是穩定可預測，缺點是太僵硬。第二種叫 Reactive，反應式，根據當下狀態決定下一步，很靈活但不會事先規劃。第三種叫 Deliberate 或 Planning agent，會先擬定計畫再執行，適合多步驟且有前後相依性的任務，例如訂機票和飯店。實務上要選哪一種，看的是問題的複雜度，簡單固定就用循序，動態環境用反應式，多步驟有依賴就用規劃型。
+
+第三個重點，實作。影片用 Google 的 Agent Development Kit，簡稱 ADK，示範怎麼打造一個部落格寫手 Agent。給它一個主題，它會先規劃大綱，再寫成完整文章，最後再產出三個備選標題和兩條 tweet 長度的 hook。整個系統由四個子 Agent、兩個驗證 Checker、跟一個 Root Agent 組成。Root Agent 叫做 blogger，它只對外暴露兩個工具：規劃器和寫手。內部則是用 Loop Agent 把規劃器和它的 Checker 包在一起，寫手和它的 Checker 也一樣包起來。Checker 的設計很關鍵，規劃 Checker 檢查大綱有沒有標題、有沒有引言、有沒有四到六個章節、有沒有結論，缺什麼就要回答 retry 並說明缺什麼，齊全才回答 okay。Loop Agent 收到 retry 就重跑，最多三次，這就是 LLM 偶爾會漏東西時候的安全網。這個 Loop 加 Validation 的 pattern 在生產等級的 Agent 系統裡非常常見，概念上就像 unit test 的 retry 機制。
+
+最後一個重點，Root Agent 的設計哲學。Root Agent 只暴露兩個工具給使用者，它不直接管內部的 Loop 細節，對它來說工作流程就是先 plan 再 write，越簡潔越好預測。影片最後在 ADK 的 web UI 跑了一個 demo，下指令寫一篇 top 10 use cases for AI agents 的部落格，可以看到子 Agent 怎麼協作完成任務。
+
+這支影片的價值在於，從觀念到程式碼一次走完，而且展示的設計模式，不管是 Loop 搭配 Validation 還是 Root 編排 Sub Agent，在其他框架像 LangGraph 或 CrewAI 也都適用，觀念是相通的。Google ADK 跟其他家比較不一樣的地方，在於它整合了 Vertex AI 跟 Gemini，整個 Google 生態的支援比較完整。
+
+如果你想真的動手做，影片說明欄有 codelab 連結跟 GitHub repo 還有 ADK 的官方網站，我都會附在筆記裡。摘要到這邊，謝謝。

@@ -1,0 +1,18 @@
+> 註：本文為「全知分析者視角」口播稿，第三人稱敘事、學術智識語氣。
+> 送 TTS 前會 OpenCC t2s 預轉（speech-2.8-hd 對簡中 G2P 效果最佳）。
+
+本場是 Yann LeCun 在 ETH Zürich「Frontiers of Embodied AI」研討會的專題演講「World Models: Enabling the next AI revolution」，時長約 50 分鐘，於 2026 年公開。LeCun 為深度學習三大巨頭之一、2018 年 Turing 獎得主、捲積神經網路共同發明人，曾任 Meta 首席 AI 科學家。演講揭示了一個核心轉向：2026 年的 AI 研究不應再以 LLM 為中心，而應轉向能內化世界物理模型的具身代理系統。
+
+(sighs) LeCun 開門見山挑釁「I have news for you. Machine learning sucks.」，引用 Moravec paradox 與瑞士發展心理學家 Jean Piaget 的智慧定義，也就是「智慧不是你知道什麼，是不知道時做什麼」。他指出 LLMs 本質上是 declarative knowledge 累積器，無法處理真實世界的連續、高維度、雜訊數據。具體案例：10 歲小孩能操作家事機器人、青少年 20 小時學會開車，但自駕車公司要數百萬小時訓練 + 仍卡在 L4 等級。這揭示了 AI 缺少人類嬰兒內建的「世界模型」能力。
+
+從嬰兒認知發展角度，LeCun 引用經典的 violation-of-expectation 實驗：6 個月嬰兒看到物體漂浮不在意，10 個月看到會大驚訝——這是因為 9 個月大才學會重力。嬰兒從被動觀察中建構世界模型，機器學習今天也能從 video 學習 3D 表徵，但還沒學會物理。
+
+(sighs) 從 AI 架構演進角度，LeCun 提出 System 1（被動前向傳播）vs System 2（規劃推理）的二元架構。System 2 需要內部 world model 預測動作結果，推理 = energy minimization。2022 年他已在白皮書「A Path Towards Autonomous Machine Intelligence」提出完整 6 模組架構：感知、世界模型、動作規劃、任務目標、短期記憶、推理器。
+
+從技術細節角度，核心創新是 JEPA（Joint Embedding Predictive Architecture）。Generative models 試圖預測像素，這對真實世界不可行——世界充滿不確定性，像素級預測永遠不準。JEPA 反過來，預測 latent space 的抽象表徵，loss 只在抽象層級計算，忽略不確定的細節。V-JEPA 2 已在 video 上自監督學習，可作為具身 AI 的 world model。Yann 表示「如果想做視覺任務，DINO encoder 是目前最佳通用 encoder」。
+
+(sighs) 從科研範式轉移角度，LeCun 演講尾聲提出 4 個「放棄」宣言。放棄 generative models，改用 joint embedding architectures。放棄機率模型，改用 energy-based models 處理變量間相依性。放棄強化學習，不是真放棄而是最小化使用，因為它的 sample efficiency 太差。最後，不要做 LLMs，如果你想做 physical AI 或 grounded AI。LeCun 直言「這不會讓我在矽谷受歡迎」。
+
+從機構布局角度，這 4 個宣言不是學術清談——LeCun 已在 2025 年底離開 Meta，創立新公司 AMILabs（Advanced Machine Intelligence Labs），專注「AI for the real world / physical AI」。機器人是 use case 但不限於機器人，涵蓋工業製程控制、自駕、所有高維連續雜訊的領域。AMILabs 是 LeCun 把世界模型路線機構化推進的載體，與他的學術主張一致。
+
+這場 ETH 演講的真正遺產，是它把 LeCun 的長期主張——「世界模型 + JEPA + energy-based models + 放棄 LLMs」——從學術論文升級為創辦宣言。當代 AI 研究的兩條路線——LLM 派 vs 世界模型派——在 2026 年正式分家，AMILabs 與 Silicon Valley LLM 生態的張力將決定下一個十年的 AI 走向。

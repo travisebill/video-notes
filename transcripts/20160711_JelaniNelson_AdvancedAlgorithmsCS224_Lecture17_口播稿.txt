@@ -1,0 +1,19 @@
+這是 Harvard CS224 高階演算法的第十七堂課，主題是內點法：Karmarkar 在 1984 年提出的線性規畫多項式時間演算法，透過 barrier function 與 central path 把線性規畫轉化為一系列無約束最佳化問題，並用牛頓法求解。
+
+Section 1｜內點法動機與歷史
+教授先介紹單體法與橢球演算法的優缺點：單體法實務快但 worst case 指數級；橢球演算法多項式時間保證但實務慢。Karmarkar 在 1984 年結合兩者優點提出內點法，給出多項式時間保證且實務表現接近單體法。內點法的核心思想是在可行域內部沿著一條稱為 central path 的曲線移動到最優解。這個方法發表於 Combinatorica 期刊，被譽為線性規畫理論的第二次革命，並讓 Karmarkar 獲得 Fulkerson 獎，這個獎項是數學規畫社群對 LP 理論突破的最高肯定，也是 Karmarkar 在 AT&T 貝爾實驗室時期的代表性工作。
+
+Section 2｜Barrier function 與對數障礙
+內點法用 barrier function 把不等式約束 Ax 大於等於 b 轉化為對數障礙項。對數障礙函數 phi 等於負的 log of slack，當 x 接近邊界時趨向無窮大，迫使解留在可行域內部。完整目標函數變成 c transpose x 加上 lambda 乘以負的 log(b 減 Ax)，其中 lambda 是控制障礙強度的參數。當 lambda 趨向零時，最優解逼近 LP 的最優解。
+
+Section 3｜Central path 與路徑跟隨
+central path 定義為 lambda 從大到小時一序列最優解構成的曲線。這條曲線從可行域的解析中心出發，終止於 LP 的最優解。內點法沿著這條曲線移動，每一步用牛頓法求當前 lambda 下的最優解。教授詳細推導牛頓法在這個設定下的收斂率，以及為何沿 central path 移動比 naive 縮減 lambda 更有效率。教授指出 central path 的曲率控制是 self-concordant 理論的核心應用，這個分析工具是 Nesterov 與 Nemirovski 在 1994 年發展出來的，並被推廣到所有 self-concordant barrier 函數的標準分析方法。
+
+Section 4｜Self-concordant 函數與多項式時間保證
+內點法的多項式時間保證來自 self-concordant 函數理論。一個凸函數是 self-concordant 如果它的三階導數被二階導數的某個冪次所控制。對數障礙函數是 self-concordant 的，這讓牛頓法的迭代次數可以用函數值的變化來精確控制。教授證明完整內點法的迭代次數是 O 根號 n 乘以 log n 除以 epsilon，這個 poly n 的時間保證讓內點法成為 LP 的標準多項式時間演算法之一。
+
+Section 5｜路徑跟隨方法與實務
+實務上內點法常用路徑跟隨方法：先在較大的 lambda 求解，隨著 lambda 縮小用前一步的解作為牛頓法的起始點。這個方法收斂速度接近二次，比標準內點法更快。教授提到現代 LP solver 結合單體法與內點法的優點，內點法用於求解 warm-start，單體法用於最後階段的精確解。這種 hybrid 演算法在商業 LP solver 中是主流，例如 Gurobi 與 CPLEX 都採用這種混合策略，兼顧理論保證與實務效率。
+
+Section 6｜課程結論
+這堂課完成了線性規畫理論的最後一塊拼圖：內點法從單體法的 worst case 指數級與橢球法的實務慢的兩個極端，給出多項式時間保證且實務表現優異的方法。barrier function、central path、self-concordant 函數、牛頓法四個要素共同構成內點法的理論基礎。接下來的課程會把這些技術擴展到半正定規畫與其他凸最佳化問題。

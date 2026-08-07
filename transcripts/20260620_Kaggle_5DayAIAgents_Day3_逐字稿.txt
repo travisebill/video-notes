@@ -1,0 +1,201 @@
+歡迎回到 Kaggle 與 Google 共同舉辦的「五天 AI Agent 密集課程」第三天。 我是 Smitha Ken，再次與 Anand Nalgaria 共同主持。 Anant，歡迎回來。
+
+作為課程的 evangelist 與 cloud 的產品經理，把時間交給 Smith。
+
+延續昨天，managed MCP servers 後續補充。
+
+Kaggle learner portal 與 Discord 都會公告。
+
+感謝 Discord 上不停回答問題的 moderator 們。
+
+system prompt 越加越多——更多 instruction、更多 example、更多 tool。
+
+一開始有效，但很快就失效。
+
+IDE、anti-gravity、cloud code、ADK、其他 asentic 工具。
+
+基本上任何支援這個 standard 的工具。
+
+想請你更詳細帶我們走過白皮書嗎。
+
+Skills。所以如果 MCP 是 agent 的雙手，Agent Skills 就是 playbook。
+
+複雜 multi-agent 設定難以維護與追蹤。
+
+進入客座 Q&A。
+
+>> 太棒了，進入 Q&A。
+
+Alan，交給你第一題。
+
+cycle。你的看法。
+
+隨著時間運行到處，最終都會需要 runs safely anywhere。
+
+它的 access、limitations。 概念很簡單。
+
+停這裡，也好奇 Julia 你的看法。
+
+不要讓 safety 完全依賴 model 或 skill 集合。
+
+完全依賴 model 就會沿著那條路走。
+
+好，下一題。
+
+multi-turn runbook 原生 retrieve 與 follow。
+
+在精準時機拿到需要的 instruction。
+
+multi-turn runbook 原生透過 tags 或 directed acyclic graphs。
+
+觀察 successful workflows 自動生成新 runbook。
+
+用了錯誤的 metrics 反而讓 library 變差。
+
+新版 model 是原生訓練這個。
+
+自動呼叫 tool 像 Google search。
+
+>> 太棒了，繼續下一題。
+
+model context window 作為 shared messaging bus。
+
+shipping 一個 graph of scales 基本上 demo 完美。
+
+修法是把 prompt state 移到 file bus。
+
+傳遞 pointers 而非資料，幫助 reference 資訊。
+
+pointers，不是 data，不是 context，傳 pointers。
+
+>> 對，這就是重點。
+
+多個 skill 幫助解決某事。
+
+不講太絕對，Julia 你說。
+
+無論你想 leverage 與 build 什麼。
+
+management 會是大事或許已經是大事。
+
+component 與 primitive 層級。
+
+第一題社群問題，來自 Kimber Goldz。
+
+emerging viable solution 來管理它。Hmi 給你。
+
+總結：這不是 about 你實際 loading 多少。
+
+load 後看起來一樣。
+
+我們討論的也是這個。
+
+下一題來自 Prrenit。
+
+knowhow 與 MCP handles reach 不重疊。Gabriella 與 Julia。
+
+等等，Julia，你要補充嗎。
+
+你在用不同問題回答。
+
+>> Tool 應該回答 single action that can be performed。
+
+畫好界線後，通常是好 boundary set。
+
+knowhow 推到 tool 或 MCP server。
+
+自己的 MCP tool。在 use case 出現過嗎。
+
+特定 skill 的 world。
+
+architecture 與關鍵因素影響這個決定。
+
+Julia，你接嗎。
+
+預設從簡單開始，撞 boundary 再複雜化。
+
+每個 boundary 都增加 context handoff。
+
+model intelligence 持續成長時。
+
+scalability 同時考慮 latency。
+
+為那個 architecture 選擇。
+
+最後一題社群問題，來自 Tinawal。
+
+execution boundaries。Devanch 你接嗎。
+
+管理 execution boundaries 是 architectural anti-pattern。
+
+幾乎一定會觸發 rot 與 compounding hallucination。
+
+anti-gravity 主動避免 reconciliation。
+
+decouple state 透過 DAG orchestration。
+
+node 間透過 file message bus 傳遞 structured schema references。
+
+dictates 每個 node 的 skill、tool、boundary。
+
+從 conversational memory 合成 hybrid。
+
+會有 memory、skill、workflow。
+
+建議遵循這個 approach。
+
+version 1 安全 swap 進去或 unrealistic。
+
+repos 討論的。
+
+code versioning 就能做到。
+
+>> 謝謝各位 insights。
+
+很好，這些 nice conversations。
+
+>> 好的。
+
+Paulong 帶兩個 lab。
+
+這是今天第一個 code lab。
+
+email 會附 link。
+
+anti-gravity，展示運作。
+
+skill 解決問題。
+
+server。回到 Smith。
+
+Google 也有自己的 skill 讓 agent 做這些。
+
+description box 連結。進入隨堂測驗。
+
+skills.md / config.yaml / run.py / manifest.json。
+
+正確答案：三、二、一，是 skills.md。
+
+早點討論。
+
+沒壓縮 token。
+
+adversary red teaming 與多輪 eval sustained access。
+
+完整 suite 後才給 access privilege。
+
+最後一題。
+
+更多 logic、motors、scripts。
+
+Smith，你要。
+
+>> 太棒了，謝謝 Anand。
+
+自己的 skill 看 agent 行為如何變。
+
+前兩天的 live stream 連結在 description box。
+
+謝謝，明天見。
+
+>> 謝謝，明天見。

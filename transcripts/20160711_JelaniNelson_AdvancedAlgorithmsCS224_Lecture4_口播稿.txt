@@ -1,0 +1,19 @@
+Harvard CS224 高階演算法第四堂課延續 hashing 主題，涵蓋三個主軸：線性探測在五元獨立下的更緊證明、Bloom filters 的成員問題解法、Bloomier filters 的擷取問題解法，最後介紹 cuckoo hashing 把三個問題串起來。
+
+Section 1｜開場修正
+課程一開始，教授先為你修正上次 cuckoo hashing lemma 的陳述錯誤，會用 email 寄給全班。順道確認學生都在課程 mailing list 上，沒註冊的到 class website 補註冊。接著公告今天的計畫：完成線性探測五元獨立的證明、講解 Bloom filters 與 Bloomier filters、介紹 cuckoo hashing 與 power of two choices。
+
+Section 2｜五元獨立的線性探測證明
+教授沿用上次的 moment method 框架，為你，但條件更緊。核心引理維持不變：查詢進行 K 個探測意味著 hash 值落在至少 K 個長度為 K 的滿區間中。期望查詢時間被 bound 為對 K 求和 K 乘上區間為滿的機率，需要這個機率是一除以 K 的三次方量級才能讓總和收斂到常數。Markov bound 的推導用六次動差：因為 hash 是六元獨立，可展開六次動差的期望，主要項的係數是 K 的六次方量級，最終得到所需的一除以 K 的三次方上界。為何是五元而非七元就夠：condition on hash 值落在區間用掉一個變數後，剩下四個仍是四元獨立，四元獨立對六次動差展開已足夠。
+
+Section 3｜Bloom Filters
+成員問題只需要判斷某個元素是否在集合中，當你，允許錯誤正向的機率不超過 ε。基本方案是用一個 bit array 加一個 hash 函數，插入時把對應位元設為一，查詢時讀取該位元。對不在集合中的元素，錯誤正向機率是 n 除以 m，設定 m 等於 2n 時機率是二分之一。改進方案是用對數 1 除以 ε 個 bit array，每個用獨立 hash 函數，插入時全部更新，查詢時檢查全部都為一才回應是。機率壓到 ε，空間是 n 乘以對數 1 除以 ε 位元，查詢時間是對數 1 除以 ε。Bloom filter 在 1970 年由 Bloom 提出，是現代分散式系統的基礎工具。
+
+Section 4｜Bloomier Filters
+擷取問題是 Bloom filter 的進階版：當你：每個元素有一個 r 位元字串，查詢要回傳正確字串，不在集合中的元素可回任意垃圾值。空間需求是 n 乘以 r 位元。解法構造精巧：先建立 cuckoo hash table，當 cuckoo graph 沒有 cycle 時是 forest 結構。對 forest 的每條邊對應的元素，指定其深節點為擁有者，從頂端往下以 XOR 填值：根節點存零，每個邊在深節點處填入使 XOR 等於目標字串的值。查詢時輸出 g 位置與 h 位置的 XOR，因為 XOR 的代數性質自動抵消中間節點的值，直接得到正確字串。Bloomier filter 由 Chazelle、Kilian、Rubinfeld、Tal 在 2004 年提出。
+
+Section 5｜Cuckoo Hashing 構造
+動態字典問題的解法是 cuckoo hash table，教授為你展示。結構是兩個 hash 函數 g 與 h 對應到長度 m 等於 c 乘以 n 的 array。插入時先放 g 位置，衝突就把舊元素踢出去，舊元素去它的 h 位置，繼續衝突就繼續踢。如果踢的鏈超過十對數 n 步就重選 hash 函數重新建立 table，期望兩次內成功。期望插入時間是常數。Cuckoo graph 是分析的關鍵工具：m 個頂點 n 條邊，每個元素對應一條邊。動態問題中 cycle 一出現就會卡住，所以用 rebuild 處理；靜態問題用於 Bloomier filter 時則事先檢查 cycle-free 機率。
+
+Section 6｜Power of Two Choices 與結論
+最後，教授為你簡介 power of two choices：用 g 和 h 兩個 hash 函數把元素放到 load 較小的桶。直覺論證是每層負載分布的 fraction 平方遞減，因此對數對數 n 層後最大負載就降到一。嚴格證明需要 Chernoff bound 加 union bound，並定義 α_i 等於 e 乘以 α_{i-1} 平方除以 n 的遞迴給 slack。教授承認有 dependency issue 需要修在 notes。這堂課教授為你展示的核心主題是：空間與時間的 trade-off 可用 hash family 的獨立性強度與函數數量精準調控。

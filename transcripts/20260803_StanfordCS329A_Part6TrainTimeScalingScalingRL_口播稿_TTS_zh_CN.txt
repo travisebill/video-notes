@@ -1,0 +1,15 @@
+本集 Stanford CS329A 进入 Part 6，主题 Train Time Scaling 与 Scaling RL。讲者把焦点从 inference 拉回 training：模型如何从「自己生成的输出」中学。三篇 paper STaR、DeepSeekMath/GRPO、DAPO 构成从 bootstrap 到稳定 RL 的光谱。
+
+STaR 是 Stanford 2022 的 bootstrapping paper。核心是 few-shot prompt 生成 rationales、只保留 answer 正确的、再 fine-tune 模型。最大创新是 rationalization——给模型答案提示、要求逆向推出 reasoning，把难题纳入 training。讲者定位为「almost like off-policy RL」。
+
+STaR 在 CommonsenseQA 达 72.5%，sample efficiency 比 SFT 好。但 plateau 快、rationalization 引入 false positives，不算真正的 RL，且只在 base model 能力范围内有效。
+
+DeepSeekMath 两个关键动作：从 DeepSeek Coder 起点加 OpenWebMath 做 pre-RL priming，是 code-to-math transfer 的首次验证——code 训练教会 reasoning 与 tool use，对 math 推理很有帮助。再用 GRPO scale up RL 取代 PPO 的 critic。
+
+GRPO 用 group baseline：对同题 sample 多个 answers，Advantage 等于 reward 减 group 平均再除标准差。7B 模型在 MATH 从 46.8% 推到 51.7%，第一个 open-source 7B 跨过 50%。但只改善 majority@K，pass@K 没显著提升。
+
+DAPO 解决 GRPO 在 long chain 上会坏的问题。Qwen 32B 加 AIME 上，naive GRPO 只有 30%，因 entropy collapse、overconfidence、training instability、response length explosion 四个失败。DAPo 五技术累加把 Qwen 32B 从 30% 推到 50%，让 Qwen 32B 自己 hill-climb 到接近 DeepSeek R1 蒸馏 32B 的水平。
+
+讲者列五个 open problems：majority@K 升但 pass@K 不升、reasoning behaviors 是 emerging 还是 prevalent、如何从失败中学、reward hacking、RL 与 SFT 数据占比。本质 capability 还是得靠 pre-training scaling，RL 改善的是 consistency。
+
+三种方法使用建议：只有约 100 个 reasoning examples 没 RL infra 用 STaR；有 decent base model 用 DeepSeekMath 加 GRPO；reasoning chain 很长需 SOTA 用 DAPO。理解失败模式比记住 paper 更重要，本课呼应 Part 2 的 test-time scaling，把 self-improving loop 从 inference filter 完整闭环到 training update 之上。

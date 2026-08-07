@@ -1,0 +1,17 @@
+台大资讯工程学系 2026 年春季「人工智慧导论」FAI 2. 4「树木扩展成森林来提升稳定度」， 由林轩田教授主讲， 约 19 分钟， 是 Machine Learning 章节介绍 Ensemble 的第一讲。
+
+从 Ensemble 概念角度， 林轩田教授用「三个臭皮匠胜过一个诸葛亮」这句老话开场。 Ensemble = 把多个弱模型组合起来， 达到比单一强模型更好的效果。 某门课 final project 表现最好的组就是用很多简单 model + ensemble， 最后 prediction performance 冲很高。 Ensemble 是简单但非常好用的方法， 现实应用非常广——本讲聚焦 Bagging 跟 Random Forest。
+
+从 Bagging 目标：Variance Reduction 角度， 回忆 FAI 2. 2 的 Bias-Variance Trade-off：Overfitting 情境是「包含到理想 $f$ 但 variance 很大」——对应打靶图是「瞄准了但每次射出去都散开」。 目标是降低 variance。 怎么降？ 把多次实验平均起来：例如打靶 5 次平均起来可能很接近靶心 $f$。 Bagging = Bootstrap Aggregating：把大家都放到同一个袋子里， 找 T 个变异度大的 $g_t$， 平均起来 → variance 降低。
+
+从 Bagging 做法：Random Sampling + Ensemble 角度， 假设 data 有 1000 个 data point， random sample T 次， 每次取 N' = 800 个（可能不同 data points）； 每个 subset 各训练一个 model， 得到 T 个 $g_t$； T 个 $g_t$ 一起 average / vote。 为什么 random sample 可以让 model 变 robust？ 小的 noise 很难一致地影响所有 T 个 subset， 透过 averaging noise 被抵消； robustness 提升、 variance 下降。 Bagging 适用情境：模型本身容易 Overfitting（complex model）。
+
+从 Random Forest：Bagging + Decision Tree 角度， Decision Tree 容易 Overfitting（切切切切切）， Bagging 是解 Overfitting 的方法之一。 Bagging + Decision Tree = Random Forest：Forest = 多棵 tree， Random = random sampling 不同的 subset。 演算法：对 data 做 T 次 random sample → 每个 subset 跑 decision tree → 得到 T 个 $g_t$ → 最终 model = T 个 $g_t$ 的平均。 Classification 用 voting（多数决）， Regression 用 averaging。
+
+从 Random Forest 优点角度， 容易平行化（每棵 tree 独立生长， 学习时间 ≈ 跑一棵 tree 的时间）； 保留 Decision Tree 优点（可解释性、 categorical feature、 missing feature、 快速训练测试）； 降低 Overfitting（Fully-grown tree 每个 leaf 只剩一个 sample 容易 Overfit， Random Forest 用 voting / average 显著降低 variance， noise 很难 consistent 影响所有 T 棵树 → noise 被稀释）； 可以从 data 或 feature 做 sampling（feature sampling 在高维度资料特别有效）。
+
+从 Random Forest Decision Boundary 示意角度， 1 棵 decision tree 的 boundary 很尖锐（横切、 直切）， 6 棵 decision tree aggregate 后 boundary 变平缓。 T 越大 smoothness 越高。 每棵 tree 切的位置不同（subset 不同）， aggregate 后整体 boundary 是多棵 tree 的 consensus。 视觉化：1 棵 vs 6 棵 vs 100 棵 → 越来越 smooth， 这就是 variance reduction 的视觉化证明。
+
+从 San Francisco vs New York 房价分类实例角度， 单棵 Fully-grown decision tree：training 100%（每个 leaf 只剩一个 sample）、 testing 89. 7%（差约 10%）——Overfitting 明显。 Random Forest 4 棵 tree aggregate 后降低 variance。 Bias-Variance 取舍再次出现：x 轴模型复杂度， bias 随复杂度 ↑ 而 ↓， variance 随复杂度 ↑ 而 ↑。 实务建议：不要太过分切（fully-grown）， 可以设 terminate criteria 提早停； Model Selection 仍是非常困难的问题。
+
+一句话总结：FAI 2. 4 把 FAI 2. 3 的 Decision Tree 推进到 Random Forest——用 Bagging + Decision Tree 的组合， 透过 random sampling + voting/averaging 显著降低 variance 缓解 Overfitting； 保留 Decision Tree 所有优点， 且容易平行化、 对高维度资料效果好， 是工业界最常用的 ML 模型之一； Bias-Variance 取舍依然存在， 需透过大量 tree 的 ensemble 逼近 testing error 的 sweet spot。

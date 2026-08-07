@@ -1,0 +1,17 @@
+本集影片是 Kaggle 与 Google 共同举办的「五天 Gen AI 密集课程」第四天的直播内容。 主讲者 Paige Bailey（Google）邀请多位业界专家， 聚焦探讨 LLM 在特定领域的应用。 整场直播的核心张力在于：通用 LLM 在专业领域的天花板在哪里， 以及 domain-specific model 如何突破。
+
+Day 1-3 聚焦于 AI Agent 与 protocol， Day 4 转向 domain-specific generative AI。 主轴是 LLM 在 healthcare 与 security 两个高敏感度领域的实务应用。 从 AI 应用角度， 这代表著通用模型走向领域专精的成熟化路径。
+
+开场的 code lab 聚焦在 LLM 无法独立完成的任务——透过 grounding 与 tool use 让 model 即时取得外部资讯。 从 LLM 架构角度， 这呼应了 retrieval-augmented generation 与 function calling 的精神。 关键技巧是使用 Google Search grounding 让 Gemini 取得最新资讯。
+
+来宾 Chris（Google Research）介绍 MedQA benchmark 与 Med-PaLM 的进展。 MedQA 是医学生执照考试风格的多选题 benchmark， Gemini 等模型已达 90% 正确率。 但 Chris 强调：这仍是人工化情境——真实临床场景需要完整病历、 影像、 检验值。 从医疗 AI 角度， 这代表著 benchmark 高分不等于临床可用。
+
+来宾 Antonio（Office of the CTO）分享 domain-specific model 的设计取舍。 核心论点：trade-off 存在于回答品质、 推论成本、 延迟时间三个维度。 从 ML 系统角度， 这呼应了 MLOps 的资源管理——没有最佳模型， 只有最适合 use case 的模型。 Antonio 提到 Google 透过 fine-tuning、 context caching、 retrieval-augmented generation 等多种技术来最佳化特定领域的表现。
+
+来宾 Scott 与 Umesh 讨论 security 应用。 Sec-PaLM 专门训练于 cybersecurity 资料， 能理解威胁的细微差异。 但核心挑战是 prompt injection——攻击者透过精心设计的 input 绕过 model 的安全机制。 从 cybersecurity 角度， 这呼应了 adversarial AI 的研究——LLM 系统需要多层防御。
+
+最后一个议题是 privacy 与 data security。 训练阶段使用 de-identified 或 synthetic data； 推论阶段加密传输。 从 healthcare 角度， 这是 HIPAA 等法规的硬性要求。 从技术角度， 这代表著 LLM 应用必须从 day one 就设计 privacy， 而不是事后补救。
+
+明日将进入 evals 与 MLOps for generative models。
+
+这场直播最鲜明的讯息是：通用 LLM 是起点， domain-specific model 与 grounding 机制才是落地应用的关键。

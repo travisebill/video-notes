@@ -1,0 +1,15 @@
+台大资讯工程学系 2026 年春季「人工智慧导论」FAI 1.4「机器要开始学习啰~」，由林轩田教授主讲，约 13.5 分钟。本讲承接 FAI 1.3 建立的 ML Recipe 框架，正式进入 Recipe 步骤 4「Learning」——也就是用什么演算法从 H 中找出最接近 $f$ 的 $g$。
+
+从 Learning 的本质角度，林轩田教授指出 2D 平面的直线无限多，不可能暴力列举所有直线找 E_in 最小的——必须用聪明的 Learning Algorithm。第一个候选是 PLA（Perceptron Learning Algorithm），模拟人类神经元的运作。
+
+从 PLA Algorithm 角度，PLA 的流程是：从任一条直线（任意法向量）开始，看现在直线上有哪些点分错，根据分错的点调整直线位置。数学操作是「法向量加上错误点的向量」得到新的法向量。直观上，法向量决定直线方向，加上错误点向量让直线往错误方向转。影片用 Animation Demo 展示这个过程：蓝点与红点分布、随意选一条起始线、错了就微调、慢慢收敛。一次可能转太多而产生新错误，所以要反复微调。PLA 是 1950-60 年代 Frank Rosenblatt 提出的第一个 Learning Algorithm，灵感来自人类神经元。
+
+从第一次 AI 寒冬角度，林轩田教授提醒学生注意模型的历史限制。PLA 虽然是 1950-60 年代的突破，但 1969 年 Minsky 与 Papert 的「Perceptrons」论文严格数学证明单层 Perceptron 的表示力严重不足——简单的 Perceptron 无法表示 XOR 等非线性函数。这个限制让 AI 界对神经网路失去信心，1980 年代进入第一次 AI 寒冬。寒冬期间研究资金大幅缩减，但也促使研究者寻找新方法，最终促成 1980-90 年代的 backpropagation、1990 年代的 SVM 等突破。为什么这个历史重要：提醒学生「模型限制」是 ML 永远要考虑的问题。
+
+从 Generalization 的复杂性角度，这是本讲的核心议题——只能看到 noisy 的、有限的 training data，看不到真正的 $f$。林轩田教授用两个类比说明这个张力。类比一是父母与小孩：父母（$f$）知道很多但只能示范部分，小孩（$g$）学到部分但不是全部。类比二是老师与学生：学生把所有考古题背完可能考试 100 分，但无法验证是否真的理解。学生目标是在 seen data 拿满分（$E_{in}$ 小），老师目标是学生真正理解（$E_{out}$ 小），两者目标不一致，导致「背高分但不懂」的情况。
+
+从 Bias-Variance Tradeoff 角度，林轩田教授总结：$E_{in}$ 小通常代表有一定的 Generalization 能力，但 Hypothesis 太复杂会 overfit（$E_{in}$ 小但 $E_{out}$ 大）、太简单会 underfit（$E_{in}$ 本身就大）。简单模型通常 Generalization 较好——如果 Linear Model 在 training 上不错，就用 Linear，不要升级到复杂模型。这也是为什么业界的 ML 实践永远从最简单的 baseline 开始。
+
+从设计决策角度，这一讲把 ML 从「神奇黑盒子」拉回「有历史、有数学、有取舍的工程学科」。学生要记住三件事：第一，暴力搜寻不可行，必须用聪明的 Learning Algorithm；第二，模型有表示力限制，要根据任务复杂度选对 Model；第三，$E_{in}$ 小不代表 $E_{out}$ 小，Generalization 才是最终目标。这三条原则也是后续 FAI 1.5-1.6 的基础。
+
+一句话总结：FAI 1.4 把 ML Recipe 步骤 4「Learning」具象化为 PLA 演算法的具体操作，同时用 Generalization 的复杂性与第一次 AI 寒冬的历史，提醒学生——ML 不是「algorithm 一套就会 work」的黑盒子，而是有明确设计取舍的工程实践。

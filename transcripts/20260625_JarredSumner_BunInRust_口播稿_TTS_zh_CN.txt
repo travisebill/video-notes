@@ -1,0 +1,11 @@
+本集聚焦 Bun 从 Zig 改写到 Rust 的工程历程， 从为何放弃 Zig、 Adversarial Review 设计， 到十一个工作天、 一百六十五万美元 API 成本完成的五百三十五万行规模机械移植。
+
+Bun 原生采用 Zig， 承接 esbuild 的 transpiler 架构并扩展为完整的 JavaScript 工具链。 随著月下载量突破两千两百万、 Claude Code 与 Vercel、 Railway 等基础设施服务相继采用， 稳定性成为新的瓶颈。 版本 1. 3. 14 累积一连串 use-after-free、 double-free、 SSL session 与 file watcher 记忆体泄漏等难以根治的 bug， 根因在于 JavaScript 的垃圾回收机制与 Zig 的手动记忆体管理混合冲突。
+
+选择 Rust 的核心动机在于， 原 bug 清单中大部分类型在 Rust 的 borrow checker 预设会被回报为编译错误， 这是一个远比风格指南更短的回馈回圈。 版本 1. 4. 0 引入 Drop trait 自动执行清理， 全面修复 v1. 3. 14 一百二十八个已知 bug， 并让 Bun. build 连续呼叫的记忆体泄漏从永远上升的六千多 megabyte 收敛至稳定的六百零九 megabyte。
+
+改写的执行纪律值得单独检视。 Jarred Sumner 采用的流程是， 一个 implementer 对照 PORTING. md 与 LIFETIMES. tsv 机械移植， 两个独立的 adversarial reviewer 在分开的 context window 中只看到 diff 并预设立场为「程式码有错」， 最后由一个 fixer 套用审查意见。 实作端的 Claude 想让程式码合并、 审查端的 Claude 只想找出 bug， 两者 bias 不同， 因此必须分离。 每个 commit 都被记录审查来源， 三个能 compile 通过、 看似合理的 bug 都在合并前被拦截。
+
+最终在一百三十五次 BuildKite 建置后， Linux x64、 Linux arm64、 macOS x64、 macOS arm64、 Windows x64、 Windows arm64 六个平台全数通过测试套件， 零测试被跳过或删除。 效能方面 HTTP 吞吐提升百分之二到五， binary 大小在 Linux 与 Windows 各缩减约百分之二十， 记忆体使用显著降低。 Prisma Compute 公开测试版已运行于此版本， Claude Code 2. 1. 181 之后的版本也预设使用这个 Rust 移植版本， 启动速度在 Linux 上提升百分之十， 「barely anyone noticed」， 如同作者所言， 这正是工程团队所欲求的无聊稳定性。
+
+回顾整个改写， 总计一万亿个输入 token、 七十亿快取读取、 API 成本约十六万五千美元， 在人类估算下约需三位资深工程师一年的工作量， 作者的结论是：one engineer can do a lot more today than a year ago。 LLM 编程时代最稀缺的资源从模型本身转向工程纪律， 也就是语言无关的测试套件、 独立 context window 的对抗式审查， 以及可中断、 可修复的生产流程三者的组合。

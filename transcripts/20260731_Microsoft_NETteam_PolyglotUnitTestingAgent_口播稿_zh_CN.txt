@@ -1,0 +1,13 @@
+2026 年 7 月 31 日，微软 .NET 团队在 DevBlogs 发布 open-source 工具 code-testing-generator。这个 agent 属于 dotnet-test plugin，存放在 GitHub 的 dotnet/skills repository，主打 polyglot 单元测试生成。
+
+这篇文章的核心问题很直白。当开发者对 coding agent 丢一句「帮我写单元测试」，这行 prompt 留了五个空白：哪段程式码要测？用哪个测试框架？测试放哪个资料夹？build 系统怎么找到这些测试？测试要验证什么？
+
+code-testing-generator 把整个流程拆成四阶段。第一阶段是学习 repository：侦测语言、测试框架、找到正确的 build 与 test 指令，避免新测试在本地能跑、在 CI 却被漏掉的窘境。第二阶段是选择工作量：小任务用 Direct 路径，中任务做一次 Single pass 规划，大任务进入 Iterative 循环。第三阶段是规划并写测试，从简单程式码开始，逐步处理依赖较多的部分，并严格遵守 repository 的惯例。第四阶段是检查测试价值，做 mutation testing，验证 assertion 是否够强，确认所有需求场景都有对应测试，最后执行完整 build 与测试套件。
+
+微软用内部 152 个任务做基准测试。专门 agent 通过率 92.1%，stock GitHub Copilot 通过率 78.9%，整体失败减少 63%。差异最大的是模糊提示：89 个任务中，专门 agent 通过 79 个，stock Copilot 只通过 59 个，失败从 30 降到 10，减少 67%。详细提示双方平手，都是 61 个。整体 20 个净增益全部来自模糊提示，呼应 agent 的设计目标：执行 prompt 中缺少的研究工作。
+
+跨模型比较涵盖 Claude Opus 4.8、GPT-5.5、Claude Haiku 4.5。专门 agent 在 .NET 45 个任务上全面领先，失败减少 45% 到 80%。跨语言涵盖 .NET、Python、TypeScript、JavaScript、Java、Go、Ruby、Rust、Swift、Kotlin、PowerShell、C++ 等 12 种。Python 任务从 6 个通过提升到 13 个，Go 任务从 10 个通过提升到全部 15 个通过。
+
+第二个基准测试 SWE Atlas 更难，会注入 bugs 验证测试的 catch 能力。44 个任务中，专门 agent 通过 16 个，stock Copilot 通过 12 个。微软强调这些结果代表 reliability 提升，不是 coverage 提升。最终平均覆盖率相差不到 0.5 个百分点，但专门 agent 速度快 5.5%，生成的测试数量略少 2.3%，靠的是可靠性而非数量。
+
+文章最后是试用指引。Copilot CLI 用 plugin marketplace add 与 plugin install 两个指令即可安装，VS Code 透过 plugin support 支援，Visual Studio 仍在开发中。微软总结，良好的测试需要被规划、被建置、被执行、被检查，这就是团队正在打造的信任循环。

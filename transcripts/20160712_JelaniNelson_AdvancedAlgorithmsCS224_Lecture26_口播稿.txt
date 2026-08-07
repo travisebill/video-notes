@@ -1,0 +1,19 @@
+這是 Harvard CS224 高階演算法第二十六講，主題是串流演算法與線性草圖：從 F0 distinct elements 到 F2 L2 norm estimation 的 AMS 草圖。
+
+Section 1｜串流模型回顧
+教授開場複習串流模型：輸入是長度 m 的更新序列 x_i 變成 x_i 加 v，初始為零向量。要計算 x 的某個函數 f 而無法儲存整個向量。典型問題是支援大小 F0：向量中有多少非零座標，等同於路由器一天收到多少不同 IP 位址。最直接的演算法用 n 位元記錄每座標是否出現過，或用 m 對數 n 位元儲存所有看過的元素。要做得更好需要隨機化與近似：deterministic 演算法對 F0 需要 omega(min(n,m)) 位元，無法超越線性。
+
+Section 2｜Random Hash 估計 F0
+下界來自編碼論證：若存在少於 n 位元的串流演算法，則可壓縮任意 n 位元字串成更短，違反鴿籠原理。F0 的隨機近似演算法是 Bar-Yossef 與 Kumar 的：對串流中每個元素 i 用隨機 hash 函數 h 映射到零到一區間，記錄所有 hash 值中的最小值 z。期望上 z 約等於 1 除以 F0+1，所以 F0 的估計就是 1 除以 z 減 1。期望估計的變異數還是有常數倍，用中位數技巧取 R 個獨立 hash 函數平均，可把變異數壓到 1+epsilon 倍，這就是 AMS 草圖的核心想法。
+
+Section 3｜L2 Norm 與 Linear Sketching
+教授轉到 L2 norm 估計：給定 x 的 L2 norm 平方，估計到 1+epsilon 倍誤差，空間遠小於 n。L2 norm 不能像 F0 一樣只記錄最小值，因為刪除時最小值失去意義。教授介紹 Linear Sketching 框架：選一個 m 乘 n 的矩陣 Pi，更新時把 y 加 v 乘以 Pi 的第 i 行，無論插入或刪除都成立。Lyu 與 Woodruff 證明任何支援刪除的串流演算法都可轉成 linear sketch，空間最多差對數 n 倍。對 L2 norm，Pi 的每個條目是獨立的正負一除以根號 n。
+
+Section 4｜AMS 演算法分析
+AMS 演算法存的是 y 等於 Pi 乘以 x，L2 norm 估計為 y 的 L2 norm 平方。分析：y_r 是 1 除以根號 n 乘以 sigma_ri 乘 x_i 之和，所以期望 y_r 平方等於 1 除以 m 乘以 x 的 L2 norm 平方，期望 y 的 L2 norm 平方等於 x 的 L2 norm 平方。變異數：y_r 平方的變異數來自四階矩 sigma 平方，計算後變異數是 O(1) 乘以 x 的 L2 norm 4 次方除以 m。取 m 等於 1 除以 epsilon 平方即可讓變異數被期望值壓到 epsilon 平方倍，由 Chebyshev 不等式得到 1+epsilon 估計，失敗機率 1/3。
+
+Section 5｜失敗機率降低與維度縮減
+失敗機率 1/3 不夠好，做兩件事來降低：把 m 增為對數 1 除以 delta 個獨立副本取中位數，或對單一草圖做多次 random sign 的平均。教授簡介快速迴歸與點查詢：給定矩陣 A，要在串流中估計 A 乘以 x 的某個座標。使用 Johnson-Lindenstrauss 維度縮減，把 x 投影到 d 等於對數 n 除以 epsilon 平方 維空間，於是可在 d 維空間做估計，空間複雜度大幅下降。
+
+Section 6｜結論與延伸
+這堂課展示了串流演算法的核心思想：當資料量太大無法儲存時，用隨機 hash 或線性草圖壓縮到小空間，再從草圖估計所需的統計量。F0 用最小 hash 值估計支援大小；L2 norm 用 AMS 草圖估計能量；維度縮減把高維向量降到對數維度。教授預告 CS 229r 會更深入探討點查詢、稀疏復原、以及矩陣與圖的串流模型。

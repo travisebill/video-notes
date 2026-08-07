@@ -1,0 +1,9 @@
+這堂課用 Buchbinder-Naor online primal-dual 框架完成兩個重要 online 演算法的分析。
+
+第一個是 randomized ski rental 的 e/(e-1) competitive ratio 證明。演算法邊看到 constraint 邊 raise 對應的 dual 變數，當某個 constraint 變 tight 時決定 buy 或 rent，使 primal 與 dual 在 approximate complementary slackness 條件下同步演化。Competitive ratio 公式為 (1 + 1/(1+B)) 的 (B+1) 次方除以該值減 1；當 B 很大時，分子分母都趨近 e，因此收斂到 e/(e-1) 約 1.58；但在 B 等於 1 的最壞情況下，competitive ratio 恰好等於 2。這個結果最早由 Karlin 等人在 1994 年用更直接的 probability argument 證明，但用 Buchbinder-Naor 的 LP framework 來推導能讓論證非常乾淨。
+
+第二個是 online set cover。問題設定是：預先給定 m 個 set，但 element 一個一個出現。演算法維護一個 covering LP 的 primal 與 dual 變數，當新 element 出現但尚未被任何買下的 set 覆蓋時，就 raise 該 element 對應的 y_i 直到某個 set j 的 covering constraint 變 tight，然後 buy 那個 set 並設 x_j = 1。整個過程中，每個 element 的 y_i 被 raise 的次數是 O(log n)等級，因為每 raise 一次就讓某 set 的 constraint 翻倍或飽和，因此 primal cost ≤ O(log n) 乘以 dual OPT ≤ O(log n) 乘以離線 best，這就是 online set cover 的 O(log n) competitive ratio。
+
+這兩個應用展示 LP duality 在 online 演算法設計上的核心價值：把分散的決策問題統一到 primal-dual 框架下，並用 approximate complementary slackness 一致地控制 competitive ratio。本堂課最後也引入 dual fitting 技術的鋪墊——offline 演算法的 dual solution 構造 + scale down，是另一個用 LP duality 證明 approximation ratio 的方法。
+
+下堂課會深入 dual fitting：先完成 weighted set cover 的 log n approximation 完整證明，再用 unweighted vertex cover 做 2-approximation 的例子，然後引入 LP integrality gaps 與 PTAS、FPTAS、FPRAS 定義，挑戰 LP relaxation 在 approximation algorithms 上的極限，並對 knapsack problem 構造一個 PTAS，把這一系列 LP-based 演算法設計方法論推廣到更深的 approximation 算法領域。LP-based 演算法設計方法論的價值在於：把演算法直覺與嚴格數學 proof 結合在 primal-dual 框架下，給 online 和 approximation 兩類問題一個共同的語言。Karlin 等人 1994 與 Buchbinder-Naor 2005 分別從 probability 與 LP 兩個角度切入，給出 randomized online 演算法設計的兩個基本利器，這堂課把這兩個視角合并起來，為下堂課的 PTAS / FPTAS 概念鋪墊。

@@ -1,0 +1,9 @@
+Splay Trees 是 Sleator 與 Tarjan 在 1985 年提出的 self-adjusting 資料結構；它每次操作後都會把剛剛被存取的 node 透過一系列 rotation 搬到 root 的位置，因此被稱為「自調適」的二元搜尋樹。這堂課的核心目標是證明 splay tree 在 amortized 框架下，m 次操作的總成本是 O(m log n)，換句話說平均每次操作只要 O(log n)，雖然最壞情況下單次操作可能高達 O(n)。
+
+Splay operation 由三種基本 rotation 組成：當被搬的 node 的 parent 就是 root 時，做一次 zig；當 node 與 parent 形成同方向（左左或右右）時，做 zig-zig；當 node 與 parent 形成反方向（左右或右左）時，做 zig-zag。每次 rotation 都維持 BST ordering 性質，且花 O(1) 時間，所以三種 case 的差別只在於 rotation 的順序。
+
+要分析 amortized cost，splay tree 採用 potential function：Φ 為所有節點 v 的 log(size of T_v) 總和，其中 T_v 是以 v 為 root 的 subtree。每個 node 還有一個 rank，定義為 floor log(size of T_v)。這個 potential function 保證 splay step 的 amortized cost 最多是 3 × (r'(x) − r(x)) 加上一個常數，而由於 splay 每一步都會讓 x 的 rank 至少降 1，而 rank 的範圍是 log n 個 step，所以 splaying 一個 node 到 root 的 amortized cost 是 O(log n)。
+
+Splay tree 不僅達到這個 O(log n) 上界，更進一步證明 static optimality：對任何事先給定的 access sequence，splay tree 的 amortized cost 不會比事先知道未來的 optimal static BST 差 O(1) 倍。這是一個極為強的性質，代表 splay tree 在未知未來的實際應用下也能逼近理論最佳。同時，splay tree 也達到 entropy bound：對 Huffman-style 的 access distribution，splay tree 的 amortized cost 與 Huffman 編碼的 cost 等級對齊。1999 年，splay tree 因此獲得 Paris Kanellakis Theory and Practice 獎，表彰它是「過去 20 年最廣泛使用的資料結構」之一。
+
+整堂課展示的核心思想在於：用心的 potential function 設計不只能證明基本 amortized bound，還能揭露 splay tree 的更深層特性——自調適、自動學習 access pattern、對未知 workload 仍能跑到 optimal 範圍。Sleator 與 Tarjan 在 1985 年提出的這套 splay operation，從最壞情況看似不穩定的 O(n) 一步步變成 amortized O(log n)，再從 amortized bound 跨到 static optimality，最後跨到 entropy bound，這是 amortized analysis 在資料結構設計上少數能把「單一技巧」推到如此深遠的範例。實際系統如 Linux 核心的 CFS scheduler、網路路由器的 routing table 快取，都借用了 splay tree 的設計原理。

@@ -1,0 +1,2902 @@
+[00:00:01.240] What's up, pals?
+[00:00:02.600] What's up, pals? How are we doing?
+[00:00:04.710] How are we doing?
+[00:00:04.720] How are we doing? I've not got long. I've got about an
+[00:00:06.070] I've not got long. I've got about an
+[00:00:06.080] I've not got long. I've got about an hourhour
+[00:00:08.200] hour to chat about Wayfinder.
+[00:00:16.600] I'm uhI'm uh I'm kind of excited about this one.
+[00:00:20.910] I'm kind of excited about this one.
+[00:00:20.920] I'm kind of excited about this one. It's an absolute banger.
+[00:00:22.310] It's an absolute banger.
+[00:00:22.320] It's an absolute banger. The tool's really fun.
+[00:00:23.950] The tool's really fun.
+[00:00:23.960] The tool's really fun. And I'm just going to jump in straight
+[00:00:25.230] And I'm just going to jump in straight
+[00:00:25.240] And I'm just going to jump in straight away, start using it.
+[00:00:27.990] away, start using it.
+[00:00:28.000] away, start using it. Wayfinder, for those who don't know, is
+[00:00:29.630] Wayfinder, for those who don't know, is
+[00:00:29.640] Wayfinder, for those who don't know, is aa
+[00:00:31.960] a Um it's a sort of evolution of the Grill
+[00:00:34.150] Um it's a sort of evolution of the Grill
+[00:00:34.160] Um it's a sort of evolution of the Grill Me skill. And it's a way of figuring out
+[00:00:38.430] Me skill. And it's a way of figuring out
+[00:00:38.440] Me skill. And it's a way of figuring out huge chunks of work
+[00:00:40.590] huge chunks of work
+[00:00:40.600] huge chunks of work all together and all in one piece.
+[00:00:44.110] all together and all in one piece.
+[00:00:44.120] all together and all in one piece. And the thing I'm going to start using
+[00:00:45.950] And the thing I'm going to start using
+[00:00:45.960] And the thing I'm going to start using it for today is building something that
+[00:00:48.230] it for today is building something that
+[00:00:48.240] it for today is building something that I've wanted to build for a while.
+[00:00:50.950] I've wanted to build for a while.
+[00:00:50.960] I've wanted to build for a while. I'm going to kick things off by going
+[00:00:52.830] I'm going to kick things off by going
+[00:00:52.840] I'm going to kick things off by going Wayfinder, and let's do our first
+[00:00:55.630] Wayfinder, and let's do our first
+[00:00:55.640] Wayfinder, and let's do our first dictation here. Going to first make sure
+[00:00:58.670] dictation here. Going to first make sure
+[00:00:58.680] dictation here. Going to first make sure I don't have any environment variables
+[00:01:00.030] I don't have any environment variables
+[00:01:00.040] I don't have any environment variables exposed. How we doing?
+[00:01:03.070] exposed. How we doing?
+[00:01:03.080] exposed. How we doing? Got here immediately from Turkey. Nice.
+[00:01:05.110] Got here immediately from Turkey. Nice.
+[00:01:05.120] Got here immediately from Turkey. Nice. We're in. We're in. We're in.
+[00:01:07.830] We're in. We're in. We're in.
+[00:01:07.840] We're in. We're in. We're in. I don't have long, so I'm just going to
+[00:01:08.990] I don't have long, so I'm just going to
+[00:01:09.000] I don't have long, so I'm just going to go for it.
+[00:01:10.075] go for it.
+[00:01:10.085] go for it. &gt;&gt; [clears throat]&gt;&gt; [clears throat]
+[00:01:11.000] &gt;&gt; [clears throat] &gt;&gt; Now,
+[00:01:14.520] I would like to extend my existing video
+[00:01:18.000] I would like to extend my existing video app that we're in right now, the course
+[00:01:19.510] app that we're in right now, the course
+[00:01:19.520] app that we're in right now, the course video manager, to
+[00:01:21.990] video manager, tovideo manager, to have a TikTok creator.
+[00:01:25.950] have a TikTok creator.
+[00:01:25.960] have a TikTok creator. The way this should work is we should
+[00:01:27.990] The way this should work is we should
+[00:01:28.000] The way this should work is we should use the normal videos,
+[00:01:29.790] use the normal videos,use the normal videos, andand
+[00:01:31.520] and I think I need like a new style of video
+[00:01:33.950] I think I need like a new style of video
+[00:01:33.960] I think I need like a new style of video player.
+[00:01:35.430] player.
+[00:01:35.440] player. Or you're reusing the same logic in the
+[00:01:37.830] Or you're reusing the same logic in the
+[00:01:37.840] Or you're reusing the same logic in the video player, but it should look
+[00:01:38.990] video player, but it should look
+[00:01:39.000] video player, but it should look slightly differently.
+[00:01:40.670] slightly differently.
+[00:01:40.680] slightly differently. AndAndAnd I want to
+[00:01:46.480] have investigate what the TikTok API
+[00:01:49.680] have investigate what the TikTok API exposes so that we can potentially
+[00:01:51.430] exposes so that we can potentially
+[00:01:51.440] exposes so that we can potentially upload from the CVM, and also upload
+[00:01:54.630] upload from the CVM, and also upload
+[00:01:54.640] upload from the CVM, and also upload from YouTube, as well.
+[00:01:59.040] Using it now, you're a bit lost. The
+[00:02:00.400] Using it now, you're a bit lost. The idea of Wayfinder is we're going to use
+[00:02:02.230] idea of Wayfinder is we're going to use
+[00:02:02.240] idea of Wayfinder is we're going to use it to create a spec that we're then
+[00:02:04.230] it to create a spec that we're then
+[00:02:04.240] it to create a spec that we're then going to implement. Hopefully, I can
+[00:02:05.670] going to implement. Hopefully, I can
+[00:02:05.680] going to implement. Hopefully, I can reach the spec stage by the end here.
+[00:02:12.680] I think that's everything I'm going to
+[00:02:13.840] I think that's everything I'm going to include for starters.
+[00:02:15.949] include for starters.
+[00:02:15.959] include for starters. The way this works is it's going to run
+[00:02:18.430] The way this works is it's going to run
+[00:02:18.440] The way this works is it's going to run a grilling session, and it's going to
+[00:02:20.949] a grilling session, and it's going to
+[00:02:20.959] a grilling session, and it's going to find the way from where I am now to
+[00:02:25.270] find the way from where I am now to
+[00:02:25.280] find the way from where I am now to where we're going. So, it's essentially
+[00:02:26.990] where we're going. So, it's essentially
+[00:02:27.000] where we're going. So, it's essentially charting the map. And it's first going
+[00:02:29.350] charting the map. And it's first going
+[00:02:29.360] charting the map. And it's first going to kind ofto kind of
+[00:02:30.680] to kind of look through stuff, see what's around,
+[00:02:32.390] look through stuff, see what's around,
+[00:02:32.400] look through stuff, see what's around, see what's available in the code base,
+[00:02:33.550] see what's available in the code base,
+[00:02:33.560] see what's available in the code base, and then it's going to start quizzing
+[00:02:34.590] and then it's going to start quizzing
+[00:02:34.600] and then it's going to start quizzing me.
+[00:02:35.910] me.
+[00:02:35.920] me. That's the theory of Wayfinder.
+[00:02:37.630] That's the theory of Wayfinder.
+[00:02:37.640] That's the theory of Wayfinder. So, Wayfinder is all about the pre-spec
+[00:02:39.910] So, Wayfinder is all about the pre-spec
+[00:02:39.920] So, Wayfinder is all about the pre-spec stage.
+[00:02:41.510] stage.
+[00:02:41.520] stage. Wayfinder infrastructure exists on the
+[00:02:42.750] Wayfinder infrastructure exists on the
+[00:02:42.760] Wayfinder infrastructure exists on the GitHub. Let me see how existing maps are
+[00:02:44.470] GitHub. Let me see how existing maps are
+[00:02:44.480] GitHub. Let me see how existing maps are structured here. Yep.
+[00:02:46.510] structured here. Yep.
+[00:02:46.520] structured here. Yep. Hello from Pakistan. Hello from Germany.
+[00:02:47.870] Hello from Pakistan. Hello from Germany.
+[00:02:47.880] Hello from Pakistan. Hello from Germany. Hello from Italy. What's up?
+[00:02:50.230] Hello from Italy. What's up?
+[00:02:50.240] Hello from Italy. What's up? I'm going to Belgium this year. Anybody
+[00:02:51.990] I'm going to Belgium this year. Anybody
+[00:02:52.000] I'm going to Belgium this year. Anybody in Belgium?
+[00:02:53.190] in Belgium?
+[00:02:53.200] in Belgium? Just for fun, not for work, actually.
+[00:02:56.670] Just for fun, not for work, actually.
+[00:02:56.680] Just for fun, not for work, actually. How to pick up the work in later
+[00:02:57.710] How to pick up the work in later
+[00:02:57.720] How to pick up the work in later sessions? Cool. I'll show you that.
+[00:03:00.229] sessions? Cool. I'll show you that.
+[00:03:00.239] sessions? Cool. I'll show you that. Let me just check my agents.
+[00:03:03.870] Let me just check my agents.
+[00:03:03.880] Let me just check my agents. Uh yep.
+[00:03:05.550] Uh yep.
+[00:03:05.560] Uh yep. Cool, you're good. I'm going to rename
+[00:03:07.030] Cool, you're good. I'm going to rename
+[00:03:07.040] Cool, you're good. I'm going to rename this agent.
+[00:03:09.150] this agent.
+[00:03:09.160] this agent. Wayfinderuh TikTok player.
+[00:03:18.040] I found that Opus 4.8 is perfectly fine
+[00:03:19.920] I found that Opus 4.8 is perfectly fine for grilling. I don't necessarily need
+[00:03:21.310] for grilling. I don't necessarily need
+[00:03:21.320] for grilling. I don't necessarily need Fable for this bit.
+[00:03:24.880] Really like it better than Grill me?
+[00:03:25.959] Really like it better than Grill me? Good. That's what I want to hear.
+[00:03:30.640] Okay. So, it's kicked off an
+[00:03:31.800] Okay. So, it's kicked off an exploration, and now it's going to start
+[00:03:33.310] exploration, and now it's going to start
+[00:03:33.320] exploration, and now it's going to start charting.
+[00:03:34.550] charting.
+[00:03:34.560] charting. Hello from Mexico. Apologies for the
+[00:03:36.310] Hello from Mexico. Apologies for the
+[00:03:36.320] Hello from Mexico. Apologies for the other night.
+[00:03:38.350] other night.
+[00:03:38.360] other night. So, you've described a fairly big idea,
+[00:03:39.910] So, you've described a fairly big idea,
+[00:03:39.920] So, you've described a fairly big idea, TikTok creator inside CVM that reuses
+[00:03:41.870] TikTok creator inside CVM that reuses
+[00:03:41.880] TikTok creator inside CVM that reuses your normal videos as a new but similar
+[00:03:43.430] your normal videos as a new but similar
+[00:03:43.440] your normal videos as a new but similar video player style differently. Cuz this
+[00:03:45.270] video player style differently. Cuz this
+[00:03:45.280] video player style differently. Cuz this is a Wayfinder effort, the map's job is
+[00:03:46.790] is a Wayfinder effort, the map's job is
+[00:03:46.800] is a Wayfinder effort, the map's job is to find a way, resolve the open
+[00:03:48.070] to find a way, resolve the open
+[00:03:48.080] to find a way, resolve the open decisions, not to build the thing.
+[00:03:49.670] decisions, not to build the thing.
+[00:03:49.680] decisions, not to build the thing. Correct. So, the destination is most
+[00:03:51.750] Correct. So, the destination is most
+[00:03:51.760] Correct. So, the destination is most likely a locked set of decisions a spec
+[00:03:53.590] likely a locked set of decisions a spec
+[00:03:53.600] likely a locked set of decisions a spec that I can hand over to an implement
+[00:03:55.070] that I can hand over to an implement
+[00:03:55.080] that I can hand over to an implement implementation agent not working upload
+[00:03:57.190] implementation agent not working upload
+[00:03:57.200] implementation agent not working upload code.
+[00:03:58.270] code.
+[00:03:58.280] code. So it's asking what the destination
+[00:04:00.670] So it's asking what the destination
+[00:04:00.680] So it's asking what the destination should be. You're absolutely right. We
+[00:04:02.670] should be. You're absolutely right. We
+[00:04:02.680] should be. You're absolutely right. We want a spec to be created. We don't want
+[00:04:04.750] want a spec to be created. We don't want
+[00:04:04.760] want a spec to be created. We don't want to start implementing.
+[00:04:09.800] I might keep this video up. I'm not
+[00:04:11.760] I might keep this video up. I'm not sure.
+[00:04:12.670] sure.
+[00:04:12.680] sure. Depends how it goes.
+[00:04:14.790] Depends how it goes.
+[00:04:14.800] Depends how it goes. Mostly the way I do it is I just stream
+[00:04:16.750] Mostly the way I do it is I just stream
+[00:04:16.760] Mostly the way I do it is I just stream and then I just make the video unlisted
+[00:04:18.430] and then I just make the video unlisted
+[00:04:18.440] and then I just make the video unlisted so that people can who tune in can find
+[00:04:20.550] so that people can who tune in can find
+[00:04:20.560] so that people can who tune in can find it again but
+[00:04:21.990] it again but
+[00:04:22.000] it again but I like to keep my main thread pretty
+[00:04:24.470] I like to keep my main thread pretty
+[00:04:24.480] I like to keep my main thread pretty tight. Okay.
+[00:04:26.470] tight. Okay.
+[00:04:26.480] tight. Okay. What is a TikTok video relative to your
+[00:04:28.310] What is a TikTok video relative to your
+[00:04:28.320] What is a TikTok video relative to your existing videos? You said that we should
+[00:04:30.270] existing videos? You said that we should
+[00:04:30.280] existing videos? You said that we should use the normal videos. Well, inside our
+[00:04:32.390] use the normal videos. Well, inside our
+[00:04:32.400] use the normal videos. Well, inside our schema so schema.ts
+[00:04:36.110] schema so schema.ts
+[00:04:36.120] schema so schema.ts there is a concept of videos here. So
+[00:04:39.310] there is a concept of videos here. So
+[00:04:39.320] there is a concept of videos here. So it's a videos table. It's got ID, lesson
+[00:04:42.030] it's a videos table. It's got ID, lesson
+[00:04:42.040] it's a videos table. It's got ID, lesson ID, picture ID. There's already a
+[00:04:43.390] ID, picture ID. There's already a
+[00:04:43.400] ID, picture ID. There's already a concept I think that is good enough for
+[00:04:45.590] concept I think that is good enough for
+[00:04:45.600] concept I think that is good enough for this. Sothis. So
+[00:04:48.919] this. So what is a TikTok video? TikTok video
+[00:04:51.190] what is a TikTok video? TikTok video
+[00:04:51.200] what is a TikTok video? TikTok video shorts are vertical portrait clips. Use
+[00:04:53.590] shorts are vertical portrait clips. Use
+[00:04:53.600] shorts are vertical portrait clips. Use the normal videos can mean quite a few
+[00:04:54.909] the normal videos can mean quite a few
+[00:04:54.919] the normal videos can mean quite a few things.
+[00:04:56.430] things.
+[00:04:56.440] things. Is a new thing you author from a normal
+[00:04:58.190] Is a new thing you author from a normal
+[00:04:58.200] Is a new thing you author from a normal video? Pick a video.
+[00:05:02.080] Yeah, it's got this wrong this
+[00:05:03.600] Yeah, it's got this wrong this recommendation. I don't want to do that.
+[00:05:05.190] recommendation. I don't want to do that.
+[00:05:05.200] recommendation. I don't want to do that. SoSo
+[00:05:07.760] So I think we should make it an existing
+[00:05:09.510] I think we should make it an existing
+[00:05:09.520] I think we should make it an existing video using the same videos table. It's
+[00:05:12.430] video using the same videos table. It's
+[00:05:12.440] video using the same videos table. It's just a different attribute on it. It's
+[00:05:14.630] just a different attribute on it. It's
+[00:05:14.640] just a different attribute on it. It's probably got different ways that we then
+[00:05:17.030] probably got different ways that we then
+[00:05:17.040] probably got different ways that we then post it different ways that we then
+[00:05:19.790] post it different ways that we then
+[00:05:19.800] post it different ways that we then turn it into a real thing.
+[00:05:26.760] Wayfinder chunks a broad requirement
+[00:05:29.400] Wayfinder chunks a broad requirement intointo
+[00:05:30.840] into more focused smaller grilling sessions.
+[00:05:33.430] more focused smaller grilling sessions.
+[00:05:33.440] more focused smaller grilling sessions. That's exactly right. It tries to figure
+[00:05:35.430] That's exactly right. It tries to figure
+[00:05:35.440] That's exactly right. It tries to figure out the frontier of decisions and then
+[00:05:37.750] out the frontier of decisions and then
+[00:05:37.760] out the frontier of decisions and then chance your way through them. You'll
+[00:05:39.110] chance your way through them. You'll
+[00:05:39.120] chance your way through them. You'll see.
+[00:05:42.000] Using an omp nice.
+[00:05:43.960] Using an omp nice. How does a video become a TikTok video?
+[00:05:45.550] How does a video become a TikTok video?
+[00:05:45.560] How does a video become a TikTok video? What's the different attribute?
+[00:05:47.990] What's the different attribute?
+[00:05:48.000] What's the different attribute? I think we need an explicit attribute
+[00:05:49.710] I think we need an explicit attribute
+[00:05:49.720] I think we need an explicit attribute here because it needs to show up in
+[00:05:52.630] here because it needs to show up in
+[00:05:52.640] here because it needs to show up in tables properly. So, it's going to need
+[00:05:55.030] tables properly. So, it's going to need
+[00:05:55.040] tables properly. So, it's going to need toto
+[00:05:56.120] to I'm not sure how we're going to put this
+[00:05:57.350] I'm not sure how we're going to put this
+[00:05:57.360] I'm not sure how we're going to put this in the UI, actually. That's a good
+[00:05:58.710] in the UI, actually. That's a good
+[00:05:58.720] in the UI, actually. That's a good question. Not sure whether this is going
+[00:06:00.590] question. Not sure whether this is going
+[00:06:00.600] question. Not sure whether this is going to be a new
+[00:06:02.230] to be a newto be a new umum
+[00:06:03.040] um top-level list of videos. That probably
+[00:06:04.830] top-level list of videos. That probably
+[00:06:04.840] top-level list of videos. That probably does make sense. I don't know whether
+[00:06:06.670] does make sense. I don't know whether
+[00:06:06.680] does make sense. I don't know whether they relate to pitches as well.
+[00:06:10.590] they relate to pitches as well.
+[00:06:10.600] they relate to pitches as well. Cuz potentially you could make a
+[00:06:13.344] Cuz potentially you could make a
+[00:06:13.354] Cuz potentially you could make a &gt;&gt; [clears throat]
+[00:06:13.830] &gt;&gt; [clears throat]
+[00:06:13.840] &gt;&gt; [clears throat] &gt;&gt; TikTok video from a pitch.
+[00:06:16.510] &gt;&gt; TikTok video from a pitch.
+[00:06:16.520] &gt;&gt; TikTok video from a pitch. I don't quite understand how
+[00:06:19.470] I don't quite understand how
+[00:06:19.480] I don't quite understand how likelike
+[00:06:20.880] like cuz TikTok videos are kind of their own
+[00:06:22.909] cuz TikTok videos are kind of their own
+[00:06:22.919] cuz TikTok videos are kind of their own thing. I They should be extremely low
+[00:06:24.870] thing. I They should be extremely low
+[00:06:24.880] thing. I They should be extremely low friction to create. I should just be
+[00:06:26.150] friction to create. I should just be
+[00:06:26.160] friction to create. I should just be able to jump in and do it.
+[00:06:30.840] You see how vague I'm being? I'm not I'm
+[00:06:32.280] You see how vague I'm being? I'm not I'm not being particularly concrete here.
+[00:06:33.870] not being particularly concrete here.
+[00:06:33.880] not being particularly concrete here. I'm just kind of talking as if I were
+[00:06:35.630] I'm just kind of talking as if I were
+[00:06:35.640] I'm just kind of talking as if I were talking in a meeting, really.
+[00:06:39.160] I do use Sandcastle for the and I've
+[00:06:42.919] I do use Sandcastle for the and I've changed how the research tickets work
+[00:06:44.670] changed how the research tickets work
+[00:06:44.680] changed how the research tickets work actually today. So, I'm now using a more
+[00:06:46.990] actually today. So, I'm now using a more
+[00:06:47.000] actually today. So, I'm now using a more sub-agent-based approach for the
+[00:06:48.310] sub-agent-based approach for the
+[00:06:48.320] sub-agent-based approach for the research tickets cuz the research is
+[00:06:49.710] research tickets cuz the research is
+[00:06:49.720] research tickets cuz the research is quite simple.
+[00:06:51.790] quite simple.
+[00:06:51.800] quite simple. Wayfinder is like a sort of grill me on
+[00:06:54.150] Wayfinder is like a sort of grill me on
+[00:06:54.160] Wayfinder is like a sort of grill me on steroids, basically.
+[00:06:58.360] Ground the pitch question in your domain
+[00:07:00.000] Ground the pitch question in your domain before I ask about it. Hmm.
+[00:07:08.960] How can you learn to read code? Uh use
+[00:07:10.560] How can you learn to read code? Uh use the teach skill.
+[00:07:13.070] the teach skill.
+[00:07:13.080] the teach skill. Use the teach skill. Teach skill's a
+[00:07:14.510] Use the teach skill. Teach skill's a
+[00:07:14.520] Use the teach skill. Teach skill's a great for that. Teach skill is in my
+[00:07:16.310] great for that. Teach skill is in my
+[00:07:16.320] great for that. Teach skill is in my skills repo.
+[00:07:18.230] skills repo.
+[00:07:18.240] skills repo. Do TikTok videos relate to pitches or do
+[00:07:20.190] Do TikTok videos relate to pitches or do
+[00:07:20.200] Do TikTok videos relate to pitches or do they bypass that machinery entirely? So,
+[00:07:22.310] they bypass that machinery entirely? So,
+[00:07:22.320] they bypass that machinery entirely? So, I have a concept of a pitch, which is
+[00:07:24.710] I have a concept of a pitch, which is
+[00:07:24.720] I have a concept of a pitch, which is the sort of packaging for a video, the
+[00:07:26.190] the sort of packaging for a video, the
+[00:07:26.200] the sort of packaging for a video, the plan for the video, and then I turn that
+[00:07:28.270] plan for the video, and then I turn that
+[00:07:28.280] plan for the video, and then I turn that pitch into a video once I'm ready. So, I
+[00:07:30.230] pitch into a video once I'm ready. So, I
+[00:07:30.240] pitch into a video once I'm ready. So, I have a list of pitches for videos I've
+[00:07:31.870] have a list of pitches for videos I've
+[00:07:31.880] have a list of pitches for videos I've not created yet. I think that this is
+[00:07:34.870] not created yet. I think that this is
+[00:07:34.880] not created yet. I think that this is probably a standalone video.
+[00:07:38.505] &gt;&gt; [snorts]&gt;&gt; [snorts] &gt;&gt; Yeah.
+[00:07:40.460] &gt;&gt; Yeah.
+[00:07:40.470] &gt;&gt; Yeah. &gt;&gt; [sighs]
+[00:07:43.440] &gt;&gt; I think there should be no pitch
+[00:07:45.760] &gt;&gt; I think there should be no pitch relationship. I don't really understand
+[00:07:48.270] relationship. I don't really understand
+[00:07:48.280] relationship. I don't really understand yet theyet the
+[00:07:49.720] yet the relationship between pitches and how I
+[00:07:51.670] relationship between pitches and how I
+[00:07:51.680] relationship between pitches and how I want to think of the flow for creating a
+[00:07:54.270] want to think of the flow for creating a
+[00:07:54.280] want to think of the flow for creating a TikTok video, how I
+[00:07:59.520] like there probably needs to be some set
+[00:08:02.080] like there probably needs to be some set of ideas for how I would create a TikTok
+[00:08:04.150] of ideas for how I would create a TikTok
+[00:08:04.160] of ideas for how I would create a TikTok video, but I don't yet have that concept
+[00:08:07.030] video, but I don't yet have that concept
+[00:08:07.040] video, but I don't yet have that concept in mind.
+[00:08:08.310] in mind.
+[00:08:08.320] in mind. And I feel like pitches are for longer
+[00:08:10.630] And I feel like pitches are for longer
+[00:08:10.640] And I feel like pitches are for longer form videos, things that are more
+[00:08:12.310] form videos, things that are more
+[00:08:12.320] form videos, things that are more expensive to create, things that need
+[00:08:14.350] expensive to create, things that need
+[00:08:14.360] expensive to create, things that need more planning.
+[00:08:15.790] more planning.
+[00:08:15.800] more planning. A TikTok video should just literally be
+[00:08:17.390] A TikTok video should just literally be
+[00:08:17.400] A TikTok video should just literally be okay, I've got an idea, let's go.
+[00:08:19.510] okay, I've got an idea, let's go.
+[00:08:19.520] okay, I've got an idea, let's go. So, low friction. No required pitch
+[00:08:21.550] So, low friction. No required pitch
+[00:08:21.560] So, low friction. No required pitch link, I think is correct.
+[00:08:28.160] Uzbekistan, awesome.
+[00:08:35.280] How many tokens it usually takes for a
+[00:08:36.560] How many tokens it usually takes for a daily task? I don't know. I usually try
+[00:08:38.950] daily task? I don't know. I usually try
+[00:08:38.960] daily task? I don't know. I usually try to keep things below the the smart zone,
+[00:08:40.990] to keep things below the the smart zone,
+[00:08:41.000] to keep things below the the smart zone, so 150k.
+[00:08:46.200] What skill in my point of view is the
+[00:08:47.480] What skill in my point of view is the best for finding bugs and your issues,
+[00:08:48.990] best for finding bugs and your issues,
+[00:08:49.000] best for finding bugs and your issues, back and front end included?
+[00:08:50.790] back and front end included?
+[00:08:50.800] back and front end included? YouYou
+[00:08:51.880] You you just need a code review skill,
+[00:08:53.150] you just need a code review skill,
+[00:08:53.160] you just need a code review skill, basically. Um so, mine is fine. There
+[00:08:55.270] basically. Um so, mine is fine. There
+[00:08:55.280] basically. Um so, mine is fine. There are a bunch of others.
+[00:08:56.630] are a bunch of others.
+[00:08:56.640] are a bunch of others. Essentially, just a review stage where
+[00:08:58.710] Essentially, just a review stage where
+[00:08:58.720] Essentially, just a review stage where you have the spec and then you
+[00:09:01.510] you have the spec and then you
+[00:09:01.520] you have the spec and then you do the review and then you compare it
+[00:09:03.230] do the review and then you compare it
+[00:09:03.240] do the review and then you compare it against the spec is a great way of
+[00:09:04.550] against the spec is a great way of
+[00:09:04.560] against the spec is a great way of catching bugs. Just literally a second
+[00:09:06.150] catching bugs. Just literally a second
+[00:09:06.160] catching bugs. Just literally a second passpass
+[00:09:07.200] pass is really good.
+[00:09:09.030] is really good.
+[00:09:09.040] is really good. What platforms?
+[00:09:13.040] I think TikTok plus YouTube shorts is
+[00:09:15.680] I think TikTok plus YouTube shorts is good.
+[00:09:20.960] ButBut I mean, I don't have anyI mean, I don't have any
+[00:09:25.440] I mean, I don't have any following on Instagram and so that would
+[00:09:26.829] following on Instagram and so that would
+[00:09:26.839] following on Instagram and so that would be a little bit pointless, but I would
+[00:09:28.030] be a little bit pointless, but I would
+[00:09:28.040] be a little bit pointless, but I would be interested in um doing some research
+[00:09:30.390] be interested in um doing some research
+[00:09:30.400] be interested in um doing some research on what is possible on those platforms
+[00:09:32.070] on what is possible on those platforms
+[00:09:32.080] on what is possible on those platforms and how easy it would be to integrate.
+[00:09:33.990] and how easy it would be to integrate.
+[00:09:34.000] and how easy it would be to integrate. Because once we have it in a database,
+[00:09:37.110] Because once we have it in a database,
+[00:09:37.120] Because once we have it in a database, it's extremely cheap to just start
+[00:09:39.550] it's extremely cheap to just start
+[00:09:39.560] it's extremely cheap to just start smashing it out to loads of different
+[00:09:40.950] smashing it out to loads of different
+[00:09:40.960] smashing it out to loads of different platforms.
+[00:09:47.160] I just remembered something.
+[00:09:48.800] I just remembered something. Yeah, this is whisper flow.
+[00:09:52.400] The other thing we need to bear in mind
+[00:09:53.680] The other thing we need to bear in mind here is that there is a repo on this
+[00:09:58.190] here is that there is a repo on this
+[00:09:58.200] here is that there is a repo on this computer
+[00:10:02.000] called repos ts total
+[00:10:06.200] called repos ts total typescript monorepo.
+[00:10:10.480] This is from a previous iteration of
+[00:10:12.200] This is from a previous iteration of this workflow where I used a CLI to just
+[00:10:15.550] this workflow where I used a CLI to just
+[00:10:15.560] this workflow where I used a CLI to just take the most recently updated OBS video
+[00:10:18.430] take the most recently updated OBS video
+[00:10:18.440] take the most recently updated OBS video and add subtitles to it. So, there is a
+[00:10:20.350] and add subtitles to it. So, there is a
+[00:10:20.360] and add subtitles to it. So, there is a remotion repo inside here, which I think
+[00:10:24.430] remotion repo inside here, which I think
+[00:10:24.440] remotion repo inside here, which I think we might need to extract out into its
+[00:10:27.110] we might need to extract out into its
+[00:10:27.120] we might need to extract out into its own repository.
+[00:10:29.790] own repository.
+[00:10:29.800] own repository. I'm not sure. I definitely there's
+[00:10:31.190] I'm not sure. I definitely there's
+[00:10:31.200] I'm not sure. I definitely there's definitely too much in the total
+[00:10:32.550] definitely too much in the total
+[00:10:32.560] definitely too much in the total typescript monorepo, which is now
+[00:10:33.990] typescript monorepo, which is now
+[00:10:34.000] typescript monorepo, which is now deprecated.
+[00:10:35.550] deprecated.
+[00:10:35.560] deprecated. I don't really want to keep it around.
+[00:10:39.942] &gt;&gt; [clears throat]
+[00:10:40.560] &gt;&gt; [clears throat] &gt;&gt; Yeah, I'm not quite sure what to do
+[00:10:41.750] &gt;&gt; Yeah, I'm not quite sure what to do
+[00:10:41.760] &gt;&gt; Yeah, I'm not quite sure what to do there.
+[00:10:44.200] Notice how much fog there is in this um
+[00:10:48.320] Notice how much fog there is in this um like we don't know the way yet. This is
+[00:10:50.430] like we don't know the way yet. This is
+[00:10:50.440] like we don't know the way yet. This is what wayfinder is doing. It's helping us
+[00:10:52.190] what wayfinder is doing. It's helping us
+[00:10:52.200] what wayfinder is doing. It's helping us find the way.
+[00:10:55.320] To tickets definitely still has a place.
+[00:10:57.000] To tickets definitely still has a place. Um wayfinder creates the spec. Let me
+[00:11:00.270] Um wayfinder creates the spec. Let me
+[00:11:00.280] Um wayfinder creates the spec. Let me pull this up.
+[00:11:02.230] pull this up.
+[00:11:02.240] pull this up. So, let me lookSo, let me look
+[00:11:04.680] So, let me look which diagram do we need here?
+[00:11:09.200] Uh to Yeah, here we go.
+[00:11:12.600] Uh to Yeah, here we go. To spec.
+[00:11:14.470] To spec.
+[00:11:14.480] To spec. So,So,So, where is it? This one.
+[00:11:18.310] where is it? This one.
+[00:11:18.320] where is it? This one. Yep.
+[00:11:19.590] Yep.
+[00:11:19.600] Yep. This is essentially the new flow.
+[00:11:21.870] This is essentially the new flow.
+[00:11:21.880] This is essentially the new flow. You either do grow with docs, if that's
+[00:11:23.670] You either do grow with docs, if that's
+[00:11:23.680] You either do grow with docs, if that's what you're more comfortable with, or
+[00:11:24.829] what you're more comfortable with, or
+[00:11:24.839] what you're more comfortable with, or you can do wayfinder, then you do to
+[00:11:27.110] you can do wayfinder, then you do to
+[00:11:27.120] you can do wayfinder, then you do to spec to turn it into a specification,
+[00:11:29.630] spec to turn it into a specification,
+[00:11:29.640] spec to turn it into a specification, because probably if you're using
+[00:11:30.870] because probably if you're using
+[00:11:30.880] because probably if you're using wayfinder, it's going to be more than
+[00:11:32.310] wayfinder, it's going to be more than
+[00:11:32.320] wayfinder, it's going to be more than oneone
+[00:11:33.560] one um coding session toum coding session to
+[00:11:35.440] um coding session to um get there. Then you do two tickets,
+[00:11:38.070] um get there. Then you do two tickets,
+[00:11:38.080] um get there. Then you do two tickets, then implements, then code review. So,
+[00:11:39.590] then implements, then code review. So,
+[00:11:39.600] then implements, then code review. So, same flow.
+[00:11:42.360] This is on Opus 4.8, clawed code, medium
+[00:11:45.160] This is on Opus 4.8, clawed code, medium effort.
+[00:11:48.400] Okay, here we go.
+[00:11:52.640] I want to know what's cheap to fan out
+[00:11:54.320] I want to know what's cheap to fan out to. That's right.
+[00:11:55.950] to. That's right.
+[00:11:55.960] to. That's right. Prior art plus a Remotion project turn
+[00:11:58.470] Prior art plus a Remotion project turn
+[00:11:58.480] Prior art plus a Remotion project turn into a probably rendering a vertical
+[00:11:59.870] into a probably rendering a vertical
+[00:11:59.880] into a probably rendering a vertical video with burned-in captions. Yes. The
+[00:12:02.590] video with burned-in captions. Yes. The
+[00:12:02.600] video with burned-in captions. Yes. The defining feature of TikTok. What does
+[00:12:04.750] defining feature of TikTok. What does
+[00:12:04.760] defining feature of TikTok. What does turning into a real thing mean?
+[00:12:08.480] Mhm.
+[00:12:12.920] Yes, that's correct.
+[00:12:17.640] It's definitely a core in-scope pillar
+[00:12:19.280] It's definitely a core in-scope pillar of this spec and there's already prior
+[00:12:21.910] of this spec and there's already prior
+[00:12:21.920] of this spec and there's already prior art in the total TypeScript monorepo for
+[00:12:23.590] art in the total TypeScript monorepo for
+[00:12:23.600] art in the total TypeScript monorepo for handling it.
+[00:12:31.520] You found they needed a bit of tuning?
+[00:12:33.240] You found they needed a bit of tuning? Okay.
+[00:12:34.670] Okay.
+[00:12:34.680] Okay. I'd love to know what tuning you did.
+[00:12:39.080] How would you prevent the model from
+[00:12:40.200] How would you prevent the model from drifting away from the task even with
+[00:12:41.590] drifting away from the task even with
+[00:12:41.600] drifting away from the task even with your guardrails with the skills? Also,
+[00:12:43.790] your guardrails with the skills? Also,
+[00:12:43.800] your guardrails with the skills? Also, by using the skills, can you delegate
+[00:12:45.150] by using the skills, can you delegate
+[00:12:45.160] by using the skills, can you delegate tasks where Opus ping-pong with Sonic?
+[00:12:48.150] tasks where Opus ping-pong with Sonic?
+[00:12:48.160] tasks where Opus ping-pong with Sonic? UmUmUm It's two
+[00:12:50.710] It's twoIt's two quite different questions there. Um
+[00:12:55.920] I mean, when I'm in the planning phase,
+[00:12:57.360] I mean, when I'm in the planning phase, it's my responsibility to keep the model
+[00:12:58.990] it's my responsibility to keep the model
+[00:12:59.000] it's my responsibility to keep the model on task. Like, so many people are really
+[00:13:01.710] on task. Like, so many people are really
+[00:13:01.720] on task. Like, so many people are really like umlike um
+[00:13:04.360] like um passive with the agents when they're in
+[00:13:06.230] passive with the agents when they're in
+[00:13:06.240] passive with the agents when they're in this phase. You need to be on top of
+[00:13:07.750] this phase. You need to be on top of
+[00:13:07.760] this phase. You need to be on top of them. You need to be driving it.
+[00:13:10.670] them. You need to be driving it.
+[00:13:10.680] them. You need to be driving it. You're the lead. They're the junior.
+[00:13:13.750] You're the lead. They're the junior.
+[00:13:13.760] You're the lead. They're the junior. So, okay, it's created a it's proposing
+[00:13:16.470] So, okay, it's created a it's proposing
+[00:13:16.480] So, okay, it's created a it's proposing a map for me. So,
+[00:13:19.750] a map for me. So,
+[00:13:19.760] a map for me. So, it says the destination a decision
+[00:13:21.430] it says the destination a decision
+[00:13:21.440] it says the destination a decision complete spec for a TikTok creator in
+[00:13:23.110] complete spec for a TikTok creator in
+[00:13:23.120] complete spec for a TikTok creator in the course video manager, which is my
+[00:13:24.470] the course video manager, which is my
+[00:13:24.480] the course video manager, which is my repo.
+[00:13:25.750] repo.
+[00:13:25.760] repo. Uh Uh, subtitle vertical render pipeline
+[00:13:27.830] Uh Uh, subtitle vertical render pipeline
+[00:13:27.840] Uh Uh, subtitle vertical render pipeline using the Remotion prior art using
+[00:13:29.910] using the Remotion prior art using
+[00:13:29.920] using the Remotion prior art using posting to TikTok and YouTube Shorts.
+[00:13:32.830] posting to TikTok and YouTube Shorts.
+[00:13:32.840] posting to TikTok and YouTube Shorts. Execution is out of scope. Yes, so we're
+[00:13:34.870] Execution is out of scope. Yes, so we're
+[00:13:34.880] Execution is out of scope. Yes, so we're not going to create this yet, we're just
+[00:13:36.150] not going to create this yet, we're just
+[00:13:36.160] not going to create this yet, we're just going to create the spec.
+[00:13:37.710] going to create the spec.
+[00:13:37.720] going to create the spec. So,So,
+[00:13:40.200] So, uh, does this destination 9-ticket
+[00:13:41.790] uh, does this destination 9-ticket
+[00:13:41.800] uh, does this destination 9-ticket breakdown match your intent? I'm not
+[00:13:43.110] breakdown match your intent? I'm not
+[00:13:43.120] breakdown match your intent? I'm not going to read these yet, I'm just going
+[00:13:44.350] going to read these yet, I'm just going
+[00:13:44.360] going to read these yet, I'm just going to say, "Yeah, looks good, bro."
+[00:13:48.550] to say, "Yeah, looks good, bro."
+[00:13:48.560] to say, "Yeah, looks good, bro." So, I'm going to get it now to create
+[00:13:50.230] So, I'm going to get it now to create
+[00:13:50.240] So, I'm going to get it now to create its GitHub issues. Usually, I might do a
+[00:13:51.910] its GitHub issues. Usually, I might do a
+[00:13:51.920] its GitHub issues. Usually, I might do a little pass at this, but we're on live
+[00:13:53.590] little pass at this, but we're on live
+[00:13:53.600] little pass at this, but we're on live stream, so I'm not going to.
+[00:13:58.200] Please use GPT 5.6. Opus has less
+[00:14:00.360] Please use GPT 5.6. Opus has less intelligence.
+[00:14:01.910] intelligence.
+[00:14:01.920] intelligence. Ah.
+[00:14:03.990] Ah.
+[00:14:04.000] Ah. Uh, let's quickly look at something.
+[00:14:09.160] This is, um,
+[00:14:10.680] This is, um, how I see the world in terms of, um,
+[00:14:13.550] how I see the world in terms of, um,
+[00:14:13.560] how I see the world in terms of, um, what an agent is.
+[00:14:15.230] what an agent is.
+[00:14:15.240] what an agent is. You have your model, which is in the
+[00:14:17.430] You have your model, which is in the
+[00:14:17.440] You have your model, which is in the middle here, then the harness around
+[00:14:18.990] middle here, then the harness around
+[00:14:19.000] middle here, then the harness around your model, so the model is Opus, uh,
+[00:14:21.150] your model, so the model is Opus, uh,
+[00:14:21.160] your model, so the model is Opus, uh, GPT 5.6.
+[00:14:22.750] GPT 5.6.
+[00:14:22.760] GPT 5.6. Then the harness is Claude Code, Claude
+[00:14:24.670] Then the harness is Claude Code, Claude
+[00:14:24.680] Then the harness is Claude Code, Claude AI, my Codex, ChatGPT.
+[00:14:27.590] AI, my Codex, ChatGPT.
+[00:14:27.600] AI, my Codex, ChatGPT. All of that is what we call the agent.
+[00:14:30.150] All of that is what we call the agent.
+[00:14:30.160] All of that is what we call the agent. Then, wrapping that, the thing that the
+[00:14:32.710] Then, wrapping that, the thing that the
+[00:14:32.720] Then, wrapping that, the thing that the agent operates inside, that is the
+[00:14:34.350] agent operates inside, that is the
+[00:14:34.360] agent operates inside, that is the environment. That might be the file
+[00:14:36.150] environment. That might be the file
+[00:14:36.160] environment. That might be the file system, might be the code base, might be
+[00:14:37.950] system, might be the code base, might be
+[00:14:37.960] system, might be the code base, might be something else.
+[00:14:39.510] something else.
+[00:14:39.520] something else. Everyone talks about swapping out the
+[00:14:40.870] Everyone talks about swapping out the
+[00:14:40.880] Everyone talks about swapping out the model, improve the model, make the model
+[00:14:42.510] model, improve the model, make the model
+[00:14:42.520] model, improve the model, make the model better.
+[00:14:44.030] better.
+[00:14:44.040] better. It's just a small part of the picture.
+[00:14:46.110] It's just a small part of the picture.
+[00:14:46.120] It's just a small part of the picture. You can make the model better, sure, but
+[00:14:48.070] You can make the model better, sure, but
+[00:14:48.080] You can make the model better, sure, but you can also, and this is free, you can
+[00:14:50.270] you can also, and this is free, you can
+[00:14:50.280] you can also, and this is free, you can make the harness better, or you can try
+[00:14:52.829] make the harness better, or you can try
+[00:14:52.839] make the harness better, or you can try to make the environment in which the
+[00:14:54.630] to make the environment in which the
+[00:14:54.640] to make the environment in which the agent is acting better.
+[00:14:56.670] agent is acting better.
+[00:14:56.680] agent is acting better. So, all of this kind of, s- like, just
+[00:14:59.470] So, all of this kind of, s- like, just
+[00:14:59.480] So, all of this kind of, s- like, just swap out the model and it'll be great.
+[00:15:02.190] swap out the model and it'll be great.
+[00:15:02.200] swap out the model and it'll be great. Honestly, there's so much more you can
+[00:15:03.550] Honestly, there's so much more you can
+[00:15:03.560] Honestly, there's so much more you can get from focusing on the environment and
+[00:15:05.630] get from focusing on the environment and
+[00:15:05.640] get from focusing on the environment and the harness. I would say, "50/50."
+[00:15:10.839] Okay, it's creating the Wayfinder map,
+[00:15:13.280] Okay, it's creating the Wayfinder map, cool. So, at this point, it's going to
+[00:15:15.110] cool. So, at this point, it's going to
+[00:15:15.120] cool. So, at this point, it's going to create some real GitHub issues. Real
+[00:15:17.990] create some real GitHub issues. Real
+[00:15:18.000] create some real GitHub issues. Real GitHub issues. Let me take a look at
+[00:15:19.870] GitHub issues. Let me take a look at
+[00:15:19.880] GitHub issues. Let me take a look at them.
+[00:15:21.550] them.
+[00:15:21.560] them. So, this is a real GitHub issue. I'll
+[00:15:23.750] So, this is a real GitHub issue. I'll
+[00:15:23.760] So, this is a real GitHub issue. I'll post this in the chat.
+[00:15:26.270] post this in the chat.
+[00:15:26.280] post this in the chat. You can go and take a look at this. This
+[00:15:27.630] You can go and take a look at this. This
+[00:15:27.640] You can go and take a look at this. This is a public repo.
+[00:15:29.990] is a public repo.
+[00:15:30.000] is a public repo. AndAnd
+[00:15:31.440] And you notice that the map itself is pretty
+[00:15:33.510] you notice that the map itself is pretty
+[00:15:33.520] you notice that the map itself is pretty terse here. A lot of what it does is it
+[00:15:36.310] terse here. A lot of what it does is it
+[00:15:36.320] terse here. A lot of what it does is it delegates out to subtasks and these
+[00:15:39.790] delegates out to subtasks and these
+[00:15:39.800] delegates out to subtasks and these decision tickets that's going to be
+[00:15:41.190] decision tickets that's going to be
+[00:15:41.200] decision tickets that's going to be creating now.
+[00:15:46.880] So, it's now creating the nine tickets.
+[00:15:55.000] &gt;&gt; [clears throat]
+[00:15:56.920] &gt;&gt; [clears throat] &gt;&gt; According to your drawing, the model is
+[00:15:58.110] &gt;&gt; According to your drawing, the model is
+[00:15:58.120] &gt;&gt; According to your drawing, the model is the core. Yes, but
+[00:16:00.590] the core. Yes, but
+[00:16:00.600] the core. Yes, but the engine is only a part of the car.
+[00:16:07.760] Why does it seem that my limbs take me
+[00:16:09.280] Why does it seem that my limbs take me for a walk around the houses?
+[00:16:11.190] for a walk around the houses?
+[00:16:11.200] for a walk around the houses? No idea.
+[00:16:13.070] No idea.
+[00:16:13.080] No idea. Just stay in your seat, I would say.
+[00:16:22.880] Got someone I need to get rid of.
+[00:16:25.131] Got someone I need to get rid of. &gt;&gt; [snorts]
+[00:16:33.600] &gt;&gt; Would you use Wayfinder for smaller
+[00:16:34.800] &gt;&gt; Would you use Wayfinder for smaller scope specs? Yeah, what you can do is
+[00:16:36.470] scope specs? Yeah, what you can do is
+[00:16:36.480] scope specs? Yeah, what you can do is Wayfinder will um
+[00:16:39.829] Wayfinder will um
+[00:16:39.839] Wayfinder will um if it senses that it doesn't need a map,
+[00:16:42.190] if it senses that it doesn't need a map,
+[00:16:42.200] if it senses that it doesn't need a map, it won't create a map. It will just do
+[00:16:43.870] it won't create a map. It will just do
+[00:16:43.880] it won't create a map. It will just do the thing in the normal grilling
+[00:16:45.110] the thing in the normal grilling
+[00:16:45.120] the thing in the normal grilling session. So,session. So,
+[00:16:47.080] session. So, Wayfinder will sort of just um degrade
+[00:16:49.310] Wayfinder will sort of just um degrade
+[00:16:49.320] Wayfinder will sort of just um degrade down to grill dogs instead.
+[00:16:53.200] I'm using VS code.
+[00:17:01.960] Used Wayfinder yesterday, it made the
+[00:17:03.320] Used Wayfinder yesterday, it made the spec. Yeah, it's it's created the map.
+[00:17:05.990] spec. Yeah, it's it's created the map.
+[00:17:06.000] spec. Yeah, it's it's created the map. Um now, what you need to do is go
+[00:17:07.550] Um now, what you need to do is go
+[00:17:07.560] Um now, what you need to do is go through the tickets. So, if we take a
+[00:17:09.110] through the tickets. So, if we take a
+[00:17:09.120] through the tickets. So, if we take a look at the tickets,
+[00:17:11.150] look at the tickets,
+[00:17:11.160] look at the tickets, uh we can see that it's opened nine uh
+[00:17:13.590] uh we can see that it's opened nine uh
+[00:17:13.600] uh we can see that it's opened nine uh subtasks or subissues on the GitHub
+[00:17:16.590] subtasks or subissues on the GitHub
+[00:17:16.600] subtasks or subissues on the GitHub issue.
+[00:17:17.630] issue.
+[00:17:17.640] issue. So, you don't have to use GitHub for
+[00:17:19.110] So, you don't have to use GitHub for
+[00:17:19.120] So, you don't have to use GitHub for this, by the way. You can just like
+[00:17:21.350] this, by the way. You can just like
+[00:17:21.360] this, by the way. You can just like umum
+[00:17:22.160] um do your thing. Uh and what it's done,
+[00:17:24.630] do your thing. Uh and what it's done,
+[00:17:24.640] do your thing. Uh and what it's done, very cool. We can see that it's got some
+[00:17:27.110] very cool. We can see that it's got some
+[00:17:27.120] very cool. We can see that it's got some blocking relationships here.
+[00:17:28.950] blocking relationships here.
+[00:17:28.960] blocking relationships here. So, we've got three open tickets which
+[00:17:32.190] So, we've got three open tickets which
+[00:17:32.200] So, we've got three open tickets which we can grab. This one is a grilling
+[00:17:34.670] we can grab. This one is a grilling
+[00:17:34.680] we can grab. This one is a grilling session. So, this means we need to have
+[00:17:36.590] session. So, this means we need to have
+[00:17:36.600] session. So, this means we need to have a conversation about something. This one
+[00:17:39.350] a conversation about something. This one
+[00:17:39.360] a conversation about something. This one is a prototype. So, this one means we
+[00:17:42.150] is a prototype. So, this one means we
+[00:17:42.160] is a prototype. So, this one means we need to actually like have a play and
+[00:17:43.750] need to actually like have a play and
+[00:17:43.760] need to actually like have a play and mess around with some code. Then this
+[00:17:45.550] mess around with some code. Then this
+[00:17:45.560] mess around with some code. Then this one here is um another grilling session.
+[00:17:49.790] one here is um another grilling session.
+[00:17:49.800] one here is um another grilling session. These four look like research tasks. And
+[00:17:52.630] These four look like research tasks. And
+[00:17:52.640] These four look like research tasks. And the way that Wayfinder works now is it's
+[00:17:54.430] the way that Wayfinder works now is it's
+[00:17:54.440] the way that Wayfinder works now is it's going to actually just start spawning
+[00:17:56.670] going to actually just start spawning
+[00:17:56.680] going to actually just start spawning agents to tackle those research tasks
+[00:17:58.550] agents to tackle those research tasks
+[00:17:58.560] agents to tackle those research tasks now.
+[00:17:59.670] now.
+[00:17:59.680] now. So, that's handy. So, that means that
+[00:18:01.510] So, that's handy. So, that means that
+[00:18:01.520] So, that's handy. So, that means that those research tasks, those are all just
+[00:18:03.470] those research tasks, those are all just
+[00:18:03.480] those research tasks, those are all just going to be done and reported back. And
+[00:18:05.830] going to be done and reported back. And
+[00:18:05.840] going to be done and reported back. And then there are a couple of blocked ones
+[00:18:07.350] then there are a couple of blocked ones
+[00:18:07.360] then there are a couple of blocked ones here which are blocked behind other
+[00:18:09.110] here which are blocked behind other
+[00:18:09.120] here which are blocked behind other decisions that are being made. And then
+[00:18:11.430] decisions that are being made. And then
+[00:18:11.440] decisions that are being made. And then there's some stuff that's not yet
+[00:18:12.590] there's some stuff that's not yet
+[00:18:12.600] there's some stuff that's not yet specified. So, how do we have the set of
+[00:18:14.470] specified. So, how do we have the set of
+[00:18:14.480] specified. So, how do we have the set of ideas backlog for TikToks? How do we do
+[00:18:17.030] ideas backlog for TikToks? How do we do
+[00:18:17.040] ideas backlog for TikToks? How do we do caption styling? How do we Do we tie
+[00:18:19.590] caption styling? How do we Do we tie
+[00:18:19.600] caption styling? How do we Do we tie this to the deliverables calendar? You
+[00:18:21.270] this to the deliverables calendar? You
+[00:18:21.280] this to the deliverables calendar? You get the idea.
+[00:18:22.510] get the idea.
+[00:18:22.520] get the idea. So, this is the idea now. So, where do
+[00:18:24.390] So, this is the idea now. So, where do
+[00:18:24.400] So, this is the idea now. So, where do we go from here? We've created the map,
+[00:18:25.910] we go from here? We've created the map,
+[00:18:25.920] we go from here? We've created the map, we've kicked off some research tickets.
+[00:18:27.790] we've kicked off some research tickets.
+[00:18:27.800] we've kicked off some research tickets. It's time now to
+[00:18:30.430] It's time now to
+[00:18:30.440] It's time now to Uh yeah, it's looking good. I'm now
+[00:18:32.910] Uh yeah, it's looking good. I'm now
+[00:18:32.920] Uh yeah, it's looking good. I'm now going to spawn some agents to tackle
+[00:18:34.670] going to spawn some agents to tackle
+[00:18:34.680] going to spawn some agents to tackle each one of these. So, I'm going to copy
+[00:18:36.070] each one of these. So, I'm going to copy
+[00:18:36.080] each one of these. So, I'm going to copy the link address to this issue.
+[00:18:38.470] the link address to this issue.
+[00:18:38.480] the link address to this issue. I'm going to go uh left to open up a new
+[00:18:41.150] I'm going to go uh left to open up a new
+[00:18:41.160] I'm going to go uh left to open up a new issue. I'm going to say Wayfinder and
+[00:18:43.110] issue. I'm going to say Wayfinder and
+[00:18:43.120] issue. I'm going to say Wayfinder and I'm going to open that up.
+[00:18:44.950] I'm going to open that up.
+[00:18:44.960] I'm going to open that up. And I'm going to rename this to
+[00:18:47.510] And I'm going to rename this to
+[00:18:47.520] And I'm going to rename this to how videos market to TikTok.
+[00:18:49.510] how videos market to TikTok.
+[00:18:49.520] how videos market to TikTok. Short form attribute for TikTok.
+[00:18:54.190] Short form attribute for TikTok.
+[00:18:54.200] Short form attribute for TikTok. Uh then I'm going to do the next here.
+[00:18:56.630] Uh then I'm going to do the next here.
+[00:18:56.640] Uh then I'm going to do the next here. I do want to make this less manual, but
+[00:18:58.470] I do want to make this less manual, but
+[00:18:58.480] I do want to make this less manual, but this is the way I'm doing it for now and
+[00:18:59.910] this is the way I'm doing it for now and
+[00:18:59.920] this is the way I'm doing it for now and it seems fine. So, this one is
+[00:19:02.230] it seems fine. So, this one is
+[00:19:02.240] it seems fine. So, this one is uh portrait creative view.
+[00:19:06.470] uh portrait creative view.
+[00:19:06.480] uh portrait creative view. And then this one is TikTok creation
+[00:19:09.070] And then this one is TikTok creation
+[00:19:09.080] And then this one is TikTok creation flow.
+[00:19:11.560] Tick Whoopsie. TikTok creation flow.
+[00:19:17.720] Tick Whoopsie. TikTok creation flow. So now I've got four sessions running at
+[00:19:19.350] So now I've got four sessions running at
+[00:19:19.360] So now I've got four sessions running at the same time grilling about different
+[00:19:21.670] the same time grilling about different
+[00:19:21.680] the same time grilling about different things and I'm going to just sort of
+[00:19:23.270] things and I'm going to just sort of
+[00:19:23.280] things and I'm going to just sort of manage them as we go.
+[00:19:25.030] manage them as we go.
+[00:19:25.040] manage them as we go. So I've already got one from
+[00:19:27.110] So I've already got one from
+[00:19:27.120] So I've already got one from before I went on.
+[00:19:31.160] How does this work with non-public
+[00:19:32.160] How does this work with non-public repos? It just works. Right, because
+[00:19:34.750] repos? It just works. Right, because
+[00:19:34.760] repos? It just works. Right, because you've got a GitHub auth token, it's
+[00:19:36.550] you've got a GitHub auth token, it's
+[00:19:36.560] you've got a GitHub auth token, it's authenticated as you, then you're able
+[00:19:38.310] authenticated as you, then you're able
+[00:19:38.320] authenticated as you, then you're able to create issues and do the normal
+[00:19:40.150] to create issues and do the normal
+[00:19:40.160] to create issues and do the normal thing.
+[00:19:42.640] To spec is the new name for 2 PRD.
+[00:19:49.600] So at this point, I just wait until all
+[00:19:52.160] So at this point, I just wait until all of these are just running kind of like
+[00:19:53.910] of these are just running kind of like
+[00:19:53.920] of these are just running kind of like figuring things out.
+[00:19:57.720] And I just wait until one is ready for
+[00:19:59.360] And I just wait until one is ready for me.
+[00:20:04.560] Much more fair? Good.
+[00:20:06.840] Much more fair? Good. Much more clear, sorry.
+[00:20:11.680] Is it good practice to compose a big
+[00:20:12.920] Is it good practice to compose a big skill that references other child skills
+[00:20:14.510] skill that references other child skills
+[00:20:14.520] skill that references other child skills to perform
+[00:20:16.070] to perform
+[00:20:16.080] to perform for example, controlled loop workflows?
+[00:20:19.390] for example, controlled loop workflows?
+[00:20:19.400] for example, controlled loop workflows? It's tricky.
+[00:20:20.550] It's tricky.
+[00:20:20.560] It's tricky. UmUmUm I would say umI would say um
+[00:20:24.240] I would say um look at my writing great skills skill.
+[00:20:26.790] look at my writing great skills skill.
+[00:20:26.800] look at my writing great skills skill. There's got a little bit of advice in
+[00:20:28.110] There's got a little bit of advice in
+[00:20:28.120] There's got a little bit of advice in there for that.
+[00:20:30.920] Why don't I use Fable 5? Um because I'm
+[00:20:32.840] Why don't I use Fable 5? Um because I'm really happy with Opus.
+[00:20:35.030] really happy with Opus.
+[00:20:35.040] really happy with Opus. Really happy with Opus. It's doing good
+[00:20:36.430] Really happy with Opus. It's doing good
+[00:20:36.440] Really happy with Opus. It's doing good for me.
+[00:20:44.080] How do I have four terminal workers in
+[00:20:45.600] How do I have four terminal workers in one terminal window without tapping
+[00:20:46.830] one terminal window without tapping
+[00:20:46.840] one terminal window without tapping over? This is a Claude
+[00:20:49.110] over? This is a Claude
+[00:20:49.120] over? This is a Claude uh code feature. So it allows me to view
+[00:20:51.310] uh code feature. So it allows me to view
+[00:20:51.320] uh code feature. So it allows me to view it from the top level. I've really
+[00:20:52.910] it from the top level. I've really
+[00:20:52.920] it from the top level. I've really really enjoyed using this. It's
+[00:20:54.150] really enjoyed using this. It's
+[00:20:54.160] really enjoyed using this. It's excellent. I've tried other stuff like
+[00:20:55.990] excellent. I've tried other stuff like
+[00:20:56.000] excellent. I've tried other stuff like Herder, but it's Herder's a little bit
+[00:20:57.430] Herder, but it's Herder's a little bit
+[00:20:57.440] Herder, but it's Herder's a little bit buggy. I have some reports that I need
+[00:20:58.910] buggy. I have some reports that I need
+[00:20:58.920] buggy. I have some reports that I need to giveto give
+[00:21:00.040] to give give to the guy who makes it. Um
+[00:21:02.830] give to the guy who makes it. Um
+[00:21:02.840] give to the guy who makes it. Um butbut
+[00:21:04.160] but uh I've really enjoyed this. So okay,
+[00:21:05.990] uh I've really enjoyed this. So okay,
+[00:21:06.000] uh I've really enjoyed this. So okay, one is here and it started on a grilling
+[00:21:08.910] one is here and it started on a grilling
+[00:21:08.920] one is here and it started on a grilling session.
+[00:21:09.910] session.
+[00:21:09.920] session. What I really like about Claude code is
+[00:21:11.590] What I really like about Claude code is
+[00:21:11.600] What I really like about Claude code is it has this recap feature where it says
+[00:21:13.470] it has this recap feature where it says
+[00:21:13.480] it has this recap feature where it says charting the TikTok creator wayfinder
+[00:21:14.910] charting the TikTok creator wayfinder
+[00:21:14.920] charting the TikTok creator wayfinder map, I've claimed I'm grilling short
+[00:21:16.710] map, I've claimed I'm grilling short
+[00:21:16.720] map, I've claimed I'm grilling short form attribute how video is marked as a
+[00:21:18.150] form attribute how video is marked as a
+[00:21:18.160] form attribute how video is marked as a TikTok short. What access is this
+[00:21:20.470] TikTok short. What access is this
+[00:21:20.480] TikTok short. What access is this attribute actually on? This ticket
+[00:21:22.830] attribute actually on? This ticket
+[00:21:22.840] attribute actually on? This ticket floats kind with values short and
+[00:21:24.510] floats kind with values short and
+[00:21:24.520] floats kind with values short and lesson, but those two aren't opposites.
+[00:21:26.390] lesson, but those two aren't opposites.
+[00:21:26.400] lesson, but those two aren't opposites. A standalone pitch video is neither a
+[00:21:27.870] A standalone pitch video is neither a
+[00:21:27.880] A standalone pitch video is neither a lesson nor a short, it's a long form
+[00:21:29.590] lesson nor a short, it's a long form
+[00:21:29.600] lesson nor a short, it's a long form landscape video. So, this is a new
+[00:21:33.070] landscape video. So, this is a new
+[00:21:33.080] landscape video. So, this is a new should name form factor intent only.
+[00:21:35.070] should name form factor intent only.
+[00:21:35.080] should name form factor intent only. This video is a short form vertical
+[00:21:36.310] This video is a short form vertical
+[00:21:36.320] This video is a short form vertical thing I'll post TikTok shorts. Stay mhm.
+[00:21:39.310] thing I'll post TikTok shorts. Stay mhm.
+[00:21:39.320] thing I'll post TikTok shorts. Stay mhm. I think this is a standalone video. It's
+[00:21:41.590] I think this is a standalone video. It's
+[00:21:41.600] I think this is a standalone video. It's just a standalone video with a new
+[00:21:43.830] just a standalone video with a new
+[00:21:43.840] just a standalone video with a new attribute and might need to be filtered
+[00:21:45.630] attribute and might need to be filtered
+[00:21:45.640] attribute and might need to be filtered and shown differently in that same UI.
+[00:21:50.120] Let me actually show you the thing that
+[00:21:51.600] Let me actually show you the thing that I'm working on so that I can
+[00:21:55.230] I'm working on so that I can
+[00:21:55.240] I'm working on so that I can I might just put this in I know we're
+[00:21:56.950] I might just put this in I know we're
+[00:21:56.960] I might just put this in I know we're we're good. Mhm.
+[00:22:00.520] So, the thing I'm working onis this.
+[00:22:07.360] is this. This is myThis is myThis is my uhuh
+[00:22:12.600] uh basically the thing that I spend all of
+[00:22:14.270] basically the thing that I spend all of
+[00:22:14.280] basically the thing that I spend all of my time in mhm as a content creator.
+[00:22:16.590] my time in mhm as a content creator.
+[00:22:16.600] my time in mhm as a content creator. This is the content creator platform
+[00:22:18.030] This is the content creator platform
+[00:22:18.040] This is the content creator platform that I have built for myself. And I
+[00:22:20.110] that I have built for myself. And I
+[00:22:20.120] that I have built for myself. And I think what it's basically asking is
+[00:22:22.270] think what it's basically asking is
+[00:22:22.280] think what it's basically asking is should I put this in here in my
+[00:22:25.550] should I put this in here in my
+[00:22:25.560] should I put this in here in my standalone videos?
+[00:22:28.150] standalone videos?
+[00:22:28.160] standalone videos? Probably should.
+[00:22:31.640] Probably should.
+[00:22:36.240] Yeah, I think that's good.
+[00:22:39.880] So, I go left and now I go and do the
+[00:22:42.480] So, I go left and now I go and do the other one. So, what's here?
+[00:22:48.000] YouTube shorts research done. Oh, okay.
+[00:22:50.160] YouTube shorts research done. Oh, okay. This is the original mhm
+[00:22:53.790] This is the original mhm
+[00:22:53.800] This is the original mhm original maporiginal map
+[00:22:55.800] original map thread.
+[00:22:57.350] thread.
+[00:22:57.360] thread. And we can see here that the uh agents
+[00:23:00.430] And we can see here that the uh agents
+[00:23:00.440] And we can see here that the uh agents it kicked off to do the research are
+[00:23:02.030] it kicked off to do the research are
+[00:23:02.040] it kicked off to do the research are alreadyalready
+[00:23:03.400] already uhuhuh already coming back in. That's really
+[00:23:06.150] already coming back in. That's really
+[00:23:06.160] already coming back in. That's really nice.
+[00:23:09.400] So, okay. And now a couple more are
+[00:23:11.560] So, okay. And now a couple more are starting to come back, too.
+[00:23:13.310] starting to come back, too.
+[00:23:13.320] starting to come back, too. So, okay. Boolean is short. Hmm.
+[00:23:19.480] So, here's the tension. The repo has a
+[00:23:20.640] So, here's the tension. The repo has a stated convention for picking enums over
+[00:23:22.310] stated convention for picking enums over
+[00:23:22.320] stated convention for picking enums over booleans. Pause type, silence length.
+[00:23:24.350] booleans. Pause type, silence length.
+[00:23:24.360] booleans. Pause type, silence length. That's correct.
+[00:23:29.680] I generally much prefer enums over
+[00:23:31.920] I generally much prefer enums over booleans, especially in
+[00:23:34.870] booleans, especially in
+[00:23:34.880] booleans, especially in categories where it could expand
+[00:23:36.390] categories where it could expand
+[00:23:36.400] categories where it could expand outwards. So, I think a
+[00:23:38.670] outwards. So, I think a
+[00:23:38.680] outwards. So, I think a type makes most sense here.
+[00:23:43.960] I feel like the type might need a
+[00:23:45.120] I feel like the type might need a qualifier of some kind, like
+[00:23:47.910] qualifier of some kind, like
+[00:23:47.920] qualifier of some kind, like destination type or
+[00:23:50.790] destination type ordestination type or I don't know.
+[00:23:54.400] But, definitely an enum.
+[00:23:57.920] So,So, &gt;&gt; [sighs]
+[00:24:01.120] &gt;&gt; And that's I mean, that's my engineering
+[00:24:03.120] &gt;&gt; And that's I mean, that's my engineering experience coming into play there. I It
+[00:24:05.430] experience coming into play there. I It
+[00:24:05.440] experience coming into play there. I It would be very easy for a junior, someone
+[00:24:07.310] would be very easy for a junior, someone
+[00:24:07.320] would be very easy for a junior, someone not very familiar with coding, to just
+[00:24:08.950] not very familiar with coding, to just
+[00:24:08.960] not very familiar with coding, to just say, "Yeah, let's use a boolean here."
+[00:24:11.070] say, "Yeah, let's use a boolean here."
+[00:24:11.080] say, "Yeah, let's use a boolean here." UmUm
+[00:24:11.680] Um because the boolean is like, "Okay, is
+[00:24:13.230] because the boolean is like, "Okay, is
+[00:24:13.240] because the boolean is like, "Okay, is it a short or is it not?" But, what
+[00:24:15.070] it a short or is it not?" But, what
+[00:24:15.080] it a short or is it not?" But, what happens if we add a third type here?
+[00:24:17.510] happens if we add a third type here?
+[00:24:17.520] happens if we add a third type here? Then, you would need a boolean to
+[00:24:18.950] Then, you would need a boolean to
+[00:24:18.960] Then, you would need a boolean to represent, "Okay, it's not a short, it's
+[00:24:20.710] represent, "Okay, it's not a short, it's
+[00:24:20.720] represent, "Okay, it's not a short, it's not a video, it's something else."
+[00:24:22.230] not a video, it's something else."
+[00:24:22.240] not a video, it's something else." You've got three booleans there, and 3 *
+[00:24:25.030] You've got three booleans there, and 3 *
+[00:24:25.040] You've got three booleans there, and 3 * 2 is 6, right? So, you've got six
+[00:24:27.430] 2 is 6, right? So, you've got six
+[00:24:27.440] 2 is 6, right? So, you've got six possible states of all of those
+[00:24:28.710] possible states of all of those
+[00:24:28.720] possible states of all of those different booleans. Whereas, if you use
+[00:24:30.430] different booleans. Whereas, if you use
+[00:24:30.440] different booleans. Whereas, if you use an enum, it means that you've got
+[00:24:32.150] an enum, it means that you've got
+[00:24:32.160] an enum, it means that you've got literally three possible states cuz that
+[00:24:34.110] literally three possible states cuz that
+[00:24:34.120] literally three possible states cuz that single enumerated value can either be
+[00:24:36.870] single enumerated value can either be
+[00:24:36.880] single enumerated value can either be one thing or another thing or another
+[00:24:38.070] one thing or another thing or another
+[00:24:38.080] one thing or another thing or another thing.
+[00:24:39.590] thing.
+[00:24:39.600] thing. What is the enum name?
+[00:24:42.150] What is the enum name?
+[00:24:42.160] What is the enum name? I think format makes sense.
+[00:24:46.070] I think format makes sense.
+[00:24:46.080] I think format makes sense. Yeah, I like format with standard versus
+[00:24:48.390] Yeah, I like format with standard versus
+[00:24:48.400] Yeah, I like format with standard versus short. That's good.
+[00:24:52.960] Hmm.
+[00:24:58.560] I tend to find that with code review the
+[00:25:01.200] I tend to find that with code review the harness matters more than the model.
+[00:25:09.560] Okay.
+[00:25:11.000] Okay. Now time to dip over to Okay, there's a
+[00:25:12.870] Now time to dip over to Okay, there's a
+[00:25:12.880] Now time to dip over to Okay, there's a couple of others that have come back.
+[00:25:14.630] couple of others that have come back.
+[00:25:14.640] couple of others that have come back. I'm going to just
+[00:25:16.332] I'm going to justI'm going to just &gt;&gt; [sighs]
+[00:25:16.910] &gt;&gt; [sighs]
+[00:25:16.920] &gt;&gt; [sighs] &gt;&gt; uh ignore this one for now.
+[00:25:21.320] Okie dokie. So, recap on this charting
+[00:25:23.760] Okie dokie. So, recap on this charting the TikTok creator map by Resolving the
+[00:25:25.510] the TikTok creator map by Resolving the
+[00:25:25.520] the TikTok creator map by Resolving the ticket for low friction
+[00:25:27.830] ticket for low friction
+[00:25:27.840] ticket for low friction Next action waiting on your answer for
+[00:25:29.070] Next action waiting on your answer for
+[00:25:29.080] Next action waiting on your answer for whether TikTok creation should be
+[00:25:30.190] whether TikTok creation should be
+[00:25:30.200] whether TikTok creation should be footage first, shell first, or both.
+[00:25:32.190] footage first, shell first, or both.
+[00:25:32.200] footage first, shell first, or both. Ooh, great question.
+[00:25:34.350] Ooh, great question.
+[00:25:34.360] Ooh, great question. What a good question.
+[00:25:37.960] OBS import appends clips to already
+[00:25:39.320] OBS import appends clips to already existing video.
+[00:25:43.280] Hmm.
+[00:25:46.600] Footage come from at the moment of
+[00:25:47.760] Footage come from at the moment of creation.
+[00:25:55.120] Mhm. Yeah, this looks good.
+[00:25:58.320] Mhm. Yeah, this looks good. It's basically saying how should you um
+[00:26:00.750] It's basically saying how should you um
+[00:26:00.760] It's basically saying how should you um kick off this new video? What do you
+[00:26:02.350] kick off this new video? What do you
+[00:26:02.360] kick off this new video? What do you want to see when you do that?
+[00:26:06.400] Yeah, I think what I want is to press a
+[00:26:08.560] Yeah, I think what I want is to press a button and then to start talking. So,
+[00:26:10.390] button and then to start talking. So,
+[00:26:10.400] button and then to start talking. So, however we make that happen, it'd great.
+[00:26:12.670] however we make that happen, it'd great.
+[00:26:12.680] however we make that happen, it'd great. And I would love to then use AI to
+[00:26:14.750] And I would love to then use AI to
+[00:26:14.760] And I would love to then use AI to generate from the transcript the name of
+[00:26:17.030] generate from the transcript the name of
+[00:26:17.040] generate from the transcript the name of the video and any description metadata
+[00:26:19.510] the video and any description metadata
+[00:26:19.520] the video and any description metadata that needs to come with it.
+[00:26:23.560] No, I'm not on Twitch.
+[00:26:33.240] Yeah, I will hopefully get to do some
+[00:26:34.800] Yeah, I will hopefully get to do some prototyping.
+[00:26:36.270] prototyping.
+[00:26:36.280] prototyping. I've got about 45 minutes left, so
+[00:26:38.150] I've got about 45 minutes left, so
+[00:26:38.160] I've got about 45 minutes left, so definitely will reach some prototyping.
+[00:26:40.630] definitely will reach some prototyping.
+[00:26:40.640] definitely will reach some prototyping. UmUm
+[00:26:41.760] Um Aha, and in fact, we got a prototype
+[00:26:43.550] Aha, and in fact, we got a prototype
+[00:26:43.560] Aha, and in fact, we got a prototype already. So, this was a prototype
+[00:26:45.630] already. So, this was a prototype
+[00:26:45.640] already. So, this was a prototype ticket. And if we look back in the
+[00:26:48.110] ticket. And if we look back in the
+[00:26:48.120] ticket. And if we look back in the thread here, we can see
+[00:26:50.430] thread here, we can see
+[00:26:50.440] thread here, we can see we're on only 60k tokens, which is nice,
+[00:26:52.590] we're on only 60k tokens, which is nice,
+[00:26:52.600] we're on only 60k tokens, which is nice, and it's using the prototype skill in my
+[00:26:55.470] and it's using the prototype skill in my
+[00:26:55.480] and it's using the prototype skill in my Reaper. I've got a video coming out
+[00:26:56.750] Reaper. I've got a video coming out
+[00:26:56.760] Reaper. I've got a video coming out about this this week.
+[00:26:58.870] about this this week.
+[00:26:58.880] about this this week. So, where is this? It is in
+[00:27:01.310] So, where is this? It is in
+[00:27:01.320] So, where is this? It is in it's on a work tree.
+[00:27:04.270] it's on a work tree.
+[00:27:04.280] it's on a work tree. Um
+[00:27:07.040] Let's see. Give me the exact commands I
+[00:27:09.200] Let's see. Give me the exact commands I need to run in order to see this.
+[00:27:14.720] This is just using Wayfinder, and
+[00:27:16.880] This is just using Wayfinder, and Wayfinder kind of leads you through this
+[00:27:18.830] Wayfinder kind of leads you through this
+[00:27:18.840] Wayfinder kind of leads you through this process.
+[00:27:21.230] process.
+[00:27:21.240] process. So, let's go back to the main one.
+[00:27:23.870] So, let's go back to the main one.
+[00:27:23.880] So, let's go back to the main one. Constantly trying to um kill dead time
+[00:27:26.550] Constantly trying to um kill dead time
+[00:27:26.560] Constantly trying to um kill dead time here, basically.
+[00:27:29.390] here, basically.
+[00:27:29.400] here, basically. So, seating from the existing portrait
+[00:27:31.230] So, seating from the existing portrait
+[00:27:31.240] So, seating from the existing portrait signalsignal
+[00:27:32.320] signal says thissays thissays this Mm.
+[00:27:34.510] Mm.
+[00:27:34.520] Mm. No, I don't think that's right. It says
+[00:27:36.590] No, I don't think that's right. It says
+[00:27:36.600] No, I don't think that's right. It says that there's an existing signal in the
+[00:27:38.310] that there's an existing signal in the
+[00:27:38.320] that there's an existing signal in the code base, but I don't think that's
+[00:27:40.150] code base, but I don't think that's
+[00:27:40.160] code base, but I don't think that's right.
+[00:27:41.950] right.
+[00:27:41.960] right. I don't want to do a backfill here. I
+[00:27:43.750] I don't want to do a backfill here. I
+[00:27:43.760] I don't want to do a backfill here. I don't want to migrate any existing
+[00:27:46.710] don't want to migrate any existing
+[00:27:46.720] don't want to migrate any existing videos. I just want to
+[00:27:53.320] I Let's assume that all videos are
+[00:27:55.840] I Let's assume that all videos are landscape for now.
+[00:28:01.880] TikTok creation flow. Where should the
+[00:28:03.160] TikTok creation flow. Where should the top top level list of TikTok videos
+[00:28:04.910] top top level list of TikTok videos
+[00:28:04.920] top top level list of TikTok videos live?
+[00:28:07.840] So, it's recommending a new top level
+[00:28:09.600] So, it's recommending a new top level sidebar item.
+[00:28:13.720] Uh I actually don't know.
+[00:28:16.320] Uh I actually don't know. And because I don't know, this is
+[00:28:17.750] And because I don't know, this is
+[00:28:17.760] And because I don't know, this is essentially a what should it look like
+[00:28:19.430] essentially a what should it look like
+[00:28:19.440] essentially a what should it look like question.
+[00:28:22.120] And so, I'm going to get in there.
+[00:28:24.640] And so, I'm going to get in there. This is a what should it look like
+[00:28:27.110] This is a what should it look like
+[00:28:27.120] This is a what should it look like question, which means that we need to
+[00:28:28.750] question, which means that we need to
+[00:28:28.760] question, which means that we need to raise the level of fidelity so that I
+[00:28:30.230] raise the level of fidelity so that I
+[00:28:30.240] raise the level of fidelity so that I can actually see what this might
+[00:28:32.230] can actually see what this might
+[00:28:32.240] can actually see what this might genuinely look like.
+[00:28:36.200] This is Opus 4.8 medium.
+[00:28:38.920] This is Opus 4.8 medium. No dead time. No dead time.
+[00:28:42.550] No dead time. No dead time.
+[00:28:42.560] No dead time. No dead time. Obviously, you can have a cup of tea if
+[00:28:44.030] Obviously, you can have a cup of tea if
+[00:28:44.040] Obviously, you can have a cup of tea if you like, but while I'm working, no dead
+[00:28:45.830] you like, but while I'm working, no dead
+[00:28:45.840] you like, but while I'm working, no dead time.
+[00:28:47.870] time.
+[00:28:47.880] time. Is there any auto derivation of format
+[00:28:50.110] Is there any auto derivation of format
+[00:28:50.120] Is there any auto derivation of format humanhumanhuman uhuh
+[00:28:52.160] uh I think format is purely human set.
+[00:28:55.790] I think format is purely human set.
+[00:28:55.800] I think format is purely human set. So, this makes the migration easy cuz we
+[00:28:57.670] So, this makes the migration easy cuz we
+[00:28:57.680] So, this makes the migration easy cuz we just default to
+[00:28:59.670] just default tojust default to landscape, I suppose.
+[00:29:01.990] landscape, I suppose.
+[00:29:02.000] landscape, I suppose. I don't know, we can run a migration
+[00:29:03.150] I don't know, we can run a migration
+[00:29:03.160] I don't know, we can run a migration script, I suppose.
+[00:29:05.670] script, I suppose.
+[00:29:05.680] script, I suppose. Because having a default in future is a
+[00:29:07.390] Because having a default in future is a
+[00:29:07.400] Because having a default in future is a little bit awkward.
+[00:29:10.880] I don't know, I'm up to you on that one.
+[00:29:17.880] Okay, here we go.
+[00:29:19.840] Okay, here we go. So,So,
+[00:29:21.800] So, we just got to CD into this repo
+[00:29:24.710] we just got to CD into this repo
+[00:29:24.720] we just got to CD into this repo and then run this dev server.
+[00:29:30.560] Where's that dev server? In fact, I know
+[00:29:32.280] Where's that dev server? In fact, I know I know what it is.
+[00:29:33.590] I know what it is.
+[00:29:33.600] I know what it is. Run dev route router.
+[00:29:37.710] Run dev route router.
+[00:29:37.720] Run dev route router. And then, we open up
+[00:29:40.350] And then, we open upAnd then, we open up this.
+[00:29:43.720] So,So, theway this works is I think this is going
+[00:29:49.480] way this works is I think this is going to be over here. The way prototype works
+[00:29:52.510] to be over here. The way prototype works
+[00:29:52.520] to be over here. The way prototype works isis
+[00:29:53.640] is I can basically umUh you're not going to work on me?
+[00:29:59.320] Uh you're not going to work on me? No, you're working slowly, okay.
+[00:30:01.750] No, you're working slowly, okay.
+[00:30:01.760] No, you're working slowly, okay. The way this works is prototype will
+[00:30:03.510] The way this works is prototype will
+[00:30:03.520] The way this works is prototype will give you a database URL not set
+[00:30:05.350] give you a database URL not set
+[00:30:05.360] give you a database URL not set environment variables. Okay, let me just
+[00:30:06.950] environment variables. Okay, let me just
+[00:30:06.960] environment variables. Okay, let me just do some environment variable fiddling
+[00:30:08.390] do some environment variable fiddling
+[00:30:08.400] do some environment variable fiddling until we get this working.
+[00:30:10.230] until we get this working.
+[00:30:10.240] until we get this working. UmGlobal trace, okay.
+[00:30:22.720] Global trace, okay. Okay, I think we're good.
+[00:30:29.760] Now,what prototype does is it helps you
+[00:30:34.920] what prototype does is it helps you raise the fidelity of the discussion
+[00:30:37.910] raise the fidelity of the discussion
+[00:30:37.920] raise the fidelity of the discussion that you're having. It allows you,
+[00:30:39.510] that you're having. It allows you,
+[00:30:39.520] that you're having. It allows you, instead of just talking about text, to
+[00:30:41.950] instead of just talking about text, to
+[00:30:41.960] instead of just talking about text, to actually look and see some um
+[00:30:45.350] actually look and see some um
+[00:30:45.360] actually look and see some um Oh, yeah, nice.
+[00:30:48.640] UhUh Oh, yeah, really nice.
+[00:30:52.110] Oh, yeah, really nice.
+[00:30:52.120] Oh, yeah, really nice. I have some proper UI to look at.
+[00:30:55.070] I have some proper UI to look at.
+[00:30:55.080] I have some proper UI to look at. So, if we look at this here, click over.
+[00:30:57.670] So, if we look at this here, click over.
+[00:30:57.680] So, if we look at this here, click over. So, that's A.
+[00:30:59.710] So, that's A.
+[00:30:59.720] So, that's A. And now if we click over to variant B,
+[00:31:01.350] And now if we click over to variant B,
+[00:31:01.360] And now if we click over to variant B, ooh, I think there might be a bug here.
+[00:31:05.230] ooh, I think there might be a bug here.
+[00:31:05.240] ooh, I think there might be a bug here. Yeah, I think I need to run NPM install.
+[00:31:07.230] Yeah, I think I need to run NPM install.
+[00:31:07.240] Yeah, I think I need to run NPM install. Oh.
+[00:31:10.640] Moving non-directory. Yeah, yeah, yeah,
+[00:31:12.320] Moving non-directory. Yeah, yeah, yeah, yeah, yeah. It's done a sim link, I
+[00:31:13.830] yeah, yeah. It's done a sim link, I
+[00:31:13.840] yeah, yeah. It's done a sim link, I think. Done a weird thing.
+[00:31:17.320] This is uh 20X Max. I have a single 20X
+[00:31:19.800] This is uh 20X Max. I have a single 20X Max subscription.
+[00:31:24.320] Using Wayfinder, good. Good to hear.
+[00:31:27.240] Using Wayfinder, good. Good to hear. Uh let's run dev again. This will be
+[00:31:29.190] Uh let's run dev again. This will be
+[00:31:29.200] Uh let's run dev again. This will be another little loading session.
+[00:31:33.520] And thenAnd then it's basically going to give me a few
+[00:31:37.630] it's basically going to give me a few
+[00:31:37.640] it's basically going to give me a few options for different prototypes I can
+[00:31:39.270] options for different prototypes I can
+[00:31:39.280] options for different prototypes I can do.
+[00:31:42.720] So, bang.
+[00:31:44.600] So, bang. Let's try number B.
+[00:31:47.670] Let's try number B.
+[00:31:47.680] Let's try number B. Playback only stage.
+[00:31:49.630] Playback only stage.
+[00:31:49.640] Playback only stage. Come on, kid.
+[00:31:52.310] Come on, kid.
+[00:31:52.320] Come on, kid. What are you doing?
+[00:31:56.480] Updated temp. No, that seems fine.
+[00:31:59.440] Updated temp. No, that seems fine. Come on, kid.
+[00:32:00.950] Come on, kid.
+[00:32:00.960] Come on, kid. Let me see B. Ah, here we go. Studio,
+[00:32:03.150] Let me see B. Ah, here we go. Studio,
+[00:32:03.160] Let me see B. Ah, here we go. Studio, right.
+[00:32:05.680] Split editing surface. Mm, I don't need
+[00:32:07.840] Split editing surface. Mm, I don't need to trim, though.
+[00:32:10.230] to trim, though.
+[00:32:10.240] to trim, though. Portrait first tabbed editing. Where's
+[00:32:11.870] Portrait first tabbed editing. Where's
+[00:32:11.880] Portrait first tabbed editing. Where's the tab, then?
+[00:32:18.920] Mm.
+[00:32:21.760] I don't love any of these, actually.
+[00:32:29.480] Yeah.
+[00:32:36.400] So, okay.
+[00:32:39.600] TLDR on Wayfinder is it helps you find
+[00:32:41.360] TLDR on Wayfinder is it helps you find your way. It's a update on Grill me that
+[00:32:44.870] your way. It's a update on Grill me that
+[00:32:44.880] your way. It's a update on Grill me that helpshelps
+[00:32:46.520] helps essentially instead of having a single
+[00:32:48.150] essentially instead of having a single
+[00:32:48.160] essentially instead of having a single grilling session, it's a orchestrator
+[00:32:49.950] grilling session, it's a orchestrator
+[00:32:49.960] grilling session, it's a orchestrator over grilling sessions.
+[00:32:52.310] over grilling sessions.
+[00:32:52.320] over grilling sessions. And I'm in a prototyping ticket and I
+[00:32:54.990] And I'm in a prototyping ticket and I
+[00:32:55.000] And I'm in a prototyping ticket and I don't like any of these.
+[00:32:57.430] don't like any of these.
+[00:32:57.440] don't like any of these. Uh okay, right. Well,
+[00:33:01.600] well, I don't like any of them really.
+[00:33:07.760] Uhthe one I really want to focus on is the
+[00:33:12.920] the one I really want to focus on is the studiostudio
+[00:33:14.440] studio becausebecause
+[00:33:16.200] because I think I want to reuse most of the
+[00:33:19.790] I think I want to reuse most of the
+[00:33:19.800] I think I want to reuse most of the video creation logic and that UI that
+[00:33:21.670] video creation logic and that UI that
+[00:33:21.680] video creation logic and that UI that I've already got, but I just need a
+[00:33:23.350] I've already got, but I just need a
+[00:33:23.360] I've already got, but I just need a different view on the right-hand side.
+[00:33:28.470] different view on the right-hand side.
+[00:33:28.480] different view on the right-hand side. So, currently it's totally divorced from
+[00:33:30.710] So, currently it's totally divorced from
+[00:33:30.720] So, currently it's totally divorced from anything I've seen before and it's not
+[00:33:32.910] anything I've seen before and it's not
+[00:33:32.920] anything I've seen before and it's not looking great. I need you to explore the
+[00:33:35.910] looking great. I need you to explore the
+[00:33:35.920] looking great. I need you to explore the real video editing code so that we maybe
+[00:33:38.550] real video editing code so that we maybe
+[00:33:38.560] real video editing code so that we maybe take the reducer that's already there,
+[00:33:39.990] take the reducer that's already there,
+[00:33:40.000] take the reducer that's already there, take the UI parts that are already
+[00:33:41.950] take the UI parts that are already
+[00:33:41.960] take the UI parts that are already there. We can maybe even
+[00:33:44.350] there. We can maybe even
+[00:33:44.360] there. We can maybe even try to componentize some of that stuff a
+[00:33:45.990] try to componentize some of that stuff a
+[00:33:46.000] try to componentize some of that stuff a bit better and pull some shared code out
+[00:33:48.910] bit better and pull some shared code out
+[00:33:48.920] bit better and pull some shared code out into this new view.
+[00:33:53.920] Yeah, let's try that. See what it says.
+[00:33:56.760] Yeah, let's try that. See what it says. Okay, so the original map thread, now
+[00:33:59.310] Okay, so the original map thread, now
+[00:33:59.320] Okay, so the original map thread, now all of the research decisions are
+[00:34:01.830] all of the research decisions are
+[00:34:01.840] all of the research decisions are resolved. Beautiful. So, if we look back
+[00:34:04.230] resolved. Beautiful. So, if we look back
+[00:34:04.240] resolved. Beautiful. So, if we look back at the map,
+[00:34:05.870] at the map,at the map, then we should see yeah, all four of
+[00:34:07.750] then we should see yeah, all four of
+[00:34:07.760] then we should see yeah, all four of those research tickets are now closed.
+[00:34:10.110] those research tickets are now closed.
+[00:34:10.120] those research tickets are now closed. So, it's now gone and
+[00:34:12.190] So, it's now gone andSo, it's now gone and umum
+[00:34:13.159] um found the updated API. Yeah, here we go.
+[00:34:16.149] found the updated API. Yeah, here we go.
+[00:34:16.159] found the updated API. Yeah, here we go. So, is that all?
+[00:34:18.310] So, is that all?
+[00:34:18.320] So, is that all? Let's see up here. Yeah, beautiful.
+[00:34:21.230] Let's see up here. Yeah, beautiful.
+[00:34:21.240] Let's see up here. Yeah, beautiful. So, look. Now, all of the research is
+[00:34:24.350] So, look. Now, all of the research is
+[00:34:24.360] So, look. Now, all of the research is saved inside these tickets here. So,
+[00:34:27.310] saved inside these tickets here. So,
+[00:34:27.320] saved inside these tickets here. So, findings committed. So, all of the stuff
+[00:34:29.149] findings committed. So, all of the stuff
+[00:34:29.159] findings committed. So, all of the stuff and it's actually gone and created a
+[00:34:32.190] and it's actually gone and created a
+[00:34:32.200] and it's actually gone and created a local filelocal file
+[00:34:33.879] local file on a separate branch. So, created on
+[00:34:35.950] on a separate branch. So, created on
+[00:34:35.960] on a separate branch. So, created on this work tree branch.
+[00:34:37.990] this work tree branch.
+[00:34:38.000] this work tree branch. Beautiful.
+[00:34:39.389] Beautiful.
+[00:34:39.399] Beautiful. So, that means that this is a really,
+[00:34:41.510] So, that means that this is a really,
+[00:34:41.520] So, that means that this is a really, really rich piece of context because the
+[00:34:43.869] really rich piece of context because the
+[00:34:43.879] really rich piece of context because the map heremap here
+[00:34:45.320] map here sort of indicates where the decisions
+[00:34:46.990] sort of indicates where the decisions
+[00:34:47.000] sort of indicates where the decisions are and points towards the research. The
+[00:34:49.430] are and points towards the research. The
+[00:34:49.440] are and points towards the research. The research ticket itself
+[00:34:51.669] research ticket itself
+[00:34:51.679] research ticket itself contains a link to the actual thick docs
+[00:34:55.110] contains a link to the actual thick docs
+[00:34:55.120] contains a link to the actual thick docs page that was created. One thing is I
+[00:34:57.070] page that was created. One thing is I
+[00:34:57.080] page that was created. One thing is I don't really like the fact that we can't
+[00:34:58.750] don't really like the fact that we can't
+[00:34:58.760] don't really like the fact that we can't really read these very easily. I suppose
+[00:35:00.510] really read these very easily. I suppose
+[00:35:00.520] really read these very easily. I suppose we could if we just asked an agent to
+[00:35:02.230] we could if we just asked an agent to
+[00:35:02.240] we could if we just asked an agent to find it for us.
+[00:35:03.790] find it for us.
+[00:35:03.800] find it for us. And it's got essentially a summary here.
+[00:35:05.510] And it's got essentially a summary here.
+[00:35:05.520] And it's got essentially a summary here. So, this is progressive disclosure at
+[00:35:06.910] So, this is progressive disclosure at
+[00:35:06.920] So, this is progressive disclosure at its best. We're pointing pointing down
+[00:35:09.110] its best. We're pointing pointing down
+[00:35:09.120] its best. We're pointing pointing down the chain until we actually get to the
+[00:35:11.510] the chain until we actually get to the
+[00:35:11.520] the chain until we actually get to the thing that we need.
+[00:35:13.790] thing that we need.
+[00:35:13.800] thing that we need. Fully decoupled.
+[00:35:15.950] Fully decoupled.
+[00:35:15.960] Fully decoupled. Every platform has a usable upload API.
+[00:35:21.440] Chunk. Hmm, interesting. Okay, so it's
+[00:35:24.480] Chunk. Hmm, interesting. Okay, so it's pretty cheap actually to post to
+[00:35:26.270] pretty cheap actually to post to
+[00:35:26.280] pretty cheap actually to post to Twitter.
+[00:35:28.350] Twitter.
+[00:35:28.360] Twitter. Infers a short from the file. That's
+[00:35:29.990] Infers a short from the file. That's
+[00:35:30.000] Infers a short from the file. That's fine.
+[00:35:31.870] fine.
+[00:35:31.880] fine. Already short capable with no landscape
+[00:35:33.470] Already short capable with no landscape
+[00:35:33.480] Already short capable with no landscape assumptions. Awesome. So, lots of
+[00:35:35.390] assumptions. Awesome. So, lots of
+[00:35:35.400] assumptions. Awesome. So, lots of research done here which is pushing back
+[00:35:37.550] research done here which is pushing back
+[00:35:37.560] research done here which is pushing back the fog.
+[00:35:41.480] Could you make an updated video how to
+[00:35:42.760] Could you make an updated video how to set up the whole thing you're using
+[00:35:43.710] set up the whole thing you're using
+[00:35:43.720] set up the whole thing you're using there? Just uh follow the install steps
+[00:35:46.110] there? Just uh follow the install steps
+[00:35:46.120] there? Just uh follow the install steps in my uh GitHub repo.
+[00:35:49.990] in my uh GitHub repo.
+[00:35:50.000] in my uh GitHub repo. Okay, so I can close the original map
+[00:35:51.750] Okay, so I can close the original map
+[00:35:51.760] Okay, so I can close the original map thread because that is all done.
+[00:35:54.470] thread because that is all done.
+[00:35:54.480] thread because that is all done. Now, how does format surface in the
+[00:35:56.110] Now, how does format surface in the
+[00:35:56.120] Now, how does format surface in the video lists and tables?
+[00:35:59.110] video lists and tables?
+[00:35:59.120] video lists and tables? So, we're just grilling here. Basically,
+[00:36:00.830] So, we're just grilling here. Basically,
+[00:36:00.840] So, we're just grilling here. Basically, you know, this is just grilling across
+[00:36:02.350] you know, this is just grilling across
+[00:36:02.360] you know, this is just grilling across multiple sessions about the same thing.
+[00:36:04.590] multiple sessions about the same thing.
+[00:36:04.600] multiple sessions about the same thing. And because they're in parallel, you end
+[00:36:06.030] And because they're in parallel, you end
+[00:36:06.040] And because they're in parallel, you end up being faster.
+[00:36:08.310] up being faster.
+[00:36:08.320] up being faster. It is not dependent on GitHub. You can
+[00:36:09.790] It is not dependent on GitHub. You can
+[00:36:09.800] It is not dependent on GitHub. You can set it up any way you like.
+[00:36:17.244] &gt;&gt; [clears throat]
+[00:36:17.960] &gt;&gt; [clears throat] &gt;&gt; Yeah, I changed the way research worked
+[00:36:19.310] &gt;&gt; Yeah, I changed the way research worked
+[00:36:19.320] &gt;&gt; Yeah, I changed the way research worked this morning, so you're probably seeing
+[00:36:20.510] this morning, so you're probably seeing
+[00:36:20.520] this morning, so you're probably seeing something different to how
+[00:36:22.350] something different to how
+[00:36:22.360] something different to how uh it worksuh it works
+[00:36:23.840] uh it works in real life now.
+[00:36:25.470] in real life now.
+[00:36:25.480] in real life now. So, how does format surface in the list
+[00:36:26.710] So, how does format surface in the list
+[00:36:26.720] So, how does format surface in the list tables of filter
+[00:36:29.230] tables of filter
+[00:36:29.240] tables of filter I think both a filter makes sense and a
+[00:36:32.150] I think both a filter makes sense and a
+[00:36:32.160] I think both a filter makes sense and a visual marker.
+[00:36:35.040] I think maybe even tabs might make sense
+[00:36:37.480] I think maybe even tabs might make sense here. I think we might need a prototype
+[00:36:39.510] here. I think we might need a prototype
+[00:36:39.520] here. I think we might need a prototype to have a look at this.
+[00:36:42.840] One really cool thing about Wayfinder is
+[00:36:44.840] One really cool thing about Wayfinder is what when you're in a ticket, you can
+[00:36:47.150] what when you're in a ticket, you can
+[00:36:47.160] what when you're in a ticket, you can schedule other tickets, right? You can
+[00:36:49.230] schedule other tickets, right? You can
+[00:36:49.240] schedule other tickets, right? You can put more tickets onto the map. That's
+[00:36:51.350] put more tickets onto the map. That's
+[00:36:51.360] put more tickets onto the map. That's one thing I really annoyed me about
+[00:36:52.750] one thing I really annoyed me about
+[00:36:52.760] one thing I really annoyed me about grilling is like if I found something
+[00:36:55.030] grilling is like if I found something
+[00:36:55.040] grilling is like if I found something that I knew I couldn't tackle in this
+[00:36:56.470] that I knew I couldn't tackle in this
+[00:36:56.480] that I knew I couldn't tackle in this session, how would I handle it? I would
+[00:36:58.830] session, how would I handle it? I would
+[00:36:58.840] session, how would I handle it? I would probably just like
+[00:37:00.430] probably just like
+[00:37:00.440] probably just like hand off to another grilling session and
+[00:37:02.310] hand off to another grilling session and
+[00:37:02.320] hand off to another grilling session and do that in line, but there was no way
+[00:37:03.870] do that in line, but there was no way
+[00:37:03.880] do that in line, but there was no way tracking all of it.
+[00:37:07.025] &gt;&gt; [snorts]&gt;&gt; [snorts] &gt;&gt; Yeah.
+[00:37:08.325] &gt;&gt; Yeah.
+[00:37:08.335] &gt;&gt; Yeah. &gt;&gt; [sighs]&gt;&gt; [sighs]
+[00:37:09.400] &gt;&gt; [sighs] &gt;&gt; I&gt;&gt; I
+[00:37:10.520] &gt;&gt; I Yep, sounds good. So, it's
+[00:37:12.750] Yep, sounds good. So, it's
+[00:37:12.760] Yep, sounds good. So, it's it's now telling me that
+[00:37:14.950] it's now telling me that
+[00:37:14.960] it's now telling me that because I've said we need a prototype,
+[00:37:16.830] because I've said we need a prototype,
+[00:37:16.840] because I've said we need a prototype, it's going to close the decision ticket
+[00:37:19.350] it's going to close the decision ticket
+[00:37:19.360] it's going to close the decision ticket and write down everything that we found
+[00:37:21.510] and write down everything that we found
+[00:37:21.520] and write down everything that we found into that decision ticket and then open
+[00:37:23.390] into that decision ticket and then open
+[00:37:23.400] into that decision ticket and then open up another ticket to do the prototype.
+[00:37:28.920] So, is this all still working?
+[00:37:33.440] What is going on in here? What are you
+[00:37:35.120] What is going on in here? What are you guys doing?
+[00:37:39.520] Let's see.
+[00:37:44.720] Why don't you chill out for a minute and
+[00:37:45.840] Why don't you chill out for a minute and let melet me
+[00:37:47.120] let me figure out what's going on.
+[00:37:52.720] Give me the exact commands I need to run
+[00:37:54.320] Give me the exact commands I need to run in order to
+[00:37:55.710] in order toin order to get it working.
+[00:38:01.880] Or is it the same?
+[00:38:09.080] Yeah, this is the same one as we had
+[00:38:10.120] Yeah, this is the same one as we had earlier, right?
+[00:38:13.360] This is um
+[00:38:15.320] This is um this is infra behind my course creation,
+[00:38:17.470] this is infra behind my course creation,
+[00:38:17.480] this is infra behind my course creation, basically. So, this is the app.
+[00:38:20.950] basically. So, this is the app.
+[00:38:20.960] basically. So, this is the app. Um this is the course I'm currently
+[00:38:23.230] Um this is the course I'm currently
+[00:38:23.240] Um this is the course I'm currently putting together, which is an AI coding
+[00:38:24.590] putting together, which is an AI coding
+[00:38:24.600] putting together, which is an AI coding crash course.
+[00:38:26.230] crash course.
+[00:38:26.240] crash course. And it's a video editor, it's a
+[00:38:29.070] And it's a video editor, it's a
+[00:38:29.080] And it's a video editor, it's a thumbnail creator, it's a writer, it's a
+[00:38:32.230] thumbnail creator, it's a writer, it's a
+[00:38:32.240] thumbnail creator, it's a writer, it's a pitch storer, it does everything. It's
+[00:38:34.830] pitch storer, it does everything. It's
+[00:38:34.840] pitch storer, it does everything. It's wicked.
+[00:38:37.720] Okay, there's another workspace. So,
+[00:38:40.440] Okay, there's another workspace. So, I should just be able to just see it,
+[00:38:42.910] I should just be able to just see it,
+[00:38:42.920] I should just be able to just see it, right?
+[00:38:46.440] Where did you put it?
+[00:38:49.560] UhUh TikTok's prototype, interesting. Okay.
+[00:38:54.990] TikTok's prototype, interesting. Okay.
+[00:38:55.000] TikTok's prototype, interesting. Okay. So, you put it on a new route. So, I
+[00:38:57.270] So, you put it on a new route. So, I
+[00:38:57.280] So, you put it on a new route. So, I usually find these prototypes work way
+[00:38:59.590] usually find these prototypes work way
+[00:38:59.600] usually find these prototypes work way betterbetter
+[00:39:00.760] better when you'rewhen you're
+[00:39:02.560] when you're when it's integrated into the actual
+[00:39:03.910] when it's integrated into the actual
+[00:39:03.920] when it's integrated into the actual code it's going to be genuinely
+[00:39:05.470] code it's going to be genuinely
+[00:39:05.480] code it's going to be genuinely integrating in.
+[00:39:07.310] integrating in.
+[00:39:07.320] integrating in. Uh, is this in here?
+[00:39:09.310] Uh, is this in here?
+[00:39:09.320] Uh, is this in here? Is it canceled? Yes.
+[00:39:12.510] Is it canceled? Yes.
+[00:39:12.520] Is it canceled? Yes. Let's try that.
+[00:39:18.080] But, for this one it seems to have just
+[00:39:19.800] But, for this one it seems to have just stuck it on a new route,
+[00:39:21.550] stuck it on a new route,
+[00:39:21.560] stuck it on a new route, which is okay.
+[00:39:29.080] Page you're looking for doesn't exist or
+[00:39:30.240] Page you're looking for doesn't exist or has moved.
+[00:39:31.830] has moved.
+[00:39:31.840] has moved. TikTok's prototype.
+[00:39:40.080] Uh, okay.
+[00:39:50.480] Okay, I'm in a different zone here. So,
+[00:39:52.240] Okay, I'm in a different zone here. So, let's go npm i.
+[00:39:56.600] Um, the painful part about this is still
+[00:39:58.320] Um, the painful part about this is still the work trees.
+[00:39:59.670] the work trees.
+[00:39:59.680] the work trees. Like just handling all of the state
+[00:40:01.070] Like just handling all of the state
+[00:40:01.080] Like just handling all of the state between the different work trees.
+[00:40:03.590] between the different work trees.
+[00:40:03.600] between the different work trees. Um, making sure they've got uh
+[00:40:04.750] Um, making sure they've got uh
+[00:40:04.760] Um, making sure they've got uh dependencies installed.
+[00:40:06.790] dependencies installed.
+[00:40:06.800] dependencies installed. Uh, one thing I really want to do is put
+[00:40:08.990] Uh, one thing I really want to do is put
+[00:40:09.000] Uh, one thing I really want to do is put a lot of this on a remote server
+[00:40:11.030] a lot of this on a remote server
+[00:40:11.040] a lot of this on a remote server or use umor use um
+[00:40:12.920] or use um sandboxes for this because it's just
+[00:40:14.950] sandboxes for this because it's just
+[00:40:14.960] sandboxes for this because it's just brutal the way it's working right now.
+[00:40:16.990] brutal the way it's working right now.
+[00:40:17.000] brutal the way it's working right now. Cuz I need to go up, I need to copy the
+[00:40:20.910] Cuz I need to go up, I need to copy the
+[00:40:20.920] Cuz I need to go up, I need to copy the uh environment. What's
+[00:40:23.830] uh environment. What's
+[00:40:23.840] uh environment. What's Oh, no, it's done a sim link. Okay.
+[00:40:26.138] Oh, no, it's done a sim link. Okay.
+[00:40:26.148] Oh, no, it's done a sim link. Okay. &gt;&gt; [sighs]
+[00:40:28.400] &gt;&gt; NPM run dev. Address in use.
+[00:40:33.600] &gt;&gt; NPM run dev. Address in use. Okay. Okay. So, I think we're there.
+[00:40:37.030] Okay. Okay. So, I think we're there.
+[00:40:37.040] Okay. Okay. So, I think we're there. It's a lot of guff, basically, when
+[00:40:38.430] It's a lot of guff, basically, when
+[00:40:38.440] It's a lot of guff, basically, when you're working with work trees.
+[00:40:42.200] Whereas having them on separate sort of
+[00:40:44.360] Whereas having them on separate sort of virtual machines or machines in the
+[00:40:45.990] virtual machines or machines in the
+[00:40:46.000] virtual machines or machines in the cloud would be really nice. Wow, look at
+[00:40:48.190] cloud would be really nice. Wow, look at
+[00:40:48.200] cloud would be really nice. Wow, look at this.
+[00:40:50.270] this.
+[00:40:50.280] this. That's a fun prototype.
+[00:40:52.190] That's a fun prototype.
+[00:40:52.200] That's a fun prototype. Press to talk.
+[00:40:54.830] Press to talk.
+[00:40:54.840] Press to talk. Hit record and start talking. So, if I
+[00:40:56.630] Hit record and start talking. So, if I
+[00:40:56.640] Hit record and start talking. So, if I click I mean, wow.
+[00:40:59.510] click I mean, wow.
+[00:40:59.520] click I mean, wow. So, the theory here is that I would
+[00:41:01.670] So, the theory here is that I would
+[00:41:01.680] So, the theory here is that I would I mean, that's the very friendly. It
+[00:41:02.990] I mean, that's the very friendly. It
+[00:41:03.000] I mean, that's the very friendly. It doesn't really fit the rest of the UI
+[00:41:04.310] doesn't really fit the rest of the UI
+[00:41:04.320] doesn't really fit the rest of the UI that's going on here.
+[00:41:05.710] that's going on here.
+[00:41:05.720] that's going on here. Is there some kind of bug that's
+[00:41:07.070] Is there some kind of bug that's
+[00:41:07.080] Is there some kind of bug that's happening?
+[00:41:08.830] happening?
+[00:41:08.840] happening? No.
+[00:41:10.390] No.
+[00:41:10.400] No. Let me see variant B, please.
+[00:41:13.550] Let me see variant B, please.
+[00:41:13.560] Let me see variant B, please. Cool. Okay.
+[00:41:15.710] Cool. Okay.
+[00:41:15.720] Cool. Okay. This is nice, actually. I like this.
+[00:41:17.230] This is nice, actually. I like this.
+[00:41:17.240] This is nice, actually. I like this. It's friendly.
+[00:41:19.950] It's friendly.
+[00:41:19.960] It's friendly. Press a new TikTok.
+[00:41:22.910] Press a new TikTok.
+[00:41:22.920] Press a new TikTok. A grid.
+[00:41:24.550] A grid.
+[00:41:24.560] A grid. Yeah, I mean, that's This is actually
+[00:41:26.150] Yeah, I mean, that's This is actually
+[00:41:26.160] Yeah, I mean, that's This is actually nice. I actually like this.
+[00:41:30.520] I actually really like this. I don't
+[00:41:31.760] I actually really like this. I don't know which one Which one do you guys
+[00:41:32.990] know which one Which one do you guys
+[00:41:33.000] know which one Which one do you guys prefer? I'm I'm between
+[00:41:36.720] A or B.
+[00:41:39.880] But this is like delightful, you know?
+[00:41:41.240] But this is like delightful, you know? This is stuff that I would not have put
+[00:41:43.590] This is stuff that I would not have put
+[00:41:43.600] This is stuff that I would not have put time into or invested in.
+[00:41:46.830] time into or invested in.
+[00:41:46.840] time into or invested in. But it's just nice to get a kind of
+[00:41:48.230] But it's just nice to get a kind of
+[00:41:48.240] But it's just nice to get a kind of like, "Oh."like, "Oh."
+[00:41:50.240] like, "Oh." Yeah, I like number two, I think.
+[00:41:52.590] Yeah, I like number two, I think.
+[00:41:52.600] Yeah, I like number two, I think. B.
+[00:41:54.270] B.
+[00:41:54.280] B. Okay, really cool.
+[00:41:57.640] Right, looks great. Uh B is the one for
+[00:42:00.520] Right, looks great. Uh B is the one for me.
+[00:42:05.040] Don't think I've got any feedback on
+[00:42:06.760] Don't think I've got any feedback on that, amazingly. Um actually, no, I do a
+[00:42:08.550] that, amazingly. Um actually, no, I do a
+[00:42:08.560] that, amazingly. Um actually, no, I do a little. So, this now, when you're in a
+[00:42:10.910] little. So, this now, when you're in a
+[00:42:10.920] little. So, this now, when you're in a prototyping phase with Wayfinder, you
+[00:42:13.750] prototyping phase with Wayfinder, you
+[00:42:13.760] prototyping phase with Wayfinder, you really need to hone in on detail. So,
+[00:42:17.110] really need to hone in on detail. So,
+[00:42:17.120] really need to hone in on detail. So, this is the moment that you really start
+[00:42:19.070] this is the moment that you really start
+[00:42:19.080] this is the moment that you really start hammering it.
+[00:42:20.390] hammering it.
+[00:42:20.400] hammering it. UmSo,the new TikTok button in the top right
+[00:42:36.120] the new TikTok button in the top right is not needed since we've already got a
+[00:42:38.350] is not needed since we've already got a
+[00:42:38.360] is not needed since we've already got a duplicate on the page.
+[00:42:47.760] There is some UI there that I'm not sure
+[00:42:49.560] There is some UI there that I'm not sure that we can represent in database state.
+[00:42:52.310] that we can represent in database state.
+[00:42:52.320] that we can represent in database state. So, the rendered versus posted.
+[00:42:55.990] So, the rendered versus posted.
+[00:42:56.000] So, the rendered versus posted. Currently, we store that stuff in local
+[00:42:57.430] Currently, we store that stuff in local
+[00:42:57.440] Currently, we store that stuff in local storage and so
+[00:42:59.590] storage and so
+[00:42:59.600] storage and so I do like that UI, but I wonder whether
+[00:43:01.350] I do like that UI, but I wonder whether
+[00:43:01.360] I do like that UI, but I wonder whether we need a grilling session to figure out
+[00:43:03.030] we need a grilling session to figure out
+[00:43:03.040] we need a grilling session to figure out how that hits the schema
+[00:43:06.270] how that hits the schema
+[00:43:06.280] how that hits the schema and how that fits with what we have
+[00:43:07.390] and how that fits with what we have
+[00:43:07.400] and how that fits with what we have already.
+[00:43:16.720] I like it though. I mean it's I mean
+[00:43:17.960] I like it though. I mean it's I mean it's nice. It's done a good job.
+[00:43:23.160] Okay. So, nearly here.
+[00:43:25.960] Okay. So, nearly here. Okay, decision fully grilled resolution
+[00:43:27.830] Okay, decision fully grilled resolution
+[00:43:27.840] Okay, decision fully grilled resolution comment post on the ticket. Good. Okay,
+[00:43:30.070] comment post on the ticket. Good. Okay,
+[00:43:30.080] comment post on the ticket. Good. Okay, so we've closed another ticket in the
+[00:43:32.230] so we've closed another ticket in the
+[00:43:32.240] so we've closed another ticket in the decision map or in the map.
+[00:43:36.480] Is it closed?
+[00:43:38.040] Is it closed? No. Okay.
+[00:43:41.190] No. Okay.
+[00:43:41.200] No. Okay. Here's what remains.
+[00:43:43.430] Here's what remains.
+[00:43:43.440] Here's what remains. Needs input, may proceed.
+[00:43:45.470] Needs input, may proceed.
+[00:43:45.480] Needs input, may proceed. Yes, crack on.
+[00:43:48.830] Yes, crack on.
+[00:43:48.840] Yes, crack on. Okay, so it just needed input from me to
+[00:43:50.910] Okay, so it just needed input from me to
+[00:43:50.920] Okay, so it just needed input from me to ask whether it was okay to proceed. Fair
+[00:43:52.670] ask whether it was okay to proceed. Fair
+[00:43:52.680] ask whether it was okay to proceed. Fair enough.
+[00:43:54.190] enough.
+[00:43:54.200] enough. Portrait view. What's this now?
+[00:43:59.560] Fully drop. And tab contain no context
+[00:44:01.720] Fully drop. And tab contain no context read, so that's a clean seam.
+[00:44:04.430] read, so that's a clean seam.
+[00:44:04.440] read, so that's a clean seam. Lift as is.
+[00:44:08.400] Open taste question, what actually lives
+[00:44:09.760] Open taste question, what actually lives in that new panel?
+[00:44:11.910] in that new panel?
+[00:44:11.920] in that new panel? Okay, so it's asking me about
+[00:44:14.630] Okay, so it's asking me about
+[00:44:14.640] Okay, so it's asking me about This is the one where we're looking at
+[00:44:15.830] This is the one where we're looking at
+[00:44:15.840] This is the one where we're looking at the editing experience,
+[00:44:17.870] the editing experience,
+[00:44:17.880] the editing experience, not the sort of top level list
+[00:44:19.350] not the sort of top level list
+[00:44:19.360] not the sort of top level list experience.
+[00:44:20.750] experience.
+[00:44:20.760] experience. AndAnd
+[00:44:22.280] And what actually lives in that new panel?
+[00:44:24.870] what actually lives in that new panel?
+[00:44:24.880] what actually lives in that new panel? TikTok specific concerns look like
+[00:44:26.110] TikTok specific concerns look like
+[00:44:26.120] TikTok specific concerns look like caption,caption,
+[00:44:28.400] caption, vertical render trigger, posted TikTok
+[00:44:29.870] vertical render trigger, posted TikTok
+[00:44:29.880] vertical render trigger, posted TikTok shorts. So,ah, yeah.
+[00:44:38.040] That's interesting.
+[00:44:40.040] That's interesting. Cuz the previous TikTok implementation I
+[00:44:41.750] Cuz the previous TikTok implementation I
+[00:44:41.760] Cuz the previous TikTok implementation I had rendered its own captions, but we're
+[00:44:43.510] had rendered its own captions, but we're
+[00:44:43.520] had rendered its own captions, but we're now actually rendering
+[00:44:45.110] now actually rendering
+[00:44:45.120] now actually rendering captions ourselves, but slightly
+[00:44:46.590] captions ourselves, but slightly
+[00:44:46.600] captions ourselves, but slightly lossier.
+[00:44:50.400] New view, a third tab inside editor side
+[00:44:52.480] New view, a third tab inside editor side panel, a separate right column.
+[00:44:58.760] I think this would be a separate right
+[00:45:00.400] I think this would be a separate right column that replaces the player heavy
+[00:45:02.070] column that replaces the player heavy
+[00:45:02.080] column that replaces the player heavy right side.
+[00:45:09.400] I'm really struggling to picture what
+[00:45:11.160] I'm really struggling to picture what you're saying from your words, and so I
+[00:45:12.670] you're saying from your words, and so I
+[00:45:12.680] you're saying from your words, and so I just need to see some more prototypes, I
+[00:45:14.030] just need to see some more prototypes, I
+[00:45:14.040] just need to see some more prototypes, I think.
+[00:45:17.320] I do not use Caveman. No, I tried
+[00:45:18.940] I do not use Caveman. No, I tried [clears throat] it out in my repo,
+[00:45:20.750] [clears throat] it out in my repo,
+[00:45:20.760] [clears throat] it out in my repo, um but I didn't end up using it.
+[00:45:27.160] Why do I only rely on skills? Couldn't I
+[00:45:28.640] Why do I only rely on skills? Couldn't I create specific agents for different
+[00:45:29.950] create specific agents for different
+[00:45:29.960] create specific agents for different tasks? Umtasks? Um
+[00:45:32.160] tasks? Um agents are just likeagents are just like
+[00:45:35.080] agents are just like new context window plus skill. That's
+[00:45:37.030] new context window plus skill. That's
+[00:45:37.040] new context window plus skill. That's what they are. So, there's no reason to
+[00:45:38.910] what they are. So, there's no reason to
+[00:45:38.920] what they are. So, there's no reason to use agents when you can just manage that
+[00:45:40.470] use agents when you can just manage that
+[00:45:40.480] use agents when you can just manage that yourself with skills.
+[00:45:45.560] I'm using Claude agents here, so I just
+[00:45:47.920] I'm using Claude agents here, so I just click press left, and it goes to the
+[00:45:50.070] click press left, and it goes to the
+[00:45:50.080] click press left, and it goes to the Claude agent view.
+[00:45:52.310] Claude agent view.
+[00:45:52.320] Claude agent view. Looks good. Okay, so now 1266 is closed,
+[00:45:55.670] Looks good. Okay, so now 1266 is closed,
+[00:45:55.680] Looks good. Okay, so now 1266 is closed, is it? Yes, it is. Very cool. And that
+[00:45:57.950] is it? Yes, it is. Very cool. And that
+[00:45:57.960] is it? Yes, it is. Very cool. And that has opened up a new ticket. So, I'm
+[00:46:00.470] has opened up a new ticket. So, I'm
+[00:46:00.480] has opened up a new ticket. So, I'm going to grab this. I'm going to close
+[00:46:03.670] going to grab this. I'm going to close
+[00:46:03.680] going to grab this. I'm going to close that with control X. I'll go wayfinder
+[00:46:06.630] that with control X. I'll go wayfinder
+[00:46:06.640] that with control X. I'll go wayfinder and let's go for that one. And this is
+[00:46:09.510] and let's go for that one. And this is
+[00:46:09.520] and let's go for that one. And this is how the CVM produces the submitted
+[00:46:11.230] how the CVM produces the submitted
+[00:46:11.240] how the CVM produces the submitted vertical. Okay. So, this is the render
+[00:46:13.710] vertical. Okay. So, this is the render
+[00:46:13.720] vertical. Okay. So, this is the render caption pipeline.
+[00:46:15.670] caption pipeline.
+[00:46:15.680] caption pipeline. So, we have progressed down
+[00:46:18.750] So, we have progressed down
+[00:46:18.760] So, we have progressed down uh on the way, right? We are finding our
+[00:46:21.630] uh on the way, right? We are finding our
+[00:46:21.640] uh on the way, right? We are finding our way.
+[00:46:23.510] way.
+[00:46:23.520] way. So, this one is nowSo, this one is now
+[00:46:25.760] So, this one is now header button removed.
+[00:46:28.830] header button removed.
+[00:46:28.840] header button removed. Dedicated dedicated TikToks. Um
+[00:46:35.800] Okay, so it's This is asking about thehow we create them.
+[00:46:45.200] Variant B's card contents. Yeah, let's
+[00:46:47.280] Variant B's card contents. Yeah, let's look back at it.
+[00:46:49.110] look back at it.
+[00:46:49.120] look back at it. Posted TikTok and shorts.
+[00:46:51.710] Posted TikTok and shorts.
+[00:46:51.720] Posted TikTok and shorts. It's okay, I think. I think it's quite
+[00:46:53.430] It's okay, I think. I think it's quite
+[00:46:53.440] It's okay, I think. I think it's quite nice.
+[00:47:04.640] Yeah, right. It's asking whether it
+[00:47:05.840] Yeah, right. It's asking whether it should create a TikToks thing here.
+[00:47:08.430] should create a TikToks thing here.
+[00:47:08.440] should create a TikToks thing here. I think that probably is cleanest
+[00:47:09.750] I think that probably is cleanest
+[00:47:09.760] I think that probably is cleanest because this is pretty sparse right now.
+[00:47:12.870] because this is pretty sparse right now.
+[00:47:12.880] because this is pretty sparse right now. It can take another
+[00:47:15.750] It can take anotherIt can take another video.
+[00:47:20.400] Yeah, let's go dedicated TikToks sidebar
+[00:47:22.680] Yeah, let's go dedicated TikToks sidebar item.
+[00:47:26.200] Agree with your other suggestions.
+[00:47:30.040] Agree with your other suggestions. Okay. So, we're heading towards the end
+[00:47:31.630] Okay. So, we're heading towards the end
+[00:47:31.640] Okay. So, we're heading towards the end of that ticket. That's good.
+[00:47:39.680] Yeah, wayfinder is connected to the main
+[00:47:41.280] Yeah, wayfinder is connected to the main modeling.
+[00:47:48.080] Used it wrong to make one of your
+[00:47:49.120] Used it wrong to make one of your projects instead of using the wayfinder.
+[00:47:50.270] projects instead of using the wayfinder.
+[00:47:50.280] projects instead of using the wayfinder. You should always use the skill the
+[00:47:51.390] You should always use the skill the
+[00:47:51.400] You should always use the skill the issue says to. Okay, yeah.
+[00:47:53.510] issue says to. Okay, yeah.
+[00:47:53.520] issue says to. Okay, yeah. Whenever you pick up a decision ticket,
+[00:47:55.990] Whenever you pick up a decision ticket,
+[00:47:56.000] Whenever you pick up a decision ticket, you've got to use Wayfinder.
+[00:47:58.950] you've got to use Wayfinder.
+[00:47:58.960] you've got to use Wayfinder. Okie dokie, where does the render
+[00:48:00.670] Okie dokie, where does the render
+[00:48:00.680] Okie dokie, where does the render pipeline live?
+[00:48:02.470] pipeline live?
+[00:48:02.480] pipeline live? So, this is the decision that we've got
+[00:48:04.310] So, this is the decision that we've got
+[00:48:04.320] So, this is the decision that we've got to make about where
+[00:48:06.510] to make about whereto make about where to put that.
+[00:48:09.920] Mhm.
+[00:48:16.440] Yeah.
+[00:48:18.200] Yeah. So, it's basically asking, I've got this
+[00:48:19.670] So, it's basically asking, I've got this
+[00:48:19.680] So, it's basically asking, I've got this separate thing in a separate repo and
+[00:48:21.230] separate thing in a separate repo and
+[00:48:21.240] separate thing in a separate repo and it's asking, should we pull it into this
+[00:48:23.070] it's asking, should we pull it into this
+[00:48:23.080] it's asking, should we pull it into this repo? There's no reason to, I don't
+[00:48:25.310] repo? There's no reason to, I don't
+[00:48:25.320] repo? There's no reason to, I don't think, because the thing that's in its
+[00:48:27.070] think, because the thing that's in its
+[00:48:27.080] think, because the thing that's in its separate repo works right now as a
+[00:48:29.190] separate repo works right now as a
+[00:48:29.200] separate repo works right now as a bridge.
+[00:48:33.600] So, I think we should probably
+[00:48:36.280] So, I think we should probably defer this work to pull it into this
+[00:48:38.590] defer this work to pull it into this
+[00:48:38.600] defer this work to pull it into this repo.
+[00:48:39.830] repo.
+[00:48:39.840] repo. The reason being thatThe reason being that
+[00:48:42.880] The reason being that we're not really set up to be a mono
+[00:48:44.150] we're not really set up to be a mono
+[00:48:44.160] we're not really set up to be a mono repo in this repo anyway.
+[00:48:46.590] repo in this repo anyway.
+[00:48:46.600] repo in this repo anyway. AndAnd
+[00:48:48.000] And that thing has some pretty old
+[00:48:49.350] that thing has some pretty old
+[00:48:49.360] that thing has some pretty old dependencies.
+[00:48:50.750] dependencies.
+[00:48:50.760] dependencies. So, I kind of just want to
+[00:48:53.950] So, I kind of just want to
+[00:48:53.960] So, I kind of just want to keep it at arm's length for now.
+[00:48:56.590] keep it at arm's length for now.
+[00:48:56.600] keep it at arm's length for now. With the idea that we might pull it in
+[00:48:58.150] With the idea that we might pull it in
+[00:48:58.160] With the idea that we might pull it in at some point.
+[00:49:05.000] I feel like we might be able to not have
+[00:49:08.000] I feel like we might be able to not have toto
+[00:49:10.240] to do the TT shell out.
+[00:49:12.910] do the TT shell out.
+[00:49:12.920] do the TT shell out. I think we can justI think we can just
+[00:49:16.120] I think we can just Is there an option where we can just
+[00:49:16.990] Is there an option where we can just
+[00:49:17.000] Is there an option where we can just invoke it? I don't know.
+[00:49:22.320] I feel like we might be able to pull in
+[00:49:24.040] I feel like we might be able to pull in parts of the system without needing to
+[00:49:26.310] parts of the system without needing to
+[00:49:26.320] parts of the system without needing to pull in the entire remotion setup.
+[00:49:33.560] Yeah.
+[00:49:35.840] Yeah. Whisper flow.
+[00:49:39.200] Okay, here we go.
+[00:49:41.600] Okay, here we go. Our tracker rights got blocked by the
+[00:49:42.910] Our tracker rights got blocked by the
+[00:49:42.920] Our tracker rights got blocked by the auto approval. That's another thing
+[00:49:44.470] auto approval. That's another thing
+[00:49:44.480] auto approval. That's another thing about not being on a virtual machine is
+[00:49:46.110] about not being on a virtual machine is
+[00:49:46.120] about not being on a virtual machine is that I've got to use auto mode.
+[00:49:48.190] that I've got to use auto mode.
+[00:49:48.200] that I've got to use auto mode. Uh auto mode is really annoying cuz it's
+[00:49:50.030] Uh auto mode is really annoying cuz it's
+[00:49:50.040] Uh auto mode is really annoying cuz it's does, you know, it does things like this
+[00:49:51.910] does, you know, it does things like this
+[00:49:51.920] does, you know, it does things like this where the tracker rights got blocked by
+[00:49:53.670] where the tracker rights got blocked by
+[00:49:53.680] where the tracker rights got blocked by the auto approval classifier. So,
+[00:49:56.750] the auto approval classifier. So,
+[00:49:56.760] the auto approval classifier. So, yes, go ahead. Let's see if auto tracker
+[00:49:59.190] yes, go ahead. Let's see if auto tracker
+[00:49:59.200] yes, go ahead. Let's see if auto tracker does it now.
+[00:50:02.600] Love the new way finder, great.
+[00:50:09.200] Still a 50% improvement, good.
+[00:50:11.600] Still a 50% improvement, good. Okay, nowOkay, now
+[00:50:14.160] Okay, now now now nowlet's check this out.
+[00:50:22.520] Uh and what's the URL? This is the new
+[00:50:26.280] Uh and what's the URL? This is the new studio version, so another prototype.
+[00:50:30.390] studio version, so another prototype.
+[00:50:30.400] studio version, so another prototype. Okay.
+[00:50:32.310] Okay.
+[00:50:32.320] Okay. Yeah, I loveYeah, I love
+[00:50:34.400] Yeah, I love I freaking love opening a prototype.
+[00:50:37.950] I freaking love opening a prototype.
+[00:50:37.960] I freaking love opening a prototype. Just love it.
+[00:50:43.165] &gt;&gt; [gasps]
+[00:50:44.640] &gt;&gt; [gasps] &gt;&gt; Hey, that's not bad.
+[00:50:47.190] &gt;&gt; Hey, that's not bad.
+[00:50:47.200] &gt;&gt; Hey, that's not bad. That's not bad. That is what my editor
+[00:50:48.390] That's not bad. That is what my editor
+[00:50:48.400] That's not bad. That is what my editor looks like.
+[00:50:53.320] Mhm.
+[00:50:55.200] Mhm. It's not bad. One thing I don't love is
+[00:50:56.830] It's not bad. One thing I don't love is
+[00:50:56.840] It's not bad. One thing I don't love is these tall timeline items over on the
+[00:50:58.790] these tall timeline items over on the
+[00:50:58.800] these tall timeline items over on the left-hand side.
+[00:51:00.950] left-hand side.
+[00:51:00.960] left-hand side. We don't need the captions down the
+[00:51:02.510] We don't need the captions down the
+[00:51:02.520] We don't need the captions down the bottom.
+[00:51:04.190] bottom.
+[00:51:04.200] bottom. Oh, but this is just This is just A.
+[00:51:06.230] Oh, but this is just This is just A.
+[00:51:06.240] Oh, but this is just This is just A. Let's see what B is.
+[00:51:07.950] Let's see what B is.
+[00:51:07.960] Let's see what B is. B is tabbed. Where's the tabs?
+[00:51:14.320] Oh, I see. Render
+[00:51:16.400] Oh, I see. Render post node, I don't like that.
+[00:51:19.550] post node, I don't like that.
+[00:51:19.560] post node, I don't like that. Video forward overlay tab to edit
+[00:51:21.790] Video forward overlay tab to edit
+[00:51:21.800] Video forward overlay tab to edit captions.
+[00:51:23.790] captions.
+[00:51:23.800] captions. Woah, look at that. I can literally
+[00:51:26.230] Woah, look at that. I can literally
+[00:51:26.240] Woah, look at that. I can literally click on the captions to edit them.
+[00:51:31.440] That's pretty wild. I don't I mean, I
+[00:51:33.000] That's pretty wild. I don't I mean, I don't need that cuz I can usually just
+[00:51:35.470] don't need that cuz I can usually just
+[00:51:35.480] don't need that cuz I can usually just right click on these to edit them.
+[00:51:37.790] right click on these to edit them.
+[00:51:37.800] right click on these to edit them. Um okay.
+[00:51:40.070] Um okay.
+[00:51:40.080] Um okay. So, what do I like here?
+[00:51:46.640] Okay, I've got an idea.
+[00:51:48.720] Okay, I've got an idea. So, I think I like the full screen-ish
+[00:51:50.990] So, I think I like the full screen-ish
+[00:51:51.000] So, I think I like the full screen-ish version of the
+[00:51:52.830] version of the
+[00:51:52.840] version of the player on the right. I think the stuff
+[00:51:54.230] player on the right. I think the stuff
+[00:51:54.240] player on the right. I think the stuff on the left is great. Don't need to
+[00:51:55.830] on the left is great. Don't need to
+[00:51:55.840] on the left is great. Don't need to touch it.
+[00:51:56.950] touch it.
+[00:51:56.960] touch it. Um what I want to see though is
+[00:51:59.910] Um what I want to see though is
+[00:51:59.920] Um what I want to see though is I want an action menu for the actions
+[00:52:01.950] I want an action menu for the actions
+[00:52:01.960] I want an action menu for the actions that are in the
+[00:52:03.430] that are in the
+[00:52:03.440] that are in the B section. So, the current video editor
+[00:52:05.630] B section. So, the current video editor
+[00:52:05.640] B section. So, the current video editor has an action menu and I would like to
+[00:52:07.310] has an action menu and I would like to
+[00:52:07.320] has an action menu and I would like to copy that as much as possible.
+[00:52:10.550] copy that as much as possible.
+[00:52:10.560] copy that as much as possible. There is some stuff I don't need in
+[00:52:11.750] There is some stuff I don't need in
+[00:52:11.760] There is some stuff I don't need in there, but having an explorer in there
+[00:52:14.070] there, but having an explorer in there
+[00:52:14.080] there, but having an explorer in there to see what's in there.
+[00:52:18.120] Prototyping is always super heavy on
+[00:52:20.000] Prototyping is always super heavy on context, always burns a ton of context
+[00:52:22.230] context, always burns a ton of context
+[00:52:22.240] context, always burns a ton of context because it's having to read a bunch of
+[00:52:23.430] because it's having to read a bunch of
+[00:52:23.440] because it's having to read a bunch of files, write a bunch of files, and
+[00:52:25.150] files, write a bunch of files, and
+[00:52:25.160] files, write a bunch of files, and you're often needing to edit stuff. So,
+[00:52:26.630] you're often needing to edit stuff. So,
+[00:52:26.640] you're often needing to edit stuff. So, I'm used to things going to like 200k.
+[00:52:34.200] And actually,
+[00:52:36.480] And actually, also another thing about this is I don't
+[00:52:38.750] also another thing about this is I don't
+[00:52:38.760] also another thing about this is I don't needneed
+[00:52:40.400] need caption editing at all. I don't need it
+[00:52:42.990] caption editing at all. I don't need it
+[00:52:43.000] caption editing at all. I don't need it becausethe
+[00:52:47.280] the uh Remotion workflow that we're uh
+[00:52:49.390] uh Remotion workflow that we're uh
+[00:52:49.400] uh Remotion workflow that we're uh pushing out to, that does its own
+[00:52:51.070] pushing out to, that does its own
+[00:52:51.080] pushing out to, that does its own captioning anyway. So, we just don't
+[00:52:52.510] captioning anyway. So, we just don't
+[00:52:52.520] captioning anyway. So, we just don't need it.
+[00:52:57.520] Okie doke. How you attached are you to
+[00:52:59.720] Okie doke. How you attached are you to the exact Remotion capture look?
+[00:53:02.990] the exact Remotion capture look?
+[00:53:03.000] the exact Remotion capture look? Oh, here we go. Okay.
+[00:53:05.590] Oh, here we go. Okay.
+[00:53:05.600] Oh, here we go. Okay. What's it doing here?
+[00:53:08.680] I'm the styled.
+[00:53:10.320] I'm the styled. Yeah.
+[00:53:12.720] Whisper transcription's already. Oh,
+[00:53:14.120] Whisper transcription's already. Oh, here we go. Here we go.
+[00:53:21.520] So, we're trying to work out how much we
+[00:53:23.240] So, we're trying to work out how much we shouldshould
+[00:53:24.720] should figure out here. Hmm.
+[00:53:27.830] figure out here. Hmm.
+[00:53:27.840] figure out here. Hmm. Yeah.
+[00:53:29.190] Yeah.
+[00:53:29.200] Yeah. I am actually very attached to the exact
+[00:53:31.230] I am actually very attached to the exact
+[00:53:31.240] I am actually very attached to the exact Remotion caption look. It took a long
+[00:53:33.510] Remotion caption look. It took a long
+[00:53:33.520] Remotion caption look. It took a long time to get it right, and I think it's
+[00:53:35.190] time to get it right, and I think it's
+[00:53:35.200] time to get it right, and I think it's really pretty.
+[00:53:36.710] really pretty.
+[00:53:36.720] really pretty. So, yeah, I don't want to get rid of it.
+[00:53:42.120] So much of like misalignment from AI is
+[00:53:45.520] So much of like misalignment from AI is AI not asking these questions, not
+[00:53:47.950] AI not asking these questions, not
+[00:53:47.960] AI not asking these questions, not understanding what your values are, what
+[00:53:49.470] understanding what your values are, what
+[00:53:49.480] understanding what your values are, what you prioritize over other stuff.
+[00:53:52.310] you prioritize over other stuff.
+[00:53:52.320] you prioritize over other stuff. I do not use OpenSpec.
+[00:53:58.600] Okay, we've got a closed ticket, I
+[00:54:00.560] Okay, we've got a closed ticket, I think. That's good. Let's have a look at
+[00:54:02.190] think. That's good. Let's have a look at
+[00:54:02.200] think. That's good. Let's have a look at the map.
+[00:54:03.750] the map.
+[00:54:03.760] the map. We're getting through it. We are six out
+[00:54:06.150] We're getting through it. We are six out
+[00:54:06.160] We're getting through it. We are six out of nine now, and
+[00:54:09.550] of nine now, andof nine now, and we've gotwe've got
+[00:54:12.000] we've got Uh that's been grabbed. This one needs
+[00:54:13.950] Uh that's been grabbed. This one needs
+[00:54:13.960] Uh that's been grabbed. This one needs to be grabbed now.
+[00:54:16.070] to be grabbed now.
+[00:54:16.080] to be grabbed now. So, we can delete this one. We can say
+[00:54:18.230] So, we can delete this one. We can say
+[00:54:18.240] So, we can delete this one. We can say wayfinder that one, and this is
+[00:54:21.910] wayfinder that one, and this is
+[00:54:21.920] wayfinder that one, and this is posting life cycle.
+[00:54:30.800] Still can't wrap your head around how to
+[00:54:31.880] Still can't wrap your head around how to have multiple grilling sessions in
+[00:54:32.950] have multiple grilling sessions in
+[00:54:32.960] have multiple grilling sessions in parallel when the decisions in one might
+[00:54:34.470] parallel when the decisions in one might
+[00:54:34.480] parallel when the decisions in one might affect decisions in the other one. Um in
+[00:54:36.670] affect decisions in the other one. Um in
+[00:54:36.680] affect decisions in the other one. Um in general, I haven't found that to be a
+[00:54:38.710] general, I haven't found that to be a
+[00:54:38.720] general, I haven't found that to be a problem.
+[00:54:40.030] problem.
+[00:54:40.040] problem. Um it can happen, and when it does
+[00:54:42.510] Um it can happen, and when it does
+[00:54:42.520] Um it can happen, and when it does happen, you just sort of say, "Okay."
+[00:54:44.710] happen, you just sort of say, "Okay."
+[00:54:44.720] happen, you just sort of say, "Okay." You point the sessions at each other,
+[00:54:47.750] You point the sessions at each other,
+[00:54:47.760] You point the sessions at each other, uh figure out which one needs to be done
+[00:54:49.070] uh figure out which one needs to be done
+[00:54:49.080] uh figure out which one needs to be done first, then you just finish that
+[00:54:50.310] first, then you just finish that
+[00:54:50.320] first, then you just finish that grilling session in there, hand off one
+[00:54:52.190] grilling session in there, hand off one
+[00:54:52.200] grilling session in there, hand off one to the other. You know, you just do a
+[00:54:53.790] to the other. You know, you just do a
+[00:54:53.800] to the other. You know, you just do a bit of inter-agent communication.
+[00:54:58.320] The way it generally works is that it
+[00:55:01.040] The way it generally works is that it generally gets the blocking
+[00:55:02.030] generally gets the blocking
+[00:55:02.040] generally gets the blocking relationships really nicely.
+[00:55:05.230] relationships really nicely.
+[00:55:05.240] relationships really nicely. Okay, here we go.
+[00:55:09.600] So, CVM is unambiguously a local desktop
+[00:55:12.320] So, CVM is unambiguously a local desktop tool, streamed at forwarder, OBS, blah
+[00:55:13.910] tool, streamed at forwarder, OBS, blah
+[00:55:13.920] tool, streamed at forwarder, OBS, blah blah blah blah blah.
+[00:55:16.510] blah blah blah blah.
+[00:55:16.520] blah blah blah blah. Uh arms length shape crystallizes.
+[00:55:18.270] Uh arms length shape crystallizes.
+[00:55:18.280] Uh arms length shape crystallizes. Here's my recommended answers to the
+[00:55:19.550] Here's my recommended answers to the
+[00:55:19.560] Here's my recommended answers to the whole ticket. Here we go.
+[00:55:22.270] whole ticket. Here we go.
+[00:55:22.280] whole ticket. Here we go. Extract just the My Comp 3 motion
+[00:55:24.030] Extract just the My Comp 3 motion
+[00:55:24.040] Extract just the My Comp 3 motion project into its clean standalone repo.
+[00:55:26.950] project into its clean standalone repo.
+[00:55:26.960] project into its clean standalone repo. Yes.
+[00:55:29.270] Yes.
+[00:55:29.280] Yes. CVM invokes it via a local shell out.
+[00:55:31.990] CVM invokes it via a local shell out.
+[00:55:32.000] CVM invokes it via a local shell out. Yes.
+[00:55:33.550] Yes.
+[00:55:33.560] Yes. Good.
+[00:55:35.070] Good.
+[00:55:35.080] Good. CVM owns the surrounding glue natively.
+[00:55:38.030] CVM owns the surrounding glue natively.
+[00:55:38.040] CVM owns the surrounding glue natively. Transcribe audio file.
+[00:55:41.270] Transcribe audio file.
+[00:55:41.280] Transcribe audio file. Yeah, that seems fine. Defer the
+[00:55:43.830] Yeah, that seems fine. Defer the
+[00:55:43.840] Yeah, that seems fine. Defer the eventual pull into CVM at later optional
+[00:55:46.310] eventual pull into CVM at later optional
+[00:55:46.320] eventual pull into CVM at later optional step.
+[00:55:48.350] step.
+[00:55:48.360] step. Yes. Yes. Yes. That looks freaking
+[00:55:51.710] Yes. Yes. Yes. That looks freaking
+[00:55:51.720] Yes. Yes. Yes. That looks freaking great.
+[00:55:53.230] great.
+[00:55:53.240] great. I love it.
+[00:55:58.360] Yep.
+[00:56:03.800] The floating bar that stitches between
+[00:56:05.920] The floating bar that stitches between our mock-ups, that's just the prototype
+[00:56:07.470] our mock-ups, that's just the prototype
+[00:56:07.480] our mock-ups, that's just the prototype skill.
+[00:56:12.200] Okay.
+[00:56:14.400] Okay. Cool. So, that's doing a little bit of
+[00:56:15.670] Cool. So, that's doing a little bit of
+[00:56:15.680] Cool. So, that's doing a little bit of prototyping.
+[00:56:17.910] prototyping.
+[00:56:17.920] prototyping. Cool.
+[00:56:18.990] Cool.
+[00:56:19.000] Cool. And you get a little bit of a break
+[00:56:20.310] And you get a little bit of a break
+[00:56:20.320] And you get a little bit of a break sometimes just where all where you're at
+[00:56:22.270] sometimes just where all where you're at
+[00:56:22.280] sometimes just where all where you're at maximum agent working
+[00:56:24.550] maximum agent working
+[00:56:24.560] maximum agent working and you just get to have a cup of tea.
+[00:56:30.880] This is Claude agents. It's really good.
+[00:56:33.594] This is Claude agents. It's really good. &gt;&gt; [clears throat]
+[00:56:35.230] &gt;&gt; [clears throat]
+[00:56:35.240] &gt;&gt; [clears throat] &gt;&gt; How do I do UI testing? I mostly like
+[00:56:38.030] &gt;&gt; How do I do UI testing? I mostly like
+[00:56:38.040] &gt;&gt; How do I do UI testing? I mostly like this prototyping phase produces really
+[00:56:40.230] this prototyping phase produces really
+[00:56:40.240] this prototyping phase produces really high-quality assets.
+[00:56:41.910] high-quality assets.
+[00:56:41.920] high-quality assets. Um,Um,
+[00:56:42.840] Um, I haven't done a ton of browser testing.
+[00:56:44.750] I haven't done a ton of browser testing.
+[00:56:44.760] I haven't done a ton of browser testing. I mean, I have done in my career, but
+[00:56:45.950] I mean, I have done in my career, but
+[00:56:45.960] I mean, I have done in my career, but I'm not doing it now.
+[00:56:47.750] I'm not doing it now.
+[00:56:47.760] I'm not doing it now. I probably should. I just um
+[00:56:50.630] I probably should. I just um
+[00:56:50.640] I probably should. I just um this is a really complicated setup
+[00:56:52.310] this is a really complicated setup
+[00:56:52.320] this is a really complicated setup locally and so I don't have the
+[00:56:55.670] locally and so I don't have the
+[00:56:55.680] locally and so I don't have the energy toenergy to
+[00:56:57.174] energy to &gt;&gt; [sighs and gasps]
+[00:56:57.590] &gt;&gt; [sighs and gasps]
+[00:56:57.600] &gt;&gt; [sighs and gasps] &gt;&gt; want to give it its entire set of um
+[00:56:59.950] &gt;&gt; want to give it its entire set of um
+[00:56:59.960] &gt;&gt; want to give it its entire set of um microservices that
+[00:57:01.750] microservices that
+[00:57:01.760] microservices that make that work, basically.
+[00:57:04.590] make that work, basically.
+[00:57:04.600] make that work, basically. Okay.
+[00:57:06.230] Okay.
+[00:57:06.240] Okay. So, what's conversion out? Okay, so
+[00:57:08.390] So, what's conversion out? Okay, so
+[00:57:08.400] So, what's conversion out? Okay, so let's have a look at the prototype.
+[00:57:10.430] let's have a look at the prototype.
+[00:57:10.440] let's have a look at the prototype. Yes, that's nice. That's nice.
+[00:57:15.470] Yes, that's nice. That's nice.
+[00:57:15.480] Yes, that's nice. That's nice. Rename short. Oh, that's really nice.
+[00:57:18.190] Rename short. Oh, that's really nice.
+[00:57:18.200] Rename short. Oh, that's really nice. And then press post.
+[00:57:20.110] And then press post.
+[00:57:20.120] And then press post. God, that's gorgeous.
+[00:57:22.230] God, that's gorgeous.
+[00:57:22.240] God, that's gorgeous. So, what happens when you press post?
+[00:57:24.190] So, what happens when you press post?
+[00:57:24.200] So, what happens when you press post? Nothing so far.
+[00:57:28.840] God, I do love this.
+[00:57:37.800] &gt;&gt; That's really good. The video is
+[00:57:39.800] &gt;&gt; That's really good. The video is slightly too long.
+[00:57:42.430] slightly too long.
+[00:57:42.440] slightly too long. Um vertically, so it's cut off at the
+[00:57:45.550] Um vertically, so it's cut off at the
+[00:57:45.560] Um vertically, so it's cut off at the bottom.
+[00:57:47.550] bottom.
+[00:57:47.560] bottom. So, it needs some CSS adjustment there.
+[00:57:50.750] So, it needs some CSS adjustment there.
+[00:57:50.760] So, it needs some CSS adjustment there. I'm also intrigued by what the
+[00:57:53.790] I'm also intrigued by what the
+[00:57:53.800] I'm also intrigued by what the post button should look like
+[00:57:56.630] post button should look like
+[00:57:56.640] post button should look like or whether it should open a modal
+[00:57:59.710] or whether it should open a modal
+[00:57:59.720] or whether it should open a modal and what should be in that modal, but I
+[00:58:01.950] and what should be in that modal, but I
+[00:58:01.960] and what should be in that modal, but I think that's a grilling ticket not a
+[00:58:03.310] think that's a grilling ticket not a
+[00:58:03.320] think that's a grilling ticket not a design ticket.
+[00:58:05.710] design ticket.
+[00:58:05.720] design ticket. And we're already pretty deep in our
+[00:58:07.230] And we're already pretty deep in our
+[00:58:07.240] And we're already pretty deep in our context window, so let's not worry about
+[00:58:09.350] context window, so let's not worry about
+[00:58:09.360] context window, so let's not worry about that yet.
+[00:58:11.350] that yet.
+[00:58:11.360] that yet. So, I thinkOh.
+[00:58:15.600] Oh. Oh, I didn't even realize there were
+[00:58:16.990] Oh, I didn't even realize there were
+[00:58:17.000] Oh, I didn't even realize there were options.
+[00:58:19.960] UhUh Post actions above. Ooh, on the video.
+[00:58:25.630] Post actions above. Ooh, on the video.
+[00:58:25.640] Post actions above. Ooh, on the video. Look at that. On the video is quite
+[00:58:27.070] Look at that. On the video is quite
+[00:58:27.080] Look at that. On the video is quite nice.
+[00:58:28.670] nice.
+[00:58:28.680] nice. I know, I think above is just great.
+[00:58:30.790] I know, I think above is just great.
+[00:58:30.800] I know, I think above is just great. Yeah.
+[00:58:34.800] A is the one I'm picking. Doing it above
+[00:58:36.880] A is the one I'm picking. Doing it above the video looks really nice.
+[00:58:43.640] Um I'm just using Opus 4.8 medium for
+[00:58:46.200] Um I'm just using Opus 4.8 medium for pretty much all steps in the workflow.
+[00:58:51.040] I've not heard of Orca ID.
+[00:58:54.680] Orca ID.
+[00:58:57.640] Orca ID. Okay. Lifecycle one linear status to
+[00:58:59.990] Okay. Lifecycle one linear status to
+[00:59:00.000] Okay. Lifecycle one linear status to respine orthogonal facets.
+[00:59:03.510] respine orthogonal facets.
+[00:59:03.520] respine orthogonal facets. So, I think what we need to keep track
+[00:59:04.670] So, I think what we need to keep track
+[00:59:04.680] So, I think what we need to keep track of here is what platforms the video has
+[00:59:07.550] of here is what platforms the video has
+[00:59:07.560] of here is what platforms the video has been posted to.
+[00:59:10.230] been posted to.
+[00:59:10.240] been posted to. And from there we can
+[00:59:13.920] figure out in the UI whether it has been
+[00:59:16.000] figure out in the UI whether it has been posted to all of them.
+[00:59:19.960] We can figure out from the videos
+[00:59:23.520] We can figure out from the videos um on file system status.
+[00:59:32.040] Whether it has been exported or not.
+[00:59:37.760] Why do I do medium over X over high? Um
+[00:59:42.400] Why do I do medium over X over high? Um There's a trade-off with effort, right?
+[00:59:44.310] There's a trade-off with effort, right?
+[00:59:44.320] There's a trade-off with effort, right? With what you're trading with effort is
+[00:59:46.110] With what you're trading with effort is
+[00:59:46.120] With what you're trading with effort is you're trading quality versus latency.
+[00:59:48.310] you're trading quality versus latency.
+[00:59:48.320] you're trading quality versus latency. The higher you go, the more tokens are
+[00:59:50.710] The higher you go, the more tokens are
+[00:59:50.720] The higher you go, the more tokens are spent and the higher latency you get for
+[00:59:53.990] spent and the higher latency you get for
+[00:59:54.000] spent and the higher latency you get for diminishing returns in terms of effort
+[00:59:56.110] diminishing returns in terms of effort
+[00:59:56.120] diminishing returns in terms of effort or in terms of quality. So, I tend to
+[00:59:58.790] or in terms of quality. So, I tend to
+[00:59:58.800] or in terms of quality. So, I tend to I've just found that medium fits the way
+[01:00:01.070] I've just found that medium fits the way
+[01:00:01.080] I've just found that medium fits the way I like to work best.
+[01:00:04.480] I feel like I don't need a very smart
+[01:00:06.360] I feel like I don't need a very smart modelmodel
+[01:00:07.440] model and I feel that Opus medium is perfectly
+[01:00:09.830] and I feel that Opus medium is perfectly
+[01:00:09.840] and I feel that Opus medium is perfectly smart enough for me.
+[01:00:15.160] Okay, what's the shape of that posted
+[01:00:16.400] Okay, what's the shape of that posted platform record where does it live?
+[01:00:20.680] PlatformPlatform remote ID is nice, yeah. Remote URL is
+[01:00:25.070] remote ID is nice, yeah. Remote URL is
+[01:00:25.080] remote ID is nice, yeah. Remote URL is nice.
+[01:00:29.360] Yeah, I really like that.
+[01:00:36.160] I really like that.
+[01:00:39.640] Each post carries more than a Boolean,
+[01:00:41.160] Each post carries more than a Boolean, yep.
+[01:00:43.030] yep.
+[01:00:43.040] yep. Yeah, that's excellent.
+[01:00:51.040] Note, by the way, that we are vibe
+[01:00:52.240] Note, by the way, that we are vibe coding here. We're just vibe coding
+[01:00:53.830] coding here. We're just vibe coding
+[01:00:53.840] coding here. We're just vibe coding within prototypes. Right? Those
+[01:00:55.790] within prototypes. Right? Those
+[01:00:55.800] within prototypes. Right? Those prototypes are then going to go uh and
+[01:00:58.470] prototypes are then going to go uh and
+[01:00:58.480] prototypes are then going to go uh and feed into a spec and that spec is going
+[01:01:01.790] feed into a spec and that spec is going
+[01:01:01.800] feed into a spec and that spec is going to be the thing that we get that gets
+[01:01:03.470] to be the thing that we get that gets
+[01:01:03.480] to be the thing that we get that gets shipped.
+[01:01:04.590] shipped.
+[01:01:04.600] shipped. I've got about 10 minutes left, by the
+[01:01:05.710] I've got about 10 minutes left, by the
+[01:01:05.720] I've got about 10 minutes left, by the way.
+[01:01:07.150] way.
+[01:01:07.160] way. Render contract between CVM and the
+[01:01:08.350] Render contract between CVM and the
+[01:01:08.360] Render contract between CVM and the extractor renderer.
+[01:01:13.320] CVM passes props explicitly.
+[01:01:16.880] CVM passes props explicitly. Yeah, if that's possible, then great.
+[01:01:23.520] What post it means for the final
+[01:01:24.600] What post it means for the final version? Okay.
+[01:01:32.360] B, okay, soTikTok's apps draft. So, you finish
+[01:01:38.000] TikTok's apps draft. So, you finish posting by hand of the TikTok app.
+[01:01:40.670] posting by hand of the TikTok app.
+[01:01:40.680] posting by hand of the TikTok app. Public posting audit gate. What's that?
+[01:01:45.160] I'm lacking a bit of context here. Can
+[01:01:46.480] I'm lacking a bit of context here. Can you tell me what the public posting
+[01:01:48.710] you tell me what the public posting
+[01:01:48.720] you tell me what the public posting audit gate in TikTok is?
+[01:01:56.840] Usually what I do is I
+[01:01:58.840] Usually what I do is I um create a PR that references the
+[01:02:00.870] um create a PR that references the
+[01:02:00.880] um create a PR that references the issue, and then when the PR gets merged,
+[01:02:02.550] issue, and then when the PR gets merged,
+[01:02:02.560] issue, and then when the PR gets merged, the issue just gets closed.
+[01:02:07.800] Yeah, this workflow
+[01:02:09.320] Yeah, this workflow um should work in open code.
+[01:02:12.720] Where does the render actually execute
+[01:02:13.960] Where does the render actually execute locally or remotely lambda?
+[01:02:15.870] locally or remotely lambda?
+[01:02:15.880] locally or remotely lambda? It executes locally.
+[01:02:21.920] I'm using Whisper flow to dictate.
+[01:02:28.320] Codebase design should be part of
+[01:02:30.360] Codebase design should be part of improved codebase architecture, which
+[01:02:32.030] improved codebase architecture, which
+[01:02:32.040] improved codebase architecture, which should be something that you run every
+[01:02:33.550] should be something that you run every
+[01:02:33.560] should be something that you run every so often on your code.
+[01:02:35.390] so often on your code.
+[01:02:35.400] so often on your code. AndAndAnd um
+[01:02:40.600] maybe as part of review, but review kind
+[01:02:42.560] maybe as part of review, but review kind of has its own baked-in concept of what
+[01:02:44.310] of has its own baked-in concept of what
+[01:02:44.320] of has its own baked-in concept of what it's looking for. So,
+[01:02:46.870] it's looking for. So,
+[01:02:46.880] it's looking for. So, yeah, maybe during planning is a good
+[01:02:48.230] yeah, maybe during planning is a good
+[01:02:48.240] yeah, maybe during planning is a good one.
+[01:02:52.320] Where would you recommend putting a
+[01:02:53.360] Where would you recommend putting a shared kernel of knowledge? Um probably
+[01:02:56.430] shared kernel of knowledge? Um probably
+[01:02:56.440] shared kernel of knowledge? Um probably you're talking about a knowledge base.
+[01:02:58.470] you're talking about a knowledge base.
+[01:02:58.480] you're talking about a knowledge base. Um maybe in its own wiki repo
+[01:03:01.950] Um maybe in its own wiki repo
+[01:03:01.960] Um maybe in its own wiki repo or in a third-party service like
+[01:03:05.070] or in a third-party service like
+[01:03:05.080] or in a third-party service like Notion or Google Docs or something.
+[01:03:10.200] How do I recommend teams work together
+[01:03:11.800] How do I recommend teams work together with their dot scratch? Um I recommend
+[01:03:14.630] with their dot scratch? Um I recommend
+[01:03:14.640] with their dot scratch? Um I recommend not using local markdown.
+[01:03:17.470] not using local markdown.
+[01:03:17.480] not using local markdown. I would This is brownfield code. Yes,
+[01:03:19.870] I would This is brownfield code. Yes,
+[01:03:19.880] I would This is brownfield code. Yes, we're using wave Wayfinder on brownfield
+[01:03:21.670] we're using wave Wayfinder on brownfield
+[01:03:21.680] we're using wave Wayfinder on brownfield code. I think that brownfield versus
+[01:03:23.430] code. I think that brownfield versus
+[01:03:23.440] code. I think that brownfield versus greenfield is is kind of BS, actually. I
+[01:03:26.390] greenfield is is kind of BS, actually. I
+[01:03:26.400] greenfield is is kind of BS, actually. I don't think it's as big a difference as
+[01:03:28.550] don't think it's as big a difference as
+[01:03:28.560] don't think it's as big a difference as people think.
+[01:03:34.440] Option A sharpened extract local shell
+[01:03:36.800] Option A sharpened extract local shell out CVM owns the glue.
+[01:03:38.590] out CVM owns the glue.
+[01:03:38.600] out CVM owns the glue. Yes, okay.
+[01:03:41.230] Yes, okay.
+[01:03:41.240] Yes, okay. Looks fabulous.
+[01:03:44.480] Cool. So, that is a grilling ticket. Um
+[01:03:47.560] Cool. So, that is a grilling ticket. Um figure it out. We're really getting
+[01:03:49.590] figure it out. We're really getting
+[01:03:49.600] figure it out. We're really getting close now. So,
+[01:03:51.670] close now. So,close now. So, pick variant A.
+[01:03:53.910] pick variant A.
+[01:03:53.920] pick variant A. That's another prototype ticket that
+[01:03:55.470] That's another prototype ticket that
+[01:03:55.480] That's another prototype ticket that we've got done.
+[01:03:57.470] we've got done.
+[01:03:57.480] we've got done. Posting life cycle, okay.
+[01:04:01.480] So, okay. Tik Tok Tik Tok's content
+[01:04:03.760] So, okay. Tik Tok Tik Tok's content posted APIposted API
+[01:04:06.120] posted API treats every app as an un-audited until
+[01:04:08.310] treats every app as an un-audited until
+[01:04:08.320] treats every app as an un-audited until Tik Tok reviews and approves it. That
+[01:04:10.110] Tik Tok reviews and approves it. That
+[01:04:10.120] Tik Tok reviews and approves it. That review is called the audit.
+[01:04:14.040] What un-audited costs every post is
+[01:04:15.640] What un-audited costs every post is forced toUm
+[01:04:19.304] Um &gt;&gt; [sighs]&gt;&gt; [sighs]
+[01:04:20.560] &gt;&gt; [sighs] &gt;&gt; yeah, that's fine.
+[01:04:23.710] &gt;&gt; yeah, that's fine.
+[01:04:23.720] &gt;&gt; yeah, that's fine. You must build Tik Tok's full mandated
+[01:04:25.870] You must build Tik Tok's full mandated
+[01:04:25.880] You must build Tik Tok's full mandated content sharing guidelines UX and size
+[01:04:28.150] content sharing guidelines UX and size
+[01:04:28.160] content sharing guidelines UX and size CVM before they'll even review you.
+[01:04:30.350] CVM before they'll even review you.
+[01:04:30.360] CVM before they'll even review you. Privacy drop down with no default grayed
+[01:04:31.950] Privacy drop down with no default grayed
+[01:04:31.960] Privacy drop down with no default grayed out disabled to bloody hell.
+[01:04:36.989] &gt;&gt; [sighs]&gt;&gt; Okay.
+[01:04:43.440] &gt;&gt; Okay. Damn, this is brutal.
+[01:04:45.190] Damn, this is brutal.
+[01:04:45.200] Damn, this is brutal. So, it means that Tik Tok um
+[01:04:48.350] So, it means that Tik Tok um
+[01:04:48.360] So, it means that Tik Tok um needs ord needs to audit every post I
+[01:04:51.710] needs ord needs to audit every post I
+[01:04:51.720] needs ord needs to audit every post I send or something or there are some
+[01:04:53.150] send or something or there are some
+[01:04:53.160] send or something or there are some onerous requirements to do this.
+[01:04:58.160] Ouch.
+[01:05:01.000] So, this is something that we've hit now
+[01:05:02.560] So, this is something that we've hit now that is a real blocker for us. Um and I
+[01:05:06.830] that is a real blocker for us. Um and I
+[01:05:06.840] that is a real blocker for us. Um and I do have an idea for how we can get
+[01:05:08.150] do have an idea for how we can get
+[01:05:08.160] do have an idea for how we can get around it.
+[01:05:09.430] around it.
+[01:05:09.440] around it. Yeah, this works in Codex.
+[01:05:11.670] Yeah, this works in Codex.
+[01:05:11.680] Yeah, this works in Codex. So,So,So, okay.
+[01:05:14.510] okay.
+[01:05:14.520] okay. I did have an implementation of this
+[01:05:15.750] I did have an implementation of this
+[01:05:15.760] I did have an implementation of this before and it used Buffer
+[01:05:18.470] before and it used Buffer
+[01:05:18.480] before and it used Buffer to queue up videos,
+[01:05:21.670] to queue up videos,
+[01:05:21.680] to queue up videos, which is kind of nice. And I think what
+[01:05:23.790] which is kind of nice. And I think what
+[01:05:23.800] which is kind of nice. And I think what I want to do is to
+[01:05:26.230] I want to do is to
+[01:05:26.240] I want to do is to make a decision ticket to figure out
+[01:05:28.190] make a decision ticket to figure out
+[01:05:28.200] make a decision ticket to figure out whether we can use Buffer here instead
+[01:05:30.230] whether we can use Buffer here instead
+[01:05:30.240] whether we can use Buffer here instead because the Buffer API is easy to use.
+[01:05:33.910] because the Buffer API is easy to use.
+[01:05:33.920] because the Buffer API is easy to use. UmUm
+[01:05:36.320] Um although actually the way I did it was I
+[01:05:37.950] although actually the way I did it was I
+[01:05:37.960] although actually the way I did it was I uploaded it into a Dropbox then Zapier
+[01:05:41.390] uploaded it into a Dropbox then Zapier
+[01:05:41.400] uploaded it into a Dropbox then Zapier um detected that and then uploaded it to
+[01:05:45.070] um detected that and then uploaded it to
+[01:05:45.080] um detected that and then uploaded it to Buffer.
+[01:05:46.070] Buffer.
+[01:05:46.080] Buffer. And that's fine. I can do that again.
+[01:05:48.350] And that's fine. I can do that again.
+[01:05:48.360] And that's fine. I can do that again. That makes our flow a lot easier. We
+[01:05:50.190] That makes our flow a lot easier. We
+[01:05:50.200] That makes our flow a lot easier. We don't actually need to look at any
+[01:05:52.030] don't actually need to look at any
+[01:05:52.040] don't actually need to look at any existing APIs, but I will need to pay
+[01:05:53.790] existing APIs, but I will need to pay
+[01:05:53.800] existing APIs, but I will need to pay for Buffer, of course. But paying for
+[01:05:55.990] for Buffer, of course. But paying for
+[01:05:56.000] for Buffer, of course. But paying for Buffer is a small price to pay uh
+[01:05:59.230] Buffer is a small price to pay uh
+[01:05:59.240] Buffer is a small price to pay uh compared to having to do this crazy
+[01:06:01.670] compared to having to do this crazy
+[01:06:01.680] compared to having to do this crazy TikTok stuff.
+[01:06:03.470] TikTok stuff.
+[01:06:03.480] TikTok stuff. Let's have a chat about that now before
+[01:06:04.950] Let's have a chat about that now before
+[01:06:04.960] Let's have a chat about that now before we figure out whether we're going to put
+[01:06:06.110] we figure out whether we're going to put
+[01:06:06.120] we figure out whether we're going to put a decision ticket.
+[01:06:10.240] Yeah, everybody's grilling me, man.
+[01:06:12.360] Yeah, everybody's grilling me, man. Everybody's grilling me.
+[01:06:18.720] Yeah, these tickets are just a way of
+[01:06:20.040] Yeah, these tickets are just a way of tracking the progress through the fog,
+[01:06:22.550] tracking the progress through the fog,
+[01:06:22.560] tracking the progress through the fog, essentially.
+[01:06:29.240] All right, I got about 5 minutes left.
+[01:06:36.800] Mhm. CVM tracks a single binary cute
+[01:06:39.720] Mhm. CVM tracks a single binary cute handles of fact per video.
+[01:06:42.950] handles of fact per video.
+[01:06:42.960] handles of fact per video. Hang on.
+[01:06:44.150] Hang on.
+[01:06:44.160] Hang on. I might need to go fairly soon.
+[01:06:46.710] I might need to go fairly soon.
+[01:06:46.720] I might need to go fairly soon. I got 5 minutes.
+[01:06:49.960] Okay, I'll tell you what, let's wrap up
+[01:06:52.000] Okay, I'll tell you what, let's wrap up because I'm not going to get to the end
+[01:06:53.870] because I'm not going to get to the end
+[01:06:53.880] because I'm not going to get to the end of the map. This is a big chunky
+[01:06:55.950] of the map. This is a big chunky
+[01:06:55.960] of the map. This is a big chunky feature. We've done pretty well. We've
+[01:06:58.350] feature. We've done pretty well. We've
+[01:06:58.360] feature. We've done pretty well. We've got eight out of nine tasks done. And
+[01:07:01.870] got eight out of nine tasks done. And
+[01:07:01.880] got eight out of nine tasks done. And you can see that the
+[01:07:04.150] you can see that the
+[01:07:04.160] you can see that the um decisions so far in the map itself
+[01:07:06.470] um decisions so far in the map itself
+[01:07:06.480] um decisions so far in the map itself have been fleshed out a bit and each of
+[01:07:08.550] have been fleshed out a bit and each of
+[01:07:08.560] have been fleshed out a bit and each of them link out to a sub-issue.
+[01:07:12.470] them link out to a sub-issue.
+[01:07:12.480] them link out to a sub-issue. Hang on 2 seconds.
+[01:07:48.360] There we go.
+[01:07:49.720] There we go. Car related issues.
+[01:07:52.550] Car related issues.
+[01:07:52.560] Car related issues. Sorry, I'll be down in a sec.
+[01:07:54.870] Sorry, I'll be down in a sec.
+[01:07:54.880] Sorry, I'll be down in a sec. So,So,
+[01:07:56.720] So, we've done pretty well.
+[01:07:58.670] we've done pretty well.
+[01:07:58.680] we've done pretty well. Um we've finished up and this and let me
+[01:08:01.950] Um we've finished up and this and let me
+[01:08:01.960] Um we've finished up and this and let me refresh the map just so we get a full
+[01:08:03.270] refresh the map just so we get a full
+[01:08:03.280] refresh the map just so we get a full sense.
+[01:08:07.480] We can see the decisions are so far have
+[01:08:09.200] We can see the decisions are so far have been recorded in the proper map.
+[01:08:11.390] been recorded in the proper map.
+[01:08:11.400] been recorded in the proper map. They all link out to research stuff.
+[01:08:14.190] They all link out to research stuff.
+[01:08:14.200] They all link out to research stuff. We've done been able to
+[01:08:15.670] We've done been able to
+[01:08:15.680] We've done been able to get a huge amount of work done in pretty
+[01:08:18.110] get a huge amount of work done in pretty
+[01:08:18.120] get a huge amount of work done in pretty little time.
+[01:08:20.030] little time.
+[01:08:20.040] little time. It's pretty sweet. I love doing this
+[01:08:21.829] It's pretty sweet. I love doing this
+[01:08:21.839] It's pretty sweet. I love doing this stuff. I love the feeling the way finder
+[01:08:23.710] stuff. I love the feeling the way finder
+[01:08:23.720] stuff. I love the feeling the way finder gives me that I'm always in control that
+[01:08:25.990] gives me that I'm always in control that
+[01:08:26.000] gives me that I'm always in control that it's kind of like
+[01:08:27.789] it's kind of like
+[01:08:27.799] it's kind of like figuring out the way for me and I just
+[01:08:29.829] figuring out the way for me and I just
+[01:08:29.839] figuring out the way for me and I just have to handle the tickets as we go.
+[01:08:33.309] have to handle the tickets as we go.
+[01:08:33.319] have to handle the tickets as we go. It's pretty great.
+[01:08:35.349] It's pretty great.
+[01:08:35.359] It's pretty great. You here for a skive?
+[01:08:37.110] You here for a skive?
+[01:08:37.120] You here for a skive? Good for you, fuzzy.
+[01:08:39.829] Good for you, fuzzy.
+[01:08:39.839] Good for you, fuzzy. So, I'm I would love to hear how you get
+[01:08:41.829] So, I'm I would love to hear how you get
+[01:08:41.839] So, I'm I would love to hear how you get on with way finder.
+[01:08:43.670] on with way finder.
+[01:08:43.680] on with way finder. AndAnd
+[01:08:46.080] And what this new feeling gives you
+[01:08:48.470] what this new feeling gives you
+[01:08:48.480] what this new feeling gives you becausebecause
+[01:08:49.799] because what I know is when I get to the end of
+[01:08:51.829] what I know is when I get to the end of
+[01:08:51.839] what I know is when I get to the end of a way finder spec, I end up with a spec
+[01:08:55.590] a way finder spec, I end up with a spec
+[01:08:55.600] a way finder spec, I end up with a spec or sorry, a way finder map. I end up
+[01:08:57.510] or sorry, a way finder map. I end up
+[01:08:57.520] or sorry, a way finder map. I end up with a spec that's incredibly detailed
+[01:08:59.749] with a spec that's incredibly detailed
+[01:08:59.759] with a spec that's incredibly detailed and links back to all of the decisions
+[01:09:02.030] and links back to all of the decisions
+[01:09:02.040] and links back to all of the decisions that I made and all of the decisions
+[01:09:03.990] that I made and all of the decisions
+[01:09:04.000] that I made and all of the decisions that I made are
+[01:09:06.150] that I made arethat I made are um in minute detail.
+[01:09:10.759] To spec seal is identified as high risk,
+[01:09:13.080] To spec seal is identified as high risk, I need to figure that out. I saw that.
+[01:09:15.910] I need to figure that out. I saw that.
+[01:09:15.920] I need to figure that out. I saw that. I do still use sandcastle. Yep,
+[01:09:17.349] I do still use sandcastle. Yep,
+[01:09:17.359] I do still use sandcastle. Yep, sandcastle drives all of my
+[01:09:18.430] sandcastle drives all of my
+[01:09:18.440] sandcastle drives all of my implementation.
+[01:09:22.720] I use um Opus 4.8 medium.
+[01:09:26.503] I use um Opus 4.8 medium. &gt;&gt; [snorts]
+[01:09:28.390] &gt;&gt; [snorts]
+[01:09:28.400] &gt;&gt; [snorts] &gt;&gt; With the orchestrator, we don't have to
+[01:09:29.590] &gt;&gt; With the orchestrator, we don't have to
+[01:09:29.600] &gt;&gt; With the orchestrator, we don't have to manually invoke other skills.
+[01:09:32.789] manually invoke other skills.
+[01:09:32.799] manually invoke other skills. UmUm
+[01:09:34.480] Um as soon as I get to the spec,
+[01:09:36.829] as soon as I get to the spec,
+[01:09:36.839] as soon as I get to the spec, thenthen
+[01:09:38.440] then I take this back and I turn it into
+[01:09:40.070] I take this back and I turn it into
+[01:09:40.080] I take this back and I turn it into tickets and those tickets are I can
+[01:09:42.190] tickets and those tickets are I can
+[01:09:42.200] tickets and those tickets are I can probably find a couple.
+[01:09:44.110] probably find a couple.
+[01:09:44.120] probably find a couple. Um they're usually so I've got wow,
+[01:09:47.269] Um they're usually so I've got wow,
+[01:09:47.279] Um they're usually so I've got wow, 1,000 closed tickets here.
+[01:09:51.200] UhUh where are we?
+[01:09:54.030] where are we?
+[01:09:54.040] where are we? Yeah, here we go. Here's a spec.
+[01:09:55.750] Yeah, here we go. Here's a spec.
+[01:09:55.760] Yeah, here we go. Here's a spec. Diagram content search on the diagrams
+[01:09:57.310] Diagram content search on the diagrams
+[01:09:57.320] Diagram content search on the diagrams page. This was from a wayfinder thing, I
+[01:09:59.790] page. This was from a wayfinder thing, I
+[01:09:59.800] page. This was from a wayfinder thing, I think. Yeah, there we go. So, all of
+[01:10:01.230] think. Yeah, there we go. So, all of
+[01:10:01.240] think. Yeah, there we go. So, all of these little links out, these are
+[01:10:03.350] these little links out, these are
+[01:10:03.360] these little links out, these are wayfinder grilling tickets.
+[01:10:06.070] wayfinder grilling tickets.
+[01:10:06.080] wayfinder grilling tickets. There's another wayfinder research there
+[01:10:08.550] There's another wayfinder research there
+[01:10:08.560] There's another wayfinder research there and so these are context pointers that
+[01:10:10.470] and so these are context pointers that
+[01:10:10.480] and so these are context pointers that the agent can walk down to find more
+[01:10:11.950] the agent can walk down to find more
+[01:10:11.960] the agent can walk down to find more information. Super good.
+[01:10:14.470] information. Super good.
+[01:10:14.480] information. Super good. And we can see here that it had six
+[01:10:16.790] And we can see here that it had six
+[01:10:16.800] And we can see here that it had six subtasks,subtasks,
+[01:10:18.400] subtasks, each of which are steps that it's going
+[01:10:20.150] each of which are steps that it's going
+[01:10:20.160] each of which are steps that it's going to take. And then
+[01:10:22.630] to take. And then
+[01:10:22.640] to take. And then what it did was it produced this PR.
+[01:10:26.750] what it did was it produced this PR.
+[01:10:26.760] what it did was it produced this PR. And this PR is about 5,000 lines of
+[01:10:29.670] And this PR is about 5,000 lines of
+[01:10:29.680] And this PR is about 5,000 lines of code.
+[01:10:31.390] code.
+[01:10:31.400] code. Um let's see if I can find the
+[01:10:34.150] Um let's see if I can find the
+[01:10:34.160] Um let's see if I can find the GitHub actions that worked on it. Can I
+[01:10:36.510] GitHub actions that worked on it. Can I
+[01:10:36.520] GitHub actions that worked on it. Can I do that? I'm not sure if I can.
+[01:10:38.470] do that? I'm not sure if I can.
+[01:10:38.480] do that? I'm not sure if I can. But essentially, a GitHub action just
+[01:10:39.790] But essentially, a GitHub action just
+[01:10:39.800] But essentially, a GitHub action just worked through each ticket in a separate
+[01:10:41.590] worked through each ticket in a separate
+[01:10:41.600] worked through each ticket in a separate session and bam, produced all this code.
+[01:10:49.320] Which OS am I on? I'm on WSL.
+[01:10:55.720] And that's it, folks.
+[01:10:57.120] And that's it, folks. UmUm
+[01:10:58.200] Um hopefully this gave you a sense for what
+[01:10:59.830] hopefully this gave you a sense for what
+[01:10:59.840] hopefully this gave you a sense for what you can do with Wayfinder and the
+[01:11:01.550] you can do with Wayfinder and the
+[01:11:01.560] you can do with Wayfinder and the process that you walk through it. I
+[01:11:03.430] process that you walk through it. I
+[01:11:03.440] process that you walk through it. I think the most confusing thing is the
+[01:11:04.750] think the most confusing thing is the
+[01:11:04.760] think the most confusing thing is the idea that you use Wayfinder for
+[01:11:06.630] idea that you use Wayfinder for
+[01:11:06.640] idea that you use Wayfinder for everything. You don't use any of the
+[01:11:07.830] everything. You don't use any of the
+[01:11:07.840] everything. You don't use any of the sub-skills.
+[01:11:09.390] sub-skills.
+[01:11:09.400] sub-skills. AndAndAnd yeah, we're good to go.
+[01:11:14.480] You can absolutely use it to use linear
+[01:11:16.120] You can absolutely use it to use linear instead. You can do To Doist. You can do
+[01:11:18.470] instead. You can do To Doist. You can do
+[01:11:18.480] instead. You can do To Doist. You can do Jira, whatever you want.
+[01:11:24.760] I'm going to slow down, pal.
+[01:11:38.320] Declarative partial updates.
+[01:11:41.440] Declarative partial updates. Um I don't have a schedule for going
+[01:11:42.950] Um I don't have a schedule for going
+[01:11:42.960] Um I don't have a schedule for going live. Um I try not to have any schedule
+[01:11:45.390] live. Um I try not to have any schedule
+[01:11:45.400] live. Um I try not to have any schedule forfor
+[01:11:46.200] for content creation because I hate the
+[01:11:47.910] content creation because I hate the
+[01:11:47.920] content creation because I hate the feeling of being on a treadmill. What I
+[01:11:49.590] feeling of being on a treadmill. What I
+[01:11:49.600] feeling of being on a treadmill. What I like the feeling of doing is producing
+[01:11:51.270] like the feeling of doing is producing
+[01:11:51.280] like the feeling of doing is producing courses, producing good stuff, working
+[01:11:53.710] courses, producing good stuff, working
+[01:11:53.720] courses, producing good stuff, working on the skills like the
+[01:11:55.350] on the skills like the
+[01:11:55.360] on the skills like the my open source work always feels like
+[01:11:57.030] my open source work always feels like
+[01:11:57.040] my open source work always feels like the highest priority thing to me because
+[01:11:58.910] the highest priority thing to me because
+[01:11:58.920] the highest priority thing to me because everything else flows from there. If I'm
+[01:12:00.630] everything else flows from there. If I'm
+[01:12:00.640] everything else flows from there. If I'm not shipping stuff, then I don't have
+[01:12:02.150] not shipping stuff, then I don't have
+[01:12:02.160] not shipping stuff, then I don't have anything to create content about. So,
+[01:12:04.390] anything to create content about. So,
+[01:12:04.400] anything to create content about. So, that's the idea.
+[01:12:07.240] There is an open ticket to handle
+[01:12:08.440] There is an open ticket to handle multi-repo setups on Sandcastle, and I'm
+[01:12:10.790] multi-repo setups on Sandcastle, and I'm
+[01:12:10.800] multi-repo setups on Sandcastle, and I'm starting to feel the urge myself.
+[01:12:13.870] starting to feel the urge myself.
+[01:12:13.880] starting to feel the urge myself. UmUm
+[01:12:15.280] Um but yeah, I haven't implemented it yet.
+[01:12:17.430] but yeah, I haven't implemented it yet.
+[01:12:17.440] but yeah, I haven't implemented it yet. Right, I better go and fix my son's car.
+[01:12:19.470] Right, I better go and fix my son's car.
+[01:12:19.480] Right, I better go and fix my son's car. UmUm
+[01:12:21.120] Um thanks so much for joining.
+[01:12:24.400] Oh, yeah. Let me Let me just finish off.
+[01:12:26.120] Oh, yeah. Let me Let me just finish off. So,So,
+[01:12:27.240] So, what I would do after this is I would
+[01:12:29.990] what I would do after this is I would
+[01:12:30.000] what I would do after this is I would try to get the Wayfinder stuff, um
+[01:12:33.270] try to get the Wayfinder stuff, um
+[01:12:33.280] try to get the Wayfinder stuff, um get the map to completion, so complete
+[01:12:34.910] get the map to completion, so complete
+[01:12:34.920] get the map to completion, so complete all the tickets.
+[01:12:36.590] all the tickets.
+[01:12:36.600] all the tickets. Once that's done,Once that's done,
+[01:12:38.640] Once that's done, then I wouldthen I would
+[01:12:40.160] then I would turn it into a spec with to spec,
+[01:12:43.030] turn it into a spec with to spec,
+[01:12:43.040] turn it into a spec with to spec, and then close the Wayfinder map cuz I
+[01:12:45.150] and then close the Wayfinder map cuz I
+[01:12:45.160] and then close the Wayfinder map cuz I don't need it anymore.
+[01:12:46.750] don't need it anymore.
+[01:12:46.760] don't need it anymore. And thenAnd then
+[01:12:48.880] And then to tickets, so I turn that into
+[01:12:50.430] to tickets, so I turn that into
+[01:12:50.440] to tickets, so I turn that into sub-tasks. Then I would implement each
+[01:12:52.990] sub-tasks. Then I would implement each
+[01:12:53.000] sub-tasks. Then I would implement each sub task in a separate context window,
+[01:12:54.790] sub task in a separate context window,
+[01:12:54.800] sub task in a separate context window, usually with an AFK agent cuz I'm not
+[01:12:56.710] usually with an AFK agent cuz I'm not
+[01:12:56.720] usually with an AFK agent cuz I'm not needed for that, and then I do a code
+[01:12:58.630] needed for that, and then I do a code
+[01:12:58.640] needed for that, and then I do a code review on the whole diff and um
+[01:13:02.390] review on the whole diff and um
+[01:13:02.400] review on the whole diff and um fix any problems, and then it goes to
+[01:13:04.150] fix any problems, and then it goes to
+[01:13:04.160] fix any problems, and then it goes to human review.
+[01:13:06.110] human review.
+[01:13:06.120] human review. There we go.
+[01:13:07.710] There we go.
+[01:13:07.720] There we go. Uh if you have any questions about this,
+[01:13:09.070] Uh if you have any questions about this,
+[01:13:09.080] Uh if you have any questions about this, by the way, then you can use my ask Matt
+[01:13:10.830] by the way, then you can use my ask Matt
+[01:13:10.840] by the way, then you can use my ask Matt skill. That's the place to go for
+[01:13:13.070] skill. That's the place to go for
+[01:13:13.080] skill. That's the place to go for feedback. And if you want to
+[01:13:15.030] feedback. And if you want to
+[01:13:15.040] feedback. And if you want to keep up to date with this stuff, then
+[01:13:16.070] keep up to date with this stuff, then
+[01:13:16.080] keep up to date with this stuff, then you should go to AI Hero
+[01:13:17.750] you should go to AI Hero
+[01:13:17.760] you should go to AI Hero uh subscribe to my skills.
+[01:13:20.270] uh subscribe to my skills.
+[01:13:20.280] uh subscribe to my skills. Yeah, you just give the map ticket to to
+[01:13:22.110] Yeah, you just give the map ticket to to
+[01:13:22.120] Yeah, you just give the map ticket to to spec. You fresh session, just get it to
+[01:13:24.390] spec. You fresh session, just get it to
+[01:13:24.400] spec. You fresh session, just get it to explore the the map and turn into a big
+[01:13:26.670] explore the the map and turn into a big
+[01:13:26.680] explore the the map and turn into a big spec.
+[01:13:32.480] Um uh so yeah, I just one more. So, no,
+[01:13:35.240] Um uh so yeah, I just one more. So, no, these There's a difference between the
+[01:13:37.110] these There's a difference between the
+[01:13:37.120] these There's a difference between the decision tickets that Wayfinder makes
+[01:13:40.230] decision tickets that Wayfinder makes
+[01:13:40.240] decision tickets that Wayfinder makes and the implementation tickets that to
+[01:13:42.630] and the implementation tickets that to
+[01:13:42.640] and the implementation tickets that to tickets creates. Cuz the decision
+[01:13:44.510] tickets creates. Cuz the decision
+[01:13:44.520] tickets creates. Cuz the decision tickets can only be resolved by
+[01:13:47.030] tickets can only be resolved by
+[01:13:47.040] tickets can only be resolved by uh resolving the decision, by making the
+[01:13:48.990] uh resolving the decision, by making the
+[01:13:49.000] uh resolving the decision, by making the decision. Whereas the implementation
+[01:13:50.870] decision. Whereas the implementation
+[01:13:50.880] decision. Whereas the implementation tickets are when those decisions are
+[01:13:52.830] tickets are when those decisions are
+[01:13:52.840] tickets are when those decisions are reified in the code or represented in
+[01:13:55.430] reified in the code or represented in
+[01:13:55.440] reified in the code or represented in the code.
+[01:14:05.920] Love to see the rest of the flow. Yeah.
+[01:14:07.880] Love to see the rest of the flow. Yeah. Yeah, uhYeah, uh
+[01:14:09.120] Yeah, uh you often have to ask if you're done yet
+[01:14:10.670] you often have to ask if you're done yet
+[01:14:10.680] you often have to ask if you're done yet or not. So,
+[01:14:11.950] or not. So,
+[01:14:11.960] or not. So, that is annoying, and I agree. What I do
+[01:14:14.750] that is annoying, and I agree. What I do
+[01:14:14.760] that is annoying, and I agree. What I do is I generally just like watch the
+[01:14:18.750] is I generally just like watch the
+[01:14:18.760] is I generally just like watch the um I just watch the map as I was doing
+[01:14:21.030] um I just watch the map as I was doing
+[01:14:21.040] um I just watch the map as I was doing here, and I just look at the sub issues,
+[01:14:23.030] here, and I just look at the sub issues,
+[01:14:23.040] here, and I just look at the sub issues, and I can just see visually what's
+[01:14:24.630] and I can just see visually what's
+[01:14:24.640] and I can just see visually what's needed and what isn't.
+[01:14:30.440] For back end, yes, you can use it.
+[01:14:32.480] For back end, yes, you can use it. For front end, you can use it. For
+[01:14:34.190] For front end, you can use it. For
+[01:14:34.200] For front end, you can use it. For middle end, you can use it.

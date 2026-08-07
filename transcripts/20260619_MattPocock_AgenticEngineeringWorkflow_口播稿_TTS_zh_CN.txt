@@ -1,0 +1,23 @@
+本场 David Ondrej 的 podcast 邀请 Matt Pocock 完整拆解他的 agentic engineering workflow。Matt 是英国知名开发者教育者、AI Hero 课程平台创办人,也是开源 Sandcastle 多代理沙盒框架的作者。本场对谈的核心张力在于:当 AI 社群普遍追逐新模型时,Matt 明确主张开发者真正的杠杆不在 model,而在 harness——也就是 prompt、skill 设计、codebase 结构等开发者能完全掌控的变因。这个观点与 OpenAI Ryan Lopopolo 同周提出的「harness engineering」主张相互呼应,但 Matt 走得更远:他不只把 harness 视为工程方法论,更把它升级为程序化知识与技能的容器。
+
+开场 Matt 即点出核心比喻:model 是 Formula 1 的引擎,harness 是底盘与空气动力学。所有人都在谈论引擎,但开发者真正能掌控的是整套底盘。Matt 进一步借用 John Ousterhout 在《A Philosophy of Software Design》提出的战术 vs 战略编程区分。战术编程是写程式、除错、commit 等日常动作,战略编程是设计架构、规划 velocity、思考模组介面的长期思维。Matt 认为 AI 已经完全吃掉战术编程——比人类便宜、又快,所以人类必须专注战略。
+
+从战略思维出发,Matt 提出一个关键观察:你的 skills 是 AI 的天花板。AI 对 senior 工程师的放大效果远大于 junior——业界 CTO 普遍观察到 senior 用 AI 可以 10 倍速,junior 只能一点点 boost。原因是 senior 知道如何 overseer codebase、如何告诉 AI 该怎么做。但 Matt 也提出重要警告:不该急著把思考 delegate 给 AI,反而要把更多 strategic thinking 拉回自己脑袋。这是一个 senior dev 的黄金年代。
+
+中段 Matt 即场 demo 他新出的 `/teach` skill。设定是 David 自称 vibe coder,只会基本 CLI 与读 code,想学系统设计。`/teach` skill 第一步是 mission 对齐:teacher 问你想做什么、为什么、什么算成功,把教学框架从「塞知识进脑袋」转为「在世界里 orient 你」。第二步是建立最高杠杆起点——对 vibe coder 来说,不是更多语法,而是 git、读错、除错、测试、软体怎么 ship。第三步开始产出 reference cheat sheet 与第一课「Get your project's undo button」(git 入门),并透过 quiz 强化 storage strength,推荐读 Pro Git 原文,并更新 learning record 跨 session 接续。
+
+从 demo 延伸到 skill 分类哲学,Matt 把 skill 拆成两类。Procedure 是人类主动 invoke 的 skill——例如他知名的 `grill-me` skill 把模型变成 adversarial interviewer,在 plan 阶段访谈使用者;又如 `prd` skill 产出 PRD、`issues` skill 把 PRD 拆成 issue。Ability 则是 model 自主 invoke 的 skill——例如「coding standards」当 model 写 React 时自动 pull in 该团队的规范。核心 tradeoff 在于每个 ability 都会把 description 泄漏进 context window,一百个 ability 等于一百个 description 永远占住 context。解法是 `disable_model_invocation: true`,让 skill 只能被使用者呼叫。Matt 个人偏好 procedure,因为他要保留 driver 座位,不想把思考 delegate 给模型。
+
+Matt 也揭露他的工作流设定:本机使用 Claude Code Opus 4.8 medium effort,已稳定、不追新 model;AFK 工作则透过他自己开发的 Sandcastle 把 agent 跑在 Docker 或 Podman sandbox 里,避免 agent 乱删 home directory 或 exfiltrate 环境变数;并可接 Vercel Sandboxes 远端执行,搭配 GitHub Actions 自动跑 PR review agent,做 type check 与 lint。这与上一支 AWS Show & Tell demo 的 AgentCore SDLC pipeline 主题呼应,但 Matt 走的是 GitHub Actions 而非 Step Functions。
+
+谈到当前 AI 社群热潮,Matt 对两个主流叙事提出冷却意见。第一个是 Bitter Lesson 的误用。Rich Sutton 的原意是 ML 研究中 raw compute 终究胜过特化,但社群误用为「等下一个 model 就好」。Matt 认为这是放弃优化的借口,正确立场是 50/50——model 与 harness 都重要,但开发者不该停在等待 AGI。
+
+第二个是 Ralph loop 热潮。Geoffrey Huntley 提出的 Ralph pattern 是 while-loop 不断跑同一个 prompt 直到完成。Matt 反对这个简化模型,主张真正的开发是 queue 而不是 loop——PM 把任务放进 backlog、开发者从 queue 取任务做、PR 合并就离开 queue。多个 agent 可平行取 queue 任务,GitHub label 就是触发器。David 用中世纪国王比喻呼应:国王派 minister 到边疆,不会让他跑无限 loop,而是建立回报机制,让问题回到中央。
+
+Matt 也提出 DX vs AX 框架,回答「该 hire senior 还是 AI believer junior」之争。DX 是 Developer Experience,human readable 的 codebase、好的抽象、清楚的命名。AX 是 Agent Experience,model 跑得顺的 codebase——同样的命名、好的 type system、well-scoped tasks。Senior 强在 DX,但好的 DX 通常也带来好的 AX;junior AI believer 强在 AX,但若 DX 太差 AI 也跑不动。结论是 experimental mindset 加上 AX 直觉才是 AI 时代最有价值的能力。
+
+从商业角度看,Matt 认为做生意的方式没变——仍然要去找客户、听需求、build prototype。AI 没给你找出「人需要什么」的优势,但给你实作的 10x 杠杆。开发者应问 AI「这个功能可以怎么拿掉」,而非「可以加什么」。
+
+收尾呼应开场的张力。整场 podcast 最鲜明的口号是 Matt 开幕的宣言——「Everyone's obsessed with the model. Everyone's obsessed with the engine of the Formula 1 car whereas in fact the engine is really only a part of the whole system」。在 AI 工具大爆发的 2026 年中,Matt 的核心主张反而是最古典的:你的 skills 是 AI 的天花板,harness 是开发者真正能掌控的战场,把个人的知识与经验打包成 reusable skill bundle,并用 queue 而非 loop 思维管理 AFK agent,才是在 AI 时代拉开差距的关键。
+
+Matt 在结尾推荐两个资源:`github.com/mattpocock/skills`(`npx skills add mattpocock/skills` 一键安装 teach、grill-me、prd、issues 等 procedures),以及他自己的 AI Hero 课程平台 `aihero.dev/skills` 取得最新 skill 与教学更新。

@@ -1,0 +1,19 @@
+Harvard CS224 高阶演算法第五堂课是 hashing 主题的最后一堂，涵盖 cuckoo hashing 的严格分析与 power of two choices 的最大负载上限。整堂课的核心讯息是：当你使用两个 hash 函数而非一个时，会带来指数级的改善。
+
+Section 1｜开场行政事项
+课程开头，教授先为你处理一些行政事项。教授提到第一次作业最后忘了加一个简单的题目，记录学生花多少时间做作业，未来会设 Piazza poll 收集这些资讯，从第二次作业开始会固定加在最后。今天的 scribe 是 Albert Wu。教授公告今天的计划：完成 cuckoo hashing 的分析证明、讲解 power of two choices、宣布下周进入 Fibonacci heaps 主题。
+
+Section 2｜Cuckoo Hashing 严格分析
+Cuckoo hashing 的预期插入时间是常数，教授为你展示，证明依赖一个关键机率上界：cuckoo graph 包含 cycle 的机率最多二分之一。Cuckoo graph 是 m 个顶点与 n 条边的多重图，每个元素对应一条边连接它的两个 hash 位置。一旦出现 cycle，插入过程可能无限循环，所以需要 rebuild 机制。证明技巧是对特定长度的 path 取存在的机率，再对所有可能的顶点集合与边集合做 union bound。利用 moment method 把高次动差的期望算出来，搭配 Chernoff 风格的衰减估计。因为 cycle-free 机率至少二分之一，rebuild 期望两次内就会成功，把整个 amortized cost 维持在常数。
+
+Section 3｜Power of Two Choices 直觉
+Power of two choices 的设定，教授为你展示是用两个 hash 函数把每个元素放到当前负载较小的桶。直觉论证从 B_i 开始：B_i 是至少有 i 个元素的桶数。某个元素高度达到 i 加一的机率最多是 B_i 除以 n 的平方，因为两个桶都要有至少 i 个元素。条件期望下 B_{i+1} 最多是 B_i 平方除以 n。当 B_10 除以 n 最多二分之一时，B_{10 加 j} 除以 n 最多是二分之一之二进位 j 次方。当二进位 j 次方大于 n 时这个值变成零，所以 j 约等于对数对数 n。因此最大负载是对数对数 n 这个量级。
+
+Section 4｜Power of Two Choices 严格证明
+教授指出直觉论证无法直接变成严格证明，因为实际的随机变数并不总是服从期望值。教授定义 α_i 等于 e 乘以 α_{i-1} 平方除以 n 作为递回上界，比直觉论证多一个 e 的 slack。事件 E_i 是 B_i 不超过 α_i。基本情况 E_6 成立机率是一，因为 n 个元素最多 n 除以 6 个桶有六个以上元素。归纳步骤是 claim 一：条件在 E_i 成立下 B_{i+1} 超过 α_{i+1} 的机率最多是 Binomial α_i 平方除以 n 平方超过 α_{i+1} 的机率，可用 Chernoff bound。最后对所有层级做 union bound，得到所有 E_i 同时成立的 high probability。教授承认有 dependency issue 需要在 notes 中修正。
+
+Section 5｜下周预告：Amortized Analysis
+最后教授为你公告下周进入 amortized analysis 主题，不再有 hashing。会讲解 binomial heaps、Fibonacci heaps、splay trees 等资料结构。Fibonacci heaps 对 Dijkstra 演算法特别重要：Dijkstra 需要 m 次插入、m 次 decrease key、n 次 delete min。Binary heap 所有操作对数 n 时间，整体是 m 对数 n。Fibonacci heaps 达到插入与 decrease key 常数时间、delete min 对数 n 时间，整体是 m 加 n 对数 n，在 dense graph 中 m 远大于 n 时是显著加速。教授询问谁看过 Fibonacci heaps，多数人有概念；谁看过严格分析则寥寥无几，这显示 amortized analysis 是资料结构进阶设计的关键工具。
+
+Section 6｜本周结论
+这堂课教授为你展示了 hashing 主题的两个收尾主题：cuckoo hashing 用两个 hash 函数加 kick-out 机制达到预期常数插入时间，power of two choices 用两个 hash 函数选较小负载达到最大负载对数对数 n。共同主题是两个 hash 函数比一个 hash 函数带来指数级改善，这个观察将延伸到后续资料结构设计中。

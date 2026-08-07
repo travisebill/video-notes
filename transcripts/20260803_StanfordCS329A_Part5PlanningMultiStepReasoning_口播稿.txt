@@ -1,0 +1,15 @@
+本集 Stanford CS329A 進入 Part 5，主題 Planning 與 Multi-Step Reasoning。本課把焦點從單題推進到多步場景：模型必須一邊 reasoning、一邊 acting、一邊搜尋軌跡。三篇 paper LATS、SPRINT、SWIRL 構成 inference 到訓練結構再到訓練目標的貫穿脈絡。
+
+LATS 是 ICML 2024 的 Language Agent Tree Search，目標把 MCTS 整套六階段機制搬進 LLM agent。它跟 Part 3 的 Math-Shepherd 形成對比：後者 scoring reasoning choices，LATS scoring action outcomes。LATS 借鏡 ReAct 的 reasoning-acting-reflection 三原語，把環境反饋 incorporate 進搜尋，並把 reflection 做成標準步驟。
+
+LATS 的六階段機制：Selection 用 UCT 平衡 exploitation 與 exploration，Expansion 在 leaf 產生 K 個 action，Simulation 從 child rollout 拿 return，Evaluation 用 LLM-as-Judge 給初始 value，Back-propagation 沿路徑更新 V(s)，Reflection 讓模型總結原因回灌 prompt。在 HotpotQA 與 WebShop 上展現 log-linear scaling，講者點出 LATS 假設 action 可逆，對金融交易等不可逆 action 不適用。
+
+SPRINT 是 2025 年的新 paper，觀察到 reasoning model 思考越來越長。DeepSeek R1 的 response length 從一兩千 tokens 增加到近一萬 tokens，accuracy 確實上升。但很多步驟互相獨立可平行執行，傳統 sequential decoding 把獨立步驟串成一行，浪費了大量 wall-clock time。
+
+SPRINT 的做法：用 GPT-4o 對 DeepSeek R1 的 reasoning trace 做 annotation，把 step 切成 plan 與 execution、標依賴關係形成 DAG、把同層獨立 step 包成同一批、最後 supervised fine-tune DeepSeek R1 Distill 7B。實驗顯示 sequential tokens 減少約四成，accuracy 上升約三點五個百分點，並在 out-of-domain 設定上 transferable generalization。
+
+SWIRL 是 COLM 2025 的 preview，要把 Part 3 的 process-level verifier 思想延伸到多步與工具使用。Pipeline 分三階段：用 LLM iteratively prompt 自己產生 multi-step trajectories；請 LLM 對每個 step 給 reward，judge 只看 query 不看 tool output；用 process reward 跑 multi-step RL。
+
+SWIRL 的反直覺發現：process-only 過濾效果比 outcome-only 更好，因為後者只是在模仿模型已經會的東西。Generalization 圖顯示，在 HotpotQA 訓練 GSM8K 測試 accuracy 從 65 跳到 75.1。這證明 SWIRL 學到的是如何思考與何時 call tool 的 meta-skill。
+
+總結而言，本課呼應 Part 2 與 Part 3，把 process-level supervision 延伸到 multi-step 與 tool use setting。講者最後留下 SWIRL 結合 LATS tree search 的開放性問題，將是 Part 6 可能探討的方向。

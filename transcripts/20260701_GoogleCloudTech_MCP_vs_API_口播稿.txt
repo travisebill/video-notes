@@ -1,0 +1,19 @@
+各位，今天聊一部 Google Cloud Tech 的 12 分鐘短片——MCP 跟 API 到底差在哪、為什麼整個業界突然都在談 MCP 這個新標準。
+
+過去十幾年，API 是軟體對軟體的萬用接頭。你定 endpoint、送 request、回 response，又乾淨又穩定，對傳統程式堪稱完美。但 AI agent 不是這樣工作——它可能同時打 10 個 endpoint、自己串結果、讀非結構化資料、還會追問 context。API 假設兩邊都知道彼此要什麼；模型不是。
+
+影片有個好比喻：API 像上了鎖的櫃子。你得知道開哪個抽屜、用什麼形狀的鑰匙。每次新工具都要重寫 prompt 教模型怎麼用，hardcode 又累又沒彈性。
+
+MCP 把這個翻過來：給模型一份即時、機器可讀的地圖，用 JSON schema 描述每個工具能做什麼、要什麼 input、回什麼 output。模型自己看、自己理解、自己選。邏輯從 app code 搬到 model 的 reasoning layer，這是根本性的轉移。
+
+實戰差距更明顯。假設要建一個 AI agent 自動處理客服票——接 Gmail、Notion、Jira。傳統 API 要寫三套客製整合，每個都要處理認證、分頁、錯誤、重寫 prompt，整個禮拜寫完也只能讓模型會三個工具。MCP 的世界裡，每個服務 expose 一個相容介面，模型 plug-in 就能用，跨服務的串接、判斷什麼時候打哪個，全部交給 reasoning layer。就像 HTTP 統一網際網路，MCP 想統一 AI 環境——100 個客製整合換成 1 個 MCP 介面，這就是所謂 AI 系統的 plug-and-play 層。
+
+但有個關鍵辨識一定要講清楚：**MCP 不取代你的 API**。MCP server 跑在你服務旁邊，把現有 API 翻譯成 model 看得懂的格式——它取代的是 model 跟 API 中間的 middleware。原本 API 的 client 是另一支程式或人；MCP 的 client 是模型本身。這差異看似細微，實際上決定 integration 設計的整套思維，標誌著我們從為人與程式設計走向為模型設計的轉折——這是更大的典範轉移。
+
+當然 MCP 還很新，三個挑戰擺在前面：
+
+第一是**採用率**——要 ecosystem 同意同一個標準，否則就是又一個每家公司自搞一套 plugin 格式的死局。第二是**安全**——模型能直接打工具，要明確的 permission、scope、auth、rate limit，不能讓模型誤刪檔、誤寄信、誤改 DB。spec 已經定義 capability、scope、authentication，但實戰 guardrail 還在演進。第三是**開發者心態**——從 endpoint/route 的 API 思維換成 capability/context 的 MCP 思維。影片自己吐槽：most of us grew up in an API world，換腦袋不容易，但 worth learning early。
+
+影片最後的類比很到位——HTTP 之前每個服務自搞 protocol，FTP、Gopher、Telnet，之後什麼都互通。MCP 就是 AI agent 時代的 HTTP。以後只要有 1 個 MCP server，Gemini、Claude、GPT 任何合規模型都能馬上用——models, not just humans, become first-class users of software。
+
+一句話總結整部影片：MCP 不取代 API，它是模型能 reasoning 的中介層，讓 API 從死的路由（static routes）變成活的介面（living interfaces）。

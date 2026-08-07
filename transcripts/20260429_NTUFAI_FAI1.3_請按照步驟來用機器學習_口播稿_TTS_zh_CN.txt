@@ -1,0 +1,17 @@
+台大资讯工程学系 2026 年春季「人工智慧导论」FAI 1.3「请按照步骤来用机器学习」，由林轩田教授主讲，约 25 分钟。本讲的核心任务是把 ML 整理成一套可操作的标准化 Recipe。
+
+从工程实践角度，林轩田教授用「申请工作」这个生活化范例贯穿全讲——履历（features）转成公司好坏（label）找出 pattern 用 ML 学习。给定申请者的履历，判断是否适合公司；履历包含年纪、性别、实习次数、project、主题、GPA 等 6 维特征，每个申请者是 6 维空间中的一个点。Input 是履历 feature vector，Output 是适合或不适合的 binary 标签，目标是找到一个 function 把输入对应到输出，假设这样的 pattern 存在。
+
+从 Recipe 步骤 0 角度，林轩田教授强调这个步骤最关键：判断任务适不适合用 ML。三个前提必须都满足：第一，必须有 Pattern 可学——如果输入与输出完全 random，就不该用 ML。第二，Pattern 无法或很难用 Rule 写——餐厅评价分类就是经典例子，规则加再多都涵盖不了所有例外。第三，要有 Data——没有资料 ML 无用武之地。努力与中乐透没有 pattern，不该用 ML；实习次数大于等于 2 就 accept，可以直接写 Rule 也不需要 ML。
+
+从 Recipe 步骤 1 角度，Data 是 (x, y) 的配对，资料的 quality 与 quantity 决定 ML 的上限。林轩田教授引用 2010 KDD Cup 为例：当年题目是给定学生特征加考题特征，预测学生能不能答对题目，当年台大团队拿世界冠军。训练完的 model 会在 unseen test data 上评估 generalization。
+
+从 Recipe 步骤 2 角度，Hypotheses Set 的选择就是 Model 的选择。Hypothesis Set H 是所有可能的候选函数集合——例如「只要 GPA 大于 4.0 就 accept」、「只要有 NLP 相关 project 就 accept」、「H1 AND H2」等都是不同 Hypothesis。现实中 H 非常大，几乎无限多。Linear Model 的 H 是所有 hyperplane 的集合，这也是选择 Linear Model 等于把候选函数限制在直线 / hyperplane 集合中。Linear Model 简单但有局限性——XOR 不能用单一 Perception 分。多层 Perception（Multi-Layer Perceptron）可以突破：每一层都是 Linear，多层叠起来可以表示 XOR——这也是 Deep Learning 的理论基础。
+
+从 Recipe 步骤 3 角度，Error Measure 量化 g 与 f 的差距。Pointwise Error 对每个点算 error 加起来平均，In-Sample Error 是在 training data 上的 error，Out-of-Sample Error 是在 unseen data 上的 error。我们能 minimize 的是 E_in，因为看不到 E_out。分类任务常用 0/1 Error，回归任务常用 Squared Error，Logistic 用 Cross-Entropy。林轩田教授用「前 2 年考古题读书、第 3 年考古题测试」这个类比，让学生直观理解 E_in 跟 E_out 的差异。
+
+从 Recipe 步骤 4-5 角度，Training 是给定 D、H、Error Measure，用 algorithm 从 H 中找 g minimize E_in；Testing 是给 unseen D' 用 g 预测算 E_out。最终目标不是 E_in 最小化而是 E_out 最小化——也就是 Generalization。Linear Model 在高维空间的限制是某些 distribution 切不开，例如 XOR。这就是为什么需要 Deep Learning——很多层简单的 Linear 叠起来可以学到非常复杂的 function。
+
+从实务角度，这套 Recipe 是后续 FAI 1.4-1.6 所有具体模型的标准操作框架。FAI 1.4 会进入 Learning Algorithm（PLA、Gradient Descent）；FAI 1.5-1.6 会把 Recipe 套用到 Linear Regression 与 Logistic Regression。这也是为什么业界 ML 专案永远从 Recipe 步骤 0 开始——先想清楚 ML 适不适合，比写 model.fit() 更重要。
+
+一句话总结：FAI 1.3 把 ML 从「神奇的黑盒子」变成「可操作的工程流程」——五大步骤（判断、Data、Hypotheses、Error、Learning）每一步都有明确的设计决策，最终目标是 E_out 最小化而非 E_in 最小化——这也是整个 Machine Learning 章节的理论骨架。

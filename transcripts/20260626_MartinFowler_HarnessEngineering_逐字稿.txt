@@ -1,0 +1,104 @@
+> 來源：doggy8088 GitHub Gist 31ef72afb7945efba79c6a2e0b3b82e1
+> 原文網址：https://gist.github.com/doggy8088/31ef72afb7945efba79c6a2e0b3b82e1
+> 原文出處：https://martinfowler.com/articles/harness-engineering.html（Martin Fowler 撰文）
+> 中文摘要彙整：doggy8088（Will 保哥）
+
+這篇文章討論的是：若我們希望 Coding Agent 能在較少人工監督下工作，就需要設計一套外部控制系統，讓我們更有信心相信它的輸出。
+
+作者將 Harness 理解為「模型以外，讓 Agent 能運作與被引導的一切」。在 Coding Agent 的情境中，模型本身不是全部；真正影響成果的，還包括提示詞、規則、文件、工具、檢查機制、測試、靜態分析、審查流程與回饋迴圈。
+
+文章的核心觀點是：
+
+好的 Harness 有兩個目的：
+- 提高 Agent 第一次就做對的機率。
+- 在結果交到人類眼前之前，盡可能讓 Agent 透過回饋自行修正問題。
+
+這樣可以降低人工審查負擔、提高系統品質，也能減少浪費的 Token。
+
+作者把 Harness 分成兩類控制方式：
+
+Feedforward 是事前引導，也就是在 Agent 行動之前，先給它規則、文件、約束、範例與操作指南。它的目標是提高 Agent 一開始就產出正確結果的機率。
+
+Feedback 是事後感測，也就是在 Agent 行動之後，用測試、Lint、型別檢查、靜態分析、審查 Agent、瀏覽器結果、Log 等方式發現問題，並讓 Agent 根據這些訊號修正。
+
+只有 Feedback，Agent 可能一直重複犯同樣的錯。
+只有 Feedforward，Agent 可能有很多規則，卻不知道這些規則是否真的有效。
+好的 Harness 需要兩者搭配。
+
+作者進一步把 Guides 與 Sensors 分成兩種執行型態：
+
+Computational 是確定性、快速、可重複的檢查與工具，例如測試、Lint、型別檢查、靜態分析、架構規則檢查。這類工具通常便宜、可靠、適合在每次變更時執行。
+
+Inferential 是語意判斷型的工具，例如 AI Code Review、LLM as Judge、語意分析等。這類工具比較昂貴、比較慢，也比較不確定，但可以處理傳統工具難以判斷的問題，例如設計是否過度複雜、測試是否語意重複、解法是否符合需求脈絡。
+
+作者認為，Computational Sensors 應該盡量靠近開發流程前段，因為它們便宜又可靠；Inferential Sensors 則應該選擇性使用在需要語意判斷的地方。
+
+人類開發者不是只負責檢查 Agent 的輸出，而是要觀察 Agent 反覆出現的錯誤，然後改善 Harness。
+
+如果某個問題重複發生，就應該把它轉化成：
+- 更好的規則
+- 更好的 Skill
+- 更好的文件
+- 更好的 Linter
+- 更好的測試
+- 更好的審查流程
+- 更好的自動修正迴圈
+
+也就是說，人類的工作逐漸從「每次手動修正結果」轉向「改善讓 Agent 不再犯同樣錯的環境」。
+
+作者也指出，AI 本身可以協助建立 Harness，例如幫忙產生結構測試、從錯誤模式整理規則、建立自訂 Linter、從既有程式碼歸納 How-to 文件。
+
+文章借用持續整合與持續交付的思維：越早發現問題，修正成本越低。
+
+因此，Harness 的感測器也應該依照成本、速度與重要性分布在不同階段：
+
+開發前或提交前，適合執行快速檢查，例如 Linter、快速測試、基本 Code Review Agent。
+
+整合後或 Pipeline 中，適合執行比較昂貴的檢查，例如 Mutation Testing、完整架構審查、較深入的 AI Review。
+
+除此之外，也應該有持續性的健康感測器，例如：
+- 偵測死碼
+- 分析測試覆蓋品質
+- 掃描依賴套件風險
+- 監控 SLO 退化
+- 偵測 Log 異常
+- 持續抽樣檢查回應品質
+
+作者提出三種 Harness 類型。
+
+第一種是 Maintainability Harness，也就是維護性 Harness。這是目前最容易建構的一類，因為已有大量成熟工具可以使用。它處理的問題包括重複程式碼、圈複雜度、測試覆蓋不足、架構漂移、風格違規等。
+
+第二種是 Architecture Fitness Harness，也就是架構適配度 Harness。它用來定義與檢查應用程式的架構特性，例如效能要求、可觀測性標準、Logging 規範、模組邊界、依賴方向等。
+
+第三種是 Behaviour Harness，也就是行為 Harness。這是最困難的一類，因為它要回答「系統功能行為是否真的符合需求」。目前常見做法是用規格作為 Feedforward，再用 AI 產生的測試、覆蓋率、Mutation Testing、人工測試作為 Feedback。但作者認為，單靠 AI 產生測試還不夠可靠，這仍是尚未完全解決的問題。
+
+作者指出，不同程式碼庫的 Harnessability 不同。
+
+例如強型別語言天然提供型別檢查作為 Sensor；清楚的模組邊界讓架構規則更容易定義；成熟框架能抽象掉許多細節，降低 Agent 犯錯機率。
+
+相反地，Legacy 系統、技術債高、結構混亂、缺乏測試與邊界的程式碼庫，通常最需要 Harness，但也最難建立 Harness。
+
+作者預測，企業常見的服務拓撲未來可能演化成 Harness Templates。
+
+例如企業裡可能有幾種常見系統型態：
+- 透過 API 暴露資料的商業服務
+- 事件處理服務
+- 資料儀表板
+
+這些原本可能已經有 Service Template，未來可以進一步包裝成 Harness Template，內含結構、技術棧、規則、文件、測試、Sensors 與 Guides。
+
+團隊未來甚至可能會根據「某個技術棧是否已有良好的 Harness」來選擇技術架構。
+
+作者強調，人類開發者本身也像一種隱性的 Harness。
+
+人類知道團隊慣例、組織目標、技術債哪些可以接受、哪些不該接受，也知道什麼樣的程式碼在這個脈絡下算是「好」。
+
+Coding Agent 沒有這些東西。它沒有社會責任感，不會因為寫出 300 行函式而感到不適，也不一定知道某個技術選擇雖然正確，但不符合團隊方向。
+
+Harness 的目標不是完全消除人類，而是把人類注意力導向最重要的地方。
+
+Harness Engineering 是一種逐漸成形的工程實務，不只是一次性的設定。
+
+它的重點不是單一功能，例如 Skill、MCP Server、Linter 或測試工具，而是把 Guides、Sensors、Feedforward、Feedback、自動修正迴圈與人類審查組合成一套可信的控制系統。
+
+真正的問題不是「要不要用 Coding Agent」，而是如何設計一個能提高信任、降低反覆錯誤、控制品質漂移、並讓人類專注在高價值判斷上的工程環境。

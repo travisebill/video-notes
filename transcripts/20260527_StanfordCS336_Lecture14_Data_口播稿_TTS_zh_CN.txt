@@ -1,0 +1,13 @@
+Stanford CS336 Lecture 14 由 Percy Liang 主讲,是 Lecture 13「Data Sources」的延伸,涵盖完整的 data pipeline——transformation、filtering、deduplication、mixing 与 post-training data。Lecture 14 显示 LLM data pipeline 的核心矛盾:从 100+ trillion tokens 筛到约 3 trillion tokens,需要大量 heuristics 与 small classifier;mixing 是 hyperparameter tuning at largest scale——用小 proxy model 推算大 model 的最佳 mix,搭配 simulated epoching 解决 scale-dependent effect。
+
+第一个主题是 HTML transformation。Raw data 不会以 text 形式给你——Common Crawl 内部是 HTML、PDF、GitHub directories。HTML 到 text 用 rule-based processors 是主流,因为 fast 但 inherently lossy。Percy 指出「content 与 non-content」界线不总是清楚。
+
+第二个主题是 filtering,核心 schema 是有 target data(小量高品质)加 raw data(大量低品质),train classifier 挑出像 target 的 subset。Generative model 方法用 KenLM train 5-gram model on target data。Classifier 方法用 target 为 positive、其他为 negative,train binary classifier;Dolly 15K 展示用这方法比 raw data 表现好。Toxicity filtering 用 Jigsaw Toxic Comments dataset 训练。Percy 强调没有 universal quality threshold——取决于 training duration(训练越久可容忍越低 quality)与 model size。
+
+第三个主题是 deduplication。Deduplication 是 O(n²) 问题,web scale 不能这样做。用 hash functions 达到 linear time:MinHash 把 document 用 n-gram shingles 表示,两个 documents 的 Jaccard similarity 约等于两个 hash 函数的 minimum 值相等的机率。LSH(Locality-Sensitive Hashing)把 MinHash signatures 分成多个 bands,任何 band 中 hash match 就是 candidate pair;phase transition 控制 threshold,公式是 1/b 的 1/r 次方。真实设定用 b=20、r=450。Decontamination 是类似问题,目标是 test set 不在 training set 中。
+
+第四个主题是 mixing。问题是多个 sources 如何 balance。Regression-based mixing framework:从 raw 与 target 数据 fit 一个 function mapping mixture weights 到 loss,在 small scale 跑多个 mixtures,fit log-linear regression,推算 large scale 的 optimal mixture。两个 leaps of faith:regression 可能被 optimization 推到 extremes、optimal mixtures 从 small scale transfer 到 large scale(有 scale-dependent effects)。Scale-dependent effect 范例:small model 会把 mass 放在 high-quality Wikipedia,large model 会在 Wikipedia 上 overfit。Solutions:epoch cap 限制每个 source 的 epoch 数;simulated epoching 把 small scale 的 sources downsampled 模拟 large scale 的 epoch pattern,「make your small scale look like your large scale」——这与 muP 是同样精神。
+
+第五个主题是 post-training data 与 synthetic data。Post-training data 早期是 Open Assistant、HelpSteer 等人类 collected data,风格差异大——ChatGPT 太 chatty,有些偏 formal concise。AlpacaEval 显示 stylistic preferences 大幅变化但 standard benchmarks 变化小,style control 不等于 capability control。Synthetic data 趋势是 math 用 LLM 生成 problems 与 solutions、coding 产生 challenges 与 solutions、SWE-rebench 用大量 GitHub PRs。SWE-Zero 用 SWE-rebench tasks 加 LLM-generated trajectories,扩展到 12 million agent trajectories。Synthetic data 有 hallucination 风险。
+
+Lecture 14 最终结论:data pipeline 的关键 elements——filtering、deduplication、mixing、synthetic data——data work 是 grungy,domain-specific,要靠 concrete examples。

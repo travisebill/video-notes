@@ -1,0 +1,17 @@
+台大资讯工程学系 2026 年春季「人工智慧导论」FAI 2. 1「为什么需要非线性的模型呢？ 」， 由林轩田教授主讲， 约 40 分钟， 是 Machine Learning 章节进入 Nonlinear Models 的开篇。
+
+从 Linear Model 限制角度， 林轩田教授点出 FAI 1. x 系列一直回避的关键问题：Linear Model $h(x) = w^T x$ 在 2D 平面就是一条直线。 Linear Model 有 Generalization 强的好处——简单模型只记 high-level 大概念， 不会死背资料。 但 Linear Model 也有不可逾越的限制：当资料是「圈圈包围叉叉」、 「椭圆」等形状时， 任何直线都切不开， $E_{in}$ 永远大； $E_{in}$ 大通常代表 $E_{out}$ 也大——Generalization 再强也救不回来。 所以「什么时候 Linear Model 够用」要根据资料决定。
+
+从 Quadratic Hypothesis 角度， 林轩田教授用「圈圈包围叉叉」示范 Hypothesis Set 升级。 圆的多项式 $h(x) = (x_1^2 + x_2^2 - r)$ 对 $x$ 不是线性， 但 General 化成 Quadratic Hypothesis $a_1 x_1^2 + a_2 x_2^2 + a_3 x_1 x_2 + a_4 x_1 + a_5 x_2 + a_6$ 涵盖所有二次曲线（圆、 椭圆、 抛物线、 双曲线、 旋转后的椭圆）。 Linear Model 是 Quadratic 的 special case（二次项系数为 0）。 Quadratic Hypothesis Set 比 Linear 强很多——这也是 FAI 2. x 开始讨论的核心：Hypothesis 越复杂表示力越强。
+
+从 Feature Transform 角度， 林轩田教授展示核心 trick——把 $X$ 映射到 $Z$ 空间。 定义 $\Phi: X \rightarrow Z$， 其中 $z_0 = 1$、 $z_1 = x_1^2$、 $z_2 = x_2^2$。 在 $Z$ 空间， Linear Model $\tilde{w}^T z$ 学出来一条 hyperplane； 对应回 $X$ 空间就是圆（二次曲线）。 也就是说：在 $X$ 不可分 ≠ 在 $Z$ 不可分； 找到合适的 $\Phi$ 后， 剩下的工作就跟 FAI 1. x 一模一样。 这个「Reduction: Circular Learning → Linear Learning」是整个非线性 ML 的起点， 也是 1990 年代 Kernel Methods（SVM with RBF kernel）、 2000 年代 Deep Learning（Convolutional Layers）的共同祖先。
+
+从 Recap 与 Reduction 思路角度， 林轩田教授提醒同学演算法课学过的 reduction——把 Circular Learning reduce 到 Linear Learning 用解 Linear 的方式解。 关键是找到好的 $\Phi$——「看到资料就知道要用什么转换」需要经验， 这也开启了 ML 中「特征工程」的整个领域。
+
+从 Spam Email Classification 应用角度， 林轩田教授引用 1990 年代经典论文：Linear Model 在 Spam Detection 上的 testing error rate 约 7%； 升级到 Quadratic Model（nonlinear）后降到 1. 68%。 原因是 $f(x)$ 本身可能就是二次的——Linear Model 跟 $f$ 差距大； Quadratic Model 接近 $f$。 但我们永远不知道 $f$ 是什么， 这是 ML 的根本难题。
+
+从 Digit Recognition 应用角度， 林轩田教授提到 Yann LeCun 1989 年的开创工作（CNN 起源之一）：手写数字/邮递区号自动辨识。 从 raw pixel 设计 feature（对称性、 笔划密度、 孔洞数量等）→ 丢入 Linear/Quadratic Model → 预测。 这就是 Manual Feature Engineering 的经典做法。 Deep Learning 的差异在于模型自己学 feature——对影像、 文字、 语音效果特别好， 因为资料量大且难以 manual feature。
+
+从 Higher Order Polynomial 与 Computational Cost 角度， General Polynomial Order $Q$ 包含所有 $Q$ 次以下的项， 维度 $1+d+d^2+\dots+d^Q$ 随 $Q$ 指数增长。 trade-off：表示力 ↑ vs 计算成本 ↑ vs Overfitting 风险 ↑。 $Q$ 怎么选？ 需要 Model Selection——这也是 FAI 2. 2 将要探讨的主题。
+
+一句话总结：FAI 2. 1 把 Machine Learning 从 Linear 推进到 Nonlinear——用 Feature Transform 把 $X$ 映射到 $Z$， 使 $Z$ 空间线性可分， 这是 Kernel Methods 与 Deep Learning 的共同祖先； 但 Hypothesis 越复杂表示力越强也越容易 Overfitting——Model Selection 是 ML 最困难的核心难题。
