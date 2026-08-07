@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **161 支內容** · 292 個音檔 · 154 個逐字稿 · 161 個口播稿
-> 最後更新 2026-08-06
+> **162 支內容** · 295 個音檔 · 155 個逐字稿 · 162 個口播稿
+> 最後更新 2026-08-07
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-08-06** | Cloudflare team（Celso Martinho + Ruskin Constant）| [Introducing Kitesurf: The agent-first browser that runs in V8 isolates on Cloudflare Workers](技術講座/20260806_Cloudflare_IntroducingKitesurf.md) · 4:14（254s）（口播稿 4:14）· Cloudflare 全新 agent-first browser + 完全跑在 Cloudflare Workers + 為 AI 代理人設計 + 4 大核心元件（SandboxOutbound / Engine / PageScript / PageRenderer）+ 5 大設計決策（Tests / Rust / Exception / Isolation / Stateless）+ WPT 215k+ 測試 + 3-7× 記憶體/CPU 節省 · web_fetch 抓原文 · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 6.89%
 - **2026-08-02** | Best Partners TV（中文 AI 工程教學頻道，主持人「大飛」）| [什么是图工程 (Graph Engineering) 与循环工程 (Loop Engineering) — LangGraph / ReAct / 多智能体工作流编排与验证器设计](技術講座/20260802_BestPartnersTV_GraphAndLoopEngineering.md) · 20:11（1211s）（口播稿 6:20）· Graph Engineering 把工作流拆成節點 + 邊的有向圖設計 + Loop Engineering 把多輪反思 + 工具調用做成 deterministic loop + 兩者互補 + LangGraph 框架實作 + ReAct 推理行動 pattern + 多智能體協作 + 驗證器設計保證品質 + 提示詞工程演進 · zh-Hans 手動字幕（無 auto-subs）· xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 7.74%
 - **2026-08-05** | Matt Pocock（AI 工程教育者、Total TypeScript 創辦人、claude-code-skill-engineering-template 作者 — GitHub 史上第 24 名、24K stars）| [New Skills! v1.2 brings /wait-what, /writing-for-agents, and fixes /grill-me — Claude Skills v1.2 三層架構總覽 + aihero.dev/skills 官方文件站 + Claude Code plugin marketplace + Codex OpenAI.YAML sidecar + /wait-what 治 Opus 5 滿嘴 LLM 慣用語 + ASD-STE100 簡化技術英文標準 + ubiquitous language 寫法 + /grill-me 圖形化 frontier 推進 + dictation-friendly UI + /writing-for-agents 拓寬所有 AGENTS.md / CLAUDE.md 配置 + /wizard 互動式 bash script 生成器 + /questionnaire 可分享 Markdown 橋接非 AI 利害關係人 + AI coding 沉澱期觀察](人物訪談/20260805_MattPocock_SkillsV12WaitWhatWritingForAgentsGrillMe.md) · 11:37（697s）（口播稿 8:04）· Skills repo 進入成熟期（雙 24K stars 巧合）+ 3 個核心技能改寫回應真實痛點 + 2 個新技能處理過去不受注意的場景 + Matt 對 AI coding 進入沉澱期的個人判斷 + 自學式 AI coding 速成課程預告 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 7.80%
 - **2026-08-01** | McKinsey & Company（Lucia Rahilly / Brooke Weddle / Brian Hancock 主持）· 來賓 Erik Brynjolfsson（Stanford Digital Economy Lab 主任、《The Second Machine Age》共同作者）| [The Biggest AI Opportunity Isn't Replacing People — Stanford 經濟學家 Brynjolfsson 訪談 — AI 補位 vs 取代 + Solow Paradox 復活 + J 曲線生產力延遲 + 任務原子級重組 + Coding 雙軌效應 + ADP 22-26 歲雇用 -33% + 新產出指標 vs Power Law 員工模式 + Token 經濟 + Engine 1 vs Engine 2 雙軌經濟 + mavericks 角色 + 多層次組織設計](人物訪談/20260801_McKinsey_TheBiggestAIOpportunityIsntReplacingPeople.md) · 30:33（1833s）（口播稿 4:27）· 為什麼 AI 最大商機是補位而非取代 + 7 章節 + 24 概念表 + 12 金句 + 學術框架引用 Brynjolfsson / Solow Paradox / Acemoglu & Restrepo + 1 全球銀行 Engine 2 案例 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.88%
@@ -107,6 +108,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-08-06 | [Introducing Kitesurf: The agent-first browser that runs in V8 isolates on Cloudflare Workers](技術講座/20260806_Cloudflare_IntroducingKitesurf.md) | Cloudflare team（Celso Martinho + Ruskin Constant）| 4:14（254s）（口播稿 4:14）| [📄 note](技術講座/20260806_Cloudflare_IntroducingKitesurf.md) · [📝 逐字稿](transcripts/20260806_Cloudflare_IntroducingKitesurf_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260806_Cloudflare_IntroducingKitesurf_口播稿.txt) · [🔊 opus](audio/20260806_Cloudflare_IntroducingKitesurf_口播稿.opus) · [🔊 mp3](audio/20260806_Cloudflare_IntroducingKitesurf_口播稿.mp3) |
 | 2026-08-01 | [柯伊伯帶與 2700 萬年大清洗](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) | 自說自話的總裁（《人類大歷史》《Nexus》作者）| 33:25（2005s）（口播稿 5:04）| [📄 note](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) · [🎙️ 口播稿](transcripts/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.txt) · [🔊 opus](audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.opus) · [🔊 m4a](audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.m4a) · [🔊 mp3](audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.mp3) |
 | 2026-07-31 | [From generated code to trusted code with a unit-test agent](技術講座/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent.md) | Microsoft .NET team（Principal Software Engineer）| Article（口播稿 3:29 / 209s）| [📄 note](技術講座/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent.md) · [🎙️ 口播稿](transcripts/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.txt) · [🔊 opus](audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.opus) · [🔊 m4a](audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.m4a) · [🔊 mp3](audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.mp3) |
 | 2026-08-02 | [哈拉瑞 gala 對談：50 年後的人類、AI 與民主](人物訪談/20260730_Harari_50年AI.md) | Yuval Noah Harari（哈拉瑞，《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者）· 主持 Tom Parker（FT《The Next Five》主播）| 48:06（2886s）（口播稿 5:00）| [📄 note](人物訪談/20260730_Harari_50年AI.md) · [🎙️ 口播稿](transcripts/20260730_Harari_50年AI_口播稿.txt) · [🔊 opus](audio/20260730_Harari_50年AI_口播稿.opus) · [🔊 m4a](audio/20260730_Harari_50年AI_口播稿.m4a) · [🔊 mp3](audio/20260730_Harari_50年AI_口播稿.mp3) |
@@ -344,8 +346,9 @@
 - 2026-06-06 | [NTU 人工智慧導論 — Sharing 分享：走一條自己的路（Take a Way）](技術講座/20260606_NTUFAI_Sharing.md) · 林軒田（NTU CSIE 教授） · 29 分 58 秒（1798s）
 - 2026-03-11 | [NTU 人工智慧導論 — Final Project：Game Agent 誰是牛頭王（6 Nimmt!）](技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md) · NTU CSIE 人工智慧導論 教學團隊（4 位主講 TAs） · 33 分 11 秒（1991s）
 
-### 🛠️ **編碼工具 / Agent 工程實踐**（18 支）
+### 🛠️ **編碼工具 / Agent 工程實踐**（19 支）
 
+- 2026-08-06 | [Introducing Kitesurf: The agent-first browser that runs in V8 isolates on Cloudflare Workers](技術講座/20260806_Cloudflare_IntroducingKitesurf.md) · Cloudflare team（Celso Martinho + Ruskin Constant）· 4:14（254s）（口播稿 4:14）｜Cloudflare 全新 agent-first browser + 完全跑在 Cloudflare Workers（WebAssembly in V8 isolates）+ 為 AI 代理人設計（犧牲視覺 / 60fps / 擴充功能）+ 4 大核心元件（SandboxOutbound / Engine / PageScript / PageRenderer）+ 5 大設計決策（Tests / Rust / Exception / Isolation / Stateless）+ WPT 215k+ 測試通過 + 3-7× 記憶體/CPU 節省 + Boa JS engine for eval + Blitz + Stylo + Workers RPC + 自說自話的總裁
 - 2026-07-27 | [Boris Cherny: Building Claude Code — Opus 5 long-running + Prompt injection 不再 + 砍 80% system prompt + Product Overhang / Unhobbling + Give Claude Harder Problems（Bun 11 天 Zig→Rust）+ Two-Week Swift Rewrite + Agent Algebra + Claude Maintaining Itself + Coding Almost Solved](技術講座/20260727_BorisCherny_BuildingClaudeCode.md) · Boris Cherny（Anthropic · Claude Code 創建者）· 主持 Diana Hu · Y Combinator Startup School 2026 · 35:51（2151s）（口播稿 2:41）· Opus 5 發布隔天錄製 · 對 backend engineer 用 Copilot CLI / Codex 是直接對手的內部視角
 - 2026-07-01 | [MCP vs API — 為什麼傳統 API 在 AI agent 時代不夠用？](技術講座/20260701_GoogleCloudTech_MCP_vs_API.md) · Google Cloud Tech · 12:25 | [📄 note](技術講座/20260701_GoogleCloudTech_MCP_vs_API.md) · [📝 逐字稿](transcripts/20260701_GoogleCloudTech_MCP_vs_API_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260701_GoogleCloudTech_MCP_vs_API_口播稿.txt) · [🔊 opus](audio/20260701_GoogleCloudTech_MCP_vs_API.opus) · [🔊 m4a](audio/20260701_GoogleCloudTech_MCP_vs_API.m4a) · [🔊 mp3](audio/20260701_GoogleCloudTech_MCP_vs_API.mp3)
 - 2026-06-25 | [Rewriting Bun in Rust：Bun 從 Zig 改寫成 Rust 的工程紀實](技術講座/20260625_JarredSumner_BunInRust.md) · Jarred Sumner（Bun 創辦人、Anthropic 工程師）· 技術文章（Article 路徑，bun.com 官方 blog；Claude Fable 5 + 64 Claudes × 11 天 機械移植 535K LOC Zig → Rust）

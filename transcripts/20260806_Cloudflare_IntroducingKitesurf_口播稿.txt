@@ -1,0 +1,13 @@
+Kitesurf 是 Cloudflare 全新打造的 agent-first 瀏覽器，整個系統完全跑在 Cloudflare Workers 之上，專為 AI 代理人設計。本文從動機、設計決策、核心元件、測試覆蓋率、效能數據五個面向，剖析這套系統的設計哲學與技術細節。
+
+過去幾年，Cloudflare 內部每隔幾個月都會重新討論要不要自己寫一個瀏覽器。瀏覽器明明是網際網路上最重要的軟體，但工程難度太高、沒有獨特價值主張，所以這個構想一直被擱置。直到 AI 代理人時代來臨，加上 Workers 平台成熟，整個方程式才徹底翻轉。
+
+問題的核心在於 Chromium 是為人類設計的瀏覽器，內建分頁、佈景主題、擴充功能、跨裝置同步等對 AI 毫無意義的功能，卻消耗大量的記憶體與運算資源。若每位 AI 代理人都要配備一個 Chromium 實例，成本將高得離譜，導致只有少數頂級模型才能負擔，絕大多數代理應用被拒於門外。因此 Cloudflare 團隊下定決心，打造一款專為 AI 設計的瀏覽器，輕量化人類用不到的功能，強化 token 數量、上下文視窗、擴展性、效能、成本等 AI 真正在乎的維度。
+
+設計決策方面，團隊堅持五大原則。第一，測試優先，大規模採用 Web Platform Tests 作為對齊基準，搭配實際網站的 Puppeteer 整合測試與視覺回歸測試。第二，能用 Rust 就用 Rust，直接編譯成 WebAssembly，避免 Emscripten 帶來的冗餘模擬層。第三，例外處理任何失敗都退化成空白框架或遺失元素，絕不讓整個 session 直接崩潰。第四，隔離，每個頁面載入都視為不可信輸入，每個元件只能存取嚴格必要的資源。第五，無狀態，只要能 stateless 就 stateless，損壞時直接銷毀重建，無需保存狀態。
+
+核心元件由四部分組成。SandboxOutbound 是唯一能接觸網路的 worker，負責強制 CORS 與 cookie 隔離。Engine 是唯一對外公開的元件，處理 Chrome DevTools Protocol 連線與 session 狀態。PageScript 使用 Dynamic Workers 隔離每個頁面，搭配 Blitz 解析 HTML 與 CSS，並用 Boa JS 處理 eval 語句。PageRenderer 透過 Workers 內建的 RPC 機制，從 PageScript 取得場景物件，呼叫 blitz-paint 將其光柵化為圖片緩衝區，再回傳給 Engine。
+
+測試覆蓋率方面，Kitesurf 已通過超過 21 萬 5 千個 WPT 測試，每週還在持續增加。效能數據上，screenshot 任務的 CPU 用量只有 Chromium 的三分之一，記憶體用量只有四分之一；HTML 抽取任務的 CPU 與記憶體節省幅度更為驚人，分別達到 3.8 倍與 7 倍。雖然 wall time 仍輸 Chromium 約 1.7 倍，但記憶體與 CPU 才是真正影響帳單成本的關鍵指標。
+
+Kitesurf 已透過 Browser Run 免費提供 beta 測試，支援 Puppeteer、Playwright、Chrome DevTools MCP 等所有主流客戶端，並承諾在準備就緒後開源。需要留意的是，Kitesurf 並非想要取代 Chromium。若工作負載需要播放影片、渲染 WebGL、進行 bot-challenge 握手，或啟動需要持久狀態的長 session，請改用 Browser Run 預設的 Chromium 路徑。整套設計哲學的核心，就是打造一個為 AI 而生、隨任務生死、隨負載彈性擴展的 browser for agents。十二週從零開始，首個 commit 落在五月，這套系統還處於早期階段，但已為下一代 AI 代理人基礎設施立下了清晰的設計標竿。
