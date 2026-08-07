@@ -1,4 +1,4 @@
-# 【Stanford CS329A Part 2 — Test-Time Compute Scaling】
+# 【Stanford CS329A — Part 2 — Test-Time Compute Scaling】
 
 **講者｜Stanford CS329A 課程團隊（Self-Improving AI Agents 系列）**
 **影片連結｜https://www.youtube.com/watch?v=-Ggc37xLj_Y**

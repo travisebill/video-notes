@@ -1,4 +1,4 @@
-# 【Stanford CS329A Part 3 — Robust Verification】
+# 【Stanford CS329A — Part 3 — Robust Verification】
 
 **講者｜Stanford CS329A (課程團隊)**
 **影片連結｜https://www.youtube.com/watch?v=p7TdPUcPoik**

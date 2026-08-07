@@ -1,4 +1,4 @@
-# 【Stanford CS329A Part 1 — Course Overview】
+# 【Stanford CS329A — Part 1 — Course Overview】
 
 **講者｜Akanksha Sreyas（Stanford 兼任教授／Reflection AI 研究員）& Azalia Mirhoseini（Stanford CS 系助理教授）**
 **影片連結｜https://www.youtube.com/watch?v=6YnLB0XbTnI**

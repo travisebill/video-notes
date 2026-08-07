@@ -5,7 +5,7 @@
 發布日期: 2026-08-03
 ---
 
-# 【Stanford CS329A Part 5 — Planning and Multi-Step Reasoning】
+# 【Stanford CS329A — Part 5 — Planning and Multi-Step Reasoning】
 
 > ⚠️ **本片為 Stanford CS329A「Self-Improving AI Agents」系列 Part 5**，承接 Part 2（Inference-time Scaling）與 Part 3（Verification），把焦點從「**生成與驗證**」推進到「**規劃與多步推理**」——LLM 如何在一連串動作、觀察、反思之間自己找出解題軌跡。
 

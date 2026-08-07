@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-08-07 03:02:46",
+    "last_updated": "2026-08-07 13:34:14",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -1176,7 +1176,7 @@
     },
     {
       "id": "20260803_StanfordCS329A_Part5PlanningMultiStepReasoning",
-      "title": "【Stanford CS329A Part 5 — Planning and Multi-Step Reasoning】",
+      "title": "【Stanford CS329A — Part 5 — Planning and Multi-Step Reasoning】",
       "speaker": "Stanford CS329A",
       "speaker_description": null,
       "speaker_slug": "StanfordCS329A",
@@ -1232,7 +1232,7 @@
     },
     {
       "id": "20260803_StanfordCS329A_Part3RobustVerification",
-      "title": "【Stanford CS329A Part 3 — Robust Verification】",
+      "title": "【Stanford CS329A — Part 3 — Robust Verification】",
       "speaker": "Stanford CS329A",
       "speaker_description": null,
       "speaker_slug": "StanfordCS329A",
@@ -1260,7 +1260,7 @@
     },
     {
       "id": "20260803_StanfordCS329A_Part2TestTimeComputeScaling",
-      "title": "【Stanford CS329A Part 2 — Test-Time Compute Scaling】",
+      "title": "【Stanford CS329A — Part 2 — Test-Time Compute Scaling】",
       "speaker": "Stanford CS329A",
       "speaker_description": null,
       "speaker_slug": "StanfordCS329A",
@@ -1288,7 +1288,7 @@
     },
     {
       "id": "20260803_StanfordCS329A_Part1CourseOverview",
-      "title": "【Stanford CS329A Part 1 — Course Overview】",
+      "title": "【Stanford CS329A — Part 1 — Course Overview】",
       "speaker": "Stanford CS329A",
       "speaker_description": null,
       "speaker_slug": "StanfordCS329A",
