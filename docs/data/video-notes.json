@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 174,
-    "total_with_audio": 145,
-    "total_with_transcript": 103,
-    "total_with_spoken_script": 143,
-    "speakers_count": 70,
+    "total_videos": 175,
+    "total_with_audio": 146,
+    "total_with_transcript": 104,
+    "total_with_spoken_script": 144,
+    "speakers_count": 71,
     "categories_count": 4,
     "topics_count": 15,
     "courses": [
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-08-07 15:31:37",
+    "last_updated": "2026-08-10 03:51:36",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -70,6 +70,7 @@
       "Smitha",
       "Stanford CS329A",
       "TVBS",
+      "TVBS文茜",
       "Tara Agyemang",
       "Tejas",
       "YC",
@@ -728,6 +729,34 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro.md"
     },
     {
+      "id": "20260809_TVBS文茜_世界周報",
+      "title": "【TVBS 文茜的世界周報 — 2026-08-09 直播】",
+      "speaker": "TVBS文茜",
+      "speaker_description": null,
+      "speaker_slug": "TVBS文茜",
+      "course_slug": null,
+      "category": "國際局勢",
+      "primary_topic": null,
+      "date": "2026-08-09",
+      "note_date": "2026-08-09",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://www.youtube.com/live/J3n3Jbcf818",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260809_TVBS文茜_世界周報.opus",
+        "m4a": null,
+        "mp3": "audio/20260809_TVBS文茜_世界周報.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260809_TVBS文茜_世界周報_逐字稿.txt",
+        "spoken_script": "transcripts/20260809_TVBS文茜_世界周報_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260809_TVBS文茜_世界周報_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "國際局勢/20260809_TVBS文茜_世界周報.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260809_TVBS文茜_世界周報.md"
+    },
+    {
       "id": "20260630_YuvalNoahHarari_AIHackedHumanCivilization",
       "title": "AI has hacked the code of human civilization",
       "speaker": "Yuval Noah Harari",
@@ -1071,7 +1100,7 @@
       "speaker_slug": "Cloudflare",
       "course_slug": null,
       "category": "技術講座",
-      "primary_topic": null,
+      "primary_topic": "🛠️ 編碼工具 / Agent 工程實踐",
       "date": "2026-08-07",
       "note_date": "2026-08-07",
       "duration_seconds": 254,
