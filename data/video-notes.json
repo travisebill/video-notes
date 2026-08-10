@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 175,
-    "total_with_audio": 146,
-    "total_with_transcript": 104,
-    "total_with_spoken_script": 144,
-    "speakers_count": 71,
+    "total_videos": 176,
+    "total_with_audio": 147,
+    "total_with_transcript": 105,
+    "total_with_spoken_script": 145,
+    "speakers_count": 72,
     "categories_count": 4,
     "topics_count": 15,
     "courses": [
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-08-10 03:51:36",
+    "last_updated": "2026-08-11 03:29:47",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -67,6 +67,7 @@
       "Ruben Casas",
       "Ryan Lopopolo",
       "Scott Galloway",
+      "Seth Godin",
       "Smitha",
       "Stanford CS329A",
       "TVBS",
@@ -112,6 +113,34 @@
     ]
   },
   "videos": [
+    {
+      "id": "20260810_SethGodin_放棄的藝術",
+      "title": "【Seth Godin × The Diary Of A CEO】放棄的藝術：在 AI 替你做選擇之前",
+      "speaker": "Seth Godin",
+      "speaker_description": null,
+      "speaker_slug": "SethGodin",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": null,
+      "date": "2026-08-10",
+      "note_date": "2026-08-10",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://youtu.be/g7AxxkywiFI",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260810_SethGodin_放棄的藝術.opus",
+        "m4a": null,
+        "mp3": "audio/20260810_SethGodin_放棄的藝術.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260810_SethGodin_放棄的藝術_逐字稿.txt",
+        "spoken_script": "transcripts/20260810_SethGodin_放棄的藝術_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260810_SethGodin_放棄的藝術_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20260810_SethGodin_放棄的藝術.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260810_SethGodin_放棄的藝術.md"
+    },
     {
       "id": "20260805_MattPocock_SkillsV12WaitWhatWritingForAgentsGrillMe",
       "title": "【Matt Pocock — Claude Skills v1.2 釋出：/wait-what、/writing-for-agents、/grill-me 修復】",
