@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **162 支內容** · 295 個音檔 · 155 個逐字稿 · 162 個口播稿
-> 最後更新 2026-08-07
+> **163 支內容** · 298 個音檔 · 156 個逐字稿 · 163 個口播稿
+> 最後更新 2026-08-11
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-08-10** | Seth Godin（當代行銷思想家、《紫牛》《部落》《低谷》作者）· 主持 Steven Bartlett | [The Quitting Expert: Quit NOW Before AI Makes The Choice For You, This Is a Superpower! — 放棄的藝術：在 AI 替你做選擇之前](人物訪談/20260810_SethGodin_放棄的藝術.md) · 1:53:06（6786s，113 分鐘 podcast 訪談）（口播稿 4:31）· 從 Michael Jordan「永不放棄」破題開始 + 翻轉沉沒成本謬誤 + The Dip / Cul-de-Sac 框架 + Audience Matters（為誰）核心命題 + Shake Shack 案例（為評論家改又改回） + 三驅動力（恐懼/歸屬/地位）+ 損失厭惡實驗 + AI 革命 vs 電力革命 + Cooper 夫人 78 歲原住民 + 7 多視角切片（經濟學/心理學/行銷學/文化評論/行為經濟學/經濟史/哲學）+ 11 概念表 + 10 金句 · zh-Hant 自動字幕 · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.06%
 - **2026-08-06** | Cloudflare team（Celso Martinho + Ruskin Constant）| [Introducing Kitesurf: The agent-first browser that runs in V8 isolates on Cloudflare Workers](技術講座/20260806_Cloudflare_IntroducingKitesurf.md) · 4:14（254s）（口播稿 4:14）· Cloudflare 全新 agent-first browser + 完全跑在 Cloudflare Workers + 為 AI 代理人設計 + 4 大核心元件（SandboxOutbound / Engine / PageScript / PageRenderer）+ 5 大設計決策（Tests / Rust / Exception / Isolation / Stateless）+ WPT 215k+ 測試 + 3-7× 記憶體/CPU 節省 · web_fetch 抓原文 · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 6.89%
 - **2026-08-02** | Best Partners TV（中文 AI 工程教學頻道，主持人「大飛」）| [什么是图工程 (Graph Engineering) 与循环工程 (Loop Engineering) — LangGraph / ReAct / 多智能体工作流编排与验证器设计](技術講座/20260802_BestPartnersTV_GraphAndLoopEngineering.md) · 20:11（1211s）（口播稿 6:20）· Graph Engineering 把工作流拆成節點 + 邊的有向圖設計 + Loop Engineering 把多輪反思 + 工具調用做成 deterministic loop + 兩者互補 + LangGraph 框架實作 + ReAct 推理行動 pattern + 多智能體協作 + 驗證器設計保證品質 + 提示詞工程演進 · zh-Hans 手動字幕（無 auto-subs）· xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 7.74%
 - **2026-08-05** | Matt Pocock（AI 工程教育者、Total TypeScript 創辦人、claude-code-skill-engineering-template 作者 — GitHub 史上第 24 名、24K stars）| [New Skills! v1.2 brings /wait-what, /writing-for-agents, and fixes /grill-me — Claude Skills v1.2 三層架構總覽 + aihero.dev/skills 官方文件站 + Claude Code plugin marketplace + Codex OpenAI.YAML sidecar + /wait-what 治 Opus 5 滿嘴 LLM 慣用語 + ASD-STE100 簡化技術英文標準 + ubiquitous language 寫法 + /grill-me 圖形化 frontier 推進 + dictation-friendly UI + /writing-for-agents 拓寬所有 AGENTS.md / CLAUDE.md 配置 + /wizard 互動式 bash script 生成器 + /questionnaire 可分享 Markdown 橋接非 AI 利害關係人 + AI coding 沉澱期觀察](人物訪談/20260805_MattPocock_SkillsV12WaitWhatWritingForAgentsGrillMe.md) · 11:37（697s）（口播稿 8:04）· Skills repo 進入成熟期（雙 24K stars 巧合）+ 3 個核心技能改寫回應真實痛點 + 2 個新技能處理過去不受注意的場景 + Matt 對 AI coding 進入沉澱期的個人判斷 + 自學式 AI coding 速成課程預告 · en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 7.80%
