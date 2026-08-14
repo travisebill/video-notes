@@ -1,19 +1,19 @@
 {
   "meta": {
-    "total_videos": 176,
-    "total_with_audio": 147,
+    "total_videos": 177,
+    "total_with_audio": 148,
     "total_with_transcript": 105,
-    "total_with_spoken_script": 145,
-    "speakers_count": 72,
+    "total_with_spoken_script": 146,
+    "speakers_count": 73,
     "categories_count": 4,
-    "topics_count": 15,
+    "topics_count": 16,
     "courses": [
       "Harvard CS224",
       "NTU 人工智慧導論",
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-08-11 03:29:47",
+    "last_updated": "2026-08-14 21:00:38",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -43,6 +43,7 @@
       "Graham Hancock × Steven Bartlett",
       "Harari",
       "Jarred Sumner",
+      "Jeff Dean",
       "Jelani Nelson",
       "Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長",
       "Kaggle",
@@ -107,6 +108,7 @@
       "📱 消費電子 / 科技評論",
       "🗣️ 自我成長 / 溝通 / 表達技巧",
       "🛠️ 編碼工具 / Agent 工程實踐",
+      "🤖 AI / 大規模系統 / 創業 / 1% 思維 / 後摩爾時代",
       "🤖 AI 倫理 / 哲學 / 意識",
       "🤖 AI 安全 / 末日論 / 政策",
       "🧠 AI / LLM 學術與方法論"
@@ -252,6 +254,34 @@
       },
       "note_path": "人物訪談/20260730_RayDalio_AIBubbleBigCycle.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260730_RayDalio_AIBubbleBigCycle.md"
+    },
+    {
+      "id": "20260730_JeffDean_The1PercentRuleForBuildingInAI",
+      "title": "【Jeff Dean — The 1% Rule for Building in AI】",
+      "speaker": "Jeff Dean",
+      "speaker_description": "Google Chief Scientist、Google DeepMind 共同創辦人；MapReduce、BigTable、TensorFlow、TPU、Gemini 等基礎設施的原作者之一",
+      "speaker_slug": "JeffDean",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🤖 AI / 大規模系統 / 創業 / 1% 思維 / 後摩爾時代",
+      "date": "2026-07-30",
+      "note_date": "2026-07-30",
+      "duration_seconds": 3427,
+      "duration_display": "57:07",
+      "video_url": "https://youtu.be/CxXgV54KzpQ",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260730_JeffDean_The1PercentRuleForBuildingInAI_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260730_JeffDean_The1PercentRuleForBuildingInAI_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260730_JeffDean_The1PercentRuleForBuildingInAI_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260730_JeffDean_The1PercentRuleForBuildingInAI_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20260730_JeffDean_The1PercentRuleForBuildingInAI.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260730_JeffDean_The1PercentRuleForBuildingInAI.md"
     },
     {
       "id": "20260730_Harari_50年AI",
