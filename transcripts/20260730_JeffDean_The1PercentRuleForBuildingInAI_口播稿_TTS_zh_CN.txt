@@ -1,0 +1,13 @@
+本场 Y Combinator 访谈，主持人 Garry Tan 邀请 Google Chief Scientist Jeff Dean 对著六千位创业者讲述 AI 时代的工程与创业方法。影片的核心张力在于：模型变得越来越强，但杰出工程师能做为切入点的空间反而更清楚。Jeff 用他二十多年从 MapReduce、BigTable、TensorFlow、TPU 到 Gemini 的亲身经历，示范一个后摩尔时代的工程师应该怎么思考。
+
+开场 Jeff 验证一年前的预言：AI 已达到 junior 工程师水平，这个判断差不多精准。他补充自己低估的是 agent-based 系统在 coding 之外的领域开始闪耀，这是未来重要趋势。Garry 追问 2027 年的预测，Jeff 给出自动化 ML 系统本身的愿景：把高阶目标拆解成子问题，每个子问题跑自动化实验 loop 探索最佳解，再由 orchestration 框架组回高阶解。这套方法适用任何有可量化目标的科学与工程领域。
+
+从系统工程角度，Jeff 解释 2001 年他和 Sanjay 算出搜寻索引终究会 fit in all of the RAM，几天内把生产环境从硬碟搬到 RAM，这是 Google 搜寻变快的源头。对应到 2026 年，他认为等价的 it fits the memory moment 是高效能低能耗的 inference 硬体，因为 agent 普及与 latency 最佳化都仰赖硬体特化。Jeff 进一步指出，计算本身花一个 picodruel，而搬运资料花一千倍，这个差距决定了什么产品可能、为什么 batching 是系统问题而非模型问题。
+
+从 backend infrastructure 角度，Jeff 揭露 napkin math 的传统：2013 年他算出每位 Google 用户每天用 phone 语音三分钟，CPU fleet 必须翻倍，这个数字直接催生 TPU。TPU 设计成低精度密集线性代数专用，意外成为 Transformer 时代的硬体基础。Geoffrey Hinton 与 Jeff 共同撰写的 distillation 论文，二〇一四年被 NeurIPS 拒绝，现在则是业界标准技术，这段插曲说明真正的 disruptive work 往往在发表当下不被理解。
+
+从商业策略角度，Jeff 给未来创办人两条可行路径：一是有 visibility 的个人资料，二是 niche 特化模型。判断标准是当前通用模型在这个领域的表现——零或一个百分比的才是好选择，三成表示已在追上。他在 AlphaFold 与材料科学、晶片设计等例子中说明 niche 模型的破坏力。同时他强调 context engineering 是 2026 年进入 AI 领域的最低门槛，只要有 API 就能开始，这个能力比调模型参数更实用。
+
+从领导力角度，Jeff 主张 AI 时代的创办人把稀缺技能放在 spec 写作与品味培养上。代理接管写程式码的工作后，能选对问题喂给代理的人才是关键。他还引用疯狂 thought experiment 的传统：六十年的半导体产业都假设每颗出厂的晶片都应该一模一样，但分散式系统从不依赖这种假设，那能不能在电晶体层级也这样做？MapReduce、TPU、distillation 这几个划时代系统，背后都是敢挑战既有假设的个人。
+
+从失败学习的角度，Jeff 分享 distillation 论文被拒的经历，评审写 unlikely to have significant impact。但他们把论文放上 arXiv，社群读、引用、使用，现在是业界标准。最后他给所有正在被拒绝的未来创办人一句话：即使被拒绝，继续走。这场访问的真正遗产是：在 AI 自动改进模型的时代，杰出工程的未来属于那些会选对问题、敢怀疑假设、即使被打枪也坚持下去的人。
