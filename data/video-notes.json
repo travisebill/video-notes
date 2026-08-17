@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 177,
-    "total_with_audio": 148,
-    "total_with_transcript": 105,
-    "total_with_spoken_script": 146,
-    "speakers_count": 73,
+    "total_videos": 178,
+    "total_with_audio": 149,
+    "total_with_transcript": 106,
+    "total_with_spoken_script": 147,
+    "speakers_count": 74,
     "categories_count": 4,
     "topics_count": 16,
     "courses": [
@@ -13,13 +13,14 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-08-14 21:00:38",
+    "last_updated": "2026-08-17 16:45:09",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
       "AWSShow And Tell",
       "Adam Bender",
       "Alex Hormozi",
+      "Anatoli Kopadze",
       "Andrej Karpathy",
       "Andrew Ng",
       "Angelos",
@@ -1150,6 +1151,34 @@
       },
       "note_path": "財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md"
+    },
+    {
+      "id": "20260817_AnatoliKopadze_GraphEngineering",
+      "title": "【Graph Engineering：給 AI 工作的流程圖】",
+      "speaker": "Anatoli Kopadze",
+      "speaker_description": null,
+      "speaker_slug": "AnatoliKopadze",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-08-17",
+      "note_date": "2026-08-17",
+      "duration_seconds": null,
+      "duration_display": null,
+      "video_url": "https://x.com/AnatoliKopadze/status/2080668775796314331",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260817_AnatoliKopadze_GraphEngineering.opus",
+        "m4a": null,
+        "mp3": "audio/20260817_AnatoliKopadze_GraphEngineering.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260817_AnatoliKopadze_GraphEngineering_逐字稿.txt",
+        "spoken_script": "transcripts/20260817_AnatoliKopadze_GraphEngineering_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260817_AnatoliKopadze_GraphEngineering_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260817_AnatoliKopadze_GraphEngineering.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260817_AnatoliKopadze_GraphEngineering.md"
     },
     {
       "id": "20260806_Cloudflare_IntroducingKitesurf",
