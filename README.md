@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **177 支內容** · 301 個音檔 · 156 個逐字稿 · 164 個口播稿
-> 最後更新 2026-08-14
+> **178 支內容** · 304 個音檔 · 157 個逐字稿 · 165 個口播稿
+> 最後更新 2026-08-17
 
 ---
 
@@ -110,6 +110,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-08-17 | [Graph Engineering：給 AI 工作的流程圖（Anatoli Kopadze）— node/edge/diamond/verifier/anchor + fake-edge test + 5 個現成模板 + Bun $165K 範例](技術講座/20260817_AnatoliKopadze_GraphEngineering.md) | Anatoli Kopadze（@AnatoliKopadze，丹麥頂尖大學背景）| Article（口播稿 3:33 / 213s）| [📄 note](技術講座/20260817_AnatoliKopadze_GraphEngineering.md) · [📝 逐字稿](transcripts/20260817_AnatoliKopadze_GraphEngineering_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260817_AnatoliKopadze_GraphEngineering_口播稿.txt) · [🔊 opus](audio/20260817_AnatoliKopadze_GraphEngineering.opus) · [🔊 m4a](audio/20260817_AnatoliKopadze_GraphEngineering.m4a) · [🔊 mp3](audio/20260817_AnatoliKopadze_GraphEngineering.mp3) |
 | 2026-08-06 | [Introducing Kitesurf: The agent-first browser that runs in V8 isolates on Cloudflare Workers](技術講座/20260806_Cloudflare_IntroducingKitesurf.md) | Cloudflare team（Celso Martinho + Ruskin Constant）| 4:14（254s）（口播稿 4:14）| [📄 note](技術講座/20260806_Cloudflare_IntroducingKitesurf.md) · [📝 逐字稿](transcripts/20260806_Cloudflare_IntroducingKitesurf_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260806_Cloudflare_IntroducingKitesurf_口播稿.txt) · [🔊 opus](audio/20260806_Cloudflare_IntroducingKitesurf_口播稿.opus) · [🔊 mp3](audio/20260806_Cloudflare_IntroducingKitesurf_口播稿.mp3) |
 | 2026-08-01 | [柯伊伯帶與 2700 萬年大清洗](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) | 自說自話的總裁（《人類大歷史》《Nexus》作者）| 33:25（2005s）（口播稿 5:04）| [📄 note](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) · [🎙️ 口播稿](transcripts/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.txt) · [🔊 opus](audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.opus) · [🔊 m4a](audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.m4a) · [🔊 mp3](audio/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗_口播稿.mp3) |
 | 2026-07-31 | [From generated code to trusted code with a unit-test agent](技術講座/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent.md) | Microsoft .NET team（Principal Software Engineer）| Article（口播稿 3:29 / 209s）| [📄 note](技術講座/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent.md) · [🎙️ 口播稿](transcripts/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.txt) · [🔊 opus](audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.opus) · [🔊 m4a](audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.m4a) · [🔊 mp3](audio/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent_口播稿.mp3) |

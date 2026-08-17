@@ -1,0 +1,15 @@
+Anatoli Kopadze 在 X 平台發布的長文揭示一個核心張力：多數從業者只用了 AI 五到十趴的能力，真正的槓桿不在模型，而在流程拓樸——把線性迴圈升級為可並行的節點圖。這套方法論被命名為 Graph Engineering，被視為大型企業真正在搶的技能。
+
+從電腦科學史角度，這並非新概念。資料流程圖、Petri net、workflow engine 早在 1970 年代就承擔過關鍵系統的調度，文章開門見山引用「跑了三十年關鍵系統的 pattern，正是你想託付工作的那種」。其學術價值在於把這套思想翻譯到 LLM agent 現場，並加上一條極簡的判斷測試：fake-edge test。對每一條邊問「這一步真的需要上一步的結果嗎？」否則砍掉，兩件事即可並行。
+
+Anatoli 把唯一值得記的形狀命名為 diamond：fan out 蒐集廣度、reduce 用 plain code 壓縮、synthesize 由最終 agent 寫答案。Claude 的 research 功能在 production 就是這個樣子——一個 agent 寫一行腳本調度十幾個 sub-agents，協作走 code 不走對話，context 就不會被吃掉。
+
+然而，圖工程的核心矛盾不止於結構。從軟體工程角度，所有嚴肅的 AI 自評測試都指向同一個結論：模型評自己太手軟。解法是在每條邊加一個獨立 verifier，但 verifier 必須有 fresh context。Worker 與 verifier 共用對話，等於一個迴圈換了字型改自己的作業，帳單變大、誠實度沒變。三分鏡檢查——正確、新近、來源真實——是更細的要求。
+
+圖真正會壞在三個公開的失敗模式：context collapse（fan-out 一千個輸出直接合併會爆 context window，要分層 fan-in）、false independence（兩個 node prompt 互不提到對方卻寫同一個檔，Bun 團隊曾因此互蓋）、silent node failure（鏈上一個死全雍塞，圖裡二百個死一個產出看起來完整，要靠 merge step 數輸入對預期數）。
+
+更深層的陷阱是拓樸本身不買真實。Anatoli 提出 anchor 概念——「不能被反駁」的事實節點，例如實際跑過的測試、進到銀行的收入、留住的客戶——才是圖的誠實底線。Frozen rule——優化器會想弱化的規則——則是防止圖學會作弊拿分的反向鎖。
+
+公開案例顯示代價：Bun runtime 改寫專案用五十個 workflow、最多六十四個 agent 同時跑，五十三萬五行翻譯成一百萬行以上，十一天完成，約十六萬五千美元；社群對如此大量 AI 程式碼能否安全 review 仍存真實質疑。圖能吃下單一 context 沒法吃的工作，也能在背景悄悄燒錢。
+
+Anatoli 的最終建議不是「把什麼都圖學化」，而是窄工作用 loop、寬工作用圖；今晚最划算的動作是畫現有 workflow、找出沒資料傳遞的假邊砍掉。這個動作比多摸一個新工具，讓大多數人更快——大多數人會繼續把步驟排成一條線，學會畫圖的人會跑一整支艦隊。
