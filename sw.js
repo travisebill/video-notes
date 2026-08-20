@@ -13,7 +13,14 @@
 //           — getAudioUrl 仍走 CDN_BASE（jsDelivr 因為 audio streaming 需要 Range request 支援，raw GitHub 不支援）
 //           — bump CACHE_VERSION 強制 activate 清 APP_SHELL_CACHE + RUNTIME_CACHE，下次開啟 reload 重新 fetch JSON
 //           — 詳見 AGENTS.md「video-notes Pages SW cache bump SOP」章節
-const CACHE_VERSION = 'v2.3-pwa';
+//
+// v2.4-pwa: bump cache version to fix jsDelivr 7-day audio cache（2026-08-20 禮士 UX 反饋）
+//           — 實測：jsDelivr @main 對 audio/mpeg 的 cache-control = max-age=604800 (7天)，不是 24h
+//           — 改 app.js getAudioUrl 加 ?v=v2.4-pwa query string cache-bust，強制瀏覽器視為新 URL 重新 fetch
+//           — audio URL pattern 變動 → 必須 bump CACHE_VERSION 觸發 SW activate 清舊 app.js cache
+//           — 跟 app.js 的 AUDIO_CACHE_BUST 同步，兩者永遠要一起 bump
+//           — 詳見 AGENTS.md「Pages audio cache 7-day bug (2026-08-20 立)」章節
+const CACHE_VERSION = 'v2.4-pwa';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 

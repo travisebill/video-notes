@@ -5,6 +5,10 @@
 const CDN_BASE = 'https://cdn.jsdelivr.net/gh/travisebill/video-notes@main';
 // Raw GitHub 作為 fallback (jsDelivr 隱藏 cache 延遲 24h 問題)
 const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main';
+// 2026-08-20 教訓：jsDelivr 實際 cache-control = max-age=604800 (7天)，不是 24h
+// audio URL 必須加 query string cache-bust，否則用戶瀏覽器 cache 會繼續播舊版 7 天
+// 跟 sw.js CACHE_VERSION 同步——任何一方 bump 都要同步 bump 另一方
+const AUDIO_CACHE_BUST = 'v2.4-pwa';
 const JSON_URL = `${CDN_BASE}/data/video-notes.json`;
 const RAW_JSON_URL = `${RAW_BASE}/data/video-notes.json`;
 // 本地 docs/data/ 優先，避免 raw GitHub 5min cache 延遲
@@ -868,8 +872,9 @@ document.addEventListener('alpine:init', () => {
     getAudioUrl(video, format) {
       const path = video.audio[format];
       if (!path) return '';
-      // 從 data/video-notes.json 的 audio 欄位（"audio/xxx.m4a"）轉 jsDelivr URL
-      return `${CDN_BASE}/${this.encodePath(path)}`;
+      // 2026-08-20 教訓：audio 加 cache-bust query string 強制瀏覽器重新 fetch
+      // (jsDelivr @main 實際 cache 7 天不是 24h，browsers 也會 cache audio 元素)
+      return `${CDN_BASE}/${this.encodePath(path)}?v=${AUDIO_CACHE_BUST}`;
     },
 
     // 2026-07-25 教訓 11：主播放器優先 opus（最小、最省流量），fallback mp3（universal 支援），
