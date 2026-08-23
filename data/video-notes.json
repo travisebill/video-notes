@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 179,
-    "total_with_audio": 150,
-    "total_with_transcript": 106,
-    "total_with_spoken_script": 148,
-    "speakers_count": 75,
+    "total_videos": 180,
+    "total_with_audio": 151,
+    "total_with_transcript": 107,
+    "total_with_spoken_script": 149,
+    "speakers_count": 76,
     "categories_count": 4,
     "topics_count": 16,
     "courses": [
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-08-20 15:06:44",
+    "last_updated": "2026-08-23 22:27:59",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -29,6 +29,7 @@
       "Best Partners TV",
       "Boris Cherny",
       "Boris，Claude Code 的創作者（被稱為「Claude Code 之父」），任職於 Anthropic。先前創辦過多間新創公司，經歷過 Y Combinator，編寫過程式設計和 TypeScript 教科書。自稱「過去一年幾乎沒親手寫過一行程式碼」",
+      "Brian Greene",
       "CNBC",
       "Cedric Clyburn",
       "Claude",
@@ -117,6 +118,34 @@
     ]
   },
   "videos": [
+    {
+      "id": "20260817_BrianGreene_ThreatOfAIConsciousness",
+      "title": "【Professor Brian Greene: The Threat of AI, Consciousness & The End of Humanity】",
+      "speaker": "Brian Greene",
+      "speaker_description": "哥倫比亞大學物理學教授、弦理論共同創始者、《The Elegant Universe》《Until the End of Time》作者",
+      "speaker_slug": "BrianGreene",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🤖 AI 倫理 / 哲學 / 意識",
+      "date": "2026-08-17",
+      "note_date": "2026-08-17",
+      "duration_seconds": 7904,
+      "duration_display": "2:11:44",
+      "video_url": "https://youtu.be/Qifsxitq_q4",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260817_BrianGreene_ThreatOfAIConsciousness_逐字稿.txt",
+        "spoken_script": "transcripts/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md"
+    },
     {
       "id": "20260810_SethGodin_放棄的藝術",
       "title": "【Seth Godin × The Diary Of A CEO】放棄的藝術：在 AI 替你做選擇之前",

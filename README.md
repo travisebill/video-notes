@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **179 支內容** · 307 個音檔 · 158 個逐字稿 · 166 個口播稿
-> 最後更新 2026-08-20
+> **180 支內容** · 310 個音檔 · 159 個逐字稿 · 167 個口播稿
+> 最後更新 2026-08-23
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 5 支影片
 
+- **2026-08-23** | Brian Greene（哥倫比亞大學物理學教授、弦理論共同創始者、《The Elegant Universe》《Until the End of Time》作者）· 主持 Steven Bartlett | [Professor Brian Greene: The Threat of AI, Consciousness & The End of Humanity — AI 比核武更危險（無開關論）+ 意識是現實基本而非計算副產品 + M-theory 11 維宇宙 + 多重宇宙非科幻而是量子力學最保守解釋 + recursive self-improvement 指數風險 + Becker 否認死亡心理學 + 「兩片永恆黑暗之間的一線光明」+ 5 章節 + 17 概念表 + 7 金句](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) · 2:11:44（7904s，131 分鐘 podcast 訪談）（口播稿 4:57）· en-orig Whisper base → 繁中翻譯 · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.60%
 - **2026-08-19** | Uncle Bob Martin（Robert C. Martin，《Clean Code》《Clean Architecture》《The Clean Coder》作者，Agile Manifesto 簽署人）· 主持 Matt Pocock | [Uncle Bob on Software Fundamentals in the Age of AI — disciplines 沒死只是換執行者 + CRAP score + 突變測試復活 + Smart zone/Dumb zone context window + Multi-agent specialization（implementer/reviewer/hardener/specifier）+ John Ousterhout deep modules + 函式大小門檻 4→6/8 + 成本崩跌→fiddle fiddle + Spec 是 ephemeral + 戰術 vs 戰略 + Become the agent 學習路徑 + Dijkstra「軟體是人類做過最複雜的事」+ 抽象層次歷史 + 14 章節 + 13 概念表 + 12 引用 + 12 金句](技術講座/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.md) · 56:39（3399s）（口播稿 4:13）· en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.59%
 - **2026-08-14** | Jeff Dean（Google Chief Scientist、Google DeepMind 共同創辦人；MapReduce / BigTable / TensorFlow / TPU / Gemini 原作者之一）· 主持 Garry Tan | [The 1% Rule for Building in AI — 後摩爾時代的 AI 算力 + agent 時代的工程方法 + 給未來創辦人的「1% 思維」](人物訪談/20260730_JeffDean_The1PercentRuleForBuildingInAI.md) · 57:07（3427s，57 分鐘 podcast 訪談）（口播稿 4:10）· napking math 推導 junior engineer 預測驗證 + agent-based coding 之外領域低估 + 2027 年自動化 ML 系統願景（高階目標拆解 + 子問題 loop + orchestration）+ Long-running agent 從 5-10 步到 1-2 小時 + Gemini 1 億 token context window + model 本身加速 ML research 循環 + 16 章節 + 概念表 + 引用 + 金句 · en-orig Whisper small · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.22%
 - **2026-08-10** | Seth Godin（當代行銷思想家、《紫牛》《部落》《低谷》作者）· 主持 Steven Bartlett | [The Quitting Expert: Quit NOW Before AI Makes The Choice For You, This Is a Superpower! — 放棄的藝術：在 AI 替你做選擇之前](人物訪談/20260810_SethGodin_放棄的藝術.md) · 1:53:06（6786s，113 分鐘 podcast 訪談）（口播稿 4:31）· 從 Michael Jordan「永不放棄」破題開始 + 翻轉沉沒成本謬誤 + The Dip / Cul-de-Sac 框架 + Audience Matters（為誰）核心命題 + Shake Shack 案例（為評論家改又改回） + 三驅動力（恐懼/歸屬/地位）+ 損失厭惡實驗 + AI 革命 vs 電力革命 + Cooper 夫人 78 歲原住民 + 7 多視角切片（經濟學/心理學/行銷學/文化評論/行為經濟學/經濟史/哲學）+ 11 概念表 + 10 金句 · zh-Hant 自動字幕 · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.06%
@@ -111,6 +112,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-08-17 | [Professor Brian Greene: The Threat of AI, Consciousness & The End of Humanity — AI 比核武更危險（無開關論）+ 意識是現實基本而非計算副產品 + M-theory 11 維宇宙 + 多重宇宙非科幻 + recursive self-improvement 指數風險 + 「兩片永恆黑暗之間的一線光明」](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) | Brian Greene（哥倫比亞大學物理學教授、弦理論共同創始者、《The Elegant Universe》《Until the End of Time》作者）· 主持 Steven Bartlett | 2:11:44（7904s）（口播稿 4:57）| [📄 note](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) · [📝 逐字稿](transcripts/20260817_BrianGreene_ThreatOfAIConsciousness_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.txt) · [🔊 opus](audio/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.opus) · [🔊 m4a](audio/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.m4a) · [🔊 mp3](audio/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.mp3) |
 | 2026-08-19 | [Uncle Bob on Software Fundamentals in the Age of AI — disciplines 沒死只是換執行者 + CRAP score + 突變測試復活 + Smart zone/Dumb zone context window + Multi-agent specialization + Ousterhout deep modules + 函式大小門檻變化 + 成本崩跌→fiddle fiddle + Spec 是 ephemeral + 戰術 vs 戰略 + Become the agent 學習路徑](技術講座/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.md) | Uncle Bob Martin（Robert C. Martin，《Clean Code》《Clean Architecture》《The Clean Coder》作者，Agile Manifesto 簽署人）· 主持 Matt Pocock | 56:39（3399s）（口播稿 4:13）| [📄 note](技術講座/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.md) · [📝 逐字稿](transcripts/20260819_UncleBob_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI_口播稿.txt) · [🔊 opus](audio/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.opus) · [🔊 m4a](audio/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.m4a) · [🔊 mp3](audio/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.mp3) |
 | 2026-08-17 | [Graph Engineering：給 AI 工作的流程圖（Anatoli Kopadze）— node/edge/diamond/verifier/anchor + fake-edge test + 5 個現成模板 + Bun $165K 範例](技術講座/20260817_AnatoliKopadze_GraphEngineering.md) | Anatoli Kopadze（@AnatoliKopadze，丹麥頂尖大學背景）| Article（口播稿 3:33 / 213s）| [📄 note](技術講座/20260817_AnatoliKopadze_GraphEngineering.md) · [📝 逐字稿](transcripts/20260817_AnatoliKopadze_GraphEngineering_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260817_AnatoliKopadze_GraphEngineering_口播稿.txt) · [🔊 opus](audio/20260817_AnatoliKopadze_GraphEngineering.opus) · [🔊 m4a](audio/20260817_AnatoliKopadze_GraphEngineering.m4a) · [🔊 mp3](audio/20260817_AnatoliKopadze_GraphEngineering.mp3) |
 | 2026-08-06 | [Introducing Kitesurf: The agent-first browser that runs in V8 isolates on Cloudflare Workers](技術講座/20260806_Cloudflare_IntroducingKitesurf.md) | Cloudflare team（Celso Martinho + Ruskin Constant）| 4:14（254s）（口播稿 4:14）| [📄 note](技術講座/20260806_Cloudflare_IntroducingKitesurf.md) · [📝 逐字稿](transcripts/20260806_Cloudflare_IntroducingKitesurf_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260806_Cloudflare_IntroducingKitesurf_口播稿.txt) · [🔊 opus](audio/20260806_Cloudflare_IntroducingKitesurf_口播稿.opus) · [🔊 mp3](audio/20260806_Cloudflare_IntroducingKitesurf_口播稿.mp3) |
@@ -267,8 +269,9 @@
 <a id="by-topic"></a>
 ## 🏷️ 按主題
 
-### 🤖 **AI 倫理 / 哲學 / 意識**（9 支）
+### 🤖 **AI 倫理 / 哲學 / 意識**（10 支）
 
+- 2026-08-17 | [Professor Brian Greene: The Threat of AI, Consciousness & The End of Humanity — 弦理論家跨界談 AI 風險 + 意識本質 + 人類存亡](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) · Brian Greene（哥倫比亞大學物理學教授、弦理論共同創始者、《The Elegant Universe》《Until the End of Time》作者） × Steven Bartlett · 2:11:44（7904s）｜AI 比核武更危險（無開關論）+ 意識是現實基本而非計算副產品 + Chalmers hard problem + M-theory 11 維 + 暴脹多重宇宙 + recursive self-improvement 指數風險 + 「兩片永恆黑暗之間的一線光明」+ Anthropic Dario 2026-2029 AGI 時間表質疑 + Becker 否認死亡心理學 + 模擬假說與 Bostrom 三論證
 - 2026-08-02 | [哈拉瑞 gala 對談：50 年後的人類、AI 與民主 — EDP 50 週年 Gala 對談 Tom Parker](人物訪談/20260730_Harari_50年AI.md) · Yuval Noah Harari（《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者） × Tom Parker（FT《The Next Five》主播）· 48:06（2886s）｜AI 代理人接管官僚體系 + 大規模民主依賴資訊科技 + intelligence vs wisdom 精靈比喻 + 100:1 安全預算比 + AI 帝國「帝都開關」+ wisdom revolution 呼籲
 - 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · Yuval Noah Harari（希伯來大學歷史系教授、《Sapiens》作者） × Ezra Klein（Vox）· 1 小時 55 分 36 秒（6936s）
 - 2026-06-30 | [AI has hacked the code of human civilization — Yuval Noah Harari @ Oxford 2026 Tanner Lecture](國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md) · Yuval Noah Harari（希伯來大學歷史系教授、《人類大歷史》作者） × Linacre College, Oxford University · 47 分鐘（口播稿 4:39）
@@ -476,6 +479,8 @@
 <a id="by-speaker"></a>
 ## 👥 按講者
 
+- **Brian Greene（哥倫比亞大學物理學教授、弦理論共同創始者、《The Elegant Universe》《Until the End of Time》作者）** · 2026-08-17 | [Professor Brian Greene: The Threat of AI, Consciousness & The End of Humanity — DOAC 訪談](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) · 2:11:44（7904s）｜AI 比核武更危險（無開關論）+ 意識是現實基本而非計算副產品 + M-theory 11 維 + 多重宇宙非科幻而是量子力學最保守解釋 + recursive self-improvement 指數風險 + Becker 否認死亡 + 「兩片永恆黑暗之間的一線光明」+ 5 章節 + 17 概念表 + 7 金句
+
 - **Ray Dalio（Bridgewater Associates 創辦人、1500 億美金對沖基金、《Principles》作者）** · 2026-07-30 | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — DOAC 訪談](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · 1:30:17（5417s）｜AI bubble + big cycle + 5 forces + Bitcoin vs Gold + AI jobs + 80-year cycle + multipolar world order + Iran conflict
 
 - **睡前听书助眠（audiobook summary channel）· 來源書籍《被討厭的勇氣》岸見一郎 × 古賀史健合著** · 2026-02-21 | [睡前听完一本书《被讨厌的勇气》—— 阿德勒心理學核心觀點 + 課題分離 + 不被討厭的勇氣](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) · 19:15（1155s）｜Whisper 中文 base 聽寫 fallback（YouTube 自動字幕 429 rate limit）｜阿德勒心理學核心：痛苦是主動選擇 + 目的論 vs 原因論 + 課題分離三步驟 + 自卑感 vs 自卑情結 + 共同體感覺
@@ -592,7 +597,7 @@
 <a id="by-type"></a>
 ## 📂 按分類
 
-- 🎙️ **人物訪談**（13 支）→ [完整列表](人物訪談/README.md)
+- 🎙️ **人物訪談**（14 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（68 支）→ [完整列表](技術講座/README.md)
