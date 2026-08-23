@@ -8,7 +8,8 @@ const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main
 // 2026-08-20 教訓：jsDelivr 實際 cache-control = max-age=604800 (7天)，不是 24h
 // audio URL 必須加 query string cache-bust，否則用戶瀏覽器 cache 會繼續播舊版 7 天
 // 跟 sw.js CACHE_VERSION 同步——任何一方 bump 都要同步 bump 另一方
-const AUDIO_CACHE_BUST = 'v2.4-pwa';
+// 2026-08-23：bump v2.4 → v2.5（Brian Greene 口播稿 # 開頭檔頭重 TTS 後 audio binary content 改變）
+const AUDIO_CACHE_BUST = 'v2.5-pwa';
 const JSON_URL = `${CDN_BASE}/data/video-notes.json`;
 const RAW_JSON_URL = `${RAW_BASE}/data/video-notes.json`;
 // 本地 docs/data/ 優先，避免 raw GitHub 5min cache 延遲
