@@ -1,0 +1,13 @@
+本场访谈是 Matthew Berman 与 OpenAI Codex 团队成员 Tibo 的 44 分钟深度对谈，横跨 16 个章节，触及 OpenAI 内部文化、Codex 与 ChatGPT 合并、Ultra-fast inference 解锁的新型态应用，以及 Recursive self-improvement 的真实样貌。三条主轴看似独立，却在本质上交织成一条核心线索：OpenAI 的 next wave 不是单一新模型，而是「个人 AGI 介面统一、Ultra-fast 解锁新型态应用、Frontier 模型持续降价普及」这三条轴线同时推进。
+
+Tibo 首先从 DeepMind 到 OpenAI 的文化对比破题。DeepMind 是研究导向、不擅长 ship product 的组织，当年内部已研发出 LM Chat，距 ChatGPT 问世前约一年，却最终未对外释出。OpenAI 的文化截然不同：研究与产品极度紧密协作、共同设计、bias to ship，这也是吸引 Tibo 从 DeepMind 跳槽至 OpenAI 的核心理由。OpenAI 文化归纳为两个看似矛盾的面：bottom-up empowering（任何人可快速 ship 新想法）与顶层的简洁与品质坚持，两者透过「把强大技术尽量让最多人能用」的使命感对齐。
+
+第二条主轴是 Codex × ChatGPT 合并的设计哲学。Tibo 强调合并是因为未来模型设计就是要 merge 的 — 同一个底层模型、同一个 harness、同一个 voice-first 的 multimodal 架构。介面会根据个人需要自动调适；「工程师介面」或「非技术介面」这种标签，是人类发明来处理抽象的产物，AI 该学会适应每一个体的独特性，而非强迫使用者改变自己。
+
+第三条主轴是 Ultra-fast inference 解锁的 next wave。Ultra-fast 比标准速度快 14 倍，让「在 flow 中保持注意力」变得可能、催生非文字互动如共享画布与 real-time prototype steer，但同时把瓶颈从 LLM 移到网路与 tool call 层。对纯生成任务约 10 倍加速，含大量 tool call 的 agent 任务仅 3-4 倍。Tibo 预期 ultra-fast 在 1-2 年内会成为接近预设的速度。
+
+对 Recursive self-improvement，Tibo 给出务实定义：最强模型反过来优化 serving 自己的 inference stack、CUDA kernel、产品流程 —「整个系统是一个大循环」。对 Sam Altman 暂停 frontier RL 训练的决策，他坦言属于 safety team 的标准程序，重启时机由一组明确原则决定。
+
+对 AI 焦虑的大众，Tibo 的论点是「效率会自然普及」：今天的 frontier 模型 6 个月后会变得极便宜甚至免费。以 Luna 为例，6 个月前的 frontier 级模型现在几乎免费。OpenAI 的核心使命就是把强大智慧递到最多人手里；起点很简单，跟身边的人聊聊 AI 怎么帮助他们，从中得到启发，再想想自己可以怎么受惠。
+
+Codex 之所以能在极短时间内突破 2000 万用户，动能来自两股力量的叠加：合并 ChatGPT 带来的 distribution 红利，加上 OpenAI 把强大技术递到非工程师手里的使命感。对比之下，Anthropic 走的是另一条路 — 高度专注 safety 与品牌社群经营。Tibo 不太看竞争对手，他真正关注的是 OpenAI 能独特地做好的事：把 frontier 级智能以最低成本、最快速度递到最多人手里，这件事本身就是 OpenAI 区别于所有同业的护城河。
