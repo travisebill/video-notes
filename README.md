@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **181 支內容** · 313 個音檔 · 160 個逐字稿 · 168 個口播稿
-> 最後更新 2026-08-26
+> **182 支內容** · 316 個音檔 · 160 個逐字稿 · 169 個口播稿
+> 最後更新 2026-08-31
 
 ---
 
@@ -17,7 +17,8 @@
 
 > 最近 6 支影片
 
-- **2026-08-26** | Tibo（Thibault Sottiaux，OpenAI Codex 團隊 Technical Staff，前 Google DeepMind）· 主持 Matthew Berman（Forward Future 作者、AI 教育頻道經營者）| [How to Understand the Next Wave of AI Before Everyone Else — Tibo Interview — DeepMind vs OpenAI 文化對比（bottom-up empowering × bias to ship vs 研究導向不擅長 ship）+ Codex × ChatGPT 合併設計（同一個底層模型 + 同一個 harness + 不預設工程師/非技術標籤）+ Ultra-fast inference（14x tokens/sec 解鎖「在 flow 中保持注意力」+ 非文字互動共享畫布 + real-time prototype steer + 瓶頸從 LLM 移到 network / tool call 層）+ recursive self-improvement 真實樣貌（最強模型反過來優化 inference stack / CUDA kernel / 產品流程整套系統迭代，不是「模型訓練模型」）+ Sam Altman 暫停 frontier RL 訓練（safety team 標準程序，重啟時機由明確原則決定）+ Anthropic 開放態度（OpenAI 差異化在「為全世界打造」的使命感）+ 16 章節 + 16 概念表 + 16 金句](人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md) · 44:28（2668s，44 分鐘 podcast 訪談）（口播稿 4:07）· en-orig 自動字幕（rolling-sub cleanup + Matt/Tibo 講者標記）· Chinese (Mandarin)_Soft_Girl · Bar 2 0.00/1K · Bar 3 9.73%
+- **2026-08-29** | 自說自話的總裁（YouTube 宇宙科普頻道）| [宇宙穿模與黑洞宇宙學：韋伯上天5年看到的5大異常 — 邪惡軸心（CMB 斑點排成一條直線且與太陽系黃道面精準對齊）+ 33億光年巨型圓環 + 13億光年標準圓環 + 哈伯張力（67.4 vs 73）+ JADES-GS-z14 / MoM-z14 過早成熟遠古星系 + 小紅點之謎（16條鐵譜線）+ Abell 2744 QSO1 4000萬倍太陽質量赤裸黑洞 + Popławski 黑洞宇宙學統合框架 + Einstein-Cartan 扭力反彈 + Pathria 1972 + AI 星系旋向 2/3 左旋佐證 + NASA 2008 Bulk Flow + 1964 Penzias/Wilson → 1965 Peebles → 1998 Riess → 2009 Planck → 2019 Peebles 諾獎 → 2026 Peebles 自稱黑粉 + 羅傑·彭羅斯 conformal cosmology 鉤子](人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md) · 34:33（2073s）（口播稿 5:42）· Whisper small 中文聽寫（initial_prompt 對齊物理天文術語）· xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 7.39%
+- **2026-08-26** | Tibo（Thibault Sottiaux，OpenAI Codex 團隊 Technical Staff，前 Google DeepMind）· 主持 Matthew Berman（Forward Future 作者、AI 教育頻道經營者）| [How to Understand the Next Wave of AI Before Everyone Else — Tibo Interview — DeepMind vs OpenAI 文化對比（bottom-up empowering × bias to ship vs 研究導向不擅長 ship）+ Codex × ChatGPT 合併設計（同一個底層模型 + 同一個 harness + 不預設工程師/非技術標籤）+ Ultra-fast inference（14x tokens/sec 解鎖「在 flow 中保持注意力」+ 非文字互動共享畫布 + real-time prototype steer + 瓶頸從 LLM 移到 network / tool call 層）+ recursive self-improvement 真實樣貌（最強模型反過來優化 inference stack / CUDA kernel / 產品流程整套系統迭代，不是「模型訓練模型」）+ Sam Altman 暫停 frontier RL 訓練（safety team 標準程序，重啟時機由明確原則決定）+ Anthropic 開放態度（OpenAI 差異化在「為全世界打造」的使命感）+ 16 章節 + 16 概念表 + 16 金句](人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md) · 44:28（2668s，44 分鐘 podcast 訪談）（口播稿 4:07）· en-orig 自動字幕（rolling-sub cleanup + Matt/Tibo 講者標記）· xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 9.73%
 - **2026-08-23** | Brian Greene（哥倫比亞大學物理學教授、弦理論共同創始者、《The Elegant Universe》《Until the End of Time》作者）· 主持 Steven Bartlett | [Professor Brian Greene: The Threat of AI, Consciousness & The End of Humanity — AI 比核武更危險（無開關論）+ 意識是現實基本而非計算副產品 + M-theory 11 維宇宙 + 多重宇宙非科幻而是量子力學最保守解釋 + recursive self-improvement 指數風險 + Becker 否認死亡心理學 + 「兩片永恆黑暗之間的一線光明」+ 5 章節 + 17 概念表 + 7 金句](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) · 2:11:44（7904s，131 分鐘 podcast 訪談）（口播稿 4:57）· en-orig Whisper base → 繁中翻譯 · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.60%
 - **2026-08-19** | Uncle Bob Martin（Robert C. Martin，《Clean Code》《Clean Architecture》《The Clean Coder》作者，Agile Manifesto 簽署人）· 主持 Matt Pocock | [Uncle Bob on Software Fundamentals in the Age of AI — disciplines 沒死只是換執行者 + CRAP score + 突變測試復活 + Smart zone/Dumb zone context window + Multi-agent specialization（implementer/reviewer/hardener/specifier）+ John Ousterhout deep modules + 函式大小門檻 4→6/8 + 成本崩跌→fiddle fiddle + Spec 是 ephemeral + 戰術 vs 戰略 + Become the agent 學習路徑 + Dijkstra「軟體是人類做過最複雜的事」+ 抽象層次歷史 + 14 章節 + 13 概念表 + 12 引用 + 12 金句](技術講座/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.md) · 56:39（3399s）（口播稿 4:13）· en-orig auto-subs · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.59%
 - **2026-08-14** | Jeff Dean（Google Chief Scientist、Google DeepMind 共同創辦人；MapReduce / BigTable / TensorFlow / TPU / Gemini 原作者之一）· 主持 Garry Tan | [The 1% Rule for Building in AI — 後摩爾時代的 AI 算力 + agent 時代的工程方法 + 給未來創辦人的「1% 思維」](人物訪談/20260730_JeffDean_The1PercentRuleForBuildingInAI.md) · 57:07（3427s，57 分鐘 podcast 訪談）（口播稿 4:10）· napking math 推導 junior engineer 預測驗證 + agent-based coding 之外領域低估 + 2027 年自動化 ML 系統願景（高階目標拆解 + 子問題 loop + orchestration）+ Long-running agent 從 5-10 步到 1-2 小時 + Gemini 1 億 token context window + model 本身加速 ML research 循環 + 16 章節 + 概念表 + 引用 + 金句 · en-orig Whisper small · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.22%
@@ -113,6 +114,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-08-29 | [宇宙穿模與黑洞宇宙學 — 韋伯上天5年看到的5大異常 + Popławski 黑洞宇宙學 + 邪惡軸心 + 哈伯張力 + 小紅點之謎 + Abell 2744 QSO1 + 彭羅斯 conformal cosmology 鉤子](人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md) | 自說自話的總裁（YouTube 宇宙科普頻道）| 34:33（2073s）（口播稿 5:42）| [📄 note](人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md) · [🎙️ 口播稿](transcripts/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.txt) · [🔊 opus](audio/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.opus) · [🔊 m4a](audio/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.m4a) · [🔊 mp3](audio/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.mp3) |
 | 2026-08-26 | [How to Understand the Next Wave of AI Before Everyone Else — Tibo Interview — DeepMind vs OpenAI 文化對比 + Codex×ChatGPT 合併設計 + Ultra-fast inference (14x tokens/sec) + recursive self-improvement 真實樣貌 + Anthropic 開放態度](人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md) | Tibo（Thibault Sottiaux，OpenAI Codex 團隊 Technical Staff，前 Google DeepMind）· 主持 Matthew Berman（Forward Future 作者、AI 教育頻道經營者）| 44:28（2668s，44 分鐘 podcast 訪談）（口播稿 4:07）| [📄 note](人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md) · [📝 逐字稿](transcripts/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_口播稿.txt) · [🔊 opus](audio/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_口播稿.opus) · [🔊 m4a](audio/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_口播稿.m4a) · [🔊 mp3](audio/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_口播稿.mp3) |
 | 2026-08-17 | [Professor Brian Greene: The Threat of AI, Consciousness & The End of Humanity — AI 比核武更危險（無開關論）+ 意識是現實基本而非計算副產品 + M-theory 11 維宇宙 + 多重宇宙非科幻 + recursive self-improvement 指數風險 + 「兩片永恆黑暗之間的一線光明」](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) | Brian Greene（哥倫比亞大學物理學教授、弦理論共同創始者、《The Elegant Universe》《Until the End of Time》作者）· 主持 Steven Bartlett | 2:11:44（7904s）（口播稿 4:57）| [📄 note](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) · [📝 逐字稿](transcripts/20260817_BrianGreene_ThreatOfAIConsciousness_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.txt) · [🔊 opus](audio/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.opus) · [🔊 m4a](audio/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.m4a) · [🔊 mp3](audio/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.mp3) |
 | 2026-08-19 | [Uncle Bob on Software Fundamentals in the Age of AI — disciplines 沒死只是換執行者 + CRAP score + 突變測試復活 + Smart zone/Dumb zone context window + Multi-agent specialization + Ousterhout deep modules + 函式大小門檻變化 + 成本崩跌→fiddle fiddle + Spec 是 ephemeral + 戰術 vs 戰略 + Become the agent 學習路徑](技術講座/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.md) | Uncle Bob Martin（Robert C. Martin，《Clean Code》《Clean Architecture》《The Clean Coder》作者，Agile Manifesto 簽署人）· 主持 Matt Pocock | 56:39（3399s）（口播稿 4:13）| [📄 note](技術講座/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.md) · [📝 逐字稿](transcripts/20260819_UncleBob_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI_口播稿.txt) · [🔊 opus](audio/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.opus) · [🔊 m4a](audio/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.m4a) · [🔊 mp3](audio/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.mp3) |
@@ -431,7 +433,9 @@
 - 2026-06-09 | [WWDC 2026 Impressions: Yeah, That's About Right](技術講座/20260609_MKBHD_WWDC2026_YeahThatsAboutRight.md) · ? · 16:28
 - 2026-02-05 | [黃仁勳最新訪談：你不會輸給 AI，但你會輸給會用 AI 的人](技術講座/20260205_JensenHuang_不輸給AI_輸給會用AI的人.md) · Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長 · 44 分鐘
 
-### 🌍 **地球科學 / 太空 / 科普**（2 支）
+### 🌍 **地球科學 / 太空 / 科普**（3 支）
+
+- 2026-08-29 | [宇宙穿模與黑洞宇宙學 — 韋伯上天5年看到的5大異常（邪惡軸心 / 33億光年巨型圓環 / 哈伯張力 / JADES-GS-z14 / 小紅點之謎）+ Popławski 黑洞宇宙學統合框架](人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md) · 自說自話的總裁 · 34:33（2073s）（口播稿 5:42）· xiaotian_clone_v1
 
 - 2026-08-01 | [柯伊伯帶與 2700 萬年大清洗](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) · 自說自話的總裁（《人類大歷史》《Nexus》作者）· 33:25（2005s）｜1994 舒梅克－李維 9 號撞木星 → 柯伊伯帶（古伯帶）與「殭屍地球」→ 2700 萬年週期性滅絕 → Planet X / Planet Nine 引力異常候選解釋
 
@@ -539,6 +543,7 @@
 - **Yann LeCun** · 2026 | [World Models 將開啟下一場 AI 革命 — 從 LLMs 的死路到 AMILabs](技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md) · 58 分 54 秒
 - **馬臉姐** · 2026-06-19 | [AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說](技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md) · 29 分 55 秒
 - **馬臉姐** · 2025-10-31 | [AI 2027 報告：兩種結局、6 段時間線，與台灣在 AI 晶片戰爭中的關鍵角色](技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md) · 39 分 18 秒
+- **自說自話的總裁** · 2026-08-29 | [宇宙穿模與黑洞宇宙學 — 韋伯上天5年看到的5大異常（邪惡軸心 / 巨型圓環 / 哈伯張力 / JADES-GS-z14 / 小紅點之謎）+ Popławski 黑洞宇宙學 + Einstein-Cartan 扭力反彈 + 彭羅斯 conformal cosmology](人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md) · 34:33（2073s）（口播稿 5:42）· xiaotian_clone_v1
 - **自說自話的總裁** · 2026-08-01 | [柯伊伯帶與 2700 萬年大清洗 — 太陽系「殭屍地球」/ 紅線 / Planet X](人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md) · 33:25（2005s）｜1994 舒梅克－李維 9 號撞木星 → 柯伊伯帶（古伯帶）→ 2700 萬年週期性滅絕 → Planet X / Planet Nine 引力異常 → 5 視角切片（天文學 / 行星科學 / 宇宙論 / 古生物學 / 數學模擬）
 - **自說自話的總裁** · 2026-06-28 | [煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明](人物訪談/20260627_自說自話的總裁_煤與Starship與2100年的地球.md) · 30 分 54 秒
 - **自說自話的總裁** · 2026-06-13 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md) · 28 分 50 秒
@@ -603,7 +608,7 @@
 <a id="by-type"></a>
 ## 📂 按分類
 
-- 🎙️ **人物訪談**（14 支）→ [完整列表](人物訪談/README.md)
+- 🎙️ **人物訪談**（15 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（68 支）→ [完整列表](技術講座/README.md)
