@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 181,
-    "total_with_audio": 152,
+    "total_videos": 182,
+    "total_with_audio": 153,
     "total_with_transcript": 108,
-    "total_with_spoken_script": 150,
+    "total_with_spoken_script": 151,
     "speakers_count": 77,
     "categories_count": 4,
     "topics_count": 16,
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-08-26 06:59:51",
+    "last_updated": "2026-08-31 18:11:24",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -119,6 +119,34 @@
     ]
   },
   "videos": [
+    {
+      "id": "20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學",
+      "title": "自說自話的總裁：宇宙穿模與黑洞宇宙學",
+      "speaker": "自說自話的總裁",
+      "speaker_description": null,
+      "speaker_slug": "自說自話的總裁",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🌍 地球科學 / 太空 / 科普",
+      "date": "2026-08-29",
+      "note_date": "2026-08-29",
+      "duration_seconds": 2073,
+      "duration_display": "34:33",
+      "video_url": "https://youtu.be/91CZpaZe12M?si=WneAQPO5ESOtBFtt",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": null,
+        "spoken_script": "transcripts/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md"
+    },
     {
       "id": "20260826_Tibo_NextWaveOfAIBeforeEveryoneElse",
       "title": "【How to Understand the Next Wave of AI Before Everyone Else — Tibo Interview】",
