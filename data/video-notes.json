@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 182,
-    "total_with_audio": 153,
-    "total_with_transcript": 108,
-    "total_with_spoken_script": 151,
-    "speakers_count": 77,
+    "total_videos": 183,
+    "total_with_audio": 154,
+    "total_with_transcript": 109,
+    "total_with_spoken_script": 152,
+    "speakers_count": 78,
     "categories_count": 4,
     "topics_count": 16,
     "courses": [
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-08-31 18:11:24",
+    "last_updated": "2026-09-02 19:07:12",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -77,6 +77,7 @@
       "TVBS文茜",
       "Tara Agyemang",
       "Tejas",
+      "The Diary Of A CEO",
       "Tibo",
       "Uncle Bob",
       "YC",
@@ -119,6 +120,34 @@
     ]
   },
   "videos": [
+    {
+      "id": "20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism",
+      "title": "【美國帝國正在衰退、社會主義即將到來？白宮科技顧問 David Friedberg 全方位解析】",
+      "speaker": "The Diary Of A CEO",
+      "speaker_description": "Steven Bartlett 主持",
+      "speaker_slug": "TheDiaryOfACEO",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "💰 財經 / 經濟",
+      "date": "2026-08-31",
+      "note_date": "2026-08-31",
+      "duration_seconds": 7490,
+      "duration_display": "2:04:50",
+      "video_url": "https://youtu.be/OYg6BTjb90E?si=T9LmYEugj3ST1716",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_逐字稿.txt",
+        "spoken_script": "transcripts/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md"
+    },
     {
       "id": "20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學",
       "title": "自說自話的總裁：宇宙穿模與黑洞宇宙學",

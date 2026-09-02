@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **182 支內容** · 316 個音檔 · 160 個逐字稿 · 169 個口播稿
+> **183 支內容** · 319 個音檔 · 161 個逐字稿 · 170 個口播稿
 > 最後更新 2026-08-31
 
 ---
@@ -15,8 +15,9 @@
 
 ## ⭐ 最新加入
 
-> 最近 6 支影片
+> 最近 7 支影片
 
+- **2026-08-31** | David Friedberg（白宮科技顧問 PCAST / All-In Podcast 共同主持人 / 氣候公司 The Climate Corporation 創辦人，2013 年以 $1.1B 賣給 Monsanto）· 主持 Steven Bartlett（The Diary Of A CEO）| [美國帝國正在衰退、社會主義即將到來？白宮科技顧問 David Friedberg 全方位解析 — Ray Dalio 帝國週期模型 + 63% 月光族 + 自有住房是最大謊言 + 財富稅 vs 私有財產權 + AI 黃金時代 + Klarna 案例 + 開源 AI 雙面刃 + Yamanaka factors 長壽革命 + 2028 總統大選 AOC 預測 + 伊朗局勢荷莫茲海峽新槓桿](人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md) · 2:04:50（7490s，124 分鐘 podcast 訪談，40 個章節）（口播稿 4:50）· Whisper small en + initial_prompt 對齊（Friedberg / Klarna / Dov Charney / Trump Science Advisor / longevity / epigenetics / socialism / AI / Iran war / Elon Musk / Ray Dalio / Sam Altman）· xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 6.91%
 - **2026-08-29** | 自說自話的總裁（YouTube 宇宙科普頻道）| [宇宙穿模與黑洞宇宙學：韋伯上天5年看到的5大異常 — 邪惡軸心（CMB 斑點排成一條直線且與太陽系黃道面精準對齊）+ 33億光年巨型圓環 + 13億光年標準圓環 + 哈伯張力（67.4 vs 73）+ JADES-GS-z14 / MoM-z14 過早成熟遠古星系 + 小紅點之謎（16條鐵譜線）+ Abell 2744 QSO1 4000萬倍太陽質量赤裸黑洞 + Popławski 黑洞宇宙學統合框架 + Einstein-Cartan 扭力反彈 + Pathria 1972 + AI 星系旋向 2/3 左旋佐證 + NASA 2008 Bulk Flow + 1964 Penzias/Wilson → 1965 Peebles → 1998 Riess → 2009 Planck → 2019 Peebles 諾獎 → 2026 Peebles 自稱黑粉 + 羅傑·彭羅斯 conformal cosmology 鉤子](人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md) · 34:33（2073s）（口播稿 5:42）· Whisper small 中文聽寫（initial_prompt 對齊物理天文術語）· xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 7.39%
 - **2026-08-26** | Tibo（Thibault Sottiaux，OpenAI Codex 團隊 Technical Staff，前 Google DeepMind）· 主持 Matthew Berman（Forward Future 作者、AI 教育頻道經營者）| [How to Understand the Next Wave of AI Before Everyone Else — Tibo Interview — DeepMind vs OpenAI 文化對比（bottom-up empowering × bias to ship vs 研究導向不擅長 ship）+ Codex × ChatGPT 合併設計（同一個底層模型 + 同一個 harness + 不預設工程師/非技術標籤）+ Ultra-fast inference（14x tokens/sec 解鎖「在 flow 中保持注意力」+ 非文字互動共享畫布 + real-time prototype steer + 瓶頸從 LLM 移到 network / tool call 層）+ recursive self-improvement 真實樣貌（最強模型反過來優化 inference stack / CUDA kernel / 產品流程整套系統迭代，不是「模型訓練模型」）+ Sam Altman 暫停 frontier RL 訓練（safety team 標準程序，重啟時機由明確原則決定）+ Anthropic 開放態度（OpenAI 差異化在「為全世界打造」的使命感）+ 16 章節 + 16 概念表 + 16 金句](人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md) · 44:28（2668s，44 分鐘 podcast 訪談）（口播稿 4:07）· en-orig 自動字幕（rolling-sub cleanup + Matt/Tibo 講者標記）· xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 9.73%
 - **2026-08-23** | Brian Greene（哥倫比亞大學物理學教授、弦理論共同創始者、《The Elegant Universe》《Until the End of Time》作者）· 主持 Steven Bartlett | [Professor Brian Greene: The Threat of AI, Consciousness & The End of Humanity — AI 比核武更危險（無開關論）+ 意識是現實基本而非計算副產品 + M-theory 11 維宇宙 + 多重宇宙非科幻而是量子力學最保守解釋 + recursive self-improvement 指數風險 + Becker 否認死亡心理學 + 「兩片永恆黑暗之間的一線光明」+ 5 章節 + 17 概念表 + 7 金句](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) · 2:11:44（7904s，131 分鐘 podcast 訪談）（口播稿 4:57）· en-orig Whisper base → 繁中翻譯 · xiaotian_clone_v1 · Bar 2 0.00/1K · Bar 3 8.60%
@@ -114,6 +115,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-08-31 | [美國帝國正在衰退、社會主義即將到來？白宮科技顧問 David Friedberg 全方位解析 — Ray Dalio 帝國週期 + 63% 月光族 + 自有住房是最大謊言 + 財富稅 vs 私有財產權 + AI 黃金時代 + Klarna 案例 + 開源 AI 雙面刃 + Yamanaka factors 長壽革命 + 2028 總統大選 AOC 預測 + 伊朗局勢荷莫茲海峽新槓桿](人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md) | David Friedberg（白宮科技顧問 PCAST / All-In Podcast 共同主持人 / 氣候公司 The Climate Corporation 創辦人，2013 年以 $1.1B 賣給 Monsanto）· 主持 Steven Bartlett（The Diary Of A CEO）| 2:04:50（7490s，124 分鐘 podcast 訪談，40 個章節）（口播稿 4:50）| [📄 note](人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md) · [📝 逐字稿](transcripts/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.txt) · [🔊 opus](audio/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.opus) · [🔊 m4a](audio/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.m4a) · [🔊 mp3](audio/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.mp3) |
 | 2026-08-29 | [宇宙穿模與黑洞宇宙學 — 韋伯上天5年看到的5大異常 + Popławski 黑洞宇宙學 + 邪惡軸心 + 哈伯張力 + 小紅點之謎 + Abell 2744 QSO1 + 彭羅斯 conformal cosmology 鉤子](人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md) | 自說自話的總裁（YouTube 宇宙科普頻道）| 34:33（2073s）（口播稿 5:42）| [📄 note](人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md) · [🎙️ 口播稿](transcripts/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.txt) · [🔊 opus](audio/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.opus) · [🔊 m4a](audio/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.m4a) · [🔊 mp3](audio/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.mp3) |
 | 2026-08-26 | [How to Understand the Next Wave of AI Before Everyone Else — Tibo Interview — DeepMind vs OpenAI 文化對比 + Codex×ChatGPT 合併設計 + Ultra-fast inference (14x tokens/sec) + recursive self-improvement 真實樣貌 + Anthropic 開放態度](人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md) | Tibo（Thibault Sottiaux，OpenAI Codex 團隊 Technical Staff，前 Google DeepMind）· 主持 Matthew Berman（Forward Future 作者、AI 教育頻道經營者）| 44:28（2668s，44 分鐘 podcast 訪談）（口播稿 4:07）| [📄 note](人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md) · [📝 逐字稿](transcripts/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_口播稿.txt) · [🔊 opus](audio/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_口播稿.opus) · [🔊 m4a](audio/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_口播稿.m4a) · [🔊 mp3](audio/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_口播稿.mp3) |
 | 2026-08-17 | [Professor Brian Greene: The Threat of AI, Consciousness & The End of Humanity — AI 比核武更危險（無開關論）+ 意識是現實基本而非計算副產品 + M-theory 11 維宇宙 + 多重宇宙非科幻 + recursive self-improvement 指數風險 + 「兩片永恆黑暗之間的一線光明」](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) | Brian Greene（哥倫比亞大學物理學教授、弦理論共同創始者、《The Elegant Universe》《Until the End of Time》作者）· 主持 Steven Bartlett | 2:11:44（7904s）（口播稿 4:57）| [📄 note](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) · [📝 逐字稿](transcripts/20260817_BrianGreene_ThreatOfAIConsciousness_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.txt) · [🔊 opus](audio/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.opus) · [🔊 m4a](audio/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.m4a) · [🔊 mp3](audio/20260817_BrianGreene_ThreatOfAIConsciousness_口播稿.mp3) |
@@ -286,8 +288,9 @@
 - 2026-07-01 | [AI Scientist: 99.9% Chance Super Intelligence Wipes Us Out By 2030 — Dr. Roman Yampolskiy](人物訪談/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk.md) · Dr. Roman Yampolskiy（University of Louisville AI 安全研究者、《AI: Unexplainable, Unpredictable, Uncontrollable》作者） × Decoded Genius · 53 分 23 秒｜99.9% 滅絕機率 = 控制不可能的數學下界 + 15 年 controllability 研究 + Oppenheimer Moment + 模擬假說 + 最後一句 "Told you so"
 - 2026-07-18 | [人類並不孤單：科學家發現身邊正隱藏著一個平行文明⋯⋯鸚鵡 Alex 30 年研究、鳥類智慧與意識的兩條平行進化線](人物訪談/20260718_自說自話的總裁_人類並不孤單.md) · 自說自話的總裁 · 31 分 15 秒（1875s）｜Whisper `base` 中文聽寫 + Pepperberg Alex 30 年研究 + 微型麥克風田野觀察 signature calls
 
-### 🧠 **AI / LLM 學術與方法論**（70 支）
+### 🧠 **AI / LLM 學術與方法論**（71 支）
 
+- 2026-08-31 | [AI 黃金時代 + Klarna 案例 + 開源 AI 雙面刃 — 從 Adam Smith 看不見的手到 David Sinclair 的 AI 革命](人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md) · David Friedberg（白宮科技顧問 PCAST / All-In Podcast 共同主持人）· 主持 Steven Bartlett · 2:04:50（7490s）（口播稿 4:50）｜AI 是當代最重要議題 + 開源 AI 讓新億萬富翁從零崛起 + 10 年內下載開源 AI 變億萬富翁 + Klarna 證明 AI 不會讓就業總量下滑 + Elon / Sam Altman / Ray Dalio 對 AI 價值的不同觀點
 - 2026-08-26 | [How to Understand the Next Wave of AI Before Everyone Else — Tibo Interview — OpenAI Codex 設計哲學 + Ultra-fast inference 解鎖新型態應用 + recursive self-improvement 系統層迭代](人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md) · Tibo（Thibault Sottiaux，OpenAI Codex 團隊 Technical Staff，前 Google DeepMind）· 主持 Matthew Berman（Forward Future 作者）· 44:28（2668s，44 分鐘 podcast 訪談）（口播稿 4:07）｜DeepMind vs OpenAI 文化對比 + bottom-up empowering × bias to ship + Codex×ChatGPT 合併設計（同一底層模型 + 同一 harness + 不預設標籤）+ 14x tokens/sec Ultra-fast 解鎖「flow 中保持注意力」+ 非文字互動（共享畫布 + real-time prototype steer）+ 瓶頸從 LLM 移到 network / tool call 層 + recursive self-improvement 真實樣貌（最強模型優化 inference stack / CUDA kernel / 產品流程整套系統迭代，不是「模型訓練模型」）+ Sam Altman 暫停 frontier RL 訓練（safety team 標準程序）+ Anthropic 開放態度 + OpenAI 差異化在「為全世界打造」使命感 + 16 章節 + 16 概念表 + 16 金句 · en-orig 自動字幕 · Chinese (Mandarin)_Soft_Girl · Bar 2 0.00/1K · Bar 3 9.73%
 - 2026-07-13 | [LIVE: The /wayfinder Demo — Wayfinder 把模糊需求轉成結構化 ticket graph 的 AI skill](技術講座/20260713_MattPocock_WayfinderDemo.md) · Matt Pocock（AI Hero 創辦人 / Skills For Real Engineers）· 1 小時 14 分 40 秒（4480s）｜Live demo + Grill Me 進化版 + 預規格階段 + 9 個 subtasks + 多 sessions 平行 + Decision vs Implementation tickets + CVM local desktop 架構決策
 - 2026-07-31 | [From generated code to trusted code with a unit-test agent — Polyglot Unit Testing Agent for coding agents](技術講座/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent.md) · Microsoft .NET team（Principal Software Engineer）· Article（口播稿 3:29 / 209s）｜4 階段 repo-aware workflow（learn / plan / write / check）+ mutation testing 驗證測試價值 + 152 tasks 內部 benchmark 92.1% vs 78.9% stock Copilot（63% fewer failures）+ 跨模型 Opus / GPT-5.5 / Haiku 全勝 + 跨語言 12 種（含 Python / Go / PowerShell）+ SWE Atlas 16/44 vs 12/44 + dotnet/skills open-source plugin（`code-testing-generator` agent，支援 .NET / Python / TS / JS / Java / Go / Ruby / Rust / Swift / Kotlin / PowerShell / C++）
@@ -384,7 +387,7 @@
 - 2026-05-13 | [免費 AI 網頁爬蟲實戰：用 DeepSeek + Grok + Crawl4AI 抓取任何網站](技術講座/20260513_AI_Web_Scraper_免費爬蟲實戰.md) · AI 開發領域的技術教學者，經營免費 AI 開發者社群 · 22:45
 - 2026-05-12 | [Claude Code 創作者 Boris：軟體的未來、AI 民主化與 SaaS 末日](技術講座/20260512_Boris_Claude_Code創作者訪談.md) · Boris，Claude Code 的創作者 · 24:35
 
-### 🏛️ **政治 / 國際局勢**（8 支）
+### 🏛️ **政治 / 國際局勢**（9 支）
 
 - 2026-08-02 | [哈拉瑞 gala 對談：50 年後的人類、AI 與民主 — EDP 50 週年 Gala 對談 Tom Parker](人物訪談/20260730_Harari_50年AI.md) · Yuval Noah Harari（《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者） × Tom Parker（FT《The Next Five》主播）· 48:06（2886s）｜AI 代理人接管官僚體系 + 大規模民主依賴資訊科技 + intelligence vs wisdom 精靈比喻 + 100:1 安全預算比 + AI 帝國「帝都開關」+ wisdom revolution 呼籲
 - 2026-05-26 | [Yuval Noah Harari on Donald Trump's Core Delusion — Ezra Klein Show](國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md) · Yuval Noah Harari（希伯來大學歷史系教授、《Sapiens》作者） × Ezra Klein（Vox）· 1 小時 55 分 36 秒（口播稿 4:39）
@@ -395,7 +398,7 @@
 - 2026-05-16 | [【完整版下集 20260516】兩大國際強權領袖過招 習贏得川口中最偉大的領袖 — TVBS 文茜的世界周報](國際局勢/20260516_陳文茜_習川會兩大強權過招.md) · ? · ?
 - 2026-05-12 | [民主如何消亡——以及我們如何阻止它發生](人物訪談/20260512_Anne_Applebaum_民主如何消亡.md) · Anne Applebaum，普立茲獎得主、歷史學家、《大西洋月刊》撰稿人。專研蘇聯史與專制主義，著有《古拉格：一部歷史》《紅色饑荒》《民主的暮光》等。丈夫為波蘭外交部長 · 1:48:14
 
-### 🏃 **健康 / 營養 / 抗老**（1 支）
+### 🏃 **健康 / 營養 / 抗老**（2 支）
 
 - 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）· 75 分 32 秒
 
@@ -409,10 +412,11 @@
 
 - 2026-07-20 | [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · Alex Hormozi（$106M 身價、Acquisition.com 創辦人） · 2 小時 22 分鐘（AI 警告 + 客戶黏著 + Unicorn hiring + 母親過世那一季的持續前進）
 
-### 💰 **財經 / 經濟**（6 支）
+### 💰 **財經 / 經濟**（7 支）
 
 - 2026-07-30 | [Jeff Dean: The 1% Rule for Building in AI — Y Combinator 對 6,000 位創業家](人物訪談/20260730_JeffDean_The1PercentRuleForBuildingInAI.md) · Jeff Dean（Google Chief Scientist、MapReduce/BigTable/TensorFlow/TPU/Gemini 原作者之一）× Garry Tan（YC）· 57:07（3427s）｜napking math 推導 junior engineer 預測 + agent-based coding 之外低估 + 2027 年自動化 ML 系統願景（高階目標拆解 + 子問題 loop + orchestration）+ Long-running agent 從 5-10 步到 1-2 小時 + Gemini 1 億 token context window + model 本身加速 ML research 循環 + Tensor Processing Unit 世代演進
 - 2026-07-30 | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · Ray Dalio（Bridgewater Associates 創辦人）· 主持人 Steven Bartlett · 1:30:17（5417s）｜DOAC 深度訪談｜AI bubble 1929/2000 歷史類比 + 5 forces 健康指標 + 個人理財三鐵律（cash ≠ safe / diversify / 年輕人唯一資產是自己）+ Gold > Bitcoin（無破解風險）+ 9 百萬 Uber + 白領思維工作被取代 + 80 年帝國週期 + 美英 decline + 多極世界秩序 + Iran 加速區域化
+- 2026-08-31 | [美國帝國衰退 + 63% 月光族 + 階級衝突 + 私有財產權 vs 財富稅 — Ray Dalio 帝國週期 + 五大謊言 + 終止聯邦學生貸款](人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md) · David Friedberg（白宮科技顧問 PCAST / All-In Podcast 共同主持人）· 主持 Steven Bartlett · 2:04:50（7490s，124 分鐘 podcast 訪談，40 個章節）（口播稿 4:50）｜63% 美國人月光族 + 50% 依賴政府 + 借股票質押富人避稅 + 法國財富稅失敗 + 每年讓 2% 美國人從勞動跨入資本 + 50% 階級衝突中產階級縮減
 - 2026-07-24 | [The Week: China Is Undercutting America's AI Boom — 中國傾銷 AI、美國泡沫債務、賭場經濟與反社會世紀](財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md) · George Hahn × Scott Galloway（Prof G Media — NYU Stern 教授 / The Prof G Pod） · 18 分 26 秒（1106s）｜中國 AI 傾銷浪潮（Kimi K3 + DeepSeek 99% 價差）+ 開源 vs 閉源之戰 + 全球對中美好感逆轉 + Oracle 430 億債務炸彈 + Derek Thompson 風險倒置與社會疫苗
 - 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · 陳文茜 · 48 分 36 秒
 - 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · 陳文茜 · 48 分 19 秒
@@ -492,6 +496,9 @@
 
 - **Tibo（Thibault Sottiaux，OpenAI Codex 團隊 Technical Staff，前 Google DeepMind LM Chat 開發者）** · 2026-08-26 | [How to Understand the Next Wave of AI Before Everyone Else — Tibo Interview](人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md) · 44:28（2668s）｜DeepMind vs OpenAI 文化對比（bottom-up empowering × bias to ship vs 研究導向不擅長 ship）+ Codex×ChatGPT 合併設計哲學（同一底層模型 + 同一 harness + voice-first multimodal）+ Ultra-fast inference 14x tokens/sec 解鎖「flow 中保持注意力」+ 非文字互動（共享畫布 + real-time prototype steer）+ 瓶頸從 LLM 移到 network / tool call 層 + recursive self-improvement 真實樣貌（最強模型反過來優化 inference stack / CUDA kernel / 產品流程整套系統迭代）+ Sam Altman 暫停 frontier RL 訓練（safety team 標準程序）+ Anthropic 開放態度 + OpenAI 差異化在「為全世界打造」使命感 + 16 章節 + 16 概念表 + 16 金句
 - **Matthew Berman（Forward Future 作者、AI 教育頻道經營者，YT 頻道深度 AI 工具評論）** · 2026-08-26 | [How to Understand the Next Wave of AI Before Everyone Else — Tibo Interview](人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md) · 44:28（2668s）｜主持 Tibo（OpenAI Codex Technical Staff）
+
+- **David Friedberg（白宮科技顧問 PCAST / All-In Podcast 共同主持人 / 氣候公司 The Climate Corporation 創辦人，2013 年以 $1.1B 賣給 Monsanto / South African-American 創業家從投資銀行 → Google → Climate Corp → All-In Podcast）** · 2026-08-31 | [Top White House Advisor: The US Empire Is Declining And Socialism Is Coming Next! — David Friedberg 全方位解析](人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md) · 2:04:50（7490s，124 分鐘 podcast 訪談，40 個章節）｜美國帝國衰退 + Ray Dalio 帝國週期 + 63% 月光族 + 自有住房是最大謊言 + 私有財產權 vs 財富稅 + AI 黃金時代 + Klarna 案例 + 開源 AI 雙面刃 + Yamanaka factors + 長壽革命 + 2028 總統大選 AOC 預測 + 伊朗局勢 + 五大謊言 + 終止聯邦學生貸款
+- **Steven Bartlett（The Diary Of A CEO 主持 / 連續創業家 / Social Chain 共同創辦人 / 投資 Flying Tiger Copenhagen 等）** · 2026-08-31 | [Top White House Advisor: The US Empire Is Declining And Socialism Is Coming Next! — David Friedberg 全方位解析](人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md) · 2:04:50（7490s）｜主持 David Friedberg（白宮科技顧問 / All-In Podcast 共同主持人）訪談，橫跨美國帝國衰退、AI 黃金時代、長壽革命、伊朗局勢
 
 - **睡前听书助眠（audiobook summary channel）· 來源書籍《被討厭的勇氣》岸見一郎 × 古賀史健合著** · 2026-02-21 | [睡前听完一本书《被讨厌的勇气》—— 阿德勒心理學核心觀點 + 課題分離 + 不被討厭的勇氣](人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md) · 19:15（1155s）｜Whisper 中文 base 聽寫 fallback（YouTube 自動字幕 429 rate limit）｜阿德勒心理學核心：痛苦是主動選擇 + 目的論 vs 原因論 + 課題分離三步驟 + 自卑感 vs 自卑情結 + 共同體感覺
 
