@@ -1,0 +1,11 @@
+Google 釋出這支一小時 Graph Engineering 教學影片，由 Developer Relations 工程師 Annie 主講。內容分為兩段：前段用十分鐘釐清 Graph Engineering、Workflow Agents、Agent Communication 三層概念；後段用五十分鐘走完一個完整 Lab，展示如何用 Google Agent Development Kit、Spanner 與 memory bank 蓋出一個具備語意、混合與關鍵字搜尋能力的 GraphRAG 人工智慧代理人。
+
+理論段從術語釐清開始。Annie 把 Graph Engineering 拆解為三層：包圍模型的環境稱為 harness，包括工具、記憶與護欄；代理人內部的循環稱為 loop，從推理到決策再到選用工具反覆迭代；多個代理人組成的組織圖則是 graph，由代理人節點與函式節點共同構成。這套區分在與其他相似術語對照時更為清晰：knowledge graph 強調資料與事實的結構化儲存，graph engineering 強調行為流程的設計，loop engineering 適合單純改進的窄任務，agent swarm 則適合處理模糊、需要靈活分工的問題。
+
+實作 Lab 的核心是 GraphRAG 代理人。Annie 用一個外行星求生者網絡作為資料集，每位倖存者擁有不同的技能與需求，代理人需要在技能、需求、地理配對之間找出最合適的協助者。整個系統分為四層架構：Spanner 內建嵌入模型與 Gemini Pro、Service Layer 實作查詢邏輯、Tool Layer 包裝語意搜尋工具、Agent Layer 用 ADK 組裝代理人。整套設計刻意把人工智慧推理能力下推到資料庫層，避免傳統服務層反覆呼叫外部模型的高昂延遲。
+
+最關鍵的設計是 Spanner 的 ML Predict 機制。透過這個機制，文字嵌入模型與 Gemini Pro 不需要放在外部服務，而是直接內建進 Spanner 內部，省去資料拉取、外部模型推理、結果寫回的反覆來回，大幅降低延遲與成本。語意搜尋背後的數學是餘弦距離，把技能文字轉成七百六十八維向量後，便能在向量空間中找到「魔法」與「醫療訓練」的隱含對應。Spanner 用「虛擬模型」設計整合 Vertex AI 服務，不存模型權重，只保留參考。
+
+GraphRAG 與傳統 RAG 的差異在於雙引擎設計：先透過嵌入相似度找到相關技能，再沿著 graph edge 抓取擁有該技能的倖存者個人資料。換言之，傳統 RAG 只回答「什麼技能相似」，GraphRAG 則進一步回答「誰擁有這個技能」。混合搜尋結合關鍵字比對與語意搜尋，再透過 Reciprocal Rank Fusion 演算法把兩種排名融合，得到兼顧精確度與語意理解的最終結果。RRF 演算法的關鍵是根據每種搜尋的內部排名計算新分數，而非直接拿相似度數值做加權。
+
+整個 Lab 還展示如何用 ADK Web 介面除錯、用 Runner 推動代理人事件迴圈、用 In-Memory Session Service 儲存對話歷史，最終串接 FastAPI 後端與 React 前端，做出一個可在瀏覽器即時互動的三維圖譜介面。Lab 強調 ADK 提供三種工作流程代理人——sequential 像組裝線、parallel 同時派工、loop 反覆執行——以及三種代理人通訊機制——shared session state、LLM-driven delegation、agent as a tool——讓開發者可以靈活組合複雜的代理人協作拓樸。

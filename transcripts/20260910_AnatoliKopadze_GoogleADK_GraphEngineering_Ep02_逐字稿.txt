@@ -1,0 +1,1183 @@
+Graph engineering is you can think of you creating a graph workflow in the system.
+The graph can be something like organizational chart.
+And inside of this graph, each node can be agent node.
+It can be a function node, which can be a deterministic logic.
+It can be more.
+And then you're basically creating this graph in the system to solve the problem.
+So I'm still a little confused about all this terminology.
+Can you clarify what is the harness, what is the loop, and what is the graph?
+Yeah, that is a good question.
+It can be very confusing.
+So if you take a look at this picture, we have this harness part.
+So harness part is everything around the model, including its tools, memory, and
+godrules.
+And the loop can be the cycle that agent is running inside that harness.
+For example, the L I'm doing the reasoning, trying to make a decision,
+picking a different tool, and selecting a different tool until it solves the problem,
+and until it's meeting the goal.
+And graph can be the organizational chart we were talking about earlier.
+It can contain agent node, containing function node, and more.
+Makes sense.
+So when you traverse the graph,
+you're passing memory or information down the graph to the next node.
+Yeah, exactly.
+So if you build with Google Agent Development Kit, ADK,
+if you build a multi-agent system, and we have the shared state among different
+agents, if you build a workflow, we have shared state among nodes in this workflow
+as well.
+What would a real life example look like?
+So Tilder, have you done PR review?
+Unfortunately, yes, I hate code review.
+Tell me there's a way to make it easier.
+Imagine you want to automate the PR review.
+You're creating this workflow to automate the process.
+And because you already know exactly how to do the PR review,
+you know the workflow ahead of time.
+So you're creating this workflow.
+And just like the picture you're seeing right now, we have three parts.
+So the first part of this workflow including this fan out, and
+the second part is the joint, and the third part is the router.
+So let's start with the fan out part.
+The fan out part is we're starting this five parallel processing to pause
+information for the PR, like pull request.
+So you're probably familiar with parallel processing, right?
+Yeah, absolutely.
+You might take one task and break it into five different parts, and
+then you run them each at the same time, which is much faster than running them
+one after another and waiting for them all to finish.
+And the next is once you finish the parallel processing,
+we want to have a join node.
+Join node is basically to synthesize the results.
+So it's waiting for the slowest processing.
+And then it's inside the results that later on we can handle this information.
+And then we go to the last part, which is the router part.
+So we're using the router pattern to handle this information.
+You're probably familiar with router, right?
+I'm familiar with a server router where you take a URL and
+then you match it with the kind of web page that you want to serve up.
+How does that relate to AI graph engineering?
+It's very similar.
+For the router pattern, basically you have this request input.
+And then we router to different subagents or specialists or different workflow.
+In our specific example, the condition is if the code fails,
+we will go to the specialized fixer agent.
+If the code passes, we will go to the human approval processing.
+So it sounds like we're taking basic principles of control flow and
+applying them to AI engineering.
+So this is a little embarrassing, but when I first heard about graph engineering,
+I thought that it was about knowledge graphs and the data model.
+But it sounds like that's not true.
+Yeah, it can be very confusing.
+A lot of terminology has graph.
+We have graph engineering, we have graph rag, we have knowledge graph.
+But knowledge graph emphasizing on the data and
+graph engineering emphasizing on the behavior.
+Basically what goes in, in what order, and then what happens next.
+And just like the example we covered earlier.
+So how is graph engineering different than loop engineering?
+That's a good question.
+So loop engineering basically you have this one running loop and
+keep running until it's reaching the goal.
+And the graph engineer is you're creating this graph workflow.
+And then inside of the graph you have different node and
+different edge to solve the problem.
+Do you know when to use what?
+It sounds like loop engineering is better for simple workflows.
+I want a one paragraph summary.
+And graph engineering would be better for a much more complex workflow.
+I need a 50 page PDF with a bunch of graphics and different shiny things.
+I know there's another terminology called agent swarm.
+What is the difference between graph engineering and agent swarm?
+They're both agent orchestration patterns, but
+under the hood they're pretty different.
+So in graph engineering, you as the engineer, you define each node,
+what happens at each step of the workflow, how the data looks and everything.
+And also agent that is at a certain node,
+it doesn't even know what happened before.
+And this whole thing gives you really good predictability,
+debuggability and control for
+problems that can be really strictly defined like the PR workflow you mentioned earlier.
+What about agent swarm?
+Well, not all problems are easily defined like that.
+Yeah.
+In an agent swarm, each agent just gets its own personality and that's it.
+And you just throw the problem to them.
+So sounds like if you want to solve an ambiguous problem and
+we want to use agent swarm because it's more flexible,
+it can handle more ambiguous use case.
+But if you already know the workflow ahead of time, like the PR review example,
+we can use graph workflow.
+Exactly. You got it.
+So that's graph engineering in a nutshell.
+In today's episode, we will level up by learning the three workflow agents,
+the orchestrated tasks, also three communication mechanisms
+that let agents communicate with each other.
+By the end of today's episode, you will learn how to structure flows and
+get your agent talk to each other.
+And let's get started.
+The first part of today's episode is workflow agent.
+So we already know agent can form hierarchy,
+the organizational chart from last episode.
+But how do we control the flow of work?
+That is where workflow agents come in.
+We have three workflow agents and the first type is sequential agent.
+They're like an assembling line.
+So each sub agent run in a fixed order, they passing results along.
+It is perfect for case like you fetch data and
+use a cleaning and analyze and then summarize.
+The second type of workflow agent are parallel agent.
+They're like a manager assigning tasks to three employees all at once.
+It is really great for use case like independent tasks.
+For example, you fetching data from multiple APIs simultaneously.
+And the third type of workflow agent are loop agent.
+They're like your debug again and again until it works.
+So loop agent run task again and again until a condition is met or
+meeting the maximum iteration number.
+The second part of today's episode is how do agent communicate with each other?
+You know from last episode we know hierarchy and
+just now we talk about workflow agent.
+But how do agent actually talk to each other?
+So ADK gives us three communication mechanism.
+And the first of them are shared session state.
+You can think of it as a shared whiteboard.
+So one agent write its result and pass it to next agent and
+the next agent read it from this whiteboard.
+For example, an LLM agent can save its output to the state.
+And another agent can pick it up and read the state output.
+The second type of communication mechanism are LLM driven delegation.
+That is where it gets smart.
+So coordinate agent as like a CEO, it will look at the request and decide,
+okay, which sub agent should I delegate to?
+For example, if the request is generate an invoice and
+the CEO will route it to billing agent.
+The third type of communication mechanism are explicit invocation agent as a tool.
+Here one agent can call another agent like a function
+instead of using it as a sub agent.
+So you wrap the target agent as a tool.
+The parent decide, okay, when should I invoke this tool?
+For example, a parent agent doing analyze might call a calculator agent
+as a tool whenever math is required.
+So you may wonder what is the real difference between agent as a tool to sub agent.
+In this diagram on the screen, you can see the difference between them.
+To summarize, a sub agent is part of an organizational chart and
+it's always managed by its parent agent.
+An agent as a tool is like bringing a consultant.
+You call them when you need it, but they're not part of your core hierarchy.
+All right, let's quickly wrap up on what we talk about in today's episode.
+We talk about workflow agent gives the orchestration pattern.
+We have sequential pattern, parallel pattern, and also loop pattern.
+We also talk about three communication mechanism through agents.
+We have shared session state, LLM delegation, and explicit invocation.
+Together, this makes your multi agent system not just structure, but
+collaborative and flexible.
+And that's it.
+Hi there.
+By the end of this video, you will learn how to build GraphRank AI agent with
+Google Agent Development Kit, capable of semantic search, hyper search, and
+answering complex question in Knowledge Graph.
+Hi friends, if you're new here, I'm Annie.
+I'm a developer relations engineer.
+Previously, I worked as a sub engineer for seven years on that building
+production system.
+Currently, I'm helping developer building AI agent.
+So this is something I personally really curious about,
+that how does GraphRank help AI understanding complex relationship in data?
+So if you're curious about how to build AI agent step by step in practice,
+don't forget to subscribe.
+All right, let's dive in and start building.
+Hello everyone.
+So today let's go through this lab.
+So if you go to the top right of the screen, you will see the lab link.
+And this lab is about AI agent with GraphRank, with ADK and memory bank.
+And for this video, we will focus in on how to build a GraphRank AI agent
+with ADK.
+And this is what's the final result.
+And you can see that they have the 3D rendering of the final relationship for
+all the data we're going to play around today.
+And if you open the camera, you can use your hand to control this graph.
+It's pretty cool.
+And at the very bottom, if you ask questions, you can do search.
+And here we're going to cover hybrid search, semantic search, and keyword search.
+Pretty cool.
+All right, so let's get started.
+Before I start, you will see that we have some environment set up.
+And this is skip if you're in the workshop, and this is not.
+So this lab is actually designed for Google workshop.
+But if you're watching this video right now, you don't have to worry too much
+about it, you just directly start with the step two.
+If you're curious about workshop information, you can go to the last page.
+And here you can see this is a workshop series.
+You can go from level zero to all the way to level five.
+So it's all the lab related to multi-modal agent, if you're curious about it.
+But for this lab, you can actually run it independently, so
+you don't have to worry too much.
+So let's get started.
+At the very first, you need to enable building account.
+So here we're gonna give you $5 free credits so
+that you can have GCP account set up.
+And for this whole process, you do not need to put any payment information on
+credit card.
+If you ask you to input your credit card, you can just skip that and just claim the
+$5 so that you have this credit to do this graph rack lab.
+All right, so this is a testing account I have.
+Let's see.
+If you open it, you can see we have this way back home data and
+just click here to claim your credit.
+All right, so here just click accept and continue.
+Then you will see credit successfully applied.
+So now you have free credit that allow you to do the rest of the lab.
+All right, so the second step is to open environment.
+And here we are opening a Cloud Shell editor environment.
+This is like VS code environment, but on cloud.
+The reason we are doing Cloud Shell is we have this control environment so
+that everyone can reproduce the same thing.
+Imagine that if you wanna set up on VS code or different IDE locally and
+everybody have a different setup or different operating system.
+It might be really hard for you to reproduce the same thing because at the end
+of the day, you wanna reproduce the same cool app with a graph rack.
+So if you wanna reproduce this, it's easier to do it in this control environment.
+And this is, as you can see, very similar to VS code.
+I'm gonna zoom in a little bit so that you can see it more clear.
+Cool, so now I successfully opened it.
+And those are the steps that just to open the terminal and editor.
+And you can see I already have this editor and terminal open.
+So I'm good to go.
+The next step is to making sure we have to set the project ID and everything.
+So I just copy this code and paste to the terminal, right?
+As you can see, it's saying that I'm currently using this account.
+Just making sure that the account you're using is actually the account that you're
+claiming the credit just now.
+By the way, if you are claiming the credits,
+making sure you're using a Gmail account.
+It doesn't work for your educational account or organizational account.
+And also, if you run into any error, you can try to claim it in a incognito window.
+That usually resolve most issues.
+So let's go ahead and clone our repo.
+So next step, I wanna open this folder, go to the file and open folder.
+So here, let's see.
+So when you open the folder, you might see that you lose the terminal.
+So you can click the top right there to open the terminal.
+Or you can click this button similar to how you're opening the terminal in VS Code.
+As you can see that we have this different level.
+This actually corresponding to our workshop.
+So this, as I mentioned before, this lab is also designed for Google AI workshop.
+But if you're watching this video, you can just continue this lab as independent
+content, you do not have to worry about it.
+But if you're curious about the lab, this level, each level,
+level 0 to level 5, actually corresponding to those folder over here.
+So you can navigate the code for different level if you're curious about other content.
+But for this video, we will focus on level 2.
+So I'll just open the level 2 for today's video.
+Cool.
+And I just finished the second step.
+Let's go to the third step, environment setup.
+And here at the very beginning, it's still the similar step.
+You'll just open the terminal.
+And what's next is I want to run the script to initialize its script to set up the repo.
+So what I do is I copy this, click this, and go to the cloud shell and paste to the terminal.
+So what it does is it's trying to create a project ID for me and attach to the building
+account we claimed earlier.
+And here you can see you can either press enter to create a new project.
+I already created the ID for you.
+Or you type an existing project ID for you.
+So it's recommended that we create a new project for this lab.
+But if you want to reuse some existing project, you can type an existing project ID to use.
+That's also feasible.
+So what I do is I just press enter.
+I'm not entering one or two.
+I just press enter.
+And it will default using this new project.
+So what it does behind the scene is it's creating this new project for me.
+And it will automatically link the building account I just claimed to this new project.
+And also it's installing some dependency to set up the environment.
+And now you can see this yellow thing over here.
+That means I successfully point to the new project I'm creating and the whole environment
+extensively set up.
+Great.
+So next step is making sure we configure to set the project ID.
+Actually in this step, I already set the project ID.
+I'm just do the step to double check.
+And then what's next is we need to enable the required API.
+Just copy paste to enable the required API.
+And over here you can see that we want to enable some API platform and cloud build.
+Because later on we might want to deploy the whole thing to cloud run.
+Because we might want to build the Docker.
+So we want to have enabled the artifact registry.
+And here we're using a graph database.
+So here we're using Spanner.
+So you want to enable Spanner.
+And later on we want to enable the multimodal inputs.
+So you want to have the storage API.
+So those are just easy way for you to enable some API.
+Of course you can also enable them in the Google Cloud console.
+But this is just some command line for you to easily access.
+Enable them.
+And next let's run the setup script.
+Oh, I'm still waiting for it.
+So what I'm waiting for is enabling.
+I can talk a little bit more about this project.
+So as you can see, we're going to build by the end of the lab.
+And this is actually part of the workshop.
+So if you follow the level 0 to level 5, you will actually see yourself.
+You will create an icon of yourself.
+And you'll see yourself on a planet.
+So the thing for this workshop is you're in the universe.
+You're on a planet.
+And you want to find your way back home.
+And on this planet, because you want to find your way back to Earth,
+you're trying to survive on this planet.
+So there is a relationship between the people who
+are among people on this planet.
+Some people have the skills.
+Maybe they have medical skills.
+Some other people, maybe they got injured.
+So therefore, some people, they have the medical skill,
+can treat the people who got injured.
+So there is a potential relationship between, so my name is Annie.
+And this is what I'm good at.
+But this is the resource I have.
+But I also need something.
+And maybe if I know how to, maybe if I have some medical skills
+and someone else needs some treatment, so maybe I can help them.
+So there's a relationship on it.
+That's exactly what is the graph knowledge base
+we are trying to build later on.
+So that's a context for this lab.
+So I'm going back to this IDE.
+And you can see that I successfully
+enabled all the CPI.
+So what's next is I want to run the setup script.
+Just copy this and paste to the terminal.
+And here, what it does behind the scene
+is it's trying to grab in all those environment variable
+and create a .imv file for me and put all the value
+to the .imv file.
+And here, you can see there's a .imv file onto level 2.
+So I'm clicking .imv file.
+I can see all those value is grabbing for me.
+And I have all my environments set up automatically for me.
+Cool.
+And what's next is we want to load the sample data
+by first install the dependency.
+We copy this and we paste over here.
+So here, we are using UV to do all the environments control.
+So in the back end folder over here,
+if we go to the pyproject.toml file,
+you can see those are the dependencies we have.
+So by doing UV sync, we can install all these dependencies.
+And what's next is I want to load all the initial survival
+data.
+So I'm going to copy this and paste over here.
+So the data we are trying to load over here
+is exactly the relationship we were talking about earlier.
+So we have some people are good at medical skills.
+Some people need injured.
+So they may have the one people's skill may
+be helpful to another people's need.
+So there is a match between them.
+So therefore, we have a graph relations.
+We can have a graph database to hold most host data over here.
+And go back to the thing.
+As I mentioned before, this is a workshop thing.
+And we have a survival network challenge.
+To summarize, the challenge we have is un-structured data.
+Maybe people are uploading photo, text message, or videos.
+And we have complex relationship here
+because we need to know who has the skills, who need help,
+and where are they.
+And then we need to make time critical decision
+that we want to match the helpers in real time.
+And traditionally, to handle multimodal data,
+we might have separate pipeline.
+And to search who can help whom, we might do the keyword search.
+But the problem is if you search like magic,
+if the keyword does not exactly match medical training,
+you might not be able to find the person who has a medical skill.
+So that could be a problem.
+And relationship-wise, if you are not using graph database,
+if you're using relational database, using table,
+you might have to join the query.
+So it can be complex and slow.
+And lastly, we talk about personalization.
+So this is for the whole lab.
+But for this video, we're only going
+to talk about the semantic search and relationship.
+But for the next video, we're going
+to talk about multimodal handling and personalization.
+So stay tuned.
+And so the solution for the challenge
+is to capture the multimodal processing,
+we will build a multimodal multi-agent system to capture.
+And to quickly find the search for the helper,
+we're using graph rack.
+So we're going to cover what is graph rack and why graph rack.
+We're also going to cover different type of search
+in this lab.
+And then we're using Google Agent Development Kit
+to orchestrate the whole thing, orchestrate the multi-agent
+for multimodal processing, and orchestrate the agent
+with the graph rack agent, and also multimodal processing
+agent.
+And lastly, we have the memory bank for the member part.
+Again, we're going to cover this in the next video.
+So here we're using Google StandardDB
+to contain this graph knowledge.
+Traditionally, you might be using Postgres and Neo4j,
+but with Spanner, you only have one unified database,
+so that you have single source of truth,
+and you don't have to deal with the data sync delay.
+A lot of benefit of using Spanner.
+And let's get to see what does Spanner look like.
+So once you successfully run this command that
+is setup data.python, you will see that database setup
+complete, right?
+So it's just over here.
+So here you can access the database at this link.
+So just copy this link.
+Click into this link.
+And you can see we are into Google Cloud Console Spanner
+over here.
+And we already load all the data for you.
+And congratulations, you just finished the step.
+And let's go to step four, how to visualize graph data
+in Spanner Studio.
+To follow the step, we go to the SpannerDB Google Cloud
+Console, and at this step, Spanner Studio, clicking this,
+you can see we have all the table that's available for you.
+And then over here, we have the query input.
+So we can type anything over here,
+and just do a real-time check.
+So here, firstly, we want to understand
+who are there in this knowledge database.
+We talk about we have different survival on the planet.
+But who are there?
+And who is there?
+Which part of the planet they are?
+So here I'm copying this query just
+to get a sense of what is the relationship over here.
+So I'm copying this around the query,
+and I can immediately see the result over here.
+And here is a graph that showcases relationship.
+If you hover on the blue note, here you can see the survival.
+And the red note is you can see where are they.
+So here, by running this query over here,
+you can just directly see all the relationship.
+It's pretty cool, right?
+And what's next is now you understand
+that we have full survival over here.
+What's next is we want to understand
+what are the skills they have so that later on you
+can search the skill and you'll find a match for the helper.
+So I'm copying this command, and then I paste it over here
+and run it again.
+Now I can see the relationship is
+the survival and their skills.
+So here I have the survival and the skills.
+Cool.
+Also, we have some explanation in this lab.
+Again, on the screen top right, you
+have this link about this lab so that if you open the link,
+you can read through the explanation
+and go through the lab together with this video.
+Cool.
+So now we understand we have full survival
+and they're on a different part of the planet
+and they have different skills.
+So here we need to understand what do they need.
+And I copy this query.
+Again, I go to the Cloud Console at Spanner Studio.
+Again, I'm going to paste this query over here,
+and I run them to see what are the need.
+Again, the blue note is a survival.
+Click to the survival, and the red note is a need.
+Apparently, this survival, they need medical treatment.
+And lastly, we can see who can help whom.
+I copy this and paste it over here.
+And I can see, wow, I have some existing match.
+So this person whose name is Alina Frost
+and he has a medical skill and he has a science skill.
+And with this medical skill, you can
+see it's matching those person.
+This survival Captain Yuki need medical treatment.
+So therefore, Alina's medical skill
+can potentially help Yuki's medical need.
+So we already have some match over here.
+So here we can already traverse this graph
+to understand some relationship and potential match.
+But as you can see, there possibly
+could have more match in this graph
+that later on we're going to explain
+how to search them effectively.
+Cool.
+So now you successfully finished step four.
+And what we did so far is we are successfully
+loading this data in SpannerDB.
+And we play around this relationship in the studio
+so that we can visualize the graph here
+so that we better understanding what's going on over here.
+We're understanding the relationship of what survival
+have, where they are, what skill they have,
+and what's the resource they have,
+what they need, and potential and existing match over here.
+And we can visualize them like this.
+Pretty cool.
+We can visualize them as a node and edge over here
+in this Spanner Studio.
+So what's next is let's start with the AI-empowered embedding
+in Spanner.
+So let's take a look at this diagram on the screen.
+So a lot of things going on on the screen.
+So let's take a look from bottom and all the way up.
+And the very bottom, most importantly,
+we're creating this text embedding model and Gemini Pro
+model in Spanner.
+And then we have the service layer.
+Basically, we are using the model we're creating over here
+and implement the logic in the service
+so that we can do rack search, keyword search, hybrid search,
+and analyze query.
+And once we have the service layer,
+service logic implemented, we can directly
+use them in the tool layer to building
+the tools for our agent.
+So here we can build in the semantic search tool, keyword
+search tool, and hybrid search tool.
+Later on, we're going to explain what exactly
+is hybrid search.
+And lastly, we're going to use those tools in the agent,
+like our root agent over here.
+Here we use 80k Google Agent Development Kit
+to build agent over here.
+Just a quick recap, what is agent?
+So agents usually have the model as a brain to choose tools
+and then use tools to make decisions
+and resolve some problems for users.
+And here, we're building the tools like semantic search
+tool, keyword search tool, and hybrid search
+tool for this root agent.
+And here are all the logic over here, all the way down here
+to building this agent.
+And you may wonder why we are creating the model in Spanner,
+not directly using the model in the Python code in service
+layer, because we could potentially just directly
+using what has AI model in service layer.
+Why we are creating this model in Spanner?
+So the answer is it's quick and cleaner this way,
+because here we are directly creating the embedding
+for those data in the database.
+So we are using the germline model
+to directly analyze the data.
+So it will be quicker and cost less
+if you're directly using the model in Spanner
+versus you're using the model in the service code.
+Because in the service code, if you're using the model,
+you have to talk to the database and grab the data
+and then talk to using the model versus AI model
+with the prompt and get a response back.
+So it's additional loop over there.
+And the question now becomes how we
+are going to use creating the model in the Spanner studio
+directly.
+And here, we are using something called ML predict.
+So Spanner's ML predict let you to generate the embedding
+directly in SQL.
+And it can store vector alongside graph data
+and also perform semantic search.
+But it's not creating the real model in Spanner.
+It's creating the virtual model.
+So it's just a reference.
+We don't have to store model weights.
+And here's a diagram that you can reference.
+So we can use ML predict directly in the Spanner.
+So here, we are using we have this input first ads
+to what has an embedding model and get this embedding back
+to the Spanner.
+And then you can calculate it.
+So for those of you who don't know what is embedding
+and what is RAC, to quickly go through them
+is retrieval augmented generation.
+And retrieval is you.
+So the problem RAC trying to solve
+is if you directly use it, it may not
+have the personalized knowledge base for your question.
+So here, you may want to use additional database,
+a personalized database, so that if you link your system
+to that personalized database, you
+can do retrieval from the database.
+And then you retrieve the answer from the database.
+And then you augment to your existing answer for the final.
+And then based on that, you can generate the final response
+back to the user.
+So basically, you are adding additional knowledge base
+to your AI system to make it understand
+more specialized data, to have more accurate answer,
+and to eliminate hallucination.
+So that is usually what we talk about retrieval augmented
+generation.
+And the very important part for retrieval augmented generation
+is usually we want to generate embedding to do the retrieval.
+What does that mean is we want to have the embedding,
+like a numeric representation of the item we want to search for.
+And then for the database, we want to have an embedding space
+so that everything in that database,
+we want to have embedding representation for all of them.
+So embedding by numeric representation of them.
+So when you do the search, you're
+trying to see this like this mathematic representation
+is embedding.
+How close this item I'm trying to search
+to this embedding space.
+So if they're very close, that means they're very similar.
+If they're not very close, that means they're not very similar.
+So that is the quick overview of what is embedding,
+and what is embedding, and why we
+want to create embedding here.
+And just go back to today's lab, we're using embedding.
+We're creating the embedding model directly in Spanner DB
+with ML predict.
+And ML predict can create a virtual model in Spanner.
+It's very quick and very clean.
+So here, a lot of talking, and let's continue the lab.
+So what we want to do is we want to create a text
+embedding for the things we are trying to search.
+So we want to have the embedding model first.
+And then we can use this embedding model
+to convert things to the embedding,
+and then we are doing a semantic search.
+And now I'm copying this to the embedding.
+So here we are pasted over here.
+And here's a very important thing is
+you need to replace the project ID to the real project ID.
+So what I do over here is I'm going to .env file,
+and then copy this project ID, and then
+I'm going to paste it over here.
+So this is how you do it.
+And if you forget to paste it, and you just
+happen to click Run, you may have to,
+if you forget to replace it, you may
+have to do drop model text embedding, and then you redo it.
+Because if you don't drop it, you
+may not be able to create the model again.
+So let's go back to the studio and click the Run.
+So here we want to create a model called text embedding.
+Great.
+It says successfully created.
+If you click again, it says it failed
+because it's duplicated.
+So that means it's already created before.
+Cool.
+So if you click twice, if you see the fail,
+that's expected because you already created earlier.
+And what's next is we want to add an embedding column.
+So we are going to copy this, and we're
+going to paste it over here, and click Run.
+And here we successfully create a skills table.
+So what we want to do is we want to search skills,
+and we want to create an embedding space.
+So basically we want to convert everything in the skill table
+to skill embedding.
+And this is how we're going to do it,
+because we already have the model.
+And we can just create, we can create a text
+embedding for all the skills in the skills table.
+So here we have 10 more updated.
+So basically we update them to be embedding
+so that we can use semantic search over here.
+Again, if you see the permission error,
+you might have to redo the previous step to drop the model
+and then recreating the model text
+embedding with the correct project ID.
+And now let's verify embedding.
+I copy this, and then go back to the Spanner Studio,
+and we're going to paste it.
+Cool.
+So you can see that we can see all the skills available
+over here with the embedding.
+We have the embedding dimension over here is 768.
+That means we are using 768 dimension
+to describe the skill over here.
+So that means we are successfully
+convert all the skills to embedding in this embedding
+space.
+Great.
+So last thing is we want to test the semantic search.
+So just copy here and paste and just run.
+And you can see we successfully do the semantic search.
+What we're trying to search is we're trying to search MADC.
+As you can see, when we search MADC, it's not medical.
+If you use a keyword search, you may not
+be able to find a result for those things that
+are similar to the meaning of MADC.
+Then because you are converting them to embedding,
+and here you actually get the meaning of MADC.
+And then you're searching in the skill table.
+You're just like a skill.
+You're searching this embedding representation of skills.
+So here you're searching the embedding space,
+and you're trying to find how close they are with the cosine.
+You're using the cosine to calculate the distance.
+So basically, the smaller the distance they are,
+that means they're similar there.
+And here you can see the medical training is actually
+the most similar to MADC.
+And leadership, probably not as similar to MADC
+as medical training.
+So here we are ranking them by the distance.
+This is exactly where we are called semantic search earlier.
+And this is for when we do the retrieval.
+This is how we want to retrieve things.
+Cool.
+That means we have successfully do the semantic search over here.
+What's next is we want to create germline model to analyze it.
+And the germline model, we want to use germline model
+directly in Spanner Studio, a Spanner as well.
+Just like what we said earlier, we
+want to use germline pro model over here.
+So similarly, we're using ML predict
+to directly using the germline model.
+And this is what we want to do.
+We want to copy this and paste it.
+So here I did it wrong because I didn't
+replace the project ID.
+So what I want to do here is I want to draw this model first
+and then run it to drop this.
+And then I want to recreate this with the correct project ID.
+So here I need to go to the editor.
+And here I have this project ID.
+Just copy this and then paste over here
+so that you can run them.
+And here I successfully create a correct germline pro model.
+And what's next is I want to use this germline
+to analyze and generate these.
+So I'm going to copy this and paste over here.
+Let's take a look at what the security does.
+So here I'm actually sending this prompt to the germline pro
+over there.
+So this prompt is I want to access those two survival.
+And this is a survival name.
+And I want to generate a score from 1 to 10
+and one sentence reason.
+So I directly send in this prompt
+to what has AI model over there,
+like this germline pro model over there.
+And with this question, I generate this answer.
+It says, oh, I'm generating this score, 9 over 10.
+And with this reason.
+So that means you successfully using the germline pro model.
+Again, you can see if you have the syntax error message,
+you can ignore them because the result here is correct.
+Cool.
+So at this step, that means you have successfully
+creating the model, creating the embedding.
+Just to recap what we did before,
+we create this text embedding model.
+We also create this germline pro model in Spanner.
+And you also did is you're using this text embedding model
+and try the semantic search in Spanner
+because you're converting the skill to embedding space.
+And then we try to search magic in the skill embedding space
+and we can rank the result by the distance for the embedding.
+And then we can rank how similar they are
+to the things we're trying to create.
+So that's what we just did for that step.
+And congratulations for those who have finished that step.
+And the next step is now we are having this model in Spanner
+and we also get a taste of the semantic search in SpannerDB.
+And what's next is we want to directly use them
+in the service layer so that we can implement
+the service layer logic.
+And later on we can connect the agent to the service logic.
+So here I'm going to step six, graph rack.
+So in this step, what we're trying to do
+is we are trying to implementing the semantic search logic
+all the way from service layer to the tooling layer
+to the agent layer.
+And here we are using ADK, agent development kit
+for the agent.
+So if you don't know what is ADK,
+I will do ADK doc, Google search.
+And on the first result, here is the ADK doc page.
+And here I can learn everything about ADK doc.
+You can get started with ADK and build your agent.
+So I will go to the agent tab and try to understanding
+those are different type of agent
+and just get familiar with this framework.
+So let's go back and trying to implement our semantic search
+in the graph rack agent.
+Excited?
+So now you're actually building a graph rack agent
+over here.
+Cool.
+Let's copy this to the terminal and paste it over here.
+So this step is basically opening this file for me
+in the editor.
+And here I'm opening this service folder.
+So I'm trying to do the implementation
+in the service layer.
+And what I wanna do is I just need to copy paste
+the important logic.
+So I'm searching this to do replace a code
+and I'm gonna paste the whole thing.
+And now I need to replace the whole line by
+I triple tab this.
+So it's selecting the whole line and I paste it
+so that the indentation is correct.
+And let's take a look at what we're pasting over here.
+So here we actually is very similar to the query
+we just run in the Spanner studio, right?
+Cause we're using a text embedding model.
+We are created in the Spanner and we're trying to find
+the cause and distance for the skill embedding space.
+But you can see that we actually have more things over here.
+We actually have the drawing table over here.
+And what does that mean?
+So here is what we call graph rack kickin.
+And let's take a look at this diagram.
+So this is the overview of what we're trying to do,
+like the graph rack process.
+So in our example, we're trying to find a magic
+for burn victim.
+So we're searching a magic for burn victim.
+And then I'm trying to see who can help magic, right?
+So here we have this embedding model
+created in Spanner studio.
+So what we did first is we're creating this embedding
+for off this magic so that we have this
+new magic representation of magic, right?
+So next is we're trying to search in the embedding space
+and find the things that physically close to magic.
+And the important of graph rack,
+the difference between graph rack versus traditional rack
+is we actually do this LLM context in the graph context
+so that you can traverse this graph
+to understand more information.
+So you're not only understanding what are the skills
+that are similar to magic.
+Previously we get medical training that's similar to magic.
+You also get the corresponding relationship
+of we can traverse this graph to understand
+what are the relationship connecting to the skill.
+Who has this, Dr. Frost has this skill of medical training
+so that it's able to understand,
+we traverse the graph and get more content for this theory
+so that you can give more related response to your question.
+And this is really powerful.
+And in our code is we are trying to join this table.
+It's basically how we wanna traverse a graph node
+to get more related information over here.
+And if you're curious, you can read more explanation
+over here in this lab.
+Again, the lab is on the top right of our window.
+Now let's continue to building the tool.
+So what we did before is we're creating the service layer.
+Now we want to connecting the tool layer
+to the service layer.
+And again, we are just only working on the semantic search.
+So I'm copy this paste.
+So I'm opening the tool file.
+And over here, I'm locating the comment.
+I'm gonna paste it over here
+and I'm gonna triple tap and select in the whole line.
+And I'm copy this and I'm pasting this
+so that I'm creating this tool called semantic search.
+And over here, I'm using the logic
+that I implemented in the service layer.
+Again, if you're curious about the source code
+and you wanna understand any more about the logic,
+I recommend you to go to the top right link
+and open this lab and you will see the source code over here
+to understand more about the detailed logic behind the scene.
+Let's continue.
+So now we have the tool and we want to connecting the tool
+to the ADK agent.
+So here, I think a basic agent code.
+So here is a basic agent code over here is with ADK,
+you just need to using the agent library
+and define what model you're using,
+what is the description and then adding the tools over here.
+You're supporting Python, TypeScript, Go and Java.
+And I'm copy this to do and replacing,
+oh, I skipped a step.
+I need to go to the agent file first.
+So I have the agent file and I'm searching this.
+So here I am copy this to the prompt.
+So what I'm trying to do is
+I'm adding this semantic search logic
+in the agent instruction so that in the agent instruction,
+it knows when to do the semantic search.
+Cool.
+And lastly, we need to add to the tools.
+We just creating, we connecting that to the agent.
+So the agent and the brain,
+model as a brain to select the tools
+we are provided to the agent.
+So what we wanna do is again, we wanna search this,
+and paste it and just paste.
+And here we go, we're adding this tools to the agent.
+And now congratulations,
+you just successfully building a graph rack agent.
+And now you may say that,
+oh, here is some reading for you
+understanding how the hyper research work.
+So what we did before is we're implementing
+semantic search for rack agent.
+So semantic search is we're getting the embedding
+and we're trying to find things that actually similar
+to the meaning of the things we're trying to search.
+So the keyword searches,
+we're searching the exact text matching word.
+And semantic search is we're trying to find
+things that are similar.
+But what if you wanna search medical skills in mountain?
+We wanna find things,
+we wanna search for things that are similar
+to medical skills,
+but also we wanna have the exact keyword search for mountain.
+So here, what if I care both?
+How do you do the search?
+And here we are introducing this hyper search
+with the RF algorithm
+so that we can combine,
+do the fusion for both type of search.
+And this is the algorithm behind the scene
+is based on keyword search,
+we have this ranking.
+And with the semantic search,
+we have another ranking.
+And then we're using this RF scrolling algorithm
+to calculate the new score.
+And then we get this new ranking.
+And then we find the result as a good combination
+for the two type of the search.
+And if you're curious about exact logic,
+you can go to this file.
+And then the hyper search,
+when the hyper search is called,
+you're implementing this logic over there
+to calculate the ranking.
+And those are some readings for you
+that if you're curious about
+when to use what kind of search, cool.
+So just to summarize of what we've done so far.
+So to summarize what we've done so far
+is we're creating the embedding model
+and Gemini Pro model in Spanner.
+And we're implementing the related logic
+in the service layer.
+And then we're connecting the service layer,
+the semantic search logic to the semantic search tool.
+And then we are use this tool all the way in the ADK agent.
+So here we are creating the graph rack agent
+with a semantic search.
+We're also understanding what is the difference
+between the graph rack search
+versus the traditional pure rack search.
+We're also understanding hyper search
+with a new algorithm like RRF algorithm
+so that we can combine the result for the keyword search
+and also semantic search.
+And what's next is we want to test our agent with ADK map.
+And to do the test, we just first copied this
+and then I'm gonna paste it to the terminal.
+So if you take a look at this command we're typing,
+what we actually care is ADK map.
+So ADK map is a command to open the ADK map UI
+that we can directly interact and troubleshooting
+and have the ability for the agent we're creating.
+If you want to learn more about the ADK map,
+you can find more with the ADK map doc in this link over here
+you can see how to use the ADK map
+and a different way to start ADK map
+with different language or here and more.
+Now, if you're doing ADK map,
+we're just clicking on this link
+so that we're open up this ADK map.
+And on the top left, you can select the agent we're creating
+and you can ask him some question.
+For example, who can help with injuries?
+And according to this, we're expanding it
+to using semantic search to find the person
+who has the medical skills to help with injury.
+So here you can see, I can help with,
+we can try to use many search if you have on it.
+You can see those are all the tools
+that are connected to the agent.
+And this is the results for using this tools.
+And this is finally, I'll generate this,
+so I'll say, oh, those.
+So we have David Chen has this first ad
+and we have Dr. Irina has the medical training and more.
+Pretty cool.
+So you can see the tracing over here
+by when it is executing the tool.
+So you can see, is that the time we're executing the tool
+and how long the latency,
+how long the duration for me to calling LLM.
+So it's a really cool way for us to do the troubleshooting.
+Once we finish all the testing,
+we're gonna do the control C to end the process
+so that we can continue more testing.
+So the next step is we wanna run the full application.
+Remember the cool UI we had earlier, like this cool UI.
+So to do that, we want to actually run the full application.
+So what we did earlier is we're creating the route agent
+and then we're connecting it to the tools.
+So now we want to connect the backend to the frontend.
+And in this case,
+we have the frontend browser and the react component.
+So the backend we have the ADK agent
+and then we're using fast API for the API layer
+in the file called chat.python as a router
+in today's in this lab setup.
+So here's our important concept over here
+for us to understand how exactly we're connecting
+frontend and backend.
+And here's the concept of runner
+and central service and memory service.
+So runner basically it power up agent.
+So for agent, we have model as a brain
+to choose the tools we want, right?
+And each time when we model is making a decision
+to choose a certain tool or we're using this model,
+they're all different events.
+And for those events to continue,
+we need an engine to power up them
+to have this event loop.
+So that is where a runner play the role.
+So we have the runner to power things up
+to grab this event so that in this API service,
+in this API layer,
+we're gonna pass the input from the frontend UI
+and then we're gonna through this runner power the event,
+we're gonna send it to the agent
+and then finally we get the final response
+we're gonna power,
+we're gonna pass the response
+from the final response for the agent
+and send it back to the frontend UI.
+We also have session service and memory service.
+So those basically contain the conversation history
+we have this agent.
+So whatever you're talking to the agent,
+you talk to agent say, do this search
+or who has this medical skill?
+You're asking information about this relationship,
+about to understand more about this knowledge database,
+all the conversation you have with agent
+is stored in the session service and memory service.
+So now we are at child.python file
+and then what we do is we copy this to you
+and we're gonna paste it over here.
+As you can see this step is we're creating
+the session service and memory service
+so that it can store the conversation we have with agent.
+And so for ADK,
+we have three different types of session service.
+And here we're using in-memory session service.
+So for in-memory session service,
+if you refresh the page or turn down the machine,
+it store all the conversation stored in the run.
+And then when you reopen the machine,
+you will lose the conversation data we have.
+And in the ADK doc,
+we can take a look at session service cool.
+So here we have in-memory session service
+that store all the data directly in the application memory.
+We also have WordHas AI session service
+that can store things like using WordHas AI infra
+via API call for session management
+so that it can scale on cloud.
+We also have database session service
+that can connect to relational database
+or different type of database for a persistent data.
+So if you're storing your information
+in a database solution or in the WordHas AI solution,
+it can potentially scale and store long-term information.
+But right now in the lab,
+we're using in-memory session service.
+Cool.
+So now we have the session service.
+We need to replace the runner.
+We go here and search the runner
+and we'll copy this to the runner over here.
+And you can see we attach the session service
+memory service we're creating in the runner over here.
+And if you want to learn more about runner,
+you can also search runner in the stock
+to see the runner role, the orchestrator,
+and understand more about runner.
+Cool.
+So now we're just implementing this important piece,
+runner session service and memory service in the API layer
+so that we can connect the front-end React component
+to the ADK agent we're creating over here.
+And let's give a try to see the final response.
+So we just copy this and then we paste it here.
+It paste over here.
+So what we did over here is I'm actually using a script,
+startapp.sxscript to help you quickly start application.
+But essentially what it does behind the scene
+is it first start the backend
+and checking the port with the 8,000 port
+to spin up the server.
+And then it's using, so you can see that we have
+the service running on 8,000 port.
+And then what's next is we want to use the npm
+in store and npm run dev to start a React front-end.
+If you don't run the script,
+you can run the backend and front-end separately.
+But here we are running them
+so that it's easier for you to start that.
+So here we can see we have the local host,
+we're just clicking them.
+And now we expect to have the application working.
+Cool, so you can see that it's actually have application.
+I'm gonna say allow it.
+And you see I can control in this app.
+It's pretty cool, right?
+And what's amazing is those relationship
+or those 3D graph you're seeing over here
+is actually the 3D rendering of the Spanner Studio,
+the data you saw in the Spanner Studio.
+So this is a 3D version
+of all the relationship we have so far.
+For example, if you click into the notes,
+for example, over here,
+you can have the survival detected
+and this is the information over here.
+And now let's go to the lab and try to ask the question.
+For example, find skills similar to healing.
+Just copy this, paste it.
+So what happens behind the scene is in the chat.tyson file,
+the fast API layer that we have,
+we are asking this question
+and we put this question to the ADK agent
+and ADK agent gonna return the response back to the user.
+Now, if you see this unexpected response,
+service account information using the email field,
+if you see this response,
+that's very likely happen to you
+because now we're using the cloud shell environment
+and it will time out every other 30 minutes.
+So your token will expire for the security purpose.
+So all you need to do is just like me,
+refresh this whole page to refresh the,
+so that we can refresh our token
+and we should solve this problem.
+So I'm gonna click this open terminal.
+I already opened it,
+so I will refresh the page to see
+does that resolve the problem
+and let's copy this and paste over here.
+As you can see now, we find the response.
+We will find the skill similar to the healing
+and it is using semantic similarity like React search.
+What we did is we successfully create the graph rack agent
+is the ADK and Spanner
+and then we're building,
+we connect the front end and back end is fast API
+and now when you ask anything in the chat,
+you can directly find the result in the Spanner
+from the Spanner knowledge base.
+Very cool, so you can also test different search
+and get the result.
