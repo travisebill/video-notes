@@ -1,0 +1,42 @@
+Hello, everyone. This is the episode two and also last episode of our series on multi-agent
+systems with ADK. In last episode, we covered what is multi-agent system, what are the different
+agent types in ADK, and how agent hierarchy works. In today's episode, we will level
+up by learning the three workflow agents that orchestrate tasks, also three communication
+mechanisms that let agents communicate with each other. By the end of today's episode,
+you will learn how to structure flows and get your agents talk to each other. And let's get
+started. The first part of today's episode is workflow agent. So we already know agent can form
+hierarchy, the organizational chart from last episode. But how do we control the flow of work?
+That is where workflow agents come in. We have three workflow agents, and the first type is
+sequential agent. They're like an sampling line. So each subagent run in a fixed order,
+they passing results along. It is perfect for case like you fetch data and do the cleaning and
+analyze and then summarize. The second type of workflow agent are parallel agent. They're like
+a manager assigning tasks to three employees all at once. It is really great for use case like
+independent tasks. For example, you fetching data from multiple APIs simultaneously. And the third
+type of workflow agent are loop agent. They're like your debug again and again until it works.
+So loop agent run tasks again and again until a condition is met or meeting the maximum iteration
+number. The second part of today's episode is how do agents communicate with each other? You know,
+from last episode, we know hierarchy and just now we talk about workflow agent, but how do agents
+actually talk to each other? So ADK gives us three communication mechanism. And the first of them
+are shared session state. You can think of it as a shared whiteboard. So one agent write its result
+and pass it to next agent. And the next agent read it from this whiteboard. For example, an LLM agent
+can save its output to the state and another agent can pick it up and read the state output.
+The second type of communication mechanism are LLM driven delegation. That is where it gets smart.
+A coordinate agent as like a CEO, it will look at the request and decide, okay, which sub agent
+should I delegate to? For example, if the request is generate an invoice and the CEO will route it
+to billing agent. The third type of communication mechanism are explicit invocation agent as a tool.
+Here, one agent can call another agent like a function instead of using it as a sub agent.
+So you wrap the target agent as a tool. The parent decide, okay, when should I invoke this tool?
+For example, a parent agent doing analysis might call a calculator agent as a tool whenever math
+is required. So you may wonder what is the real difference between agent as a tool to sub agent.
+In this diagram on the screen, you can see the difference between them. To summarize,
+a sub agent is part of an organizational chart and is always managed by its parent agent.
+An agent as a tool is like bringing a consultant. You call them when you need it,
+but they're not part of your core hierarchy. All right, let's quickly wrap up on what we talk
+about in today's episode. We talk about workflow agent gives the orchestration pattern. We have
+sequential pattern, parallel pattern, and also loop pattern. We also talk about three
+communication mechanism through agents. We have shared session state, LLM delegation,
+and explicit invocation. Together, this makes your multi-agent system not just structured,
+but collaborative and flexible. And that's it for our two episode
+beginner series on multi-agent systems with ADK. If you want to practice, don't forget to check
+out the links in the description. And thank you so much for watching. See you in the future videos.
+Bye.
