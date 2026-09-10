@@ -1,0 +1,135 @@
+Hello everyone, welcome back.
+In the last episode of agent evaluation, we talked about why normal software testing is
+not working for AI agents and what part of an agent system you should measure.
+In today's video, we will turn that theory into practice.
+We will work through three tier testing pyramid so that you have a framework to
+tackle agent evaluation challenge.
+And then we will use Google agent development kit to actually round
+tests, follow this three tier testing pyramid.
+And we will also explain what a trajectory is and how the evaluation matrix work.
+And by the end of today's video, you will know how to test your agents step by step
+by using a clear testing pyramid and use ADK to build reliable automated checks.
+All right, let's get started.
+So part one, the three tier testing pyramid.
+You can see from this diagram on the screen that we have the three tier pyramid.
+So for the first tier, tier one, it covers component level unit tests, which is
+also the foundation of agent testing.
+And at this level, we test the smallest building blocks in isolation.
+Oftentimes it can be tool use like did this agent pick the right tool
+from the simple prompt?
+Did it produce a valid, correctly structured response request,
+like correct JSON field?
+And test at this tier, usually at fast, cheap and automated.
+So it's also perfect for continuous integration to catch regressions earlier.
+Now let's take a look at this tier two.
+So this level is about trajectory level integration tests.
+It is also about testing a full multi-step task end to end.
+And we will cover did the agent plan logically?
+Did they use tools in the right order and adapt if anything failed?
+Did the agent remember earlier information and reach the goal?
+And for the tier three level, it is about end to end human review.
+We need to involve human in the loop to check this whole experience,
+like the helpfulness, safety, common sense.
+So this tier is usually slow and more expensive, but it is
+also your final quality gate.
+So in summary, here is a big picture.
+We have tier one component level unit test.
+It checks correctness like tools and parameters.
+We had tier two trajectory level here integration tests.
+It checks capability and reasoning.
+And lastly, tier three, end to end human review.
+This enhanced user experience and trust.
+So now you know the three tier testing pyramid.
+Let's take a look at example of how to use agent development
+KAD 80 K to write tests following this three tier pyramid framework.
+And let's take a look at it.
+So the second part of this video is 80 K in action.
+We will cover what to measure and how to evaluate with 80 K.
+And let's use book finder agent.
+As you can see on the screen in this agent, it's using Germany
+2.5 pro this model as brain and has three different tools.
+Search local library tool, find local bookstore tool, and order online
+tool to make decision and answer users question.
+So if a user has input query, order this book Harry Potter for me.
+You will first check the local library and then check the bookstore.
+If we cannot find this book in the library or bookstore, it
+will then order online for users.
+And when we evaluate this agent, we need to evaluate this whole book
+finding journey, which means when you set the expected trajectory and
+compare it with the actual process.
+And the trajectory is the entire journey your agent takes to solve a task.
+And this includes first of all, the sequence of two calls with their arguments.
+First of all, the sequence of two calls with their arguments.
+And secondly, the intermediate steps and reasoning, and also the final response.
+So for this example, book finder, our desired trajectory is search local
+library to find local bookstore and also order online.
+Other than trajectory, we need to also compare the final answer.
+We need to see whether that recommends an online retailer, or if local options fail.
+So now we need to measure the trajectory and the final answer,
+but how to set the criteria.
+And here we introduce two key ADK built in matrix.
+We will use those matrix to define the passing criteria.
+And the first matrix is two trajectory average score.
+And this means how closely the actual two calls match your expected sequence.
+And here's how it scored.
+We will compare each expected calls to what actual happened.
+If you set the score to be one, that means they have to match
+a hundred percent to pass the test.
+Similarly, if you set the score to be zero, they can pass the test,
+even they're completely different.
+So when we use it, we need to set the threshold between zero and one.
+And the second matrix is response match score.
+And this means how similar the final answer to your expected answer.
+Underhood, we use rog1 to check the word overlap, which combines the precision
+and recall into a zero to one score.
+So when we use it, we need to pick a threshold between zero and one that
+allows natural language variation.
+For example, 0.5 means close enough and 0.8 means you need to be
+very strict with the response.
+Note that agents are non-deterministic, so we should avoid demanding one
+unless you use temperature approximate to zero.
+So now we know we need to test the trajectory and find a response.
+Let's design the test following the pyramid framework.
+So for tier one component test to test simple prompts and expected
+tool costs by testing components like tool selection accuracy, parameter,
+and we can check the correctness.
+And next tier two trajectory test, we can use ADKEval with multi-step
+tasks and expected tool sequence by using matrix like tool trajectory average
+score and response match score.
+So we can evaluate capability and reasoning.
+And lastly, tier three human review, because ADK can give you traces.
+So we can have human in the loop to judge the whole quality.
+Now let's get into the last part of this video, which is a demo about how to
+use ADK to test your agent.
+So for tier one component test, we will see this example of two correctness.
+The goal is does a single tool call get selected and filled correctly?
+So here is an example code with unit test.
+And when we're reading this tier one results, we need to check the
+tool selection accuracy, like did it pick the search local library tool?
+And also for the parameter, did it pass title equal to harder border correctly?
+Since tier one maps to the foundation, the correctness of tools and parameter.
+So if they fails, we need to fix them before moving on.
+And for tier two, trajectory test, that including multi-step plan and final
+answer, the goal is does the agent follow the expected journey and produce
+a good final response?
+Here is example code to test.
+And let's set pass criteria.
+We can set this tool trajectory average score and response match score to
+define how strict are the tests.
+As you can see, 0.8 as trajectory demands a very close match to your plan steps.
+And 0.5 allows a natural language variation in the final response.
+All right, let's run it and you can see the result from the screen.
+In summary, you've just learned how to evaluate AI agents in practice.
+We start with a tier one test for fast, cheap component checks.
+And then we move to tier two, ADK eval for full trajectory and final answer quality.
+You can also finish with tier three human review to guarantee a great user experience.
+So with this three tier approach and ADK built-in tools, you can go from,
+I think this agent works to I know this agent is very reliable.
+And this allows us to wrap up our two-part series on agent evaluation.
+In the last episode, we explored what traditional way of testing doesn't work
+for AI agent and what to measure in agents.
+So in today's episode, we make it very practical with a clear testing
+pyramid and hands-on ADK demos.
+And from here, you're ready to start writing your own evaluation sets and test files with ADK.
+Thank you so much for watching and I will see you in future videos.
+Bye.

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 189,
-    "total_with_audio": 160,
-    "total_with_transcript": 115,
-    "total_with_spoken_script": 158,
+    "total_videos": 190,
+    "total_with_audio": 161,
+    "total_with_transcript": 116,
+    "total_with_spoken_script": 159,
     "speakers_count": 78,
     "categories_count": 4,
     "topics_count": 16,
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-09-10 21:17:53",
+    "last_updated": "2026-09-10 21:21:23",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -4517,6 +4517,34 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260205_JensenHuang_不輸給AI_輸給會用AI的人.md"
     },
     {
+      "id": "20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice",
+      "title": "【How to evaluate agents in practice】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2025-12-12",
+      "note_date": "2025-12-12",
+      "duration_seconds": 653,
+      "duration_display": "10:53",
+      "video_url": "https://www.youtube.com/watch?v=vuBvf7ZRKTA",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice_逐字稿.txt",
+        "spoken_script": "transcripts/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice_口播稿.txt",
+        "spoken_script_tts": "transcripts/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice.md"
+    },
+    {
       "id": "20251203_GoogleCloudTech_TheAgentEvaluationRevolution",
       "title": "【The agent evaluation revolution】",
       "speaker": "Google Cloud Tech",
@@ -4533,7 +4561,7 @@
       "lec_num": null,
       "audio": {
         "opus": "audio/20251203_GoogleCloudTech_TheAgentEvaluationRevolution_口播稿.opus",
-        "m4a": null,
+        "m4a": "audio/20251203_GoogleCloudTech_TheAgentEvaluationRevolution_口播稿.m4a",
         "mp3": "audio/20251203_GoogleCloudTech_TheAgentEvaluationRevolution_口播稿.mp3"
       },
       "transcripts": {
