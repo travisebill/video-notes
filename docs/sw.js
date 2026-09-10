@@ -25,7 +25,7 @@
 //           — audio URL pattern 變動 → 必須 bump CACHE_VERSION 觸發 SW activate 清舊 app.js cache
 //           — 跟 app.js 的 AUDIO_CACHE_BUST 同步，兩者永遠要一起 bump
 //           — 詳見 AGENTS.md「Pages audio cache 7-day bug (2026-08-20 立)」章節
-const CACHE_VERSION = 'v2026-09-10-googlecloudtech-3advanced-design-patterns';
+const CACHE_VERSION = 'v2026-09-10-googlecloudtech-short-term-memory';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
