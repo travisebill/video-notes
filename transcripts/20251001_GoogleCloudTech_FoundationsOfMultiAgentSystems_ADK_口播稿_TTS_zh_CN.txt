@@ -1,9 +1,1 @@
-Google Cloud Tech 推出 Google Agent Development Kit 系列教学影片， 这是开场的入门篇。 影片用五分钟建立 multi-agent system 的三大基础观念， 并介绍 ADK 如何把 multi-agent 开发产品化。
-
-第一部分厘清什么是 multi-agent system。 三个关键概念依序展开：decentralized control 强调没有单一指挥官， 每个 agent 自主决策； local view 指出每个 agent 只能感知周围环境， 不是整个系统； emergent behavior 说明当所有 agent 遵守简单局部规则时， 全系统的复杂行为会自然浮现。
-
-第二部分说明 ADK 对 multi-agent 的支援。 ADK 原生内建三种 agent 类型：LLM agent 是用大型语言模型推理的「脑」， 负责理解输入与选择工具； workflow agent 是 orchestrate 多个 agent 协作的「manager」， 又分 sequential、 parallel、 loop 三种执行模式； custom agent 是让开发者用 Python 自订逻辑的「specialist」， 继承 base agent 就能完全控制。
-
-第三部分说明 agent hierarchy 的设计原则。 ADK 采用 single parent rule， 每个 sub agent 只有一个 parent agent， 就像公司组织图， root agent 是 CEO， sub agent 是 VP、 manager、 worker。 这套 hierarchy 让 multi-agent 系统既能分工又能协调， 避免指挥链混乱。
-
-整支影片的核心讯息是：multi-agent system 的威力不在于塞进更多 AI 工具， 而在于让每个 agent 保有自主决策跟局部视野， 让系统层级的 emergent behavior 自然浮现。 ADK 把这套理念包装成 hierarchy 框架加上三种 agent 类型， 让开发者不用 hack 也能建构可运作的 multi-agent 系统。
+Google Cloud Tech 推出 Google Agent Development Kit 系列教学影片， 这是开场的入门篇。 影片用五分钟建立 multi-agent system 的三大基础观念， 并介绍 ADK 如何把 multi-agent 开发产品化。 第一部分厘清什么是 multi-agent system。 三个关键概念依序展开：decentralized control 强调没有单一指挥官， 每个 agent 自主决策； local view 指出每个 agent 只能感知周围环境， 不是整个系统； emergent behavior 说明当所有 agent 遵守简单局部规则时， 全系统的复杂行为会自然浮现。 第二部分说明 ADK 对 multi-agent 的支援。 ADK 原生内建三种 agent 类型：LLM agent 是用大型语言模型推理的「脑」， 负责理解输入与选择工具； workflow agent 是 orchestrate 多个 agent 协作的「manager」， 又分 sequential、 parallel、 loop 三种执行模式； custom agent 是让开发者用 Python 自订逻辑的「specialist」， 继承 base agent 就能完全控制。 第三部分说明 agent hierarchy 的设计原则。 ADK 采用 single parent rule， 每个 sub agent 只有一个 parent agent， 就像公司组织图， root agent 是 CEO， sub agent 是 VP、 manager、 worker。 这套 hierarchy 让 multi-agent 系统既能分工又能协调， 避免指挥链混乱。 整支影片的核心讯息是：multi-agent system 的威力不在于塞进更多 AI 工具， 而在于让每个 agent 保有自主决策跟局部视野， 让系统层级的 emergent behavior 自然浮现。 ADK 把这套理念包装成 hierarchy 框架加上三种 agent 类型， 让开发者不用 hack 也能建构可运作的 multi-agent 系统。
