@@ -1,0 +1,152 @@
+Hello, everyone.
+Welcome to this new series of evaluating AI agent.
+So if you ever build an AI agent and thought,
+OK, it answered a few prompts, so it must work correctly.
+However, although getting a reasonable response is easy,
+the real challenge is proving your agent works
+when a user source a very messy multi-step real-world request
+edit.
+And in that case, a single pass or fail test is not enough.
+So in this video series of agent evaluation,
+we will explore why traditional way of testing
+fails for AI agents and what agent evaluation really means.
+We will also cover what to evaluate in agents.
+We need to evaluate from reasoning and tools
+to memory and safety.
+And lastly, in this series, we will
+cover how to design and run real tests with Google Agent
+Development Kit.
+Use three tier testing pyramids to structure your evaluation.
+And today's video is the very first episode.
+And by the end of today's video, you
+will understand what you really need
+to measure to know if this agent is doing its job.
+And you will also see a real-life example
+of a multi-agent evaluation challenge.
+All right, let's get started.
+And the first part of this video is why evaluation
+is different for agents.
+You know, traditional software is deterministic.
+With same input, you almost always get the same output.
+And that is why unit tests and integration tests work so well.
+We have this clear pass or fail rules
+and predictable behavior.
+But AI agents are probabilistic and autonomous.
+You know, agents, they plan, adapt, use tools,
+and can make different valid decisions each run.
+So with the same prompt, two runs
+might take completely different path.
+So agent may fail to achieve what
+you expect in different ways.
+For example, agents may choose the wrong tool.
+They may lose the important context.
+Or they may timeout that bit.
+So if you only check, did the final answer equal x,
+you may miss everything that happened in between.
+So evaluation for agents, you have
+to watch this whole journey, including
+how the plan formed, how the tool were used,
+how the information were passed, and whether the user really
+got what they needed.
+And the second part of today's video
+is to explain what agent evaluation really means.
+So agent evaluation isn't just testing this model.
+It is a whole stack that includes the LM brain,
+the prompts that's guiding it, the external tools and APIs,
+the memory system carrying the information forward,
+and also the orchestration logic trying it all together.
+So when we evaluate the agent, we're
+asking, did this entire system, including planning, tool use,
+memory, reasoning, reliably achieve its goal?
+And that is what we call system-level testing.
+It is not just checking one single string.
+Here is a full-stack checklist to keep in mind when it comes
+to system-level testing.
+And the first thing you need to check is a final output.
+You need to check, did it actually finish the job?
+We can check task success rate, stepwise progress, output
+quality, including coherence, accuracy, clarity,
+and, of course, safety, including bias and prompt
+injection defense.
+And the second thing you need to check
+is planning and reasoning.
+So how did this model think?
+How does the model break down these complex goals logically?
+Or how does it justify each step sensibly
+and stay coherent over this long multi-turn task?
+And third thing you need to check is a tool use.
+You need to check, can it use the tool effectively?
+Whether the model picking the right tool,
+and whether it passed the correct parameter
+and handle the outputs.
+Also, whether it's avoid the redundant costs,
+keep the latency and cost reasonable.
+And lastly is memory and context.
+You need to check whether the agent remember
+what really matters.
+Does it retrieve past information accurately
+and handle this long range context and conflicts?
+You know, for example, for RAC, retrieval augmented
+generation, we need to check this context for precision
+and record.
+So when evaluating the agent, a bad answer
+might come from a tool issue, or a reasoning
+gap, or a memory failure.
+So it is very important to measure each layer
+to help you debug.
+So now we have covered why agent evaluation is different
+and what to evaluate.
+The last part of today's video is an example
+of multi-agent evaluation.
+And let's look at this example.
+As you can see from the screen, we
+have these two agents as customer service.
+So we have this agent one that is doing the customer support
+frontline.
+We have this agent B that is to handle
+the refund and replacement.
+So when a user says, I bought a smart vision last week,
+it's not turning on.
+I like a refund or replacement.
+So here is what happens behind the scene.
+Agent A greets the user and then checks the purchase history,
+confirms the order.
+But agent A can't refund.
+Its job is to hand off details to agent B.
+And then agent B processes the refund with its own tools.
+But here is the trap.
+When it comes to evaluation, if it tests agent A alone
+for refunding, it may look like 0% success,
+because agent A doesn't do refund.
+But in reality, agent A succeeds because its job
+was to hand off the information, not to refund.
+Now, if agent A passed the wrong order ID to agent B,
+but agent B succeeds to refund, but the whole system fails,
+because agent A passed the wrong order.
+And that is why multi-agent evaluation is so challenging.
+You need to know if the whole network achieved the goal.
+You need to know the shared contacts safely,
+and also whether the whole system stay efficient
+with cost and latency.
+So how to test the whole system?
+We will show you how to test this challenge
+in the next episode.
+We will introduce a test pyramid and give examples
+on how to evaluate agent with Agent Development Kit.
+And I'll also show you step by step
+on how to design test cases.
+You can also check the link on the screen
+for hands-on tutorial on how to write case yourself.
+Now, to wrap up today's video, we've
+covered, first of all, why all testing
+fails for autonomous tool using and multi-agent system.
+We also cover what agent evaluation really means.
+It is a four-step system-level process.
+We also cover what to measure, including
+outcomes, reasoning, tools, memory, and safety.
+So next time, we will get practical,
+and I will show you how to design and run
+real tests with Google's ADK using the three-tier testing
+pyramid to structure your evaluation.
+And I will see you in next video.
+Bye.
