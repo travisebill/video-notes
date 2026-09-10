@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 191,
-    "total_with_audio": 162,
-    "total_with_transcript": 117,
-    "total_with_spoken_script": 160,
+    "total_videos": 192,
+    "total_with_audio": 163,
+    "total_with_transcript": 118,
+    "total_with_spoken_script": 161,
     "speakers_count": 78,
     "categories_count": 4,
     "topics_count": 16,
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-09-10 21:25:53",
+    "last_updated": "2026-09-10 21:30:57",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -4433,6 +4433,34 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md"
     },
     {
+      "id": "20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns",
+      "title": "【3 Advanced AI agent design patterns】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-03-17",
+      "note_date": "2026-03-17",
+      "duration_seconds": 480,
+      "duration_display": "8:00",
+      "video_url": "https://www.youtube.com/watch?v=89KKm_a4M7A",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns_逐字稿.txt",
+        "spoken_script": "transcripts/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns.md"
+    },
+    {
       "id": "20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王",
       "title": "【NTU 人工智慧導論（FAI 2026）— Final Project：Game Agent 誰是牛頭王】",
       "speaker": "NTU CSIE 人工智慧導論 教學團隊",
@@ -4505,7 +4533,7 @@
       "lec_num": null,
       "audio": {
         "opus": "audio/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿.opus",
-        "m4a": null,
+        "m4a": "audio/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿.m4a",
         "mp3": "audio/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿.mp3"
       },
       "transcripts": {
