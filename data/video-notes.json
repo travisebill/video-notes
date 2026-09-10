@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 184,
-    "total_with_audio": 155,
-    "total_with_transcript": 110,
-    "total_with_spoken_script": 153,
+    "total_videos": 185,
+    "total_with_audio": 156,
+    "total_with_transcript": 111,
+    "total_with_spoken_script": 154,
     "speakers_count": 78,
     "categories_count": 4,
     "topics_count": 16,
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-09-10 19:47:39",
+    "last_updated": "2026-09-10 20:59:15",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -1285,7 +1285,7 @@
       "lec_num": null,
       "audio": {
         "opus": "audio/20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02_口播稿.opus",
-        "m4a": null,
+        "m4a": "audio/20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02_口播稿.m4a",
         "mp3": "audio/20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02_口播稿.mp3"
       },
       "transcripts": {
@@ -4543,6 +4543,34 @@
       },
       "note_path": "技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md"
+    },
+    {
+      "id": "20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK",
+      "title": "【Foundations of multi-agent systems with ADK】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2025-10-01",
+      "note_date": "2025-10-01",
+      "duration_seconds": 317,
+      "duration_display": "5:17",
+      "video_url": "https://www.youtube.com/watch?v=pX0_iIfRilU",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK_逐字稿.txt",
+        "spoken_script": "transcripts/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK_口播稿.txt",
+        "spoken_script_tts": "transcripts/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK.md"
     },
     {
       "id": "20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26",
