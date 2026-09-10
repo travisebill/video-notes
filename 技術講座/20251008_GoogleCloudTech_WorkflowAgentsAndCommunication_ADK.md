@@ -101,9 +101,9 @@ Google Cloud Tech 推出 Google Agent Development Kit（ADK）系列教學影片
 
 ## 🎙️ 音檔導覽
 
-> MiniMax TTS 語音導覽（voice clone, speech-2.8-hd），約 2 分 7 秒
+> MiniMax TTS 語音導覽（voice clone, speech-2.8-hd），約 1 分 48 秒
 > 口播稿原文：transcripts/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿.txt
 
-- [opus 0.5 MB](../audio/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿.opus)（Telegram 友善）
-- [m4a 1.5 MB](../audio/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿.m4a)（iOS 友善）
-- [mp3 1.9 MB](../audio/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿.mp3）（通用格式）
+- [opus 0.4 MB](../audio/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿.opus)（Telegram 友善）
+- [m4a 2.0 MB](../audio/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿.m4a)（iOS 友善）
+- [mp3 1.7 MB](../audio/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿.mp3）（通用格式）
