@@ -263,13 +263,13 @@ def parse_md_frontmatter(content: str) -> dict:
     # Module 標籤（2026-09-10 新增，支援 Google ADK 完整教學 playlist 分類）
     # 格式：**Module｜A Multi-agent 基礎 (Ep.1)**
     # 解析：module='A'、module_name='Multi-agent 基礎'、module_order=1
-    m = re.search(rf'\*\*Module\*\*\s*{SEP}\s*([^\n]+)', content)
+    m = re.search(rf'\*\*Module\s*{SEP}\s*([^*\n]+?)\*\*', content)
     if not m:
-        m = re.search(rf'\*\*Module{SEP}\*\*\s*([^\n]+)', content)
+        m = re.search(rf'\*\*Module\s*{SEP}\s*([^*\n]+)', content)
     if not m:
-        m = re.search(rf'> \*\*Module\*\*\s*{SEP}\s*([^\n]+)', content)
+        m = re.search(rf'> \*\*Module\s*{SEP}\s*([^*\n]+?)\*\*', content)
     if not m:
-        m = re.search(rf'> \*\*Module{SEP}\*\*\s*([^\n]+)', content)
+        m = re.search(rf'> \*\*Module\s*{SEP}\s*([^*\n]+)', content)
     if m:
         module_text = m.group(1).strip()
         mm = re.match(r'^([A-Z])\s+(.+?)\s*\(Ep\.(\d+)\)\s*$', module_text)
