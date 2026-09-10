@@ -221,30 +221,6 @@
         </select>
       </label>
 
-      
-      <!-- Module (2026-09-10 新增：Google ADK 完整教學 A-E module 篩選) -->
-      <label x-show="meta.modules && meta.modules.length > 0">
-        <small>Module</small>
-        <select x-model="filters.module" @change="applyFilters()">
-          <option value="">全部 Module</option>
-          <template x-for="m in meta.modules" :key="m">
-            <option :value="m" x-text="m"></option>
-          </template>
-        </select>
-      </label>
-
-      
-      <!-- Module (2026-09-10 新增：Google ADK 完整教學 A-E module 篩選) -->
-      <label x-show="meta.modules && meta.modules.length > 0">
-        <small>Module</small>
-        <select x-model="filters.module" @change="applyFilters()">
-          <option value="">全部 Module</option>
-          <template x-for="m in meta.modules" :key="m">
-            <option :value="m" x-text="m"></option>
-          </template>
-        </select>
-      </label>
-
       <!-- Date Range -->
       <label>
         <small>日期範圍</small>
@@ -267,30 +243,6 @@
         </select>
       </label>
 
-      
-      <!-- Module (2026-09-10 新增：Google ADK 完整教學 A-E module 篩選) -->
-      <label x-show="meta.modules && meta.modules.length > 0">
-        <small>Module</small>
-        <select x-model="filters.module" @change="applyFilters()">
-          <option value="">全部 Module</option>
-          <template x-for="m in meta.modules" :key="m">
-            <option :value="m" x-text="m"></option>
-          </template>
-        </select>
-      </label>
-
-      
-      <!-- Module (2026-09-10 新增：Google ADK 完整教學 A-E module 篩選) -->
-      <label x-show="meta.modules && meta.modules.length > 0">
-        <small>Module</small>
-        <select x-model="filters.module" @change="applyFilters()">
-          <option value="">全部 Module</option>
-          <template x-for="m in meta.modules" :key="m">
-            <option :value="m" x-text="m"></option>
-          </template>
-        </select>
-      </label>
-
       <!-- Course (B3 scheme 2026-07-05) -->
       <label x-show="meta.courses && meta.courses.length > 0">
         <small>課程</small>
@@ -298,6 +250,18 @@
           <option value="">全部課程</option>
           <template x-for="c in meta.courses" :key="c">
             <option :value="c" x-text="c"></option>
+          </template>
+        </select>
+      </label>
+
+      <!-- Module (2026-09-11 重構：Course 的 cascade child filter，Stanford/Coursera 風格)
+           只在選了有 modules 的 course 時才顯示，只列出該 course 的章節 -->
+      <label x-show="currentCourseModules().length > 0">
+        <small x-text="filters.course + ' 章節'"></small>
+        <select x-model="filters.module" @change="applyFilters()">
+          <option value="">全部章節</option>
+          <template x-for="m in currentCourseModules()" :key="m.id">
+            <option :value="m.id" x-text="`${m.id}. ${m.name} (${m.count} 支)`"></option>
           </template>
         </select>
       </label>

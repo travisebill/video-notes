@@ -4,6 +4,7 @@
 **影片連結｜https://www.youtube.com/watch?v=HDqzJJhZsxw**
 **影片長度**｜7:24（444s）
 **發布日期｜2026-04-08**
+**Course｜Google ADK 完整教學**
 **Module｜D Agent Memory (Ep.2)**
 **類型｜教學影片（Agent Memory 系列 Ep.2）**
 **主題｜Google Agent Development Kit (ADK) — AI agent persistent memory：Database session service + User profile store**

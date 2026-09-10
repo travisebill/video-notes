@@ -284,6 +284,19 @@ def parse_md_frontmatter(content: str) -> dict:
                 if mm.group(2):
                     md['module_name'] = mm.group(2).strip()
 
+    # Course 標籤（2026-09-11 新增）
+    # 格式：**Course｜Google ADK 完整教學**
+    # 解析：course='Google ADK 完整教學'（用於 modules_by_course 與 Course dropdown）
+    m = re.search(r'\*\*Course\s*' + SEP + r'\s*([^*\n]+?)\*\*', content)
+    if not m:
+        m = re.search(r'\*\*Course\s*' + SEP + r'\s*([^*\n]+)', content)
+    if not m:
+        m = re.search(r'> \*\*Course\s*' + SEP + r'\s*([^*\n]+?)\*\*', content)
+    if not m:
+        m = re.search(r'> \*\*Course\s*' + SEP + r'\s*([^*\n]+)', content)
+    if m:
+        md['course'] = m.group(1).strip()
+
     # 標題（H1）
     m = re.search(r'^# (.+)$', content, re.MULTILINE)
     if m:
@@ -497,15 +510,47 @@ def main():
                 'module': fm.get('module'),
                 'module_name': fm.get('module_name'),
                 'module_order': fm.get('module_order'),
+                # 2026-09-11 新增：Course 標籤（從 frontmatter `**Course｜Google ADK 完整教學**` 解析）
+                'course': fm.get('course') or fm.get('course_slug'),
             }
             videos.append(video)
 
     # 計算 meta
     speakers = sorted({v['speaker'] for v in videos})
     modules = sorted({v['module'] for v in videos if v.get('module')})
-    modules = sorted({v['module'] for v in videos if v.get('module')})
     categories = sorted({v['category'] for v in videos})
     topics = sorted({t for t in (v['primary_topic'] for v in videos) if t})
+
+    # 2026-09-11 新增：Course → Module cascade map（Stanford/Coursera 風格 UI 用）
+    # 結構：{course_name: [{id, name, count, first_date}, ...]}
+    # 前端只列出當前 course 的 modules，不再放頂層獨立 filter
+    modules_by_course = {}
+    # 收集每個 (course, module) 的最早影片日期（決定 module 在課程中的章節順序）
+    module_first_date = {}
+    for v in videos:
+        course = v.get('course')
+        module = v.get('module')
+        if course and module:
+            key = (course, module)
+            d = v.get('date') or v.get('note_date') or '9999-99-99'
+            if key not in module_first_date or d < module_first_date[key]:
+                module_first_date[key] = d
+            if course not in modules_by_course:
+                modules_by_course[course] = {}
+            if module not in modules_by_course[course]:
+                modules_by_course[course][module] = {
+                    'id': module,
+                    'name': v.get('module_name', ''),
+                    'count': 0,
+                    'first_date': module_first_date[key],
+                }
+            modules_by_course[course][module]['count'] += 1
+    # 按 module 最早影片日期排序（同日期用 module id 字母當 tiebreaker）
+    modules_by_course = {
+        course: sorted(mods.values(), key=lambda m: (m['first_date'], m['id']))
+        for course, mods in modules_by_course.items()
+    }
+    courses_with_modules = sorted(modules_by_course.keys())
 
     # 統計：含音檔的影片數
     videos_with_audio = sum(1 for v in videos if any(v['audio'].values()))
@@ -521,13 +566,19 @@ def main():
             'speakers_count': len(speakers),
             'categories_count': len(categories),
             'topics_count': len(topics),
-            'courses': sorted({v['course_slug'] for v in videos if v.get('course_slug')}),
+            'courses': sorted({
+                v.get('course') or v.get('course_slug')
+                for v in videos
+                if v.get('course') or v.get('course_slug')
+            }),
             'modules_count': len(modules),
             'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             'speakers': speakers,
             'categories': categories,
             'topics': topics,
             'modules': modules,
+            'modules_by_course': modules_by_course,
+            'courses_with_modules': courses_with_modules,
         },
         'videos': videos,
     }

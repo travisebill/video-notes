@@ -18,7 +18,7 @@ const LOCAL_JSON_URL = `./data/video-notes.json`;
 document.addEventListener('alpine:init', () => {
   Alpine.data('videoApp', () => ({
     // ===== State =====
-    meta: { total_videos: 0, speakers_count: 0, topics_count: 0, modules_count: 0, last_updated: '', speakers: [], categories: [], topics: [], modules: [], courses: [] },
+    meta: { total_videos: 0, speakers_count: 0, topics_count: 0, modules_count: 0, modules_by_course: {}, last_updated: '', speakers: [], categories: [], topics: [], modules: [], courses: [] },
     videos: [],
     filteredVideos: [],
     searchQuery: '',
@@ -859,10 +859,20 @@ document.addEventListener('alpine:init', () => {
       this.applyFilters();
     },
 
-    // Course filter 變動時自動切 sort
+    // 2026-09-11 新增：回傳當前選中 course 的 modules（cascade UI 必備）
+    // Stanford/Coursera 風格：Module 是 Course 的 child filter
+    currentCourseModules() {
+      const c = this.filters.course;
+      if (!c) return [];
+      return this.meta.modules_by_course?.[c] || [];
+    },
+
+    // Course filter 變動時自動切 sort + reset module（cascade UI 必備）
     // 選 CS224 / CS336 / NTU FAI → sort = lec_num_asc（Lecture/FAI 順序）
     // 切回「全部課程」→ sort 不變（保留 user 自己的選擇）
+    // 切換 course → filters.module = ''（module 是 course 的 child）
     onCourseChange() {
+      this.filters.module = '';  // 2026-09-11：cascade UI，切 course 時重置 module
       const c = this.filters.course;
       if (c === 'Stanford CS336' || c === 'Harvard CS224' || c === 'NTU 人工智慧導論') {
         this.sort = 'lec_num_asc';

@@ -4,6 +4,7 @@
 **影片連結｜https://www.youtube.com/watch?v=89KKm_a4M7A**
 **影片長度**｜8:00（480s）
 **發布日期｜2026-03-17**
+**Course｜Google ADK 完整教學**
 **Module｜E Design Patterns（跨系列） (Ep.2)**
 **類型｜教學影片（Agents Pattern 系列 Ep.2）**
 **主題｜Google Agent Development Kit (ADK) — 3 個進階 Agent design patterns：Loop review & critique / Coordinator router / Agent as tool**

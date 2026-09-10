@@ -8,13 +8,14 @@
     "categories_count": 4,
     "topics_count": 16,
     "courses": [
+      "Google ADK 完整教學",
       "Harvard CS224",
       "NTU 人工智慧導論",
       "Stanford CS329A",
       "Stanford CS336"
     ],
     "modules_count": 5,
-    "last_updated": "2026-09-10 23:17:42",
+    "last_updated": "2026-09-11 00:46:41",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -125,6 +126,43 @@
       "C",
       "D",
       "E"
+    ],
+    "modules_by_course": {
+      "Google ADK 完整教學": [
+        {
+          "id": "A",
+          "name": "Multi-agent 基礎",
+          "count": 2,
+          "first_date": "2025-10-08"
+        },
+        {
+          "id": "B",
+          "name": "MCP 整合",
+          "count": 2,
+          "first_date": "2025-11-17"
+        },
+        {
+          "id": "C",
+          "name": "Agent Evaluation",
+          "count": 2,
+          "first_date": "2025-12-12"
+        },
+        {
+          "id": "E",
+          "name": "Design Patterns（跨系列）",
+          "count": 2,
+          "first_date": "2026-03-17"
+        },
+        {
+          "id": "D",
+          "name": "Agent Memory",
+          "count": 3,
+          "first_date": "2026-04-16"
+        }
+      ]
+    },
+    "courses_with_modules": [
+      "Google ADK 完整教學"
     ]
   },
   "videos": [
@@ -157,7 +195,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學",
@@ -188,7 +227,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260826_Tibo_NextWaveOfAIBeforeEveryoneElse",
@@ -219,7 +259,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260817_BrianGreene_ThreatOfAIConsciousness",
@@ -250,7 +291,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260810_SethGodin_放棄的藝術",
@@ -281,7 +323,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260810_SethGodin_放棄的藝術.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260805_MattPocock_SkillsV12WaitWhatWritingForAgentsGrillMe",
@@ -312,7 +355,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260805_MattPocock_SkillsV12WaitWhatWritingForAgentsGrillMe.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗",
@@ -343,7 +387,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260801_自說自話的總裁_柯伊伯帶與2700萬年大清洗.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260801_McKinsey_TheBiggestAIOpportunityIsntReplacingPeople",
@@ -374,7 +419,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260801_McKinsey_TheBiggestAIOpportunityIsntReplacingPeople.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260730_RayDalio_AIBubbleBigCycle",
@@ -405,7 +451,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260730_RayDalio_AIBubbleBigCycle.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260730_JeffDean_The1PercentRuleForBuildingInAI",
@@ -436,7 +483,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260730_JeffDean_The1PercentRuleForBuildingInAI.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260730_Harari_50年AI",
@@ -467,7 +515,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260730_Harari_50年AI.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260720_AlexHormozi_StopChasingAIBuildThisInstead",
@@ -498,7 +547,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260718_自說自話的總裁_人類並不孤單",
@@ -529,7 +579,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260718_自說自話的總裁_人類並不孤單.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260713_DanielKokotajlo_AI2027_70PctExtinction",
@@ -560,7 +611,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260713_DanielKokotajlo_AI2027_70PctExtinction.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260701_AI_DecodedGenius_AI99PercentExtinctionRisk",
@@ -591,7 +643,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260701_AI_DecodedGenius_AI99PercentExtinctionRisk.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260627_自說自話的總裁_煤與Starship與2100年的地球",
@@ -622,7 +675,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260627_自說自話的總裁_煤與Starship與2100年的地球.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260626_AudioBookRise_25YearsOfMentalStrength",
@@ -653,7 +707,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260626_AudioBookRise_25YearsOfMentalStrength.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260619_DrDarrenCandow_CreatineForAntiAging",
@@ -684,7 +739,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260613_自說自話的總裁_上古中國的魔法時代",
@@ -715,7 +771,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260613_自說自話的總裁_上古中國的魔法時代.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫",
@@ -746,7 +803,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260611_Graham_Hancock_失落古文明與12,800年前的人類浩劫.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊",
@@ -777,7 +835,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260608_NickHanauer_DanielPriestley_中產階級之死與AI衝擊.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260602_Mo_Gawdat_AI倫理與人類未來",
@@ -808,7 +867,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260512_蔡康永_衰老死亡與AI",
@@ -839,7 +899,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260512_蔡康永_衰老死亡與AI.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260512_歐麗娟_王維與唐代貴族",
@@ -870,7 +931,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260512_歐麗娟_王維與唐代貴族.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260512_Anne_Applebaum_民主如何消亡",
@@ -901,7 +963,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260512_Anne_Applebaum_民主如何消亡.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260423_Eagleman_DreamsWarningSignals",
@@ -932,7 +995,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260423_Eagleman_DreamsWarningSignals.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260221_被討厭的勇氣_阿德勒心理學",
@@ -963,7 +1027,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260221_被討厭的勇氣_阿德勒心理學.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro",
@@ -994,7 +1059,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260809_TVBS文茜_世界周報",
@@ -1025,7 +1091,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260809_TVBS文茜_世界周報.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260630_YuvalNoahHarari_AIHackedHumanCivilization",
@@ -1056,7 +1123,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260630_YuvalNoahHarari_AIHackedHumanCivilization.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260627_TVBS_文茜_英國脫歐",
@@ -1087,7 +1155,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260627_TVBS_文茜_英國脫歐.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260627_TVBS_文茜_美伊停火",
@@ -1118,7 +1187,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260627_TVBS_文茜_美伊停火.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion",
@@ -1149,7 +1219,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260526_YuvalNoahHarari_DonaldTrumpsCoreDelusion.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260517_陳文茜_法英美日看待習川會",
@@ -1180,7 +1251,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260517_陳文茜_法英美日看待習川會.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260516_陳文茜_習川會兩大強權過招",
@@ -1211,7 +1283,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260516_陳文茜_習川會兩大強權過招.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260516_陳文茜_習川會伊朗共識與影子艦隊",
@@ -1242,7 +1315,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260516_陳文茜_習川會伊朗共識與影子艦隊.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260724_ScottGalloway_TheWeek_ChinaAIUndercut",
@@ -1273,7 +1347,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260724_ScottGalloway_TheWeek_ChinaAIUndercut.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速",
@@ -1304,7 +1379,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260614_陳文茜_AI畢業生與文明重組",
@@ -1335,7 +1411,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260614_陳文茜_AI畢業生與文明重組.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260510_陳文茜_反腐清洗與川習會前大國博弈",
@@ -1366,7 +1443,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260510_陳文茜_反腐清洗與川習會前大國博弈.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260510_陳文茜_伊朗戰爭成石油人民幣契機",
@@ -1397,7 +1475,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02",
@@ -1428,7 +1507,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI",
@@ -1459,7 +1539,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260817_AnatoliKopadze_GraphEngineering",
@@ -1490,7 +1571,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260817_AnatoliKopadze_GraphEngineering.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260806_Cloudflare_IntroducingKitesurf",
@@ -1521,7 +1603,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260806_Cloudflare_IntroducingKitesurf.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260803_StanfordCS329A_Part9FutureResearchAreas",
@@ -1552,7 +1635,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part9FutureResearchAreas.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260803_StanfordCS329A_Part8AgenticEvaluationsAndLongHorizonTasks",
@@ -1583,7 +1667,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part8AgenticEvaluationsAndLongHorizonTasks.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260803_StanfordCS329A_Part7SelfImprovementAndDeepResearchAgents",
@@ -1614,7 +1699,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part7SelfImprovementAndDeepResearchAgents.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260803_StanfordCS329A_Part6TrainTimeScalingScalingRL",
@@ -1645,7 +1731,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part6TrainTimeScalingScalingRL.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260803_StanfordCS329A_Part5PlanningMultiStepReasoning",
@@ -1676,7 +1763,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part5PlanningMultiStepReasoning.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260803_StanfordCS329A_Part4LearningFromFeedbackWithToolsCode",
@@ -1707,7 +1795,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part4LearningFromFeedbackWithToolsCode.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260803_StanfordCS329A_Part3RobustVerification",
@@ -1738,7 +1827,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part3RobustVerification.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260803_StanfordCS329A_Part2TestTimeComputeScaling",
@@ -1769,7 +1859,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part2TestTimeComputeScaling.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260803_StanfordCS329A_Part1CourseOverview",
@@ -1800,7 +1891,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260803_StanfordCS329A_Part1CourseOverview.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260802_BestPartnersTV_GraphAndLoopEngineering",
@@ -1831,7 +1923,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260802_BestPartnersTV_GraphAndLoopEngineering.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260731_Microsoft_NETteam_PolyglotUnitTestingAgent",
@@ -1862,7 +1955,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260731_Microsoft_NETteam_PolyglotUnitTestingAgent.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260727_BorisCherny_BuildingClaudeCode",
@@ -1893,7 +1987,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260727_BorisCherny_BuildingClaudeCode.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260723_MattPocock_PrototypeSkill",
@@ -1924,7 +2019,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260723_MattPocock_PrototypeSkill.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260713_MattPocock_WayfinderDemo",
@@ -1955,7 +2051,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260713_MattPocock_WayfinderDemo.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260707_CedricClyburn_MCP_vs_Skills",
@@ -1986,7 +2083,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260707_CedricClyburn_MCP_vs_Skills.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步",
@@ -2017,7 +2115,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI3.5_DeepLearningOptimization訓練深度學習模型需要很多小撇步.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢",
@@ -2048,7 +2147,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI3.4_LossFunctionDesign甚麼才叫好模型呢.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路",
@@ -2079,7 +2179,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI3.3_NeuralNetworkHypothesis如何建構深度學習的類神經網路.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天",
@@ -2110,7 +2211,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI3.2_DeepLearning類神經網路改名為深度學習才能一飛衝天.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型",
@@ -2141,7 +2243,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI3.1_Validation機器學習必問問題如何挑選模型.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度",
@@ -2172,7 +2275,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI2.4_EnsembleBaggingRandomForest樹木擴展成森林來提升穩定度.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型",
@@ -2203,7 +2307,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI2.3_DecisionTree自動學習模擬人類決策過程的模型.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生",
@@ -2234,7 +2339,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI2.2_Overfitting機器學習最令人聞之色變的情況為何會發生.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢",
@@ -2265,7 +2371,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260705_NTUFAI_FAI2.1_NonlinearTransform為什麼需要非線性的模型呢.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260701_GoogleCloudTech_MCP_vs_API",
@@ -2296,7 +2403,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260701_GoogleCloudTech_MCP_vs_API.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260627_CNBC_ZAI_Chinese_OpenSourceMoment",
@@ -2327,7 +2435,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260627_CNBC_ZAI_Chinese_OpenSourceMoment.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260627_Angelos_WWDC26_LocalAgenticAI_MLX",
@@ -2358,7 +2467,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260627_Angelos_WWDC26_LocalAgenticAI_MLX.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260626_MartinFowler_HarnessEngineering",
@@ -2389,7 +2499,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260626_MartinFowler_HarnessEngineering.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260625_JarredSumner_BunInRust",
@@ -2420,7 +2531,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260625_JarredSumner_BunInRust.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260620_Kaggle_5DayGenAI_Day5",
@@ -2451,7 +2563,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260620_Kaggle_5DayGenAI_Day5.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260620_Kaggle_5DayGenAI_Day4",
@@ -2482,7 +2595,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260620_Kaggle_5DayGenAI_Day4.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260620_Kaggle_5DayAIAgents_Day3",
@@ -2513,7 +2627,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260620_Kaggle_5DayAIAgents_Day3.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260620_Kaggle_5DayAIAgents_Day2",
@@ -2544,7 +2659,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260620_Kaggle_5DayAIAgents_Day2.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260620_Kaggle_5DayAIAgents_Day1",
@@ -2575,7 +2691,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260620_Kaggle_5DayAIAgents_Day1.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說",
@@ -2606,7 +2723,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260619_MattPocock_AgenticEngineeringWorkflow",
@@ -2637,7 +2755,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260619_MattPocock_AgenticEngineeringWorkflow.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260619_AndrewNg_FutureOfAIAgents",
@@ -2668,7 +2787,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260619_AndrewNg_FutureOfAIAgents.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260619_AWSShowAndTell_AIPoweredSDLC",
@@ -2699,7 +2819,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260619_AWSShowAndTell_AIPoweredSDLC.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260618_TaraAgyemang_WebMCP",
@@ -2730,7 +2851,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260618_TaraAgyemang_WebMCP.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260618_MarieHaynes_OKF",
@@ -2761,7 +2883,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260618_MarieHaynes_OKF.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260617_RyanLopopolo_HarnessEngineering",
@@ -2792,7 +2915,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260617_RyanLopopolo_HarnessEngineering.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260615_YannLeCun_WorldModels開啟下一場AI革命",
@@ -2823,7 +2947,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260615_YannLeCun_WorldModels開啟下一場AI革命.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260613_Smitha_AI_agents_explained",
@@ -2854,7 +2979,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260613_Smitha_AI_agents_explained.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走",
@@ -2885,7 +3011,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260612_YC_PaperClub_5篇AI論文告訴我們研究正往哪裡走.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260612_Matthew_Berman_四個必試開源AI專案",
@@ -2916,7 +3043,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260612_Matthew_Berman_四個必試開源AI專案.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs",
@@ -2947,7 +3075,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260610_PoojaTrivedi_WSL_Containers_改進及_CLI_與_APIs.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260609_MKBHD_WWDC2026_YeahThatsAboutRight",
@@ -2978,7 +3107,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260609_MKBHD_WWDC2026_YeahThatsAboutRight.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260608_RubenCasas_超越元件生成式UI_MCPApps",
@@ -3009,7 +3139,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260608_RubenCasas_超越元件生成式UI_MCPApps.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260608_MattPocock_teach_skill_個人化學習",
@@ -3040,7 +3171,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260608_MattPocock_teach_skill_個人化學習.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260606_NTUFAI_Sharing",
@@ -3071,7 +3203,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260606_NTUFAI_Sharing.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260605_StanfordCS336_Guest_DanFu",
@@ -3102,7 +3235,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260605_StanfordCS336_Guest_DanFu.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260604_StanfordCS336_Lecture17_AlignmentMultimodality",
@@ -3133,7 +3267,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260604_StanfordCS336_Lecture17_AlignmentMultimodality.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了",
@@ -3164,7 +3299,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260604_NTUFAI_FAI6.3_Agents可以動手的代理人真的要來了.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢",
@@ -3195,7 +3331,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260603_NTUFAI_FAI6.2_MultimodalLLMs如何讓語言模型也可以理解與生成影像聲音等資訊呢.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型",
@@ -3226,7 +3363,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260603_NTUFAI_FAI6.1_GenerativeAILargeLanguageModels生成式人工智慧之大型語言模型.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260531_Dex_12FactorAgents_NoVibesAllowed",
@@ -3257,7 +3395,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260531_Dex_12FactorAgents_NoVibesAllowed.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布",
@@ -3288,7 +3427,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260530_NTUFAI_FAI5.4_DensityEstimationwithRBFNetworks了解資料的整體分布.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵",
@@ -3319,7 +3459,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260528_NTUFAI_FAI5.3_RepresentationLearningwithAutoencoder學習好的資料表徵.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260528_Maya_Claude_Code_Routines_主動代理工作流",
@@ -3350,7 +3491,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260528_Maya_Claude_Code_Routines_主動代理工作流.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260528_Claude_Code_Workflow_自動生成Harness",
@@ -3381,7 +3523,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260528_Claude_Code_Workflow_自動生成Harness.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260528_Adam_Bender_Software_Ecology_軟體生態學",
@@ -3412,7 +3555,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260528_Adam_Bender_Software_Ecology_軟體生態學.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260527_StanfordCS336_Lecture16_RLVR",
@@ -3443,7 +3587,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260527_StanfordCS336_Lecture16_RLVR.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260527_StanfordCS336_Lecture15_MidPostTraining",
@@ -3474,7 +3619,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260527_StanfordCS336_Lecture15_MidPostTraining.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260527_StanfordCS336_Lecture14_Data",
@@ -3505,7 +3651,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260527_StanfordCS336_Lecture14_Data.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法",
@@ -3536,7 +3683,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260527_NTUFAI_FAI5.2_KMeansClustering怎麼能不知道的K平均演算法.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習",
@@ -3567,7 +3715,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260527_NTUFAI_FAI5.1_UnsupervisedMachineLearning非監督式機器學習.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260526_開發者對談_AI代理Spec-Driven與GuardRails",
@@ -3598,7 +3747,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260526_開發者對談_AI代理Spec-Driven與GuardRails.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢",
@@ -3629,7 +3779,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260525_NTUFAI_FAI4.8_WhenToDeep甚麼時候適合用深度學習呢.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步",
@@ -3660,7 +3811,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260525_NTUFAI_FAI4.7_RegularizationTechniquesforDeepLearning訓練模型時不能不知道的小撇步.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN",
@@ -3691,7 +3843,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260525_NTUFAI_FAI4.6_RecurrentNeuralNetwork處理序列資料你不能不知道的RNN.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260525_Datadog_從零到數百Agent規模化",
@@ -3722,7 +3875,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260525_Datadog_從零到數百Agent規模化.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260525_Andrew_Ng_AI編碼未來",
@@ -3753,7 +3907,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260525_Andrew_Ng_AI編碼未來.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN",
@@ -3784,7 +3939,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260524_NTUFAI_FAI4.5_ConvolutionalNeuralNetwork處理影像你不能不知道的CNN.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260524_NTUFAI_FAI4.4_VanishingGradient訓練模型跟人生一樣不順怎麼辦",
@@ -3815,7 +3971,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260524_NTUFAI_FAI4.4_VanishingGradient訓練模型跟人生一樣不順怎麼辦.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半",
@@ -3846,7 +4003,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260524_NTUFAI_FAI4.3_RepresentationLearningPreTraining好的開始是成功的一半.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢",
@@ -3877,7 +4035,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260524_NTUFAI_FAI4.2_Backpropagation參數這麼多到底怎麼有效率算出來的呢.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題",
@@ -3908,7 +4067,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260524_NTUFAI_FAI4.1_DeepLearningChallengesRecap使用深度學習會遇到的各個難題.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260524_Moonshot_Kimi_K2_5_技術解析",
@@ -3939,7 +4099,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260524_Moonshot_Kimi_K2_5_技術解析.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260524_Kevin_Agents_That_Remember",
@@ -3970,7 +4131,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260524_Kevin_Agents_That_Remember.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260522_Tejas_AI_Harness",
@@ -4001,7 +4163,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260522_Tejas_AI_Harness.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260519_StanfordCS336_Lecture13_DataSourcesDatasets",
@@ -4032,7 +4195,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260519_StanfordCS336_Lecture13_DataSourcesDatasets.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260519_StanfordCS336_Lecture12_Evaluation",
@@ -4063,7 +4227,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260519_StanfordCS336_Lecture12_Evaluation.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260519_StanfordCS336_Lecture11_ScalingLaws",
@@ -4094,7 +4259,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260519_StanfordCS336_Lecture11_ScalingLaws.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260513_OpenClaw_Multi_Agent商業應用",
@@ -4125,7 +4291,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260513_OpenClaw_Multi_Agent商業應用.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260513_Intent_Engineering_意圖工程",
@@ -4156,7 +4323,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260513_Intent_Engineering_意圖工程.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260513_AI_Web_Scraper_免費爬蟲實戰",
@@ -4187,7 +4355,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260513_AI_Web_Scraper_免費爬蟲實戰.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260512_Matt_Pocock_AI編碼工作坊",
@@ -4218,7 +4387,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260512_Matt_Pocock_AI編碼工作坊.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260512_Boris_Claude_Code創作者訪談",
@@ -4249,7 +4419,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260512_Boris_Claude_Code創作者訪談.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260511_StanfordCS336_Lecture10_Inference",
@@ -4280,7 +4451,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260511_StanfordCS336_Lecture10_Inference.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260510_李宏毅_AI跨越盧比孔河自我成長",
@@ -4311,7 +4483,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260510_李宏毅_AI跨越盧比孔河自我成長.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260507_小天fotos_DeepSeekV4槓桿與TokenEfficiency",
@@ -4342,7 +4515,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260507_小天fotos_DeepSeekV4槓桿與TokenEfficiency.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260430_StanfordCS336_Lecture9_ScalingLaws",
@@ -4373,7 +4547,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260430_StanfordCS336_Lecture9_ScalingLaws.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎",
@@ -4404,7 +4579,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260429_NTUFAI_FAI1.6_超實用的邏輯迴歸你真的懂嗎.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎",
@@ -4435,7 +4611,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260429_NTUFAI_FAI1.5_國中就學過的線性迴歸你還記得嗎.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260429_NTUFAI_FAI1.4_機器要開始學習囉",
@@ -4466,7 +4643,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260429_NTUFAI_FAI1.4_機器要開始學習囉.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習",
@@ -4497,7 +4675,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260429_NTUFAI_FAI1.3_請按照步驟來用機器學習.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習",
@@ -4528,7 +4707,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260429_NTUFAI_FAI1.2_你不能到現在還不懂甚麼是機器學習.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型",
@@ -4559,7 +4739,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260429_NTUFAI_FAI1.1_監督式機器學習之線性模型.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline",
@@ -4590,7 +4771,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260428_StanfordCS336_Lecture8_ParallelismTensorPipeline.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260428_StanfordCS336_Lecture7_ParallelismDataParallel",
@@ -4621,7 +4803,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260428_StanfordCS336_Lecture7_ParallelismDataParallel.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260428_StanfordCS336_Lecture6_KernelsTritonXLA",
@@ -4652,7 +4835,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260428_StanfordCS336_Lecture6_KernelsTritonXLA.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260425_李宏毅_AI自我修正Decoding到Reasoning",
@@ -4683,7 +4867,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260425_李宏毅_AI自我修正Decoding到Reasoning.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260420_StanfordCS336_Lecture5_GPUsTPUs",
@@ -4714,7 +4899,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260420_StanfordCS336_Lecture5_GPUsTPUs.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260417_MattPocock_LiveEverlightV2Build",
@@ -4745,7 +4931,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260417_MattPocock_LiveEverlightV2Build.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank",
@@ -4776,7 +4963,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank.md",
       "module": "D",
       "module_name": "Agent Memory",
-      "module_order": 3
+      "module_order": 3,
+      "course": "Google ADK 完整教學"
     },
     {
       "id": "20260415_StanfordCS336_Lecture4_AttentionAlternatives",
@@ -4807,7 +4995,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260415_StanfordCS336_Lecture4_AttentionAlternatives.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260415_StanfordCS336_Lecture3_Architectures",
@@ -4838,7 +5027,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260415_StanfordCS336_Lecture3_Architectures.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting",
@@ -4869,7 +5059,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260414_StanfordCS336_Lecture2_PyTorchResourceAccounting.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260414_StanfordCS336_Lecture1_OverviewTokenization",
@@ -4900,7 +5091,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260414_StanfordCS336_Lecture1_OverviewTokenization.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260412_李宏毅_Harness_Engineering駕馭工程",
@@ -4931,7 +5123,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260408_GoogleCloudTech_HowToAddPersistentMemory",
@@ -4962,7 +5155,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260408_GoogleCloudTech_HowToAddPersistentMemory.md",
       "module": "D",
       "module_name": "Agent Memory",
-      "module_order": 2
+      "module_order": 2,
+      "course": "Google ADK 完整教學"
     },
     {
       "id": "20260326_GoogleCloudTech_HowToAddShortTermMemory",
@@ -4993,7 +5187,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260326_GoogleCloudTech_HowToAddShortTermMemory.md",
       "module": "D",
       "module_name": "Agent Memory",
-      "module_order": 1
+      "module_order": 1,
+      "course": "Google ADK 完整教學"
     },
     {
       "id": "20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns",
@@ -5024,7 +5219,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns.md",
       "module": "E",
       "module_name": "Design Patterns（跨系列）",
-      "module_order": 2
+      "module_order": 2,
+      "course": "Google ADK 完整教學"
     },
     {
       "id": "20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王",
@@ -5055,7 +5251,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260311_NTUFAI_FAI0_課程介紹與規定",
@@ -5086,7 +5283,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260311_NTUFAI_FAI0_課程介紹與規定.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20260227_GoogleCloudTech_AIAgentDesignPatterns",
@@ -5117,7 +5315,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260227_GoogleCloudTech_AIAgentDesignPatterns.md",
       "module": "E",
       "module_name": "Design Patterns（跨系列）",
-      "module_order": 1
+      "module_order": 1,
+      "course": "Google ADK 完整教學"
     },
     {
       "id": "20260205_JensenHuang_不輸給AI_輸給會用AI的人",
@@ -5148,7 +5347,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260205_JensenHuang_不輸給AI_輸給會用AI的人.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice",
@@ -5179,7 +5379,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice.md",
       "module": "C",
       "module_name": "Agent Evaluation",
-      "module_order": 2
+      "module_order": 2,
+      "course": "Google ADK 完整教學"
     },
     {
       "id": "20251203_GoogleCloudTech_TheAgentEvaluationRevolution",
@@ -5210,7 +5411,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251203_GoogleCloudTech_TheAgentEvaluationRevolution.md",
       "module": "C",
       "module_name": "Agent Evaluation",
-      "module_order": 1
+      "module_order": 1,
+      "course": "Google ADK 完整教學"
     },
     {
       "id": "20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK",
@@ -5241,7 +5443,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK.md",
       "module": "B",
       "module_name": "MCP 整合",
-      "module_order": 2
+      "module_order": 2,
+      "course": "Google ADK 完整教學"
     },
     {
       "id": "20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers",
@@ -5272,7 +5475,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers.md",
       "module": "B",
       "module_name": "MCP 整合",
-      "module_order": 1
+      "module_order": 1,
+      "course": "Google ADK 完整教學"
     },
     {
       "id": "20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色",
@@ -5303,7 +5507,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK",
@@ -5334,7 +5539,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK.md",
       "module": "A",
       "module_name": "Multi-agent 基礎",
-      "module_order": 2
+      "module_order": 2,
+      "course": "Google ADK 完整教學"
     },
     {
       "id": "20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK",
@@ -5365,7 +5571,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK.md",
       "module": "A",
       "module_name": "Multi-agent 基礎",
-      "module_order": 1
+      "module_order": 1,
+      "course": "Google ADK 完整教學"
     },
     {
       "id": "20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26",
@@ -5396,7 +5603,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25",
@@ -5427,7 +5635,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture25.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24",
@@ -5458,7 +5667,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture24.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23",
@@ -5489,7 +5699,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture23.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9",
@@ -5520,7 +5731,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture9.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8",
@@ -5551,7 +5763,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture8.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7",
@@ -5582,7 +5795,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture7.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6",
@@ -5613,7 +5827,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture6.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5",
@@ -5644,7 +5859,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture5.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4",
@@ -5675,7 +5891,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture4.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3",
@@ -5706,7 +5923,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture3.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22",
@@ -5737,7 +5955,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture22.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21",
@@ -5768,7 +5987,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture21.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20",
@@ -5799,7 +6019,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture20.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2",
@@ -5830,7 +6051,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture2.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19",
@@ -5861,7 +6083,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture19.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18",
@@ -5892,7 +6115,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture18.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17",
@@ -5923,7 +6147,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture17.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16",
@@ -5954,7 +6179,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture16.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15",
@@ -5985,7 +6211,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture15.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13",
@@ -6016,7 +6243,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture13.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12",
@@ -6047,7 +6275,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture12.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11",
@@ -6078,7 +6307,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture11.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10",
@@ -6109,7 +6339,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture10.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1",
@@ -6140,7 +6371,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20160711_JelaniNelson_AdvancedAlgorithmsCS224_Lecture1.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     },
     {
       "id": "20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH",
@@ -6171,7 +6403,8 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20141016_PiotrIndyk_HarvardCS224AdvancedAlgorithmsLecture14_NearestNeighbor_LSH.md",
       "module": null,
       "module_name": null,
-      "module_order": null
+      "module_order": null,
+      "course": null
     }
   ]
 }

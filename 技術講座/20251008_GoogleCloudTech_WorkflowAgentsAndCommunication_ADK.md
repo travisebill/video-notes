@@ -4,6 +4,7 @@
 **影片連結｜https://www.youtube.com/watch?v=WfJcCeLZD2I**
 **影片長度**｜4:52（292s）
 **發布日期｜2025-10-08**
+**Course｜Google ADK 完整教學**
 **Module｜A Multi-agent 基礎 (Ep.2)**
 **類型｜教學影片（ADK 系列 Ep.2 完結篇）**
 **主題｜Google Agent Development Kit (ADK) 系列 Ep.2 — Workflow agents + Communication mechanisms**

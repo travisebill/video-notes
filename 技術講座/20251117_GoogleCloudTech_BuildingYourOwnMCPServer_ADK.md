@@ -4,6 +4,7 @@
 **影片連結｜https://www.youtube.com/watch?v=XwlVHm3JKWU**
 **影片長度**｜9:01（541s）
 **發布日期｜2025-11-17**
+**Course｜Google ADK 完整教學**
 **Module｜B MCP 整合 (Ep.2)**
 **類型｜教學影片（MCP 系列 Ep.2 完結篇）**
 **主題｜Google Agent Development Kit (ADK) × Model Context Protocol (MCP) — 用 ADK 建自己的 MCP server**

@@ -4,6 +4,7 @@
 **影片連結｜https://www.youtube.com/watch?v=GDm_uH6VxPY**
 **影片長度**｜8:21（501s）
 **發布日期｜2026-02-27**
+**Course｜Google ADK 完整教學**
 **Module｜E Design Patterns（跨系列） (Ep.1)**
 **類型｜教學影片（Agents Pattern 系列 Ep.1）**
 **主題｜Google Agent Development Kit (ADK) — AI agent design patterns：Single agent / Sequential agent / Parallel agent**
