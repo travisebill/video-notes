@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 183,
-    "total_with_audio": 154,
-    "total_with_transcript": 109,
-    "total_with_spoken_script": 152,
+    "total_videos": 195,
+    "total_with_audio": 166,
+    "total_with_transcript": 121,
+    "total_with_spoken_script": 164,
     "speakers_count": 78,
     "categories_count": 4,
     "topics_count": 16,
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-09-02 19:07:12",
+    "last_updated": "2026-09-10 21:39:53",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -1267,6 +1267,34 @@
       },
       "note_path": "財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md"
+    },
+    {
+      "id": "20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02",
+      "title": "【Google ADK Graph Engineering Ep.02：Workflow Agents × Communication × GraphRank Lab】",
+      "speaker": "Anatoli Kopadze",
+      "speaker_description": null,
+      "speaker_slug": "AnatoliKopadze",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-09-10",
+      "note_date": "2026-09-10",
+      "duration_seconds": 3622,
+      "duration_display": "1:00:22",
+      "video_url": "https://x.com/AnatoliKopadze/status/2097380989538591155",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02_口播稿.opus",
+        "m4a": "audio/20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02_口播稿.m4a",
+        "mp3": "audio/20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02_逐字稿.txt",
+        "spoken_script": "transcripts/20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260910_AnatoliKopadze_GoogleADK_GraphEngineering_Ep02.md"
     },
     {
       "id": "20260819_UncleBob_SoftwareFundamentalsInTheAgeOfAI",
@@ -4265,6 +4293,34 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260417_MattPocock_LiveEverlightV2Build.md"
     },
     {
+      "id": "20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank",
+      "title": "【AI agent long-term memory with memory bank】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-04-16",
+      "note_date": "2026-04-16",
+      "duration_seconds": 403,
+      "duration_display": "6:43",
+      "video_url": "https://www.youtube.com/watch?v=KZPo15M2DbM",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank_逐字稿.txt",
+        "spoken_script": "transcripts/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank.md"
+    },
+    {
       "id": "20260415_StanfordCS336_Lecture4_AttentionAlternatives",
       "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 4: Attention Alternatives & Mixture of Experts】",
       "speaker": "Percy Liang, Tatsu Hashimoto",
@@ -4405,6 +4461,90 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md"
     },
     {
+      "id": "20260408_GoogleCloudTech_HowToAddPersistentMemory",
+      "title": "【How to add persistent memory to your AI agent】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-04-08",
+      "note_date": "2026-04-08",
+      "duration_seconds": 444,
+      "duration_display": "7:24",
+      "video_url": "https://www.youtube.com/watch?v=HDqzJJhZsxw",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿.opus",
+        "m4a": "audio/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿.m4a",
+        "mp3": "audio/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260408_GoogleCloudTech_HowToAddPersistentMemory_逐字稿.txt",
+        "spoken_script": "transcripts/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260408_GoogleCloudTech_HowToAddPersistentMemory.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260408_GoogleCloudTech_HowToAddPersistentMemory.md"
+    },
+    {
+      "id": "20260326_GoogleCloudTech_HowToAddShortTermMemory",
+      "title": "【How to add short-term memory to your AI agent (Sessions & State Explained)】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-03-26",
+      "note_date": "2026-03-26",
+      "duration_seconds": 363,
+      "duration_display": "6:03",
+      "video_url": "https://www.youtube.com/watch?v=vfVcDUCucSs",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260326_GoogleCloudTech_HowToAddShortTermMemory_口播稿.opus",
+        "m4a": "audio/20260326_GoogleCloudTech_HowToAddShortTermMemory_口播稿.m4a",
+        "mp3": "audio/20260326_GoogleCloudTech_HowToAddShortTermMemory_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260326_GoogleCloudTech_HowToAddShortTermMemory_逐字稿.txt",
+        "spoken_script": "transcripts/20260326_GoogleCloudTech_HowToAddShortTermMemory_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260326_GoogleCloudTech_HowToAddShortTermMemory_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260326_GoogleCloudTech_HowToAddShortTermMemory.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260326_GoogleCloudTech_HowToAddShortTermMemory.md"
+    },
+    {
+      "id": "20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns",
+      "title": "【3 Advanced AI agent design patterns】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-03-17",
+      "note_date": "2026-03-17",
+      "duration_seconds": 480,
+      "duration_display": "8:00",
+      "video_url": "https://www.youtube.com/watch?v=89KKm_a4M7A",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns_口播稿.opus",
+        "m4a": "audio/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns_口播稿.m4a",
+        "mp3": "audio/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns_逐字稿.txt",
+        "spoken_script": "transcripts/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns.md"
+    },
+    {
       "id": "20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王",
       "title": "【NTU 人工智慧導論（FAI 2026）— Final Project：Game Agent 誰是牛頭王】",
       "speaker": "NTU CSIE 人工智慧導論 教學團隊",
@@ -4461,6 +4601,34 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260311_NTUFAI_FAI0_課程介紹與規定.md"
     },
     {
+      "id": "20260227_GoogleCloudTech_AIAgentDesignPatterns",
+      "title": "【AI agent design patterns】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-02-27",
+      "note_date": "2026-02-27",
+      "duration_seconds": 501,
+      "duration_display": "8:21",
+      "video_url": "https://www.youtube.com/watch?v=GDm_uH6VxPY",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿.opus",
+        "m4a": "audio/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿.m4a",
+        "mp3": "audio/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260227_GoogleCloudTech_AIAgentDesignPatterns_逐字稿.txt",
+        "spoken_script": "transcripts/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260227_GoogleCloudTech_AIAgentDesignPatterns.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260227_GoogleCloudTech_AIAgentDesignPatterns.md"
+    },
+    {
       "id": "20260205_JensenHuang_不輸給AI_輸給會用AI的人",
       "title": "【黃仁勳最新訪談：你不會輸給 AI，但你會輸給會用 AI 的人】",
       "speaker": "Jensen Huang，NVIDIA 創辦人兼 CEO；Chuck Robbins，Cisco 執行長",
@@ -4489,6 +4657,118 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260205_JensenHuang_不輸給AI_輸給會用AI的人.md"
     },
     {
+      "id": "20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice",
+      "title": "【How to evaluate agents in practice】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2025-12-12",
+      "note_date": "2025-12-12",
+      "duration_seconds": 653,
+      "duration_display": "10:53",
+      "video_url": "https://www.youtube.com/watch?v=vuBvf7ZRKTA",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice_口播稿.opus",
+        "m4a": "audio/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice_口播稿.m4a",
+        "mp3": "audio/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice_逐字稿.txt",
+        "spoken_script": "transcripts/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice_口播稿.txt",
+        "spoken_script_tts": "transcripts/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice.md"
+    },
+    {
+      "id": "20251203_GoogleCloudTech_TheAgentEvaluationRevolution",
+      "title": "【The agent evaluation revolution】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2025-12-03",
+      "note_date": "2025-12-03",
+      "duration_seconds": 511,
+      "duration_display": "8:31",
+      "video_url": "https://www.youtube.com/watch?v=WZZLtwnZ4w0",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20251203_GoogleCloudTech_TheAgentEvaluationRevolution_口播稿.opus",
+        "m4a": "audio/20251203_GoogleCloudTech_TheAgentEvaluationRevolution_口播稿.m4a",
+        "mp3": "audio/20251203_GoogleCloudTech_TheAgentEvaluationRevolution_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20251203_GoogleCloudTech_TheAgentEvaluationRevolution_逐字稿.txt",
+        "spoken_script": "transcripts/20251203_GoogleCloudTech_TheAgentEvaluationRevolution_口播稿.txt",
+        "spoken_script_tts": "transcripts/20251203_GoogleCloudTech_TheAgentEvaluationRevolution_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20251203_GoogleCloudTech_TheAgentEvaluationRevolution.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251203_GoogleCloudTech_TheAgentEvaluationRevolution.md"
+    },
+    {
+      "id": "20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK",
+      "title": "【Building your own MCP server with ADK】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2025-11-17",
+      "note_date": "2025-11-17",
+      "duration_seconds": 541,
+      "duration_display": "9:01",
+      "video_url": "https://www.youtube.com/watch?v=XwlVHm3JKWU",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK_口播稿.opus",
+        "m4a": "audio/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK_口播稿.m4a",
+        "mp3": "audio/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK_逐字稿.txt",
+        "spoken_script": "transcripts/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK_口播稿.txt",
+        "spoken_script_tts": "transcripts/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK.md"
+    },
+    {
+      "id": "20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers",
+      "title": "【Connecting ADK Agents to MCP Servers】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2025-11-07",
+      "note_date": "2025-11-07",
+      "duration_seconds": 459,
+      "duration_display": "7:39",
+      "video_url": "https://www.youtube.com/watch?v=JnKkdHaatwU",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers_口播稿.opus",
+        "m4a": "audio/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers_口播稿.m4a",
+        "mp3": "audio/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers_逐字稿.txt",
+        "spoken_script": "transcripts/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers_口播稿.txt",
+        "spoken_script_tts": "transcripts/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers.md"
+    },
+    {
       "id": "20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色",
       "title": "AI 2027 報告：兩種結局、6 段時間線，與台灣在 AI 晶片戰爭中的關鍵角色",
       "speaker": "馬臉姐",
@@ -4515,6 +4795,62 @@
       },
       "note_path": "技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md"
+    },
+    {
+      "id": "20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK",
+      "title": "【Workflow agents and communication in ADK】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2025-10-08",
+      "note_date": "2025-10-08",
+      "duration_seconds": 292,
+      "duration_display": "4:52",
+      "video_url": "https://www.youtube.com/watch?v=WfJcCeLZD2I",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿.opus",
+        "m4a": "audio/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿.m4a",
+        "mp3": "audio/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_逐字稿.txt",
+        "spoken_script": "transcripts/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿.txt",
+        "spoken_script_tts": "transcripts/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK.md"
+    },
+    {
+      "id": "20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK",
+      "title": "【Foundations of multi-agent systems with ADK】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2025-10-01",
+      "note_date": "2025-10-01",
+      "duration_seconds": 317,
+      "duration_display": "5:17",
+      "video_url": "https://www.youtube.com/watch?v=pX0_iIfRilU",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK_口播稿.opus",
+        "m4a": "audio/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK_口播稿.m4a",
+        "mp3": "audio/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK_逐字稿.txt",
+        "spoken_script": "transcripts/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK_口播稿.txt",
+        "spoken_script_tts": "transcripts/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK.md"
     },
     {
       "id": "20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26",
