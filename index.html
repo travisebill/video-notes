@@ -243,6 +243,18 @@
         </select>
       </label>
 
+      
+      <!-- Module (2026-09-10 新增：Google ADK 完整教學 A-E module 篩選) -->
+      <label x-show="meta.modules && meta.modules.length > 0">
+        <small>Module</small>
+        <select x-model="filters.module" @change="applyFilters()">
+          <option value="">全部 Module</option>
+          <template x-for="m in meta.modules" :key="m">
+            <option :value="m" x-text="m"></option>
+          </template>
+        </select>
+      </label>
+
       <!-- Course (B3 scheme 2026-07-05) -->
       <label x-show="meta.courses && meta.courses.length > 0">
         <small>課程</small>
