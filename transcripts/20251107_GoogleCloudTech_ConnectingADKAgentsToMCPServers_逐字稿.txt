@@ -1,0 +1,81 @@
+Hello, everyone.
+In the last series, we deep-dived into the foundation of multi-agent system.
+And today, we are introducing a game changer, the Model Context Protocol, the MCP.
+And this is the start of two-episode series.
+By the end of the series, you will know everything you need to know to get started with ADK agents
+and MCP, including how to connect an ADK agent to an MCP server, and also how to use ADK to build your own MCP server.
+So for this first episode, we will cover three things.
+The first is what is an MCP server and why is a universal adapter for all AI agents?
+And secondly is why do you need to use MCP?
+And lastly, we will work through two examples of connecting an ADK agent to an MCP server.
+We will also have a detailed written tutorial from the link on the screen so that you can try yourself.
+All right, let's dive in.
+So the first part is what is an MCP server?
+At its core, the Model Context Protocol is an open standard.
+It defines how large language model and AI agents can talk to the external world.
+Think of it as MCP is a USB-C port for AI.
+Instead of building a custom connector for every single tool, you get one universal way of plugging in.
+And there are two important concepts in the setup, the MCP client and MCP server.
+And here is how it works.
+So when it comes to MCP server, it exposes tools.
+For example, it can connect to data sources, APIs, or custom actions so that we can do data fetching, calling API, or customize logics with actions.
+And then we have this MCP client.
+It discovers and uses those tools.
+And in most cases, your ADK agent acts as an MCP client and it connects two MCP servers to gain new capabilities.
+And the second part of today's video is why do we want to connect ADK agents with an MCP server?
+Basically, why bother with this universal adapter?
+Why not just connect directly to those tools?
+And the answer is very simple.
+MCP makes your agents more powerful, more reliable, and more practical.
+And here is what you get with MCP.
+Firstly, since MCP server exposes tools, your agent now can access huge external capabilities.
+For example, it can read or write files on a local or remote file system.
+It can query a database like BigQuery or MongoDB.
+It can also connect real-time directions from Google Maps and has many more.
+For example, it can use generative media tools like Imagen for image generations.
+And secondly, it gives you modularity and reusability.
+An MCP server can be a standalone service and any MCP-compliant client, including ADK agent, can plug in.
+And there's no custom glue code required.
+This means less custom integration code and more reusable components.
+It can also offer security and control.
+MCP allows you to define clear boundaries.
+And last but not least is simplified deployment strategy.
+With remote server, you can decouple tools from your agent.
+And that makes scaling a lot easier in environments like Cloud Run or GKE.
+So the bottom line is connecting ADK with MCP can allow your ADK agent to interact with the real world and make a true agentic system.
+And now the third part of this video is how to connect an ADK agent to an MCP server.
+How do we actually do it?
+And ADK makes it really simple with something called MCP toolset.
+And you can think of it as ADK's building bridge to the MCP world.
+And here is what it does behind the thing.
+So first, it set up the connection with the MCP server.
+And this can be a local process or a remote HTTP server.
+And then it will load all the available tools from MCP server.
+And while you're doing that, it translates those MCP tools into ADK compatible version so that it can handle communication back and forth.
+When your agent decided to use an MCP tool,
+the MCP toolset forwards a request to the MCP server and sends the response back to your agent.
+And let's take a look at these two quick examples.
+For the first example, file system MCP server.
+Remember, your agent is a model as a brain and select a tool from the toolbox and make a decision, right?
+So what if you want your agent to equip these tools like listing or reading files from this folder?
+So in this Python example, the MCP toolset is configured to launch an MPX command that runs the file system MCP server.
+It passes the target folder path as arguments and giving server access to that specific directory.
+By using MCP toolset, your agent now can use tools like this directory and read file right in this toolbox.
+You can follow the instructions on the screen or scan the QR code for more details about how to connect to your MCP server.
+All right, let's take a look at the second example, Google Map MCP server.
+You can think of a situation like, OK, you want to figure out the direction from San Francisco to New York.
+How do you figure out the direction with your agent?
+You can easily do that by connecting to MCP Google Map with MCP toolset.
+After setting up your API key and enabling all the necessary Google Map APIs,
+your agent now can respond to prompts like, tell me the direction from New York to San Francisco.
+Again, the link on the screen will provide you with more information of how to connect into this MCP server.
+All right, let's wrap up.
+So firstly, MCP is a universal connector for AI agents.
+And secondly, connecting ADK agents to MCP servers give them real-world capabilities, stronger modularities and more control.
+And lastly, with ADK MCP toolset, the setup is really straightforward.
+So this is the foundation for making your agents truly powerful.
+If you want to try it yourself, check the links in the description.
+And in the next episode, we will flip the script.
+And I will show you how to build our own MCP server with ADK tools.
+And see you in next episode.
+Bye.
