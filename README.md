@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **192 支內容** · 322 個音檔 · 162 個逐字稿 · 172 個口播稿
+> **193 支內容** · 322 個音檔 · 162 個逐字稿 · 172 個口播稿
 > 最後更新 2026-09-10
 
 ---
@@ -17,13 +17,13 @@
 
 > 最近 7 支影片
 
+- **2026-03-26** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [How to add short-term memory to your AI agent (Sessions & State Explained) — Session = 一次連續對話（in-memory 預設）+ Event = 逐字稿 + State = 結構化便利貼 + 跨 agent 透過 session state 傳變數 + context.state 寫入原則（不要直接改 session object）](技術講座/20260326_GoogleCloudTech_HowToAddShortTermMemory.md) · 6:03（363s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2026-03-17** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [3 Advanced AI agent design patterns — Loop review & critique（generator + critique 迴圈直到符合條件）+ Coordinator router（top-level PM 拆任務委派給 specialized agents）+ Agent as tool（primary agent 保留控制權，sub-agents 當無狀態工具）](技術講座/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns.md) · 8:00（480s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2026-02-27** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [AI agent design patterns — Single agent（簡單靈活但複雜 workflow 控制力不夠）+ Sequential agent（組裝線 + shared session state，高控制可靠但剛性）+ Parallel agent（並行降低 latency 但成本高）+ 下一集 loop/critique/coordinator/agent-as-tool](技術講座/20260227_GoogleCloudTech_AIAgentDesignPatterns.md) · 8:21（501s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2025-12-12** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [How to evaluate agents in practice — 三層測試金字塔（Tier 1 component unit / Tier 2 trajectory integration / Tier 3 human review）+ ADK eval 實作（trajectory 概念 + tool_trajectory_average_score + response_match_score + book finder agent 範例）](技術講座/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice.md) · 10:53（653s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2025-12-03** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [The agent evaluation revolution — 為什麼 agent 評估跟傳統測試不同（deterministic vs probabilistic）+ System-level testing 四步流程（outcome / reasoning / tools / memory）+ Multi-agent 評估陷阱（個體成功但整體失敗）](技術講座/20251203_GoogleCloudTech_TheAgentEvaluationRevolution.md) · 8:31（511s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2025-11-17** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [Building your own MCP server with ADK — 建 MCP server 核心元件（MCP library + list_tools/call_tool handler + stdio/streamable HTTP + async I/O）+ 三個 use case（API MCP server 用 load_web_page + Database MCP server 用 MCP Toolbox + Custom MCP server 處理 Imagen/Veo/內部 API/FastMCP）](技術講座/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK.md) · 9:01（541s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2025-11-07** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [Connecting ADK Agents to MCP Servers — MCP 是什麼（Model Context Protocol 開放標準 + USB-C 比喻）+ 為什麼要用 MCP（外部能力 + 模組化 + 安全 + 簡化部署）+ 如何連接（ADK MCP toolset 自動處理連接/載入/轉譯/轉發）+ File system + Google Map 兩個範例](技術講座/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers.md) · 7:39（459s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
-- **2025-10-08** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道）| [Workflow agents and communication in ADK — 3 種 workflow agents（sequential / parallel / loop）+ 3 種 communication mechanisms（shared session state / LLM-driven delegation / agent as tool）+ Sub-agent vs Agent-as-tool 對比 + ADK 2 集 beginner series 完結篇](技術講座/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK.md) · 4:52（292s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 
 ---
 
