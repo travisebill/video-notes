@@ -1,0 +1,100 @@
+Welcome back, everyone.
+This is the second episode of MCP and ADK series.
+In the last episode, we learned about how to connect an ADK agent to existing MCP server
+and giving them new tools and real-world capabilities.
+For today, we are living up even more.
+We're going to build our own MCP server with ADK.
+That means any MCP-compliant client, not just ADK agents, but agents from all the other
+frameworks can plug in into your tools.
+So in this episode, we will cover two parts.
+The first part is the core component you need to build an MCP server with ADK.
+And then we will cover three different use cases, including first, build a simple API
+and then building a database MCP server using the MCP toolbox.
+And the last, building custom MCP server for advanced scenario like generative media.
+We also have a detailed written tutorial from the link on the screen so that you can try it yourself.
+All right, let's get started.
+The first part of the video is the essentials of building an MCP server.
+So what do you need to build your own MCP server with ADK?
+At a high level, it's about wrapping your ADK tools inside an MCP server.
+And here are important pieces.
+The first piece is the MCP library.
+And this Python library gives you the framework to build servers and the ADK tools to export.
+You will need to start with the existing ADK tools, such as function tool that wraps the Python function
+or any other ADK tool that already built.
+And the next important piece are two server handler.
+Your MCP server will primarily need to implement two key handler.
+The first handler is list tools.
+It tells client what tools are available.
+And the next handler is call tool.
+It runs the tool when the client calls it.
+Another important piece is a connection mechanism.
+MCP servers need a way to communicate.
+So for local development or simple deployment, SCIO is common.
+For scalable production environment, streamable HTTP is often preferred so it can run over the network.
+And last but not least is async I O.
+Both ADK and the MCP library use Python's async I O.
+So your server code will be async first.
+The main idea is your MCP server acts as a wrapper and translator.
+It makes your ADK tools discoverable and lets other clients call them in a standardized way.
+And now let's get into the second part of today's video.
+We will explore three different use cases.
+The first use case is building an API MCP server.
+We will expose load web page as an API for this use case.
+Let's walk through this example together.
+Say you want an agent or any MCP client to fetch your web page.
+Instead of calling ADK directly, you expose this load web page tool through an MCP server.
+And here's the flow.
+First, you create a server script like myadkmcpserver.py.
+And inside it, you can use the MCP server to define list tools and call tool.
+And in the list tools, you can expose load web page so client know this exists.
+And in call tool, run the ADK tool when a client calls it.
+And now to test it, you can spin up a second ADK agent as a client.
+And that client connects to your custom MCP server, discovers load web page, and can fetch a website on demand.
+You can also test it with ADK web.
+You can add an init.py file in the same directory.
+Run ADK web from the parent directory.
+Your ADK client will launch MCP server as a subprocess, connect to it, and fetch the page.
+Boom! You just turned an ADK tool into a standalone MCP service.
+Congratulations!
+Again, if you want to follow hands-on written instruction, you can also follow the link on the screen
+or scan the QR code for more step-by-step tutorials.
+And now let's talk about the second use case, building a database MCP server.
+Imagine your agent needs access to enterprise data.
+But writing a custom database integration from scratch is quite a lot.
+That is where MCP Toolbox for Database comes in.
+It is an open source server built specifically to expose databases as MCP tools.
+Instead of building everything yourself, you can deploy the MCP Toolbox as a service,
+and then connect your ADK agent using MCP toolset, just like what we talked about in the previous episode.
+And now your agent can securely query and analyze data all through this MCP abstraction layer.
+If you want to try it yourself, you can use the link on the screen or scan the QR code to learn more about this use case.
+And last but not least, let's talk about the third use case, custom MCP servers.
+Sometimes you want to expose tools that don't fit into the standard categories, for example,
+generative media, like Imagen for image generation, Vue for video generation.
+Google even provides open source MCP servers for those cases.
+You can check the link on the screen that provides more details.
+Another example can be internal computing APIs.
+You will need to wrap your private REST APIs and make them usable by any other MCP client.
+Also for custom logic, for example, you can add tools to do mathematical calculation.
+You can define the logic and make them a custom tool for your MCP client.
+The process is the same.
+Use the MCP library, define list tools and call tool,
+and pick your connection method like STDIO for local, streamable HTTP for remote.
+If you want to make it easier, check out FastMCP.
+It is a helpful library that simplifies building MCP server and making deployment easier.
+By building custom MCP server, you can really unleash your creativity.
+You are no longer limited to consuming existing tools.
+Instead, you're contributing tools to the wider MCP ecosystem.
+All right, let's wrap up for today.
+First, building an MCP server with ADK means wrapping your tools with the MCP library
+and exposing them through list tools and call tool.
+We also cover three use cases.
+First, building an API MCP server by exposing a simple API tool with load web page.
+And secondly, building a database MCP server with MCP toolbox.
+And certainly, building custom servers for advanced scenario.
+By building your own MCP server, you're not just empowering your ADK agents.
+You're making your tools available to the entire MCP ecosystem.
+And that wraps up our two-episode series about ADK and MCP.
+You now know how both connecting ADK agents to MCP server and also building your own MCP server.
+This is how we move from isolated agents to a truly interconnected AI ecosystem.
+If you want to learn more details, make sure to check the tutorial link in this video description.
+Thank you so much for watching, and I will see you in next series. Bye!
