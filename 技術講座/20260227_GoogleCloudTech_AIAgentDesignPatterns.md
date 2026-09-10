@@ -96,9 +96,9 @@ Google Cloud Tech 推出 Agents Pattern 系列教學影片，這是系列第一�
 
 ## 🎙️ 音檔導覽
 
-> MiniMax TTS 語音導覽（voice clone, speech-2.8-hd），約 2 分 39 秒
+> MiniMax TTS 語音導覽（voice clone, speech-2.8-hd），約 2 分 37 秒
 > 口播稿原文：transcripts/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿.txt
 
 - [opus 0.6 MB](../audio/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿.opus)（Telegram 友善）
-- [m4a 1.9 MB](../audio/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿.m4a)（iOS 友善）
+- [m4a 2.0 MB](../audio/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿.m4a)（iOS 友善）
 - [mp3 2.4 MB](../audio/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿.mp3）（通用格式）
