@@ -1,0 +1,127 @@
+Hello, everyone.
+Welcome back to this agent memory series, where
+we cover how to manage your agent memory
+to build a personalized agent.
+In the last two episodes, we covered shorter memory
+with session and state, persistent memory solution
+with a database.
+And in this episode, we will build a long-term memory that
+spans many conversations and even different types of input
+with tags, images, audio, and video.
+We will cover, one, the difference between a session
+service and a memory service, and two, two memory service
+option, a simple in-memory version for a quick test,
+and what has AI memory bank service for production
+with safe storage and search by meaning,
+and three, how to ingest entire sessions or direct media files
+into the memory bank, and how to retrieve relevant facts
+automatically in a new chat using preload memory tool.
+Before we build our personalized agent with what
+has AI memory bank service, we need
+to understand two service roles.
+First is session service that manage active chats
+and let you resume a live conversation.
+And second is memory service that
+manage a long-term archive.
+It is the filing cabinet.
+We have two ways of using memory service.
+The simple in-memory memory service,
+it is very good for quick local tests.
+It doesn't save across restarts and use basic keyword search.
+With what has AI memory bank service,
+it saves to the cloud and support semantic search.
+For example, a search for two-vehicle vehicle
+can find a note about a bicycle.
+So in this episode, we will use what has AI memory bank
+service and what has AI session service powered
+by agent engine that can extract facts using Germany
+and generate embeddings and also store meanings, not just text.
+All right, let's start by setting up the memory bank.
+To configure the memory bank, we set up an agent engine
+that powers it.
+During this configuration, we choose two types of models.
+One model to extract facts from conversation and media,
+and another model to embed those facts so that we
+can search by meaning.
+We can also define topics to organize
+what we store, like user preference and travel
+experience.
+It is important to remember that this is not just a table.
+It is a service that process content,
+finds useful facts, and makes them searchable.
+And now our agent has a long-term memory backend.
+Once we have it set up, we need to find a way to save memories.
+Here, we can ingest memories in two ways.
+The first way is to archive a full conversation.
+At the end of a session, we call add session to memory.
+The memory bank process uses messages, agent replies,
+image reference, video reference, and audio reference.
+It stores key facts.
+The second way is to upload facts directly.
+As you can see from this code example,
+we can preload from a file.
+We can send an image, a video, or an audio file
+with some text context to generate and store facts
+directly, even if those files didn't come directly
+from a chat.
+Either way, we are building a long-term knowledge base
+that the agent can use later.
+And once we have this knowledge base,
+we need to retrieve memories automatically.
+And we add preload memory tool to the agent.
+It runs at the start of every turn.
+So every turn, before responding,
+the tool reads the user's new message,
+runs the semantic search in the memory bank,
+gathers the most relevant facts, injects relevant facts
+into the prompt.
+And the agent doesn't need special logic.
+The tool enriches the context automatically.
+And let's test this demo.
+At session A, a user shares a photo of a historical building
+and a short video of a sea and a small audio note from a town.
+So we end the chat and add a session to the memory bank
+with add session to memory bank.
+The agent extracts facts, such as like historical building,
+enjoy the coast, and visited the town.
+And we simulate a restart and some time passing.
+In session B, this brand new chat
+with empty state, the user says, based on what I shared before,
+picture, video, and audio, can you
+suggest a cultural destination?
+Before the agent replies, this preload memory tool
+searches the memory bank and injects those facts.
+Preload memory tool finds memories
+like user likes historical architecture,
+enjoys seaside areas, visited a town.
+The agent then recommends a destination
+that matches the historical architecture
+and respond with a personalized suggestion.
+This is long-term multi-modal recall in action.
+You can also use a link on the screen or QR code
+to find the whole demo.
+All right.
+To wrap up our three episode series,
+we now have three layers of memory.
+One is session and state for working memory
+during a live chat.
+And two, persistent sessions and a user profile
+that survive restarts and personalized new chats.
+And three, a memory bank that archives full conversation
+and media, then searches by meaning
+to bring back useful facts later.
+And with these episodes, now you
+can build your personalized agent
+that is consistent, context-aware over days and weeks.
+So in the description of this video,
+you can also find the links to demos and setup steps.
+Try them and tell me what you want to build next.
+All right.
+I will see you in the future videos.
+Bye.
+OK.
+Bye.
+Bye.
+Bye.
+Bye.
+Bye.

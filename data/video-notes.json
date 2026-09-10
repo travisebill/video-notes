@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 194,
-    "total_with_audio": 165,
-    "total_with_transcript": 120,
-    "total_with_spoken_script": 163,
+    "total_videos": 195,
+    "total_with_audio": 166,
+    "total_with_transcript": 121,
+    "total_with_spoken_script": 164,
     "speakers_count": 78,
     "categories_count": 4,
     "topics_count": 16,
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-09-10 21:36:48",
+    "last_updated": "2026-09-10 21:39:53",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -4293,6 +4293,34 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260417_MattPocock_LiveEverlightV2Build.md"
     },
     {
+      "id": "20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank",
+      "title": "【AI agent long-term memory with memory bank】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-04-16",
+      "note_date": "2026-04-16",
+      "duration_seconds": 403,
+      "duration_display": "6:43",
+      "video_url": "https://www.youtube.com/watch?v=KZPo15M2DbM",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank_逐字稿.txt",
+        "spoken_script": "transcripts/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank.md"
+    },
+    {
       "id": "20260415_StanfordCS336_Lecture4_AttentionAlternatives",
       "title": "【Stanford CS336 Language Modeling from Scratch — Lecture 4: Attention Alternatives & Mixture of Experts】",
       "speaker": "Percy Liang, Tatsu Hashimoto",
@@ -4449,7 +4477,7 @@
       "lec_num": null,
       "audio": {
         "opus": "audio/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿.opus",
-        "m4a": null,
+        "m4a": "audio/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿.m4a",
         "mp3": "audio/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿.mp3"
       },
       "transcripts": {
