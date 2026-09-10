@@ -117,7 +117,8 @@
       "🤖 AI 倫理 / 哲學 / 意識",
       "🤖 AI 安全 / 末日論 / 政策",
       "🧠 AI / LLM 學術與方法論"
-    ]
+    ],
+    "last_module_update": "2026-09-10: added course/module for Google ADK complete tutorial (11 videos)"
   },
   "videos": [
     {
@@ -4318,7 +4319,11 @@
         "spoken_script_tts": "transcripts/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank_口播稿_TTS_zh_CN.txt"
       },
       "note_path": "技術講座/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank.md"
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank.md",
+      "course": "Google ADK 完整教學",
+      "module": "D",
+      "module_name": "Agent Memory",
+      "module_order": 3
     },
     {
       "id": "20260415_StanfordCS336_Lecture4_AttentionAlternatives",
@@ -4486,7 +4491,11 @@
         "spoken_script_tts": "transcripts/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿_TTS_zh_CN.txt"
       },
       "note_path": "技術講座/20260408_GoogleCloudTech_HowToAddPersistentMemory.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260408_GoogleCloudTech_HowToAddPersistentMemory.md"
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260408_GoogleCloudTech_HowToAddPersistentMemory.md",
+      "course": "Google ADK 完整教學",
+      "module": "D",
+      "module_name": "Agent Memory",
+      "module_order": 2
     },
     {
       "id": "20260326_GoogleCloudTech_HowToAddShortTermMemory",
@@ -4514,7 +4523,11 @@
         "spoken_script_tts": "transcripts/20260326_GoogleCloudTech_HowToAddShortTermMemory_口播稿_TTS_zh_CN.txt"
       },
       "note_path": "技術講座/20260326_GoogleCloudTech_HowToAddShortTermMemory.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260326_GoogleCloudTech_HowToAddShortTermMemory.md"
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260326_GoogleCloudTech_HowToAddShortTermMemory.md",
+      "course": "Google ADK 完整教學",
+      "module": "D",
+      "module_name": "Agent Memory",
+      "module_order": 1
     },
     {
       "id": "20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns",
@@ -4542,7 +4555,11 @@
         "spoken_script_tts": "transcripts/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns_口播稿_TTS_zh_CN.txt"
       },
       "note_path": "技術講座/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns.md"
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns.md",
+      "course": "Google ADK 完整教學",
+      "module": "E",
+      "module_name": "Design Patterns（跨系列）",
+      "module_order": 2
     },
     {
       "id": "20260311_NTUFAI_FinalProject_GameAgent誰是牛頭王",
@@ -4626,7 +4643,11 @@
         "spoken_script_tts": "transcripts/20260227_GoogleCloudTech_AIAgentDesignPatterns_口播稿_TTS_zh_CN.txt"
       },
       "note_path": "技術講座/20260227_GoogleCloudTech_AIAgentDesignPatterns.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260227_GoogleCloudTech_AIAgentDesignPatterns.md"
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260227_GoogleCloudTech_AIAgentDesignPatterns.md",
+      "course": "Google ADK 完整教學",
+      "module": "E",
+      "module_name": "Design Patterns（跨系列）",
+      "module_order": 1
     },
     {
       "id": "20260205_JensenHuang_不輸給AI_輸給會用AI的人",
@@ -4682,7 +4703,11 @@
         "spoken_script_tts": "transcripts/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice_口播稿_TTS_zh_CN.txt"
       },
       "note_path": "技術講座/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice.md"
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice.md",
+      "course": "Google ADK 完整教學",
+      "module": "C",
+      "module_name": "Agent Evaluation",
+      "module_order": 2
     },
     {
       "id": "20251203_GoogleCloudTech_TheAgentEvaluationRevolution",
@@ -4710,7 +4735,11 @@
         "spoken_script_tts": "transcripts/20251203_GoogleCloudTech_TheAgentEvaluationRevolution_口播稿_TTS_zh_CN.txt"
       },
       "note_path": "技術講座/20251203_GoogleCloudTech_TheAgentEvaluationRevolution.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251203_GoogleCloudTech_TheAgentEvaluationRevolution.md"
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251203_GoogleCloudTech_TheAgentEvaluationRevolution.md",
+      "course": "Google ADK 完整教學",
+      "module": "C",
+      "module_name": "Agent Evaluation",
+      "module_order": 1
     },
     {
       "id": "20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK",
@@ -4738,7 +4767,11 @@
         "spoken_script_tts": "transcripts/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK_口播稿_TTS_zh_CN.txt"
       },
       "note_path": "技術講座/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK.md"
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251117_GoogleCloudTech_BuildingYourOwnMCPServer_ADK.md",
+      "course": "Google ADK 完整教學",
+      "module": "B",
+      "module_name": "MCP 整合",
+      "module_order": 2
     },
     {
       "id": "20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers",
@@ -4766,7 +4799,11 @@
         "spoken_script_tts": "transcripts/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers_口播稿_TTS_zh_CN.txt"
       },
       "note_path": "技術講座/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers.md"
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251107_GoogleCloudTech_ConnectingADKAgentsToMCPServers.md",
+      "course": "Google ADK 完整教學",
+      "module": "B",
+      "module_name": "MCP 整合",
+      "module_order": 1
     },
     {
       "id": "20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色",
@@ -4822,7 +4859,11 @@
         "spoken_script_tts": "transcripts/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK_口播稿_TTS_zh_CN.txt"
       },
       "note_path": "技術講座/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK.md"
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251008_GoogleCloudTech_WorkflowAgentsAndCommunication_ADK.md",
+      "course": "Google ADK 完整教學",
+      "module": "A",
+      "module_name": "Multi-agent 基礎",
+      "module_order": 2
     },
     {
       "id": "20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK",
@@ -4850,7 +4891,11 @@
         "spoken_script_tts": "transcripts/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK_口播稿_TTS_zh_CN.txt"
       },
       "note_path": "技術講座/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK.md",
-      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK.md"
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20251001_GoogleCloudTech_FoundationsOfMultiAgentSystems_ADK.md",
+      "course": "Google ADK 完整教學",
+      "module": "A",
+      "module_name": "Multi-agent 基礎",
+      "module_order": 1
     },
     {
       "id": "20160712_JelaniNelson_AdvancedAlgorithmsCS224_Lecture26",
