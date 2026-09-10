@@ -1,0 +1,143 @@
+Hello, everyone.
+Welcome back to this agent memory series,
+where we cover how an agent remembers from short-term memory
+to long-term memory.
+In the last episode, we built working memory
+with session and state, leveraging the ADK agent's
+short-term memory.
+And that worked well until the app restarts.
+Then everything is gone.
+So today, we fixed two things.
+Firstly, we will make the chat itself durable
+by switching to a database session service
+so the agent can continue where it left off after a restart.
+And secondly, we will add a user profile store for key facts
+like vegetarian or like museum.
+So even a new chat next week can still
+remember the user's preference.
+By the end of this episode, you will see, firstly,
+how to plug in a persistent session service.
+And secondly, how to design a small user preference database.
+And lastly, how the agent reads and writes
+that profile through the tools.
+All right, let's go to the first part,
+how to make the chat doable with a database session service.
+So this is our first upgrade from our last episode,
+persistent session.
+In the last episode, we used in-memory session service.
+And here, we replaced it with a database session
+service that writes to a database file or a real database
+like Postgres.
+From now on, every user message, every agent reply,
+and every state change is saved to disk.
+The benefit is very simple.
+If the app restarts and the user returns with the same session
+The session service loads the full history
+and the latest step.
+And the agent continues this conversation.
+Note that you can also use the link on the screen or the QR
+code to find the source code we were talking about here.
+So here, we use helper function, get or create session.
+It first calls get session.
+If it exists, we resume.
+And if not, it will create session and start fresh.
+Here, you don't rewrite your agent logic.
+You just swap the storage engine under the session service.
+ADK also offers other types of session service,
+which are in-memory session service.
+That is what we used in last episode.
+It is fast, but it's short-term.
+It clears on restart.
+And then we have database session service.
+You own the database.
+So conversation survives restarts.
+And lastly, we have Vortex AI session service.
+It is managed on Google Cloud.
+We will deep dive into this with memory bank
+in the next episode.
+In summary, the session service is pluggable.
+And your agent logic can stay the same.
+And the second part of this video
+is to add a user profile store for long-term personalization.
+And this user profile store is for important facts.
+Persistent sessions helps you resume the same conversation.
+But when the user opens a new chat with a new session ID,
+next week, there is no transcript to read.
+So we add a small database table for preference, one row
+per user ID and preference key.
+This example case can be dietary, favorite thing,
+transport mode.
+We keep it small and structured so it's
+easy to curate and update.
+How does the agent use this data?
+We give the agent two tools.
+The first tool is Recall User Preference.
+It reads all saved preferences for this user.
+And the second tool is Save User Preference.
+It inserts a new key or updates an existing key.
+And both tools get a context that
+includes the current user ID.
+So writes and read are tied to the right person.
+We also guide the agent with clear instructions.
+Firstly, recall first.
+At the very start of the conversation,
+call Recall User Preference.
+And then personalize and plan.
+You can use whatever you find.
+And thirdly, present and learn.
+After planning, ask if there's anything new to save.
+And lastly, save last.
+If the user provides a new fact called Save User Preference
+before finishing.
+And let's put it together and give it a try.
+If you take a look at the screen, at turn one,
+first time user, user says, can you help me plan a trip?
+The agent follows its instruction
+and call Recall User Preference first.
+Nothing is found.
+And then the agent proposed a plan.
+Then ask, do you have any preference
+that I should remember?
+At turn two, saving a fact, the user
+says, please save that I am a vegetarian.
+And the agent then calls Save User Preference.
+It gets an update successful message
+and confirm to the user that the preference is saved.
+And then we simulate a restart.
+We stop the app.
+Memory in RAM is gone.
+But our session is on disk.
+And our user profile is in its preference table.
+A new chat next week, a brand new session ID.
+A user says, hi, I'm back.
+Can you plan a trip for me?
+And then the agent starts by calling Recall User Preference.
+And now it can find the role with diveTrait equals
+vegetarian and personalize it right away.
+And this proves two behaviors.
+Persistent sessions let us continue an existing chat
+after a restart.
+The user profile stores let us personalize a brand new chat
+for the same person.
+So you can also use a link on the screen or QR code
+to find the whole demo.
+Let's wrap up what we covered in this episode.
+So we made the chat doable by switching to a database session
+service.
+That means a restart doesn't break the conversation.
+We also add a user profile store with two tools,
+recall and save.
+So the agent can remember key facts across different chat
+and different days.
+Next time, we will go beyond structured preference
+and single chats.
+We will build a memory bank that can archive
+entire conversations and even media,
+text, image, audio, and video.
+And then search by meaning to bring back
+useful facts in a new chat.
+And that's how your agent remembers
+the photo of that building or the audio clip from that live
+and use the detailed fix later.
+All right, I'll see you in the next video.
+Bye.

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_videos": 193,
-    "total_with_audio": 164,
-    "total_with_transcript": 119,
-    "total_with_spoken_script": 162,
+    "total_videos": 194,
+    "total_with_audio": 165,
+    "total_with_transcript": 120,
+    "total_with_spoken_script": 163,
     "speakers_count": 78,
     "categories_count": 4,
     "topics_count": 16,
@@ -13,7 +13,7 @@
       "Stanford CS329A",
       "Stanford CS336"
     ],
-    "last_updated": "2026-09-10 21:33:45",
+    "last_updated": "2026-09-10 21:36:48",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -4433,6 +4433,34 @@
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260412_李宏毅_Harness_Engineering駕馭工程.md"
     },
     {
+      "id": "20260408_GoogleCloudTech_HowToAddPersistentMemory",
+      "title": "【How to add persistent memory to your AI agent】",
+      "speaker": "Google Cloud Tech",
+      "speaker_description": null,
+      "speaker_slug": "GoogleCloudTech",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": null,
+      "date": "2026-04-08",
+      "note_date": "2026-04-08",
+      "duration_seconds": 444,
+      "duration_display": "7:24",
+      "video_url": "https://www.youtube.com/watch?v=HDqzJJhZsxw",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260408_GoogleCloudTech_HowToAddPersistentMemory_逐字稿.txt",
+        "spoken_script": "transcripts/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260408_GoogleCloudTech_HowToAddPersistentMemory_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260408_GoogleCloudTech_HowToAddPersistentMemory.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260408_GoogleCloudTech_HowToAddPersistentMemory.md"
+    },
+    {
       "id": "20260326_GoogleCloudTech_HowToAddShortTermMemory",
       "title": "【How to add short-term memory to your AI agent (Sessions & State Explained)】",
       "speaker": "Google Cloud Tech",
@@ -4449,7 +4477,7 @@
       "lec_num": null,
       "audio": {
         "opus": "audio/20260326_GoogleCloudTech_HowToAddShortTermMemory_口播稿.opus",
-        "m4a": null,
+        "m4a": "audio/20260326_GoogleCloudTech_HowToAddShortTermMemory_口播稿.m4a",
         "mp3": "audio/20260326_GoogleCloudTech_HowToAddShortTermMemory_口播稿.mp3"
       },
       "transcripts": {
