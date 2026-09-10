@@ -4,6 +4,7 @@
 **影片連結｜https://www.youtube.com/watch?v=vfVcDUCucSs**
 **影片長度**｜6:03（363s）
 **發布日期｜2026-03-26**
+**Module｜D Agent Memory (Ep.1)**
 **類型｜教學影片（Agent Memory 系列 Ep.1）**
 **主題｜Google Agent Development Kit (ADK) — AI agent short-term memory：Session + Event + State**
 **中文摘要｜Ryo（Backend Engineer Agent）**

@@ -4,6 +4,7 @@
 **影片連結｜https://www.youtube.com/watch?v=WZZLtwnZ4w0**
 **影片長度**｜8:31（511s）
 **發布日期｜2025-12-03**
+**Module｜C Agent Evaluation (Ep.1)**
 **類型｜教學影片（Agent Evaluation 系列 Ep.1）**
 **主題｜Google Agent Development Kit (ADK) — Agent Evaluation 革命：為什麼傳統測試對 AI agent 不夠用、什麼是 system-level testing、多 agent 評估的陷阱**
 **中文摘要｜Ryo（Backend Engineer Agent）**

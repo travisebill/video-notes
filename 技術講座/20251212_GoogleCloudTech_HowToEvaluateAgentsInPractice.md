@@ -4,6 +4,7 @@
 **影片連結｜https://www.youtube.com/watch?v=vuBvf7ZRKTA**
 **影片長度**｜10:53（653s）
 **發布日期｜2025-12-12**
+**Module｜C Agent Evaluation (Ep.2)**
 **類型｜教學影片（Agent Evaluation 系列 Ep.2 完結篇）**
 **主題｜Google Agent Development Kit (ADK) — 三層測試金字塔 + ADK eval 實作：trajectory 概念、tool_trajectory_average_score、response_match_score**
 **中文摘要｜Ryo（Backend Engineer Agent）**

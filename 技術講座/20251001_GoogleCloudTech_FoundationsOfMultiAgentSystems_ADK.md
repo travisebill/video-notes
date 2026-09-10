@@ -4,6 +4,7 @@
 **影片連結｜https://www.youtube.com/watch?v=pX0_iIfRilU**
 **影片長度**｜5:17（317s）
 **發布日期｜2025-10-01**
+**Module｜A Multi-agent 基礎 (Ep.1)**
 **類型｜教學影片（ADK 系列 Ep.1 入門）**
 **主題｜Google Agent Development Kit (ADK) 系列開場 — Multi-agent system 基礎概念 + ADK 三種 agent 類型 + Agent hierarchy 設計原則**
 **中文摘要｜Ryo（Backend Engineer Agent）**

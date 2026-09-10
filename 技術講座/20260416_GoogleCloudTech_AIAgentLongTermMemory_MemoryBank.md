@@ -4,6 +4,7 @@
 **影片連結｜https://www.youtube.com/watch?v=KZPo15M2DbM**
 **影片長度**｜6:43（403s）
 **發布日期｜2026-04-16**
+**Module｜D Agent Memory (Ep.3)**
 **類型｜教學影片（Agent Memory 系列 Ep.3 完結篇）**
 **主題｜Google Agent Development Kit (ADK) — AI agent long-term memory：Memory bank + Vertex AI memory bank service + preload memory tool + multi-modal recall**
 **中文摘要｜Ryo（Backend Engineer Agent）**
