@@ -233,6 +233,18 @@
         </select>
       </label>
 
+      
+      <!-- Module (2026-09-10 新增：Google ADK 完整教學 A-E module 篩選) -->
+      <label x-show="meta.modules && meta.modules.length > 0">
+        <small>Module</small>
+        <select x-model="filters.module" @change="applyFilters()">
+          <option value="">全部 Module</option>
+          <template x-for="m in meta.modules" :key="m">
+            <option :value="m" x-text="m"></option>
+          </template>
+        </select>
+      </label>
+
       <!-- Date Range -->
       <label>
         <small>日期範圍</small>
