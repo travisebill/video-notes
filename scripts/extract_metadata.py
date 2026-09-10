@@ -503,6 +503,7 @@ def main():
     # 計算 meta
     speakers = sorted({v['speaker'] for v in videos})
     modules = sorted({v['module'] for v in videos if v.get('module')})
+    modules = sorted({v['module'] for v in videos if v.get('module')})
     categories = sorted({v['category'] for v in videos})
     topics = sorted({t for t in (v['primary_topic'] for v in videos) if t})
 
