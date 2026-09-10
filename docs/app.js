@@ -18,7 +18,7 @@ const LOCAL_JSON_URL = `./data/video-notes.json`;
 document.addEventListener('alpine:init', () => {
   Alpine.data('videoApp', () => ({
     // ===== State =====
-    meta: { total_videos: 0, speakers_count: 0, topics_count: 0, last_updated: '', speakers: [], categories: [], topics: [], courses: [] },
+    meta: { total_videos: 0, speakers_count: 0, topics_count: 0, modules_count: 0, last_updated: '', speakers: [], categories: [], topics: [], modules: [], courses: [] },
     videos: [],
     filteredVideos: [],
     searchQuery: '',
@@ -26,6 +26,7 @@ document.addEventListener('alpine:init', () => {
       category: '',
       speaker: '',
       topic: '',
+      module: '',  // 2026-09-10 新增：Google ADK 完整教學 module 篩選（A-E）
       course: '',
       dateRange: 'all',
       linkStatus: 'all',  // v1.8 2026-07-14: 'all' | 'with_link' | 'no_link'
@@ -782,6 +783,11 @@ document.addEventListener('alpine:init', () => {
         result = result.filter(v => v.primary_topic === this.filters.topic);
       }
 
+      // 4a. Module (2026-09-10 新增：Google ADK 完整教學 A-E module 篩選)
+      if (this.filters.module) {
+        result = result.filter(v => v.module === this.filters.module);
+      }
+
       // 4b. Course (B3 scheme 2026-07-05: course_slug filter for Harvard CS224 / Stanford CS336)
       if (this.filters.course) {
         result = result.filter(v => v.course_slug === this.filters.course);
@@ -843,7 +849,7 @@ document.addEventListener('alpine:init', () => {
 
     resetFilters() {
       this.searchQuery = '';
-      this.filters = { category: '', speaker: '', topic: '', course: '', dateRange: 'all' };
+      this.filters = { category: '', speaker: '', topic: '', module: '', course: '', dateRange: 'all', linkStatus: 'all' };
       this.sort = 'date_desc';
       this.applyFilters();
     },

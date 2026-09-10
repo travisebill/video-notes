@@ -260,6 +260,30 @@ def parse_md_frontmatter(content: str) -> dict:
     if m:
         md['topic'] = m.group(1).strip()
 
+    # Module 標籤（2026-09-10 新增，支援 Google ADK 完整教學 playlist 分類）
+    # 格式：**Module｜A Multi-agent 基礎 (Ep.1)**
+    # 解析：module='A'、module_name='Multi-agent 基礎'、module_order=1
+    m = re.search(rf'\*\*Module\*\*\s*{SEP}\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'\*\*Module{SEP}\*\*\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> \*\*Module\*\*\s*{SEP}\s*([^\n]+)', content)
+    if not m:
+        m = re.search(rf'> \*\*Module{SEP}\*\*\s*([^\n]+)', content)
+    if m:
+        module_text = m.group(1).strip()
+        mm = re.match(r'^([A-Z])\s+(.+?)\s*\(Ep\.(\d+)\)\s*$', module_text)
+        if mm:
+            md['module'] = mm.group(1)
+            md['module_name'] = mm.group(2).strip()
+            md['module_order'] = int(mm.group(3))
+        else:
+            mm = re.match(r'^([A-Z])(?:\s+(.+?))?$', module_text)
+            if mm:
+                md['module'] = mm.group(1)
+                if mm.group(2):
+                    md['module_name'] = mm.group(2).strip()
+
     # 標題（H1）
     m = re.search(r'^# (.+)$', content, re.MULTILINE)
     if m:
@@ -469,11 +493,16 @@ def main():
                 'transcripts': find_transcripts(base_name),
                 'note_path': note_rel_path,
                 'note_github_url': f'https://github.com/travisebill/video-notes/blob/main/{note_rel_path}',
+                # 2026-09-10 新增：Module 標籤（從 frontmatter `**Module｜X Name (Ep.N)**` 解析）
+                'module': fm.get('module'),
+                'module_name': fm.get('module_name'),
+                'module_order': fm.get('module_order'),
             }
             videos.append(video)
 
     # 計算 meta
     speakers = sorted({v['speaker'] for v in videos})
+    modules = sorted({v['module'] for v in videos if v.get('module')})
     categories = sorted({v['category'] for v in videos})
     topics = sorted({t for t in (v['primary_topic'] for v in videos) if t})
 
@@ -492,10 +521,12 @@ def main():
             'categories_count': len(categories),
             'topics_count': len(topics),
             'courses': sorted({v['course_slug'] for v in videos if v.get('course_slug')}),
+            'modules_count': len(modules),
             'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             'speakers': speakers,
             'categories': categories,
             'topics': topics,
+            'modules': modules,
         },
         'videos': videos,
     }
@@ -513,6 +544,7 @@ def main():
     print(f"   含口播稿:    {videos_with_spoken}")
     print(f"   講者數:      {len(speakers)}")
     print(f"   主題數:      {len(topics)}")
+    print(f"   Module 數:   {len(modules)}")
     print(f"   分類:        {', '.join(categories)}")
 
 
