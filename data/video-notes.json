@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 195,
-    "total_with_audio": 166,
-    "total_with_transcript": 121,
-    "total_with_spoken_script": 164,
-    "speakers_count": 78,
+    "total_videos": 196,
+    "total_with_audio": 167,
+    "total_with_transcript": 122,
+    "total_with_spoken_script": 165,
+    "speakers_count": 79,
     "categories_count": 4,
     "topics_count": 16,
     "courses": [
@@ -15,7 +15,7 @@
       "Stanford CS336"
     ],
     "modules_count": 5,
-    "last_updated": "2026-09-11 00:46:41",
+    "last_updated": "2026-09-15 22:08:17",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -33,6 +33,7 @@
       "Boris，Claude Code 的創作者（被稱為「Claude Code 之父」），任職於 Anthropic。先前創辦過多間新創公司，經歷過 Y Combinator，編寫過程式設計和 TypeScript 教科書。自稱「過去一年幾乎沒親手寫過一行程式碼」",
       "Brian Greene",
       "CNBC",
+      "CNN",
       "Cedric Clyburn",
       "Claude",
       "Cloudflare",
@@ -166,6 +167,38 @@
     ]
   },
   "videos": [
+    {
+      "id": "20260915_CNN_DarioAmodei_AgentSwarmHumanity",
+      "title": "【Anthropic CEO 告訴 CNN：AI 「agent swarm」可能如何威脅人類】",
+      "speaker": "CNN",
+      "speaker_description": "Anderson Cooper 主持",
+      "speaker_slug": "CNN",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🤖 AI 安全 / 末日論 / 政策",
+      "date": "2026-09-15",
+      "note_date": "2026-09-15",
+      "duration_seconds": 487,
+      "duration_display": "8:07",
+      "video_url": "https://youtu.be/_JbDZ2Rj2SA?si=lqTxbzmeKxk2iU9u",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260915_CNN_DarioAmodei_AgentSwarmHumanity_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260915_CNN_DarioAmodei_AgentSwarmHumanity_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260915_CNN_DarioAmodei_AgentSwarmHumanity_逐字稿.txt",
+        "spoken_script": "transcripts/20260915_CNN_DarioAmodei_AgentSwarmHumanity_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260915_CNN_DarioAmodei_AgentSwarmHumanity_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20260915_CNN_DarioAmodei_AgentSwarmHumanity.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260915_CNN_DarioAmodei_AgentSwarmHumanity.md",
+      "module": null,
+      "module_name": null,
+      "module_order": null,
+      "course": null
+    },
     {
       "id": "20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism",
       "title": "【美國帝國正在衰退、社會主義即將到來？白宮科技顧問 David Friedberg 全方位解析】",

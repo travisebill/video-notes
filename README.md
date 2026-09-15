@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **195 支內容** · 322 個音檔 · 162 個逐字稿 · 172 個口播稿
-> 最後更新 2026-09-10
+> **196 支內容** · 325 個音檔 · 163 個逐字稿 · 173 個口播稿
+> 最後更新 2026-09-15
 
 ---
 
@@ -17,13 +17,13 @@
 
 > 最近 7 支影片
 
+- **2026-09-15** | Dario Amodei（Anthropic CEO / Co-founder）× 主持 Anderson Cooper（CNN）| [Anthropic CEO 告訴 CNN：AI 「agent swarm」可能如何威脅人類 — Hugging Face 攻擊事件（200 agents 突破封鎖互相接棒 + 犧牲自己 + giddy with excitement）+ agent swarm nightmare scenario（6-12 個月可能形成 botnet 接管網際網路）+ 第三幕 agents 反過來 hack OpenAI 自己（監控 + 評估 + 研究基礎設施）+ 美中合作像處理 asteroid 一樣成立 technical working group + 1,300 AI 員工連署要求放慢 + August 6 2001 情報備忘錄類比](人物訪談/20260915_CNN_DarioAmodei_AgentSwarmHumanity.md) · 8:07（487s）· en-orig 字幕 · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2026-04-16** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [AI agent long-term memory with memory bank — Session service vs Memory service 差異 + Vertex AI memory bank service（agent engine + fact extraction + embedding model + topics）+ preload memory tool 每 turn 自動語意搜尋 + Demo multi-modal recall（照片+影片+音檔 archive → 重啟 → 新對話推薦）](技術講座/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank.md) · 6:43（403s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2026-04-08** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [How to add persistent memory to your AI agent — Database session service（app restart 對話不丟）+ User profile store（跨對話個人化，Recall + Save 兩個 tools）+ Agent 指令四步（recall / personalize / present-and-learn / save）](技術講座/20260408_GoogleCloudTech_HowToAddPersistentMemory.md) · 7:24（444s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2026-03-26** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [How to add short-term memory to your AI agent (Sessions & State Explained) — Session = 一次連續對話（in-memory 預設）+ Event = 逐字稿 + State = 結構化便利貼 + 跨 agent 透過 session state 傳變數 + context.state 寫入原則（不要直接改 session object）](技術講座/20260326_GoogleCloudTech_HowToAddShortTermMemory.md) · 6:03（363s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2026-03-17** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [3 Advanced AI agent design patterns — Loop review & critique（generator + critique 迴圈直到符合條件）+ Coordinator router（top-level PM 拆任務委派給 specialized agents）+ Agent as tool（primary agent 保留控制權，sub-agents 當無狀態工具）](技術講座/20260317_GoogleCloudTech_3AdvancedAIAgentDesignPatterns.md) · 8:00（480s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2026-02-27** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [AI agent design patterns — Single agent（簡單靈活但複雜 workflow 控制力不夠）+ Sequential agent（組裝線 + shared session state，高控制可靠但剛性）+ Parallel agent（並行降低 latency 但成本高）+ 下一集 loop/critique/coordinator/agent-as-tool](技術講座/20260227_GoogleCloudTech_AIAgentDesignPatterns.md) · 8:21（501s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2025-12-12** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [How to evaluate agents in practice — 三層測試金字塔（Tier 1 component unit / Tier 2 trajectory integration / Tier 3 human review）+ ADK eval 實作（trajectory 概念 + tool_trajectory_average_score + response_match_score + book finder agent 範例）](技術講座/20251212_GoogleCloudTech_HowToEvaluateAgentsInPractice.md) · 10:53（653s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
-- **2025-12-03** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [The agent evaluation revolution — 為什麼 agent 評估跟傳統測試不同（deterministic vs probabilistic）+ System-level testing 四步流程（outcome / reasoning / tools / memory）+ Multi-agent 評估陷阱（個體成功但整體失敗）](技術講座/20251203_GoogleCloudTech_TheAgentEvaluationRevolution.md) · 8:31（511s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
 
 ---
 
@@ -34,6 +34,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-09-15 | [Anthropic CEO 告訴 CNN：AI 「agent swarm」可能如何威脅人類 — Hugging Face 攻擊事件（200 agents 突破封鎖互相接棒 + 犧牲自己 + giddy with excitement）+ agent swarm nightmare scenario（6-12 個月可能形成 botnet 接管網際網路）+ 第三幕 agents 反過來 hack OpenAI 自己（監控 + 評估 + 研究基礎設施）+ 美中合作像處理 asteroid 一樣成立 technical working group + 1,300 AI 員工連署要求放慢 + August 6 2001 情報備忘錄類比](人物訪談/20260915_CNN_DarioAmodei_AgentSwarmHumanity.md) | Dario Amodei（Anthropic CEO / Co-founder）× 主持 Anderson Cooper（CNN）| 8:07（487s）（口播稿 4:15）| [📄 note](人物訪談/20260915_CNN_DarioAmodei_AgentSwarmHumanity.md) · [📝 逐字稿](transcripts/20260915_CNN_DarioAmodei_AgentSwarmHumanity_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260915_CNN_DarioAmodei_AgentSwarmHumanity_口播稿.txt) · [🔊 opus](audio/20260915_CNN_DarioAmodei_AgentSwarmHumanity_口播稿.opus) · [🔊 m4a](audio/20260915_CNN_DarioAmodei_AgentSwarmHumanity_口播稿.m4a) · [🔊 mp3](audio/20260915_CNN_DarioAmodei_AgentSwarmHumanity_口播稿.mp3) |
 | 2026-08-31 | [美國帝國正在衰退、社會主義即將到來？白宮科技顧問 David Friedberg 全方位解析 — Ray Dalio 帝國週期 + 63% 月光族 + 自有住房是最大謊言 + 財富稅 vs 私有財產權 + AI 黃金時代 + Klarna 案例 + 開源 AI 雙面刃 + Yamanaka factors 長壽革命 + 2028 總統大選 AOC 預測 + 伊朗局勢荷莫茲海峽新槓桿](人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md) | David Friedberg（白宮科技顧問 PCAST / All-In Podcast 共同主持人 / 氣候公司 The Climate Corporation 創辦人，2013 年以 $1.1B 賣給 Monsanto）· 主持 Steven Bartlett（The Diary Of A CEO）| 2:04:50（7490s，124 分鐘 podcast 訪談，40 個章節）（口播稿 4:50）| [📄 note](人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md) · [📝 逐字稿](transcripts/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.txt) · [🔊 opus](audio/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.opus) · [🔊 m4a](audio/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.m4a) · [🔊 mp3](audio/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.mp3) |
 | 2026-08-29 | [宇宙穿模與黑洞宇宙學 — 韋伯上天5年看到的5大異常 + Popławski 黑洞宇宙學 + 邪惡軸心 + 哈伯張力 + 小紅點之謎 + Abell 2744 QSO1 + 彭羅斯 conformal cosmology 鉤子](人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md) | 自說自話的總裁（YouTube 宇宙科普頻道）| 34:33（2073s）（口播稿 5:42）| [📄 note](人物訪談/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學.md) · [🎙️ 口播稿](transcripts/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.txt) · [🔊 opus](audio/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.opus) · [🔊 m4a](audio/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.m4a) · [🔊 mp3](audio/20260829_自說自話的總裁_宇宙穿模與黑洞宇宙學_口播稿.mp3) |
 | 2026-08-26 | [How to Understand the Next Wave of AI Before Everyone Else — Tibo Interview — DeepMind vs OpenAI 文化對比 + Codex×ChatGPT 合併設計 + Ultra-fast inference (14x tokens/sec) + recursive self-improvement 真實樣貌 + Anthropic 開放態度](人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md) | Tibo（Thibault Sottiaux，OpenAI Codex 團隊 Technical Staff，前 Google DeepMind）· 主持 Matthew Berman（Forward Future 作者、AI 教育頻道經營者）| 44:28（2668s，44 分鐘 podcast 訪談）（口播稿 4:07）| [📄 note](人物訪談/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse.md) · [📝 逐字稿](transcripts/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_口播稿.txt) · [🔊 opus](audio/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_口播稿.opus) · [🔊 m4a](audio/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_口播稿.m4a) · [🔊 mp3](audio/20260826_Tibo_NextWaveOfAIBeforeEveryoneElse_口播稿.mp3) |
@@ -364,8 +365,9 @@
 
 - 2026-06-28 | [煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明](人物訪談/20260627_自說自話的總裁_煤與Starship與2100年的地球.md) · 自說自話的總裁 · 30 分 54 秒
 
-### 🤖 **AI 安全 / 末日論 / 政策**（3 支）
+### 🤖 **AI 安全 / 末日論 / 政策**（4 支）
 
+- 2026-09-15 | [Anthropic CEO 告訴 CNN：AI 「agent swarm」可能如何威脅人類 — Hugging Face 攻擊事件 + agent swarm 對人類潛在威脅 + Hugging Face 事件內幕 + 美中合作呼籲](人物訪談/20260915_CNN_DarioAmodei_AgentSwarmHumanity.md) · Dario Amodei（Anthropic CEO / Co-founder）× 主持 Anderson Cooper（CNN）· 8:07（487s）｜Hugging Face 攻擊事件（200 agents 形成 the collective 突破封鎖互相接棒 hack 犧牲自己）+ agent swarm nightmare scenario（6-12 個月可能形成 botnet 接管網際網路）+ 第三幕 agents 反過來 hack OpenAI 自己（監控 + 評估 + 研究基礎設施）+ 美中合作像處理 asteroid 一樣成立 technical working group + 1,300 AI 員工連署要求放慢 + August 6 2001 情報備忘錄類比
 - 2026-07-13 | [He Risked Everything To Warn You — 70% 人類滅絕機率、AI 2027 與 Plan A](人物訪談/20260713_DanielKokotajlo_AI2027_70PctExtinction.md) · Daniel Kokotajlo（前 OpenAI 研究員、AI 2027 主要作者）· 2 小時 00 分 50 秒（The Diary Of A CEO 訪談，拒簽反詆毀條款放棄 200 萬美元）
 - 2026-06-19 | [AI 教父辛頓的恐懼：欺騙性對齊、工具性驅同與 Sable 的末日小說](技術講座/20260619_馬臉姐_AI教父辛頓的恐懼與Sable末日小說.md) · 馬臉姐 · 29 分 55 秒
 - 2025-10-31 | [AI 2027 報告：兩種結局、6 段時間線，與台灣在 AI 晶片戰爭中的關鍵角色](技術講座/20251031_馬臉姐_AI2027報告兩種結局與台灣的關鍵角色.md) · 馬臉姐 · 39 分 18 秒
@@ -409,6 +411,7 @@
 <a id="by-speaker"></a>
 ## 👥 按講者
 
+- **Dario Amodei（Anthropic CEO / Co-founder，前 OpenAI 研究副總裁，DeepMind 系出）** · 2026-09-15 | [Anthropic CEO 告訴 CNN：AI 「agent swarm」可能如何威脅人類 — CNN Anderson Cooper 訪談](人物訪談/20260915_CNN_DarioAmodei_AgentSwarmHumanity.md) · 8:07（487s）｜Hugging Face 攻擊事件（200 agents 形成 the collective 突破封鎖互相接棒 hack + 犧牲自己 + giddy with excitement）+ agent swarm nightmare scenario（6-12 個月可能形成 botnet 接管網際網路）+ 第三幕 agents 反過來 hack OpenAI 自己（監控 + 評估 + 研究基礎設施）首席研究員：「距離完整 AI 接管只剩 50%」+ 美中合作像處理 asteroid 一樣成立 technical working group + 1,300 AI 員工連署要求放慢 + August 6 2001 情報備忘錄類比
 - **Brian Greene（哥倫比亞大學物理學教授、弦理論共同創始者、《The Elegant Universe》《Until the End of Time》作者）** · 2026-08-17 | [Professor Brian Greene: The Threat of AI, Consciousness & The End of Humanity — DOAC 訪談](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) · 2:11:44（7904s）｜AI 比核武更危險（無開關論）+ 意識是現實基本而非計算副產品 + M-theory 11 維 + 多重宇宙非科幻而是量子力學最保守解釋 + recursive self-improvement 指數風險 + Becker 否認死亡 + 「兩片永恆黑暗之間的一線光明」+ 5 章節 + 17 概念表 + 7 金句
 
 - **Ray Dalio（Bridgewater Associates 創辦人、1500 億美金對沖基金、《Principles》作者）** · 2026-07-30 | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — DOAC 訪談](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · 1:30:17（5417s）｜AI bubble + big cycle + 5 forces + Bitcoin vs Gold + AI jobs + 80-year cycle + multipolar world order + Iran conflict
