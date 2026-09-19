@@ -1,12 +1,12 @@
 {
   "meta": {
-    "total_videos": 196,
-    "total_with_audio": 167,
-    "total_with_transcript": 122,
-    "total_with_spoken_script": 165,
-    "speakers_count": 79,
+    "total_videos": 197,
+    "total_with_audio": 168,
+    "total_with_transcript": 123,
+    "total_with_spoken_script": 166,
+    "speakers_count": 80,
     "categories_count": 4,
-    "topics_count": 16,
+    "topics_count": 17,
     "courses": [
       "Google ADK 完整教學",
       "Harvard CS224",
@@ -15,7 +15,7 @@
       "Stanford CS336"
     ],
     "modules_count": 5,
-    "last_updated": "2026-09-15 22:08:17",
+    "last_updated": "2026-09-19 18:05:56",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -88,6 +88,7 @@
       "Yuval Noah Harari",
       "兩位資深軟體工程師",
       "小天fotos",
+      "朱學恆",
       "李宏毅",
       "歐麗娟",
       "自說自話的總裁",
@@ -107,6 +108,7 @@
       "🌍 地球科學 / 太空 / 科普",
       "🏃 健康 / 營養 / 抗老",
       "🏛️ 政治 / 國際局勢",
+      "🏛️ 政治 / 國際局勢 / AI 安全政策",
       "🏺 考古 / 古文明 / 人類學",
       "💰 財經 / 經濟",
       "💼 商業 / 創業 / 經營",
@@ -167,6 +169,38 @@
     ]
   },
   "videos": [
+    {
+      "id": "20260919_朱學恆_中國AI蒸餾報告與國民黨立委",
+      "title": "【中國 AI 蒸餾報告——朱學恆解讀 Anthropic 154 頁威脅報告】",
+      "speaker": "朱學恆",
+      "speaker_description": "朱學恆的萬事通事務所 KOL，直播回放",
+      "speaker_slug": "朱學恆",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🏛️ 政治 / 國際局勢 / AI 安全政策",
+      "date": "2026-09-19",
+      "note_date": "2026-09-19",
+      "duration_seconds": 7256,
+      "duration_display": "2:00:56",
+      "video_url": "https://www.youtube.com/live/VEqKMqAFuQ4?si=-qbwUUeV1OmwDV38",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260919_朱學恆_中國AI蒸餾報告與國民黨立委_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260919_朱學恆_中國AI蒸餾報告與國民黨立委_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260919_朱學恆_中國AI蒸餾報告與國民黨立委_逐字稿.txt",
+        "spoken_script": "transcripts/20260919_朱學恆_中國AI蒸餾報告與國民黨立委_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260919_朱學恆_中國AI蒸餾報告與國民黨立委_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20260919_朱學恆_中國AI蒸餾報告與國民黨立委.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260919_朱學恆_中國AI蒸餾報告與國民黨立委.md",
+      "module": null,
+      "module_name": null,
+      "module_order": null,
+      "course": null
+    },
     {
       "id": "20260915_CNN_DarioAmodei_AgentSwarmHumanity",
       "title": "【Anthropic CEO 告訴 CNN：AI 「agent swarm」可能如何威脅人類】",

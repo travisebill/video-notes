@@ -43,6 +43,7 @@ SPEAKER_NAME_OVERRIDES = {
     'PiotrIndyk': 'Piotr Indyk',
     'JelaniNelson': 'Jelani Nelson',
     'TaraAgyemang': 'Tara Agyemang',
+    '朱學恆': '朱學恆',
 }
 
 
