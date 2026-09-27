@@ -1,12 +1,12 @@
 {
   "meta": {
-    "total_videos": 197,
-    "total_with_audio": 168,
-    "total_with_transcript": 123,
-    "total_with_spoken_script": 166,
-    "speakers_count": 80,
+    "total_videos": 198,
+    "total_with_audio": 169,
+    "total_with_transcript": 124,
+    "total_with_spoken_script": 167,
+    "speakers_count": 81,
     "categories_count": 4,
-    "topics_count": 17,
+    "topics_count": 18,
     "courses": [
       "Google ADK 完整教學",
       "Harvard CS224",
@@ -15,7 +15,7 @@
       "Stanford CS336"
     ],
     "modules_count": 5,
-    "last_updated": "2026-09-19 18:05:55",
+    "last_updated": "2026-09-27 21:23:34",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -70,6 +70,7 @@
       "Piotr Indyk",
       "Pooja Trivedi（Microsoft 架構師，主導 Windows on Linux 開發者體驗與 AI）／Craig（Microsoft PM，負責 WSL 與 Windows AI 工具）",
       "Ray Dalio",
+      "Rick Rubin",
       "Ruben Casas",
       "Ryan Lopopolo",
       "Scott Galloway",
@@ -106,6 +107,7 @@
     ],
     "topics": [
       "🌍 地球科學 / 太空 / 科普",
+      "🎨 創作 / 藝術 / 創造力",
       "🏃 健康 / 營養 / 抗老",
       "🏛️ 政治 / 國際局勢",
       "🏛️ 政治 / 國際局勢 / AI 安全政策",
@@ -169,6 +171,38 @@
     ]
   },
   "videos": [
+    {
+      "id": "20260921_RickRubin_TheOnlySkillAI",
+      "title": "【Rick Rubin × The Diary Of A CEO：AI 永遠偷不走的那項技能】",
+      "speaker": "Rick Rubin",
+      "speaker_description": "傳奇音樂製作人，Def Jam 共同創辦人，Columbia Records 前共同總裁，《The Creative Act: A Way of Being》《The Way of Code》作者；9 座葛萊美獎",
+      "speaker_slug": "RickRubin",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🎨 創作 / 藝術 / 創造力",
+      "date": "2026-09-21",
+      "note_date": "2026-09-21",
+      "duration_seconds": 9990,
+      "duration_display": "2:46:30",
+      "video_url": "https://youtu.be/a_GiFiHXJ6g",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260921_RickRubin_TheOnlySkillAI_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260921_RickRubin_TheOnlySkillAI_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260921_RickRubin_TheOnlySkillAI_逐字稿.txt",
+        "spoken_script": "transcripts/20260921_RickRubin_TheOnlySkillAI_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260921_RickRubin_TheOnlySkillAI_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20260921_RickRubin_TheOnlySkillAI.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20260921_RickRubin_TheOnlySkillAI.md",
+      "module": null,
+      "module_name": null,
+      "module_order": null,
+      "course": null
+    },
     {
       "id": "20260919_朱學恆_中國AI蒸餾報告與國民黨立委",
       "title": "【中國 AI 蒸餾報告——朱學恆解讀 Anthropic 154 頁威脅報告】",
