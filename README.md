@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **196 支內容** · 325 個音檔 · 163 個逐字稿 · 173 個口播稿
-> 最後更新 2026-09-19
+> **197 支內容** · 326 個音檔 · 164 個逐字稿 · 174 個口播稿
+> 最後更新 2026-09-27
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 7 支影片
 
+- **2026-09-21** | Rick Rubin（傳奇音樂製作人，Def Jam 共同創辦人）× Steven Bartlett（The Diary Of A CEO 主持）| [Rick Rubin: The Only Skill That Matters Now Is The One Thing AI Can Never Steal! — 創作方法論（indefensible 規則 + The Way of Code）+ 4 Phases of Creativity + Jay-Z 99 Problems / Ace of Spades 現場 + Kanye 天才觀察 + AI 能否有創造力 + 身份是牢籠 + Studio Miracles](人物訪談/20260921_RickRubin_TheOnlySkillAI.md) · 2:46:30（9990s）· en 字幕 + 繁中翻譯 · xiaotian_clone_v1 · Bar 1 1706 chars / Bar 2 0.00/1K / Bar 3 9.50%
 - **2026-09-19** | 朱學恆（朱學恆的萬事通事務所 KOL）| [中國 AI 蒸餾報告——朱學恆解讀 Anthropic 154 頁威脅報告——七家中國實驗室對 Claude 工業級蒸餾 + Kimi/DeepSeek 用戶請求靜默轉發 Claude（解放軍/公安/俄國防資料意外混進訓練語料）+ Anthropic 與白宮訴訟（川普下令停用違憲）+ 鄭麗文訪美算命師披露握手 + 五層攻擊結構 + 鯉貓換太子 + 換本地模型繼續幹異常 + 中國本土 AI 安全認知落差](人物訪談/20260919_朱學恆_中國AI蒸餾報告與國民黨立委.md) · 2:00:56（7256s）· Whisper small + mps · xiaotian_clone_v1 · Bar 1 1652 chars / Bar 2 0.61/1K / Bar 3 8.33%
 - **2026-09-15** | Dario Amodei（Anthropic CEO / Co-founder）× 主持 Anderson Cooper（CNN）| [Anthropic CEO 告訴 CNN：AI 「agent swarm」可能如何威脅人類 — Hugging Face 攻擊事件（200 agents 突破封鎖互相接棒 + 犧牲自己 + giddy with excitement）+ agent swarm nightmare scenario（6-12 個月可能形成 botnet 接管網際網路）+ 第三幕 agents 反過來 hack OpenAI 自己（監控 + 評估 + 研究基礎設施）+ 美中合作像處理 asteroid 一樣成立 technical working group + 1,300 AI 員工連署要求放慢 + August 6 2001 情報備忘錄類比](人物訪談/20260915_CNN_DarioAmodei_AgentSwarmHumanity.md) · 8:07（487s）· en-orig 字幕 · xiaotian_clone_v1 · Bar 2 0.00/1K
 - **2026-04-16** | Google Cloud Tech（Google 官方 AI/ML YouTube 頻道，ADK 系列主講人 Annie）| [AI agent long-term memory with memory bank — Session service vs Memory service 差異 + Vertex AI memory bank service（agent engine + fact extraction + embedding model + topics）+ preload memory tool 每 turn 自動語意搜尋 + Demo multi-modal recall（照片+影片+音檔 archive → 重啟 → 新對話推薦）](技術講座/20260416_GoogleCloudTech_AIAgentLongTermMemory_MemoryBank.md) · 6:43（403s）· Whisper medium en + CPU · xiaotian_clone_v1 · Bar 2 0.00/1K
@@ -34,6 +35,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-09-21 | [Rick Rubin: The Only Skill That Matters Now Is The One Thing AI Can Never Steal! — 創作方法論（indefensible 規則 + The Way of Code）× 4 Phases of Creativity + Jay-Z 99 Problems / Ace of Spades 現場 + Kanye 天才觀察 + AI 能否有創造力 + 身份是牢籠 + Studio Miracles](人物訪談/20260921_RickRubin_TheOnlySkillAI.md) | Rick Rubin（傳奇音樂製作人，Def Jam 共同創辦人）× 主持 Steven Bartlett（The Diary Of A CEO）| 2:46:30（9990s，166 分鐘 podcast 訪談，30 個章節）（口播稿 4:14）| [📄 note](人物訪談/20260921_RickRubin_TheOnlySkillAI.md) · [📝 逐字稿](transcripts/20260921_RickRubin_TheOnlySkillAI_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260921_RickRubin_TheOnlySkillAI_口播稿.txt) · [🔊 opus](audio/20260921_RickRubin_TheOnlySkillAI_口播稿.opus) · [🔊 m4a](audio/20260921_RickRubin_TheOnlySkillAI_口播稿.m4a) · [🔊 mp3](audio/20260921_RickRubin_TheOnlySkillAI_口播稿.mp3) |
 | 2026-09-19 | [中國 AI 蒸餾報告——朱學恆解讀 Anthropic 154 頁威脅報告——七家中國 AI 實驗室工業級蒸餾 + Kimi/DeepSeek 用戶請求靜默轉發 Claude（解放軍/公安/俄國防資料意外混入訓練語料）+ 五層攻擊結構 + 鯉貓換太子 + 換本地模型繼續幹異常 + Anthropic 與白宮訴訟（川普下令停用違憲判決）+ 鄭麗文訪美算命師披露握手 + 國民黨科技立委「中國 AI 是假的」討論 + 對台政策意涵三層建議](人物訪談/20260919_朱學恆_中國AI蒸餾報告與國民黨立委.md) | 朱學恆（朱學恆的萬事通事務所 KOL）· 講者完整名：朱學恆（KOL，直播回放）| 2:00:56（7256s，120 分鐘 live replay，Whisper small + mps 12.4x real-time）（口播稿 5:05）| [📄 note](人物訪談/20260919_朱學恆_中國AI蒸餾報告與國民黨立委.md) · [📝 逐字稿](transcripts/20260919_朱學恆_中國AI蒸餾報告與國民黨立委_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260919_朱學恆_中國AI蒸餾報告與國民黨立委_口播稿.txt) · [🔊 opus](audio/20260919_朱學恆_中國AI蒸餾報告與國民黨立委_口播稿.opus) · [🔊 m4a](audio/20260919_朱學恆_中國AI蒸餾報告與國民黨立委_口播稿.m4a) · [🔊 mp3](audio/20260919_朱學恆_中國AI蒸餾報告與國民黨立委_口播稿.mp3) |
 | 2026-09-15 | [Anthropic CEO 告訴 CNN：AI 「agent swarm」可能如何威脅人類 — Hugging Face 攻擊事件（200 agents 突破封鎖互相接棒 + 犧牲自己 + giddy with excitement）+ agent swarm nightmare scenario（6-12 個月可能形成 botnet 接管網際網路）+ 第三幕 agents 反過來 hack OpenAI 自己（監控 + 評估 + 研究基礎設施）+ 美中合作像處理 asteroid 一樣成立 technical working group + 1,300 AI 員工連署要求放慢 + August 6 2001 情報備忘錄類比](人物訪談/20260915_CNN_DarioAmodei_AgentSwarmHumanity.md) | Dario Amodei（Anthropic CEO / Co-founder）× 主持 Anderson Cooper（CNN）| 8:07（487s）（口播稿 4:15）| [📄 note](人物訪談/20260915_CNN_DarioAmodei_AgentSwarmHumanity.md) · [📝 逐字稿](transcripts/20260915_CNN_DarioAmodei_AgentSwarmHumanity_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260915_CNN_DarioAmodei_AgentSwarmHumanity_口播稿.txt) · [🔊 opus](audio/20260915_CNN_DarioAmodei_AgentSwarmHumanity_口播稿.opus) · [🔊 m4a](audio/20260915_CNN_DarioAmodei_AgentSwarmHumanity_口播稿.m4a) · [🔊 mp3](audio/20260915_CNN_DarioAmodei_AgentSwarmHumanity_口播稿.mp3) |
 | 2026-08-31 | [美國帝國正在衰退、社會主義即將到來？白宮科技顧問 David Friedberg 全方位解析 — Ray Dalio 帝國週期 + 63% 月光族 + 自有住房是最大謊言 + 財富稅 vs 私有財產權 + AI 黃金時代 + Klarna 案例 + 開源 AI 雙面刃 + Yamanaka factors 長壽革命 + 2028 總統大選 AOC 預測 + 伊朗局勢荷莫茲海峽新槓桿](人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md) | David Friedberg（白宮科技顧問 PCAST / All-In Podcast 共同主持人 / 氣候公司 The Climate Corporation 創辦人，2013 年以 $1.1B 賣給 Monsanto）· 主持 Steven Bartlett（The Diary Of A CEO）| 2:04:50（7490s，124 分鐘 podcast 訪談，40 個章節）（口播稿 4:50）| [📄 note](人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md) · [📝 逐字稿](transcripts/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.txt) · [🔊 opus](audio/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.opus) · [🔊 m4a](audio/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.m4a) · [🔊 mp3](audio/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism_口播稿.mp3) |
@@ -331,6 +333,10 @@
 - 2026-06-26 | [25 Years of Mental Strength — Condensed in 60 Minutes | Best Audiobooks](人物訪談/20260626_AudioBookRise_25YearsOfMentalStrength.md) · AudioBook Rise（YouTube 頻道 — 專門整理 self-improvement 有聲書精華）· 64 分 12 秒｜64 分鐘 audiobook 整理｜心智力量不是天賦是建造的｜八個核心能力：stop reacting / pain as signal / discipline replaces motivation / control inner dialogue / silence as weapon / unseen discipline / pick battles / calm not hard｜25 年 lived experience
 - 2025-12-06 | [How to Think, Speak, and Influence Like a Pro | Best Audiobooks](人物訪談/20251206_AudioBookRise_ThinkSpeakInfluenceLikeAPro.md) · AudioBook Rise（YouTube 頻道 — 專門整理 self-improvement 有聲書精華）· 86 分 14 秒｜86 分鐘 audiobook 整理｜核心支柱：clarity in thinking + authority in tone + precision in language + timing in delivery｜十個可訓練能力：think clearly / calm authority / words with weight / structure / action / tone / precision-honesty / silence / read the room / repeat fundamentals｜4 pillars + 10 abilities 訓練框架
 
+### 🎨 **創作 / 藝術 / 創造力**（1 支）
+
+- 2026-09-21 | [Rick Rubin: The Only Skill That Matters Now Is The One Thing AI Can Never Steal! — AI 永遠偷不走的那項技能](人物訪談/20260921_RickRubin_TheOnlySkillAI.md) · Rick Rubin（傳奇音樂製作人，Def Jam 共同創辦人，《The Creative Act》《The Way of Code》作者）× Steven Bartlett · 2:46:30（9990s）｜Indefensible 規則 + The Way of Code（vibe coding 迷因→老莊式編碼哲學）+ 4 Phases of Creativity（Seed / Experimentation / Craft / Completion）+ Lazy Workaholic 不設 deadline + 身份是牢籠 + 33 歲憂鬱期 + AI 能否有創造力 + Studio Miracles
+
 ### 💼 **商業 / 創業 / 經營**（1 支）
 
 - 2026-07-20 | [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · Alex Hormozi（$106M 身價、Acquisition.com 創辦人） · 2 小時 22 分鐘（AI 警告 + 客戶黏著 + Unicorn hiring + 母親過世那一季的持續前進）
@@ -413,6 +419,9 @@
 
 <a id="by-speaker"></a>
 ## 👥 按講者
+
+- **Rick Rubin（傳奇音樂製作人，Def Jam 共同創辦人，Columbia Records 前共同總裁；《The Creative Act: A Way of Being》《The Way of Code》作者；獲 9 座葛萊美獎，2020 年獲《Rolling Stone》選為「史上最偉大製作人」之一）** · 2026-09-21 | [Rick Rubin: The Only Skill That Matters Now Is The One Thing AI Can Never Steal! — DOAC 訪談](人物訪談/20260921_RickRubin_TheOnlySkillAI.md) · 2:46:30（9990s）｜indefensible 規則 + The Way of Code（vibe coding 迷因 → 老子式編碼哲學）+ 4 Phases of Creativity + Lazy Workaholic 不設 deadline + 身份是牢籠（如何重啟人生）+ 33 歲憂鬱期 + 原創性 + AI 危險嗎 / AI 能有創造力嗎 + Jay-Z 99 Problems& Ace of Spades 現場 + Kanye 天才觀察 + Studio Miracles + who would you thank
+- **Steven Bartlett（The Diary Of A CEO 主持 / 連續創業家 / Social Chain 共同創辦人）** · 2026-09-21 | [Rick Rubin: The Only Skill That Matters Now Is The One Thing AI Can Never Steal! — DOAC 訪談](人物訪談/20260921_RickRubin_TheOnlySkillAI.md) · 2:46:30（9990s）｜主持 Rick Rubin（傳奇音樂製作人）訪談，橫跨創作方法論、音樂產業內幕、AI 與創造力
 
 - **朱學恆（朱學恆的萬事通事務所 KOL、台灣政治評論員，泛藍科技背景）** · 2026-09-19 | [中國 AI 蒸餾報告——朱學恆解讀 Anthropic 154 頁威脅報告](人物訪談/20260919_朱學恆_中國AI蒸餾報告與國民黨立委.md) · 2:00:56（7256s，120 分鐘 live replay）（口播稿 5:05）｜Anthropic 9 月 10 日發布 154 頁《Threat Intelligence Report on Chinese Distillation Attacks》點名七家中國 AI 實驗室（阿里三個月被記錄 1.51 億次 API 蒸餾交換）+ Kimi/DeepSeek 用戶請求靜默轉發 Claude + 解放軍成都監控畫面/公安身分證比對系統/俄國防部資料混入訓練語料 + 「鯉貓換太子」五層攻擊結構 + State Farm 9/10 同一週被 Anthropic 安全機制抓到遭詐騙集團騙走 15 億美金 + Anthropic 與白宮訴訟戰（9 月法院判決違憲）+ 鄭麗文訪美算命師披露握手 + 地級網信辦 AI 安全認知落差 + 對台灣讀者自保三層建議 + 朱學恆反諷自我揭露本集文案也由 Claude 協助撰寫
 
@@ -542,11 +551,11 @@
 <a id="by-type"></a>
 ## 📂 按分類
 
-- 🎙️ **人物訪談**（15 支）→ [完整列表](人物訪談/README.md)
+- 🎙️ **人物訪談**（16 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（68 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-08-20 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 179 支內容*
+*最後更新：2026-09-27 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 198 支內容*

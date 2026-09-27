@@ -1,0 +1,18 @@
+> 送 TTS 前会经 OpenCC t2s 转简中
+> 影片：Rick Rubin × The Diary Of A CEO (a_GiFiHXJ6g)
+
+本集《The Diary Of A CEO》邀请到 Def Jam 共同创办人 Rick Rubin，与主持人 Steven Bartlett 展开近三小时的长谈。开场的核心张力在于：在一个 AI 工具日益普及、创作门槛降到接近零的时代，真正定义伟大艺术家的，到底是技术、品味、还是那项 AI 无法窃取的东西？
+
+从制作人视角，Rick Rubin 四十多年来与 Jay-Z、Kanye West、Adele、Johnny Cash、Tom Petty 等横跨世代的音乐人合作过。他提出一个极端的词 — 「indefensible」 — 用来描述最原创的创作行动。在英文里那是严重的贬义，但他主张：当艺术家真正被某个念头召唤、却无法合理化自己的选择时，那个无法辩护的行动，反而是伟大的必要条件。
+
+从心理学视角，这与 Mihaly Csikszentmihalyi 的「心流」理论不谋而合。Rick 从 14 岁开始练习 Transcendental Meditation，他直言那是人生中影响最深的一件事 — 冥想让他看见表象之下的深度，并成为他辨识「宇宙在发出讯号」的方式。对照 Steven 的提问：为什么自己的未婚妻每天冥想 20 分钟，他自己却从未尝试？Rick 坦承没有好的答案 — 因为追寻外部指引、而非内在指引，正是他认为多数商业书籍和创业书的盲点。
+
+从 AI 与创造力的辩证角度，影片后段进入最尖锐的议题。Steven 抛出经典命题：「如果 AI 做出 1000 万首曲子，会不会至少产出一首 hit？」Rick 的回答值得玩味：AI 没有「point of view」，它是已存在意念的集合，不从特定角度看世界。然而他随即修正 — AI 可能成为强大的工具，帮助艺术家、甚至帮助那些「不知道自己其实是艺术家」的人。
+
+回头看全场最动人的段落：Johnny Cash 的故事。Rick 形容这位传奇歌手「humble, quiet, smart」 — 不主动展现内在，却对被问的一切有著不可思议的观点。这正是 The Way of Code 反复出现的主题 — 真正的创造力不是表演给世界看，而是忠实地书写自己的「日记」。
+
+从存在主义角度，这呼应了 Sartre「存在先于本质」的命题 — 艺术家不是先被定义为艺术家，而是先选择活成一个艺术家。Rick 在书中描述创造的四个阶段：seed phase、experimental phase、crafting phase、finishing phase。前三阶段必须让事物长出它想成为的样子，无法设定时程。这呼应了 James Clear《Atomic Habits》中强调的「系统优先于目标」。
+
+从产业经济学角度，Rick 提到一个反直觉的案例：与 Linkin Park 合作时，他们选择放弃已成名的 nu-metal 风格、走向未知的新声音，结果失去一半旧歌迷，却赢得更长的职业生涯。这对应 Clayton Christensen 的「disruptive innovation」理论 — 真正的破坏性创新，在当下看起来往往完全不合理。当主持人追问「长期来看哪个策略更有商业价值」，Rick 用 Amazon 连亏 20 年的故事回应：他们坚持信念，即便所有指标都说「行不通」，最终改变了世界。
+
+这场辩论的真正遗产，在于它揭示了一个反直觉的真理：在技术最丰盛的时代，最稀缺的不是工具，而是品味、视角、与那份对内在召唤的忠实。AI 能模仿一切已存在的东西，却永远无法窃取的，是一个活过、痛过、冥想过的灵魂所写下的那一页日记。这支影片最鲜明的口号是 Rick 自己那句 —「every time you meditate, it's like making a deposit in the bank」 — 在注意力被 AI 大量稀释的未来，这笔存款，是人类创作者最后的护城河。
