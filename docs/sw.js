@@ -14,6 +14,11 @@
 //           — bump CACHE_VERSION 強制 activate 清 APP_SHELL_CACHE + RUNTIME_CACHE，下次開啟 reload 重新 fetch JSON
 //           — 詳見 AGENTS.md「video-notes Pages SW cache bump SOP」章節
 //
+// v2.6-pwa: bump cache version after 2026-09-27 章節 timestamp render bug 修正
+//           — docs/app.js chapterLink extension: minutes 由 \d{1,2} 放寬到 \d{1,3}，並新增 H:MM:SS 支援
+//           — 原本 >59min 影片（如 2:46:30 Rick Rubin）的章節時間 87:47 會被錯拆成 link(8:47) + 尾巴 "7:47"
+//           — app.js binary content 改變 → 必須 bump CACHE_VERSION 觸發 SW activate 清舊 cache
+//           — 跟 app.js 的 AUDIO_CACHE_BUST 同步，兩者永遠要一起 bump
 // v2.5-pwa: bump cache version after 2026-08-23 Brian Greene 口播稿 # 開頭檔頭重 TTS（4:37 新版）
 //           — audio binary content 改變，但 URL pattern 不變 → 必須 bump CACHE_VERSION 觸發 SW activate 清舊 app.js cache
 //           — 強制瀏覽器 reload 重新 fetch app.js（含新 AUDIO_CACHE_BUST）→ audio URL 加新 query string
@@ -25,7 +30,7 @@
 //           — audio URL pattern 變動 → 必須 bump CACHE_VERSION 觸發 SW activate 清舊 app.js cache
 //           — 跟 app.js 的 AUDIO_CACHE_BUST 同步，兩者永遠要一起 bump
 //           — 詳見 AGENTS.md「Pages audio cache 7-day bug (2026-08-20 立)」章節
-const CACHE_VERSION = 'v2026-09-10-googlecloudtech-long-term-memory';
+const CACHE_VERSION = 'v2026-09-27-chapter-timestamp-fix';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 

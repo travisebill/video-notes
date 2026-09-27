@@ -9,7 +9,8 @@ const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main
 // audio URL 必須加 query string cache-bust，否則用戶瀏覽器 cache 會繼續播舊版 7 天
 // 跟 sw.js CACHE_VERSION 同步——任何一方 bump 都要同步 bump 另一方
 // 2026-08-23：bump v2.4 → v2.5（Brian Greene 口播稿 # 開頭檔頭重 TTS 後 audio binary content 改變）
-const AUDIO_CACHE_BUST = 'v2.5-pwa';
+// 2026-09-27：bump v2.5 → v2.6（修章節 timestamp render bug：3 位數分鐘 / H:MM:SS 支援）
+const AUDIO_CACHE_BUST = 'v2.6-pwa';
 const JSON_URL = `${CDN_BASE}/data/video-notes.json`;
 const RAW_JSON_URL = `${RAW_BASE}/data/video-notes.json`;
 // 本地 docs/data/ 優先，避免 raw GitHub 5min cache 延遲
@@ -669,32 +670,45 @@ document.addEventListener('alpine:init', () => {
         extensions: [{
           name: 'chapterLink',
           level: 'inline',
-          // 找 src 中「前一個字元不是 : / 數字 / 表格分隔」+ MM:SS + word boundary
+          // 找 src 中「前一個字元不是 : / 數字 / 表格分隔」+ MM:SS 或 H:MM:SS + word boundary
+          // 2026-09-27 修: minutes 放寬到 1-3 位（原本 \d{1,2} 使 >59min 的影片如 77:06 只 match 到
+          //   尾巴的 7:06、87:47 只 match 到 7:47，導致章節 timestamp 連結錯位）；並支援 H:MM:SS
           start(src) {
-            const m = src.match(/(^|[^:\/\d|])\b(\d{1,2}):(\d{2})\b/);
+            const m = src.match(/(^|[^:\/\d|])\b(\d{1,2}:\d{2}:\d{2}|\d{1,3}:\d{2})\b/);
             return m ? m.index + m[1].length : undefined;
           },
           tokenizer(src) {
             // marked v12 inline tokenizer 的 src 是從 start() 回傳位置開始的子字串
-            // src[0] 應該是 MM:SS 的 M → 加 ^ 錨點避免 match 後面的 MM:SS
-            const m = /^(\d{1,2}):(\d{2})(?!\d|:)/.exec(src);
+            // 用 ^ 錨點避免 match 後面的 timestamp
+            const m = /^(\d{1,2}:\d{2}:\d{2}|\d{1,3}:\d{2})(?!\d|:)/.exec(src);
             if (!m) return undefined;
             // 後一個字元不能是英文字母或 | (markdown table cell)
             const next = src[m[0].length];
             if (next && /[a-zA-Z|]/.test(next)) return undefined;
-            // 合理性檢查：分秒必須 < 60
-            const minutes = parseInt(m[1], 10);
-            const seconds = parseInt(m[2], 10);
-            if (minutes > 59 || seconds > 59) return undefined;
+
+            // 解析 MM:SS 或 H:MM:SS → 總秒數
+            const parts = m[0].split(':').map((s) => parseInt(s, 10));
+            let hours = 0;
+            let minutes = 0;
+            let seconds = 0;
+            if (parts.length === 3) {
+              [hours, minutes, seconds] = parts; // H:MM:SS
+            } else {
+              [minutes, seconds] = parts; // MM:SS（minutes 可為 3 位數，例如 162:13）
+            }
+            // 合理性檢查：MM:SS 形式的秒數 < 60（MM 允許超過 59 = 影片總分鐘數）
+            if (seconds > 59) return undefined;
+            if (parts.length === 3 && minutes > 59) return undefined;
             return {
               type: 'chapterLink',
               raw: m[0],
+              hours,
               minutes,
               seconds,
             };
           },
           renderer(token) {
-            const totalSeconds = token.minutes * 60 + token.seconds;
+            const totalSeconds = token.hours * 3600 + token.minutes * 60 + token.seconds;
             return `<a href="#" class="chapter-link" data-time="${totalSeconds}">${token.raw}</a>`;
           },
         }],
