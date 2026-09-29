@@ -1,0 +1,34 @@
+# audio/.gitkeep — 音檔導覽
+
+本目錄由 Ryo 的後段 ffmpeg pipeline 產生三種格式音訊（opus / m4a / mp3），檔名規則：
+
+```
+{base_name}_口播稿.{opus,m4a,mp3}
+```
+
+例如對應 `20260922_DeepLearningAI_SpecDrivenDevelopment`：
+
+```
+audio/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.opus
+audio/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.m4a
+audio/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.mp3
+```
+
+- `opus`：預設主格式（小檔、Web 友善）
+- `m4a`：Apple 生態預設
+- `mp3`：最廣泛相容（Android、汽車、老舊播放器）
+
+口播稿來源：
+
+```
+transcripts/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.txt
+transcripts/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿_zh_TW.md
+```
+
+TTS 簡體版（給大陸平台與境外語音合成）：
+
+```
+transcripts/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿_TTS_zh_CN.txt
+```
+
+音檔由 Ryo 後段 ffmpeg 統一產生；本檔僅作 placeholder，確保 audio/ 目錄可被 git 追蹤。請勿手動覆寫、刪除、重新命名此目錄內的 .opus / .m4a / .mp3 檔案。

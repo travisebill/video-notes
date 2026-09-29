@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 198,
-    "total_with_audio": 169,
-    "total_with_transcript": 124,
-    "total_with_spoken_script": 167,
-    "speakers_count": 81,
+    "total_videos": 199,
+    "total_with_audio": 170,
+    "total_with_transcript": 125,
+    "total_with_spoken_script": 168,
+    "speakers_count": 82,
     "categories_count": 4,
     "topics_count": 18,
     "courses": [
@@ -15,7 +15,7 @@
       "Stanford CS336"
     ],
     "modules_count": 5,
-    "last_updated": "2026-09-27 21:23:34",
+    "last_updated": "2026-09-29 18:18:54",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -66,6 +66,7 @@
       "NTU CSIE 人工智慧導論 教學團隊",
       "Nick Hanauer（Amazon 第一位非家族投資人，創投） × Daniel Priestley（創業家 / 商業教練 /《Lifestyle Business Playbook》作者）",
       "OpenClaw 生態系的技術開發者",
+      "Paul Ehrlich",
       "Percy Liang, Tatsu Hashimoto",
       "Piotr Indyk",
       "Pooja Trivedi（Microsoft 架構師，主導 Windows on Linux 開發者體驗與 AI）／Craig（Microsoft PM，負責 WSL 與 Windows AI 工具）",
@@ -1574,6 +1575,38 @@
       },
       "note_path": "財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md",
+      "module": null,
+      "module_name": null,
+      "module_order": null,
+      "course": null
+    },
+    {
+      "id": "20260922_DeepLearningAI_SpecDrivenDevelopment",
+      "title": "【DeepLearning.AI × JetBrains — Spec-Driven Development with Coding Agents】",
+      "speaker": "Paul Ehrlich",
+      "speaker_description": "JetBrains 開發者倡導者 Developer Advocate；課程由 DeepLearning.AI 與 JetBrains 合作，Andrew Ng 開場介紹",
+      "speaker_slug": "DeepLearningAI",
+      "course_slug": null,
+      "category": "技術講座",
+      "primary_topic": "🛠️ 編碼工具 / Agent 工程實踐",
+      "date": "2026-09-22",
+      "note_date": "2026-09-22",
+      "duration_seconds": 3693,
+      "duration_display": "1:01:33",
+      "video_url": "https://youtu.be/hy8UstR2NEg",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20260922_DeepLearningAI_SpecDrivenDevelopment_逐字稿.txt",
+        "spoken_script": "transcripts/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.txt",
+        "spoken_script_tts": "transcripts/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "技術講座/20260922_DeepLearningAI_SpecDrivenDevelopment.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/技術講座/20260922_DeepLearningAI_SpecDrivenDevelopment.md",
       "module": null,
       "module_name": null,
       "module_order": null,
