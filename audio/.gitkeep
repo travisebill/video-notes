@@ -32,3 +32,38 @@ transcripts/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿_TTS_zh_CN.tx
 ```
 
 音檔由 Ryo 後段 ffmpeg 統一產生；本檔僅作 placeholder，確保 audio/ 目錄可被 git 追蹤。請勿手動覆寫、刪除、重新命名此目錄內的 .opus / .m4a / .mp3 檔案。
+---
+
+## 2026-10-05｜Boris Cherny — Claude Code 實戰上手指南
+
+對應 `20261005_BorisCherny_ClaudeCodePracticalTips`：
+
+```
+audio/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿.opus
+audio/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿.m4a
+audio/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿.mp3
+```
+
+口播稿來源：
+
+```
+transcripts/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿.txt
+```
+
+TTS 簡體版：
+
+```
+transcripts/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿_TTS_zh_CN.txt
+```
+
+逐字稿來源（X/Twitter 影片，Andy L @AndyL5cc 轉發）：
+
+```
+transcripts/20261005_BorisCherny_ClaudeCodePracticalTips_逐字稿.txt
+```
+
+影片來源：https://x.com/AndyL5cc/status/2106521802440868183
+影片長度：27:52（1672s）
+講者：Boris Cherny（Anthropic member of technical staff，Claude Code 創建者）
+語言：英文（Whisper 自動轉錄 + 輕度清理）
+主題：Claude Code 實戰上手七層次（Q&A → edit → plan → self-verify → context hierarchy → parallel sessions）

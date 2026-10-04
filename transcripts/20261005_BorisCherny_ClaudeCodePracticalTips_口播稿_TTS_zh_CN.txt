@@ -1,0 +1,19 @@
+Boris Cherny 在这场 28 分钟的演讲中，把 Claude Code 的上手路径拆成七个递进层次。作为 Claude Code 创建者与 Anthropic 的 member of technical staff，Boris 的每一条 tip 都来自内部 dogfood 经验。
+
+第一层次是定位。Claude Code 不是 line-completion 工具，而是 fully agentic——能一次完成整个功能、整个档案、整个 bug 修复。它刻意保持 general purpose，不预设任何 workflow。打开终端机只看到 prompt bar，工程师反而不知道要打什么。
+
+第二层次是初次设定。Boris 列出五项基本盘：terminal-setup 启用 shift+enter 换行、theme 切换深浅色、install-github-app 串接 GitHub、自订 allowed tools、macOS 内建听写。
+
+第三层次是 Codebase Q&A。Anthropic 内部新进工程师第一天就被教这件事——不是开始编辑，而是对 codebase 提问，把 onboarding 从 2-3 周压到 2-3 天。Claude Code 不做 indexing、不上传、不训练模型，code 留在本地。典型应用包含「How is this function used?」、「Why does this function have 15 arguments?」，模型会自己读 git history 找出引入者与相关 issue——这不是 system prompt 教的，是模型本身。
+
+从工具哲学角度看，Claude Code 只给三个核心工具：edit、bash、search，模型会自己学会串接，工程师只需描述意图。第四层次是 plan 模式：「Before you write code, make a plan」——一句话就启动 brainstorm 与计划流程，连 commit、push、开 PR 都能一句话完成。
+
+第五层次是 self-verification loop，这是 agent 表现的关键放大器。只要给模型检查工作的方法——unit test、puppeteer 截图——它就能自己 iterate 到接近完美。
+
+第六层次是 context hierarchy。CLAUDE.md 反映 network effect 思维：project 版本 check in、local 留个人、子目录自动 pull in、enterprise policy 统一管理。Anthropic 内部把 puppeteer MCP server check in 进 apps repo，任何工程师 clone 该 repo 就能用 puppeteer 自动截图迭代 UI。
+
+第七层次是 SDK 与平行工作流。Claude Code SDK 把 Claude 变成 Unix utility——给 prompt、收 JSON、pipe 进 pipe 出皆可，Anthropic 内部大量用于 CI 与 incident response。Power user 用 worktree、tmux、多 checkout 达到多 session 平行，这是平行化的标准配备。
+
+从企业 IT 治理角度，最值得深思的是 Bash 安全的分层设计：read-only 指令分类、静态分析判断可组合性、tiered permission system 三层次；enterprise policy 可设不可覆写的 URL 阻挡清单。Boris 解释为什么坚持 CLI 而不做 IDE：终端机是公分母，且模型进步太快，「今年底前人们可能不再用 IDE」。
+
+这场演讲最鲜明的讯息是：Claude Code 的强大不在模型本身，而在围绕它的 workflow 设计——Q&A、edit、plan、self-verify、context hierarchy、parallel sessions——这些才是把 fully agentic 模型变成 production 工具的关键。Anthropic 内部 80% 技术员工每天使用，背后正是这套工作流设计。
