@@ -30,7 +30,10 @@
 //           — audio URL pattern 變動 → 必須 bump CACHE_VERSION 觸發 SW activate 清舊 app.js cache
 //           — 跟 app.js 的 AUDIO_CACHE_BUST 同步，兩者永遠要一起 bump
 //           — 詳見 AGENTS.md「Pages audio cache 7-day bug (2026-08-20 立)」章節
-const CACHE_VERSION = 'v2026-09-27-chapter-timestamp-fix';
+// 2026-10-06：bump CACHE_VERSION（新增 🎬 解說動畫 tab，app.js binary content 改變）
+//           — 必須與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
+//           — 否則舊 app-shell cache 會讓使用者拿到沒有 explainer tab 的舊版 index.html
+const CACHE_VERSION = 'v2026-10-06-explainer-tab';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 

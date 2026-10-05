@@ -22,6 +22,19 @@
 > **錄製時間：** 2026 年；上傳日期 2026-09-22
 > **逐字稿來源：** YouTube 自動英文字幕（en VTT，自動累積已清除），原文 `transcripts/20260922_DeepLearningAI_SpecDrivenDevelopment_逐字稿.txt`
 
+## 🎬 解說動畫
+
+<video controls preload="metadata" playsinline
+       poster="https://pub-8c6a0a19b73242aca31442f82f8ccd77.r2.dev/20261006_DeepLearningAI_SpecDrivenDevelopment_explainer_poster.jpg"
+       style="width:100%;max-width:960px;border-radius:8px;background:#000">
+  <source src="https://pub-8c6a0a19b73242aca31442f82f8ccd77.r2.dev/20261006_DeepLearningAI_SpecDrivenDevelopment_explainer.mp4" type="video/mp4">
+  你的瀏覽器不支援 HTML5 影片，請改用下方連結。
+</video>
+
+**[▶ 觀看解說動畫（10:13 · 1920×1080 · 12 場景）](https://pub-8c6a0a19b73242aca31442f82f8ccd77.r2.dev/20261006_DeepLearningAI_SpecDrivenDevelopment_explainer.mp4)**
+
+> 這支動畫把本文 20 個章節全部收進 12 個場景，旁白逐章覆蓋、不省略任何一條重點（約 10 分鐘）。手繪舞台動畫，非逐字稿轉圖。
+
 ---
 
 ## 零、本課程一句話總覽
