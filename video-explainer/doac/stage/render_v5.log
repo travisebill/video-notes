@@ -1,0 +1,35 @@
+Rendering 5222 frames @ 30fps (174.06s)
+  0/5222
+  150/5222
+  300/5222
+  450/5222
+  600/5222
+  750/5222
+file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:88
+            this._reject(callback, new TargetCloseError('Target closed'));
+                                   ^
+
+TargetCloseError: Protocol error (Page.captureScreenshot): Target closed
+    at CallbackRegistry.clear (file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:88:36)
+    at CdpCDPSession.onClosed (file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/cdp/CdpSession.js:121:25)
+    at #onClose (file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/cdp/Connection.js:217:21)
+    at WebSocket.<anonymous> (file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/node/NodeWebSocketTransport.js:54:30)
+    at callListener (/Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/ws/lib/event-target.js:290:14)
+    at WebSocket.onClose (/Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/ws/lib/event-target.js:220:9)
+    at WebSocket.emit (node:events:519:28)
+    at WebSocket.emitClose (/Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/ws/lib/websocket.js:292:10)
+    at Socket.socketOnClose (/Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/ws/lib/websocket.js:1374:15)
+    at Socket.emit (node:events:519:28) {
+  cause: ProtocolError
+      at <instance_members_initializer> (file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:108:14)
+      at new Callback (file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:112:16)
+      at CallbackRegistry.create (file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/common/CallbackRegistry.js:27:26)
+      at Connection._rawSend (file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/cdp/Connection.js:125:26)
+      at CdpCDPSession.send (file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/cdp/CdpSession.js:72:14)
+      at CdpPage._screenshot (file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/cdp/Page.js:881:62)
+      at CdpPage.screenshot (file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/api/Page.js:1169:41)
+      at async CdpPage.<anonymous> (file:///Users/nigo/.openclaw/workspace/video-notes/video-explainer/node_modules/puppeteer-core/lib/puppeteer/util/decorators.js:164:24)
+      at async /Users/nigo/.openclaw/workspace/video-notes/video-explainer/doac/stage/render_v2.js:38:5
+}
+
+Node.js v22.22.2

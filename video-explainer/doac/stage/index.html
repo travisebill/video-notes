@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>DOAC 舞台式解說 · 開場 30 秒</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Archivo+Black&family=Caveat:wght@600;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1920px; height:1080px; overflow:hidden; background:#0d1220; }
+  #stage { position:relative; width:1920px; height:1080px; overflow:hidden; }
+  .scene { position:absolute; inset:0; width:1920px; height:1080px;
+    background:#f6f1e4; color:#1c1c1c; overflow:hidden;
+    font-family:'Noto Sans TC',sans-serif; opacity:0; }
+  .grain { position:absolute; inset:0; pointer-events:none; opacity:.55; z-index:60;
+    background-image:radial-gradient(circle at 30% 20%, rgba(0,0,0,.035) 1px, transparent 1px),
+                     radial-gradient(circle at 70% 65%, rgba(0,0,0,.03) 1px, transparent 1px);
+    background-size:6px 6px, 9px 9px; }
+
+  /* ── 固定舞台：頂部標題 / 中央舞台 / 右側指令卡 / 底部時間軸 ── */
+  .top-id { position:absolute; top:44px; left:64px; right:64px; display:flex;
+    align-items:baseline; justify-content:space-between; }
+  .brand { font-size:30px; font-weight:900; letter-spacing:4px; color:#e8542f; }
+  .brand small { font-size:22px; color:#9a9188; letter-spacing:1px; font-weight:700; }
+  .top-right { font-size:24px; font-weight:700; color:#9a9188; }
+
+  .title-wrap { position:absolute; top:110px; left:64px; }
+  .mega { font-size:96px; font-weight:900; line-height:1.05; }
+  .mega .ink2 { color:#2f6fa8; }
+  .subtitle { font-family:'Caveat',cursive; font-size:44px; color:#6b6259; margin-top:10px; }
+
+  /* 中央舞台框 */
+  .stagebox { position:absolute; left:64px; top:330px; width:1080px; height:560px;
+    border:5px solid #1c1c1c; border-radius:26px; background:#fffdf7; overflow:hidden; }
+  .stagebox .grid { position:absolute; inset:0; opacity:.5;
+    background-image:linear-gradient(#eee7d8 2px, transparent 2px),
+                     linear-gradient(90deg,#eee7d8 2px, transparent 2px);
+    background-size:64px 64px; }
+
+  /* 右側指令卡 */
+  .cmd { position:absolute; right:64px; top:330px; width:640px; height:560px;
+    background:#141b2b; color:#f6f1e4; border-radius:26px; padding:44px 46px;
+    box-shadow:16px 16px 0 rgba(28,28,28,.18); display:flex; flex-direction:column; }
+  .cmd .step { font-size:26px; font-weight:900; letter-spacing:3px; color:#f2b53a; }
+  .cmd .verb { font-size:82px; font-weight:900; line-height:1.05; margin-top:14px; }
+  .cmd .obj { font-size:44px; font-weight:900; color:#8fd0ff; margin-top:10px; }
+  .cmd .note { font-size:26px; color:#9aa4b8; margin-top:18px; line-height:1.5; }
+
+  /* 底部時間軸 */
+  .rail { position:absolute; left:64px; right:64px; bottom:56px; }
+  .rail-line { position:absolute; left:60px; right:60px; top:32px; height:6px; background:#ded6c6; border-radius:3px; }
+  .rail-fill { position:absolute; left:60px; top:32px; height:6px; background:#e8542f; border-radius:3px; width:0; }
+  .rail-nodes { position:relative; display:flex; justify-content:space-between; }
+  .node { width:72px; text-align:center; }
+  .dot { width:64px; height:64px; border-radius:50%; background:#fff; border:4px solid #ded6c6;
+    display:flex; align-items:center; justify-content:center; font-size:30px; font-weight:900;
+    color:#b4ab9d; margin:0 auto; position:relative; z-index:2; transition:none; }
+  .node.done .dot { background:#e8542f; border-color:#e8542f; color:#fff; }
+  .node.active .dot { background:#fff; border-color:#e8542f; color:#e8542f; }
+  .nlabel { font-size:24px; font-weight:700; color:#b4ab9d; margin-top:12px; }
+  .node.done .nlabel, .node.active .nlabel { color:#1c1c1c; }
+
+  /* ── 場景內容元件（共用） ── */
+  .pop { position:absolute; }
+  .num { font-family:'Archivo Black',sans-serif; }
+
+  /* S0：麥克風 / 人物剪影 */
+  .stage-title { position:absolute; inset:0; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; text-align:center; }
+  .st-kicker { font-size:30px; font-weight:900; letter-spacing:6px; color:#e8542f; }
+  .st-name { font-size:90px; font-weight:900; margin-top:16px; }
+  .st-role { font-size:30px; color:#6b6259; margin-top:14px; font-weight:700; }
+  .st-mic { position:absolute; bottom:-10px; }
+  .fig { position:absolute; }
+
+  /* 匯入的物件 */
+  .obj-item { position:absolute; }
+  .ring-num { font-family:'Archivo Black',sans-serif; }
+</style>
+</head>
+<body>
+  <div id="stage"></div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+  <script src="scenes.js"></script>
+  <script src="boot.js"></script>
+</body>
+</html>

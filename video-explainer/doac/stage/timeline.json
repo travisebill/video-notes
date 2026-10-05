@@ -1,0 +1,59 @@
+{
+  "total": 174.06,
+  "scenes": [
+    {
+      "id": "S1_OPEN",
+      "start": 0,
+      "end": 36.4,
+      "title": "開場 · 這個人是誰"
+    },
+    {
+      "id": "S2_MAP",
+      "start": 36.4,
+      "end": 48.7,
+      "title": "四主軸地圖"
+    },
+    {
+      "id": "S3_EMPIRE",
+      "start": 48.7,
+      "end": 64.5,
+      "title": "帝國週期儀表板"
+    },
+    {
+      "id": "S4_MOON",
+      "start": 64.5,
+      "end": 92.9,
+      "title": "月光族與學費機器"
+    },
+    {
+      "id": "S5_LADDER",
+      "start": 92.9,
+      "end": 115.6,
+      "title": "勞動到資本的樓梯"
+    },
+    {
+      "id": "S6_TAX",
+      "start": 115.6,
+      "end": 133,
+      "title": "財富稅天平"
+    },
+    {
+      "id": "S7_HOUSE",
+      "start": 133,
+      "end": 145.1,
+      "title": "房子 vs 股市"
+    },
+    {
+      "id": "S8_LONG",
+      "start": 145.7,
+      "end": 169.2,
+      "title": "長壽革命"
+    },
+    {
+      "id": "S9_OUT",
+      "start": 169.2,
+      "end": 174.06,
+      "title": "黃金時代收尾"
+    }
+  ]
+}
