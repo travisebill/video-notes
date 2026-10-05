@@ -25,15 +25,15 @@
 ## 🎬 解說動畫
 
 <video controls preload="metadata" playsinline
-       poster="https://pub-8c6a0a19b73242aca31442f82f8ccd77.r2.dev/20261006_DeepLearningAI_SpecDrivenDevelopment_explainer_poster.jpg"
+       poster="https://pub-8c6a0a19b73242aca31442f82f8ccd77.r2.dev/20261006_DeepLearningAI_SpecDrivenDevelopment_explainer_poster.jpg?v=2"
        style="width:100%;max-width:960px;border-radius:8px;background:#000">
-  <source src="https://pub-8c6a0a19b73242aca31442f82f8ccd77.r2.dev/20261006_DeepLearningAI_SpecDrivenDevelopment_explainer.mp4" type="video/mp4">
+  <source src="https://pub-8c6a0a19b73242aca31442f82f8ccd77.r2.dev/20261006_DeepLearningAI_SpecDrivenDevelopment_explainer.mp4?v=2" type="video/mp4">
   你的瀏覽器不支援 HTML5 影片，請改用下方連結。
 </video>
 
-**[▶ 觀看解說動畫（10:13 · 1920×1080 · 12 場景）](https://pub-8c6a0a19b73242aca31442f82f8ccd77.r2.dev/20261006_DeepLearningAI_SpecDrivenDevelopment_explainer.mp4)**
+**[▶ 觀看解說動畫（11:27 · 1920×1080 · 12 場景）](https://pub-8c6a0a19b73242aca31442f82f8ccd77.r2.dev/20261006_DeepLearningAI_SpecDrivenDevelopment_explainer.mp4?v=2)**
 
-> 這支動畫把本文 20 個章節全部收進 12 個場景，旁白逐章覆蓋、不省略任何一條重點（約 10 分鐘）。手繪舞台動畫，非逐字稿轉圖。
+> 這支動畫把本文 20 個章節全部收進 12 個場景，旁白逐章覆蓋、不省略任何一條重點（約 11 分半）。手繪舞台動畫，非逐字稿轉圖。
 
 ---
 
