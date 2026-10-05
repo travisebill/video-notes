@@ -33,7 +33,13 @@
 // 2026-10-06：bump CACHE_VERSION（新增 🎬 解說動畫 tab，app.js binary content 改變）
 //           — 必須與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
 //           — 否則舊 app-shell cache 會讓使用者拿到沒有 explainer tab 的舊版 index.html
-const CACHE_VERSION = 'v2026-10-06-explainer-tab';
+//
+// 2026-10-06 (v2)：bump CACHE_VERSION（SDD 解說片換版：旁白音色修正 613s→687s，binary 42.3MB→55.4MB）
+//           — video-notes.json 的 duration/poster 改變 → network-first 下次開啟就會拉到新 JSON
+//           — 但 R2 的 mp4/poster URL pattern 不變、binary 卻換了，瀏覽器 HTTP cache 會拿舊檔
+//             → JSON 內兩者都加 ?v=2 cache-bust
+//           — 依 SOP 與 app.js 的 AUDIO_CACHE_BUST 同步 bump
+const CACHE_VERSION = 'v2026-10-06-explainer-v2';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
