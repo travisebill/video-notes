@@ -10,7 +10,8 @@ const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main
 // 跟 sw.js CACHE_VERSION 同步——任何一方 bump 都要同步 bump 另一方
 // 2026-08-23：bump v2.4 → v2.5（Brian Greene 口播稿 # 開頭檔頭重 TTS 後 audio binary content 改變）
 // 2026-09-27：bump v2.5 → v2.6（修章節 timestamp render bug：3 位數分鐘 / H:MM:SS 支援）
-const AUDIO_CACHE_BUST = 'v2.6-pwa';
+// 2026-10-06：bump v2.6 → v2.7（新增 🎬 解說動畫 tab：HTML/JS 改動，必須同步 bump sw.js CACHE_VERSION）
+const AUDIO_CACHE_BUST = 'v2.7-explainer';
 const JSON_URL = `${CDN_BASE}/data/video-notes.json`;
 const RAW_JSON_URL = `${RAW_BASE}/data/video-notes.json`;
 // 本地 docs/data/ 優先，避免 raw GitHub 5min cache 延遲
@@ -994,6 +995,12 @@ document.addEventListener('alpine:init', () => {
     },
 
     hasContent(videoId, tabType) {
+      // 🎬 解說動畫 tab：內容是 R2 上的 mp4，不是抓回來的文字，所以不看 contentCache
+      // 改看該筆記的 explainer.mp4 欄位是否存在（見 docs/data/video-notes.json）
+      if (tabType === 'explainer') {
+        const v = this.videos.find(x => x.id === videoId);
+        return !!(v && v.explainer && v.explainer.mp4);
+      }
       return !!this.contentCache[`${videoId}_${tabType}`];
     },
 

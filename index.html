@@ -409,6 +409,7 @@
                   <button @click="switchTab(video.id, 'note')" :class="getTabClass(video.id, 'note')" x-show="video.note_path">📄 結構化筆記</button>
                   <button @click="switchTab(video.id, 'transcript')" :class="getTabClass(video.id, 'transcript')" x-show="video.transcripts.transcript">📝 逐字稿</button>
                   <button @click="switchTab(video.id, 'spoken')" :class="getTabClass(video.id, 'spoken')" x-show="video.transcripts.spoken_script">🎙️ 口播稿</button>
+                  <button @click="switchTab(video.id, 'explainer')" :class="getTabClass(video.id, 'explainer')" x-show="video.explainer && video.explainer.mp4">🎬 解說動畫</button>
                 </div>
 
                 <!-- Loading -->
@@ -427,6 +428,23 @@
                 <!-- Spoken content (plain text) -->
                 <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'spoken'" class="content-area spoken-body">
                   <pre x-text="contentCache[video.id + '_spoken']"></pre>
+                </div>
+
+                <!-- Explainer animation (mp4 hosted on Cloudflare R2) -->
+                <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'explainer'" class="content-area explainer-body">
+                  <video controls preload="metadata" playsinline
+                         :poster="video.explainer && video.explainer.poster ? video.explainer.poster : ''"
+                         style="width:100%;aspect-ratio:16/9;border-radius:8px;background:#000;display:block">
+                    <source :src="video.explainer ? video.explainer.mp4 : ''" type="video/mp4">
+                    你的瀏覽器不支援 HTML5 影片播放。
+                  </video>
+                  <p x-show="video.explainer && video.explainer.label"
+                     style="margin-top:.6rem;font-size:.85rem;color:var(--pico-muted-color)"
+                     x-text="video.explainer ? video.explainer.label : ''"></p>
+                  <p style="margin-top:.2rem;font-size:.78rem;color:var(--pico-muted-color)">
+                    <a :href="video.explainer ? video.explainer.mp4 : '#'" target="_blank" rel="noopener"
+                       x-show="video.explainer && video.explainer.mp4">另開新視窗下載 / 全螢幕觀看 ↗</a>
+                  </p>
                 </div>
 
                 <!-- Empty state -->
