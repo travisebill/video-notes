@@ -434,8 +434,8 @@
                 <div x-show="!loadingContent[video.id] && activeTabs[video.id] === 'explainer'" class="content-area explainer-body">
                   <video controls preload="metadata" playsinline
                          :poster="video.explainer && video.explainer.poster ? video.explainer.poster : ''"
+                         :src="video.explainer ? video.explainer.mp4 : ''"
                          style="width:100%;aspect-ratio:16/9;border-radius:8px;background:#000;display:block">
-                    <source :src="video.explainer ? video.explainer.mp4 : ''" type="video/mp4">
                     你的瀏覽器不支援 HTML5 影片播放。
                   </video>
                   <p x-show="video.explainer && video.explainer.label"
