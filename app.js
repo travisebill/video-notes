@@ -11,7 +11,9 @@ const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main
 // 2026-08-23：bump v2.4 → v2.5（Brian Greene 口播稿 # 開頭檔頭重 TTS 後 audio binary content 改變）
 // 2026-09-27：bump v2.5 → v2.6（修章節 timestamp render bug：3 位數分鐘 / H:MM:SS 支援）
 // 2026-10-06：bump v2.6 → v2.7（新增 🎬 解說動畫 tab：HTML/JS 改動，必須同步 bump sw.js CACHE_VERSION）
-const AUDIO_CACHE_BUST = 'v2.7-explainer';
+// 2026-10-06：bump v2.7 → v2.8（SDD 解說片換版：旁白音色修正 + 修版面瑕疵，613s→687s / 42.3MB→55.4MB）
+//           — binary content 改變 → 依 SOP 同步 bump sw.js CACHE_VERSION
+const AUDIO_CACHE_BUST = 'v2.8-explainer-v2';
 const JSON_URL = `${CDN_BASE}/data/video-notes.json`;
 const RAW_JSON_URL = `${RAW_BASE}/data/video-notes.json`;
 // 本地 docs/data/ 優先，避免 raw GitHub 5min cache 延遲
