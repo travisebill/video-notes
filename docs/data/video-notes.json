@@ -1632,6 +1632,17 @@
         "m4a": null,
         "mp3": "audio/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.mp3"
       },
+      "explainer": {
+        "mp4": "https://pub-8c6a0a19b73242aca31442f82f8ccd77.r2.dev/20261006_DeepLearningAI_SpecDrivenDevelopment_explainer.mp4",
+        "r2_key": "20261006_DeepLearningAI_SpecDrivenDevelopment_explainer.mp4",
+        "duration_seconds": 613.34,
+        "duration_display": "10:13",
+        "scenes": 12,
+        "resolution": "1920x1080",
+        "fps": 24,
+        "label": "解說動畫 · 12 場景 · 完整覆蓋 20 個章節",
+        "poster": "https://pub-8c6a0a19b73242aca31442f82f8ccd77.r2.dev/20261006_DeepLearningAI_SpecDrivenDevelopment_explainer_poster.jpg"
+      },
       "transcripts": {
         "transcript": "transcripts/20260922_DeepLearningAI_SpecDrivenDevelopment_逐字稿.txt",
         "spoken_script": "transcripts/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.txt",
