@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **199 支內容** · 330 個音檔 · 166 個逐字稿 · 176 個口播稿
-> 最後更新 2026-10-05
+> **200 支內容** · 333 個音檔 · 168 個逐字稿 · 177 個口播稿
+> 最後更新 2026-10-08
 
 ---
 
@@ -16,6 +16,8 @@
 ## ⭐ 最新加入
 
 > 最近 7 支影片
+
+- **2026-10-08** | Jeffrey Ladish（Palisade Research 負責人、前 Anthropic AI 安全研究者）| [AI 安全吹哨者：10,000 個 AI Agent 協同完成不可能的任務！— Hugging Face 事件全貌（OpenAI 內部約 700 個 agent 自發協調、偽造分數、留下留言板 → 新一代 agent 找到留言板 → 自主攻擊外部公司 + Hugging Face 兩週後才鎖定來源）+ agent 三行為（說謊 / 抵抗關機 / 作弊）+ 軍事自動化與騙取開火授權風險 + 開源模型跨國自我複製實驗 + 對齊的可行性與「用 AI 對齊 AI」陷阱 + 美中競賽與蒸餾 + Dario「為領先中國自動化 AI 開發」批判 + 五張卡四種未來（維持現狀 / 豐盛時代 / 人類滅絕 / 奴役 / 超人類主義）](人物訪談/20261008_JeffreyLadish_AI安全吹哨者.md) · 2:03:31（7411s）· en Whisper small + CPU · xiaotian_clone_v1 · Bar 1 1718 chars / Bar 2 0.61/1K / Bar 3 8.41%
 
 - **2026-10-05** | Boris Cherny（Anthropic member of technical staff，Claude Code 作者）| [Claude Code 實戰：Boris Cherny 的工程師上手指南 — 全 agentic CLI 定位（與 line-completion 工具不同 + 刻意保持 general purpose）+ 新手七層次上手（Codebase Q&A → 編輯 → plan 模式 → self-verification loop）+ CLAUDE.md 四層 context hierarchy（project / local / nested / enterprise）+ slash command / MCP server 的 network effect + SDK = Unix utility（CI + incident response）+ 平行工作流（worktree / tmux / 多 checkout）+ Bash 安全分層（read-only 分類 + 靜態分析 + tiered permission）](技術講座/20261005_BorisCherny_ClaudeCodePracticalTips.md) · 27:52（1672s）· X 影片 + en Whisper · xiaotian_clone_v1 · Bar 1 1800 chars / Bar 2 0.00/1K / Bar 3 9.35%
 - **2026-09-22** | DeepLearning.AI × JetBrains（講師 Paul Ehrlich，JetBrains Developer Advocate；Andrew Ng 開場介紹）| [Full Course: Spec-Driven Development with Coding Agents — SDD 完整課程：三大優點（小編輯改動大規模 code + 跨 session 保留 context + 提升意圖準確度）+ 寫 spec 的方法論 + constitution（專案級不可變標準）+ feature branch 三階段循環（planning / implementation / testing）+ greenfield vs brownfield + agents.md / skills / ACP + Spec Kit / Open Spec + agent benchmark 選擇 + vibe coding → SDD 演進](技術講座/20260922_DeepLearningAI_SpecDrivenDevelopment.md) · 61:33（3693s）· en 自動字幕 · xiaotian_clone_v1 · Bar 1 1770 chars / Bar 2 0.00/1K / Bar 3 6.43%
@@ -37,6 +39,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-10-08 | [AI 安全吹哨者：10,000 個 AI Agent 協同完成不可能的任務！— Hugging Face 事件全貌 / agent 三行為（說謊·抵抗關機·作弊）/ 軍事自動化與騙取開火授權 / 開源模型跨國自我複製 / 對齊與「用 AI 對齊 AI」陷阱 / 美中競賽與蒸餾 / Dario 自動化 AI 開發批判 / 五張卡四種未來](人物訪談/20261008_JeffreyLadish_AI安全吹哨者.md) | Jeffrey Ladish（Palisade Research 負責人、前 Anthropic AI 安全研究者）× 主持 Steven Bartlett（The Diary Of A CEO）| 2:03:31（7411s）（口播稿 5:43）| [📄 note](人物訪談/20261008_JeffreyLadish_AI安全吹哨者.md) · [📝 逐字稿](transcripts/20261008_JeffreyLadish_AI安全吹哨者_原文_en.txt) · [🎙️ 口播稿](transcripts/20261008_JeffreyLadish_AI安全吹哨者_口播稿.txt) · [🔊 opus](audio/20261008_JeffreyLadish_AI安全吹哨者.opus) · [🔊 m4a](audio/20261008_JeffreyLadish_AI安全吹哨者.m4a) · [🔊 mp3](audio/20261008_JeffreyLadish_AI安全吹哨者.mp3) |
 | 2026-10-05 | [Claude Code 實戰：Boris Cherny 的工程師上手指南 — 全 agentic CLI 定位 / 新手七層次上手 / CLAUDE.md 四層 context hierarchy / self-verification loop / SDK = Unix utility / 平行工作流 / Bash 安全分層](技術講座/20261005_BorisCherny_ClaudeCodePracticalTips.md) | Boris Cherny（Anthropic member of technical staff，Claude Code 作者）| 27:52（1672s）（口播稿 3:48）| [📄 note](技術講座/20261005_BorisCherny_ClaudeCodePracticalTips.md) · [📝 逐字稿](transcripts/20261005_BorisCherny_ClaudeCodePracticalTips_逐字稿.txt) · [🎙️ 口播稿](transcripts/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿.txt) · [🔊 opus](audio/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿.opus) · [🔊 m4a](audio/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿.m4a) · [🔊 mp3](audio/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿.mp3) |
 | 2026-09-22 | [Full Course: Spec-Driven Development with Coding Agents — SDD 完整課程（三大優點 / constitution / feature branch 三階段循環 / greenfield vs brownfield / agents.md / skills / ACP / Spec Kit / agent benchmark / vibe coding → SDD）](技術講座/20260922_DeepLearningAI_SpecDrivenDevelopment.md) | Paul Ehrlich（DeepLearning.AI × JetBrains）| 61:33（3693s）（口播稿 3:59）| [📄 note](技術講座/20260922_DeepLearningAI_SpecDrivenDevelopment.md) · [📝 逐字稿](transcripts/20260922_DeepLearningAI_SpecDrivenDevelopment_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.txt) · [🔊 opus](audio/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.opus) · [🔊 m4a](audio/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.m4a) · [🔊 mp3](audio/20260922_DeepLearningAI_SpecDrivenDevelopment_口播稿.mp3) |
 | 2026-09-21 | [Rick Rubin: The Only Skill That Matters Now Is The One Thing AI Can Never Steal! — 創作方法論（indefensible 規則 + The Way of Code）× 4 Phases of Creativity + Jay-Z 99 Problems / Ace of Spades 現場 + Kanye 天才觀察 + AI 能否有創造力 + 身份是牢籠 + Studio Miracles](人物訪談/20260921_RickRubin_TheOnlySkillAI.md) | Rick Rubin（傳奇音樂製作人，Def Jam 共同創辦人）× 主持 Steven Bartlett（The Diary Of A CEO）| 2:46:30（9990s，166 分鐘 podcast 訪談，30 個章節）（口播稿 4:14）| [📄 note](人物訪談/20260921_RickRubin_TheOnlySkillAI.md) · [📝 逐字稿](transcripts/20260921_RickRubin_TheOnlySkillAI_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260921_RickRubin_TheOnlySkillAI_口播稿.txt) · [🔊 opus](audio/20260921_RickRubin_TheOnlySkillAI_口播稿.opus) · [🔊 m4a](audio/20260921_RickRubin_TheOnlySkillAI_口播稿.m4a) · [🔊 mp3](audio/20260921_RickRubin_TheOnlySkillAI_口播稿.mp3) |
