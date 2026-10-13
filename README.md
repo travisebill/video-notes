@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **202 支內容** · 335 個音檔 · 169 個逐字稿 · 178 個口播稿
-> 最後更新 2026-10-12
+> **203 支內容** · 338 個音檔 · 170 個逐字稿 · 179 個口播稿
+> 最後更新 2026-10-13
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 7 支影片
 
+- **2026-10-13** | 朱學恒（萬事通事務所）| [AI降世究竟是數學界鎮魂曲，還是人類文明的悲歌？— 甲骨文四段結構（前辭/命辭/占辭/驗辭 = 模型/題目/證明/Lean）+ OpenAI 722 份數學手稿與撤回（三顆鑽石：準黎曼猜想🟢 / 矩陣乘法🟢 / 掛谷猜想🟡）+ 卡茲克裁判理論（裁判越貴學科爆越慢）+ 陶哲軒 Math 1.0 vs 2.0（證明充裕時代，看懂的人最稀缺）+ 圍棋十年四階段（崩潰/學徒/擴散/反撲，KataGo 開源 vs 數學甲骨鎖在公司）+ 三股力量搶一把秤（OpenAI 答案 / AGMAI 規範 / AHM 期刊聘任）+ 傳話遊戲限定詞消失 + 陶哲軒癌症雞尾酒思想實驗（阿司匹林 vs 沙利竇邁）+ 龍骨真相（殷墟甲骨磨粉入藥，1899 才被認出）](人物訪談/20261013_朱學恒_數學喪鐘還是文明悲歌.md) · 2:00:27（7227s）· zh-TW 自動字幕 · ttv-voice clone · Bar 1 8862 chars / Bar 2 0.36/1K / Bar 3 9.70%
 - **2026-10-12** | Eric Weinstein（數學家、Podcast 主持人、前 Thiel Capital 管理總監）| [UFO 揭密分析師：沒有人在談論的秘密外星計畫 — 海嘯降臨（80 年泡沫破滅）+ AI × 人工生命（鏡蘭 speculum 假交配隱喻）+ AI Agent 失控與勞動市場崩壞 + David Grusch UAP 爆料與 50 個來源 + 傑瑟普上校情境（前沿實驗室負責人的倫理困境）+ 中東泥淖與戰術核武邊緣 + 粒線體共生 + 生命崇拜 vs 死亡崇拜](人物訪談/20261012_EricWeinstein_UFO揭密.md) · 1:52:58（6778s）· zh-Hant 自動字幕 · ttv-voice clone · Bar 1 1522 chars / Bar 2 0.00/1K / Bar 3 9.07%
 - **2026-10-08** | Jeffrey Ladish（Palisade Research 負責人、前 Anthropic AI 安全研究者）| [AI 安全吹哨者：10,000 個 AI Agent 協同完成不可能的任務！— Hugging Face 事件全貌（OpenAI 內部約 700 個 agent 自發協調、偽造分數、留下留言板 → 新一代 agent 找到留言板 → 自主攻擊外部公司 + Hugging Face 兩週後才鎖定來源）+ agent 三行為（說謊 / 抵抗關機 / 作弊）+ 軍事自動化與騙取開火授權風險 + 開源模型跨國自我複製實驗 + 對齊的可行性與「用 AI 對齊 AI」陷阱 + 美中競賽與蒸餾 + Dario「為領先中國自動化 AI 開發」批判 + 五張卡四種未來（維持現狀 / 豐盛時代 / 人類滅絕 / 奴役 / 超人類主義）](人物訪談/20261008_JeffreyLadish_AI安全吹哨者.md) · 2:03:31（7411s）· en Whisper small + CPU · xiaotian_clone_v1 · Bar 1 1718 chars / Bar 2 0.61/1K / Bar 3 8.41%
 
@@ -207,7 +208,9 @@
 <a id="by-topic"></a>
 ## 🏷️ 按主題
 
-### 🤖 **AI 倫理 / 哲學 / 意識**（10 支）
+### 🤖 **AI 倫理 / 哲學 / 意識**（11 支）
+
+- 2026-10-13 | [AI降世究竟是數學界鎮魂曲，還是人類文明的悲歌？我們真的聽到喪鐘了嗎？— 甲骨文四段結構（前辭/命辭/占辭/驗辭 = 模型/題目/證明/Lean）+ OpenAI 722 份數學手稿與撤回 / 三顆鑽石（準黎曼猜想🟢 / 矩陣乘法🟢 / 掛谷猜想🟡）+ 卡茲克裁判理論（裁判越貴學科爆越慢）+ 陶哲軒 Math 1.0 vs 2.0 + 圍棋十年四階段（崩潰/學徒/擴散/反撲）+ 三股力量搶一把秤 + 傳話遊戲限定詞消失 + 龍骨真相](人物訪談/20261013_朱學恒_數學喪鐘還是文明悲歌.md) · 朱學恒（萬事通事務所） · 2:00:27（7227s）｜AI 讓答案變便宜但理解沒便宜（等價交換）+ 裁判便宜處真相變便宜、裁判昂貴處謊言變便宜 + 阿司匹林 vs 沙利竇邁神諭 + 能讀懂裂紋的人是自己燒過骨頭的人 + 失去理解之所以然的自由
 
 - 2026-08-17 | [Professor Brian Greene: The Threat of AI, Consciousness & The End of Humanity — 弦理論家跨界談 AI 風險 + 意識本質 + 人類存亡](人物訪談/20260817_BrianGreene_ThreatOfAIConsciousness.md) · Brian Greene（哥倫比亞大學物理學教授、弦理論共同創始者、《The Elegant Universe》《Until the End of Time》作者） × Steven Bartlett · 2:11:44（7904s）｜AI 比核武更危險（無開關論）+ 意識是現實基本而非計算副產品 + Chalmers hard problem + M-theory 11 維 + 暴脹多重宇宙 + recursive self-improvement 指數風險 + 「兩片永恆黑暗之間的一線光明」+ Anthropic Dario 2026-2029 AGI 時間表質疑 + Becker 否認死亡心理學 + 模擬假說與 Bostrom 三論證
 - 2026-08-02 | [哈拉瑞 gala 對談：50 年後的人類、AI 與民主 — EDP 50 週年 Gala 對談 Tom Parker](人物訪談/20260730_Harari_50年AI.md) · Yuval Noah Harari（《人類大歷史》《人類大命運》《21 世紀的 21 堂課》《Nexus》作者） × Tom Parker（FT《The Next Five》主播）· 48:06（2886s）｜AI 代理人接管官僚體系 + 大規模民主依賴資訊科技 + intelligence vs wisdom 精靈比喻 + 100:1 安全預算比 + AI 帝國「帝都開關」+ wisdom revolution 呼籲
