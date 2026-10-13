@@ -39,7 +39,7 @@
 //           — 但 R2 的 mp4/poster URL pattern 不變、binary 卻換了，瀏覽器 HTTP cache 會拿舊檔
 //             → JSON 內兩者都加 ?v=2 cache-bust
 //           — 依 SOP 與 app.js 的 AUDIO_CACHE_BUST 同步 bump
-const CACHE_VERSION = 'v2026-10-06-explainer-v2';
+const CACHE_VERSION = 'v2026-10-13-zhuxueheng';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
