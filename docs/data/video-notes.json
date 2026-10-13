@@ -1,10 +1,10 @@
 {
   "meta": {
-    "total_videos": 202,
-    "total_with_audio": 173,
-    "total_with_transcript": 127,
-    "total_with_spoken_script": 171,
-    "speakers_count": 84,
+    "total_videos": 203,
+    "total_with_audio": 174,
+    "total_with_transcript": 128,
+    "total_with_spoken_script": 172,
+    "speakers_count": 85,
     "categories_count": 4,
     "topics_count": 18,
     "courses": [
@@ -15,7 +15,7 @@
       "Stanford CS336"
     ],
     "modules_count": 5,
-    "last_updated": "2026-10-12 16:30:49",
+    "last_updated": "2026-10-14 04:04:31",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -93,6 +93,7 @@
       "兩位資深軟體工程師",
       "小天fotos",
       "朱學恆",
+      "朱學恒",
       "李宏毅",
       "歐麗娟",
       "自說自話的總裁",
@@ -174,6 +175,38 @@
     ]
   },
   "videos": [
+    {
+      "id": "20261013_朱學恒_數學喪鐘還是文明悲歌",
+      "title": "【AI降世究竟是數學界鎮魂曲，還是人類文明的悲歌？我們真的聽到喪鐘了嗎？】",
+      "speaker": "朱學恒",
+      "speaker_description": null,
+      "speaker_slug": "朱學恒",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🤖 AI 倫理 / 哲學 / 意識",
+      "date": "2026-10-13",
+      "note_date": "2026-10-13",
+      "duration_seconds": 7227,
+      "duration_display": "2:00:27",
+      "video_url": "https://www.youtube.com/live/MrB2ooU8KI8",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20261013_朱學恒_數學喪鐘還是文明悲歌_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20261013_朱學恒_數學喪鐘還是文明悲歌_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20261013_朱學恒_數學喪鐘還是文明悲歌_逐字稿.txt",
+        "spoken_script": "transcripts/20261013_朱學恒_數學喪鐘還是文明悲歌_口播稿.txt",
+        "spoken_script_tts": "transcripts/20261013_朱學恒_數學喪鐘還是文明悲歌_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20261013_朱學恒_數學喪鐘還是文明悲歌.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20261013_朱學恒_數學喪鐘還是文明悲歌.md",
+      "module": null,
+      "module_name": null,
+      "module_order": null,
+      "course": null
+    },
     {
       "id": "20261012_EricWeinstein_UFO揭密",
       "title": "【UFO 揭密分析師：沒有人在談論的秘密外星計畫 | Eric Weinstein】",
