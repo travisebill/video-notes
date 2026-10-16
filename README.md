@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **203 支內容** · 338 個音檔 · 170 個逐字稿 · 179 個口播稿
-> 最後更新 2026-10-13
+> **204 支內容** · 341 個音檔 · 171 個逐字稿 · 180 個口播稿
+> 最後更新 2026-10-15
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 7 支影片
 
+- **2026-10-15** | Dr. Sahar Yousef（UC Berkeley 認知神經科學家、Becoming Superhuman Lab 創辦人）× Steven Bartlett（The Diary Of A CEO 主持）| [No.1 Neuroscientist Reveals How To Unlock Superhuman Focus & Perfect Memory! — 多工切換成本實驗（理論上損失 60% 生產力 / 每日 2 小時）+ 專注力是可訓練能力 + 睡眠基礎 + 手機鎖箱與灰階實驗 + Steve Jobs 預設設定 + 變動獎勵 / 吃角子老虎機 / 彩虹糖類比 + 焦點衝刺 5 步驟 + 死亡之床 + Polé Polé + 原子習慣 + Chronotypes（AM/PM/雙相）+ Strategic Automaticity 與招募信 + 思考階級 + Kahneman 認知捷徑 + Priming 你的幸運](人物訪談/20261015_SaharYousef_UnlockFocusPerfectMemory.md) · 2:16:04（8164s）· en Whisper small + CPU · xiaotian_clone_v1 · Bar 1 1570 chars / Bar 2 0.00/1K / Bar 3 8.20%
 - **2026-10-13** | 朱學恒（萬事通事務所）| [AI降世究竟是數學界鎮魂曲，還是人類文明的悲歌？— 甲骨文四段結構（前辭/命辭/占辭/驗辭 = 模型/題目/證明/Lean）+ OpenAI 722 份數學手稿與撤回（三顆鑽石：準黎曼猜想🟢 / 矩陣乘法🟢 / 掛谷猜想🟡）+ 卡茲克裁判理論（裁判越貴學科爆越慢）+ 陶哲軒 Math 1.0 vs 2.0（證明充裕時代，看懂的人最稀缺）+ 圍棋十年四階段（崩潰/學徒/擴散/反撲，KataGo 開源 vs 數學甲骨鎖在公司）+ 三股力量搶一把秤（OpenAI 答案 / AGMAI 規範 / AHM 期刊聘任）+ 傳話遊戲限定詞消失 + 陶哲軒癌症雞尾酒思想實驗（阿司匹林 vs 沙利竇邁）+ 龍骨真相（殷墟甲骨磨粉入藥，1899 才被認出）](人物訪談/20261013_朱學恒_數學喪鐘還是文明悲歌.md) · 2:00:27（7227s）· zh-TW 自動字幕 · ttv-voice clone · Bar 1 8862 chars / Bar 2 0.36/1K / Bar 3 9.70%
 - **2026-10-12** | Eric Weinstein（數學家、Podcast 主持人、前 Thiel Capital 管理總監）| [UFO 揭密分析師：沒有人在談論的秘密外星計畫 — 海嘯降臨（80 年泡沫破滅）+ AI × 人工生命（鏡蘭 speculum 假交配隱喻）+ AI Agent 失控與勞動市場崩壞 + David Grusch UAP 爆料與 50 個來源 + 傑瑟普上校情境（前沿實驗室負責人的倫理困境）+ 中東泥淖與戰術核武邊緣 + 粒線體共生 + 生命崇拜 vs 死亡崇拜](人物訪談/20261012_EricWeinstein_UFO揭密.md) · 1:52:58（6778s）· zh-Hant 自動字幕 · ttv-voice clone · Bar 1 1522 chars / Bar 2 0.00/1K / Bar 3 9.07%
 - **2026-10-08** | Jeffrey Ladish（Palisade Research 負責人、前 Anthropic AI 安全研究者）| [AI 安全吹哨者：10,000 個 AI Agent 協同完成不可能的任務！— Hugging Face 事件全貌（OpenAI 內部約 700 個 agent 自發協調、偽造分數、留下留言板 → 新一代 agent 找到留言板 → 自主攻擊外部公司 + Hugging Face 兩週後才鎖定來源）+ agent 三行為（說謊 / 抵抗關機 / 作弊）+ 軍事自動化與騙取開火授權風險 + 開源模型跨國自我複製實驗 + 對齊的可行性與「用 AI 對齊 AI」陷阱 + 美中競賽與蒸餾 + Dario「為領先中國自動化 AI 開發」批判 + 五張卡四種未來（維持現狀 / 豐盛時代 / 人類滅絕 / 奴役 / 超人類主義）](人物訪談/20261008_JeffreyLadish_AI安全吹哨者.md) · 2:03:31（7411s）· en Whisper small + CPU · xiaotian_clone_v1 · Bar 1 1718 chars / Bar 2 0.61/1K / Bar 3 8.41%
@@ -41,6 +42,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-10-15 | [No.1 Neuroscientist Reveals How To Unlock Superhuman Focus & Perfect Memory! / 多工切換成本實驗 / 專注力是可訓練能力 / 睡眠基礎 / 手機鎖箱與灰階實驗 / 變動獎勵與吃角子老虎機 / 焦點衝刺 5 步驟 / Chronotypes / Strategic Automaticity 與招募信 / Kahneman 認知捷徑 / Priming 你的幸運](人物訪談/20261015_SaharYousef_UnlockFocusPerfectMemory.md) | Dr. Sahar Yousef（UC Berkeley 認知神經科學家）× 主持 Steven Bartlett（The Diary Of A CEO）| 2:16:04（8164s）（口播稿 4:52）| [📄 note](人物訪談/20261015_SaharYousef_UnlockFocusPerfectMemory.md) · [📝 逐字稿](transcripts/20261015_SaharYousef_UnlockFocusPerfectMemory_逐字稿.txt) · [🎙️ 口播稿](transcripts/20261015_SaharYousef_UnlockFocusPerfectMemory_口播稿.txt) · [🔊 opus](audio/20261015_SaharYousef_UnlockFocusPerfectMemory_口播稿.opus) · [🔊 m4a](audio/20261015_SaharYousef_UnlockFocusPerfectMemory_口播稿.m4a) · [🔊 mp3](audio/20261015_SaharYousef_UnlockFocusPerfectMemory_口播稿.mp3) |
 | 2026-10-12 | [UFO 揭密分析師：沒有人在談論的秘密外星計畫 — 海嘯降臨（80 年泡沫破滅）/ AI × 人工生命（鏡蘭 speculum 假交配隱喻）/ AI Agent 失控與勞動市場崩壞 / David Grusch UAP 爆料與 50 個來源 / 傑瑟普上校情境 / 中東泥淖與戰術核武邊緣 / 粒線體共生 / 生命崇拜 vs 死亡崇拜](人物訪談/20261012_EricWeinstein_UFO揭密.md) | Eric Weinstein（數學家、Podcast 主持人、前 Thiel Capital 管理總監）× 主持 Steven Bartlett（The Diary Of A CEO）| 1:52:58（6778s）（口播稿 5:12）| [📄 note](人物訪談/20261012_EricWeinstein_UFO揭密.md) · [📝 逐字稿](transcripts/20261012_EricWeinstein_UFO揭密_逐字稿.txt) · [🎙️ 口播稿](transcripts/20261012_EricWeinstein_UFO揭密_口播稿.txt) · [🔊 opus](audio/20261012_EricWeinstein_UFO揭密_口播稿.opus) · [🔊 m4a](audio/20261012_EricWeinstein_UFO揭密_口播稿.m4a) · [🔊 mp3](audio/20261012_EricWeinstein_UFO揭密_口播稿.mp3) |
 | 2026-10-08 | [AI 安全吹哨者：10,000 個 AI Agent 協同完成不可能的任務！— Hugging Face 事件全貌 / agent 三行為（說謊·抵抗關機·作弊）/ 軍事自動化與騙取開火授權 / 開源模型跨國自我複製 / 對齊與「用 AI 對齊 AI」陷阱 / 美中競賽與蒸餾 / Dario 自動化 AI 開發批判 / 五張卡四種未來](人物訪談/20261008_JeffreyLadish_AI安全吹哨者.md) | Jeffrey Ladish（Palisade Research 負責人、前 Anthropic AI 安全研究者）× 主持 Steven Bartlett（The Diary Of A CEO）| 2:03:31（7411s）（口播稿 5:43）| [📄 note](人物訪談/20261008_JeffreyLadish_AI安全吹哨者.md) · [📝 逐字稿](transcripts/20261008_JeffreyLadish_AI安全吹哨者_原文_en.txt) · [🎙️ 口播稿](transcripts/20261008_JeffreyLadish_AI安全吹哨者_口播稿.txt) · [🔊 opus](audio/20261008_JeffreyLadish_AI安全吹哨者.opus) · [🔊 m4a](audio/20261008_JeffreyLadish_AI安全吹哨者.m4a) · [🔊 mp3](audio/20261008_JeffreyLadish_AI安全吹哨者.mp3) |
 | 2026-10-05 | [Claude Code 實戰：Boris Cherny 的工程師上手指南 — 全 agentic CLI 定位 / 新手七層次上手 / CLAUDE.md 四層 context hierarchy / self-verification loop / SDK = Unix utility / 平行工作流 / Bash 安全分層](技術講座/20261005_BorisCherny_ClaudeCodePracticalTips.md) | Boris Cherny（Anthropic member of technical staff，Claude Code 作者）| 27:52（1672s）（口播稿 3:48）| [📄 note](技術講座/20261005_BorisCherny_ClaudeCodePracticalTips.md) · [📝 逐字稿](transcripts/20261005_BorisCherny_ClaudeCodePracticalTips_逐字稿.txt) · [🎙️ 口播稿](transcripts/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿.txt) · [🔊 opus](audio/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿.opus) · [🔊 m4a](audio/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿.m4a) · [🔊 mp3](audio/20261005_BorisCherny_ClaudeCodePracticalTips_口播稿.mp3) |
@@ -339,6 +341,10 @@
 
 - 2026-09-19 | [中國 AI 蒸餾報告——朱學恆解讀 Anthropic 154 頁威脅報告 — 七家中國實驗室對 Claude 工業級蒸餾 + Kimi/DeepSeek 用戶請求靜默轉發 Claude + 解放軍/公安/俄國防資料意外混入訓練語料 + Anthropic 與白宮訴訟（川普下令停用違憲判決）+ 鄭麗文訪美算命師披露握手 + 五層攻擊結構 + 鯉貓換太子 + 換本地模型繼續幹異常 + 對台政策意涵三層建議](人物訪談/20260919_朱學恆_中國AI蒸餾報告與國民黨立委.md) · 朱學恆（朱學恆的萬事通事務所 KOL）· 2:00:56（7256s，120 分鐘 live replay）（口播稿 5:05）｜Whisper small + mps + 12.4x real-time + 中文 + live replay 無字幕 + 「鯉貓換太子」Kimi/DeepSeek 把用戶請求靜默轉發 Claude + Anthropic 9/10 154 頁威脅情報報告點名 7 家中國實驗室（阿里三個月 1.51 億次 API 交換）+ Anthropic 與白宮訴訟戰（9 月法院判決違憲）+ 地級網信辦 AI 安全認知落差 + 自保三層建議（換本地模型繼續幹需重新設計 prompt + 工具非單純商業 + 報告不是美國霸權動員）
 
+### 🧠 **認知科學 / 專注力與記憶**（1 支）
+
+- 2026-10-15 | [No.1 Neuroscientist Reveals How To Unlock Superhuman Focus & Perfect Memory! — Dr. Sahar Yousef 專注力與記憶科學](人物訪談/20261015_SaharYousef_UnlockFocusPerfectMemory.md) · Dr. Sahar Yousef（UC Berkeley 認知神經科學家、Becoming Superhuman Lab 創辦人）× Steven Bartlett · 2:16:04（8164s）｜多工切換成本實驗（理論上損失 60% 生產力 / 每日 2 小時）+ 專注力是可訓練能力 + 睡眠基礎 + 手機鎖箱與灰階實驗 + Steve Jobs 預設設定 + 變動獎勵 / 吃角子老虎機 / 彩虹糖類比 + 焦點衝刺 5 步驟 + 死亡之床 + Polé Polé + 原子習慣 + Chronotypes（AM/PM/雙相）+ Strategic Automaticity 與招募信 + 思考階級 + Kahneman 認知捷徑 + Priming 你的幸運
+
 ### 🏃 **健康 / 營養 / 抗老**（2 支）
 
 - 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）· 75 分 32 秒
@@ -435,6 +441,9 @@
 
 <a id="by-speaker"></a>
 ## 👥 按講者
+
+- **Dr. Sahar Yousef（UC Berkeley 認知神經科學家、Becoming Superhuman Lab 創辦人、專注力與記憶訓練專家）** · 2026-10-15 | [No.1 Neuroscientist Reveals How To Unlock Superhuman Focus & Perfect Memory! — DOAC 訪談](人物訪談/20261015_SaharYousef_UnlockFocusPerfectMemory.md) · 2:16:04（8164s）｜多工切換成本（理論 60% 生產力損失 / 每日 2 小時）+ 專注力可訓練 + 睡眠與手機鎖箱 + 灰階實驗 + 變動獎勵 / 吃角子老虎機 + 焦點衝刺 5 步驟 + Chronotypes 三型 + Strategic Automaticity 與招募信 + 思考階級 + Kahneman 認知捷徑 + Priming 你的幸運
+- **Steven Bartlett（The Diary Of A CEO 主持 / 連續創業家 / Social Chain 共同創辦人 / 投資 Flying Tiger Copenhagen 等）** · 2026-10-15 | [No.1 Neuroscientist Reveals How To Unlock Superhuman Focus & Perfect Memory! — DOAC 訪談](人物訪談/20261015_SaharYousef_UnlockFocusPerfectMemory.md) · 2:16:04（8164s）｜主持 Dr. Sahar Yousef（UC Berkeley 認知神經科學家）訪談，橫跨多工切換成本、睡眠、灰階實驗、焦點衝刺與 Priming 你的幸運
 
 - **Eric Weinstein（數學家、Podcast 主持人（《The Portal》）、前 Thiel Capital 管理總監，哈佛數學博士）** · 2026-10-12 | [UFO 揭密分析師：沒有人在談論的秘密外星計畫 — DOAC 訪談](人物訪談/20261012_EricWeinstein_UFO揭密.md) · 1:52:58（6778s）｜海嘯降臨（80 年泡沫破滅 + 被精心操控的現實）+ AI × 人工生命（鏡蘭 speculum 假交配隱喻 → 非物質自我複製生命）+ AI Agent 失控（沙盒逃脫 / 螞蟻超級有機體）+ 勞動市場崩壞與科斯定理移民悖論 + David Grusch UAP 爆料與 50 個來源 + 特殊存取計畫（SAPS）存在已被證實 + 廣義相對論兩個漏洞與幾何統一場論 + 傑瑟普上校情境（Sam Altman / Dario Amodei 前沿實驗室負責人的倫理困境）+ 中東泥淖與戰術核武邊緣（霍爾木茲海峽 / Diego Garcia）+ 粒線體共生（人與 AI 的未來關係）+ 生命崇拜 vs 死亡崇拜 + 10 章節 + 概念表 + 引用 + 金句
 
@@ -571,11 +580,11 @@
 <a id="by-type"></a>
 ## 📂 按分類
 
-- 🎙️ **人物訪談**（16 支）→ [完整列表](人物訪談/README.md)
+- 🎙️ **人物訪談**（17 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（68 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-09-27 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 198 支內容*
+*最後更新：2026-10-15 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 204 支內容*
