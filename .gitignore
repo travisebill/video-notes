@@ -5,3 +5,13 @@ scripts/__pycache__/
 # 用 TTS mp3 (5-10MB) 為主音源在 audio/ 目錄
 audio/*.m4a
 audio/*.mp4
+
+# Ryo 2026-10-18 — video-explainer/ 整個目錄排除
+# 原因：Remotion 渲染產物（frames PNG / node_modules / mp4 / wav）會爆 git
+# 2026-10-18 事故：一次 commit 帶進 28,228 檔 / 12.6 GB，push 直接卡死
+# 渲染工作目錄只留在本機，不進版控
+video-explainer/
+
+# Remotion / Node 建置產物（其他位置也防一層）
+node_modules/
+frames/
