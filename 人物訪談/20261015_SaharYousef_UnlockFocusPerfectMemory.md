@@ -103,7 +103,7 @@
 
 > **「Steve was the most remarkably focused person I have ever met. And he would often go up to Jony Ive and ask him what he had said no to.」**
 
-### Section 8｜單工、本能的躲避機制與「比被電擊更糟」的安靜（56:00 ~ 65:30）
+### Section 8｜單工、本能的躲避機制與「比被電擊更糟」的安靜（56:00 ~ 1:05:30）
 
 **重點摘要：** 大腦是設計來**閃躲不適**的——手機是最廉價、最快速的「逃離現場」工具。
 
@@ -115,7 +115,7 @@
 - 著名實驗：把受測者關在小房間裡、給他電擊按鈕，**多數人寧願反覆電自己也不願獨處安靜**。
 - Dr. Sahar：「**當我手機沒電時，我會有輕度焦慮——我承認我上癮了**。」Steven：「我也是，每天拿起 200 次。」
 
-### Section 9｜食物成癮 ↔ 科技成癮：三段式 playbook 完全相同（65:30 ~ 84:00）
+### Section 9｜食物成癮 ↔ 科技成癮：三段式 playbook 完全相同（1:05:30 ~ 1:24:00）
 
 **重點摘要：** Dr. Sahar 把「食品工業如何上癮你」與「科技工業如何上癮你」逐一對照——是同一份劇本。
 
@@ -135,7 +135,7 @@
 
 > **「It's like going to a buffet and just opening your mouth, and there's just an assembly line of food and candy just going straight in. There's no backstop.」**
 
-### Section 10｜變動獎勵、演算法與吃角子老虎機的多巴胺（84:00 ~ 98:00）
+### Section 10｜變動獎勵、演算法與吃角子老虎機的多巴胺（1:24:00 ~ 1:38:00）
 
 **重點摘要：** 解構「滑不停」的演算法心理學——為什麼「永遠給你最愛的」反而會降低成癮。
 
@@ -148,7 +148,7 @@
 
 > **「If it showed you every single thing that you wanted to see for five hours straight, believe it or not, you'd be less likely to get addicted.」**
 
-### Section 11｜空熱量的彩虹糖：人類根本需求被偽造滿足（98:00 ~ 1:12:00）
+### Section 11｜空熱量的彩虹糖：人類根本需求被偽造滿足（1:38:00 ~ 1:52:00）
 
 **重點摘要：** 把社群媒體的「滿足」對照真正的營養——你得到的是卡路里，但沒有蛋白質。
 
@@ -163,7 +163,7 @@
 
 > **「60% of active TikTok users experience negative welfare and would rather live in a world where it didn't exist.」**
 
-### Section 12｜逆向神經科學：灰階實驗 + 長形式 > 短形式（1:12:00 ~ 1:32:00）
+### Section 12｜逆向神經科學：灰階實驗 + 長形式 > 短形式（1:52:00 ~ 2:05:00）
 
 **重點摘要：** Dr. Sahar 提出「**reverse UNO**」策略——既然工程師用神經科學上癮你，你可以反過來脫鉤。
 
@@ -190,7 +190,7 @@
 
 ---
 
-### Section 13｜焦點衝刺（Focus Sprint）：5 步驟深工作方法論（1:32:00 ~ 1:55:00）
+### Section 13｜焦點衝刺（Focus Sprint）：5 步驟深工作方法論（2:05:00 ~ 2:20:00）
 
 **重點摘要：** Becoming Superhuman Lab 的核心生產力方法——**最多 2 倍產出、更少錯誤、更好體感**。
 
@@ -227,7 +227,7 @@
 
 > **「You can atrophy this neural network and increase the weight on the other. Lo and behold, you'll get a different outcome.」**
 
-### Section 14｜死亡之床的人生校準與「思考者階級」的警告（1:55:00 ~ 2:11:00）
+### Section 14｜死亡之床的人生校準與「思考者階級」的警告（2:20:00 ~ 2:24:00）
 
 **重點摘要：** 用死亡之床視覺化鎖定 MIT，搭配「pole pole（慢慢來）」的藏人智慧，逐步逼近 Everest。
 
@@ -255,7 +255,7 @@
 
 > **「Whichever one you feed will in fact become stronger and louder.」**
 
-### Section 15｜Chronotype：AM / PM / Biphasic 的生理時鐘（2:11:00 ~ 2:24:00）
+### Section 15｜Chronotype：AM / PM / Biphasic 的生理時鐘（2:24:00 ~ 2:30:00）
 
 **重點摘要：** 人類的生理時鐘並非鐵板一塊——知道自己是哪一型，能決定焦點衝刺排在哪個時段。
 
@@ -268,7 +268,7 @@
 
 > **「Your chronotype is your genetic biological ideal time. It's essentially a profile of the hormones and your energy levels at the course of the day.」**
 
-### Section 16｜策略自動化、AI 招募信與「思考階級」的縮減（2:24:00 ~ 2:38:00）
+### Section 16｜策略自動化、AI 招募信與「思考階級」的縮減（2:30:00 ~ 2:38:00）
 
 **重點摘要：** Dr. Sahar 揭露科技業招募 cognitive neuroscientist 的真實目的，並警告人類正在進入「無需思考」的世界。
 
@@ -312,7 +312,7 @@
 
 > **「Thinking is to humans as swimming is to cats. They can do it, but they would prefer not to.」**
 
-### Section 18｜如何變得更「幸運」：把腦子 Prime 在你要的東西上（2:55:00 ~ 3:06:00）
+### Section 18｜如何變得更「幸運」：把腦子 Prime 在你要的東西上（2:55:00 ~ 3:00:00）
 
 **重點摘要：** Steven 接續上一集的傳統，提問「如何更幸運？」Dr. Sahar 給出神經科學版的「吸引力法則」。
 
@@ -333,7 +333,7 @@
 
 > **「I'm a lucky person, I'm a lucky person. You will find your luck, because your luck is right there. The brick walls are doors, they have handles.」**
 
-### Section 19｜尾聲：MMM Institute 與一年一次的心智健檢（3:06:00 ~ 2:36:04）
+### Section 19｜尾聲：MMM Institute 與一年一次的心智健檢（3:00:00 ~ 3:06:04）
 
 **重點摘要：** Dr. Sahar 提出科學應該開放給所有人，每年做一次「心智健檢」如同血液檢查。
 
