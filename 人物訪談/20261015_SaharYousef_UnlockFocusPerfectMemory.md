@@ -18,7 +18,7 @@
 
 ## 二、章節脈絡
 
-### Section 1｜開場實驗：多工是迷思（00:00 ~ 08:30）
+### Section 1｜開場實驗：多工是迷思（0:00:00 ~ 0:08:30）
 
 **重點摘要：** Steven 親自示範「切換代價」（switch cost），開場便揭示人類大腦的單工本性。
 
@@ -30,7 +30,7 @@
 
 > **「Every single time you switch your attention, you pay for it. So multitasking is a myth.」**（Dr. Sahar Yousef）
 
-### Section 2｜使命宣言與 Becoming Superhuman Lab（08:30 ~ 16:20）
+### Section 2｜使命宣言與 Becoming Superhuman Lab（0:08:30 ~ 0:16:20）
 
 **重點摘要：** Dr. Sahar 揭示她的兩層使命——把「生物學法則」推廣到所有人的生產力與人生設計中。
 
@@ -43,7 +43,7 @@
 
 > **「There are laws of physics. Gravity. I don't ever wake up one morning and decide to do away with it. We blissfully ignore the laws of biology.」**
 
-### Section 3｜Fortune 10 CEO 觀察故事：玻璃盒裡的數十億美元決策（16:20 ~ 23:00）
+### Section 3｜Fortune 10 CEO 觀察故事：玻璃盒裡的數十億美元決策（0:16:20 ~ 0:23:00）
 
 **重點摘要：** Dr. Sahar 實地跟訪 Fortune 10 執行長，揭示現代高階主管的工作環境如何系統性摧毀深度思考。
 
@@ -56,7 +56,7 @@
 
 > **「If I told you I want to give you a billion dollars… your goal is to cure cancer. Would you strap them up with an Apple Watch, Slack, meetings, calls, and then hope?」**
 
-### Section 4｜第一顆骨牌：睡眠是基礎（23:00 ~ 26:30）
+### Section 4｜第一顆骨牌：睡眠是基礎（0:23:00 ~ 0:26:30）
 
 **重點摘要：** Dr. Sahar 給的「基礎建設」清單第一條不是意志力，而是生理修復。
 
@@ -65,7 +65,7 @@
 - 用「車子著火」比喻：當引擎在燒的時候，做再多機械升級都沒用，要先滅火。
 - 第二顆骨牌（也是全球性問題）：**你與科技的關係**——從長者到兒童都受影響。
 
-### Section 5｜手機保險箱：注意力即是記憶（26:30 ~ 38:30）
+### Section 5｜手機保險箱：注意力即是記憶（0:26:30 ~ 0:38:30）
 
 **重點摘要：** Steven 與 Dr. Sahar 現場操作「手機保險箱」（phone lock box），揭示注意力與記憶的本質關聯。
 
@@ -78,7 +78,7 @@
 
 > **「You cannot remember anything that you do not attend to. It is only things that come into your aperture of attention that you are aware of.」**
 
-### Section 6｜預設設定是被設計來剝削你注意力的（38:30 ~ 49:30）
+### Section 6｜預設設定是被設計來剝削你注意力的（0:38:30 ~ 0:49:30）
 
 **重點摘要：** Dr. Sahar 解釋為什麼「科技公司的底線」與「你的生產力」在本質上對立。
 
@@ -91,7 +91,7 @@
 
 > **「The default settings are here to help them make money off of your attention. You are better than the default settings. Push back.」**
 
-### Section 7｜Steve Jobs × Elon Musk 的 80/20 聚焦藝術（49:30 ~ 56:00）
+### Section 7｜Steve Jobs × Elon Musk 的 80/20 聚焦藝術（0:49:30 ~ 0:56:00）
 
 **重點摘要：** Steven 引述 Kevin O'Leary 對 Steve Jobs 與 Elon Musk 的觀察，揭示真正的專注不是「多做」，而是「拒絕得多」。
 
@@ -103,7 +103,7 @@
 
 > **「Steve was the most remarkably focused person I have ever met. And he would often go up to Jony Ive and ask him what he had said no to.」**
 
-### Section 8｜單工、本能的躲避機制與「比被電擊更糟」的安靜（56:00 ~ 1:05:30）
+### Section 8｜單工、本能的躲避機制與「比被電擊更糟」的安靜（0:56:00 ~ 1:05:30）
 
 **重點摘要：** 大腦是設計來**閃躲不適**的——手機是最廉價、最快速的「逃離現場」工具。
 
