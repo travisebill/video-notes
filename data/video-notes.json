@@ -1,12 +1,12 @@
 {
   "meta": {
-    "total_videos": 206,
-    "total_with_audio": 177,
-    "total_with_transcript": 131,
-    "total_with_spoken_script": 175,
-    "speakers_count": 87,
+    "total_videos": 207,
+    "total_with_audio": 178,
+    "total_with_transcript": 132,
+    "total_with_spoken_script": 176,
+    "speakers_count": 88,
     "categories_count": 4,
-    "topics_count": 21,
+    "topics_count": 22,
     "courses": [
       "Google ADK 完整教學",
       "Harvard CS224",
@@ -15,7 +15,7 @@
       "Stanford CS336"
     ],
     "modules_count": 5,
-    "last_updated": "2026-10-18 00:43:52",
+    "last_updated": "2026-10-20 01:17:00",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -41,6 +41,7 @@
       "Daniel Kokotajlo",
       "Datadog AI 團隊",
       "Dex",
+      "Dr. Christopher Kerr（安寧病房醫師、神經生物學博士、臨終照護研究者、《Death is but a Dream》作者）× Steven Bartlett（The Diary Of A CEO 主持）",
       "Dr. Darren Candow",
       "Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者）× Steven Bartlett（訪談主持人）",
       "Dr. Roman Yampolskiy",
@@ -124,6 +125,7 @@
       "📜 歷史 / 文學 / 哲學",
       "📦 其他",
       "📱 消費電子 / 科技評論",
+      "🕯️ 死亡 / 臨終 / 安寧照護",
       "🗣️ 自我成長 / 溝通 / 表達技巧",
       "🛠️ 編碼工具 / Agent 工程實踐",
       "🤖 AI / 大規模系統 / 創業 / 1% 思維 / 後摩爾時代",
@@ -180,6 +182,38 @@
     ]
   },
   "videos": [
+    {
+      "id": "20261019_ChristopherKerr_DeathbedVisions",
+      "title": "【The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions!】",
+      "speaker": "Dr. Christopher Kerr（安寧病房醫師、神經生物學博士、臨終照護研究者、《Death is but a Dream》作者）× Steven Bartlett（The Diary Of A CEO 主持）",
+      "speaker_description": null,
+      "speaker_slug": "ChristopherKerr",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🕯️ 死亡 / 臨終 / 安寧照護",
+      "date": "2026-10-19",
+      "note_date": "2026-10-19",
+      "duration_seconds": 5006,
+      "duration_display": "1:23:26",
+      "video_url": "https://youtu.be/GlaSnROMqRY",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20261019_ChristopherKerr_DeathbedVisions_口播稿.opus",
+        "m4a": null,
+        "mp3": "audio/20261019_ChristopherKerr_DeathbedVisions_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20261019_ChristopherKerr_DeathbedVisions_逐字稿.txt",
+        "spoken_script": "transcripts/20261019_ChristopherKerr_DeathbedVisions_口播稿.txt",
+        "spoken_script_tts": "transcripts/20261019_ChristopherKerr_DeathbedVisions_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20261019_ChristopherKerr_DeathbedVisions.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20261019_ChristopherKerr_DeathbedVisions.md",
+      "module": null,
+      "module_name": null,
+      "module_order": null,
+      "course": null
+    },
     {
       "id": "20261015_SaharYousef_UnlockFocusPerfectMemory",
       "title": "【No.1 Neuroscientist Reveals How To Unlock Superhuman Focus & Perfect Memory】",

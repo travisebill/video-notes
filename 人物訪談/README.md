@@ -1,10 +1,11 @@
 # 人物訪談 — Video Notes
 
-> **9 支影片**
+> **10 支影片**
 > [← 回到主 README](../../README.md)
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-10-19 | [The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions! — 1,500 位臨終者的 30 年研究：近 90% 臨終異象 / 譫妄排除法 / 實證排序 / 死亡的醫療化 / 六張手寫卡片 / 兒童的安靜勇氣](20261019_ChristopherKerr_DeathbedVisions.md) | Dr. Christopher Kerr（安寧病房醫師、神經生物學博士）× Steven Bartlett | 1:23:26（5006s） | [📄 note](20261019_ChristopherKerr_DeathbedVisions.md) · [📝 逐字稿](../transcripts/20261019_ChristopherKerr_DeathbedVisions_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20261019_ChristopherKerr_DeathbedVisions_口播稿.txt) · [🔊 opus](../audio/20261019_ChristopherKerr_DeathbedVisions_口播稿.opus) · [🔊 m4a](../audio/20261019_ChristopherKerr_DeathbedVisions_口播稿.m4a) · [🔊 mp3](../audio/20261019_ChristopherKerr_DeathbedVisions_口播稿.mp3) |
 | 2026-09-21 | [Rick Rubin: The Only Skill That Matters Now Is The One Thing AI Can Never Steal! — AI 永遠偷不走的那項技能](20260921_RickRubin_TheOnlySkillAI.md) | Rick Rubin × Steven Bartlett | 2:46:30（9990s） | [📄 note](20260921_RickRubin_TheOnlySkillAI.md) · [📝 逐字稿](../transcripts/20260921_RickRubin_TheOnlySkillAI_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20260921_RickRubin_TheOnlySkillAI_口播稿.txt) · [🔊 opus](../audio/20260921_RickRubin_TheOnlySkillAI_口播稿.opus) · [🔊 m4a](../audio/20260921_RickRubin_TheOnlySkillAI_口播稿.m4a) · [🔊 mp3](../audio/20260921_RickRubin_TheOnlySkillAI_口播稿.mp3) |
 | 2026-06-28 | [煤、Starship 與 2100 年的地球：被封印三億年的「地獄黑蛇」如何反噬工業文明](20260627_自說自話的總裁_煤與Starship與2100年的地球.md) | 自說自話的總裁 | 30 分 54 秒 | [📄 note](20260627_自說自話的總裁_煤與Starship與2100年的地球.md) · [📝 逐字稿](../transcripts/20260627_自說自話的總裁_煤與Starship與2100年的地球_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20260627_自說自話的總裁_煤與Starship與2100年的地球_口播稿.txt) · [🔊 opus](../audio/20260627_自說自話的總裁_煤與Starship與2100年的地球.opus) · [🔊 m4a](../audio/20260627_自說自話的總裁_煤與Starship與2100年的地球.m4a) · [🔊 mp3](../audio/20260627_自說自話的總裁_煤與Starship與2100年的地球.mp3) |
 | 2026-06-13 | [上古中國的「魔法時代」：四個西方漢學家的顛覆解讀](20260613_自說自話的總裁_上古中國的魔法時代.md) | 自說自話的總裁 | 28 分 50 秒 | [📄 note](20260613_自說自話的總裁_上古中國的魔法時代.md) · [📝 逐字稿](../transcripts/20260613_自說自話的總裁_上古中國的魔法時代_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20260613_自說自話的總裁_上古中國的魔法時代_口播稿.txt) · [🔊 opus](../audio/20260613_自說自話的總裁_上古中國的魔法時代.opus) · [🔊 m4a](../audio/20260613_自說自話的總裁_上古中國的魔法時代.m4a) · [🔊 mp3](../audio/20260613_自說自話的總裁_上古中國的魔法時代.mp3) |
