@@ -26,7 +26,10 @@ const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main
 // 2026-11-14 (v4)：bump v2.12 → v2.13（audio CDN 改走 raw.githubusercontent）
 //           — jsDelivr 對 audio/ 子樹回 403（package > 50MB），且 @main edge cache 吐舊 bytes
 //           — 必須同步 bump sw.js CACHE_VERSION
-const AUDIO_CACHE_BUST = 'v2.13-perlmutter-audiofix';
+// 2026-11-14 (v5)：bump v2.13 → v2.14（音效標記統一為英文並對齊原文位置）
+//           — 逐字稿內容改變 → SW 對 .txt 是 cache-first，不 bump 使用者會拿到舊稿
+//           — 必須同步 bump sw.js CACHE_VERSION
+const AUDIO_CACHE_BUST = 'v2.14-perlmutter-markerfix';
 const JSON_URL = `${CDN_BASE}/data/video-notes.json`;
 const RAW_JSON_URL = `${RAW_BASE}/data/video-notes.json`;
 // 本地 docs/data/ 優先，避免 raw GitHub 5min cache 延遲
