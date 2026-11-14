@@ -39,7 +39,9 @@
 //           — 但 R2 的 mp4/poster URL pattern 不變、binary 卻換了，瀏覽器 HTTP cache 會拿舊檔
 //             → JSON 內兩者都加 ?v=2 cache-bust
 //           — 依 SOP 與 app.js 的 AUDIO_CACHE_BUST 同步 bump
-const CACHE_VERSION = 'v2026-10-13-zhuxueheng';
+// 2026-11-14：bump CACHE_VERSION（Dr. David Perlmutter 口播稿重錄 → app.js binary content 改變）
+//           — 與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
+const CACHE_VERSION = 'v2026-11-14-perlmutter';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
