@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **205 支內容** · 344 個音檔 · 172 個逐字稿 · 181 個口播稿
-> 最後更新 2026-10-19
+> **206 支內容** · 347 個音檔 · 173 個逐字稿 · 182 個口播稿
+> 最後更新 2026-11-14
 
 ---
 
@@ -17,6 +17,7 @@
 
 > 最近 7 支影片
 
+- **2026-11-14** | Dr. David Perlmutter（Emory 大學醫學院營養學教授、board-certified 神經科醫師、《Brainwash》《Brain Defenders》作者）× Steven Bartlett（The Diary Of A CEO 主持）| [The Brain Doctor That Figured Out The Cause Of Dementia - Dr. David Perlmutter — 阿茲海默症的主因不是斑塊而是代謝：大腦免疫 M2→M1 轉向 / 五大生活因子 / APOE4 是傾向非命運 / 1953 糖配給研究 −40% / 40Hz 光音 / Cochrane 否定 beta-amyloid 藥物](人物訪談/20261114_DavidPerlmutter_失智可預防.md) · 1:55:45（6945s）· en-orig JSON3 自動字幕 · xiaotian_clone_v1 · Bar 1 2582 chars / Bar 2 0.00/1K / Bar 3 9.92%
 - **2026-10-19** | Dr. Christopher Kerr（安寧病房醫師、神經生物學博士、《Death is but a Dream》作者）× Steven Bartlett（The Diary Of A CEO 主持）| [The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions! — 1,500 位臨終者的 30 年研究（近 90% 臨終者出現強烈夢境／異象 + 譫妄排除法 + 實證排序推翻「人生有意義／化解衝突」+ 80% 想在家死 vs 實際 30% + 六張手寫卡片 + 兒童的安靜勇氣）](人物訪談/20261019_ChristopherKerr_DeathbedVisions.md) · 1:23:26（5006s）· en-orig 自動字幕 · xiaotian_clone_v1 · Bar 1 1267 chars / Bar 2 0.00/1K / Bar 3 7.91%
 - **2026-10-15** | Dr. Sahar Yousef（UC Berkeley 認知神經科學家、Becoming Superhuman Lab 創辦人）× Steven Bartlett（The Diary Of A CEO 主持）| [No.1 Neuroscientist Reveals How To Unlock Superhuman Focus & Perfect Memory! — 多工切換成本實驗（理論上損失 60% 生產力 / 每日 2 小時）+ 專注力是可訓練能力 + 睡眠基礎 + 手機鎖箱與灰階實驗 + Steve Jobs 預設設定 + 變動獎勵 / 吃角子老虎機 / 彩虹糖類比 + 焦點衝刺 5 步驟 + 死亡之床 + Polé Polé + 原子習慣 + Chronotypes（AM/PM/雙相）+ Strategic Automaticity 與招募信 + 思考階級 + Kahneman 認知捷徑 + Priming 你的幸運](人物訪談/20261015_SaharYousef_UnlockFocusPerfectMemory.md) · 2:16:04（8164s）· en Whisper small + CPU · xiaotian_clone_v1 · Bar 1 1570 chars / Bar 2 0.00/1K / Bar 3 8.20%
 - **2026-10-13** | 朱學恒（萬事通事務所）| [AI降世究竟是數學界鎮魂曲，還是人類文明的悲歌？— 甲骨文四段結構（前辭/命辭/占辭/驗辭 = 模型/題目/證明/Lean）+ OpenAI 722 份數學手稿與撤回（三顆鑽石：準黎曼猜想🟢 / 矩陣乘法🟢 / 掛谷猜想🟡）+ 卡茲克裁判理論（裁判越貴學科爆越慢）+ 陶哲軒 Math 1.0 vs 2.0（證明充裕時代，看懂的人最稀缺）+ 圍棋十年四階段（崩潰/學徒/擴散/反撲，KataGo 開源 vs 數學甲骨鎖在公司）+ 三股力量搶一把秤（OpenAI 答案 / AGMAI 規範 / AHM 期刊聘任）+ 傳話遊戲限定詞消失 + 陶哲軒癌症雞尾酒思想實驗（阿司匹林 vs 沙利竇邁）+ 龍骨真相（殷墟甲骨磨粉入藥，1899 才被認出）](人物訪談/20261013_朱學恒_數學喪鐘還是文明悲歌.md) · 2:00:27（7227s）· zh-TW 自動字幕 · ttv-voice clone · Bar 1 8862 chars / Bar 2 0.36/1K / Bar 3 9.70%
@@ -43,6 +44,7 @@
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
 |------|------|------|------|-----------|
+| 2026-11-14 | [The Brain Doctor That Figured Out The Cause Of Dementia - Dr. David Perlmutter — 阿茲海默症的主因不是斑塊而是代謝：大腦免疫 M2→M1 轉向 / 五大生活因子 / APOE4 是傾向非命運 / 1953 糖配給研究 −40% / 40Hz 光音 / Cochrane 否定 beta-amyloid 藥物](人物訪談/20261114_DavidPerlmutter_失智可預防.md) | Dr. David Perlmutter（Emory 大學醫學院營養學教授、board-certified 神經科醫師、《Brainwash》《Brain Defenders》作者）× 主持 Steven Bartlett（The Diary Of A CEO）| 1:55:45（6945s）（口播稿 3:01）| [📄 note](人物訪談/20261114_DavidPerlmutter_失智可預防.md) · [📝 逐字稿](transcripts/20261114_DavidPerlmutter_失智可預防_逐字稿.txt) · [🎙️ 口播稿](transcripts/20261114_DavidPerlmutter_失智可預防_口播稿.txt) · [🔊 opus](audio/20261114_DavidPerlmutter_失智可預防_口播稿.opus) · [🔊 m4a](audio/20261114_DavidPerlmutter_失智可預防_口播稿.m4a) · [🔊 mp3](audio/20261114_DavidPerlmutter_失智可預防_口播稿.mp3) |
 | 2026-10-19 | [The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions! — 1,500 位臨終者的 30 年研究 / 臨終異象近 90% + 譫妄排除法 / 實證排序 vs 醫學生預期 / 80% 想在家死 vs 30% 實際 / 六張手寫卡片 / 兒童的安靜勇氣](人物訪談/20261019_ChristopherKerr_DeathbedVisions.md) | Dr. Christopher Kerr（安寧病房醫師、神經生物學博士）× 主持 Steven Bartlett（The Diary Of A CEO）| 1:23:26（5006s）（口播稿 4:03）| [📄 note](人物訪談/20261019_ChristopherKerr_DeathbedVisions.md) · [📝 逐字稿](transcripts/20261019_ChristopherKerr_DeathbedVisions_逐字稿.txt) · [🎙️ 口播稿](transcripts/20261019_ChristopherKerr_DeathbedVisions_口播稿.txt) · [🔊 opus](audio/20261019_ChristopherKerr_DeathbedVisions_口播稿.opus) · [🔊 m4a](audio/20261019_ChristopherKerr_DeathbedVisions_口播稿.m4a) · [🔊 mp3](audio/20261019_ChristopherKerr_DeathbedVisions_口播稿.mp3) |
 | 2026-10-15 | [No.1 Neuroscientist Reveals How To Unlock Superhuman Focus & Perfect Memory! / 多工切換成本實驗 / 專注力是可訓練能力 / 睡眠基礎 / 手機鎖箱與灰階實驗 / 變動獎勵與吃角子老虎機 / 焦點衝刺 5 步驟 / Chronotypes / Strategic Automaticity 與招募信 / Kahneman 認知捷徑 / Priming 你的幸運](人物訪談/20261015_SaharYousef_UnlockFocusPerfectMemory.md) | Dr. Sahar Yousef（UC Berkeley 認知神經科學家）× 主持 Steven Bartlett（The Diary Of A CEO）| 2:16:04（8164s）（口播稿 4:52）| [📄 note](人物訪談/20261015_SaharYousef_UnlockFocusPerfectMemory.md) · [📝 逐字稿](transcripts/20261015_SaharYousef_UnlockFocusPerfectMemory_逐字稿.txt) · [🎙️ 口播稿](transcripts/20261015_SaharYousef_UnlockFocusPerfectMemory_口播稿.txt) · [🔊 opus](audio/20261015_SaharYousef_UnlockFocusPerfectMemory_口播稿.opus) · [🔊 m4a](audio/20261015_SaharYousef_UnlockFocusPerfectMemory_口播稿.m4a) · [🔊 mp3](audio/20261015_SaharYousef_UnlockFocusPerfectMemory_口播稿.mp3) |
 | 2026-10-12 | [UFO 揭密分析師：沒有人在談論的秘密外星計畫 — 海嘯降臨（80 年泡沫破滅）/ AI × 人工生命（鏡蘭 speculum 假交配隱喻）/ AI Agent 失控與勞動市場崩壞 / David Grusch UAP 爆料與 50 個來源 / 傑瑟普上校情境 / 中東泥淖與戰術核武邊緣 / 粒線體共生 / 生命崇拜 vs 死亡崇拜](人物訪談/20261012_EricWeinstein_UFO揭密.md) | Eric Weinstein（數學家、Podcast 主持人、前 Thiel Capital 管理總監）× 主持 Steven Bartlett（The Diary Of A CEO）| 1:52:58（6778s）（口播稿 5:12）| [📄 note](人物訪談/20261012_EricWeinstein_UFO揭密.md) · [📝 逐字稿](transcripts/20261012_EricWeinstein_UFO揭密_逐字稿.txt) · [🎙️ 口播稿](transcripts/20261012_EricWeinstein_UFO揭密_口播稿.txt) · [🔊 opus](audio/20261012_EricWeinstein_UFO揭密_口播稿.opus) · [🔊 m4a](audio/20261012_EricWeinstein_UFO揭密_口播稿.m4a) · [🔊 mp3](audio/20261012_EricWeinstein_UFO揭密_口播稿.mp3) |
@@ -347,6 +349,10 @@
 
 - 2026-10-15 | [No.1 Neuroscientist Reveals How To Unlock Superhuman Focus & Perfect Memory! — Dr. Sahar Yousef 專注力與記憶科學](人物訪談/20261015_SaharYousef_UnlockFocusPerfectMemory.md) · Dr. Sahar Yousef（UC Berkeley 認知神經科學家、Becoming Superhuman Lab 創辦人）× Steven Bartlett · 2:16:04（8164s）｜多工切換成本實驗（理論上損失 60% 生產力 / 每日 2 小時）+ 專注力是可訓練能力 + 睡眠基礎 + 手機鎖箱與灰階實驗 + Steve Jobs 預設設定 + 變動獎勵 / 吃角子老虎機 / 彩虹糖類比 + 焦點衝刺 5 步驟 + 死亡之床 + Polé Polé + 原子習慣 + Chronotypes（AM/PM/雙相）+ Strategic Automaticity 與招募信 + 思考階級 + Kahneman 認知捷徑 + Priming 你的幸運
 
+### 🧠 **大腦健康 / 失智症預防**（1 支）
+
+- 2026-11-14 | [The Brain Doctor That Figured Out The Cause Of Dementia - Dr. David Perlmutter — Dr. David Perlmutter 的失智症預防框架](人物訪談/20261114_DavidPerlmutter_失智可預防.md) · Dr. David Perlmutter（Emory 大學醫學院營養學教授、board-certified 神經科醫師、《Brainwash》《Brain Defenders》作者）× Steven Bartlett · 1:55:45（6945s）｜阿茲海默症的主因不是斑塊而是代謝：大腦免疫 M2→M1 轉向 / 五大生活因子 / APOE4 是傾向非命運 / 1953 糖配給研究 −40% / 40Hz 光音 / Cochrane 否定 beta-amyloid 藥物
+
 ### 🏃 **健康 / 營養 / 抗老**（2 支）
 
 - 2026-06-19 | [Creatine — 被研究最透徹、醫生不告訴你的抗老秘密](人物訪談/20260619_DrDarrenCandow_CreatineForAntiAging.md) · Dr. Darren Candow（University of Regina 老化肌骨研究室主任 / Stanford Top 2% Scientists 2025）· 75 分 32 秒
@@ -448,6 +454,8 @@
 <a id="by-speaker"></a>
 ## 👥 按講者
 
+- **Dr. David Perlmutter（Emory 大學醫學院營養學教授、board-certified 神經科醫師、《Brainwash》《Brain Defenders》作者）** · 2026-11-14 | [The Brain Doctor That Figured Out The Cause Of Dementia - Dr. David Perlmutter — DOAC 訪談](人物訪談/20261114_DavidPerlmutter_失智可預防.md) · 1:55:45（6945s）｜失智症是代謝與腦部免疫疾病 + M2→M1 微膠細胞轉向 + APOE4 風險數字 + 五大生活因子 + 1953 糖配給研究 + 40Hz 光音 + Cochrane 分析
+- **Steven Bartlett（The Diary Of A CEO 主持 / 連續創業家 / Social Chain 共同創辦人 / 投資 Flying Tiger Copenhagen 等）** · 2026-11-14 | [The Brain Doctor That Figured Out The Cause Of Dementia - Dr. David Perlmutter — DOAC 訪談](人物訪談/20261114_DavidPerlmutter_失智可預防.md) · 1:55:45（6945s）｜主持 Dr. David Perlmutter 訪談，橫跨失智症上游機理、生活方式介入、睡眠與飲食、腸道菌群、腦外傷與新興療法
 - **Dr. Christopher Kerr（安寧病房醫師、神經生物學博士、臨終照護研究者、《Death is but a Dream》作者）** · 2026-10-19 | [The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions! — DOAC 訪談](人物訪談/20261019_ChristopherKerr_DeathbedVisions.md) · 1:23:26（5006s）｜1,500 位臨終者的 30 年研究 + 臨終異象近 90% + 譫妄排除法 + 實證排序 + 死亡的醫療化 + 六張手寫卡片 + 兒童死亡
 - **Steven Bartlett（The Diary Of A CEO 主持 / 連續創業家 / Social Chain 共同創辦人 / 投資 Flying Tiger Copenhagen 等）** · 2026-10-19 | [The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions! — DOAC 訪談](人物訪談/20261019_ChristopherKerr_DeathbedVisions.md) · 1:23:26（5006s）｜主持 Dr. Christopher Kerr（安寧病房醫師）訪談，橫跨臨終異象、死亡迷思、臨終排序與哀傷照護
 - **Dr. Sahar Yousef（UC Berkeley 認知神經科學家、Becoming Superhuman Lab 創辦人、專注力與記憶訓練專家）** · 2026-10-15 | [No.1 Neuroscientist Reveals How To Unlock Superhuman Focus & Perfect Memory! — DOAC 訪談](人物訪談/20261015_SaharYousef_UnlockFocusPerfectMemory.md) · 2:16:04（8164s）｜多工切換成本（理論 60% 生產力損失 / 每日 2 小時）+ 專注力可訓練 + 睡眠與手機鎖箱 + 灰階實驗 + 變動獎勵 / 吃角子老虎機 + 焦點衝刺 5 步驟 + Chronotypes 三型 + Strategic Automaticity 與招募信 + 思考階級 + Kahneman 認知捷徑 + Priming 你的幸運
@@ -588,11 +596,11 @@
 <a id="by-type"></a>
 ## 📂 按分類
 
-- 🎙️ **人物訪談**（18 支）→ [完整列表](人物訪談/README.md)
+- 🎙️ **人物訪談**（19 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
 - 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（68 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-10-19 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 205 支內容*
+*最後更新：2026-11-14 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 206 支內容*

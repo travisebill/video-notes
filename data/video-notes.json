@@ -1,12 +1,12 @@
 {
   "meta": {
-    "total_videos": 207,
-    "total_with_audio": 178,
-    "total_with_transcript": 132,
-    "total_with_spoken_script": 176,
-    "speakers_count": 88,
+    "total_videos": 208,
+    "total_with_audio": 179,
+    "total_with_transcript": 133,
+    "total_with_spoken_script": 177,
+    "speakers_count": 89,
     "categories_count": 4,
-    "topics_count": 22,
+    "topics_count": 23,
     "courses": [
       "Google ADK 完整教學",
       "Harvard CS224",
@@ -15,7 +15,7 @@
       "Stanford CS336"
     ],
     "modules_count": 5,
-    "last_updated": "2026-10-20 01:17:00",
+    "last_updated": "2026-11-14 13:24:57",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -44,6 +44,7 @@
       "Dr. Christopher Kerr（安寧病房醫師、神經生物學博士、臨終照護研究者、《Death is but a Dream》作者）× Steven Bartlett（The Diary Of A CEO 主持）",
       "Dr. Darren Candow",
       "Dr. David Eagleman（Stanford neuroscientist、《Incognito》作者）× Steven Bartlett（訪談主持人）",
+      "Dr. David Perlmutter（Emory 大學醫學院營養學教授、board-certified 神經科醫師、《Brainwash》《Brain Defenders》作者）× Steven Bartlett（The Diary Of A CEO 主持）",
       "Dr. Roman Yampolskiy",
       "Dr. Sahar Yousef",
       "Eric Weinstein",
@@ -132,6 +133,7 @@
       "🤖 AI 倫理 / 哲學 / 意識",
       "🤖 AI 安全 / 末日論 / 政策",
       "🧠 AI / LLM 學術與方法論",
+      "🧠 腦科學 / 阿茲海默症 / 腦部免疫 / 營養與代謝 / 長壽",
       "🧠 認知科學 / 專注力與記憶",
       "🧬 長壽科學 / 代謝健康 / 膽固醇",
       "🧬 長壽科學 / 心血管健康 / 膽固醇"
@@ -182,6 +184,38 @@
     ]
   },
   "videos": [
+    {
+      "id": "20261114_DavidPerlmutter_失智可預防",
+      "title": "【The Brain Doctor That Figured Out The Cause Of Dementia - Dr. David Perlmutter】",
+      "speaker": "Dr. David Perlmutter（Emory 大學醫學院營養學教授、board-certified 神經科醫師、《Brainwash》《Brain Defenders》作者）× Steven Bartlett（The Diary Of A CEO 主持）",
+      "speaker_description": null,
+      "speaker_slug": "DavidPerlmutter",
+      "course_slug": null,
+      "category": "人物訪談",
+      "primary_topic": "🧠 腦科學 / 阿茲海默症 / 腦部免疫 / 營養與代謝 / 長壽",
+      "date": "2026-11-14",
+      "note_date": "2026-11-14",
+      "duration_seconds": 6945,
+      "duration_display": "1:55:45",
+      "video_url": "https://youtu.be/FRoQOzZRcpw",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20261114_DavidPerlmutter_失智可預防_口播稿.opus",
+        "m4a": "audio/20261114_DavidPerlmutter_失智可預防_口播稿.m4a",
+        "mp3": "audio/20261114_DavidPerlmutter_失智可預防_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20261114_DavidPerlmutter_失智可預防_逐字稿.txt",
+        "spoken_script": "transcripts/20261114_DavidPerlmutter_失智可預防_口播稿.txt",
+        "spoken_script_tts": "transcripts/20261114_DavidPerlmutter_失智可預防_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "人物訪談/20261114_DavidPerlmutter_失智可預防.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/人物訪談/20261114_DavidPerlmutter_失智可預防.md",
+      "module": null,
+      "module_name": null,
+      "module_order": null,
+      "course": null
+    },
     {
       "id": "20261019_ChristopherKerr_DeathbedVisions",
       "title": "【The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions!】",
