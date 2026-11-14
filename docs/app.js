@@ -23,7 +23,10 @@ const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main
 // 2026-11-14 (v3)：bump v2.11 → v2.12（跨 part 術語統一：小膠細胞→微膠細胞、柏金遜→帕金森）
 //           — SW 對 .md/.txt 是 cache-first，不 bump 使用者會拿到舊稿
 //           — 必須同步 bump sw.js CACHE_VERSION
-const AUDIO_CACHE_BUST = 'v2.12-perlmutter-termfix';
+// 2026-11-14 (v4)：bump v2.12 → v2.13（audio CDN 改走 raw.githubusercontent）
+//           — jsDelivr 對 audio/ 子樹回 403（package > 50MB），且 @main edge cache 吐舊 bytes
+//           — 必須同步 bump sw.js CACHE_VERSION
+const AUDIO_CACHE_BUST = 'v2.13-perlmutter-audiofix';
 const JSON_URL = `${CDN_BASE}/data/video-notes.json`;
 const RAW_JSON_URL = `${RAW_BASE}/data/video-notes.json`;
 // 本地 docs/data/ 優先，避免 raw GitHub 5min cache 延遲
@@ -916,9 +919,15 @@ document.addEventListener('alpine:init', () => {
     getAudioUrl(video, format) {
       const path = video.audio[format];
       if (!path) return '';
-      // 2026-08-20 教訓：audio 加 cache-bust query string 強制瀏覽器重新 fetch
-      // (jsDelivr @main 實際 cache 7 天不是 24h，browsers 也會 cache audio 元素)
-      return `${CDN_BASE}/${this.encodePath(path)}?v=${AUDIO_CACHE_BUST}`;
+      // 2026-11-14 教訓：audio 改走 raw.githubusercontent，不再用 jsDelivr
+      //   1) jsDelivr 對本 repo 的 audio/ 子樹回 403「Package size exceeded 50 MB」
+      //      → 新增或換版的音檔根本取不到（實測 @98975f0 的 audio/ = 403）
+      //   2) jsDelivr @main 對 audio 有 7 天 edge cache → 換版後仍吐舊 bytes
+      //      （實測 @main = 1454772B 舊檔 / @13f5d5f = 1435379B 新檔）
+      //   3) raw.githubusercontent 實測 22/22 音檔 200、bytes 一致、Range 206、CORS *
+      //   4) .md / transcripts 本來就已經走 RAW_BASE，audio 改走同一套 → 單一內容來源
+      // cache-bust query 保留：raw 回 max-age=300，query 讓瀏覽器 cache key 隨換版改變
+      return `${RAW_BASE}/${this.encodePath(path)}?v=${AUDIO_CACHE_BUST}`;
     },
 
     // 2026-07-25 教訓 11：主播放器優先 opus（最小、最省流量），fallback mp3（universal 支援），
