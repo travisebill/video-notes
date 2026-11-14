@@ -41,7 +41,9 @@
 //           — 依 SOP 與 app.js 的 AUDIO_CACHE_BUST 同步 bump
 // 2026-11-14：bump CACHE_VERSION（Dr. David Perlmutter 口播稿重錄 → app.js binary content 改變）
 //           — 與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
-const CACHE_VERSION = 'v2026-11-14-perlmutter';
+// 2026-11-14 (v2)：bump CACHE_VERSION（Perlmutter 逐字稿/筆記內容修正 → SW cache-first 需清舊稿）
+//           — 與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
+const CACHE_VERSION = 'v2026-11-14-perlmutter-fix';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
