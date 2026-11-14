@@ -380,12 +380,12 @@
 
 ## 🎙️ 音檔導覽
 
-> MiniMax TTS 語音導覽（voice clone, speech-2.8-hd），約 6 分 30 秒
+> MiniMax TTS 語音導覽（voice clone xiaotian_clone_v1, speech-2.8-hd），約 2 分 59 秒
 > 口播稿原文：transcripts/20261114_DavidPerlmutter_失智可預防_口播稿.txt
 
-- [opus 4.0 MB](../audio/20261114_DavidPerlmutter_失智可預防_口播稿.opus)（Telegram 友善）
-- [m4a 4.1 MB](../audio/20261114_DavidPerlmutter_失智可預防_口播稿.m4a)（iOS 友善）
-- [mp3 6.5 MB](../audio/20261114_DavidPerlmutter_失智可預防_口播稿.mp3)（通用格式）
+- [opus 1.4 MB](../audio/20261114_DavidPerlmutter_失智可預防_口播稿.opus)（Telegram 友善）
+- [m4a 2.8 MB](../audio/20261114_DavidPerlmutter_失智可預防_口播稿.m4a)（iOS 友善）
+- [mp3 2.7 MB](../audio/20261114_DavidPerlmutter_失智可預防_口播稿.mp3)（通用格式）
 
 ## 三、關鍵概念定義表
 
