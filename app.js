@@ -16,7 +16,11 @@ const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main
 // 2026-11-14：bump v2.9 → v2.10（Dr. David Perlmutter 口播稿重錄：Bar 3 語速 9.92% → 8.33% / opus 10.24% → 8.33%，audio binary content 改變）
 //           — jsDelivr @main 對 audio 的 cache-control = max-age=604800 (7 天)，URL pattern 不變會繼續吐舊檔
 //           — 必須同步 bump sw.js CACHE_VERSION
-const AUDIO_CACHE_BUST = 'v2.10-perlmutter';
+// 2026-11-14 (v2)：bump v2.10 → v2.11（Perlmutter 逐字稿+筆記修正：合併步驟回退 sub-agent 修正，
+//           導致 5 行空白翻譯 + 簡體字殘留 → 已用 parts 重建）
+//           — SW 對 .md/.txt 是 cache-first，不 bump 使用者會拿到舊稿
+//           — 必須同步 bump sw.js CACHE_VERSION
+const AUDIO_CACHE_BUST = 'v2.11-perlmutter-fix';
 const JSON_URL = `${CDN_BASE}/data/video-notes.json`;
 const RAW_JSON_URL = `${RAW_BASE}/data/video-notes.json`;
 // 本地 docs/data/ 優先，避免 raw GitHub 5min cache 延遲
