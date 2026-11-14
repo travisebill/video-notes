@@ -45,7 +45,9 @@
 //           — 與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
 // 2026-11-14 (v3)：bump CACHE_VERSION（跨 part 術語統一 → SW cache-first 需清舊稿）
 //           — 與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
-const CACHE_VERSION = 'v2026-11-14-perlmutter-termfix';
+// 2026-11-14 (v4)：bump CACHE_VERSION（audio CDN 改走 raw.githubusercontent + 新增音檔 network-only 分支）
+//           — 與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
+const CACHE_VERSION = 'v2026-11-14-perlmutter-audiofix';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
@@ -552,6 +554,16 @@ self.addEventListener('fetch', (event) => {
         }).catch(() => new Response('', { status: 504 }));
       })
     );
+    return;
+  }
+
+  // 3.5 raw.githubusercontent 音檔：network-only，不進 Cache Storage
+  //     2026-11-14 教訓：audio 改走 raw.githubusercontent（jsDelivr 對 audio/ 子樹回 403，package > 50MB）
+  //       - 不 cache：音檔最大 34MB，寫進 Cache Storage 會撐爆 Storage quota
+  //       - 不 cache-first：audio element 會發 Range 請求做 seek，cache-first 回整包 200 會破壞拖曳定位
+  //       - 直接 pass-through 給瀏覽器 HTTP cache（raw 回 max-age=300）
+  if (url.hostname === 'raw.githubusercontent.com' && /\.(opus|mp3|m4a|ogg|wav)$/i.test(url.pathname)) {
+    event.respondWith(fetch(request));
     return;
   }
 
