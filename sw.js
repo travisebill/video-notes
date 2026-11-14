@@ -43,7 +43,9 @@
 //           — 與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
 // 2026-11-14 (v2)：bump CACHE_VERSION（Perlmutter 逐字稿/筆記內容修正 → SW cache-first 需清舊稿）
 //           — 與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
-const CACHE_VERSION = 'v2026-11-14-perlmutter-fix';
+// 2026-11-14 (v3)：bump CACHE_VERSION（跨 part 術語統一 → SW cache-first 需清舊稿）
+//           — 與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
+const CACHE_VERSION = 'v2026-11-14-perlmutter-termfix';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 

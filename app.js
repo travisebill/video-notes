@@ -20,7 +20,10 @@ const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main
 //           導致 5 行空白翻譯 + 簡體字殘留 → 已用 parts 重建）
 //           — SW 對 .md/.txt 是 cache-first，不 bump 使用者會拿到舊稿
 //           — 必須同步 bump sw.js CACHE_VERSION
-const AUDIO_CACHE_BUST = 'v2.11-perlmutter-fix';
+// 2026-11-14 (v3)：bump v2.11 → v2.12（跨 part 術語統一：小膠細胞→微膠細胞、柏金遜→帕金森）
+//           — SW 對 .md/.txt 是 cache-first，不 bump 使用者會拿到舊稿
+//           — 必須同步 bump sw.js CACHE_VERSION
+const AUDIO_CACHE_BUST = 'v2.12-perlmutter-termfix';
 const JSON_URL = `${CDN_BASE}/data/video-notes.json`;
 const RAW_JSON_URL = `${RAW_BASE}/data/video-notes.json`;
 // 本地 docs/data/ 優先，避免 raw GitHub 5min cache 延遲
