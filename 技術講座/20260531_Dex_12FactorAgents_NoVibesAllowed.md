@@ -35,7 +35,7 @@
 
 **內容：**
 
-- **LLMs 不是 pure function**：它們是非確定性的，但有狀態（stateless）
+- **LLMs 不是 pure function**：它們是非確定性的，但**無狀態**（stateless）
   > 「讓 LLM 變強的唯一方法：放更好的 tokens 進去，然後得到更好的 tokens 出來」
 - 每次 tool call 的決策鏈：對話中已有的內容決定下一個 token 的選擇
 - **Context 最佳化目標**：correctness、completeness、size、trajectory
@@ -99,6 +99,23 @@
 - 嚴格按照 plan 執行
 - 保持 low context
 
+#### 依任務規模調整投入（同一套流程，不同重量）
+
+| 任務規模 | 建議做法 |
+|------|---------|
+| 改按鈕顏色 | 直接對話，叫 agent 做 |
+| 簡單功能／小 feature | 簡單計畫 |
+| 跨多個 repo 的中型功能 | 一次研究 → 一個計畫 |
+| 極度複雜問題（如 Parquet Java） | 多輪研究 → 多輪計畫 → 可能還是得畫白板 |
+
+#### 計畫品質決定影響範圍
+
+| 計畫品質 | 影響範圍 |
+|------|-----------|
+| 一行爛 code | = 一行爛 code |
+| 計畫中一個爛決策 | = 一百行爛 code |
+| 研究中一個誤解 | = 整個任務報廢 |
+
 ---
 
 ### Section 6｜實戰案例與Limits（19:00 ~ 20:30）
@@ -130,7 +147,7 @@
 
 ## 三、關鍵概念定義表
 
-| 概念 | 定義 | 應用場景 |
+| 概念 | 定義 | 出處／應用場景 |
 |------|------|---------|
 | **Slop** | AI 大量產出、但品質低落的技術債 code | Brownfield code base 中常見的問題 |
 | **Context Engineering** | 管理 LLMs context window 的紀律，最大化有效 tokens | 所有 AI coding tasks 的核心框架 |
@@ -140,6 +157,10 @@
 | **Mental Alignment** | 團隊成員對 code base 變化的共同理解 | 透過 plan review 維持 |
 | **Semantic Diffusion** | 術語被濫用於太多不同場景而失去精確定義 | Spec-driven dev 的問題 |
 | **Harness Engineering** | 如何與 Codex/Claude/Cursor 等工具整合的客製化方式 | Context engineering 的子領域 |
+| **Brownfield Codebase** | 已存在多年、有歷史包袱的程式碼庫，相對於從零開始的 Greenfield | Eiger 調查數據 |
+| **Greenfield Codebase** | 全新、無歷史包袱的專案 | Eiger 調查數據 |
+| **Smart Zone** | 上下文視窗的前約 40%，模型表現良好的區域 | Dex 的經驗法則 |
+| **RPI（Research-Plan-Implement）** | 三階段開發流程：研究系統 → 制定計畫 → 執行實作 | Dex 團隊方法論 |
 
 ---
 
@@ -158,6 +179,10 @@
 5. > 「爛的 code 是一行爛 code。爛的 plan 可能是 100 行爛 code。爛的 research = 你讓 model 朝完全錯誤的方向走」
 6. > 「AI 無法取代思考，只能放大你已經做過的思考（或你沒做的思考）」
 7. > 「沒有銀彈。沒有完美的 prompt。如果你真的想要一個 hype word，這叫 harness engineering」
+8. > 「LLM 不是純函數，但它是無狀態的。唯一讓它輸出更好 token 的方法，就是餵給它更好的 token。」
+9. > 「文件（documentation）是整個程式碼庫中謊言最多的地方。」
+10. > 「永遠不會有 Agent 元年——因為語義擴散。」
+11. > 「如果你看到 Claude 開始道歉，差不多該開新對話了。」
 
 ---
 
@@ -180,6 +205,17 @@
 | 讓 subagent 做人格化分工 | 應用於控制 context，不是取代團隊角色 |
 | 過度依賴 markdown 檔案 | 容易變成「讓你感覺良好」的 noise |
 | Spec-driven dev 作為銀彈 | 術語已 semantic diffusion，意義已經模糊 |
+
+### 進階實作 Takeaways
+
+1. **40% 法則**：上下文視窗用到約 60,000-70,000 tokens 後就該警覺，定期進行 compaction
+2. **軌跡很重要**：不要在對話中留下「犯錯 → 被罵」的 pattern，那會變成 LLM 的學習對象
+3. **Sub-agent 原則**：fork → 搜尋 → 回傳一行 → 消滅，不要讓 sub-agent 活太久
+4. **計畫中放 code snippet**：不要只寫描述，放實際預計改動的程式碼
+5. **用 raw code 做研究，不要用文件**：文件會過時、會說謊，code 才是 truth
+6. **根據任務規模調整投入**：改顏色不用全套 RPI，重構核心模組才需要
+7. **人一定要讀計畫**：整個流程的價值在於人類在迴圈中驗證正確性
+8. **文化變革從上而下**：技術領導者自己要先練，再帶團隊
 
 ---
 
