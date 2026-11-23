@@ -1,12 +1,12 @@
 {
   "meta": {
-    "total_videos": 208,
-    "total_with_audio": 179,
-    "total_with_transcript": 133,
-    "total_with_spoken_script": 177,
-    "speakers_count": 89,
+    "total_videos": 209,
+    "total_with_audio": 180,
+    "total_with_transcript": 134,
+    "total_with_spoken_script": 178,
+    "speakers_count": 90,
     "categories_count": 4,
-    "topics_count": 23,
+    "topics_count": 24,
     "courses": [
       "Google ADK 完整教學",
       "Harvard CS224",
@@ -15,7 +15,7 @@
       "Stanford CS336"
     ],
     "modules_count": 5,
-    "last_updated": "2026-11-14 14:17:43",
+    "last_updated": "2026-11-24 03:57:08",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -84,6 +84,7 @@
       "Seth Godin",
       "Smitha",
       "Stanford CS329A",
+      "Steve Eisman（史蒂夫·艾斯曼，做空次級房貸的著名投資人、《大空頭》原型、主持投資 podcast）× Steven Bartlett（The Diary Of A CEO 主持人）",
       "TVBS",
       "TVBS文茜",
       "Tara Agyemang",
@@ -121,6 +122,7 @@
       "🏛️ 政治 / 國際局勢 / AI 安全政策",
       "🏺 考古 / 古文明 / 人類學",
       "💰 財經 / 經濟",
+      "💰 財經 / 經濟 / AI 泡沫 / 市場風險 / 投資紀律",
       "💼 商業 / 創業 / 經營",
       "📚 算法 / 計算機科學理論",
       "📜 歷史 / 文學 / 哲學",
@@ -1619,6 +1621,38 @@
       },
       "note_path": "國際局勢/20260516_陳文茜_習川會伊朗共識與影子艦隊.md",
       "note_github_url": "https://github.com/travisebill/video-notes/blob/main/國際局勢/20260516_陳文茜_習川會伊朗共識與影子艦隊.md",
+      "module": null,
+      "module_name": null,
+      "module_order": null,
+      "course": null
+    },
+    {
+      "id": "20261123_SteveEisman_AI泡沫與衰退預警",
+      "title": "【The Man Who Predicted The Last Crash WARNS A Recession Starts If These 2 Fail! - Steve Eisman】",
+      "speaker": "Steve Eisman（史蒂夫·艾斯曼，做空次級房貸的著名投資人、《大空頭》原型、主持投資 podcast）× Steven Bartlett（The Diary Of A CEO 主持人）",
+      "speaker_description": null,
+      "speaker_slug": "SteveEisman",
+      "course_slug": null,
+      "category": "財經分析",
+      "primary_topic": "💰 財經 / 經濟 / AI 泡沫 / 市場風險 / 投資紀律",
+      "date": "2026-11-23",
+      "note_date": "2026-11-23",
+      "duration_seconds": 5639,
+      "duration_display": "1:33:59",
+      "video_url": "https://youtu.be/4Unch--PmW0",
+      "lec_num": null,
+      "audio": {
+        "opus": "audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.opus",
+        "m4a": "audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.m4a",
+        "mp3": "audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.mp3"
+      },
+      "transcripts": {
+        "transcript": "transcripts/20261123_SteveEisman_AI泡沫與衰退預警_逐字稿.txt",
+        "spoken_script": "transcripts/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.txt",
+        "spoken_script_tts": "transcripts/20261123_SteveEisman_AI泡沫與衰退預警_口播稿_TTS_zh_CN.txt"
+      },
+      "note_path": "財經分析/20261123_SteveEisman_AI泡沫與衰退預警.md",
+      "note_github_url": "https://github.com/travisebill/video-notes/blob/main/財經分析/20261123_SteveEisman_AI泡沫與衰退預警.md",
       "module": null,
       "module_name": null,
       "module_order": null,
