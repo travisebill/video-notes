@@ -1,7 +1,7 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **209 支內容** · 495 個音檔 · 134 個逐字稿 · 178 個口播稿
+> **209 支內容** · 495 個音檔 · 135 個逐字稿 · 178 個口播稿
 > 最後更新 2026-11-24
 
 ---
@@ -183,7 +183,7 @@
 | 2026-06-08 | [Generative UI 與 MCP Apps：Ruben Casas @ Postman](技術講座/20260608_RubenCasas_超越元件生成式UI_MCPApps.md) | Generative UI 與 MCP Apps | ? | [📄 note](技術講座/20260608_RubenCasas_超越元件生成式UI_MCPApps.md) · [📝 逐字稿](transcripts/20260608_RubenCasas_BeyondComponents_MCPApps_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260608_RubenCasas_BeyondComponents_MCPApps_口播稿.txt) |
 | 2026-06-08 | [Matt Pocock：Learn anything with the /teach skill](技術講座/20260608_MattPocock_teach_skill_個人化學習.md) | Matt Pocock | 13 分 04 秒 | [📄 note](技術講座/20260608_MattPocock_teach_skill_個人化學習.md) · [📝 逐字稿](transcripts/20260608_MattPocock_teach_skill_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260608_MattPocock_teach_skill_個人化學習_口播稿.txt) · [🔊 opus](audio/20260608_MattPocock_teach_skill_個人化學習.opus) · [🔊 m4a](audio/20260608_MattPocock_teach_skill_個人化學習.m4a) · [🔊 mp3](audio/20260608_MattPocock_teach_skill_個人化學習.mp3) |
 | 2026-06-02 | [Mo Gawdat 談 AI 倫理與人類未來 — 結構化筆記](人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md) | ? | ? | [📄 note](人物訪談/20260602_Mo_Gawdat_AI倫理與人類未來.md) · [📝 逐字稿](transcripts/20260602_Mo_Gawdat_逐字稿.txt) · [🎙️ 口播稿](transcripts/20260602_Mo_Gawdat_AI倫理與人類未來_口播稿.txt) · [🔊 opus](audio/20260602_Mo_Gawdat_AI倫理與人類未來.opus) · [🔊 m4a](audio/20260602_Mo_Gawdat_AI倫理與人類未來.m4a) · [🔊 mp3](audio/20260602_Mo_Gawdat_AI倫理與人類未來.mp3) |
-| 2026-05-31 | [No Vibes Allowed: Solving Hard Problems in Complex Codebases](技術講座/20260531_Dex_12FactorAgents_NoVibesAllowed.md) | ? | ? | [📄 note](技術講座/20260531_Dex_12FactorAgents_NoVibesAllowed.md) · [📝 逐字稿](transcripts/20260531_Dex_12FactorAgents_逐字稿.txt) |
+| 2026-05-31 | [No Vibes Allowed: Solving Hard Problems in Complex Codebases](技術講座/20260531_Dex_12FactorAgents_NoVibesAllowed.md) | ? | ? | [📄 note](技術講座/20260531_Dex_12FactorAgents_NoVibesAllowed.md) · [📝 逐字稿](transcripts/20260531_Dex_12FactorAgents_NoVibesAllowed_逐字稿.txt) |
 | 2026-05-28 | [Building Proactive Agent Workflows with Claude Code](技術講座/20260528_Maya_Claude_Code_Routines_主動代理工作流.md) | ? | ? | [📄 note](技術講座/20260528_Maya_Claude_Code_Routines_主動代理工作流.md) · [📝 逐字稿](transcripts/20260528_Maya_Claude_Code_Routines_主動代理工作流_逐字稿.txt) |
 | 2026-05-28 | [🚀AI編程革命！Claude Code Workflow 自動生成 Harness！徹底抹平 Harness Engineering 技術鴻溝！](技術講座/20260528_Claude_Code_Workflow_自動生成Harness.md) | ? | ? | [📄 note](技術講座/20260528_Claude_Code_Workflow_自動生成Harness.md) · [📝 逐字稿](transcripts/20260528_Claude_Code_Workflow_自動生成Harness_逐字稿.txt) |
 | 2026-05-28 | [Software Engineering at the Tipping Point](技術講座/20260528_Adam_Bender_Software_Ecology_軟體生態學.md) | ? | ? | [📄 note](技術講座/20260528_Adam_Bender_Software_Ecology_軟體生態學.md) · [📝 逐字稿](transcripts/20260528_Adam_Bender_Software_Ecology_軟體生態學_逐字稿.txt) |

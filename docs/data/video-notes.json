@@ -2,7 +2,7 @@
   "meta": {
     "total_videos": 209,
     "total_with_audio": 180,
-    "total_with_transcript": 134,
+    "total_with_transcript": 135,
     "total_with_spoken_script": 178,
     "speakers_count": 90,
     "categories_count": 4,
@@ -15,7 +15,7 @@
       "Stanford CS336"
     ],
     "modules_count": 5,
-    "last_updated": "2026-11-24 03:57:08",
+    "last_updated": "2026-11-24 05:55:18",
     "speakers": [
       "AI 評估與代理系統領域的技術專家",
       "AI 開發領域的技術教學者，經營免費 AI 開發者社群",
@@ -3855,7 +3855,7 @@
         "mp3": null
       },
       "transcripts": {
-        "transcript": null,
+        "transcript": "transcripts/20260531_Dex_12FactorAgents_NoVibesAllowed_逐字稿.txt",
         "spoken_script": null,
         "spoken_script_tts": null
       },
