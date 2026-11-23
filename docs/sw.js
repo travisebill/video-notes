@@ -51,7 +51,7 @@
 //           — 與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
 // 2026-11-14 (v5)：bump CACHE_VERSION（逐字稿改用 part2 最終版 → 內容改變，SW cache-first 需清舊稿）
 //           — 與 app.js 的 AUDIO_CACHE_BUST 同步 bump，兩者永遠要一起改
-const CACHE_VERSION = 'v2026-11-24-eisman';
+const CACHE_VERSION = 'v2026-11-24-eisman2';
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 

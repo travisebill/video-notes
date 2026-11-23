@@ -150,12 +150,12 @@ The Diary Of A CEO 主持人，企業家與投資人出身。本集他以追問�
 
 ## 🎙️ 音檔導覽
 
-> MiniMax TTS 語音導覽（voice clone, speech-2.8-hd），約 5 分 41 秒
+> MiniMax TTS 語音導覽（voice clone, speech-2.8-hd），約 5 分 26 秒
 > 口播稿原文：transcripts/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.txt
 
-- [opus 2.6 MB](../audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.opus)（Telegram 友善）
-- [m4a 5.9 MB](../audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.m4a)（iOS 友善）
-- [mp3 5.2 MB](../audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.mp3)（通用格式）
+- [opus 2.5 MB](../audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.opus)（Telegram 友善）
+- [m4a 5.6 MB](../audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.m4a)（iOS 友善）
+- [mp3 5.0 MB](../audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.mp3)（通用格式）
 
 ---
 
