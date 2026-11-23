@@ -1,6 +1,6 @@
 # 財經分析 — Video Notes
 
-> **5 支影片**
+> **6 支影片**
 > [← 回到主 README](../../README.md)
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
@@ -10,3 +10,4 @@
 | 2026-05-10 | [伊朗戰爭成「石油人民幣」契機｜文茜財經周報 20260510](20260510_陳文茜_伊朗戰爭成石油人民幣契機.md) | ? | ? | [📄 note](../財經分析/20260510_陳文茜_伊朗戰爭成石油人民幣契機.md) · [📝 逐字稿](../transcripts/20260510_陳文茜_反腐清洗川習會_逐字稿.txt) |
 | 2026-06-14 | [AI 畢業生、加州滑坡、中國低空經濟、橡樹嶺 AI 核能，與美國公衛退場](20260614_陳文茜_AI畢業生與文明重組.md) | 陳文茜 | 48 分 36 秒 | [📄 note](../財經分析/20260614_陳文茜_AI畢業生與文明重組.md) · [📝 逐字稿](../transcripts/20260614_陳文茜_AI畢業生與文明重組_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20260614_陳文茜_AI畢業生與文明重組_口播稿.txt) · [🔊 opus](../audio/20260614_陳文茜_AI畢業生與文明重組_口播稿.opus) · [🔊 m4a](../audio/20260614_陳文茜_AI畢業生與文明重組_口播稿.m4a) · [🔊 mp3](../audio/20260614_陳文茜_AI畢業生與文明重組_口播稿.mp3) |
 | 2026-06-14 | [SpaceX 完美 IPO 首秀、AI 三巨頭同步競速，與川普 AI 分紅論的全景解讀](20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) | 陳文茜 | 48 分 19 秒 | [📄 note](../財經分析/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速.md) · [📝 逐字稿](../transcripts/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速_口播稿.txt) · [🔊 opus](../audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速_口播稿.opus) · [🔊 m4a](../audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速_口播稿.m4a) · [🔊 mp3](../audio/20260614_陳文茜_SpaceX完美IPO與AI三巨頭同步競速_口播稿.mp3) |
+| 2026-11-23 | [The Man Who Predicted The Last Crash WARNS A Recession Starts If These 2 Fail! — 預言 2008 崩盤的人警告：AI 泡沫若兩家倒閉美國隔天衰退 + Nvidia 七成營收集中五客戶 + 資訊科技佔標普 500 四成（史上最大）+ 誘因永遠凌駕倫理 + 加密貨幣論述與資產反向而行 + 買房不如租屋 + 普通人唯一解：標普 500 指數基金](20261123_SteveEisman_AI泡沫與衰退預警.md) | Steve Eisman × Steven Bartlett | 1:33:59（5639s） | [📄 note](../財經分析/20261123_SteveEisman_AI泡沫與衰退預警.md) · [📝 逐字稿](../transcripts/20261123_SteveEisman_AI泡沫與衰退預警_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.txt) · [🔊 opus](../audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.opus) · [🔊 m4a](../audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.m4a) · [🔊 mp3](../audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.mp3) |
