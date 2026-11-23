@@ -26,6 +26,9 @@ const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main
 // 2026-11-14 (v4)：bump v2.12 → v2.13（audio CDN 改走 raw.githubusercontent）
 //           — jsDelivr 對 audio/ 子樹回 403（package > 50MB），且 @main edge cache 吐舊 bytes
 //           — 必須同步 bump sw.js CACHE_VERSION
+  // 2026-11-24 (v6)：bump v2.15 -> v2.16（新增 Steve Eisman AI 泡沫逐字稿 + 三格式音檔）
+  //           — audio binary content 改變但 URL pattern 不變 -> 必須 bump，否則舊 App 拿舊音檔
+  //           — 必須同步 bump sw.js CACHE_VERSION
 // 2026-11-14 (v5)：bump v2.13 → v2.14（音效標記統一為英文並對齊原文位置）
 //           — 逐字稿內容改變 → SW 對 .txt 是 cache-first，不 bump 使用者會拿到舊稿
 //           — 必須同步 bump sw.js CACHE_VERSION
@@ -33,7 +36,7 @@ const RAW_BASE = 'https://raw.githubusercontent.com/travisebill/video-notes/main
 //           — part2 的 subagent 在父代理合併後才覆寫輸出檔 → 必須以凍結快照為準重建
 //           — 逐字稿內容改變 → SW 對 .txt 是 cache-first，不 bump 使用者會拿到舊稿
 //           — 必須同步 bump sw.js CACHE_VERSION
-const AUDIO_CACHE_BUST = 'v2.15-perlmutter-p2final';
+const AUDIO_CACHE_BUST = 'v2.16-eisman';
 const JSON_URL = `${CDN_BASE}/data/video-notes.json`;
 const RAW_JSON_URL = `${RAW_BASE}/data/video-notes.json`;
 // 本地 docs/data/ 優先，避免 raw GitHub 5min cache 延遲
