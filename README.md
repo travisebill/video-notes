@@ -1,8 +1,8 @@
 # 🎬 Video Notes
 
 > YouTube 影片 / 技術文章 的結構化筆記 + 語音導覽。由 Ryo 🐱 自動整理。
-> **206 支內容** · 347 個音檔 · 173 個逐字稿 · 182 個口播稿
-> 最後更新 2026-11-14
+> **207 支內容** · 350 個音檔 · 175 個逐字稿 · 184 個口播稿
+> 最後更新 2026-11-24
 
 ---
 
@@ -16,6 +16,8 @@
 ## ⭐ 最新加入
 
 > 最近 7 支影片
+
+- **2026-11-24** | Steve Eisman（做空次級房貸的著名投資人、《大空頭》原型、主持投資 podcast）× Steven Bartlett（The Diary Of A CEO 主持）| [The Man Who Predicted The Last Crash WARNS A Recession Starts If These 2 Fail! — 預言 2008 崩盤的人警告：AI 泡沫若兩家倒閉美國隔天衰退 + Nvidia 七成營收集中五客戶 + 資訊科技佔標普 500 四成（史上最大）+ 誘因永遠凌駕倫理 + 加密貨幣論述與資產反向而行 + 買房不如租屋 + 普通人唯一解：標普 500 指數基金](財經分析/20261123_SteveEisman_AI泡沫與衰退預警.md) · 1:33:59（5639s）· en-orig JSON3 自動字幕 + 繁中翻譯 · xiaotian_clone_v1 · Bar 1 1790 chars / Bar 2 0.00/1K / Bar 3 9.08%
 
 - **2026-11-14** | Dr. David Perlmutter（Emory 大學醫學院營養學教授、board-certified 神經科醫師、《Brainwash》《Brain Defenders》作者）× Steven Bartlett（The Diary Of A CEO 主持）| [The Brain Doctor That Figured Out The Cause Of Dementia - Dr. David Perlmutter — 阿茲海默症的主因不是斑塊而是代謝：大腦免疫 M2→M1 轉向 / 五大生活因子 / APOE4 是傾向非命運 / 1953 糖配給研究 −40% / 40Hz 光音 / Cochrane 否定 beta-amyloid 藥物](人物訪談/20261114_DavidPerlmutter_失智可預防.md) · 1:55:45（6945s）· en-orig JSON3 自動字幕 · xiaotian_clone_v1 · Bar 1 2573 chars / Bar 2 0.00/1K / Bar 3 8.33%
 - **2026-10-19** | Dr. Christopher Kerr（安寧病房醫師、神經生物學博士、《Death is but a Dream》作者）× Steven Bartlett（The Diary Of A CEO 主持）| [The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions! — 1,500 位臨終者的 30 年研究（近 90% 臨終者出現強烈夢境／異象 + 譫妄排除法 + 實證排序推翻「人生有意義／化解衝突」+ 80% 想在家死 vs 實際 30% + 六張手寫卡片 + 兒童的安靜勇氣）](人物訪談/20261019_ChristopherKerr_DeathbedVisions.md) · 1:23:26（5006s）· en-orig 自動字幕 · xiaotian_clone_v1 · Bar 1 1267 chars / Bar 2 0.00/1K / Bar 3 7.91%
@@ -43,6 +45,7 @@
 > 每行包含完整 artifacts：📄 note / 📝 逐字稿 / 🎙️ 口播稿 / 🔊 音檔三格式
 
 | 日期 | 標題 | 講者 | 時長 | Artifacts |
+| 2026-11-24 | [The Man Who Predicted The Last Crash WARNS A Recession Starts If These 2 Fail! — 預言 2008 崩盤的人警告：AI 泡沫若兩家倒閉美國隔天衰退 + Nvidia 七成營收集中五客戶 + 資訊科技佔標普 500 四成（史上最大）+ 誘因永遠凌駕倫理 + 加密貨幣論述與資產反向而行 + 買房不如租屋 + 普通人唯一解：標普 500 指數基金](財經分析/20261123_SteveEisman_AI泡沫與衰退預警.md) | Steve Eisman × Steven Bartlett | 1:33:59（5639s） | [📄 note](../財經分析/20261123_SteveEisman_AI泡沫與衰退預警.md) · [📝 逐字稿](../transcripts/20261123_SteveEisman_AI泡沫與衰退預警_逐字稿.txt) · [🎙️ 口播稿](../transcripts/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.txt) · [🔊 opus](../audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.opus) · [🔊 m4a](../audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.m4a) · [🔊 mp3](../audio/20261123_SteveEisman_AI泡沫與衰退預警_口播稿.mp3) |
 |------|------|------|------|-----------|
 | 2026-11-14 | [The Brain Doctor That Figured Out The Cause Of Dementia - Dr. David Perlmutter — 阿茲海默症的主因不是斑塊而是代謝：大腦免疫 M2→M1 轉向 / 五大生活因子 / APOE4 是傾向非命運 / 1953 糖配給研究 −40% / 40Hz 光音 / Cochrane 否定 beta-amyloid 藥物](人物訪談/20261114_DavidPerlmutter_失智可預防.md) | Dr. David Perlmutter（Emory 大學醫學院營養學教授、board-certified 神經科醫師、《Brainwash》《Brain Defenders》作者）× 主持 Steven Bartlett（The Diary Of A CEO）| 1:55:45（6945s）（口播稿 3:01）| [📄 note](人物訪談/20261114_DavidPerlmutter_失智可預防.md) · [📝 逐字稿](transcripts/20261114_DavidPerlmutter_失智可預防_逐字稿.txt) · [🎙️ 口播稿](transcripts/20261114_DavidPerlmutter_失智可預防_口播稿.txt) · [🔊 opus](audio/20261114_DavidPerlmutter_失智可預防_口播稿.opus) · [🔊 m4a](audio/20261114_DavidPerlmutter_失智可預防_口播稿.m4a) · [🔊 mp3](audio/20261114_DavidPerlmutter_失智可預防_口播稿.mp3) |
 | 2026-10-19 | [The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions! — 1,500 位臨終者的 30 年研究 / 臨終異象近 90% + 譫妄排除法 / 實證排序 vs 醫學生預期 / 80% 想在家死 vs 30% 實際 / 六張手寫卡片 / 兒童的安靜勇氣](人物訪談/20261019_ChristopherKerr_DeathbedVisions.md) | Dr. Christopher Kerr（安寧病房醫師、神經生物學博士）× 主持 Steven Bartlett（The Diary Of A CEO）| 1:23:26（5006s）（口播稿 4:03）| [📄 note](人物訪談/20261019_ChristopherKerr_DeathbedVisions.md) · [📝 逐字稿](transcripts/20261019_ChristopherKerr_DeathbedVisions_逐字稿.txt) · [🎙️ 口播稿](transcripts/20261019_ChristopherKerr_DeathbedVisions_口播稿.txt) · [🔊 opus](audio/20261019_ChristopherKerr_DeathbedVisions_口播稿.opus) · [🔊 m4a](audio/20261019_ChristopherKerr_DeathbedVisions_口播稿.m4a) · [🔊 mp3](audio/20261019_ChristopherKerr_DeathbedVisions_口播稿.mp3) |
@@ -375,8 +378,9 @@
 
 - 2026-07-20 | [Alex Hormozi's Warning: Stop Chasing AI, Build This Instead](人物訪談/20260720_AlexHormozi_StopChasingAIBuildThisInstead.md) · Alex Hormozi（$106M 身價、Acquisition.com 創辦人） · 2 小時 22 分鐘（AI 警告 + 客戶黏著 + Unicorn hiring + 母親過世那一季的持續前進）
 
-### 💰 **財經 / 經濟**（7 支）
+### 💰 **財經 / 經濟**（8 支）
 
+- 2026-11-24 | [The Man Who Predicted The Last Crash WARNS A Recession Starts If These 2 Fail! — AI 泡沫 + 集中度風險 + 投資紀律](財經分析/20261123_SteveEisman_AI泡沫與衰退預警.md) · Steve Eisman × Steven Bartlett
 - 2026-07-30 | [Jeff Dean: The 1% Rule for Building in AI — Y Combinator 對 6,000 位創業家](人物訪談/20260730_JeffDean_The1PercentRuleForBuildingInAI.md) · Jeff Dean（Google Chief Scientist、MapReduce/BigTable/TensorFlow/TPU/Gemini 原作者之一）× Garry Tan（YC）· 57:07（3427s）｜napking math 推導 junior engineer 預測 + agent-based coding 之外低估 + 2027 年自動化 ML 系統願景（高階目標拆解 + 子問題 loop + orchestration）+ Long-running agent 從 5-10 步到 1-2 小時 + Gemini 1 億 token context window + model 本身加速 ML research 循環 + Tensor Processing Unit 世代演進
 - 2026-07-30 | [Ray Dalio: I Predicted The 2008 CRASH, I Know What Comes Next! — AI 泡沫 + 80 年大循環 + 5 forces + Bitcoin vs Gold + AI 取代工作 + 2% 財富稅 + UK 衰退 + 多極世界秩序 + Iran 衝突](人物訪談/20260730_RayDalio_AIBubbleBigCycle.md) · Ray Dalio（Bridgewater Associates 創辦人）· 主持人 Steven Bartlett · 1:30:17（5417s）｜DOAC 深度訪談｜AI bubble 1929/2000 歷史類比 + 5 forces 健康指標 + 個人理財三鐵律（cash ≠ safe / diversify / 年輕人唯一資產是自己）+ Gold > Bitcoin（無破解風險）+ 9 百萬 Uber + 白領思維工作被取代 + 80 年帝國週期 + 美英 decline + 多極世界秩序 + Iran 加速區域化
 - 2026-08-31 | [美國帝國衰退 + 63% 月光族 + 階級衝突 + 私有財產權 vs 財富稅 — Ray Dalio 帝國週期 + 五大謊言 + 終止聯邦學生貸款](人物訪談/20260831_TheDiaryOfACEO_DavidFriedberg_USEmpireDecliningSocialism.md) · David Friedberg（白宮科技顧問 PCAST / All-In Podcast 共同主持人）· 主持 Steven Bartlett · 2:04:50（7490s，124 分鐘 podcast 訪談，40 個章節）（口播稿 4:50）｜63% 美國人月光族 + 50% 依賴政府 + 借股票質押富人避稅 + 法國財富稅失敗 + 每年讓 2% 美國人從勞動跨入資本 + 50% 階級衝突中產階級縮減
@@ -456,6 +460,7 @@
 
 - **Dr. David Perlmutter（Emory 大學醫學院營養學教授、board-certified 神經科醫師、《Brainwash》《Brain Defenders》作者）** · 2026-11-14 | [The Brain Doctor That Figured Out The Cause Of Dementia - Dr. David Perlmutter — DOAC 訪談](人物訪談/20261114_DavidPerlmutter_失智可預防.md) · 1:55:45（6945s）｜失智症是代謝與腦部免疫疾病 + M2→M1 微膠細胞轉向 + APOE4 風險數字 + 五大生活因子 + 1953 糖配給研究 + 40Hz 光音 + Cochrane 分析
 - **Steven Bartlett（The Diary Of A CEO 主持 / 連續創業家 / Social Chain 共同創辦人 / 投資 Flying Tiger Copenhagen 等）** · 2026-11-14 | [The Brain Doctor That Figured Out The Cause Of Dementia - Dr. David Perlmutter — DOAC 訪談](人物訪談/20261114_DavidPerlmutter_失智可預防.md) · 1:55:45（6945s）｜主持 Dr. David Perlmutter 訪談，橫跨失智症上游機理、生活方式介入、睡眠與飲食、腸道菌群、腦外傷與新興療法
+- **Steve Eisman（做空次級房貸的著名投資人、《大空頭》原型、主持投資 podcast）** · 2026-11-24 | [The Man Who Predicted The Last Crash WARNS A Recession Starts If These 2 Fail! — 預言 2008 崩盤的人警告：AI 泡沫若兩家倒閉美國隔天衰退 + Nvidia 七成營收集中五客戶 + 資訊科技佔標普 500 四成（史上最大）+ 誘因永遠凌駕倫理 + 加密貨幣論述與資產反向而行 + 買房不如租屋 + 普通人唯一解：標普 500 指數基金](財經分析/20261123_SteveEisman_AI泡沫與衰退預警.md) · 1:33:59（5639s）· en-orig JSON3 + 繁中翻譯 · xiaotian_clone_v1 · Bar 1 1790 chars / Bar 2 0.00/1K / Bar 3 9.08%
 - **Dr. Christopher Kerr（安寧病房醫師、神經生物學博士、臨終照護研究者、《Death is but a Dream》作者）** · 2026-10-19 | [The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions! — DOAC 訪談](人物訪談/20261019_ChristopherKerr_DeathbedVisions.md) · 1:23:26（5006s）｜1,500 位臨終者的 30 年研究 + 臨終異象近 90% + 譫妄排除法 + 實證排序 + 死亡的醫療化 + 六張手寫卡片 + 兒童死亡
 - **Steven Bartlett（The Diary Of A CEO 主持 / 連續創業家 / Social Chain 共同創辦人 / 投資 Flying Tiger Copenhagen 等）** · 2026-10-19 | [The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions! — DOAC 訪談](人物訪談/20261019_ChristopherKerr_DeathbedVisions.md) · 1:23:26（5006s）｜主持 Dr. Christopher Kerr（安寧病房醫師）訪談，橫跨臨終異象、死亡迷思、臨終排序與哀傷照護
 - **Dr. Sahar Yousef（UC Berkeley 認知神經科學家、Becoming Superhuman Lab 創辦人、專注力與記憶訓練專家）** · 2026-10-15 | [No.1 Neuroscientist Reveals How To Unlock Superhuman Focus & Perfect Memory! — DOAC 訪談](人物訪談/20261015_SaharYousef_UnlockFocusPerfectMemory.md) · 2:16:04（8164s）｜多工切換成本（理論 60% 生產力損失 / 每日 2 小時）+ 專注力可訓練 + 睡眠與手機鎖箱 + 灰階實驗 + 變動獎勵 / 吃角子老虎機 + 焦點衝刺 5 步驟 + Chronotypes 三型 + Strategic Automaticity 與招募信 + 思考階級 + Kahneman 認知捷徑 + Priming 你的幸運
@@ -598,9 +603,9 @@
 
 - 🎙️ **人物訪談**（19 支）→ [完整列表](人物訪談/README.md)
 - 🌐 **國際局勢**（5 支）→ [完整列表](國際局勢/README.md)
-- 💰 **財經分析**（5 支）→ [完整列表](財經分析/README.md)
+- 💰 **財經分析**（6 支）→ [完整列表](財經分析/README.md)
 - 🛠️ **技術講座**（68 支）→ [完整列表](技術講座/README.md)
 
 ---
 
-*最後更新：2026-11-14 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 206 支內容*
+*最後更新：2026-11-24 | 由 [Ryo](https://github.com/travisebill) 自動維護 · 共 207 支內容*
